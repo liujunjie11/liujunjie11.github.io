@@ -98,7 +98,7 @@
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-26%20%E4%B8%8B%E5%8D%884.59.05.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-26%20%E4%B8%8B%E5%8D%885.00.07.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-26%20%E4%B8%8B%E5%8D%885.22.53.png">
-<meta property="og:updated_time" content="2017-09-26T09:40:03.000Z">
+<meta property="og:updated_time" content="2017-09-26T10:32:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="（Mac下）用Hexo3.X  next5.1.2搭建自己的博客，安装，正确配置，部署谷歌，结合用七云牛写作">
 <meta name="twitter:description" content="前言 Hexo3.X  next主题5.1.2  Mac系统  github账号密码    在自己终于搭建了一个自己的个人独立博客后，虽然还有一些小的空间之类的限制，不过也是有余了。 因为这个版本的不同导致我在这个新的版本走了不少的弯路，看了官网也发现了有一些不正确的配置，现在打算记录下来帮助需要的朋友。   开始 了解Hexo:   Hexo官网    安装  因为安装的这个部分没有变动，所以本">
@@ -436,7 +436,7 @@
 </ul>
 <hr>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote>
-<p> 因为安装的这个部分没有变动，所以本人不再详细介绍了。下面提供别人安装时参考的网页教程，按照其中的顺序步骤安装即可。</p>
+<p> 因为安装的这个部分没有变动，所以本人不再详细介绍了。下面提供我在安装时参考的网页教程，按照其中的顺序步骤安装即可。</p>
 <p>不过我会在此提醒一下一些细节的问题。</p>
 </blockquote>
 <ul>
@@ -462,7 +462,7 @@
 </li>
 <li><p>配置文件的编写，或者是文件的误删。</p>
 <blockquote>
-<p>比如在需要GitHub的域名时的前面的<br><code>repo</code> 或者是 <code>repository</code></p>
+<p>比如在需要GitHub的域名时的前面的<br><code>repo</code> 或者是 <code>repository</code> ，两者都是可行的。</p>
 </blockquote>
 </li>
 <li><p>各个命令行的顺序运行。</p>
@@ -473,20 +473,20 @@
 <li>详细的配置都在next主题的官网可以找到：<a href="http://theme-next.iissnan.com" target="_blank" rel="external">next主题官网</a></li>
 </ul>
 <blockquote>
-<p><strong>配置完主题后必须要记得使用命令 <code>hexo s -debug</code> 表示主题调试，否则肯定达不到预期的效果！并且应该要注意记得在每次配置完主题使用这个命令后，应该要打开 <code>http://localhost:4000/</code> 来进行查看网页的情况，以便出现错误了，可以提前知道</strong></p>
-<p><strong>但是其中有一些配置是错误的，配置完达不到预期效果的，我将一一进行补充说明，以下是经过本人配置了多次得到的发现问题的所在</strong></p>
+<p><strong>但是其中有一些配置是错误的，配置完达不到预期效果的，我将一一进行补充说明，以下的相关的配置说明是经过本人配置了多次得到的发现问题的所在。</strong></p>
+<p><strong>配置完主题后必须要记得使用命令 <code>hexo s -debug</code> 表示主题调试，否则肯定达不到预期的效果！并且应该要注意记得在每次配置完主题在使用这个命令后，应该要打开 <code>http://localhost:4000/</code> 来进行查看网页的情况，以便出现错误了，可以提前知道。</strong></p>
 </blockquote>
 <hr>
 <h3 id="开始使用的配置"><a href="#开始使用的配置" class="headerlink" title="开始使用的配置"></a>开始使用的配置</h3><p>  <a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">next开始使用的官网</a> </p>
-<p><strong>即在配置标签的小图标时的错误，以下才是正确的配置</strong>：<br>    <code>即为菜单的小图标的配置问题</code></p>
+<p><strong>即在配置标签的小图标时的错误，以下才是正确的配置，即不要分开来编写</strong>：<br>    <code>即为菜单的小图标的配置问题</code></p>
 <p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-26%20%E4%B8%8B%E5%8D%883.52.20.png" alt=""></p>
 <h3 id="next主题配置"><a href="#next主题配置" class="headerlink" title="next主题配置"></a>next主题配置</h3><p><a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="external">next主题配置官网</a></p>
 <p>   <code>以下为配置链接时的小图标的问题</code></p>
 <p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-26%20%E4%B8%8B%E5%8D%883.52.31.png" alt=""></p>
-<p><strong>以上是next主题开始使用的纠正错误</strong></p>
+<p><strong>以上是next主题开始使用及主题配置的相关的官网配置的纠正错误</strong></p>
 <ul>
 <li><p>但是如果想要解决自己的网页打开慢的问题，可以如下配置：</p>
-<p>  即在 <code>font</code> 下的 <code>global</code> 的子目录处 <code>family</code> 对应的去掉<br>并且加上 <code>use_font_lato: flase</code> ，这是因为在打开博客网页的时候会加载谷歌字体，需要占大量的时间，官网还有一个加速的配置，往下看。</p>
+<p>  即在 <code>font</code> 下的 <code>global</code> 的子目录处 <code>family</code> 对应的字体去掉<br>并且在上方加上 <code>use_font_lato: flase</code> （如图），这是因为在打开博客网页的时候会加载谷歌字体，需要占大量的时间，官网还有一个加速的配置，继续往文章下看。</p>
 </li>
 </ul>
 <p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-26%20%E4%B8%8B%E5%8D%884.06.09.png" alt=""></p>
@@ -503,7 +503,7 @@
 <hr>
 <h3 id="进阶配置"><a href="#进阶配置" class="headerlink" title="进阶配置"></a>进阶配置</h3><p><a href="http://theme-next.iissnan.com/tag-plugins.html" target="_blank" rel="external">next官网的进阶配置</a></p>
 <blockquote>
-<p><strong>在这个配置中是可以加速网页打开的，本人亲自测试，快了不止一点点，但是一些动画效果可能会因此受到影响，没有出现的局面，如图可知</strong></p>
+<p><strong>在这个配置中是可以加速网页打开的，本人亲自测试，快了不止一点点（如图），但是一些设置的动画效果可能会因此受到影响，会有没有展示出现的局面</strong></p>
 </blockquote>
 <p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-26%20%E4%B8%8B%E5%8D%884.21.08.png" alt=""></p>
 <h3 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h3><ul>
@@ -540,12 +540,11 @@
 </blockquote>
 <p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-26%20%E4%B8%8B%E5%8D%884.56.22.png" alt=""></p>
 <hr>
-<p>##将图片存在七云牛，一齐写作</p>
-<ul>
+<h2 id="将图片存在七云牛，一齐写作"><a href="#将图片存在七云牛，一齐写作" class="headerlink" title="将图片存在七云牛，一齐写作"></a>将图片存在七云牛，一齐写作</h2><ul>
 <li>第一步，为什么要用七云牛？因为我们的博客基于GitHub上会有内存的限制，不能将每一张图片上传GitHub空间，而七云牛之类的可以解决这个问题，并且空间也足够用了。</li>
 </ul>
-<p> <a href="https://baike.baidu.com/item/七牛云存储" target="_blank" rel="external">了解七云牛</a></p>
-<p> <a href="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-26%20%E4%B8%8B%E5%8D%884.56.22.png" target="_blank" rel="external">注册七云牛</a></p>
+<p>  <a href="https://baike.baidu.com/item/七牛云存储" target="_blank" rel="external">了解七云牛</a></p>
+<p>  <a href="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-26%20%E4%B8%8B%E5%8D%884.56.22.png" target="_blank" rel="external">注册七云牛</a></p>
 <ul>
 <li>点击 <code>存储对象</code> 新建一个空间，名字随意</li>
 </ul>
@@ -811,7 +810,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始"><span class="nav-number">2.</span> <span class="nav-text">开始</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装过程中的细节提示"><span class="nav-number">4.</span> <span class="nav-text">安装过程中的细节提示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">5.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#开始使用的配置"><span class="nav-number">5.1.</span> <span class="nav-text">开始使用的配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#next主题配置"><span class="nav-number">5.2.</span> <span class="nav-text">next主题配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三方服务配置"><span class="nav-number">5.3.</span> <span class="nav-text">第三方服务配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内建标签"><span class="nav-number">5.4.</span> <span class="nav-text">内建标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进阶配置"><span class="nav-number">5.5.</span> <span class="nav-text">进阶配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提示"><span class="nav-number">5.6.</span> <span class="nav-text">提示</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将网页部署到谷歌，即被谷歌收录"><span class="nav-number">6.</span> <span class="nav-text">将网页部署到谷歌，即被谷歌收录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最后"><span class="nav-number">7.</span> <span class="nav-text">最后</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始"><span class="nav-number">2.</span> <span class="nav-text">开始</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装过程中的细节提示"><span class="nav-number">4.</span> <span class="nav-text">安装过程中的细节提示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">5.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#开始使用的配置"><span class="nav-number">5.1.</span> <span class="nav-text">开始使用的配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#next主题配置"><span class="nav-number">5.2.</span> <span class="nav-text">next主题配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三方服务配置"><span class="nav-number">5.3.</span> <span class="nav-text">第三方服务配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内建标签"><span class="nav-number">5.4.</span> <span class="nav-text">内建标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进阶配置"><span class="nav-number">5.5.</span> <span class="nav-text">进阶配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提示"><span class="nav-number">5.6.</span> <span class="nav-text">提示</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将网页部署到谷歌，即被谷歌收录"><span class="nav-number">6.</span> <span class="nav-text">将网页部署到谷歌，即被谷歌收录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将图片存在七云牛，一齐写作"><span class="nav-number">7.</span> <span class="nav-text">将图片存在七云牛，一齐写作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最后"><span class="nav-number">8.</span> <span class="nav-text">最后</span></a></li></ol></div>
             
 
           </div>
