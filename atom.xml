@@ -5,9 +5,9 @@
   <subtitle>The House Belong to Love and Freedom.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://liujunjie11.github.io/"/>
   <updated>2017-09-26T10:32:17.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://liujunjie11.github.io/</id>
   
   <author>
     <name>刘俊</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>（Mac下）用Hexo3.X  next5.1.2搭建自己的博客，安装，正确配置，部署谷歌，结合用七云牛写作</title>
-    <link href="http://yoursite.com/2017/09/26/%EF%BC%88Mac%E4%B8%8B%EF%BC%89%E7%94%A8Hexo3-X-next5-1-2%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%AE%89%E8%A3%85%EF%BC%8C%E6%AD%A3%E7%A1%AE%E9%85%8D%E7%BD%AE%EF%BC%8C%E9%83%A8%E7%BD%B2%E8%B0%B7%E6%AD%8C%EF%BC%8C%E7%BB%93%E5%90%88%E7%94%A8%E4%B8%83%E4%BA%91%E7%89%9B%E5%86%99%E4%BD%9C/"/>
-    <id>http://yoursite.com/2017/09/26/（Mac下）用Hexo3-X-next5-1-2搭建自己的博客，安装，正确配置，部署谷歌，结合用七云牛写作/</id>
+    <link href="https://liujunjie11.github.io/2017/09/26/%EF%BC%88Mac%E4%B8%8B%EF%BC%89%E7%94%A8Hexo3-X-next5-1-2%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%AE%89%E8%A3%85%EF%BC%8C%E6%AD%A3%E7%A1%AE%E9%85%8D%E7%BD%AE%EF%BC%8C%E9%83%A8%E7%BD%B2%E8%B0%B7%E6%AD%8C%EF%BC%8C%E7%BB%93%E5%90%88%E7%94%A8%E4%B8%83%E4%BA%91%E7%89%9B%E5%86%99%E4%BD%9C/"/>
+    <id>https://liujunjie11.github.io/2017/09/26/（Mac下）用Hexo3-X-next5-1-2搭建自己的博客，安装，正确配置，部署谷歌，结合用七云牛写作/</id>
     <published>2017-09-26T05:23:28.000Z</published>
     <updated>2017-09-26T10:32:17.000Z</updated>
     
@@ -39,17 +39,17 @@
     
     </summary>
     
-      <category term="学习 教程" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0-%E6%95%99%E7%A8%8B/"/>
+      <category term="学习 教程" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0-%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="学习 教程" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0-%E6%95%99%E7%A8%8B/"/>
+      <category term="学习 教程" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0-%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>在自己的独立博客，第一篇总得说一些什么..</title>
-    <link href="http://yoursite.com/2017/09/26/%E5%9C%A8%E8%87%AA%E5%B7%B1%E7%9A%84%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2%EF%BC%8C%E7%AC%AC%E4%B8%80%E7%AF%87%E6%80%BB%E5%BE%97%E8%AF%B4%E4%B8%80%E4%BA%9B%E4%BB%80%E4%B9%88/"/>
-    <id>http://yoursite.com/2017/09/26/在自己的独立博客，第一篇总得说一些什么/</id>
+    <link href="https://liujunjie11.github.io/2017/09/26/%E5%9C%A8%E8%87%AA%E5%B7%B1%E7%9A%84%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2%EF%BC%8C%E7%AC%AC%E4%B8%80%E7%AF%87%E6%80%BB%E5%BE%97%E8%AF%B4%E4%B8%80%E4%BA%9B%E4%BB%80%E4%B9%88/"/>
+    <id>https://liujunjie11.github.io/2017/09/26/在自己的独立博客，第一篇总得说一些什么/</id>
     <published>2017-09-26T04:35:16.000Z</published>
     <updated>2017-09-26T05:12:01.000Z</updated>
     
@@ -68,17 +68,17 @@
     
     </summary>
     
-      <category term="成长" scheme="http://yoursite.com/categories/%E6%88%90%E9%95%BF/"/>
+      <category term="成长" scheme="https://liujunjie11.github.io/categories/%E6%88%90%E9%95%BF/"/>
     
     
-      <category term="我说" scheme="http://yoursite.com/tags/%E6%88%91%E8%AF%B4/"/>
+      <category term="我说" scheme="https://liujunjie11.github.io/tags/%E6%88%91%E8%AF%B4/"/>
     
   </entry>
   
   <entry>
     <title>SS的使用与下载</title>
-    <link href="http://yoursite.com/2017/09/25/SS%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%8E%E4%B8%8B%E8%BD%BD/"/>
-    <id>http://yoursite.com/2017/09/25/SS的使用与下载/</id>
+    <link href="https://liujunjie11.github.io/2017/09/25/SS%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%8E%E4%B8%8B%E8%BD%BD/"/>
+    <id>https://liujunjie11.github.io/2017/09/25/SS的使用与下载/</id>
     <published>2017-09-25T04:58:44.000Z</published>
     <updated>2017-09-26T04:30:21.000Z</updated>
     
@@ -95,17 +95,17 @@
     
     </summary>
     
-      <category term="使用教程" scheme="http://yoursite.com/categories/%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+      <category term="使用教程" scheme="https://liujunjie11.github.io/categories/%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="学习" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>集思</title>
-    <link href="http://yoursite.com/2017/09/25/%E9%9B%86%E6%80%9D/"/>
-    <id>http://yoursite.com/2017/09/25/集思/</id>
+    <link href="https://liujunjie11.github.io/2017/09/25/%E9%9B%86%E6%80%9D/"/>
+    <id>https://liujunjie11.github.io/2017/09/25/集思/</id>
     <published>2017-09-25T00:35:51.000Z</published>
     <updated>2017-09-25T05:11:53.000Z</updated>
     
@@ -127,17 +127,17 @@
     
     </summary>
     
-      <category term="思考 我说" scheme="http://yoursite.com/categories/%E6%80%9D%E8%80%83-%E6%88%91%E8%AF%B4/"/>
+      <category term="思考 我说" scheme="https://liujunjie11.github.io/categories/%E6%80%9D%E8%80%83-%E6%88%91%E8%AF%B4/"/>
     
     
-      <category term="生活 想法 成长" scheme="http://yoursite.com/tags/%E7%94%9F%E6%B4%BB-%E6%83%B3%E6%B3%95-%E6%88%90%E9%95%BF/"/>
+      <category term="生活 想法 成长" scheme="https://liujunjie11.github.io/tags/%E7%94%9F%E6%B4%BB-%E6%83%B3%E6%B3%95-%E6%88%90%E9%95%BF/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2017/09/25/hello-world/"/>
-    <id>http://yoursite.com/2017/09/25/hello-world/</id>
+    <link href="https://liujunjie11.github.io/2017/09/25/hello-world/"/>
+    <id>https://liujunjie11.github.io/2017/09/25/hello-world/</id>
     <published>2017-09-24T22:54:02.000Z</published>
     <updated>2017-09-24T22:54:02.000Z</updated>
     
