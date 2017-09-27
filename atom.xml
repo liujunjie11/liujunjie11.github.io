@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2017-09-27T15:36:10.000Z</updated>
+  <updated>2017-09-27T15:59:06.000Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>初学Linux有感</title>
+    <link href="https://liujunjie11.github.io/2017/09/27/%E5%88%9D%E5%AD%A6Linux%E6%9C%89%E6%84%9F/"/>
+    <id>https://liujunjie11.github.io/2017/09/27/初学Linux有感/</id>
+    <published>2017-09-27T15:43:17.000Z</published>
+    <updated>2017-09-27T15:59:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>最近看《鸟哥的Linux私房菜》学习Linux，体验非常的不错，关键是没有想到这部书里面在第一节还介绍了一些计算机概论的知识，虽然并不是非常的深入，但是经过此入门认识已经是足够了，至少是达到了我的一些需求，也达到我的预期。之后的若是再需要想要认识的话，我想还是有必要去找一本专门的书来补充的，亦或者是需要在网上看一些详细的介绍的。</p></blockquote><h2 id="初学Linux的一些感想"><a href="#初学Linux的一些感想" class="headerlink" title="初学Linux的一些感想"></a>初学Linux的一些感想</h2><ul><li><p>没想到终端的命令行会让我感到非常的兴奋，大概是在Mac上也是经常使用终端的缘故吧，但是在Linux上的体验又是更胜一筹，也有可能与我本身喜欢小界面编写有一定关系啦。</p></li><li><p>命令行功能的强大。</p></li><li><p>还有待去了解更多..</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;最近看《鸟哥的Linux私房菜》学习Linux，体验非常的不错，关键是没有想到这部书里面在第一节还介绍了一些计算机概论的知识，虽然并不是非常的深入，但是经过此入门认识已经是足够了，至少是达到了我的一些需求，也达到我的预期。之后的若是再需要想要认识的
+      
+    
+    </summary>
+    
+      <category term="感想" scheme="https://liujunjie11.github.io/categories/%E6%84%9F%E6%83%B3/"/>
+    
+    
+      <category term="学习 感想" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0-%E6%84%9F%E6%83%B3/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo 博客在谷歌搜索引擎中的优化，目标：上头条..</title>
