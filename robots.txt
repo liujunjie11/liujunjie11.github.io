@@ -1,5 +1,5 @@
 User-agent: *
-Allow: /home/
+Allow: /
 Allow: /archives/
 Allow: /categories/
 Allow: /about/
