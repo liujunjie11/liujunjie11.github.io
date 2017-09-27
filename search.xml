@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Mac下VirtualBox虚拟机Centos7配置Wifi]]></title>
-    <url>%2F2017%2F09%2F27%2FMac%E4%B8%8BVirtualBox%E8%99%9A%E6%8B%9F%E6%9C%BACentos7%E9%85%8D%E7%BD%AEWifi%2F</url>
-    <content type="text"><![CDATA[前言 Mac系统 VirtualBox虚拟机 已经安装好的Centos7系统 可用的WiFi 最近自己在学习Linux系统，想到了在虚拟机中如何为系统配置WiFi的问题，毕竟以后下载软件也需要。我仅仅花了两分钟就把这个给摸索出来了，哈哈，绝对是原创哦。 废话不多说，马上开始我的表演。 配置 第一步当然是在有Wi-Fi的情况下咯 第二步当然是已是打开了虚拟机咯 点击图标（如上图），再点击 有线设置 ，选择 网络代理，之后写上本机连接的Wi-Fi的名称（当然本机要是在连接的情况下咯） 然后发现可以正常的在虚拟机上上网了，是不是很溜？我是天才，哈哈！ 最后 goodluck]]></content>
+    <title><![CDATA[Mac下VirtualBox虚拟机Centos7配置Wifi，用佩带的火狐翻墙]]></title>
+    <url>%2F2017%2F09%2F27%2FMac%E4%B8%8BVirtualBox%E8%99%9A%E6%8B%9F%E6%9C%BACentos7%E9%85%8D%E7%BD%AEWifi%EF%BC%8C%E7%94%A8%E4%BD%A9%E5%B8%A6%E7%9A%84%E7%81%AB%E7%8B%90%E7%BF%BB%E5%A2%99%2F</url>
+    <content type="text"><![CDATA[前言 Mac系统 VirtualBox虚拟机 已经安装好的Centos7系统 可用的WiFi 最近自己在学习Linux系统，想到了在虚拟机中如何为系统配置WiFi的问题，毕竟以后下载软件也需要。我仅仅花了两分钟就把这个给摸索出来了，哈哈，绝对是原创哦。 废话不多说，马上开始我的表演。 配置 第一步当然是在有Wi-Fi的情况下咯 第二步当然是已是打开了虚拟机咯 点击图标（如上图），再点击 有线设置 ，选择 网络代理，之后写上本机连接的Wi-Fi的名称（当然本机要是在连接的情况下咯） 然后发现可以正常的在虚拟机上上网了，是不是很溜？我是天才，哈哈！ 用佩带的火狐浏览器翻墙 打开佩带的浏览器点击 添加组件 搜索 hoxx 的插件，并且下载 登陆账号。没有的话就申请一个好了 选择免费服务器 可以上谷歌咯 最后 goodluck]]></content>
       <categories>
         <category>学习教程</category>
       </categories>
