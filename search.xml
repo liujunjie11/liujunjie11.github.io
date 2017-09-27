@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Mac下VirtualBox虚拟机Centos7配置Wifi]]></title>
+    <url>%2F2017%2F09%2F27%2FMac%E4%B8%8BVirtualBox%E8%99%9A%E6%8B%9F%E6%9C%BACentos7%E9%85%8D%E7%BD%AEWifi%2F</url>
+    <content type="text"><![CDATA[前言 Mac系统 VirtualBox虚拟机 已经安装好的Centos7系统 可用的WiFi 最近自己在学习Linux系统，想到了在虚拟机中如何为系统配置WiFi的问题，毕竟以后下载软件也需要。我仅仅花了两分钟就把这个给摸索出来了，哈哈，绝对是原创哦。 废话不多说，马上开始我的表演。 配置 第一步当然是在有Wi-Fi的情况下咯 第二步当然是已是打开了虚拟机咯 点击图标（如上图），再点击 有线设置 ，选择 网络代理，之后写上本机连接的Wi-Fi的名称（当然本机要是在连接的情况下咯） 然后发现可以正常的在虚拟机上上网了，是不是很溜？我是天才，哈哈！ 最后 goodluck]]></content>
+      <categories>
+        <category>学习教程</category>
+      </categories>
+      <tags>
+        <tag>学习教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Mac下解决Matlab License Manager Error -8问题]]></title>
     <url>%2F2017%2F09%2F27%2FMac%E4%B8%8B%E8%A7%A3%E5%86%B3Matlab-License-Manager-Error-8%E9%97%AE%E9%A2%98%2F</url>
     <content type="text"><![CDATA[问题如下： 其实很简单。 前提是各位一定都是下的盗版的…（在我本人的简书博客的“资源”这一篇文章里也有下载资源，不过各位有钱的尽量还是支持正版哦…） 打开下好的盗版文件之中是有一个补丁名为Crack的文件的： （即为其中的Crack文件）其中有一个插件：如下图 新建一个窗口打开matlab的包的内容：如下图 打开bin: 点开maci64: 再将这个插件移动到maci64文件当中： 替换即可。 关闭窗口。 注意：最好还是将前面的提到的Crack文件备份一个，避免又出现同样的问题。 最后则可以正常打开了。]]></content>

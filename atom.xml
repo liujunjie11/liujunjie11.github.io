@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2017-09-27T05:27:03.000Z</updated>
+  <updated>2017-09-27T14:15:53.000Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac下VirtualBox虚拟机Centos7配置Wifi</title>
+    <link href="https://liujunjie11.github.io/2017/09/27/Mac%E4%B8%8BVirtualBox%E8%99%9A%E6%8B%9F%E6%9C%BACentos7%E9%85%8D%E7%BD%AEWifi/"/>
+    <id>https://liujunjie11.github.io/2017/09/27/Mac下VirtualBox虚拟机Centos7配置Wifi/</id>
+    <published>2017-09-27T13:44:20.000Z</published>
+    <updated>2017-09-27T14:15:53.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul><li><p>Mac系统   </p></li><li><p>VirtualBox虚拟机</p></li><li><p>已经安装好的Centos7系统</p></li><li><p>可用的WiFi</p></li></ul><blockquote><p>最近自己在学习Linux系统，想到了在虚拟机中如何为系统配置WiFi的问题，毕竟以后下载软件也需要。我仅仅花了两分钟就把这个给摸索出来了，哈哈，<strong>绝对是原创哦</strong>。</p><p>废话不多说，马上开始我的表演。</p></blockquote><hr><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><ul><li>第一步当然是在有Wi-Fi的情况下咯</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-27%20%E4%B8%8B%E5%8D%889.39.40.png" alt=""></p><hr><ul><li>第二步当然是已是打开了虚拟机咯</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-27%20%E4%B8%8B%E5%8D%889.40.17.png" alt=""></p><blockquote><p>点击图标（如上图），再点击 <code>有线设置</code> ，选择 <code>网络代理</code>，之后写上本机连接的Wi-Fi的名称（当然本机要是在连接的情况下咯）</p></blockquote><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-27%20%E4%B8%8B%E5%8D%889.40.38.png" alt=""></p><ul><li>然后发现可以正常的在虚拟机上上网了，是不是很溜？我是天才，哈哈！</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-27%20%E4%B8%8B%E5%8D%889.42.12.png" alt=""></p><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><ul><li><strong>goodluck</strong></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Mac系统   &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;VirtualBox虚拟机&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;已经安装
+      
+    
+    </summary>
+    
+      <category term="学习教程" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="学习教程" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>Mac下解决Matlab License Manager Error -8问题</title>
