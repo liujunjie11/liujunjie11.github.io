@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[eclipse下直接读取Hadoop源码配置]]></title>
+    <url>%2F2017%2F09%2F30%2Feclipse%E4%B8%8B%E7%9B%B4%E6%8E%A5%E8%AF%BB%E5%8F%96Hadoop%E6%BA%90%E7%A0%81%E9%85%8D%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[前言 参考： 参考 Mac系统 eclipse Hadoop2.X.src源码包（已经解压） 如以下例图 官网下载 例图： 例图（解压后）： 配置过程 在需要的关键词上停留，按F3快捷键，或者是如图选择 Open Declaration 配置，手动写上解压包的位置，之后会发现可以查看源码了。]]></content>
+      <categories>
+        <category>学习 教程</category>
+      </categories>
+      <tags>
+        <tag>学习 教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[hexo 博客结合七云牛超链接视频与音乐]]></title>
     <url>%2F2017%2F09%2F30%2Fhexo-%E5%8D%9A%E5%AE%A2%E7%BB%93%E5%90%88%E4%B8%83%E4%BA%91%E7%89%9B%E8%B6%85%E9%93%BE%E6%8E%A5%E8%A7%86%E9%A2%91%E4%B8%8E%E9%9F%B3%E4%B9%90%2F</url>
     <content type="text"><![CDATA[七云牛结合hexo博客，导入视频与音乐文件 前言 需要注册七云牛 可以参考我的这一篇文章 以下为视频教学，点击查看效果(由于为了节省在七云牛的空间，本人将它放在了YouTube） 点击查看教学视频 音乐效果如下（这个是本地的，可以直接查看） 音乐欣赏 一条龙部署谷歌视频教学（在YouTube）： 点击查看]]></content>
