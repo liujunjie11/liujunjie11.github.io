@@ -75,13 +75,13 @@
 
 
 
-<meta name="description" content="前言 声明  我所有参考的文章，均在我的简书中已标明参考链接出处。   Mac系统。（当然其他的系统也可以参考，区别并不大。）  Hadoop2.8.1  homebrew  eclipse  相关的插件      最近在学习Hadoop，在搭建环境当中遇到了一些问题，如今总算是解决了，花了不少时间，毕竟往事开头难嘛，现在也有一些了解了。在此，我将记录下我遇到的所有的问题以及搭建的所有详细过程，以">
+<meta name="description" content="前言 声明  我所有参考的文章，均在我的简书中已标明参考链接出处。   Mac系统。（当然其他的系统也可以参考，区别并不大。）  Hadoop2.8.1  homebrew  eclipse  相关的插件      最近在学习Hadoop，在搭建环境当中遇到了一些问题，如今总算是解决了，花了不少时间，毕竟万事开头难嘛，现在也有一些了解了。在此，我将记录下我遇到的所有的问题以及搭建的所有详细过程，以">
 <meta name="keywords" content="学习教程 Hadoop">
 <meta property="og:type" content="article">
 <meta property="og:title" content="(Mac下）hadoop2.8.1伪分布式的搭建，以及用eclipse开发Hadoop">
 <meta property="og:url" content="https://liujunjie11.github.io/2017/10/01/(Mac下）hadoop2-8-1伪分布式的搭建，以及用eclipse开发Hadoop/index.html">
 <meta property="og:site_name" content="LXiHa`Notes">
-<meta property="og:description" content="前言 声明  我所有参考的文章，均在我的简书中已标明参考链接出处。   Mac系统。（当然其他的系统也可以参考，区别并不大。）  Hadoop2.8.1  homebrew  eclipse  相关的插件      最近在学习Hadoop，在搭建环境当中遇到了一些问题，如今总算是解决了，花了不少时间，毕竟往事开头难嘛，现在也有一些了解了。在此，我将记录下我遇到的所有的问题以及搭建的所有详细过程，以">
+<meta property="og:description" content="前言 声明  我所有参考的文章，均在我的简书中已标明参考链接出处。   Mac系统。（当然其他的系统也可以参考，区别并不大。）  Hadoop2.8.1  homebrew  eclipse  相关的插件      最近在学习Hadoop，在搭建环境当中遇到了一些问题，如今总算是解决了，花了不少时间，毕竟万事开头难嘛，现在也有一些了解了。在此，我将记录下我遇到的所有的问题以及搭建的所有详细过程，以">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-01%20%E4%B8%8B%E5%8D%8812.19.28.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-01%20%E4%B8%8B%E5%8D%8812.48.04.png">
@@ -113,10 +113,10 @@
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-01%20%E4%B8%8B%E5%8D%882.19.59.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-01%20%E4%B8%8B%E5%8D%882.25.26.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-01%20%E4%B8%8B%E5%8D%882.28.04.png">
-<meta property="og:updated_time" content="2017-10-01T07:33:11.000Z">
+<meta property="og:updated_time" content="2017-10-01T08:02:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="(Mac下）hadoop2.8.1伪分布式的搭建，以及用eclipse开发Hadoop">
-<meta name="twitter:description" content="前言 声明  我所有参考的文章，均在我的简书中已标明参考链接出处。   Mac系统。（当然其他的系统也可以参考，区别并不大。）  Hadoop2.8.1  homebrew  eclipse  相关的插件      最近在学习Hadoop，在搭建环境当中遇到了一些问题，如今总算是解决了，花了不少时间，毕竟往事开头难嘛，现在也有一些了解了。在此，我将记录下我遇到的所有的问题以及搭建的所有详细过程，以">
+<meta name="twitter:description" content="前言 声明  我所有参考的文章，均在我的简书中已标明参考链接出处。   Mac系统。（当然其他的系统也可以参考，区别并不大。）  Hadoop2.8.1  homebrew  eclipse  相关的插件      最近在学习Hadoop，在搭建环境当中遇到了一些问题，如今总算是解决了，花了不少时间，毕竟万事开头难嘛，现在也有一些了解了。在此，我将记录下我遇到的所有的问题以及搭建的所有详细过程，以">
 <meta name="twitter:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-01%20%E4%B8%8B%E5%8D%8812.19.28.png">
 
 
@@ -449,7 +449,7 @@
 </li>
 </ul>
 <blockquote>
-<p>最近在学习Hadoop，在搭建环境当中遇到了一些问题，如今总算是解决了，花了不少时间，毕竟往事开头难嘛，现在也有一些了解了。在此，我将记录下我遇到的所有的问题以及搭建的所有详细过程，以此帮助需要的朋友。</p>
+<p>最近在学习Hadoop，在搭建环境当中遇到了一些问题，如今总算是解决了，花了不少时间，毕竟万事开头难嘛，现在也有一些了解了。在此，我将记录下我遇到的所有的问题以及搭建的所有详细过程，以此帮助需要的朋友。</p>
 </blockquote>
 <hr>
 <h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><ul>
