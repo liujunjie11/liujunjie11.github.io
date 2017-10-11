@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2017-10-10T15:33:09.000Z</updated>
+  <updated>2017-10-11T04:03:27.000Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>（忘记密码下）更改华为手机解锁屏幕密码</title>
+    <link href="https://liujunjie11.github.io/2017/10/11/%EF%BC%88%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E4%B8%8B%EF%BC%89%E6%9B%B4%E6%94%B9%E5%8D%8E%E4%B8%BA%E6%89%8B%E6%9C%BA%E8%A7%A3%E9%94%81%E5%B1%8F%E5%B9%95%E5%AF%86%E7%A0%81/"/>
+    <id>https://liujunjie11.github.io/2017/10/11/（忘记密码下）更改华为手机解锁屏幕密码/</id>
+    <published>2017-10-11T03:38:46.000Z</published>
+    <updated>2017-10-11T04:03:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>今天早上一大早来到图书馆，发现我的华为手机青春版G9的屏幕锁密码早已是在我的脑海里消失得一丝不挂。why?So，I decide to 找方法去将这个烦人的东西给解开啊，现在也终于解开了，花了我宝贵的生命中的一个钟！<strong>一个钟</strong>啊！！</p></blockquote><ul><li><strong>前提，在忘记之前</strong> </li></ul><p>你忘记了屏幕锁密码！</p><p>你的手机不是在关机状态！（如果是关机的情况下忘记了，等着恢复出厂设置吧！因为她妈的华为手机是要求开机输入屏幕锁密码的！）</p><p>你的手机可以通过指纹进入！</p><ul><li><strong>开始这烦人的过程吧，实际上简单的我想跳舞</strong></li></ul><p>假设你已经进入了手机界面（通过你那恶心的指纹或者是其他的方法！）</p><p>点击 <code>手机找回</code> –&gt; 将<code>允许查找手机</code>开启 –&gt; 点击<code>查找我的手机</code> –&gt; <code>选择你现在的要更改解锁密码的手机的华为账号</code> –&gt; <code>开始定位</code><br>–&gt; 手机已经开始定位（当然你得要是在他妈得有网的情况下！）–&gt; 成功之后会提示重新输入密码（这就是他妈得我们的新的密码！记好了！）–&gt; 确认之后，手机会自己锁屏了 –&gt; 你打开输入刚刚的新的密码或者是通过指纹发现都可以解锁了！</p><ul><li>教程他妈的到此结束了！</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;今天早上一大早来到图书馆，发现我的华为手机青春版G9的屏幕锁密码早已是在我的脑海里消失得一丝不挂。why?So，I decide to 找方法去将这个烦人的东西给解开啊，现在也终于解开了，花了我宝贵的生命中的一个钟！&lt;strong&gt;一个钟&lt;/str
+      
+    
+    </summary>
+    
+      <category term="学习 教程" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0-%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="学习 教程" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0-%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>关于科学上网的基本知识</title>
@@ -528,35 +554,6 @@
     
     
       <category term="学习 教程" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0-%E6%95%99%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在自己的独立博客，第一篇总得说一些什么..</title>
-    <link href="https://liujunjie11.github.io/2017/09/26/%E5%9C%A8%E8%87%AA%E5%B7%B1%E7%9A%84%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2%EF%BC%8C%E7%AC%AC%E4%B8%80%E7%AF%87%E6%80%BB%E5%BE%97%E8%AF%B4%E4%B8%80%E4%BA%9B%E4%BB%80%E4%B9%88/"/>
-    <id>https://liujunjie11.github.io/2017/09/26/在自己的独立博客，第一篇总得说一些什么/</id>
-    <published>2017-09-26T04:35:16.000Z</published>
-    <updated>2017-09-26T05:12:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>本来在前几天就建立好了这个独立博客了，到现在才来写上，日期更改了一下。</p></blockquote><p><strong>开门见山吧。</strong></p><h2 id="为什么要建立这个博客"><a href="#为什么要建立这个博客" class="headerlink" title="为什么要建立这个博客"></a>为什么要建立这个博客</h2><h4 id="我对于一个博客的见解："><a href="#我对于一个博客的见解：" class="headerlink" title="我对于一个博客的见解："></a>我对于一个博客的见解：</h4><ul><li><p>一个自己的博客应该是一个自由的个人空间，可以是开放，也可以是封闭的，决定权在于自己。</p></li><li><p>一个自己的博客应该是代表着自己的个人的想法与展示个人思维的空间，即在这里应该是不受任何约束的。</p></li><li><p>一个自己的博客应该是自己的一个思维空间，在这里可以大胆的说出自己的想法的，这里是自我言论的地方，并且都仅仅是代表个人的。</p></li><li><p>一个自己的博客可以是一个家的样子，自己来搭配，自己来管理，可以迎接来到这里的来访者，到了晚上的时候，也可以是自己聆听自己的心灵空间。</p></li></ul><h4 id="我建立的初衷："><a href="#我建立的初衷：" class="headerlink" title="我建立的初衷："></a>我建立的初衷：</h4><ul><li><p>自由。自由对我来说是不可或缺的。</p></li><li><p>空间。我想要一个空间来记录自己的成长与学习的资料，我是要求把他开放的，并且希望通过这个空间能与更多的人交流。</p></li><li>回报。我是因为在这个拥有无数个默默贡献者的巨大网络空间才成长到今天的这个模样的，而现在，我希望我也能对这个网络世界贡献一点力量，帮助后来人成长，就像当初的我被那一些默默的，不知姓名的人们帮助一样。这对于我来说是一件可以让我感到开心的事。</li></ul><h4 id="对于我影响很大的："><a href="#对于我影响很大的：" class="headerlink" title="对于我影响很大的："></a>对于我影响很大的：</h4><ul><li>哲学。主要是古代西方世界的哲人们，主要是自然哲学。让我至今生活的更美好，我很感谢她。</li><li>自己感兴趣的科技力量。</li><li>乔丹。他的精神与华丽的球技影响了我。</li><li>乔布斯。活着就是为了改变世界。哈</li></ul><h4 id="最后的："><a href="#最后的：" class="headerlink" title="最后的："></a>最后的：</h4><ul><li>希望可以帮助更多的人，这应该是我建立这个博客的主要原因。</li><li>希望自己可以坚持记录自己的成长的一历一迹。</li></ul><h4 id="特别的："><a href="#特别的：" class="headerlink" title="特别的："></a>特别的：</h4><ul><li>感谢<a href="https://hexo.io/zh-cn/index.html" target="_blank" rel="external">Hexo</a>。</li><li>也感谢其创始者，给我提供了这个平台，实现了我的个人独立博客需求。</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;本来在前几天就建立好了这个独立博客了，到现在才来写上，日期更改了一下。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;开门见山吧。&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&quot;为什么要建立这个博客&quot;&gt;&lt;a href=&quot;#为什么要建立这个博
-      
-    
-    </summary>
-    
-      <category term="成长" scheme="https://liujunjie11.github.io/categories/%E6%88%90%E9%95%BF/"/>
-    
-    
-      <category term="我说" scheme="https://liujunjie11.github.io/tags/%E6%88%91%E8%AF%B4/"/>
     
   </entry>
   
