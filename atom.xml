@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2017-10-17T07:48:45.000Z</updated>
+  <updated>2017-10-19T04:03:19.000Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>杂思记</title>
+    <link href="https://liujunjie11.github.io/2017/10/19/%E6%9D%82%E6%80%9D%E8%AE%B0/"/>
+    <id>https://liujunjie11.github.io/2017/10/19/杂思记/</id>
+    <published>2017-10-19T03:34:39.000Z</published>
+    <updated>2017-10-19T04:03:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>读书的意义</li></ul><p>读书的意义不过是为了更好的接受，平静的接受，开怀的接受这世间的种种不合意罢了。我所认为的读书的意义，是为了在一个“度”中保持“中立”，是为了让我的灵魂保持理智与宁静，从而更不容易被世间的种种影响，更不容易被导致内心的波动，没有了波动，才没有偏向，没有偏向于“度”的左右的任何一方，才可以保持内心的平静，在这最后，在平静下接受曾经所有的不甘心，所有的不甘愿，所有的不合意，也从此可以理智的去看待这一些所有，也不再有对于其中的偏向。</p><p>内心平静理智下的快乐才是真正的快乐。读书也就是为了在这喧闹人世间寻得一份内心的宁静，寻得一分保持与灵魂对话的理智，唯有真正的理智与内心的平静，我们才能接近所谓的”幸福“。不能把为了追求财富，名利的读书理解为”读书“。</p><p>读书是为了我们能够生活的更好，也是为了更好的生活。如果说读书真的是要有目的的话，那么这个目的将是平静与理智。</p><ul><li>友谊</li></ul><p>友谊是”利益“的附属品吗？现在的我不完全这么认为，至少是现在。</p><ul><li>”神“是”大自然“</li></ul><p>”神“与”上帝“即是如今无边无际，完美无缺的”大自然“。”大自然“包揽了所有的一切，无论是我们看到的，还是看不到的，无论是我们曾经看到的，还是从未看到的，但是他们（它们）都是因为”大自然“而存在的。”大自然“有着自己的原则，有着自己的规矩，管理这存在的一切。</p><p>但是如果我们把一切包括我们存在的意义与实际上的人生全部寄予”大自然“，无疑是愚蠢的。我们每一个人的出现存在，必然有要出现存在的意义，这需要我们自己去寻找，去实现的。</p><p>而由此可知，”大自然“那无边无际的胸怀。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;读书的意义&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;读书的意义不过是为了更好的接受，平静的接受，开怀的接受这世间的种种不合意罢了。我所认为的读书的意义，是为了在一个“度”中保持“中立”，是为了让我的灵魂保持理智与宁静，从而更不容易被世间的种种影响，更不容易被导致内心的波动，
+      
+    
+    </summary>
+    
+      <category term="成长" scheme="https://liujunjie11.github.io/categories/%E6%88%90%E9%95%BF/"/>
+    
+    
+      <category term="成长" scheme="https://liujunjie11.github.io/tags/%E6%88%90%E9%95%BF/"/>
+    
+  </entry>
   
   <entry>
     <title>无题</title>
@@ -511,36 +539,6 @@
     
     
       <category term="学习教程 Hadoop" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0%E6%95%99%E7%A8%8B-Hadoop/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>eclipse下直接读取Hadoop源码配置</title>
-    <link href="https://liujunjie11.github.io/2017/09/30/eclipse%E4%B8%8B%E7%9B%B4%E6%8E%A5%E8%AF%BB%E5%8F%96Hadoop%E6%BA%90%E7%A0%81%E9%85%8D%E7%BD%AE/"/>
-    <id>https://liujunjie11.github.io/2017/09/30/eclipse下直接读取Hadoop源码配置/</id>
-    <published>2017-09-30T14:00:05.000Z</published>
-    <updated>2017-10-01T07:23:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote><p>参考源码很重要啦，记录下来。</p></blockquote><ul><li><p>参考：</p><p>  <a href="https://segmentfault.com/a/1190000004908147" target="_blank" rel="external">参考</a></p></li></ul><ul><li><p>Mac系统</p></li><li><p>eclipse</p></li><li><p>Hadoop2.X.src源码包（已经解压） 如以下例图</p><p><a href="https://dist.apache.org/repos/dist/release/hadoop/common/hadoop-2.7.4/" target="_blank" rel="external">官网下载</a></p></li></ul><p>例图：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-30%20%E4%B8%8B%E5%8D%8810.06.15.png" alt=""></p><p>例图（解压后）：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-30%20%E4%B8%8B%E5%8D%8810.06.40.png" alt=""></p><h2 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h2><ul><li>在需要的关键词上停留，按F3快捷键，或者是如图选择 <code>Open Declaration</code></li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-30%20%E4%B8%8B%E5%8D%8810.07.49.png" alt=""></p><ul><li>配置，手动写上解压包的位置，之后会发现可以查看源码了。</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/1804582849-5709b3620b7b0_articlex.png" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;参考源码很重要啦，记录下来。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;参考：&lt;/p&gt;
-&lt;p&gt; 
-      
-    
-    </summary>
-    
-      <category term="学习 教程" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0-%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="学习 教程" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0-%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
