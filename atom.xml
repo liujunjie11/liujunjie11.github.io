@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2017-10-24T08:31:51.000Z</updated>
+  <updated>2017-10-25T09:02:33.000Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>(Mac下）eclipse开发Hadoop时文件的中文乱码问题</title>
+    <link href="https://liujunjie11.github.io/2017/10/25/Mac%E4%B8%8B%EF%BC%89eclipse%E5%BC%80%E5%8F%91Hadoop%E6%97%B6%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/"/>
+    <id>https://liujunjie11.github.io/2017/10/25/Mac下）eclipse开发Hadoop时文件的中文乱码问题/</id>
+    <published>2017-10-25T08:43:42.000Z</published>
+    <updated>2017-10-25T09:02:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>参考：<a href="http://blog.csdn.net/u014677702/article/details/53303857" target="_blank" rel="external">参考地址</a></li></ul><hr><blockquote><p>刚刚在eclipse中学习Hadoop时将 <code>txt</code> 格式的文件导入 <code>input</code> 文件夹时发现了中文乱码的问题。在此记录下，希望可以帮助更多需要的朋友。</p></blockquote><ul><li>Mac下可以用 <code>文本编辑</code> 这个自带的软件编译好 <code>txt</code> 格式的文件</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-25%20%E4%B8%8B%E5%8D%884.48.14.png" alt=""></p><p><strong>编译步骤加其中的设置</strong>：打开软件 –&gt; 设置偏好设置选择 <code>纯文本</code>模式（如图1） –&gt; 编译好内容 –&gt; 选择格式 <code>UTF-8</code>保存即可（如图2）</p><ul><li><p>图1<br><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-25%20%E4%B8%8B%E5%8D%884.39.45.png" alt=""></p></li><li><p>图2</p></li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-25%20%E4%B8%8B%E5%8D%884.39.12.png" alt=""></p><ul><li>设置保证eclipse里的格式也是<code>UTF-8</code>的格式</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-25%20%E4%B8%8B%E5%8D%884.45.01.png" alt=""></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-25%20%E4%B8%8B%E5%8D%884.45.22.png" alt=""></p><ul><li>在这之后添加文件入<code>input</code>文件夹查看发现乱码已经解决</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-25%20%E4%B8%8B%E5%8D%884.38.51.png" alt=""></p><ul><li>OK，goodJ.That’s all,thanks.</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;参考：&lt;a href=&quot;http://blog.csdn.net/u014677702/article/details/53303857&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;参考地址&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;bloc
+      
+    
+    </summary>
+    
+      <category term="学习 教程" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0-%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="学习 教程" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0-%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>Mac上解决Mackeeper的流氓作为，以及与其导致的CPU异常</title>
@@ -510,32 +539,6 @@
     
     
       <category term="感想 成长" scheme="https://liujunjie11.github.io/tags/%E6%84%9F%E6%83%B3-%E6%88%90%E9%95%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>有感</title>
-    <link href="https://liujunjie11.github.io/2017/10/02/%E6%9C%89%E6%84%9F/"/>
-    <id>https://liujunjie11.github.io/2017/10/02/有感/</id>
-    <published>2017-10-02T06:48:27.000Z</published>
-    <updated>2017-10-02T07:00:04.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近香港，四川的大游行让我热血沸腾。我看到了国人的血性与中国未来的希望。我衷心的希望每个中国人都要站起来为这片土地，为中华民族，为我们，为我们的子孙后代，为我们自己的人权，为了实现这片我们自己的土地的民主。加油，所有在争取的人们。</p><p>我始终相信着一场变革将会在不久到来。一场我们中国人自己的变革，一场我们中国人自己争取的民主变革。</p><p>我热血沸腾，我也好狠自己却是在行动上在现在无能为力，我也狠还有那么多的国人没有血性继续麻木。我心向着所有在争取的人们，以你们正在争取为自豪，我永远支持你们！</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;最近香港，四川的大游行让我热血沸腾。我看到了国人的血性与中国未来的希望。我衷心的希望每个中国人都要站起来为这片土地，为中华民族，为我们，为我们的子孙后代，为我们自己的人权，为了实现这片我们自己的土地的民主。加油，所有在争取的人们。&lt;/p&gt;
-&lt;p&gt;我始终相信着一场变革将会在不
-      
-    
-    </summary>
-    
-      <category term="感想" scheme="https://liujunjie11.github.io/categories/%E6%84%9F%E6%83%B3/"/>
-    
-    
-      <category term="感想" scheme="https://liujunjie11.github.io/tags/%E6%84%9F%E6%83%B3/"/>
     
   </entry>
   
