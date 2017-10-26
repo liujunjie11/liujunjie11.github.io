@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2017-10-25T09:02:33.000Z</updated>
+  <updated>2017-10-26T00:27:28.000Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -17,11 +17,53 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>（Mac下）docker搭建Hadoop集群</title>
+    <link href="https://liujunjie11.github.io/2017/10/26/%EF%BC%88Mac%E4%B8%8B%EF%BC%89docker%E6%90%AD%E5%BB%BAHadoop%E9%9B%86%E7%BE%A4/"/>
+    <id>https://liujunjie11.github.io/2017/10/26/（Mac下）docker搭建Hadoop集群/</id>
+    <published>2017-10-26T00:27:28.000Z</published>
+    <updated>2017-10-26T00:27:28.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Mac自带字典的扩展与语音设置</title>
+    <link href="https://liujunjie11.github.io/2017/10/26/Mac%E8%87%AA%E5%B8%A6%E5%AD%97%E5%85%B8%E7%9A%84%E6%89%A9%E5%B1%95%E4%B8%8E%E8%AF%AD%E9%9F%B3%E8%AE%BE%E7%BD%AE/"/>
+    <id>https://liujunjie11.github.io/2017/10/26/Mac自带字典的扩展与语音设置/</id>
+    <published>2017-10-26T00:26:46.000Z</published>
+    <updated>2017-10-26T02:10:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><ul><li><p>在Mac上自带的词典是非常强大的。</p></li><li><p>缺点是词典不可带语音功能，不过系统本身是有语音读取功能的，两者结合就天衣无缝了。</p></li><li><p>最大的优点：离线操作，加上Mac自带的语音，都是离线的。</p></li><li><p>很强大..</p></li></ul><hr><h1 id="扩展词典"><a href="#扩展词典" class="headerlink" title="扩展词典"></a>扩展词典</h1><ul><li>扩展辞典的资源：<a href="https://pan.baidu.com/s/1jInDiq6" target="_blank" rel="external">Mac词典扩展下载</a></li></ul><blockquote><p>以上的资源是我在网上找到的，我有一个毛病，就是打开找好资源后就保存关闭网页了..所以资源的来源我也记不得了..总之非常感谢那一些分享资源的人们，谢谢🙏</p></blockquote><hr><ul><li><p>下载好之后，解压文件（图1） –&gt; 打开自带的<code>词典</code>软件，并且点击上方的<code>文件</code>选择<code>打开词典文件夹</code>（图2） –&gt; 将下载好的词典插件移到其中（图3） –&gt; 关闭<code>词典</code>，重新打开 –&gt; 选择<code>偏好设置</code>，勾上插件选项即可完成词典扩展（图4，5）</p></li><li><p>图1</p></li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%888.09.47.png" alt=""></p><ul><li>图2</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%888.08.24.png" alt=""></p><ul><li>图3</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/10%E6%9C%88-26-2017%2008-10-25.gif" alt=""></p><ul><li>图4</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%888.11.34.png" alt=""></p><ul><li>图5</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%888.12.06.png" alt=""></p><hr><h1 id="设置语音"><a href="#设置语音" class="headerlink" title="设置语音"></a>设置语音</h1><blockquote><p>设置语音的声音中，有一个默认的“国产”声音，这是读中文的时候用的，如果读英文就非常别扭了，我们就需要将声音换成一个美国或者是英国的声音，读出来的英文就非常的好听了…</p></blockquote><ul><li><p>设置语音步骤：先打开<code>系统偏好设置</code> –&gt; <code>铺助功能</code> –&gt; <code>语音</code> （图1）–&gt; 会看到了系统声音的选项，其中的先看到的<code>Ting-Ting</code>是默认的中国小妹声音。可以选择自定义，选择相关的美国的或者是英国的声音（图2） –&gt; 下载好喜欢的声音之后，将其选择为系统默认即可完成语音设置</p></li><li><p>图1</p></li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%888.02.16.png" alt=""></p><ul><li>图2</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%888.02.34.png" alt=""></p><hr><h1 id="触摸板设置及语音快捷键设置"><a href="#触摸板设置及语音快捷键设置" class="headerlink" title="触摸板设置及语音快捷键设置"></a>触摸板设置及语音快捷键设置</h1><blockquote><p>触摸板设置可以离线快速的查找我们需要了解的单词的意思，通过快捷键我们也可以离线快速的得知其怎么读。</p></blockquote><ul><li><p>打开<code>系统偏好设置</code> –&gt; 选择<code>触摸板</code>，之后选择习惯的查看设置（图1）–&gt; 将下方的语音快捷键勾上，也可以像我一样设置快捷键(图2） –&gt;即可完成触摸板的查看设置</p></li><li><p>图1</p></li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%889.55.35.png" alt=""></p><ul><li>图2</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%888.03.24.png" alt=""></p><hr><h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><ul><li>选择一个想要了解的单词，用刚刚选择的手势查看</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%888.03.06.png" alt=""></p><ul><li>语音读出，可以如下，亦或者直接使用快捷键即可</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%888.13.06.png" alt=""></p><ul><li>测试完成</li></ul><hr><h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><ul><li>发布一个Mac迅雷破解版，亲测有效..</li></ul><blockquote><p>下载：<a href="https://pan.baidu.com/s/1jIglGhw" target="_blank" rel="external">下载</a></p><p>资源来自网络..再次感谢分享的人们🙏</p></blockquote><p>（需要先登录）使用破解：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-25%20%E4%B8%8B%E5%8D%887.30.26.png" alt=""></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-25%20%E4%B8%8B%E5%8D%887.29.58.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;在Mac上自带的词典是非常强大的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;缺点是词典不可带语音功能，不过系统本身是有语音读取功
+      
+    
+    </summary>
+    
+      <category term="教程" scheme="https://liujunjie11.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="教程" scheme="https://liujunjie11.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>(Mac下）eclipse开发Hadoop时文件的中文乱码问题</title>
     <link href="https://liujunjie11.github.io/2017/10/25/Mac%E4%B8%8B%EF%BC%89eclipse%E5%BC%80%E5%8F%91Hadoop%E6%97%B6%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/"/>
     <id>https://liujunjie11.github.io/2017/10/25/Mac下）eclipse开发Hadoop时文件的中文乱码问题/</id>
     <published>2017-10-25T08:43:42.000Z</published>
-    <updated>2017-10-25T09:02:33.000Z</updated>
+    <updated>2017-10-25T09:07:24.000Z</updated>
     
     <content type="html"><![CDATA[<ul><li>参考：<a href="http://blog.csdn.net/u014677702/article/details/53303857" target="_blank" rel="external">参考地址</a></li></ul><hr><blockquote><p>刚刚在eclipse中学习Hadoop时将 <code>txt</code> 格式的文件导入 <code>input</code> 文件夹时发现了中文乱码的问题。在此记录下，希望可以帮助更多需要的朋友。</p></blockquote><ul><li>Mac下可以用 <code>文本编辑</code> 这个自带的软件编译好 <code>txt</code> 格式的文件</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-25%20%E4%B8%8B%E5%8D%884.48.14.png" alt=""></p><p><strong>编译步骤加其中的设置</strong>：打开软件 –&gt; 设置偏好设置选择 <code>纯文本</code>模式（如图1） –&gt; 编译好内容 –&gt; 选择格式 <code>UTF-8</code>保存即可（如图2）</p><ul><li><p>图1<br><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-25%20%E4%B8%8B%E5%8D%884.39.45.png" alt=""></p></li><li><p>图2</p></li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-25%20%E4%B8%8B%E5%8D%884.39.12.png" alt=""></p><ul><li>设置保证eclipse里的格式也是<code>UTF-8</code>的格式</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-25%20%E4%B8%8B%E5%8D%884.45.01.png" alt=""></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-25%20%E4%B8%8B%E5%8D%884.45.22.png" alt=""></p><ul><li>在这之后添加文件入<code>input</code>文件夹查看发现乱码已经解决</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-25%20%E4%B8%8B%E5%8D%884.38.51.png" alt=""></p><ul><li>OK，goodJ.That’s all,thanks.</li></ul>]]></content>
     
@@ -488,57 +530,6 @@
     
     
       <category term="成长" scheme="https://liujunjie11.github.io/tags/%E6%88%90%E9%95%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>观读“九评”有感</title>
-    <link href="https://liujunjie11.github.io/2017/10/06/%E8%A7%82%E8%AF%BB%E2%80%9C%E4%B9%9D%E8%AF%84%E2%80%9D%E6%9C%89%E6%84%9F/"/>
-    <id>https://liujunjie11.github.io/2017/10/06/观读“九评”有感/</id>
-    <published>2017-10-06T01:16:50.000Z</published>
-    <updated>2017-10-06T02:40:21.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>原来我也不过是一个懦夫。一个不敢言声，一个在中共邪灵下的自以为是的，却是正中其下怀的懦夫罢。</p><p>我是被中共这个人类历时难得有的邪灵所震撼到了。遥想这个中华大地，遥想这片土地上的社会人群，遥想这个社会的人文风气，一切都是契合的那么的天衣无缝，但我认为这绝对不是什么为了哗众取目的言辞，这真的是现实的真实写照。共产党的产生真的是人类历迹上的一大悲哀，因为从此又一个真正的魔鬼被释放到了人间。而我却是在认识了这个魔鬼的真相之后，居然不由自主的感觉到了可怕，这是怎样的一个恶魔般的团体啊，从此将噩梦带来到了这片土地，带来了无数的谎言与欺骗，带来了比噩梦还要可怕的毒药，可悲的是，无数的人们却是在它的毒害下却是毫不知情，居然反过来帮着魔鬼“求情”。</p><p>不可否认的是，现在的我，又或者是现在的许多的国人们心中还残留着这个魔鬼给我们灌输的毒药，这是一种精神毒药，真正的让我感觉到细思恐极，我感到愤怒，然而更多的是恐惧与无奈，我们的这一片中华大地如今因为这个魔鬼是一个怎样的国度啊，这里的人们还是可以称之为“人”的吗？我发至内心的感到了恐惧。我也同时对于这个民族的未来而悲叹，对这个魔鬼的嗔恨无处安放，而我如今现在却只有在此像个懦夫一样的在此记录下我的不甘。这是我的悲哀，亦是这个民族的悲哀！</p><p>所幸，现在还有着许多的在内外的一些爱国人士没有放弃对这个好似被上帝摒弃的中华大地的拯救，他们与中共这个魔鬼在做着斗争，冒着随时可能被夺取生命的危险，真的是让人感到一丝欣慰与一丝希望呀，中国的未来的希望就是因为这一群人们而在前方闪闪发光，我们每一个有良知的中国人都应该站起来，为了将“中共”这个魔鬼赶出中华大地尽我们的一份力，甚至于我们的生命。</p><p>“九评共产党”是一部可以帮助国人看清离这个离自己是多么近的魔鬼的真面目的，我们从前在童话故事中听说过的魔鬼，如今在现实中却是离我们是多么的近呀，然而这个魔鬼却是比童话故事中更加的恶毒，不由得让人感觉到对于它的无尽的恐惧与嗔恨。这是一部有勇气的，敢于向魔鬼挑战的片子，可以唤醒国人们的一部良心之作，亦然是一部为国人为中国大地着想的一部救国的之作。感谢这一些不畏魔鬼暴权的人们的默默贡献。希望能让更多的后来人看到，真正的了解自己身边的这个魔鬼的真面目。</p><p>那一些还在违背良知帮助“中共”这个魔鬼的人们，亦或者是仍然麻木不仁的人们啊，你们是多么的可悲呀。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;原来我也不过是一个懦夫。一个不敢言声，一个在中共邪灵下的自以为是的，却是正中其下怀的懦夫罢。&lt;/p&gt;
-&lt;p&gt;我是被中共这个人类历时难得有的邪灵所震撼到了。遥想这个中华大地，遥想这片土地上的社会人群，遥想这个社会的人文风气，一切都是契合的那么的天衣无缝，但我认为这绝对不是什么
-      
-    
-    </summary>
-    
-      <category term="成长 学习" scheme="https://liujunjie11.github.io/categories/%E6%88%90%E9%95%BF-%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="成长 学习" scheme="https://liujunjie11.github.io/tags/%E6%88%90%E9%95%BF-%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>思学，思己</title>
-    <link href="https://liujunjie11.github.io/2017/10/05/%E6%80%9D%E5%AD%A6%EF%BC%8C%E6%80%9D%E5%B7%B1/"/>
-    <id>https://liujunjie11.github.io/2017/10/05/思学，思己/</id>
-    <published>2017-10-05T02:37:00.000Z</published>
-    <updated>2017-10-05T03:12:35.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>哲学，哲，有折射世间成理的意味，也有以理为基口授于人的意味。学，则是学无止境的意味罢。“道”与“理”，源于生活，来于生活，简与生活。思想与宇宙自然之理，一切的“道”与“理”好似都是早已有之，好似都是井然有序的了。学，人生的意义在于学？人生以学为铺。不光光是对于我们自己的人生亦或者是仅限于这个我们生活的人世间，而是整个自然。反观自然，若是仅仅的以为是我们所在的这个所谓的地球上的大自然，那真的是愚不可及了。整个自然的范围是我们人类所思索不到的，以这个所谓的我们已知的这个宇宙来描述自然？还是整个所谓的星系来描述？那也是微不足道的。自然的奥秘在于它的未知的广阔与“成理”的魅力，这对于那一些拥有追求未知的强盛求知欲的人们来说，这真的是让人兴奋的，同时也是让人好奇与敬畏的。好奇与兴奋是因自然的未知与我们的求知欲望相吻合，所以我们如此。而敬畏，是因为这个自然的未知范围真的是太广太阔，它的无边无际，它的学无止境，足以给人一种人生短暂之叹。人生是要以“学”为铺的，思索人生，思索并且不断的追与自然的未知，再也不会有比这更让人热血沸腾的了，以此来记得自己还活着，真是一件美好之事呀。</p><p>人啊，没有勇气去拷问我们自己的灵魂，没有勇气去改变我们自己的灵魂所有的丑恶，是一件多么愚蠢，多么可悲的事情。如果是因为此而随之带来给我们烦恼与恼怒，那又是更高一层的可笑了，何为更高一层的可笑？我所认为的即是比可笑更为可笑罢。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;哲学，哲，有折射世间成理的意味，也有以理为基口授于人的意味。学，则是学无止境的意味罢。“道”与“理”，源于生活，来于生活，简与生活。思想与宇宙自然之理，一切的“道”与“理”好似都是早已有之，好似都是井然有序的了。学，人生的意义在于学？人生以学为铺。不光光是对于我们自己的人生
-      
-    
-    </summary>
-    
-      <category term="感想 成长" scheme="https://liujunjie11.github.io/categories/%E6%84%9F%E6%83%B3-%E6%88%90%E9%95%BF/"/>
-    
-    
-      <category term="感想 成长" scheme="https://liujunjie11.github.io/tags/%E6%84%9F%E6%83%B3-%E6%88%90%E9%95%BF/"/>
     
   </entry>
   
