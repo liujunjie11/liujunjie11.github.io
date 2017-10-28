@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2017-10-26T00:27:28.000Z</updated>
+  <updated>2017-10-28T14:02:09.000Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -21,12 +21,24 @@
     <link href="https://liujunjie11.github.io/2017/10/26/%EF%BC%88Mac%E4%B8%8B%EF%BC%89docker%E6%90%AD%E5%BB%BAHadoop%E9%9B%86%E7%BE%A4/"/>
     <id>https://liujunjie11.github.io/2017/10/26/（Mac下）docker搭建Hadoop集群/</id>
     <published>2017-10-26T00:27:28.000Z</published>
-    <updated>2017-10-26T00:27:28.000Z</updated>
+    <updated>2017-10-28T14:02:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><ul><li><strong>转来自<code>KiwenLau</code>大神的教程：<a href="https://kiwenlau.com/2016/06/12/160612-hadoop-cluster-docker-update/" target="_blank" rel="external">教程链接</a>，在以下的一切版权，劳动成果属于他本人。</strong></li></ul><hr><h1 id="基于Docker搭建Hadoop集群之升级版"><a href="#基于Docker搭建Hadoop集群之升级版" class="headerlink" title="基于Docker搭建Hadoop集群之升级版"></a>基于Docker搭建Hadoop集群之升级版</h1><blockquote><p>摘要: kiwenlau/hadoop-cluster-docker是去年参加Docker巨好玩比赛开发的，得了二等奖并赢了一块苹果手表，目前这个项目已经在GitHub上获得了236个Star，DockerHub的镜像下载次数2000+。总之，项目还算很受欢迎吧，这篇博客将介绍项目的升级版。</p></blockquote><ul><li>作者: KiwenLau</li><li>日期: 2016-06-12</li></ul><h2 id="一-项目介绍"><a href="#一-项目介绍" class="headerlink" title="一. 项目介绍"></a>一. 项目介绍</h2><blockquote><p>将Hadoop打包到Docker镜像中，就可以快速地在单个机器上搭建Hadoop集群，这样可以方便新手测试和学习。</p></blockquote><p>如下图所示<br><img src="http://owudg3xs2.bkt.clouddn.com/hadoop-cluster-docker.png" alt=""></p><hr><blockquote><p>Hadoop的master和slave分别运行在不同的Docker容器中，其中hadoop-master容器中运行NameNode和ResourceManager，hadoop-slave容器中运行DataNode和NodeManager。NameNode和DataNode是Hadoop分布式文件系统HDFS的组件，负责储存输入以及输出数据，而ResourceManager和NodeManager是Hadoop集群资源管理系统YARN的组件，负责CPU和内存资源的调度。</p></blockquote><p><strong>之前的版本使用serf/dnsmasq为Hadoop集群提供DNS服务，由于Docker网络功能更新，现在并不需要了。更新的版本中，使用以下命令为Hadoop集群创建单独的网络:</strong></p><p><code>sudo docker network create --driver=bridge hadoop</code></p><p>然后在运行Hadoop容器时，使用<code>–net=hadoop</code>选项，这时所有容器将运行在hadoop网络中，它们可以通过容器名称进行通信。</p><hr><ul><li>项目更新要点：<br>去除<code>serf/dnsmasq</code><br>合并Master和Slave镜像<br>使用kiwenlau/compile-hadoop项目编译的Hadoo进行安装<br>优化Hadoop配置二. <strong>3节点Hadoop集群搭建步骤</strong>:</li></ul><ol><li>下载Docker镜像<br><code>sudo docker pull kiwenlau/hadoop:1.0</code></li><li>下载GitHub仓库<br><code>git clone https://github.com/kiwenlau/hadoop-cluster-docker</code></li><li>创建Hadoop网络<br><code>sudo docker network create --driver=bridge hadoop</code></li></ol><ul><li>运行Docker容器<br><strong>指向目录</strong>：<code>cd hadoop-cluster-docker</code><br><code>./start-container.sh</code><blockquote><p>运行结果<br>start hadoop-master container…<br>start hadoop-slave1 container…<br>start hadoop-slave2 container…<br>root@hadoop-master:~#</p></blockquote></li></ul><hr><blockquote><p>启动了3个容器，1个master, 2个slave<br>运行后就进入了hadoop-master容器的/root目录</p></blockquote><ul><li>启动hadoop<br><code>./start-hadoop.sh</code></li></ul><ul><li>运行wordcount<br><code>./run-wordcount.sh</code></li></ul><blockquote><p>运行结果<br>input file1.txt:<br>Hello Hadoop<br>input file2.txt:<br>Hello Docker<br>wordcount output:<br>Docker    1<br>Hadoop    1<br>Hello    2</p></blockquote><hr><blockquote><p>Hadoop网页管理地址:<br>NameNode: <a href="http://192.168.59.1:50070/" target="_blank" rel="external">http://192.168.59.1:50070/</a><br>ResourceManager: <a href="http://192.168.59.1:8088/" target="_blank" rel="external">http://192.168.59.1:8088/</a><br>其中192.168.59.1为运行容器的主机的IP。</p></blockquote><h2 id="N节点Hadoop集群搭建步骤"><a href="#N节点Hadoop集群搭建步骤" class="headerlink" title="N节点Hadoop集群搭建步骤"></a>N节点Hadoop集群搭建步骤</h2><ul><li>准备</li></ul><p><strong>参考第二部分1~3：下载Docker镜像，下载GitHub仓库，以及创建Hadoop网络</strong></p><ul><li>重新构建Docker镜像，在<code>cd</code>其目录之下<br><code>./resize-cluster.sh 5</code></li></ul><blockquote><p>可以指定任意N(N&gt;1)</p></blockquote><ul><li>启动Docker容器<br><code>./start-container.sh 5</code></li></ul><blockquote><p>与第2步中的N保持一致。</p></blockquote><ul><li>运行Hadoop</li></ul><blockquote><p>参考第二部分5~6：启动Hadoop，并运行wordcount。</p></blockquote><hr><p><strong>本文本身链接参考：</strong></p><ul><li><p>参考地址1:<a href="https://kiwenlau.com/2015/06/08/150608-hadoop-cluster-docker/" target="_blank" rel="external">参考地址1</a></p></li><li><p>参考地址2:<a href="https://www.digitalocean.com/community/tutorials/how-to-install-hadoop-on-ubuntu-13-10" target="_blank" rel="external">参考地址2</a></p></li></ul><hr>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;h1 id=&quot;声明&quot;&gt;&lt;a href=&quot;#声明&quot; class=&quot;headerlink&quot; title=&quot;声明&quot;&gt;&lt;/a&gt;声明&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;转来自&lt;code&gt;KiwenLau&lt;/code&gt;大神的教程：&lt;a href=&quot;https://kiwenlau.
+      
+    
     </summary>
     
+      <category term="学习" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
