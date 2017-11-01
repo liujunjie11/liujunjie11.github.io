@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[MacBookPro上的Multi-Touch Bar缩放问题]]></title>
+    <url>%2F2017%2F11%2F01%2FMacBookPro%E4%B8%8A%E7%9A%84Multi-Touch-Bar%E7%BC%A9%E6%94%BE%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[最近发现自己的电脑在触摸调试Bar上的声音键时，会将Bar的影像投射到屏幕上（如图1的最下方），并且竟然会延迟…有点不习惯了。在调试声音时，发现了在系统偏好设置中的铺助功能的选项缩放的相关的设置（如图2），即为其中的启用Multi-Touch Bar缩放被打勾了，但是之前我一点印象也没有…我一直以为是我升级了系统的缘故，另一方面其实系统根本也没有升级成功过…所以一直让我困惑不已。 解决方法就是把那个勾取消就可以恢复回来了。 图1 图2]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[MacBookPro连接Wi-Fi异常问题]]></title>
     <url>%2F2017%2F10%2F31%2FMacBookPro%E8%BF%9E%E6%8E%A5Wi-Fi%E5%BC%82%E5%B8%B8%E9%97%AE%E9%A2%98%2F</url>
     <content type="text"><![CDATA[主要的原因：因为插了外接的U盘，拔了就可以恢复正常的Wi-Fi连接了。]]></content>
