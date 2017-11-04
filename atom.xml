@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2017-11-04T04:03:19.656Z</updated>
+  <updated>2017-11-04T08:09:17.238Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于MacOS High Sierra中Outlook不可用的问题</title>
+    <link href="https://liujunjie11.github.io/2017/11/04/%E5%85%B3%E4%BA%8EMacOS-High-Sierra%E4%B8%ADOutlook%E4%B8%8D%E5%8F%AF%E7%94%A8%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>https://liujunjie11.github.io/2017/11/04/关于MacOS-High-Sierra中Outlook不可用的问题/</id>
+    <published>2017-11-04T07:59:57.000Z</published>
+    <updated>2017-11-04T08:09:17.238Z</updated>
+    
+    <content type="html"><![CDATA[<p>升级了<code>MacOS High Sierra</code>系统之后发现<code>Outlook</code>不能用了。升级一下就能解决了，但是自动更新实在是太慢了，找到了一些<code>15.39</code>的<code>office</code>资源。</p><blockquote><p>下面的<strong>百度云资源</strong>加了破解的资源在内。下载好之后安装,不急打开应用，先再打开钥匙破解即可达成破解。</p></blockquote><ul><li><p><a href="https://pan.baidu.com/s/1c2Cm2bA" target="_blank" rel="external">百度云下载</a></p></li><li><p>百度云下载太慢，不用它用这个下<code>office</code>就快了：<a href="https://www.xia1ge.com/microsoft-office-2016-for-mac-15-39-vl.html" target="_blank" rel="external">直接网页下载</a></p></li></ul><blockquote><p>以上资源来自网络…</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;升级了&lt;code&gt;MacOS High Sierra&lt;/code&gt;系统之后发现&lt;code&gt;Outlook&lt;/code&gt;不能用了。升级一下就能解决了，但是自动更新实在是太慢了，找到了一些&lt;code&gt;15.39&lt;/code&gt;的&lt;code&gt;office&lt;/code&gt;资源。&lt;/p&gt;
+      
+    
+    </summary>
+    
+      <category term="教程" scheme="https://liujunjie11.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="教程" scheme="https://liujunjie11.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>iPad 上的代理问题记录</title>
@@ -518,32 +543,6 @@
     
     
       <category term="认知 感想" scheme="https://liujunjie11.github.io/tags/%E8%AE%A4%E7%9F%A5-%E6%84%9F%E6%83%B3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>（忘记密码下）更改华为手机解锁屏幕密码</title>
-    <link href="https://liujunjie11.github.io/2017/10/11/%EF%BC%88%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E4%B8%8B%EF%BC%89%E6%9B%B4%E6%94%B9%E5%8D%8E%E4%B8%BA%E6%89%8B%E6%9C%BA%E8%A7%A3%E9%94%81%E5%B1%8F%E5%B9%95%E5%AF%86%E7%A0%81/"/>
-    <id>https://liujunjie11.github.io/2017/10/11/（忘记密码下）更改华为手机解锁屏幕密码/</id>
-    <published>2017-10-11T03:38:46.000Z</published>
-    <updated>2017-10-11T04:03:27.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>今天早上一大早来到图书馆，发现我的华为手机青春版G9的屏幕锁密码早已是在我的脑海里消失得一丝不挂。why?So，I decide to 找方法去将这个烦人的东西给解开啊，现在也终于解开了，花了我宝贵的生命中的一个钟！<strong>一个钟</strong>啊！！</p></blockquote><ul><li><strong>前提，在忘记之前</strong> </li></ul><p>你忘记了屏幕锁密码！</p><p>你的手机不是在关机状态！（如果是关机的情况下忘记了，等着恢复出厂设置吧！因为她妈的华为手机是要求开机输入屏幕锁密码的！）</p><p>你的手机可以通过指纹进入！</p><ul><li><strong>开始这烦人的过程吧，实际上简单的我想跳舞</strong></li></ul><p>假设你已经进入了手机界面（通过你那恶心的指纹或者是其他的方法！）</p><p>点击 <code>手机找回</code> –&gt; 将<code>允许查找手机</code>开启 –&gt; 点击<code>查找我的手机</code> –&gt; <code>选择你现在的要更改解锁密码的手机的华为账号</code> –&gt; <code>开始定位</code><br>–&gt; 手机已经开始定位（当然你得要是在他妈得有网的情况下！）–&gt; 成功之后会提示重新输入密码（这就是他妈得我们的新的密码！记好了！）–&gt; 确认之后，手机会自己锁屏了 –&gt; 你打开输入刚刚的新的密码或者是通过指纹发现都可以解锁了！</p><ul><li>教程他妈的到此结束了！</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;今天早上一大早来到图书馆，发现我的华为手机青春版G9的屏幕锁密码早已是在我的脑海里消失得一丝不挂。why?So，I decide to 找方法去将这个烦人的东西给解开啊，现在也终于解开了，花了我宝贵的生命中的一个钟！&lt;strong&gt;一个钟&lt;/str
-      
-    
-    </summary>
-    
-      <category term="学习 教程" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0-%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="学习 教程" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0-%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
