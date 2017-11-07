@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2017-11-06T11:26:07.408Z</updated>
+  <updated>2017-11-07T15:03:34.243Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -17,13 +17,43 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>一些问题记录</title>
+    <link href="https://liujunjie11.github.io/2017/11/07/%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <id>https://liujunjie11.github.io/2017/11/07/一些问题记录/</id>
+    <published>2017-11-07T14:45:29.000Z</published>
+    <updated>2017-11-07T15:03:34.243Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>升级了<code>MacOS High Sierra</code>之后发现java版本不兼容了。</li></ul><p><strong>解决：下载<code>JDK1.5</code>以上就可以解决了。</strong></p><blockquote><p>发现了<code>eclipse</code>自动识别添加的强大功能🤩</p></blockquote><ul><li><code>iPad</code>上用<code>iBook</code>结合<code>百度网盘</code>查看文件</li></ul><p>先在<code>App商店</code>下载<code>百度网盘HD</code>，比如我想要看一本书，先将其保存在<code>百度网盘</code>，打开点击刚刚保存的书籍就会开始自动缓存，完了之后点击<code>拷贝到iBook</code>，发现文件已经自动保存在<code>iBook</code>中了。</p><p>真的是挺方便的合作。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;升级了&lt;code&gt;MacOS High Sierra&lt;/code&gt;之后发现java版本不兼容了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;解决：下载&lt;code&gt;JDK1.5&lt;/code&gt;以上就可以解决了。&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+
+      
+    
+    </summary>
+    
+      <category term="学习" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>学习Hadoop的书籍引荐</title>
     <link href="https://liujunjie11.github.io/2017/11/06/%E5%AD%A6%E4%B9%A0Hadoop%E7%9A%84%E4%B9%A6%E7%B1%8D%E5%BC%95%E8%8D%90/"/>
     <id>https://liujunjie11.github.io/2017/11/06/学习Hadoop的书籍引荐/</id>
     <published>2017-11-06T11:11:22.000Z</published>
-    <updated>2017-11-06T11:26:07.408Z</updated>
+    <updated>2017-11-07T14:57:23.582Z</updated>
     
-    <content type="html"><![CDATA[<p>学习了一段时间的Hadoop，有几本不错的书籍在此分享。</p><p>如下的链接中的书籍为：</p><ul><li><p>Hadoop实战（陆版本）：<a href="https://pan.baidu.com/s/1dEMJGh7" target="_blank" rel="external">百度网盘下载</a></p></li><li><p>Hadoop实战（国外中文版）：<a href="https://pan.baidu.com/s/1cjky9S" target="_blank" rel="external">百度网盘下载</a></p></li><li><p>Hadoop权威指南3（中文版）：<a href="https://pan.baidu.com/s/1skAPVx7" target="_blank" rel="external">百度网盘下载</a></p></li><li><p>Hadoop技术内幕 深入解析Hadoop Common和HDFS架构技术:<a href="https://pan.baidu.com/s/1dFhI0et" target="_blank" rel="external">百度网盘下载</a></p></li><li><p>Hadoop技术内幕 深入理解MapReduce架构设计与实现原理：<a href="https://pan.baidu.com/s/1qYLX6hA" target="_blank" rel="external">百度网盘下载</a></p></li></ul><hr><p>另外我的网盘还有许多传闻不错的相关的书籍，等我一一看完并且验证是否名副其实再在此上传吧🤓</p><ul><li>最后声明：资源来自互联网，感想默默分享的人们🙏</li></ul>]]></content>
+    <content type="html"><![CDATA[<p>学习了一段时间的Hadoop，有几本不错的书籍在此分享。</p><p>如下的链接中的书籍为：</p><ul><li><p>Hadoop实战（陆版本）：<a href="https://pan.baidu.com/s/1dEMJGh7" target="_blank" rel="external">百度网盘下载</a></p></li><li><p>Hadoop实战（国外中文版）：<a href="https://pan.baidu.com/s/1cjky9S" target="_blank" rel="external">百度网盘下载</a></p></li><li><p>Hadoop权威指南3（中文版）：<a href="https://pan.baidu.com/s/1skAPVx7" target="_blank" rel="external">百度网盘下载</a></p></li><li><p>Hadoop技术内幕 深入解析Hadoop Common和HDFS架构技术:<a href="https://pan.baidu.com/s/1dFhI0et" target="_blank" rel="external">百度网盘下载</a></p></li><li><p>Hadoop技术内幕 深入理解MapReduce架构设计与实现原理：<a href="https://pan.baidu.com/s/1qYLX6hA" target="_blank" rel="external">百度网盘下载</a></p></li><li><p>Hadoop技术内幕：深入解析YARN架构设计与实现原理：<a href="https://pan.baidu.com/s/1cHa1iu" target="_blank" rel="external">百度网盘下载</a></p></li></ul><hr><p>另外我的网盘还有许多传闻不错的相关的书籍，等我一一看完并且验证是否名副其实再在此上传吧🤓</p><ul><li>最后声明：资源来自互联网，感想默默分享的人们🙏</li></ul>]]></content>
     
     <summary type="html">
     
@@ -520,32 +550,6 @@
     
     
       <category term="成长 认知" scheme="https://liujunjie11.github.io/tags/%E6%88%90%E9%95%BF-%E8%AE%A4%E7%9F%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>“哲学”与“生物学“之间的见解探讨</title>
-    <link href="https://liujunjie11.github.io/2017/10/11/%E2%80%9C%E5%93%B2%E5%AD%A6%E2%80%9D%E4%B8%8E%E2%80%9C%E7%94%9F%E7%89%A9%E5%AD%A6%E2%80%9C%E4%B9%8B%E9%97%B4%E7%9A%84%E8%A7%81%E8%A7%A3%E6%8E%A2%E8%AE%A8/"/>
-    <id>https://liujunjie11.github.io/2017/10/11/“哲学”与“生物学“之间的见解探讨/</id>
-    <published>2017-10-11T12:48:45.000Z</published>
-    <updated>2017-10-11T13:06:48.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>关于”哲学“与”生物学“之间的关系好似是有一番”矛盾“的。在我的浅陋寡闻的基础上，我想对此作一些感想，记录在下。</p><p>我所认为的“哲学”是以人类本身的意识认知为基础的，即大多数我们认为的“哲学”是在我们认知的这个自然之内的思考，对于种种之内的现象的思考，并且都是以我们的“意识”为基础的思考从而得出的一系列认知。而我所认为的“生物学”更多的则是在所谓的“科学手段”上的得出的一系列以研究实践或许也是掺杂着一些假设的的认知发现所得出的一系列认知。</p><p>而我想表达的是，前者注重个人意识上的思考，而后者可能注重实践加部分的思考。而它们之间的“矛盾”则是在于“意识为主”与“实践为主”的矛盾。这真的是一种矛盾吗？我在现在却也是得不到一个清晰的给我自己也说得过去的答案。</p><p>对于它们的认知或许还是需要我去更多的去了解，去思考的。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;关于”哲学“与”生物学“之间的关系好似是有一番”矛盾“的。在我的浅陋寡闻的基础上，我想对此作一些感想，记录在下。&lt;/p&gt;
-&lt;p&gt;我所认为的“哲学”是以人类本身的意识认知为基础的，即大多数我们认为的“哲学”是在我们认知的这个自然之内的思考，对于种种之内的现象的思考，并且都是以
-      
-    
-    </summary>
-    
-      <category term="认知 感想" scheme="https://liujunjie11.github.io/categories/%E8%AE%A4%E7%9F%A5-%E6%84%9F%E6%83%B3/"/>
-    
-    
-      <category term="认知 感想" scheme="https://liujunjie11.github.io/tags/%E8%AE%A4%E7%9F%A5-%E6%84%9F%E6%83%B3/"/>
     
   </entry>
   
