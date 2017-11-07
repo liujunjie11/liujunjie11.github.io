@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2017-11-07T15:03:34.243Z</updated>
+  <updated>2017-11-07T15:06:44.399Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://liujunjie11.github.io/2017/11/07/%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
     <id>https://liujunjie11.github.io/2017/11/07/一些问题记录/</id>
     <published>2017-11-07T14:45:29.000Z</published>
-    <updated>2017-11-07T15:03:34.243Z</updated>
+    <updated>2017-11-07T15:06:44.399Z</updated>
     
-    <content type="html"><![CDATA[<ul><li>升级了<code>MacOS High Sierra</code>之后发现java版本不兼容了。</li></ul><p><strong>解决：下载<code>JDK1.5</code>以上就可以解决了。</strong></p><blockquote><p>发现了<code>eclipse</code>自动识别添加的强大功能🤩</p></blockquote><ul><li><code>iPad</code>上用<code>iBook</code>结合<code>百度网盘</code>查看文件</li></ul><p>先在<code>App商店</code>下载<code>百度网盘HD</code>，比如我想要看一本书，先将其保存在<code>百度网盘</code>，打开点击刚刚保存的书籍就会开始自动缓存，完了之后点击<code>拷贝到iBook</code>，发现文件已经自动保存在<code>iBook</code>中了。</p><p>真的是挺方便的合作。</p>]]></content>
+    <content type="html"><![CDATA[<ul><li>升级了<code>MacOS High Sierra</code>之后发现java版本不兼容了。</li></ul><p><strong>解决：先卸载之前的版本，再下载<code>JDK1.5</code>以上就可以解决了。</strong></p><blockquote><p>发现了<code>eclipse</code>自动识别添加的强大功能🤩</p></blockquote><ul><li><code>iPad</code>上用<code>iBook</code>结合<code>百度网盘</code>查看文件</li></ul><p>先在<code>App商店</code>下载<code>百度网盘HD</code>，比如我想要看一本书，先将其保存在<code>百度网盘</code>，打开点击刚刚保存的书籍就会开始自动缓存，完了之后点击<code>拷贝到iBook</code>，发现文件已经自动保存在<code>iBook</code>中了。</p><p>真的是挺方便的合作。</p>]]></content>
     
     <summary type="html">
     
@@ -32,9 +32,8 @@
         &lt;ul&gt;
 &lt;li&gt;升级了&lt;code&gt;MacOS High Sierra&lt;/code&gt;之后发现java版本不兼容了。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;解决：下载&lt;code&gt;JDK1.5&lt;/code&gt;以上就可以解决了。&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-
+&lt;p&gt;&lt;strong&gt;解决：先卸载之前的版本，再下载&lt;code&gt;JDK1.5&lt;/code&gt;以上就可以解决了。&lt;/strong&gt;&lt;/p&gt;
+&lt;bl
       
     
     </summary>
