@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[iCould的简单理解...]]></title>
+    <url>%2F2017%2F11%2F11%2FiCould%E7%9A%84%E7%AE%80%E5%8D%95%E7%90%86%E8%A7%A3%2F</url>
+    <content type="text"><![CDATA[对于iCould的理解可能会有一些模糊。 在此简单记录下好了。 特性：在Apple设备之间数据同步； 在本地上传之后，在iCould之间的文件也是占本地的内存的，很简单，因为在云上一般数据是需要下载的，而在本地上传之后是已经存在的了，在Apple的其他设备上即就与其他网盘没什么区别了，均需要下载其中的数据才可在设备中查看的； 在考虑要升级存储时应该要理解这个区别…]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于Hadoop在连接eclipse中开发出现的问题]]></title>
     <url>%2F2017%2F11%2F10%2F%E5%85%B3%E4%BA%8EHadoop%E5%9C%A8%E8%BF%9E%E6%8E%A5eclipse%E4%B8%AD%E5%BC%80%E5%8F%91%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
     <content type="text"><![CDATA[在我学习了一段时间的Hadoop之后开始了简单的实践，也开始了处理百万级的数据了（几百MB），结果发现用我的MacBook Pro跑的效果还不错（即伪分布式连接eclipse的前提下，其教程可以在我博客中可以找到）。 下面简单说说一些问题。 突然连接不上了 解决： 查看配置文件的填写是否正确，特别是一个字母的是否缺失的检查； 连接信息的准确性； 将eclipse，Hadoop都关闭重启； 电脑整个重启； 一般大多数都可以解决了 文件导入input发现均为0KB 解决： 全部关闭重启，不行则电脑重启； 导入的文件过大，导致在output端的输出查看不了，即一般情况出现Editor could not be initialized.的字样 解决： 在终端利用命令行查询输出文件（不推荐，文件过大易卡死）； 简单的方法，将其从HDFS下载至本地即可轻松查看（如下图）； 以后有问题再在此补充。]]></content>
