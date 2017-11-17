@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[焦虑]]></title>
+    <url>%2F2017%2F11%2F17%2F%E7%84%A6%E8%99%91%2F</url>
+    <content type="text"><![CDATA[今天对于自己未来发展的焦虑有如洪水一般滚滚而来… 我看好这个时代的潮流趋势，但是大量的社会事例不得不让我低下头去思考这社会潜在的需求。即学历。学历无疑是我心中的一道坎，然而我是从内心厌倦着这所谓的升学考试的。 这东西与我想要发展，想要生存的一方面却是成了相对面。 社会的需求与我不合，我的能力如今配不上我的野心。这才是我真正的焦虑。 我没有亲历过，我的焦虑多是因为道听途说，然而，人们的经验给予的借鉴亦然必不可少。 这社会普遍的价值观与我格格不入。]]></content>
+      <categories>
+        <category>成长</category>
+      </categories>
+      <tags>
+        <tag>成长</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于在iOS系统上快速下载YouTube上的视频以及音乐]]></title>
     <url>%2F2017%2F11%2F15%2F%E5%85%B3%E4%BA%8E%E5%9C%A8iOS%E7%B3%BB%E7%BB%9F%E4%B8%8A%E5%BF%AB%E9%80%9F%E4%B8%8B%E8%BD%BDYouTube%E4%B8%8A%E7%9A%84%E8%A7%86%E9%A2%91%E4%BB%A5%E5%8F%8A%E9%9F%B3%E4%B9%90%2F</url>
     <content type="text"><![CDATA[因为买了一个iPad，所以从网上研究了一下如何从iOS系统从YouTube上下载视频与音乐。 前提 先从app store上下载Documents软件，之后均在其软件的浏览器上为基础下载相关的资源。 开始过程如果要下载一个视频，为以下地址： https://www.youtube.com/watch?v=zOivw83p2cw 3种方法： 支持MP4 在以上的YouTube字样前加上ss,如下： https://www.ssyoutube.com/watch?v=zOivw83p2cw 即会跳到相关的网页，选择好格式，点击Download选择文件保存处即可完成下载。 支持MP3，MP4 在以上的YouTube字样后加上to,如下： https://www.youtubeto.com/watch?v=zOivw83p2cw 即会跳到相关的网页，选择好格式，点击Download选择文件保存处即可完成下载（其中有时会需要重新输入URL）。 （推荐）支持MP3，MP4 在以上的YouTube字样后加上pp,如下： https://www.youtubepp.com/watch?v=zOivw83p2cw 即会跳到相关的网页，选择好格式，点击Download选择文件保存处即可完成下载。其中有多种格式可选择。很好，很方便。 最后 关于在Mac上下载YouTube的MP3，MP4的资源，一个软件足以了，在我的博客中有相关的资源文章。 文章到此结束了。]]></content>
