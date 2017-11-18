@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2017-11-18T09:37:46.870Z</updated>
+  <updated>2017-11-18T12:52:50.867Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python2.7爬虫使用builtwit.parse方法问题记录</title>
+    <link href="https://liujunjie11.github.io/2017/11/18/Python2.7%E7%88%AC%E8%99%AB%E4%BD%BF%E7%94%A8builtwit.parse%E6%96%B9%E6%B3%95%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <id>https://liujunjie11.github.io/2017/11/18/Python2.7爬虫使用builtwit.parse方法问题记录/</id>
+    <published>2017-11-18T12:44:17.000Z</published>
+    <updated>2017-11-18T12:52:50.867Z</updated>
+    
+    <content type="html"><![CDATA[<p>在学习基本的网站技术查看就遇到了问题…在此记录一下。</p><p>我是在<em>eclipse</em>中编的<em>python</em>，用的是<em>anaconda python2.7</em>。</p><p>在<em>eclipse</em>使用<em>builtwith</em>的方法提示需要工程名以<em>builtwith</em>为名的前提下，但是也是失败了（提示<em>builtwith.parse</em>方法找不到…）</p><ul><li><strong>解决</strong>：</li></ul><p>在以后遇到了这类情况可以直接到<em>终端</em>运行就好了，可能第一次运行会出现<em>(‘Error:’, URLError(error(65, ‘No route to host’),))</em>的错误问题，不过再重新运行一次就能解决了。如下图：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-18%20%E4%B8%8B%E5%8D%888.42.42.png" alt=""></p><blockquote><p>完美解决。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在学习基本的网站技术查看就遇到了问题…在此记录一下。&lt;/p&gt;
+&lt;p&gt;我是在&lt;em&gt;eclipse&lt;/em&gt;中编的&lt;em&gt;python&lt;/em&gt;，用的是&lt;em&gt;anaconda python2.7&lt;/em&gt;。&lt;/p&gt;
+&lt;p&gt;在&lt;em&gt;eclipse&lt;/em&gt;使用&lt;em&gt;bui
+      
+    
+    </summary>
+    
+      <category term="学习" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>关于Anaconda python两个版本共存时的包的下载问题</title>
@@ -522,34 +549,6 @@
     
     
       <category term="教程 资源" scheme="https://liujunjie11.github.io/tags/%E6%95%99%E7%A8%8B-%E8%B5%84%E6%BA%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杂思记</title>
-    <link href="https://liujunjie11.github.io/2017/10/19/%E6%9D%82%E6%80%9D%E8%AE%B0/"/>
-    <id>https://liujunjie11.github.io/2017/10/19/杂思记/</id>
-    <published>2017-10-19T03:34:39.000Z</published>
-    <updated>2017-10-19T04:03:19.000Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li>读书的意义</li></ul><p>读书的意义不过是为了更好的接受，平静的接受，开怀的接受这世间的种种不合意罢了。我所认为的读书的意义，是为了在一个“度”中保持“中立”，是为了让我的灵魂保持理智与宁静，从而更不容易被世间的种种影响，更不容易被导致内心的波动，没有了波动，才没有偏向，没有偏向于“度”的左右的任何一方，才可以保持内心的平静，在这最后，在平静下接受曾经所有的不甘心，所有的不甘愿，所有的不合意，也从此可以理智的去看待这一些所有，也不再有对于其中的偏向。</p><p>内心平静理智下的快乐才是真正的快乐。读书也就是为了在这喧闹人世间寻得一份内心的宁静，寻得一分保持与灵魂对话的理智，唯有真正的理智与内心的平静，我们才能接近所谓的”幸福“。不能把为了追求财富，名利的读书理解为”读书“。</p><p>读书是为了我们能够生活的更好，也是为了更好的生活。如果说读书真的是要有目的的话，那么这个目的将是平静与理智。</p><ul><li>友谊</li></ul><p>友谊是”利益“的附属品吗？现在的我不完全这么认为，至少是现在。</p><ul><li>”神“是”大自然“</li></ul><p>”神“与”上帝“即是如今无边无际，完美无缺的”大自然“。”大自然“包揽了所有的一切，无论是我们看到的，还是看不到的，无论是我们曾经看到的，还是从未看到的，但是他们（它们）都是因为”大自然“而存在的。”大自然“有着自己的原则，有着自己的规矩，管理这存在的一切。</p><p>但是如果我们把一切包括我们存在的意义与实际上的人生全部寄予”大自然“，无疑是愚蠢的。我们每一个人的出现存在，必然有要出现存在的意义，这需要我们自己去寻找，去实现的。</p><p>而由此可知，”大自然“那无边无际的胸怀。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ul&gt;
-&lt;li&gt;读书的意义&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;读书的意义不过是为了更好的接受，平静的接受，开怀的接受这世间的种种不合意罢了。我所认为的读书的意义，是为了在一个“度”中保持“中立”，是为了让我的灵魂保持理智与宁静，从而更不容易被世间的种种影响，更不容易被导致内心的波动，
-      
-    
-    </summary>
-    
-      <category term="成长" scheme="https://liujunjie11.github.io/categories/%E6%88%90%E9%95%BF/"/>
-    
-    
-      <category term="成长" scheme="https://liujunjie11.github.io/tags/%E6%88%90%E9%95%BF/"/>
     
   </entry>
   
