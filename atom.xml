@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2017-11-19T05:40:21.908Z</updated>
+  <updated>2017-11-20T06:53:38.772Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac上关于路欧词典的破解问题记录...</title>
+    <link href="https://liujunjie11.github.io/2017/11/20/Mac%E4%B8%8A%E5%85%B3%E4%BA%8E%E8%B7%AF%E6%AC%A7%E8%AF%8D%E5%85%B8%E7%9A%84%E7%A0%B4%E8%A7%A3%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <id>https://liujunjie11.github.io/2017/11/20/Mac上关于路欧词典的破解问题记录/</id>
+    <published>2017-11-20T06:30:58.000Z</published>
+    <updated>2017-11-20T06:53:38.772Z</updated>
+    
+    <content type="html"><![CDATA[<p>因为在<em>iPad</em>上用了<em>路欧词典</em>，感觉还不错，想在<em>Mac上也用用</em>，发现要不少的钱…在网上看了一下也糊里糊涂摸索了一下，今天一打开发现已经是破解状态了…在此记录下。</p><ul><li><strong>希望有钱的还是支持正版，学生没钱才这样的…</strong></li></ul><blockquote><p><strong>链接</strong>：<a href="https://www.eudic.net/v4/en/home/dictionaryresource" target="_blank" rel="external">路欧词典官网</a></p></blockquote><hr><ul><li>第一步，找到相关的文件</li></ul><p><em>图1</em></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-20%20%E4%B8%8B%E5%8D%882.35.51.png" alt=""></p><p><em>图2</em></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-20%20%E4%B8%8B%E5%8D%882.35.35.png" alt=""></p><blockquote><p>点击打开如上的相关的文件，我用的<em>Xcode</em></p></blockquote><hr><ul><li>第二步，添加相关的内容</li></ul><p><em>图1</em></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-20%20%E4%B8%8B%E5%8D%882.39.57.png" alt=""></p><blockquote><p>以上的没有，所以要自己添加，<em>ID</em>不一定要一致</p></blockquote><p><em>图2</em></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-20%20%E4%B8%8B%E5%8D%882.40.07.png" alt=""></p><blockquote><p>改为<em>820711</em>，据说只有这个才是<em>专业版</em>的代号…据说改这个数字可以延长免费期限…</p></blockquote><hr><ul><li>第三步，锁定文件，避免自动文件修改</li></ul><p><em>图1</em></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-20%20%E4%B8%8B%E5%8D%882.44.08.png" alt=""></p><p><em>图2</em></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-20%20%E4%B8%8B%E5%8D%882.44.19.png" alt=""></p><hr><blockquote><p><strong>接下来就需要重新打开词典等待结果了，可能一下就得到破解了…</strong></p></blockquote><hr><ul><li>关于下载相关的扩展到<em><a href="https://www.eudic.net/v4/en/home/dictionaryresource" target="_blank" rel="external">官网下载</a></em>：</li></ul><h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><ul><li>其实<em>Mac</em>自带的也不错，但是<em>路欧词典</em>还要简单一些。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;因为在&lt;em&gt;iPad&lt;/em&gt;上用了&lt;em&gt;路欧词典&lt;/em&gt;，感觉还不错，想在&lt;em&gt;Mac上也用用&lt;/em&gt;，发现要不少的钱…在网上看了一下也糊里糊涂摸索了一下，今天一打开发现已经是破解状态了…在此记录下。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;希望有钱的还是支持
+      
+    
+    </summary>
+    
+      <category term="学习" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>关于Mac自带语音时而快捷键不灵时的问题</title>
@@ -525,31 +552,6 @@
     
     
       <category term="学习 教程" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0-%E6%95%99%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac上解决Mackeeper的流氓作为，以及与其导致的CPU异常</title>
-    <link href="https://liujunjie11.github.io/2017/10/24/Mac%E4%B8%8A%E8%A7%A3%E5%86%B3Mackeeper%E7%9A%84%E6%B5%81%E6%B0%93%E4%BD%9C%E4%B8%BA%EF%BC%8C%E4%BB%A5%E5%8F%8A%E4%B8%8E%E5%85%B6%E5%AF%BC%E8%87%B4%E7%9A%84CPU%E5%BC%82%E5%B8%B8/"/>
-    <id>https://liujunjie11.github.io/2017/10/24/Mac上解决Mackeeper的流氓作为，以及与其导致的CPU异常/</id>
-    <published>2017-10-24T07:41:40.000Z</published>
-    <updated>2017-10-24T08:31:51.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="铲除原因"><a href="#铲除原因" class="headerlink" title="铲除原因"></a>铲除原因</h1><p>最近因为下载一个软件插件导致万恶的Mackeeper进入了我的Mac，在Safari的网页上也是自己为所欲为经常弹出来，搞笑的是它竟然说扫描出来了3个病毒，然后叫我下载它，否则如何如何..真的是毒喊捉毒，毫无廉耻啊…关键是因为这个东西，还把我的CPU严重拉下了，导致我的电池使用量缩水了一大半，电脑也是烫的怀疑人生，我一度以为我的Mac要玩完了..毕竟才刚刚买了几个月啊..</p><p>不能容忍啊..</p><p>只想一心把它搞了..去网上查了一下，发现这东西早已是臭名远扬了，最后花了一些时间在<a href="https://www.zhihu.com/question/24850356" target="_blank" rel="external">知乎</a>上面找到了答案。</p><h1 id="铲除过程"><a href="#铲除过程" class="headerlink" title="铲除过程"></a>铲除过程</h1><p>去网上搜索 <code>AdwareMedic</code> 这个软件，这真的是一个神器啊，帮助我解决掉了Mackeeper，也修复了CPU异常，现在也是终于正常了，前几天只是打开一个预览就掉电像水似的..</p><ul><li><p>推荐用谷歌搜索啦，当然百度也是可以的。</p></li><li><p>我的百度云也已经收藏了：<a href="http://pan.baidu.com/s/1nvKGUEl" target="_blank" rel="external">点击下载神器</a></p></li><li><p>此神器是需要付费的，不过可以免费30天使用，不过我倒是在完成任务后马上卸载了..以后有需要再下载吧。</p></li></ul><blockquote><p>以上的资源来自官网，<strong>下载完以后打开神器，点击在界面上的 <code>scan for Adware</code> 按钮，将扫描出来的文件全部删除，建议多扫描几遍，然后再重启Mac。然后在重启之后再扫描几遍，有时候开机还有一些相关的东西残留的，然后再重启看看。会发现CPU正常了，电脑也回到了正常水平</strong>,一切都好了，感觉这个世界是多么的美好呀～</p></blockquote><p>在这里说一下，我们的Mac上有自带的防火墙，建议打开，可以为我们的Mac加上一层保护层，可以过滤掉一些可能带有病毒木马的应用程序，在打开之后从网上下载东西的时候如果被防火墙阻止，可以将其先关闭，然后在完成之后在打开防火墙即可。打开防火墙的能耗几乎没有的，但是安全还是要的，right？</p><ul><li>打开防火墙步骤：<code>系统偏好设置</code> –&gt; <code>安全性与隐私</code> –&gt; <code>防火墙</code> –&gt; <code>解锁打开即可</code> （当然也可以设置其中的高级设置，根据需求设置即可）</li></ul><h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><ul><li><p>Mac并不是安全到我们可以为所欲为的..需要我们平时注意保养..</p></li><li><p>记录下的这一篇文章，一是为了记录这次经历，以后可能会再次遇到。二是为了帮助一些类似经历的人。</p></li><li><p>到此为止吧，goodluck.</p></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;铲除原因&quot;&gt;&lt;a href=&quot;#铲除原因&quot; class=&quot;headerlink&quot; title=&quot;铲除原因&quot;&gt;&lt;/a&gt;铲除原因&lt;/h1&gt;&lt;p&gt;最近因为下载一个软件插件导致万恶的Mackeeper进入了我的Mac，在Safari的网页上也是自己为所欲为经常弹出来，搞笑
-      
-    
-    </summary>
-    
-      <category term="学习记录" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
-    
-    
-      <category term="学习记录" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
     
   </entry>
   
