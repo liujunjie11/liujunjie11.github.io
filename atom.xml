@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2017-11-20T06:53:38.772Z</updated>
+  <updated>2017-11-20T07:06:18.963Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://liujunjie11.github.io/2017/11/20/Mac%E4%B8%8A%E5%85%B3%E4%BA%8E%E8%B7%AF%E6%AC%A7%E8%AF%8D%E5%85%B8%E7%9A%84%E7%A0%B4%E8%A7%A3%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
     <id>https://liujunjie11.github.io/2017/11/20/Mac上关于路欧词典的破解问题记录/</id>
     <published>2017-11-20T06:30:58.000Z</published>
-    <updated>2017-11-20T06:53:38.772Z</updated>
+    <updated>2017-11-20T07:06:18.963Z</updated>
     
     <content type="html"><![CDATA[<p>因为在<em>iPad</em>上用了<em>路欧词典</em>，感觉还不错，想在<em>Mac上也用用</em>，发现要不少的钱…在网上看了一下也糊里糊涂摸索了一下，今天一打开发现已经是破解状态了…在此记录下。</p><ul><li><strong>希望有钱的还是支持正版，学生没钱才这样的…</strong></li></ul><blockquote><p><strong>链接</strong>：<a href="https://www.eudic.net/v4/en/home/dictionaryresource" target="_blank" rel="external">路欧词典官网</a></p></blockquote><hr><ul><li>第一步，找到相关的文件</li></ul><p><em>图1</em></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-20%20%E4%B8%8B%E5%8D%882.35.51.png" alt=""></p><p><em>图2</em></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-20%20%E4%B8%8B%E5%8D%882.35.35.png" alt=""></p><blockquote><p>点击打开如上的相关的文件，我用的<em>Xcode</em></p></blockquote><hr><ul><li>第二步，添加相关的内容</li></ul><p><em>图1</em></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-20%20%E4%B8%8B%E5%8D%882.39.57.png" alt=""></p><blockquote><p>以上的没有，所以要自己添加，<em>ID</em>不一定要一致</p></blockquote><p><em>图2</em></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-20%20%E4%B8%8B%E5%8D%882.40.07.png" alt=""></p><blockquote><p>改为<em>820711</em>，据说只有这个才是<em>专业版</em>的代号…据说改这个数字可以延长免费期限…</p></blockquote><hr><ul><li>第三步，锁定文件，避免自动文件修改</li></ul><p><em>图1</em></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-20%20%E4%B8%8B%E5%8D%882.44.08.png" alt=""></p><p><em>图2</em></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-20%20%E4%B8%8B%E5%8D%882.44.19.png" alt=""></p><hr><blockquote><p><strong>接下来就需要重新打开词典等待结果了，可能一下就得到破解了…</strong></p></blockquote><hr><ul><li>关于下载相关的扩展到<em><a href="https://www.eudic.net/v4/en/home/dictionaryresource" target="_blank" rel="external">官网下载</a></em>：</li></ul><h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><ul><li>其实<em>Mac</em>自带的也不错，但是<em>路欧词典</em>还要简单一些。</li></ul>]]></content>
     
