@@ -57,7 +57,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="教程," />
+  <meta name="keywords" content="学习 成长," />
 
 
 
@@ -75,32 +75,18 @@
 
 
 
-<meta name="description" content="前言 在Mac上自带的词典是非常强大的。  缺点是词典不可带语音功能，不过系统本身是有语音读取功能的，两者结合就天衣无缝了。  最大的优点：离线操作，加上Mac自带的语音，都是离线的。  很强大..    扩展词典 扩展辞典的资源：Mac词典扩展下载   以上的资源是我在网上找到的，我有一个毛病，就是打开找好资源后就保存关闭网页了..所以资源的来源我也记不得了..总之非常感谢那一些分享资源的人们，">
-<meta name="keywords" content="教程">
+<meta name="description" content="关于vi / vim命令的记录  其中的命令的快捷键均对应Mac的“control”键 一般模式到编辑模式：i,o,a,r(可大写)  按下ESC推回            ↑↑           编译模式与命令模式两者不可切换            ↓↓一般模式到命令模式：：，/，？进入 按下ESC推回 vi /vim （文件）        //编译一个文件 在一般模式中输入“：wq” 保">
+<meta name="keywords" content="学习 成长">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac自带字典的扩展与语音设置">
-<meta property="og:url" content="https://liujunjie11.github.io/2017/10/26/Mac自带字典的扩展与语音设置/index.html">
+<meta property="og:title" content="关于Vi&#x2F;Vim的基本使用的记录">
+<meta property="og:url" content="https://liujunjie11.github.io/2017/11/22/关于Vi-Vim的基本使用的记录/index.html">
 <meta property="og:site_name" content="LXiHa`Notes">
-<meta property="og:description" content="前言 在Mac上自带的词典是非常强大的。  缺点是词典不可带语音功能，不过系统本身是有语音读取功能的，两者结合就天衣无缝了。  最大的优点：离线操作，加上Mac自带的语音，都是离线的。  很强大..    扩展词典 扩展辞典的资源：Mac词典扩展下载   以上的资源是我在网上找到的，我有一个毛病，就是打开找好资源后就保存关闭网页了..所以资源的来源我也记不得了..总之非常感谢那一些分享资源的人们，">
+<meta property="og:description" content="关于vi / vim命令的记录  其中的命令的快捷键均对应Mac的“control”键 一般模式到编辑模式：i,o,a,r(可大写)  按下ESC推回            ↑↑           编译模式与命令模式两者不可切换            ↓↓一般模式到命令模式：：，/，？进入 按下ESC推回 vi /vim （文件）        //编译一个文件 在一般模式中输入“：wq” 保">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%888.09.47.png">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%888.08.24.png">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/10%E6%9C%88-26-2017%2008-10-25.gif">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%888.11.34.png">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%888.12.06.png">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%888.02.16.png">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%888.02.34.png">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%888.03.24.png">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%889.55.35.png">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%888.03.06.png">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%888.13.06.png">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-25%20%E4%B8%8B%E5%8D%887.30.26.png">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-25%20%E4%B8%8B%E5%8D%887.29.58.png">
-<meta property="og:updated_time" content="2017-10-26T02:46:41.000Z">
+<meta property="og:updated_time" content="2017-11-22T13:56:44.054Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac自带字典的扩展与语音设置">
-<meta name="twitter:description" content="前言 在Mac上自带的词典是非常强大的。  缺点是词典不可带语音功能，不过系统本身是有语音读取功能的，两者结合就天衣无缝了。  最大的优点：离线操作，加上Mac自带的语音，都是离线的。  很强大..    扩展词典 扩展辞典的资源：Mac词典扩展下载   以上的资源是我在网上找到的，我有一个毛病，就是打开找好资源后就保存关闭网页了..所以资源的来源我也记不得了..总之非常感谢那一些分享资源的人们，">
-<meta name="twitter:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%888.09.47.png">
+<meta name="twitter:title" content="关于Vi&#x2F;Vim的基本使用的记录">
+<meta name="twitter:description" content="关于vi / vim命令的记录  其中的命令的快捷键均对应Mac的“control”键 一般模式到编辑模式：i,o,a,r(可大写)  按下ESC推回            ↑↑           编译模式与命令模式两者不可切换            ↓↓一般模式到命令模式：：，/，？进入 按下ESC推回 vi /vim （文件）        //编译一个文件 在一般模式中输入“：wq” 保">
 
 
 
@@ -130,13 +116,13 @@
 
 
 
-  <link rel="canonical" href="https://liujunjie11.github.io/2017/10/26/Mac自带字典的扩展与语音设置/"/>
+  <link rel="canonical" href="https://liujunjie11.github.io/2017/11/22/关于Vi-Vim的基本使用的记录/"/>
 
 
 
 
 
-  <title>Mac自带字典的扩展与语音设置 | LXiHa`Notes</title>
+  <title>关于Vi/Vim的基本使用的记录 | LXiHa`Notes</title>
   
 
 
@@ -307,7 +293,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liujunjie11.github.io/2017/10/26/Mac自带字典的扩展与语音设置/">
+    <link itemprop="mainEntityOfPage" href="https://liujunjie11.github.io/2017/11/22/关于Vi-Vim的基本使用的记录/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘俊">
@@ -324,7 +310,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Mac自带字典的扩展与语音设置</h1>
+          <h1 class="post-title" itemprop="name headline">关于Vi/Vim的基本使用的记录</h1>
         
 
         <div class="post-meta">
@@ -336,8 +322,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-26T08:26:46+08:00">
-                2017-10-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-22T21:52:47+08:00">
+                2017-11-22
               </time>
             
 
@@ -359,8 +345,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/教程/" itemprop="url" rel="index">
-                    <span itemprop="name">教程</span>
+                  <a href="/categories/学习-成长/" itemprop="url" rel="index">
+                    <span itemprop="name">学习 成长</span>
                   </a>
                 </span>
 
@@ -377,9 +363,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/10/26/Mac自带字典的扩展与语音设置/#comments" itemprop="discussionUrl">
+                <a href="/2017/11/22/关于Vi-Vim的基本使用的记录/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/10/26/Mac自带字典的扩展与语音设置/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017/11/22/关于Vi-Vim的基本使用的记录/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -412,100 +398,19 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><ul>
-<li><p>在Mac上自带的词典是非常强大的。</p>
-</li>
-<li><p>缺点是词典不可带语音功能，不过系统本身是有语音读取功能的，两者结合就天衣无缝了。</p>
-</li>
-<li><p>最大的优点：离线操作，加上Mac自带的语音，都是离线的。</p>
-</li>
-<li><p>很强大..</p>
-</li>
+        <ul>
+<li><strong>关于vi / vim命令的记录</strong></li>
 </ul>
-<hr>
-<h1 id="扩展词典"><a href="#扩展词典" class="headerlink" title="扩展词典"></a>扩展词典</h1><ul>
-<li>扩展辞典的资源：<a href="https://pan.baidu.com/s/1jInDiq6" target="_blank" rel="external">Mac词典扩展下载</a></li>
-</ul>
-<blockquote>
-<p>以上的资源是我在网上找到的，我有一个毛病，就是打开找好资源后就保存关闭网页了..所以资源的来源我也记不得了..总之非常感谢那一些分享资源的人们，谢谢🙏</p>
-</blockquote>
-<hr>
-<ul>
-<li><p>下载好之后，解压文件（图1） –&gt; 打开自带的<code>词典</code>软件，并且点击上方的<code>文件</code>选择<code>打开词典文件夹</code>（图2） –&gt; 将下载好的词典插件移到其中（图3） –&gt; 关闭<code>词典</code>，重新打开 –&gt; 选择<code>偏好设置</code>，勾上插件选项即可完成词典扩展（图4，5）</p>
-</li>
-<li><p>图1</p>
-</li>
-</ul>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%888.09.47.png" alt=""></p>
-<ul>
-<li>图2</li>
-</ul>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%888.08.24.png" alt=""></p>
-<ul>
-<li>图3</li>
-</ul>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/10%E6%9C%88-26-2017%2008-10-25.gif" alt=""></p>
-<ul>
-<li>图4</li>
-</ul>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%888.11.34.png" alt=""></p>
-<ul>
-<li>图5</li>
-</ul>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%888.12.06.png" alt=""></p>
-<hr>
-<h1 id="设置语音"><a href="#设置语音" class="headerlink" title="设置语音"></a>设置语音</h1><blockquote>
-<p>设置语音的声音中，有一个默认的“国产”声音，这是读中文的时候用的，如果读英文就非常别扭了，我们就需要将声音换成一个美国或者是英国的声音，读出来的英文就非常的好听了…</p>
-</blockquote>
-<ul>
-<li><p>设置语音步骤：先打开<code>系统偏好设置</code> –&gt; <code>铺助功能</code> –&gt; <code>语音</code> （图1）–&gt; 会看到了系统声音的选项，其中的先看到的<code>Ting-Ting</code>是默认的中国小妹声音。可以选择自定义，选择相关的美国的或者是英国的声音（图2） –&gt; 下载好喜欢的声音之后，将其选择为系统默认,将下方的语音快捷键勾上，也可以像我一样设置快捷键(图3),即可完成语音设置 </p>
-</li>
-<li><p>图1</p>
-</li>
-</ul>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%888.02.16.png" alt=""></p>
-<ul>
-<li>图2</li>
-</ul>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%888.02.34.png" alt=""></p>
-<ul>
-<li>图3</li>
-</ul>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%888.03.24.png" alt=""></p>
-<hr>
-<h1 id="触摸板设置及语音快捷键设置"><a href="#触摸板设置及语音快捷键设置" class="headerlink" title="触摸板设置及语音快捷键设置"></a>触摸板设置及语音快捷键设置</h1><blockquote>
-<p>触摸板设置可以离线快速的查找我们需要了解的单词的意思，通过快捷键我们也可以离线快速的得知其怎么读。</p>
-</blockquote>
-<ul>
-<li><p>打开<code>系统偏好设置</code> –&gt; 选择<code>触摸板</code>，之后选择习惯的查看设置（图1) –&gt;即可完成触摸板的查看设置</p>
-</li>
-<li><p>图1</p>
-</li>
-</ul>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%889.55.35.png" alt=""></p>
-<hr>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><ul>
-<li>选择一个想要了解的单词，用刚刚选择的手势查看</li>
-</ul>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%888.03.06.png" alt=""></p>
-<ul>
-<li>语音读出，可以如下，亦或者直接使用快捷键即可</li>
-</ul>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-26%20%E4%B8%8A%E5%8D%888.13.06.png" alt=""></p>
-<ul>
-<li>测试完成</li>
-</ul>
-<hr>
-<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><ul>
-<li>发布一个Mac迅雷破解版，亲测有效..</li>
-</ul>
-<blockquote>
-<p>下载：<a href="https://pan.baidu.com/s/1jIglGhw" target="_blank" rel="external">下载</a></p>
-<p>资源来自网络..再次感谢分享的人们🙏</p>
-</blockquote>
-<p>（需要先登录）使用破解：</p>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-25%20%E4%B8%8B%E5%8D%887.30.26.png" alt=""></p>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-25%20%E4%B8%8B%E5%8D%887.29.58.png" alt=""></p>
+<p><em>其中的命令的快捷键均对应Mac的“control”键</em></p>
+<p>一般模式到编辑模式：i,o,a,r(可大写)  按下ESC推回<br>            ↑↑<br>           编译模式与命令模式两者不可切换<br>            ↓↓<br>一般模式到命令模式：：，/，？进入 按下ESC推回</p>
+<p>vi /vim （文件）        //编译一个文件</p>
+<p>在一般模式中输入“：wq” 保存之后离开vi（输入“：wq!”可强行写入，即在权限可改的前提下）<br>另外用“：w”可获得文件的相关的基本信息，利用“：q”可直接推出编译</p>
+<p>alias 的使用得知一些命令行名字的改变</p>
+<p>vim 与 vi的区别：<br>最为简单的一点为两者在打开文件的显示亦然不同，前者的功能亦然是相比后者多多的。</p>
+<p>即在一般模式下的关于文件内容的选择相关的操作（亦称为所谓的Visual Block，即块选择）：<br>在需要的地方按下Ctrl+v —&gt; 移动到需求的地方，开始发白…此时即可进行相关的操作了（y:复制，p:粘贴，d:删除）</p>
+<p>vim的多文本的编译：<br>多个文件的打开：vim (文件名1） （文件名2）<br>多个文本编译的按键<br>:n    编译下一个文件<br>:N    编译上一个文件<br>:fiel    目前所有的文件展示<br>其中的快捷键记录：“G:到最后一行”，“u:还原数据”，“q:推出”</p>
+<p>vim多个窗口的实现：<br>:sp    在目前的窗口中按下得出同一个文件的另一个新的窗口<br>:sp (文件名)    在目前的窗口打开新的文件的一个新的窗口<br>Ctrl+w+j / ↓    换窗口操作，按ctrl不放，在按下w放开所有的键按下最后的键即可<br>Ctrl+w+k / ↑     如上操作<br>Ctrl +w+q    等于在一个窗口中按下“:q”推出现在的窗口</p>
+<p>关于在vim之中的一些环境设置可参考其他的材料。</p>
 
       
     </div>
@@ -523,7 +428,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/教程/" rel="tag"># 教程</a>
+            <a href="/tags/学习-成长/" rel="tag"># 学习 成长</a>
           
         </div>
       
@@ -536,8 +441,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/25/Mac下）eclipse开发Hadoop时文件的中文乱码问题/" rel="next" title="(Mac下）eclipse开发Hadoop时文件的中文乱码问题">
-                <i class="fa fa-chevron-left"></i> (Mac下）eclipse开发Hadoop时文件的中文乱码问题
+              <a href="/2017/11/22/关于Linux与win的基本命令的简要记录/" rel="next" title="关于Linux与win的基本命令的简要记录">
+                <i class="fa fa-chevron-left"></i> 关于Linux与win的基本命令的简要记录
               </a>
             
           </div>
@@ -545,10 +450,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/10/26/（Mac下）docker搭建Hadoop集群/" rel="prev" title="（Mac下）docker搭建Hadoop集群">
-                （Mac下）docker搭建Hadoop集群 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -633,17 +534,8 @@ var jiathis_config={
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <p class="site-author-name" itemprop="name">刘俊</p>
@@ -737,22 +629,6 @@ var jiathis_config={
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#扩展词典"><span class="nav-number">2.</span> <span class="nav-text">扩展词典</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设置语音"><span class="nav-number">3.</span> <span class="nav-text">设置语音</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#触摸板设置及语音快捷键设置"><span class="nav-number">4.</span> <span class="nav-text">触摸板设置及语音快捷键设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#测试"><span class="nav-number">4.1.</span> <span class="nav-text">测试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最后"><span class="nav-number">5.</span> <span class="nav-text">最后</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -951,9 +827,9 @@ var jiathis_config={
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://liujunjie11.github.io/2017/10/26/Mac自带字典的扩展与语音设置/';
-          this.page.identifier = '2017/10/26/Mac自带字典的扩展与语音设置/';
-          this.page.title = 'Mac自带字典的扩展与语音设置';
+          this.page.url = 'https://liujunjie11.github.io/2017/11/22/关于Vi-Vim的基本使用的记录/';
+          this.page.identifier = '2017/11/22/关于Vi-Vim的基本使用的记录/';
+          this.page.title = '关于Vi/Vim的基本使用的记录';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://—-...disqus.com/embed.js';

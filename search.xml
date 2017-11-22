@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于Vi/Vim的基本使用的记录]]></title>
+    <url>%2F2017%2F11%2F22%2F%E5%85%B3%E4%BA%8EVi-Vim%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E7%9A%84%E8%AE%B0%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[关于vi / vim命令的记录 其中的命令的快捷键均对应Mac的“control”键 一般模式到编辑模式：i,o,a,r(可大写) 按下ESC推回 ↑↑ 编译模式与命令模式两者不可切换 ↓↓一般模式到命令模式：：，/，？进入 按下ESC推回 vi /vim （文件） //编译一个文件 在一般模式中输入“：wq” 保存之后离开vi（输入“：wq!”可强行写入，即在权限可改的前提下）另外用“：w”可获得文件的相关的基本信息，利用“：q”可直接推出编译 alias 的使用得知一些命令行名字的改变 vim 与 vi的区别：最为简单的一点为两者在打开文件的显示亦然不同，前者的功能亦然是相比后者多多的。 即在一般模式下的关于文件内容的选择相关的操作（亦称为所谓的Visual Block，即块选择）：在需要的地方按下Ctrl+v —&gt; 移动到需求的地方，开始发白…此时即可进行相关的操作了（y:复制，p:粘贴，d:删除） vim的多文本的编译：多个文件的打开：vim (文件名1） （文件名2）多个文本编译的按键:n 编译下一个文件:N 编译上一个文件:fiel 目前所有的文件展示其中的快捷键记录：“G:到最后一行”，“u:还原数据”，“q:推出” vim多个窗口的实现：:sp 在目前的窗口中按下得出同一个文件的另一个新的窗口:sp (文件名) 在目前的窗口打开新的文件的一个新的窗口Ctrl+w+j / ↓ 换窗口操作，按ctrl不放，在按下w放开所有的键按下最后的键即可Ctrl+w+k / ↑ 如上操作Ctrl +w+q 等于在一个窗口中按下“:q”推出现在的窗口 关于在vim之中的一些环境设置可参考其他的材料。]]></content>
+      <categories>
+        <category>学习 成长</category>
+      </categories>
+      <tags>
+        <tag>学习 成长</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于Linux与win的基本命令的简要记录]]></title>
     <url>%2F2017%2F11%2F22%2F%E5%85%B3%E4%BA%8ELinux%E4%B8%8Ewin%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E7%9A%84%E7%AE%80%E8%A6%81%E8%AE%B0%E5%BD%95%2F</url>
     <content type="text"><![CDATA[基本命令 实际上的命令通过man /info /—help即可快速掌握命令的使用 Centos Windons ls （目录名） dir //查看其中的内容ls —help / man ls /info ls //查看命令帮助clear cls //清屏cd . cd . //进入当前目录cd . . cd . . //进入上级目录cd /xxx/xxcd / / cd ~ //根目录cd - //返回上一级目录pwd //显示当前目录whoami / who //查看当前名与版本号等等…lsb_release -a //查看系统信息rmdir //删除一个空的目录echo $PATH //查看用户的配置情况 ～表示自己的主文件夹,即为root根目录 date （可加相关的对应符号得出对应的理想的日期） //日前cal（可指名时间） //日历bc （quit推出） //系统计算器的进入 shutdown //关机reboot //重启有时会因为权限问题导致命令执行失败，即为root与本人的切换可以解决 chgrp //改变文件所属用户组chown //改变文件所有者chmod //改变文件的权限，r:4 ; w:2; x:1 su (root) //切换用户exit //推出当前的用户chown （用户）(文件目录) //以给予文件到一个没有权限的用户 passwd //当前用户密码更改以上两者一并使用 ifconfig ipconfig //查看IP地址 ping (域名地址 / localhost) //网络延迟有一些需要在有网的情况下ping… ll //别名, 即为ls -l的命令行罢了alias //查看所有别名ls -a -l -h //查看当前目录 -h , 人性化 -l ,列表 -a,显示，开头mkdir ~/xxx/x //创建目录文件夹touch ~/xxx/x/x.txt //创建文件，亦可结合相关的参数更改文件的日期echo (内容）&gt; x.txt //重定向输出，即为输入内容到此中echo (内容) &gt;&gt; x.txt //追加内容入文件cat x.txt / more x.txt type x.txt //查看文件tac x.txt //以最后的行数输出，即与cat的命令功能相反nl （参数）（文件） //将文件内容添加行数打印出来more / less //翻页参考文件内容 cp x.txt （可有多个一同）x1.txt //复制文件 rm x.txt //删除文件 cp *.txt（可有多个一同） tmp/（可不加 / ） //复制文件入某个文件夹 rm * //删除当下文件夹全部文件rm x.txt //删除文件rm -rf tmp //强制删除mv x.txt tmp/ //强行删除文件夹以上的目录应当清晰自己在哪… centos 切换模式:若是在Mac系统的虚拟机运行的系统，则ctrl对应control, alt对应option，按fn显示F键盘ctrl + alt +f6 //切换到文本模式Ctrl + alt //切换鼠标Ctrl + alt +f1 //切换到桌面模式Ctrl + alt +f5 //切换到新的文本模式 Nano文本编译器命令行若是在Mac系统的虚拟机运行的系统，则ctrl对应control, alt对应option，按fn显示F键盘 nano x.txt //打开nano编译器，编译对应的文件在nano的文本编译器中注意本人与root的区别 ctrl + o //保存文件，之后直接回车保存Ctrl + x //提出文件Ctrl + k //cut文件Ctrl + u //uncut / 复制相关的内容到当前文件 more （（可加）-5（数字，表示显示多少行））x.txt //分屏显示在当前的目录下直接使用more亦可 tail x.txt //最后10行find . | more // | 是管道符，前面的命令的输出作为后面命令输入find ~lshead -(数字）x.txt //取出前几行的文件内容tail -（数字）x.txt //取出后面几行的额文件内容od //改为进制表的形式来输出相关的文件内容 umask (-S) //文件默认权限的查看chattr //设置文件的隐藏属性，如不能被删除等..lsattr //显示文件的隐藏属性file //查看一个文件的基本信息which //查找“执行文件”，一般的“执行文件”可以理解为可以cd到的文件whereis //查找文件地址，或者是说查找包含有相关的字词的文件locate //查找相关的字词的文件位置find //强大的查找命令，包括有关于日期的，本人的限定条件查找等..还有一些SGID的特殊权限在书中查找即可..]]></content>
