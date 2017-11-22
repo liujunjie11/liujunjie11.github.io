@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[无言]]></title>
+    <url>%2F2017%2F11%2F22%2F%E6%97%A0%E8%A8%80%2F</url>
+    <content type="text"><![CDATA[搞海外民运的所谓的核心人员，像是无头无脑的庸人似的，毫无表现出应有的政治才能，除了一味的附和大众，一味的解脱自己，依然也做不成什么气候，那为何要这般折腾呢。这不像是所谓的民运，不像是所谓的要解放华夏人民，这像是一番闹剧，给多数的明智的人们看来就像是一出笑话。在我看来，民运可以得到支持，但是前提是需要一个靠谱的领导人来领导前行，现在的一些所谓的天天喊着要搞民运的却是没有什么才能没有什么实干的人不适合当这个角色。 中国大陆历史以来都是一代又一代的专制者的舞台，如今的中共也不过是铺了前人的后台，不过历史告诉人们，灭亡的一天终将会到来。 人们不应麻木，应当时时保持清醒，保持自我的理智，迎接好不确定的历史明天。]]></content>
+      <categories>
+        <category>成长</category>
+      </categories>
+      <tags>
+        <tag>成长</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于python爬虫代码的运行]]></title>
     <url>%2F2017%2F11%2F20%2F%E5%85%B3%E4%BA%8Epython%E7%88%AC%E8%99%AB%E4%BB%A3%E7%A0%81%E7%9A%84%E8%BF%90%E8%A1%8C%2F</url>
     <content type="text"><![CDATA[关于python爬虫的关键几点简单在此记录下好了。 下载Scrap库。 在每一个基于python2工程中的第一行加上# -*- coding: UTF-8 -*-，否则运行时出现会不必要的错误。 在eclipse中运行代码。实际上以上的要求达到后，直接在eclipse中创建工程，编写好了一步在eclipse中运行即可得知结果。 在终端中运行代码。在其中打开python编译环境，之后对向工程的所在目录，一般是eclipse的workspace之中的子目录（即指向工程的上一级目录处），用命令行python XXX.py直接运行即可得知结果。]]></content>
