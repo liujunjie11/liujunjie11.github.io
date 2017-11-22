@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于Linux与win的基本命令的简要记录]]></title>
+    <url>%2F2017%2F11%2F22%2F%E5%85%B3%E4%BA%8ELinux%E4%B8%8Ewin%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E7%9A%84%E7%AE%80%E8%A6%81%E8%AE%B0%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[基本命令 实际上的命令通过man /info /—help即可快速掌握命令的使用 Centos Windons ls （目录名） dir //查看其中的内容ls —help / man ls /info ls //查看命令帮助clear cls //清屏cd . cd . //进入当前目录cd . . cd . . //进入上级目录cd /xxx/xxcd / / cd ~ //根目录cd - //返回上一级目录pwd //显示当前目录whoami / who //查看当前名与版本号等等…lsb_release -a //查看系统信息rmdir //删除一个空的目录echo $PATH //查看用户的配置情况 ～表示自己的主文件夹,即为root根目录 date （可加相关的对应符号得出对应的理想的日期） //日前cal（可指名时间） //日历bc （quit推出） //系统计算器的进入 shutdown //关机reboot //重启有时会因为权限问题导致命令执行失败，即为root与本人的切换可以解决 chgrp //改变文件所属用户组chown //改变文件所有者chmod //改变文件的权限，r:4 ; w:2; x:1 su (root) //切换用户exit //推出当前的用户chown （用户）(文件目录) //以给予文件到一个没有权限的用户 passwd //当前用户密码更改以上两者一并使用 ifconfig ipconfig //查看IP地址 ping (域名地址 / localhost) //网络延迟有一些需要在有网的情况下ping… ll //别名, 即为ls -l的命令行罢了alias //查看所有别名ls -a -l -h //查看当前目录 -h , 人性化 -l ,列表 -a,显示，开头mkdir ~/xxx/x //创建目录文件夹touch ~/xxx/x/x.txt //创建文件，亦可结合相关的参数更改文件的日期echo (内容）&gt; x.txt //重定向输出，即为输入内容到此中echo (内容) &gt;&gt; x.txt //追加内容入文件cat x.txt / more x.txt type x.txt //查看文件tac x.txt //以最后的行数输出，即与cat的命令功能相反nl （参数）（文件） //将文件内容添加行数打印出来more / less //翻页参考文件内容 cp x.txt （可有多个一同）x1.txt //复制文件 rm x.txt //删除文件 cp *.txt（可有多个一同） tmp/（可不加 / ） //复制文件入某个文件夹 rm * //删除当下文件夹全部文件rm x.txt //删除文件rm -rf tmp //强制删除mv x.txt tmp/ //强行删除文件夹以上的目录应当清晰自己在哪… centos 切换模式:若是在Mac系统的虚拟机运行的系统，则ctrl对应control, alt对应option，按fn显示F键盘ctrl + alt +f6 //切换到文本模式Ctrl + alt //切换鼠标Ctrl + alt +f1 //切换到桌面模式Ctrl + alt +f5 //切换到新的文本模式 Nano文本编译器命令行若是在Mac系统的虚拟机运行的系统，则ctrl对应control, alt对应option，按fn显示F键盘 nano x.txt //打开nano编译器，编译对应的文件在nano的文本编译器中注意本人与root的区别 ctrl + o //保存文件，之后直接回车保存Ctrl + x //提出文件Ctrl + k //cut文件Ctrl + u //uncut / 复制相关的内容到当前文件 more （（可加）-5（数字，表示显示多少行））x.txt //分屏显示在当前的目录下直接使用more亦可 tail x.txt //最后10行find . | more // | 是管道符，前面的命令的输出作为后面命令输入find ~lshead -(数字）x.txt //取出前几行的文件内容tail -（数字）x.txt //取出后面几行的额文件内容od //改为进制表的形式来输出相关的文件内容 umask (-S) //文件默认权限的查看chattr //设置文件的隐藏属性，如不能被删除等..lsattr //显示文件的隐藏属性file //查看一个文件的基本信息which //查找“执行文件”，一般的“执行文件”可以理解为可以cd到的文件whereis //查找文件地址，或者是说查找包含有相关的字词的文件locate //查找相关的字词的文件位置find //强大的查找命令，包括有关于日期的，本人的限定条件查找等..还有一些SGID的特殊权限在书中查找即可..]]></content>
+      <categories>
+        <category>学习 成长</category>
+      </categories>
+      <tags>
+        <tag>学习 成长</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[无言]]></title>
     <url>%2F2017%2F11%2F22%2F%E6%97%A0%E8%A8%80%2F</url>
     <content type="text"><![CDATA[搞海外民运的所谓的核心人员，像是无头无脑的庸人似的，毫无表现出应有的政治才能，除了一味的附和大众，一味的解脱自己，依然也做不成什么气候，那为何要这般折腾呢。这不像是所谓的民运，不像是所谓的要解放华夏人民，这像是一番闹剧，给多数的明智的人们看来就像是一出笑话。在我看来，民运可以得到支持，但是前提是需要一个靠谱的领导人来领导前行，现在的一些所谓的天天喊着要搞民运的却是没有什么才能没有什么实干的人不适合当这个角色。 中国大陆历史以来都是一代又一代的专制者的舞台，如今的中共也不过是铺了前人的后台，不过历史告诉人们，灭亡的一天终将会到来。 人们不应麻木，应当时时保持清醒，保持自我的理智，迎接好不确定的历史明天。]]></content>
