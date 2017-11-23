@@ -67,9 +67,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Python2.7爬虫使用builtwit.parse方法问题记录]]></title>
-    <url>%2F2017%2F11%2F18%2FPython2.7%E7%88%AC%E8%99%AB%E4%BD%BF%E7%94%A8builtwit.parse%E6%96%B9%E6%B3%95%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95%2F</url>
-    <content type="text"><![CDATA[在学习基本的网站技术查看就遇到了问题…在此记录一下。 我是在eclipse中编的python，用的是anaconda python2.7。 在eclipse使用builtwith的方法提示需要工程名以builtwith为名的前提下，但是也是失败了（提示builtwith.parse方法找不到…） 解决： 在以后遇到了这类情况可以直接到终端运行就好了，可能第一次运行会出现(‘Error:’, URLError(error(65, ‘No route to host’),)) 的错误问题，不过再重新运行一次就能解决了。如下图： 完美解决。]]></content>
+    <title><![CDATA[Python2.7爬虫使用一些方法问题记录]]></title>
+    <url>%2F2017%2F11%2F18%2FPython2.7%E7%88%AC%E8%99%AB%E4%BD%BF%E7%94%A8%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[在学习基本的网站技术查看就遇到了问题…在此记录一下。 我是在eclipse中编的python，用的是anaconda python2.7。 在eclipse使用builtwith的方法提示需要工程名以builtwith为名的前提下，但是也是失败了（提示builtwith.parse方法找不到…） 解决： 在以后遇到了这类情况可以直接到终端运行就好了，可能第一次运行会出现(‘Error:’, URLError(error(65, ‘No route to host’),)) 的错误问题，不过再重新运行一次就能解决了。如下图： 完美解决。 包括有whois.whois的之类的方法，在终端运行都可得到好的解决]]></content>
       <categories>
         <category>学习</category>
       </categories>
