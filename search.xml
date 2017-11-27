@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于在eclipse中编译Scala自动补全的添加设置]]></title>
+    <url>%2F2017%2F11%2F27%2F%E5%85%B3%E4%BA%8E%E5%9C%A8eclipse%E4%B8%AD%E7%BC%96%E8%AF%91Scala%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8%E7%9A%84%E6%B7%BB%E5%8A%A0%E8%AE%BE%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[如下图 全部打勾上，还犹豫个啥子？编译过程中会发现比之前轻松不少。]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于在简要学习Scala中的疑惑记录]]></title>
     <url>%2F2017%2F11%2F27%2F%E5%85%B3%E4%BA%8E%E5%9C%A8%E7%AE%80%E8%A6%81%E5%AD%A6%E4%B9%A0Scala%E4%B8%AD%E7%9A%84%E7%96%91%E6%83%91%E8%AE%B0%E5%BD%95%2F</url>
     <content type="text"><![CDATA[在简要学习Scala的一些基本的使用，有一些学习上的感到疑惑的问题记录在此。 调用方法时不加“.”一样可以，在方法最后不加“return”亦可，不过为了可读性，一般都是加的。 在语句时常出现的“-” 其实这就是一种变量的简写。打个比方： val a = Array(1, 2, 3, 4) val b = a.map(_ * 2) 输出变量b：（2，4，6，8） 则易可知其中的语句val b = a.map(_ * 2)就相当于val b = a.map(a * 2) 关于其中的lazy 详细可以参考此文章 如下打个比方： lazy val property = initProperty() 使用lazy关键字修饰变量后，只有在使用该变量时，才会调用其实例化方法。也就是说在定义property=initProperty()时并不会调用initProperty()方法，只有在后面的代码中使用变量property时才会调用initProperty()方法。 如果不使用lazy关键字对变量修饰，那么变量property是立即实例化的 可以再看看下面的利于理解： object LazyOps { def init(): String = { println(&quot;call init()&quot;) return &quot;&quot; } def main(args: Array[String]) { val property = init();//没有使用lazy修饰 println(&quot;after init()&quot;) println(property) } } 上面的property没有使用lazy关键字进行修饰，所以property是立即实例化的，如果观察程序的输出: call i nit() after init() 可以发现，property声明时，立即进行实例化,调用了init()`实例化方法 而如果使用lazy关键字进行修饰： object LazyOps { def init(): String = { println(&quot;call init()&quot;) return &quot;&quot; } def main(args: Array[String]) { lazy val property = init();//使用lazy修饰 println(&quot;after init()&quot;) println(property) println(property) } } 观察输出: after init() call init() 在声明property时，并没有立即调用实例化方法intit(),而是在使用property时，才会调用实例化方法,并且无论缩少次调用，实例化方法只会执行一次。 在Scala中的break可用return替代。 暂时这么多，以后再补充。]]></content>
