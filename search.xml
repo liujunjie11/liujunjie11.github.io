@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于在简要学习Scala中的疑惑记录]]></title>
+    <url>%2F2017%2F11%2F27%2F%E5%85%B3%E4%BA%8E%E5%9C%A8%E7%AE%80%E8%A6%81%E5%AD%A6%E4%B9%A0Scala%E4%B8%AD%E7%9A%84%E7%96%91%E6%83%91%E8%AE%B0%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[在简要学习Scala的一些基本的使用，有一些学习上的感到疑惑的问题记录在此。 调用方法时不加“.”一样可以，在方法最后不加“return”亦可，不过为了可读性，一般都是加的。 在语句时常出现的“-” 其实这就是一种变量的简写。打个比方： val a = Array(1, 2, 3, 4) val b = a.map(_ * 2) 输出变量b：（2，4，6，8） 则易可知其中的语句val b = a.map(_ * 2)就相当于val b = a.map(a * 2) 关于其中的lazy 详细可以参考此文章 如下打个比方： lazy val property = initProperty() 使用lazy关键字修饰变量后，只有在使用该变量时，才会调用其实例化方法。也就是说在定义property=initProperty()时并不会调用initProperty()方法，只有在后面的代码中使用变量property时才会调用initProperty()方法。 如果不使用lazy关键字对变量修饰，那么变量property是立即实例化的 可以再看看下面的利于理解： object LazyOps { def init(): String = { println(&quot;call init()&quot;) return &quot;&quot; } def main(args: Array[String]) { val property = init();//没有使用lazy修饰 println(&quot;after init()&quot;) println(property) } } 上面的property没有使用lazy关键字进行修饰，所以property是立即实例化的，如果观察程序的输出: call i nit() after init() 可以发现，property声明时，立即进行实例化,调用了init()`实例化方法 而如果使用lazy关键字进行修饰： object LazyOps { def init(): String = { println(&quot;call init()&quot;) return &quot;&quot; } def main(args: Array[String]) { lazy val property = init();//使用lazy修饰 println(&quot;after init()&quot;) println(property) println(property) } } 观察输出: after init() call init() 在声明property时，并没有立即调用实例化方法intit(),而是在使用property时，才会调用实例化方法,并且无论缩少次调用，实例化方法只会执行一次。 在Scala中的break可用return替代。 暂时这么多，以后再补充。]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[用eclipse搭建Spark的运行环境(单机)]]></title>
     <url>%2F2017%2F11%2F26%2F%E7%94%A8eclipse%E6%90%AD%E5%BB%BASpark%E7%9A%84%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83(%E5%8D%95%E6%9C%BA)%2F</url>
     <content type="text"><![CDATA[学习Spark用的eclipse习惯了，看了这一篇文章搭建了一个单机环境，不过这个单机环境搭建起来了，以后的集群环境我相信也容易了… 准备 本地下载Scala 本地有下载Spark 本地有下载eclipse以及Scala的插件 以上过程在网上已经有一大堆教程了。 搭建过程 我的搭建过程与上方的文章有一些差距，毕竟年代久远了… 第一步：以上的环境都搭建好以后，建一个Scala工程。 第二步：在此工程下建一个Scala Object，在Scala中是以建立一个Object为准的，意思就是相当于python的一个方法工程。Scala一向诡异，看它的语法就知道了… 第三步：导入spark中的相关的包（如图），为了避免什么问题反正我是全部导入了 如果在建立之后，工程的下边出现有一个小叉叉，右键Scala Library container,选择Properties,选择上一代一版本的Scala（如图）即可解决小叉叉的问题，如果不行可以尝试其他的版本试试。(我的默认是2.12,换下面的2.11小叉叉消失,spark2.2.0建立和分发默认使用Scala 2.11) 测试 环境搭建就是那么的简单，在此测试一下。在刚刚建好的工程下输入以下代码，注意其中的提示 import org.apache.spark.SparkConfimport org.apache.spark.SparkContext //以下主类名为工程名object FirstSpark { def main(args: Array[String]): Unit = { val conf = new SparkConf() conf.setAppName(“Frist Spark”) conf.setMaster(“local”) val sc = new SparkContext(conf) //以下为文件的所在地 val lines = sc.textFile(“/Users/junjieliu/Downloads/README.md”, 1) val words = lines.flatMap { (lines =&gt; lines.split(“ “)) } val pairs = words.map { word =&gt; (word, 1) } val wordcount = pairs.reduceByKey( + _) wordcount.foreach(pair =&gt; println(pair._1 + “:” + pair._2)) sc.stop() } } 运行，点击run（如图） 测试效果： 看起来是不是比Hadoop的mapreduce简单多了，哈哈。]]></content>

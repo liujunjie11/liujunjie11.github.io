@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2017-11-27T07:23:31.458Z</updated>
+  <updated>2017-11-27T08:19:32.445Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于在简要学习Scala中的疑惑记录</title>
+    <link href="https://liujunjie11.github.io/2017/11/27/%E5%85%B3%E4%BA%8E%E5%9C%A8%E7%AE%80%E8%A6%81%E5%AD%A6%E4%B9%A0Scala%E4%B8%AD%E7%9A%84%E7%96%91%E6%83%91%E8%AE%B0%E5%BD%95/"/>
+    <id>https://liujunjie11.github.io/2017/11/27/关于在简要学习Scala中的疑惑记录/</id>
+    <published>2017-11-27T07:51:49.000Z</published>
+    <updated>2017-11-27T08:19:32.445Z</updated>
+    
+    <content type="html"><![CDATA[<p>在简要学习<em>Scala</em>的一些基本的使用，有一些学习上的感到疑惑的问题记录在此。</p><ul><li><p><strong>调用方法时不加<em>“.”</em>一样可以，在方法最后不加<em>“return”</em>亦可，不过为了可读性，一般都是加的。</strong></p></li><li><p><strong>在语句时常出现的“-”</strong></p></li></ul><p>其实这就是一种变量的简写。打个比方：</p><p><code>val a = Array(1, 2, 3, 4)</code></p><p><code>val b = a.map(_ * 2)</code></p><p><em>输出变量b：</em><code>（2，4，6，8）</code></p><blockquote><p>则易可知其中的语句<strong>val b = a.map(_ * 2)</strong>就相当于<strong>val b = a.map(a * 2)</strong></p></blockquote><ul><li><strong>关于其中的lazy</strong></li></ul><blockquote><p>详细可以参考此<a href="https://segmentfault.com/a/1190000006126119" target="_blank" rel="external">文章</a></p></blockquote><p><em>如下打个比方：</em></p><p><strong>lazy val property = initProperty()</strong></p><p>使用lazy关键字修饰变量后，只有在使用该变量时，才会调用其实例化方法。也就是说在定义property=initProperty()时并不会调用initProperty()方法，只有在后面的代码中使用变量property时才会调用initProperty()方法。</p><blockquote><p>如果不使用lazy关键字对变量修饰，那么变量property是立即实例化的</p></blockquote><p><em>可以再看看下面的利于理解：</em></p><pre><code> object LazyOps {def init(): String = {    println(&quot;call init()&quot;)    return &quot;&quot;}def main(args: Array[String]) {    val property = init();//没有使用lazy修饰    println(&quot;after init()&quot;)    println(property)}  }</code></pre><p>上面的property没有使用lazy关键字进行修饰，所以property是立即实例化的，如果观察程序的输出:</p><pre><code>call i nit()after init()</code></pre><p>可以发现，property声明时，立即进行实例化,调用了init()`实例化方法</p><p>而如果使用lazy关键字进行修饰：</p><pre><code> object LazyOps {def init(): String = {    println(&quot;call init()&quot;)    return &quot;&quot;}def main(args: Array[String]) {    lazy val property = init();//使用lazy修饰    println(&quot;after init()&quot;)    println(property)    println(property)} }</code></pre><p>观察输出:</p><pre><code>after init()call init()</code></pre><p>在声明property时，并没有立即调用实例化方法intit(),而是在使用property时，才会调用实例化方法,并且无论缩少次调用，实例化方法只会执行一次。</p><ul><li>在<em>Scala</em>中的<em>break</em>可用<em>return</em>替代。</li></ul><blockquote><p>暂时这么多，以后再补充。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在简要学习&lt;em&gt;Scala&lt;/em&gt;的一些基本的使用，有一些学习上的感到疑惑的问题记录在此。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;调用方法时不加&lt;em&gt;“.”&lt;/em&gt;一样可以，在方法最后不加&lt;em&gt;“return”&lt;/em&gt;亦可，不过为了可读性，一般都是加的
+      
+    
+    </summary>
+    
+      <category term="学习" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>用eclipse搭建Spark的运行环境(单机)</title>
@@ -525,31 +552,6 @@
     
     
       <category term="学习" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MacBookPro上的Multi-Touch Bar缩放问题</title>
-    <link href="https://liujunjie11.github.io/2017/11/01/MacBookPro%E4%B8%8A%E7%9A%84Multi-Touch-Bar%E7%BC%A9%E6%94%BE%E9%97%AE%E9%A2%98/"/>
-    <id>https://liujunjie11.github.io/2017/11/01/MacBookPro上的Multi-Touch-Bar缩放问题/</id>
-    <published>2017-11-01T10:49:47.000Z</published>
-    <updated>2017-11-01T12:09:42.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近发现自己的电脑在触摸调试Bar上的声音键时，会将Bar的影像投射到屏幕上（如图1的最下方），并且竟然会延迟…有点不习惯了。在调试声音时，发现了在<code>系统偏好设置</code>中的<code>铺助功能</code>的选项<code>缩放</code>的相关的设置（如图2），即为其中的<code>启用Multi-Touch Bar缩放</code>被打勾了，但是之前我一点印象也没有…我一直以为是我升级了系统的缘故，另一方面其实系统根本也没有升级成功过…所以一直让我困惑不已。</p><p><strong>解决方法就是把那个勾取消就可以恢复回来了。</strong></p><ul><li>图1</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-01%20%E4%B8%8B%E5%8D%886.46.46.png" alt=""></p><ul><li>图2</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-01%20%E4%B8%8B%E5%8D%886.46.51.png" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;最近发现自己的电脑在触摸调试Bar上的声音键时，会将Bar的影像投射到屏幕上（如图1的最下方），并且竟然会延迟…有点不习惯了。在调试声音时，发现了在&lt;code&gt;系统偏好设置&lt;/code&gt;中的&lt;code&gt;铺助功能&lt;/code&gt;的选项&lt;code&gt;缩放&lt;/code&gt;的相关的设置（
-      
-    
-    </summary>
-    
-      <category term="教程" scheme="https://liujunjie11.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="教程" scheme="https://liujunjie11.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
