@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2017-11-27T11:43:16.533Z</updated>
+  <updated>2017-11-28T11:03:13.369Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>名人效应</title>
+    <link href="https://liujunjie11.github.io/2017/11/28/%E5%90%8D%E4%BA%BA%E6%95%88%E5%BA%94/"/>
+    <id>https://liujunjie11.github.io/2017/11/28/名人效应/</id>
+    <published>2017-11-28T10:33:07.000Z</published>
+    <updated>2017-11-28T11:03:13.369Z</updated>
+    
+    <content type="html"><![CDATA[<p>“名人效应”在我们的生活中屡见不鲜，当我们在遇到一些挂有所谓的“名气”的人，比如“名校”出来的人，或者是一些本身就是所谓的“名人”的人时，心中大多会不由自主的产生一种敬畏与向往，有时竟然会产生自卑的感觉…我感觉这好似一种“阴差阳错”，又不得不感慨这种“名人效应”对我们的这种“潜移默化”教化的感觉。</p><p>那么这种效应究竟是从何而来？为何又产生这种貌似人与生就有的“天性”？我想可以在我们的生活中可以找到答案。</p><p>因为我们从小到大的生活环境都是如此“教育”我们的，所以在我们身边大部分的人的这种相关的“感觉”会伴随我们成长，久而久之我们也是这般如此了。简要分析可知这一类的大部分人在我们成长的过程中好似又是不可或缺的，又好似是不可避免的，哈哈，难道不是吗，我们身边的大多数父母即是如此，最简单的理解，“考上一个好的大学”。在此我们就知道了，原来世界上有一些“有名”的大学，从身边的一些“名人”的崇拜者，我们与之交流亦或者是道听途说，听多了看多了自然也就易被“名化”了…</p><p>那么“自卑感”又从何而来？…我想这是一种错误的，被“名化”扭曲了的心理活动吧，至少我是这么认为的。这里的“名化”可以理解为被“名”影响化了的意思，这样的人往往不由自主的随波逐流，被“名”波及到。当然，可能也与所谓的“好强心”，所谓的“羡慕嫉妒”也会有一定的挂钩吧。</p><p>不管怎么说，我感觉这就是一种“不应该”，带“名”的东西亦然有其的优势，但是如果一味“随波逐流”的因此把自己搞得扭曲，那真的是得不偿失，对不起自己了…与我而言，真的是一种非常蠢的心理活动呢…</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;“名人效应”在我们的生活中屡见不鲜，当我们在遇到一些挂有所谓的“名气”的人，比如“名校”出来的人，或者是一些本身就是所谓的“名人”的人时，心中大多会不由自主的产生一种敬畏与向往，有时竟然会产生自卑的感觉…我感觉这好似一种“阴差阳错”，又不得不感慨这种“名人效应”对我们的这种
+      
+    
+    </summary>
+    
+      <category term="成长" scheme="https://liujunjie11.github.io/categories/%E6%88%90%E9%95%BF/"/>
+    
+    
+      <category term="成长" scheme="https://liujunjie11.github.io/tags/%E6%88%90%E9%95%BF/"/>
+    
+  </entry>
   
   <entry>
     <title>关于在eclipse中编译Scala自动补全的添加设置</title>
@@ -528,31 +553,6 @@
     
     
       <category term="推荐图书" scheme="https://liujunjie11.github.io/tags/%E6%8E%A8%E8%8D%90%E5%9B%BE%E4%B9%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于MacOS High Sierra中Outlook不可用的问题</title>
-    <link href="https://liujunjie11.github.io/2017/11/04/%E5%85%B3%E4%BA%8EMacOS-High-Sierra%E4%B8%ADOutlook%E4%B8%8D%E5%8F%AF%E7%94%A8%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>https://liujunjie11.github.io/2017/11/04/关于MacOS-High-Sierra中Outlook不可用的问题/</id>
-    <published>2017-11-04T07:59:57.000Z</published>
-    <updated>2017-11-04T08:09:17.238Z</updated>
-    
-    <content type="html"><![CDATA[<p>升级了<code>MacOS High Sierra</code>系统之后发现<code>Outlook</code>不能用了。升级一下就能解决了，但是自动更新实在是太慢了，找到了一些<code>15.39</code>的<code>office</code>资源。</p><blockquote><p>下面的<strong>百度云资源</strong>加了破解的资源在内。下载好之后安装,不急打开应用，先再打开钥匙破解即可达成破解。</p></blockquote><ul><li><p><a href="https://pan.baidu.com/s/1c2Cm2bA" target="_blank" rel="external">百度云下载</a></p></li><li><p>百度云下载太慢，不用它用这个下<code>office</code>就快了：<a href="https://www.xia1ge.com/microsoft-office-2016-for-mac-15-39-vl.html" target="_blank" rel="external">直接网页下载</a></p></li></ul><blockquote><p>以上资源来自网络…</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;升级了&lt;code&gt;MacOS High Sierra&lt;/code&gt;系统之后发现&lt;code&gt;Outlook&lt;/code&gt;不能用了。升级一下就能解决了，但是自动更新实在是太慢了，找到了一些&lt;code&gt;15.39&lt;/code&gt;的&lt;code&gt;office&lt;/code&gt;资源。&lt;/p&gt;
-      
-    
-    </summary>
-    
-      <category term="教程" scheme="https://liujunjie11.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="教程" scheme="https://liujunjie11.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
