@@ -87,7 +87,7 @@
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-26%20%E4%B8%8B%E5%8D%886.58.06.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-26%20%E4%B8%8B%E5%8D%887.01.52.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-26%20%E4%B8%8B%E5%8D%886.35.33.png">
-<meta property="og:updated_time" content="2017-11-27T07:23:31.458Z">
+<meta property="og:updated_time" content="2017-11-29T13:09:41.645Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用eclipse搭建Spark的运行环境(单机)">
 <meta name="twitter:description" content="学习Spark用的eclipse习惯了，看了这一篇文章搭建了一个单机环境，不过这个单机环境搭建起来了，以后的集群环境我相信也容易了… 准备 本地下载Scala  本地有下载Spark  本地有下载eclipse以及Scala的插件    以上过程在网上已经有一大堆教程了。   搭建过程 我的搭建过程与上方的文章有一些差距，毕竟年代久远了…   第一步：以上的环境都搭建好以后，建一个Scala工程。">
@@ -453,6 +453,13 @@
 <p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-26%20%E4%B8%8B%E5%8D%886.35.33.png" alt=""></p>
 <blockquote>
 <p>看起来是不是比<em>Hadoop</em>的<em>mapreduce</em>简单多了，哈哈。</p>
+</blockquote>
+<ul>
+<li><strong>补充：</strong></li>
+</ul>
+<p><strong>在<em>eclipse</em>中编译<em>spark</em>代码时，应当加上<em>println</em>之类的方法在最后以保结果可以正确输出，为何要强调这一点呢？因为在终端运行代码时，我们通常是不需要输入<em>println</em>之类的方法就可输出相关的结果的，这一点应该记住，不然易导致在<em>eclipse</em>中运行代码时容易出错，并且大部分人我相信也会像从前的我一样没有什么头绪，而现在就有了…</strong></p>
+<blockquote>
+<p><strong>最为重要的一点是在<em>eclipse</em>中编译相关的代码时，输出的结果是无法判断是否是正确的…即使我们在平时的编译中是有一定的错误提示的，但是对于初学者来说还是有一点不友好的感觉…</strong></p>
 </blockquote>
 
       
