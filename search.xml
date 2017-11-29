@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于用java编译的mapreduce与用Scala编译的spark的对比（单词统计的例子说明）]]></title>
+    <url>%2F2017%2F11%2F29%2F%E5%85%B3%E4%BA%8E%E7%94%A8java%E7%BC%96%E8%AF%91%E7%9A%84mapreduce%E4%B8%8E%E7%94%A8Scala%E7%BC%96%E8%AF%91%E7%9A%84spark%E7%9A%84%E5%AF%B9%E6%AF%94%EF%BC%88%E5%8D%95%E8%AF%8D%E7%BB%9F%E8%AE%A1%E7%9A%84%E4%BE%8B%E5%AD%90%E8%AF%B4%E6%98%8E%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[最近在学习spark，顺便也学习了Scala的在其间的使用。我发现与用java编译的mapreduce相比，用Scala编译的spark更加的容易让人被其折服… 直接看图说话吧，感受spark的强大！以统计单词为例。 以下为java编译的mapreduce 70+行的代码。 Scala编译的spark 仅仅为6行代码…. 同样的结果如下： 最后，据说官方会考虑将mapreduce优化,拭目以待吧…相比如今的spark的威力… 记录此文章仅仅是为了表达我心中的兴奋，因为遇到了spark…]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于在用Scala编译spark中的reduce方法计算的问题疑惑记录]]></title>
     <url>%2F2017%2F11%2F28%2F%E5%85%B3%E4%BA%8E%E5%9C%A8%E7%94%A8Scala%E7%BC%96%E8%AF%91spark%E4%B8%AD%E7%9A%84reduce%E6%96%B9%E6%B3%95%E8%AE%A1%E7%AE%97%E7%9A%84%E9%97%AE%E9%A2%98%E7%96%91%E6%83%91%E8%AE%B0%E5%BD%95%2F</url>
     <content type="text"><![CDATA[在学习spark中，reduce方法是绕不开的。但是我在测试时发现与从前的规则好像有一点冲突了… 如下分析： 输入代码 1, val a=sc.parallelize(1 to 10)//理论上理解为0～9的数字放在一个分区 2, a.reduce((x,y) =&gt; x+y) 输出 55//即意味着从0（0可省亦可）到10(包括10在内了，与上方的to方法冲突了)都被相加了… 这测试我想了老半天了…没想到是这种结果…bug???]]></content>

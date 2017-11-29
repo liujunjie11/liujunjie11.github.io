@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://liujunjie11.github.io/2017/11/29/%E5%85%B3%E4%BA%8E%E7%94%A8java%E7%BC%96%E8%AF%91%E7%9A%84mapreduce%E4%B8%8E%E7%94%A8Scala%E7%BC%96%E8%AF%91%E7%9A%84spark%E7%9A%84%E5%AF%B9%E6%AF%94%EF%BC%88%E5%8D%95%E8%AF%8D%E7%BB%9F%E8%AE%A1%E7%9A%84%E4%BE%8B%E5%AD%90%E8%AF%B4%E6%98%8E%EF%BC%89/</loc>
+    
+    <lastmod>2017-11-29T14:08:30.911Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://liujunjie11.github.io/2017/11/26/%E7%94%A8eclipse%E6%90%AD%E5%BB%BASpark%E7%9A%84%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83(%E5%8D%95%E6%9C%BA)/</loc>
     
     <lastmod>2017-11-29T13:48:02.945Z</lastmod>

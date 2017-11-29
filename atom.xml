@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2017-11-28T13:46:19.143Z</updated>
+  <updated>2017-11-29T14:08:30.911Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于用java编译的mapreduce与用Scala编译的spark的对比（单词统计的例子说明）</title>
+    <link href="https://liujunjie11.github.io/2017/11/29/%E5%85%B3%E4%BA%8E%E7%94%A8java%E7%BC%96%E8%AF%91%E7%9A%84mapreduce%E4%B8%8E%E7%94%A8Scala%E7%BC%96%E8%AF%91%E7%9A%84spark%E7%9A%84%E5%AF%B9%E6%AF%94%EF%BC%88%E5%8D%95%E8%AF%8D%E7%BB%9F%E8%AE%A1%E7%9A%84%E4%BE%8B%E5%AD%90%E8%AF%B4%E6%98%8E%EF%BC%89/"/>
+    <id>https://liujunjie11.github.io/2017/11/29/关于用java编译的mapreduce与用Scala编译的spark的对比（单词统计的例子说明）/</id>
+    <published>2017-11-29T13:56:35.000Z</published>
+    <updated>2017-11-29T14:08:30.911Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近在学习<em>spark</em>，顺便也学习了<em>Scala</em>的在其间的使用。我发现与用<em>java</em>编译的<em>mapreduce</em>相比，用<em>Scala</em>编译的<em>spark</em>更加的容易让人被其折服…</p><p>直接看图说话吧，感受<em>spark</em>的强大！以统计单词为例。</p><ul><li>以下为<em>java</em>编译的<em>mapreduce</em></li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-29%20%E4%B8%8B%E5%8D%8810.00.19.png" alt=""></p><blockquote><p>70+行的代码。</p></blockquote><hr><ul><li><em>Scala</em>编译的<em>spark</em></li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-29%20%E4%B8%8B%E5%8D%8810.00.32.png" alt=""></p><blockquote><p>仅仅为6行代码….</p></blockquote><hr><ul><li>同样的结果如下：</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-29%20%E4%B8%8B%E5%8D%8810.01.11.png" alt=""></p><hr><ul><li>最后，据说官方会考虑将<em>mapreduce</em>优化,拭目以待吧…相比如今的<em>spark</em>的威力…</li></ul><p><strong>记录此文章仅仅是为了表达我心中的兴奋，因为遇到了<em>spark</em>…</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;最近在学习&lt;em&gt;spark&lt;/em&gt;，顺便也学习了&lt;em&gt;Scala&lt;/em&gt;的在其间的使用。我发现与用&lt;em&gt;java&lt;/em&gt;编译的&lt;em&gt;mapreduce&lt;/em&gt;相比，用&lt;em&gt;Scala&lt;/em&gt;编译的&lt;em&gt;spark&lt;/em&gt;更加的容易让人被其折服…&lt;/p
+      
+    
+    </summary>
+    
+      <category term="学习" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>关于在用Scala编译spark中的reduce方法计算的问题疑惑记录</title>
@@ -519,35 +544,6 @@
       
       
         &lt;p&gt;在我学习了一段时间的&lt;em&gt;Hadoop&lt;/em&gt;之后开始了简单的实践，也开始了处理百万级的数据了（几百MB），结果发现用我的&lt;em&gt;MacBook Pro&lt;/em&gt;跑的效果还不错（即伪分布式连接&lt;em&gt;eclipse&lt;/em&gt;的前提下，其教程可以在我博客中可以找到）。&lt;/
-      
-    
-    </summary>
-    
-      <category term="学习" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="学习" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一些问题记录</title>
-    <link href="https://liujunjie11.github.io/2017/11/07/%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
-    <id>https://liujunjie11.github.io/2017/11/07/一些问题记录/</id>
-    <published>2017-11-07T14:45:29.000Z</published>
-    <updated>2017-11-07T15:06:44.399Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li>升级了<code>MacOS High Sierra</code>之后发现java版本不兼容了。</li></ul><p><strong>解决：先卸载之前的版本，再下载<code>JDK1.5</code>以上就可以解决了。</strong></p><blockquote><p>发现了<code>eclipse</code>自动识别添加的强大功能🤩</p></blockquote><ul><li><code>iPad</code>上用<code>iBook</code>结合<code>百度网盘</code>查看文件</li></ul><p>先在<code>App商店</code>下载<code>百度网盘HD</code>，比如我想要看一本书，先将其保存在<code>百度网盘</code>，打开点击刚刚保存的书籍就会开始自动缓存，完了之后点击<code>拷贝到iBook</code>，发现文件已经自动保存在<code>iBook</code>中了。</p><p>真的是挺方便的合作。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ul&gt;
-&lt;li&gt;升级了&lt;code&gt;MacOS High Sierra&lt;/code&gt;之后发现java版本不兼容了。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;解决：先卸载之前的版本，再下载&lt;code&gt;JDK1.5&lt;/code&gt;以上就可以解决了。&lt;/strong&gt;&lt;/p&gt;
-&lt;bl
       
     
     </summary>
