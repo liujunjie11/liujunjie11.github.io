@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于Mac网速慢的原因记录]]></title>
+    <url>%2F2017%2F12%2F01%2F%E5%85%B3%E4%BA%8EMac%E7%BD%91%E9%80%9F%E6%85%A2%E7%9A%84%E5%8E%9F%E5%9B%A0%E8%AE%B0%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[最近Mac突然变得很慢，明明网速很快的。 在网上看了一下，发现可能是DNS的问题，果然换了一下（以前用的都是8.8.8.8估计用的人多了就卡了），把号删除了，发现网速飞的快起…]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于python下载scrapy失败的问题记录]]></title>
     <url>%2F2017%2F12%2F01%2F%E5%85%B3%E4%BA%8Epython%E4%B8%8B%E8%BD%BDscrapy%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95%2F</url>
     <content type="text"><![CDATA[用的anaconda的python3，下载scrapy出现以下情况： 即表示下载失败。 看到网上大部分说的太复杂的解决方案，其实太过于小题大做了。 解决方法：重新下载一次。 图1 用命令行conda list查看 下载成功了。 若是失败了，多下载几次大多即可解决。]]></content>
