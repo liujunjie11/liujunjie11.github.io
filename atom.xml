@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2017-12-01T10:59:07.121Z</updated>
+  <updated>2017-12-01T11:07:50.743Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://liujunjie11.github.io/2017/12/01/%E5%85%B3%E4%BA%8EMac%E7%BD%91%E9%80%9F%E6%85%A2%E7%9A%84%E5%8E%9F%E5%9B%A0%E8%AE%B0%E5%BD%95/"/>
     <id>https://liujunjie11.github.io/2017/12/01/关于Mac网速慢的原因记录/</id>
     <published>2017-12-01T10:56:07.000Z</published>
-    <updated>2017-12-01T10:59:07.121Z</updated>
+    <updated>2017-12-01T11:07:50.743Z</updated>
     
-    <content type="html"><![CDATA[<p>最近<em>Mac</em>突然变得很慢，明明网速很快的。</p><p>在网上看了一下，发现可能是<em>DNS</em>的问题，果然换了一下（以前用的都是<em>8.8.8.8</em>估计用的人多了就卡了），把号删除了，发现网速飞的快起…</p>]]></content>
+    <content type="html"><![CDATA[<p>最近<em>Mac</em>突然变得很慢，明明网速很快的。</p><p>在网上看了一下，发现可能是<em>DNS</em>的问题，果然换了一下（以前用的都是<em>8.8.8.8</em>估计用的人多了就卡了），把号删除了，发现网速飞的快起…</p><p>不过在平时中下载<em>app</em>失败时可以考虑换回来就好使了。</p>]]></content>
     
     <summary type="html">
     
@@ -31,7 +31,7 @@
       
         &lt;p&gt;最近&lt;em&gt;Mac&lt;/em&gt;突然变得很慢，明明网速很快的。&lt;/p&gt;
 &lt;p&gt;在网上看了一下，发现可能是&lt;em&gt;DNS&lt;/em&gt;的问题，果然换了一下（以前用的都是&lt;em&gt;8.8.8.8&lt;/em&gt;估计用的人多了就卡了），把号删除了，发现网速飞的快起…&lt;/p&gt;
-
+&lt;p&gt;不过在平时中下
       
     
     </summary>
