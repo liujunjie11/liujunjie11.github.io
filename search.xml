@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于python下载scrapy失败的问题记录]]></title>
+    <url>%2F2017%2F12%2F01%2F%E5%85%B3%E4%BA%8Epython%E4%B8%8B%E8%BD%BDscrapy%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[用的anaconda的python3，下载scrapy出现以下情况： 即表示下载失败。 看到网上大部分说的太复杂的解决方案，其实太过于小题大做了。 解决方法：重新下载一次。 图1 用命令行conda list查看 下载成功了。 若是失败了，多下载几次大多即可解决。]]></content>
+      <categories>
+        <category>成长</category>
+      </categories>
+      <tags>
+        <tag>成长</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于用java编译的mapreduce与用Scala编译的spark的对比（单词统计的例子说明）]]></title>
     <url>%2F2017%2F11%2F29%2F%E5%85%B3%E4%BA%8E%E7%94%A8java%E7%BC%96%E8%AF%91%E7%9A%84mapreduce%E4%B8%8E%E7%94%A8Scala%E7%BC%96%E8%AF%91%E7%9A%84spark%E7%9A%84%E5%AF%B9%E6%AF%94%EF%BC%88%E5%8D%95%E8%AF%8D%E7%BB%9F%E8%AE%A1%E7%9A%84%E4%BE%8B%E5%AD%90%E8%AF%B4%E6%98%8E%EF%BC%89%2F</url>
     <content type="text"><![CDATA[最近在学习spark，顺便也学习了Scala的在其间的使用。我发现与用java编译的mapreduce相比，用Scala编译的spark更加的容易让人被其折服… 直接看图说话吧，感受spark的强大！以统计单词为例。 以下为java编译的mapreduce 70+行的代码。 Scala编译的spark 仅仅为6行代码…. 同样的结果如下： 最后，据说官方会考虑将mapreduce优化,拭目以待吧…相比如今的spark的威力… 记录此文章仅仅是为了表达我心中的兴奋，因为遇到了spark…]]></content>
