@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于Mac关机与iCloud的打不开的问题记录]]></title>
+    <url>%2F2017%2F12%2F03%2F%E5%85%B3%E4%BA%8EMac%E5%85%B3%E6%9C%BA%E4%B8%8EiCloud%E7%9A%84%E6%89%93%E4%B8%8D%E5%BC%80%E7%9A%84%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[这一段时间因为开的网页比较重要，Mac一直没有关机，晚上睡觉也是合上就这样了，没想到才3天这样，Mac好像支撑不了了…变得有些卡了，在未关机前的硬盘空间大小与关机后打开之后的硬盘空间大小相差了5个G，在重启开机时出现了一段绿屏…，由此可知，一段有规律的关机保养还是很有必要的… 关于iCloud的一些打开错误，如打开查看存储信息时的错误问题等等，一般的解决方法为：换一个网络连接即可解决。 此时换DNS的地址是不管用的。]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于Mac网速慢的原因记录]]></title>
     <url>%2F2017%2F12%2F01%2F%E5%85%B3%E4%BA%8EMac%E7%BD%91%E9%80%9F%E6%85%A2%E7%9A%84%E5%8E%9F%E5%9B%A0%E8%AE%B0%E5%BD%95%2F</url>
     <content type="text"><![CDATA[最近Mac突然变得很慢，明明网速很快的。 在网上看了一下，发现可能是DNS的问题，果然换了一下（以前用的都是8.8.8.8估计用的人多了就卡了），把号删除了，发现网速飞的快起… 不过在平时中下载app失败时可以考虑换回来就好使了。]]></content>
