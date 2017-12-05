@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于利用python爬虫爬取小说的实战例子]]></title>
+    <url>%2F2017%2F12%2F04%2F%E5%85%B3%E4%BA%8E%E5%88%A9%E7%94%A8python%E7%88%AC%E8%99%AB%E7%88%AC%E5%8F%96%E5%B0%8F%E8%AF%B4%E7%9A%84%E5%AE%9E%E6%88%98%E4%BE%8B%E5%AD%90%2F</url>
+    <content type="text"><![CDATA[前言最近对python爬虫很感兴趣，就花了一些时间来学习，学习了近一周的时间，终于在看了一些其他博客的大神写的教程之后，学会了利用beautifulsoup的方法爬取了一些网站的小说。在此分享我学习的成果。 关于详细的python3爬虫的学习教程以及参考：学习教程 本文参考并且学习了：这篇文章 在以下的文中主要介绍爬小说的技巧。 爬取的过程素材 笔趣阁小说网 小说阅读网 技巧分析在编写代码前应先在浏览器中（推荐Chrome，我用的Safari）查看在网页抓包中的相关的内容信息，一般查看其中的： charset（即其中的编码类型，在后面的程序中需要） 在文章开始阶段的前的那一小段html编码 如下图所示的（等下将要用到）： charset所示： 一般在最前头可以看到。 主要的一小段html所示： 如上在文章的前边的那一小段的html代码。 代码 可先用相关的代码查看相关的网页字符属于那种编码类型 12345678# 用beautifulsoup爬取小说的例子# 可先将网页编码的字符先行得知 from urllib import request import chardet re=request.urlopen(&apos;http://www.biqukan.com/1_1094/5403177.html&apos;) charset=chardet.detect(re.read()) print(&apos;we can see the cahrset about the html:&apos;,charset) 具体的学习可以参考这篇文章。 开始编写爬取相关内容的代码。将其中的URL地址以及相关的charset所属字符在一下的代码中修改一下均可达到以下效果的显示 123456789101112131415161718192021222324#开始爬取相关的内容from urllib import requestfrom bs4 import BeautifulSoupfrom urllib import errortry: if __name__ == &apos;__main__&apos;: #相关的URL的输入以及代理 re=request.Request(url=&apos;http://www.biqukan.com/1_1094/5403177.html&apos;,headers=&#123;&apos;User-Agent&apos;:&apos;* Mozilla/5.0 (Linux; U; Android 4.0.4; en-gb; GT-I9300 Build/IMM76D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30&apos;&#125;) #打开,并且以相关的解码方式，此处应当对应上方的charset html=request.urlopen(re).read().decode(&apos;gbk&apos;,&apos;ignore&apos;) #接下来创建beautifulsoup对象,找到相关的参数以便爬取内容 soup_text=BeautifulSoup(html,&apos;lxml&apos;) #在html中若是有class注意将其中的class改为class_,在此应当对应上方说明的html的一小段的编码 texts=soup_text.find_all(id=&quot;content&quot; ，class_=&quot;showtxt&quot;) soup_texts=BeautifulSoup(str(texts),&apos;lxml&apos;) #输出时将删除相关的不符合要求的字符,将其替换为空白 print(soup_texts.div.text.replace(&apos;\xa0&apos;,&apos;&apos;))except error.URLError as e: if hasattr(e, &apos;code&apos;): print(&apos;httperroe:&apos;) print(e.cond) if hasattr(e, &apos;reason&apos;): print(&apos;urlerror&apos;) print(e.reason) 详细可参考：这篇文章 结果查看 关于在第一段的实战效果： 关于在第二段的实战效果： 最后 在网页中爬取的小说内容都是可以直接下载至本地的，具体的可以参考以上的那个学习教程。 可学习的参考网站： python3爬虫教程 beautifulsoup官网教程]]></content>
+      <categories>
+        <category>学习 成长</category>
+      </categories>
+      <tags>
+        <tag>学习 成长</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于Mac关机与iCloud的打不开的问题记录]]></title>
     <url>%2F2017%2F12%2F03%2F%E5%85%B3%E4%BA%8EMac%E5%85%B3%E6%9C%BA%E4%B8%8EiCloud%E7%9A%84%E6%89%93%E4%B8%8D%E5%BC%80%E7%9A%84%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95%2F</url>
     <content type="text"><![CDATA[这一段时间因为开的网页比较重要，Mac一直没有关机，晚上睡觉也是合上就这样了，没想到才3天这样，Mac好像支撑不了了…变得有些卡了，在未关机前的硬盘空间大小与关机后打开之后的硬盘空间大小相差了5个G，在重启开机时出现了一段绿屏…，由此可知，一段有规律的关机保养还是很有必要的… 关于iCloud的一些打开错误，如打开查看存储信息时的错误问题等等，一般的解决方法为：换一个网络连接即可解决。 此时换DNS的地址是不管用的。]]></content>
