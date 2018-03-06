@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-03-03T07:50:58.179Z</updated>
+  <updated>2018-03-06T04:23:05.352Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于Charle的简单抓包操作</title>
+    <link href="https://liujunjie11.github.io/2018/03/06/%E5%85%B3%E4%BA%8ECharle%E7%9A%84%E7%AE%80%E5%8D%95%E6%8A%93%E5%8C%85%E6%93%8D%E4%BD%9C/"/>
+    <id>https://liujunjie11.github.io/2018/03/06/关于Charle的简单抓包操作/</id>
+    <published>2018-03-06T03:47:36.000Z</published>
+    <updated>2018-03-06T04:23:05.352Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>最近在看他人的博客学习<em>python3网络爬虫</em>的实战，看到了“抓包”的这个词，以前不知道…</p></blockquote><p>用的是<em>Macbook</em>，在网上搜索了一下，<em>Charle</em>好评多多，急忙到网上找了破解教程…（关于如何找到，可利用百度谷歌搜索关键词）</p><p>第一次用这个，啥都不会，基本操作也不会，摸索了一下，打算记录下来帮助需要的人。</p><h2 id="抓包的操作"><a href="#抓包的操作" class="headerlink" title="抓包的操作"></a>抓包的操作</h2><p>进入主界面先看看快捷键也是个不错的选择。如图：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-06%20%E4%B8%8B%E5%8D%8812.02.02.png" alt=""></p><blockquote><p>可以知道，与<em>Mac本机浏览器</em>的快捷键相似。</p></blockquote><p><em>New Session</em>即为打开一个新的界面。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-06%20%E4%B8%8B%E5%8D%8812.02.46.png" alt=""></p><p>点击<em>钢笔</em>图标，输入<em>URL</em>，自动开始抓包了。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-06%20%E4%B8%8B%E5%8D%8812.09.56.png" alt=""></p><hr><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-06%20%E4%B8%8B%E5%8D%8812.02.58.png" alt=""></p><p>查看相关的快捷键，定向查找<em>html</em>中格式，如<em>json</em>格式</p><ul><li><em>Find</em></li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-06%20%E4%B8%8B%E5%8D%8812.03.49.png" alt=""></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-06%20%E4%B8%8B%E5%8D%8812.03.59.png" alt=""></p><h2 id="系统代理配置"><a href="#系统代理配置" class="headerlink" title="系统代理配置"></a>系统代理配置</h2><ul><li>可以自动对目前系统中的一些<em>URL</em>进行抓包。</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-06%20%E4%B8%8B%E5%8D%8812.02.17.png" alt=""></p><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><ul><li>继续摸索中..听说功能很强大，网上的教程非常多，暂时用不到太多，简单的操作说明到处结束了。</li></ul><ul><li>一些可参考的教程：</li></ul><p><a href="https://www.jianshu.com/p/9822e3f28f0a" target="_blank" rel="external">可参考一</a></p><p><a href="http://blog.csdn.net/liulanghk/article/details/46342205" target="_blank" rel="external">可参考二</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;最近在看他人的博客学习&lt;em&gt;python3网络爬虫&lt;/em&gt;的实战，看到了“抓包”的这个词，以前不知道…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;用的是&lt;em&gt;Macbook&lt;/em&gt;，在网上搜索了一下，&lt;em&gt;Charle&lt;/em&gt;好评多多，
+      
+    
+    </summary>
+    
+      <category term="学习" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python3爬取网络图片的小程序项目</title>
+    <link href="https://liujunjie11.github.io/2018/03/05/python3%E7%88%AC%E5%8F%96%E7%BD%91%E7%BB%9C%E5%9B%BE%E7%89%87%E7%9A%84%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%A1%B9%E7%9B%AE/"/>
+    <id>https://liujunjie11.github.io/2018/03/05/python3爬取网络图片的小程序项目/</id>
+    <published>2018-03-05T13:25:16.000Z</published>
+    <updated>2018-03-06T03:45:37.667Z</updated>
+    
+    <content type="html"><![CDATA[<p> 最近在学习<em>python3网络爬虫</em>，看的是<a href="http://blog.csdn.net/c406495762/article/details/72597755" target="_blank" rel="external">这位学长的博客</a>。</p><blockquote><p>因为刚刚开始接触，想通过实战来一步步学习，所以先记录下我的学习心得，然后再记录下自己实战的成果以及相关的代码程序。</p></blockquote><ul><li><strong>先声明，以下是学习心得，代码原搬，链接在上。</strong></li></ul><p>##开始爬取的图片的下载代码的演示</p><pre><code> &apos;&apos;&apos;        #开始爬取的图片的下载代码的演示 &apos;&apos;&apos;from bs4 import BeautifulSoupfrom urllib.request import urlretrieve import requestsimport osimport timeif __name__ == &apos;__main__&apos;:    # 指定页面图片的多少数量    for num in range(1, 5):        if num == 1:            url = &apos;http://www.shuaia.net/index.html&apos;        else:            url = &apos;http://www.shuaia.net/index_%d.html&apos; % num        # 因为是下载多个页面的图片，所以之后的图片名称与其相应的图片地址的代码抒写在for循环下编写        &apos;&apos;&apos;          #在此需要设置代理，避免爬取失败几率        &apos;&apos;&apos;        headers = {&apos;User-Agent&apos;:                &apos;* Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.94 Safari/537.36&apos;}        # 利用requests模块中的方法获取URL信息，加上我们的代理        re = requests.get(url=url, headers=headers)        # 指定编码，避免中文乱码        re.encoding = &apos;utf-8&apos;        &apos;&apos;&apos;            # 利用beautifulsoup模块来进行处理            #re.text : 转换成规定的字符格式            #&apos;lxml&apos; : 利用lxml解析器进行解析        &apos;&apos;&apos;        bf = BeautifulSoup(re.text, &apos;lxml&apos;)        # 解析完成之后，需要对页面的html信息进行分析了，指定相关的节点        &apos;&apos;&apos;            #class_是为了避免错误混淆，所以不可&quot;原班人马&quot;        &apos;&apos;&apos;        tasges_html = bf.find_all(class_=&apos;item-img&apos;)        # 指定空的列表，装下相关的需要的信息        list = []        # 利用循环，一一导入        for each in tasges_html:            &apos;&apos;&apos;                #加上img是因为&apos;alt&apos;在以下的子节点中，所以需要相关的指明，即一个节点（父，子）一个指明            &apos;&apos;&apos;            list.append(each.img.get(&apos;alt&apos;) + &apos;=&apos; + each.get(&apos;href&apos;))        # 至此，相关的信息就采集完成了        print(&apos;采集over，开始下载：&apos;)    &apos;&apos;&apos;        #开始将采集好的信息一一下载    &apos;&apos;&apos;    for each_img in list:        # 以=分割图片地址与图片名称        img_info = each_img.split(&apos;=&apos;)        target_url = img_info[1]        filename = img_info[0] + &apos;.jpg&apos;        print(&apos;下载：&apos; + filename)        headers = {            &quot;User-Agent&quot;:          &quot;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36&quot;        }        img_req = requests.get(url=target_url, headers=headers)        img_req.encoding = &apos;utf-8&apos;        img_html = img_req.text        img_bf_1 = BeautifulSoup(img_html, &apos;lxml&apos;)        img_url = img_bf_1.find_all(&apos;div&apos;, class_=&apos;wr-single-content-list&apos;)        img_bf_2 = BeautifulSoup(str(img_url), &apos;lxml&apos;)        img_url = &apos;http://www.shuaia.net&apos; + img_bf_2.div.img.get(&apos;src&apos;)        #若是指定的目录不存在则建立一个        if &apos;images&apos; not in os.listdir():            os.makedirs(&apos;images&apos;)        # 即指定URL地址下载        urlretrieve(url=img_url, filename=&apos;images/&apos; + filename)        time.sleep(1)    print(&apos;下载完成！&apos;)</code></pre><blockquote><p><strong>以上是通过学习<a href="http://blog.csdn.net/c406495762/article/details/72597755" target="_blank" rel="external">此篇博客文章</a>的学习心得，相关的加上图片解说可以看这篇博客文章。</strong></p></blockquote><ul><li><strong>附上用得到的知识链接：</strong></li></ul><p><a href="http://qinxuye.me/article/details-about-time-module-in-python/" target="_blank" rel="external">Python中time模块详解</a></p><p><a href="http://blog.csdn.net/vevenlcf/article/details/46777023" target="_blank" rel="external">python3中的urlretrieve() 函数使用</a></p><p><a href="https://docs.python.org/3/library/urllib.request.html" target="_blank" rel="external">urllib.request文档</a></p><p><a href="http://docs.python-requests.org/zh_CN/latest/user/quickstart.html" target="_blank" rel="external">Requests文档</a></p><p><a href="http://www.runoob.com/python3/python3-os-file-methods.html" target="_blank" rel="external">Python3 os模块文件/目录方法</a></p><p><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html" target="_blank" rel="external">Beautiful Soup 4.2.0 文档</a></p><h2 id="实战部分"><a href="#实战部分" class="headerlink" title="实战部分"></a>实战部分</h2><ul><li>通过另外两个网站的分析，爬取其图片并且下载。（下载的图片均可在本工程目录可找到）</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt; 最近在学习&lt;em&gt;python3网络爬虫&lt;/em&gt;，看的是&lt;a href=&quot;http://blog.csdn.net/c406495762/article/details/72597755&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这位学长的博客&lt;/
+      
+    
+    </summary>
+    
+      <category term="学习" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>麻木</title>
@@ -490,62 +543,6 @@
     
     
       <category term="成长" scheme="https://liujunjie11.github.io/tags/%E6%88%90%E9%95%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于python爬虫代码的运行</title>
-    <link href="https://liujunjie11.github.io/2017/11/20/%E5%85%B3%E4%BA%8Epython%E7%88%AC%E8%99%AB%E4%BB%A3%E7%A0%81%E7%9A%84%E8%BF%90%E8%A1%8C/"/>
-    <id>https://liujunjie11.github.io/2017/11/20/关于python爬虫代码的运行/</id>
-    <published>2017-11-20T12:39:40.000Z</published>
-    <updated>2017-11-20T12:51:00.322Z</updated>
-    
-    <content type="html"><![CDATA[<p>关于<em>python爬虫</em>的关键几点简单在此记录下好了。</p><ul><li><p>下载<em>Scrap</em>库。</p></li><li><p>在每一个基于<em>python2</em>工程中的第一行加上<code># -*- coding: UTF-8 -*-</code>，否则运行时出现会不必要的错误。</p></li><li><p>在<em>eclipse</em>中运行代码。实际上以上的要求达到后，直接在<em>eclipse</em>中创建工程，编写好了一步在<em>eclipse</em>中运行即可得知结果。</p></li><li><p>在终端中运行代码。在其中打开<em>python</em>编译环境，之后对向工程的所在目录，一般是<em>eclipse</em>的<em>workspace</em>之中的子目录（即指向工程的上一级目录处），用命令行<code>python XXX.py</code>直接运行即可得知结果。</p></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;关于&lt;em&gt;python爬虫&lt;/em&gt;的关键几点简单在此记录下好了。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;下载&lt;em&gt;Scrap&lt;/em&gt;库。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;在每一个基于&lt;em&gt;python2&lt;/em&gt;工程中的第一行加上&lt;code&gt;# -*- coding:
-      
-    
-    </summary>
-    
-      <category term="学习 爬虫" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0-%E7%88%AC%E8%99%AB/"/>
-    
-    
-      <category term="学习 爬虫" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0-%E7%88%AC%E8%99%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac上关于路欧词典的破解问题记录...</title>
-    <link href="https://liujunjie11.github.io/2017/11/20/Mac%E4%B8%8A%E5%85%B3%E4%BA%8E%E8%B7%AF%E6%AC%A7%E8%AF%8D%E5%85%B8%E7%9A%84%E7%A0%B4%E8%A7%A3%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
-    <id>https://liujunjie11.github.io/2017/11/20/Mac上关于路欧词典的破解问题记录/</id>
-    <published>2017-11-20T06:30:58.000Z</published>
-    <updated>2017-11-20T07:06:18.963Z</updated>
-    
-    <content type="html"><![CDATA[<p>因为在<em>iPad</em>上用了<em>路欧词典</em>，感觉还不错，想在<em>Mac上也用用</em>，发现要不少的钱…在网上看了一下也糊里糊涂摸索了一下，今天一打开发现已经是破解状态了…在此记录下。</p><ul><li><strong>希望有钱的还是支持正版，学生没钱才这样的…</strong></li></ul><blockquote><p><strong>链接</strong>：<a href="https://www.eudic.net/v4/en/home/dictionaryresource" target="_blank" rel="external">路欧词典官网</a></p></blockquote><hr><ul><li>第一步，找到相关的文件</li></ul><p><em>图1</em></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-20%20%E4%B8%8B%E5%8D%882.35.51.png" alt=""></p><p><em>图2</em></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-20%20%E4%B8%8B%E5%8D%882.35.35.png" alt=""></p><blockquote><p>点击打开如上的相关的文件，我用的<em>Xcode</em></p></blockquote><hr><ul><li>第二步，添加相关的内容</li></ul><p><em>图1</em></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-20%20%E4%B8%8B%E5%8D%882.39.57.png" alt=""></p><blockquote><p>以上的没有，所以要自己添加，<em>ID</em>不一定要一致</p></blockquote><p><em>图2</em></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-20%20%E4%B8%8B%E5%8D%882.40.07.png" alt=""></p><blockquote><p>改为<em>820711</em>，据说只有这个才是<em>专业版</em>的代号…据说改这个数字可以延长免费期限…</p></blockquote><hr><ul><li>第三步，锁定文件，避免自动文件修改</li></ul><p><em>图1</em></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-20%20%E4%B8%8B%E5%8D%882.44.08.png" alt=""></p><p><em>图2</em></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-20%20%E4%B8%8B%E5%8D%882.44.19.png" alt=""></p><hr><blockquote><p><strong>接下来就需要重新打开词典等待结果了，可能一下就得到破解了…</strong></p></blockquote><hr><ul><li>关于下载相关的扩展到<em><a href="https://www.eudic.net/v4/en/home/dictionaryresource" target="_blank" rel="external">官网下载</a></em>：</li></ul><h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><ul><li>其实<em>Mac</em>自带的也不错，但是<em>路欧词典</em>还要简单一些。</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;因为在&lt;em&gt;iPad&lt;/em&gt;上用了&lt;em&gt;路欧词典&lt;/em&gt;，感觉还不错，想在&lt;em&gt;Mac上也用用&lt;/em&gt;，发现要不少的钱…在网上看了一下也糊里糊涂摸索了一下，今天一打开发现已经是破解状态了…在此记录下。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;希望有钱的还是支持
-      
-    
-    </summary>
-    
-      <category term="学习" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="学习" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
