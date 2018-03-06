@@ -75,18 +75,18 @@
 
 
 
-<meta name="description" content="urllib.request中两种代理格式  在学习urlretrieve函数方法时，尝试了与BeautifulSoup模块的结合编码。 在request.bulid_opener()的一类函数方法中，如： headers = (&amp;apos;User-Agent&amp;apos;,&amp;apos;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36">
+<meta name="description" content="两种代理格式  在学习urlretrieve函数方法时，尝试了与BeautifulSoup模块的结合编码。 在request.bulid_opener()的一类函数方法中，如： headers = (&amp;apos;User-Agent&amp;apos;,&amp;apos;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Ge">
 <meta name="keywords" content="学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于在学习python3网络爬虫模块时的易模糊点">
 <meta property="og:url" content="https://liujunjie11.github.io/2018/03/06/关于在学习python3网络爬虫模块时的易模糊点/index.html">
 <meta property="og:site_name" content="LXiHa`Notes">
-<meta property="og:description" content="urllib.request中两种代理格式  在学习urlretrieve函数方法时，尝试了与BeautifulSoup模块的结合编码。 在request.bulid_opener()的一类函数方法中，如： headers = (&amp;apos;User-Agent&amp;apos;,&amp;apos;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36">
+<meta property="og:description" content="两种代理格式  在学习urlretrieve函数方法时，尝试了与BeautifulSoup模块的结合编码。 在request.bulid_opener()的一类函数方法中，如： headers = (&amp;apos;User-Agent&amp;apos;,&amp;apos;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Ge">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-06T12:23:29.976Z">
+<meta property="og:updated_time" content="2018-03-06T12:59:17.303Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于在学习python3网络爬虫模块时的易模糊点">
-<meta name="twitter:description" content="urllib.request中两种代理格式  在学习urlretrieve函数方法时，尝试了与BeautifulSoup模块的结合编码。 在request.bulid_opener()的一类函数方法中，如： headers = (&amp;apos;User-Agent&amp;apos;,&amp;apos;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36">
+<meta name="twitter:description" content="两种代理格式  在学习urlretrieve函数方法时，尝试了与BeautifulSoup模块的结合编码。 在request.bulid_opener()的一类函数方法中，如： headers = (&amp;apos;User-Agent&amp;apos;,&amp;apos;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Ge">
 
 
 
@@ -399,7 +399,7 @@
 
       
         <ul>
-<li><em>urllib.request</em>中两种代理格式</li>
+<li>两种代理格式</li>
 </ul>
 <p>在学习<em>urlretrieve</em>函数方法时，尝试了与<em>BeautifulSoup</em>模块的结合编码。</p>
 <p>在<em>request.bulid_opener()</em>的一类函数方法中，如：</p>
@@ -411,7 +411,7 @@ opener.addheaders = [headers]
 # 使用临时的&apos;urlopen&apos;
 request.install_opener(opener)
 </code></pre><hr>
-<p>而在有<em>request.get(url=url,headers=headers…)</em>一类函数方法中，如：</p>
+<p>而在有<em>requests.get(url=url,headers=headers…)</em>一类函数方法中，如：</p>
 <pre><code>headers = {&apos;User-Agent&apos;:
            &apos;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.94 Safari/537.36&apos;}
     # 利用requests模块中的方法获取URL信息，加上我们的代理
