@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于在学习python3网络爬虫模块时的易模糊点]]></title>
+    <url>%2F2018%2F03%2F06%2F%E5%85%B3%E4%BA%8E%E5%9C%A8%E5%AD%A6%E4%B9%A0python3%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E6%A8%A1%E5%9D%97%E6%97%B6%E7%9A%84%E6%98%93%E6%A8%A1%E7%B3%8A%E7%82%B9%2F</url>
+    <content type="text"><![CDATA[urllib.request中两种代理格式 在学习urlretrieve函数方法时，尝试了与BeautifulSoup模块的结合编码。 在request.bulid_opener()的一类函数方法中，如： headers = (&apos;User-Agent&apos;,&apos;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.94 Safari/537.36&apos;) # 安装opener opener = request.build_opener() # 添加代理 opener.addheaders = [headers] # 使用临时的&apos;urlopen&apos; request.install_opener(opener) 而在有request.get(url=url,headers=headers…)一类函数方法中，如： headers = {&apos;User-Agent&apos;: &apos;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.94 Safari/537.36&apos;} # 利用requests模块中的方法获取URL信息，加上我们的代理 re = requests.get(url=url, headers=headers) 比较两者易知，两者的代理规定与是否为字典形式有偏差。]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于Charle的简单抓包操作]]></title>
     <url>%2F2018%2F03%2F06%2F%E5%85%B3%E4%BA%8ECharle%E7%9A%84%E7%AE%80%E5%8D%95%E6%8A%93%E5%8C%85%E6%93%8D%E4%BD%9C%2F</url>
     <content type="text"><![CDATA[最近在看他人的博客学习python3网络爬虫的实战，看到了“抓包”的这个词，以前不知道… 用的是Macbook，在网上搜索了一下，Charle好评多多，急忙到网上找了破解教程…（关于如何找到，可利用百度谷歌搜索关键词） 第一次用这个，啥都不会，基本操作也不会，摸索了一下，打算记录下来帮助需要的人。 抓包的操作进入主界面先看看快捷键也是个不错的选择。如图： 可以知道，与Mac本机浏览器的快捷键相似。 New Session即为打开一个新的界面。 点击钢笔图标，输入URL，自动开始抓包了。 查看相关的快捷键，定向查找html中格式，如json格式 Find 系统代理配置 可以自动对目前系统中的一些URL进行抓包。 最后 继续摸索中..听说功能很强大，网上的教程非常多，暂时用不到太多，简单的操作说明到处结束了。 一些可参考的教程： 可参考一 可参考二]]></content>

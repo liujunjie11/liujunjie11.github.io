@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-03-06T04:23:05.352Z</updated>
+  <updated>2018-03-06T12:23:29.976Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于在学习python3网络爬虫模块时的易模糊点</title>
+    <link href="https://liujunjie11.github.io/2018/03/06/%E5%85%B3%E4%BA%8E%E5%9C%A8%E5%AD%A6%E4%B9%A0python3%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E6%A8%A1%E5%9D%97%E6%97%B6%E7%9A%84%E6%98%93%E6%A8%A1%E7%B3%8A%E7%82%B9/"/>
+    <id>https://liujunjie11.github.io/2018/03/06/关于在学习python3网络爬虫模块时的易模糊点/</id>
+    <published>2018-03-06T12:10:44.000Z</published>
+    <updated>2018-03-06T12:23:29.976Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><em>urllib.request</em>中两种代理格式</li></ul><p>在学习<em>urlretrieve</em>函数方法时，尝试了与<em>BeautifulSoup</em>模块的结合编码。</p><p>在<em>request.bulid_opener()</em>的一类函数方法中，如：</p><pre><code>headers = (&apos;User-Agent&apos;,&apos;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.94 Safari/537.36&apos;)# 安装openeropener = request.build_opener()# 添加代理opener.addheaders = [headers]# 使用临时的&apos;urlopen&apos;request.install_opener(opener)</code></pre><hr><p>而在有<em>request.get(url=url,headers=headers…)</em>一类函数方法中，如：</p><pre><code>headers = {&apos;User-Agent&apos;:           &apos;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.94 Safari/537.36&apos;}    # 利用requests模块中的方法获取URL信息，加上我们的代理re = requests.get(url=url, headers=headers)</code></pre><blockquote><p><strong>比较两者易知，两者的代理规定与是否为字典形式有偏差。</strong></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;&lt;em&gt;urllib.request&lt;/em&gt;中两种代理格式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在学习&lt;em&gt;urlretrieve&lt;/em&gt;函数方法时，尝试了与&lt;em&gt;BeautifulSoup&lt;/em&gt;模块的结合编码。&lt;/p&gt;
+&lt;p&gt;在&lt;em&gt;request.bu
+      
+    
+    </summary>
+    
+      <category term="学习" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>关于Charle的简单抓包操作</title>
@@ -517,32 +546,6 @@
     
     
       <category term="学习 成长" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0-%E6%88%90%E9%95%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>无言</title>
-    <link href="https://liujunjie11.github.io/2017/11/22/%E6%97%A0%E8%A8%80/"/>
-    <id>https://liujunjie11.github.io/2017/11/22/无言/</id>
-    <published>2017-11-22T03:34:20.000Z</published>
-    <updated>2017-11-22T12:29:59.450Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li><p>搞海外民运的所谓的核心人员，像是无头无脑的庸人似的，毫无表现出应有的政治才能，除了一味的附和大众，一味的解脱自己，依然也做不成什么气候，那为何要这般折腾呢。这不像是所谓的民运，不像是所谓的要解放华夏人民，这像是一番闹剧，给多数的明智的人们看来就像是一出笑话。在我看来，民运可以得到支持，但是前提是需要一个靠谱的领导人来领导前行，现在的一些所谓的天天喊着要搞民运的却是没有什么才能没有什么实干的人不适合当这个角色。</p></li><li><p>中国大陆历史以来都是一代又一代的专制者的舞台，如今的中共也不过是铺了前人的后台，不过历史告诉人们，灭亡的一天终将会到来。</p></li><li><p>人们不应麻木，应当时时保持清醒，保持自我的理智，迎接好不确定的未来明天。</p></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;搞海外民运的所谓的核心人员，像是无头无脑的庸人似的，毫无表现出应有的政治才能，除了一味的附和大众，一味的解脱自己，依然也做不成什么气候，那为何要这般折腾呢。这不像是所谓的民运，不像是所谓的要解放华夏人民，这像是一番闹剧，给多数的明智的人们看来就像是一出笑话
-      
-    
-    </summary>
-    
-      <category term="成长" scheme="https://liujunjie11.github.io/categories/%E6%88%90%E9%95%BF/"/>
-    
-    
-      <category term="成长" scheme="https://liujunjie11.github.io/tags/%E6%88%90%E9%95%BF/"/>
     
   </entry>
   
