@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-03-06T12:59:17.303Z</updated>
+  <updated>2018-03-06T13:20:13.939Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://liujunjie11.github.io/2018/03/06/%E5%85%B3%E4%BA%8E%E5%9C%A8%E5%AD%A6%E4%B9%A0python3%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E6%A8%A1%E5%9D%97%E6%97%B6%E7%9A%84%E6%98%93%E6%A8%A1%E7%B3%8A%E7%82%B9/"/>
     <id>https://liujunjie11.github.io/2018/03/06/关于在学习python3网络爬虫模块时的易模糊点/</id>
     <published>2018-03-06T12:10:44.000Z</published>
-    <updated>2018-03-06T12:59:17.303Z</updated>
+    <updated>2018-03-06T13:20:13.939Z</updated>
     
-    <content type="html"><![CDATA[<ul><li>两种代理格式</li></ul><p>在学习<em>urlretrieve</em>函数方法时，尝试了与<em>BeautifulSoup</em>模块的结合编码。</p><p>在<em>request.bulid_opener()</em>的一类函数方法中，如：</p><pre><code>headers = (&apos;User-Agent&apos;,&apos;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.94 Safari/537.36&apos;)# 安装openeropener = request.build_opener()# 添加代理opener.addheaders = [headers]# 使用临时的&apos;urlopen&apos;request.install_opener(opener)</code></pre><hr><p>而在有<em>requests.get(url=url,headers=headers…)</em>一类函数方法中，如：</p><pre><code>headers = {&apos;User-Agent&apos;:           &apos;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.94 Safari/537.36&apos;}    # 利用requests模块中的方法获取URL信息，加上我们的代理re = requests.get(url=url, headers=headers)</code></pre><blockquote><p><strong>比较两者易知，两者的代理规定与是否为字典形式有偏差。</strong></p></blockquote>]]></content>
+    <content type="html"><![CDATA[<ul><li>两种代理格式</li></ul><p>在学习<em>urlretrieve</em>函数方法时，尝试了与<em>BeautifulSoup</em>模块的结合编码。</p><p>在<em>request.bulid_opener()</em>的一类函数方法中，如：</p><pre><code>headers = (&apos;User-Agent&apos;,&apos;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.94 Safari/537.36&apos;)# 安装openeropener = request.build_opener()# 添加代理opener.addheaders = [headers]# 使用临时的&apos;urlopen&apos;request.install_opener(opener)</code></pre><hr><p>而在有<em>requests.get(url=url,headers=headers…)</em>一类函数方法中，如：</p><pre><code>headers = {&apos;User-Agent&apos;:           &apos;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.94 Safari/537.36&apos;}    # 利用requests模块中的方法获取URL信息，加上我们的代理re = requests.get(url=url, headers=headers)</code></pre><blockquote><p><strong>比较两者易知，两者的代理规定与是否为字典形式有偏差。</strong></p></blockquote><ul><li><p>在利用<em>requests.get()</em>下载图片时</p><pre><code>re = requests.get(url=url)        #应当加上二进制的格式规定，避免不必要的错误麻烦   with open(&apos;美女图片.jpg&apos;,&apos;wb&apos;) as mntu:       for chunk in re.iter_content(chunk_size = 1024):            if chunk:                mntu.write(chunk)                mntu.flush()</code></pre></li></ul><blockquote><p>在查询相关的资料时，有<em>Stream=True</em>的参数说明要加入，但是加入之后却是错误显示。在<em>with</em>下面的<em>for chunk…</em>在下载图片时应当加入。</p></blockquote>]]></content>
     
     <summary type="html">
     

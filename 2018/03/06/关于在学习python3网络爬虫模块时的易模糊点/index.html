@@ -83,7 +83,7 @@
 <meta property="og:site_name" content="LXiHa`Notes">
 <meta property="og:description" content="两种代理格式  在学习urlretrieve函数方法时，尝试了与BeautifulSoup模块的结合编码。 在request.bulid_opener()的一类函数方法中，如： headers = (&amp;apos;User-Agent&amp;apos;,&amp;apos;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Ge">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-06T12:59:17.303Z">
+<meta property="og:updated_time" content="2018-03-06T13:20:13.939Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于在学习python3网络爬虫模块时的易模糊点">
 <meta name="twitter:description" content="两种代理格式  在学习urlretrieve函数方法时，尝试了与BeautifulSoup模块的结合编码。 在request.bulid_opener()的一类函数方法中，如： headers = (&amp;apos;User-Agent&amp;apos;,&amp;apos;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Ge">
@@ -418,6 +418,20 @@ request.install_opener(opener)
 re = requests.get(url=url, headers=headers)
 </code></pre><blockquote>
 <p><strong>比较两者易知，两者的代理规定与是否为字典形式有偏差。</strong></p>
+</blockquote>
+<ul>
+<li><p>在利用<em>requests.get()</em>下载图片时</p>
+<pre><code>re = requests.get(url=url)    
+    #应当加上二进制的格式规定，避免不必要的错误麻烦
+   with open(&apos;美女图片.jpg&apos;,&apos;wb&apos;) as mntu:
+       for chunk in re.iter_content(chunk_size = 1024):
+            if chunk:
+                mntu.write(chunk)
+                mntu.flush()
+</code></pre></li>
+</ul>
+<blockquote>
+<p>在查询相关的资料时，有<em>Stream=True</em>的参数说明要加入，但是加入之后却是错误显示。在<em>with</em>下面的<em>for chunk…</em>在下载图片时应当加入。</p>
 </blockquote>
 
       
