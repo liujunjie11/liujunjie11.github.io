@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于计算机基础知识（一）]]></title>
+    <url>%2F2018%2F03%2F08%2F%E5%85%B3%E4%BA%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[平时有些兴趣想要了解一些关于计算机的基础知识，我就想着为何不将其作为一个笔记记录在博客上呢？以后想从事与计算机相关的工作，了解基本的计算机知识必不可少，因为时间，精力的有限，我会将一些认为重要的或者是必要的基础知识记录在此，打算作为一个系列在此展示了，希望能帮助更多的人。 编程语言知识：关于强类型语言与弱类型语言，语言的动静态区分以及解释性语言与编译性语言的理解 可以一张图大概的简单理解一下关于强类型语言与弱类型语言，语言的动静态（下图来源于参考一链接） 那么我们常见的语言分类： 简单总结强类型语言与弱类型语言： 编译时前者需要赋予变量对应的数据类型，后者可不必必须。（如c语言与python的编译时） 前者需要改变数据类型时需要相关的函数方法强制改变，后者可忽略。（如在c语言强制要求更改类型时的（double）变量） 简单总结语言的动静态区别： 动态性语言在编译器上编译时不提供代码数据类型的指错，仅仅是在运行时指出，而静态则是在编译器上编译时就提供代码数据类型的指错。（如int a=’a’;时编译器马上会在一旁提示错误时的便可理解为静态语言，如c语言） 动态性较于静态性更具有严谨性，可读性。 解释性语言与编译性语言的理解（因为在参考4的说明较为详细了，我就直接复制相关的内容好了…） 首先，我们编程都是用的高级语言(写汇编和机器语言的大牛们除外)，计算机不能直接理解高级语言，只能理解和运行机器语言，所以必须要把高级语言翻译成机器语言，计算机才能运行高级语言所编写的程序。 说到翻译，其实翻译的方式有两种，一个是编译，一个是解释。两种方式只是翻译的时间不同。 用编译型语言写的程序执行之前，需要一个专门的编译过程，通过编译系统（不仅仅只是通过编译器，编译器只是编译系统的一部分）把高级语言翻译成机器语言（具体翻译过程可以参看下图），把源高级程序编译成为机器语言文件，比如windows下的exe文件。以后就可以直接运行而不需要编译了，因为翻译只做了一次，运行时不需要翻译，所以编译型语言的程序执行效率高，但也不能一概而论，部分解释型语言的解释器通过在运行时动态优化代码，甚至能够使解释型语言的性能超过编译型语言。 一个完整的编译系统与 一个用C编写的程序hello.c的编译过程 解释则不同，解释型语言编写的程序不需要编译。解释型语言在运行的时候才翻译，比如VB语言，在执行的时候，专门有一个解释器能够将VB语言翻译成机器语言，每个语句都是执行的时候才翻译。这样解释型语言每执行一次就要翻译一次，效率比较低。 编译型与解释型，两者各有利弊。前者由于程序执行速度快，同等条件下对系统要求较低，因此像开发操作系统、大型应用程序、数据库系统等时都采用它，像C/C++、Pascal/Object Pascal（Delphi）等都是编译语言，而一些网页脚本、服务器脚本及辅助开发接口这样的对速度要求不高、对不同系统平台间的兼容性有一定要求的程序则通常使用解释性语言，如JavaScript、VBScript、Perl、Python、Ruby、MATLAB 等等。 但随着硬件的升级和设计思想的变革，编译型和解释型语言越来越笼统，主要体现在一些新兴的高级语言上，而解释型语言的自身特点也使得编译器厂商愿意花费更多成本来优化解释器，解释型语言性能超过编译型语言也是必然的。 以下更为详细的参考： 参考1 参考2 参考3 参考4 计算机基础知识推荐图书 一个日本相关行业人员的书籍系列，通俗易懂。在此分享。 网络是怎样链接的 计算机是怎么跑起来的 程序是怎么跑起来的]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于在学习python3网络爬虫模块时的易模糊点]]></title>
     <url>%2F2018%2F03%2F06%2F%E5%85%B3%E4%BA%8E%E5%9C%A8%E5%AD%A6%E4%B9%A0python3%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E6%A8%A1%E5%9D%97%E6%97%B6%E7%9A%84%E6%98%93%E6%A8%A1%E7%B3%8A%E7%82%B9%2F</url>
     <content type="text"><![CDATA[两种代理格式 在学习urlretrieve函数方法时，尝试了与BeautifulSoup模块的结合编码。 在request.bulid_opener()的一类函数方法中，如： headers = (&apos;User-Agent&apos;,&apos;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.94 Safari/537.36&apos;) # 安装opener opener = request.build_opener() # 添加代理 opener.addheaders = [headers] # 使用临时的&apos;urlopen&apos; request.install_opener(opener) 而在有requests.get(url=url,headers=headers…)一类函数方法中，如： headers = {&apos;User-Agent&apos;: &apos;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.94 Safari/537.36&apos;} # 利用requests模块中的方法获取URL信息，加上我们的代理 re = requests.get(url=url, headers=headers) 比较两者易知，两者的代理规定与是否为字典形式有偏差。 在利用requests.get()下载图片时 re = requests.get(url=url) #应当加上二进制的格式规定，避免不必要的错误麻烦 with open(&apos;美女图片.jpg&apos;,&apos;wb&apos;) as mntu: for chunk in re.iter_content(chunk_size = 1024): if chunk: mntu.write(chunk) mntu.flush() 在查询相关的资料时，有Stream=True的参数说明要加入，但是加入之后却是错误显示。在with下面的for chunk…在下载图片时应当加入。]]></content>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-03-06T13:20:13.939Z</updated>
+  <updated>2018-03-08T02:09:56.897Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于计算机基础知识（一）</title>
+    <link href="https://liujunjie11.github.io/2018/03/08/%E5%85%B3%E4%BA%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>https://liujunjie11.github.io/2018/03/08/关于计算机基础知识（一）/</id>
+    <published>2018-03-08T00:56:07.000Z</published>
+    <updated>2018-03-08T02:09:56.897Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>平时有些兴趣想要了解一些关于<em>计算机</em>的基础知识，我就想着为何不将其作为一个笔记记录在博客上呢？以后想从事与<em>计算机</em>相关的工作，了解基本的<em>计算机知识</em>必不可少，因为时间，精力的有限，我会将一些认为重要的或者是必要的基础知识记录在此，打算作为一个系列在此展示了，希望能帮助更多的人。</p></blockquote><h2 id="编程语言知识：关于强类型语言与弱类型语言，语言的动静态区分以及解释性语言与编译性语言的理解"><a href="#编程语言知识：关于强类型语言与弱类型语言，语言的动静态区分以及解释性语言与编译性语言的理解" class="headerlink" title="编程语言知识：关于强类型语言与弱类型语言，语言的动静态区分以及解释性语言与编译性语言的理解"></a>编程语言知识：关于<em>强类型语言</em>与<em>弱类型语言</em>，语言的<em>动静态</em>区分以及<em>解释性语言</em>与<em>编译性语言</em>的理解</h2><blockquote><p>可以一张图大概的简单理解一下关于<em>强类型语言</em>与<em>弱类型语言</em>，语言的<em>动静态</em>（下图来源于参考一链接）</p></blockquote><p><img src="http://owudg3xs2.bkt.clouddn.com/1283539-31968e5f19abed4b.jpg" alt=""></p><blockquote><p>那么我们常见的语言分类：</p></blockquote><p><img src="http://owudg3xs2.bkt.clouddn.com/1283539-1820df734cf34260.png" alt=""></p><hr><ul><li>简单总结<em>强类型语言</em>与<em>弱类型语言</em>：</li></ul><ol><li><p>编译时前者需要赋予变量对应的数据类型，后者可不必必须。（如<em>c语言</em>与<em>python</em>的编译时）</p></li><li><p>前者需要改变数据类型时需要相关的函数方法强制改变，后者可忽略。（如在<em>c语言</em>强制要求更改类型时的<strong>（double）变量</strong>）</p></li></ol><ul><li>简单总结语言的<em>动静态</em>区别：</li></ul><ol><li><p><em>动态性语言</em>在编译器上编译时不提供代码数据类型的指错，仅仅是在运行时指出，而静态则是在编译器上编译时就提供代码数据类型的指错。（如<strong><em>int a=’a’;</em></strong>时编译器马上会在一旁提示错误时的便可理解为静态语言，如<em>c语言</em>）</p></li><li><p><em>动态性</em>较于<em>静态性</em>更具有严谨性，可读性。</p></li></ol><ul><li><em>解释性语言</em>与<em>编译性语言</em>的理解（因为在参考4的说明较为详细了，我就直接复制相关的内容好了…）</li></ul><p>首先，我们编程都是用的高级语言(写汇编和机器语言的大牛们除外)，计算机不能直接理解高级语言，只能理解和运行机器语言，所以必须要把高级语言翻译成机器语言，计算机才能运行高级语言所编写的程序。</p><p>说到翻译，其实翻译的方式有两种，一个是编译，一个是解释。两种方式只是翻译的时间不同。</p><p>用编译型语言写的程序执行之前，需要一个专门的编译过程，通过编译系统（不仅仅只是通过编译器，编译器只是编译系统的一部分）把高级语言翻译成机器语言（具体翻译过程可以参看下图），把源高级程序编译成为机器语言文件，比如windows下的exe文件。以后就可以直接运行而不需要编译了，因为翻译只做了一次，运行时不需要翻译，所以编译型语言的程序执行效率高，但也不能一概而论，部分解释型语言的解释器通过在运行时动态优化代码，甚至能够使解释型语言的性能超过编译型语言。<br><img src="http://owudg3xs2.bkt.clouddn.com/20131124170842718.png" alt=""></p><blockquote><p>一个完整的编译系统与 一个用C编写的程序hello.c的编译过程 </p></blockquote><p>解释则不同，解释型语言编写的程序不需要编译。解释型语言在运行的时候才翻译，比如VB语言，在执行的时候，专门有一个解释器能够将VB语言翻译成机器语言，每个语句都是执行的时候才翻译。这样解释型语言每执行一次就要翻译一次，效率比较低。</p><p>编译型与解释型，两者各有利弊。前者由于程序执行速度快，同等条件下对系统要求较低，因此像开发操作系统、大型应用程序、数据库系统等时都采用它，像C/C++、Pascal/Object Pascal（Delphi）等都是编译语言，而一些网页脚本、服务器脚本及辅助开发接口这样的对速度要求不高、对不同系统平台间的兼容性有一定要求的程序则通常使用解释性语言，如JavaScript、VBScript、Perl、Python、Ruby、MATLAB 等等。</p><p>但随着硬件的升级和设计思想的变革，编译型和解释型语言越来越笼统，主要体现在一些新兴的高级语言上，而解释型语言的自身特点也使得编译器厂商愿意花费更多成本来优化解释器，解释型语言性能超过编译型语言也是必然的。</p><ul><li><strong>以下更为详细的参考：</strong></li></ul><p><a href="https://www.jianshu.com/p/336f19772046" target="_blank" rel="external">参考1</a></p><p><a href="https://www.zhihu.com/question/19918532" target="_blank" rel="external">参考2</a></p><p><a href="https://zh.wikipedia.org/wiki/強弱型別" target="_blank" rel="external">参考3</a></p><p><a href="http://blog.csdn.net/zhu_xun/article/details/16921413" target="_blank" rel="external">参考4</a></p><h2 id="计算机基础知识推荐图书"><a href="#计算机基础知识推荐图书" class="headerlink" title="计算机基础知识推荐图书"></a>计算机基础知识推荐图书</h2><blockquote><p>一个日本相关行业人员的书籍系列，通俗易懂。在此分享。</p></blockquote><p><a href="https://pan.baidu.com/s/13OUBV9zvmBAY3eTMI6DlFg" target="_blank" rel="external">网络是怎样链接的</a></p><p><a href="https://pan.baidu.com/s/1XYR5uJasnrbBXY43hupA0w" target="_blank" rel="external">计算机是怎么跑起来的</a></p><p><a href="https://pan.baidu.com/s/1k9KAxONC5pd1qQAHRoEnAg" target="_blank" rel="external">程序是怎么跑起来的</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;平时有些兴趣想要了解一些关于&lt;em&gt;计算机&lt;/em&gt;的基础知识，我就想着为何不将其作为一个笔记记录在博客上呢？以后想从事与&lt;em&gt;计算机&lt;/em&gt;相关的工作，了解基本的&lt;em&gt;计算机知识&lt;/em&gt;必不可少，因为时间，精力的有限，我会将一些认为重要的
+      
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="学习笔记" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>关于在学习python3网络爬虫模块时的易模糊点</title>
@@ -510,34 +536,6 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;其中的命令的快捷键均对应Mac的“control”键&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;一般模式到编辑模式：i,o,a,r(可大写)  按下ESC推回&lt;br&gt;      
-      
-    
-    </summary>
-    
-      <category term="学习 成长" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0-%E6%88%90%E9%95%BF/"/>
-    
-    
-      <category term="学习 成长" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0-%E6%88%90%E9%95%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于Linux与win的基本命令的简要记录</title>
-    <link href="https://liujunjie11.github.io/2017/11/22/%E5%85%B3%E4%BA%8ELinux%E4%B8%8Ewin%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E7%9A%84%E7%AE%80%E8%A6%81%E8%AE%B0%E5%BD%95/"/>
-    <id>https://liujunjie11.github.io/2017/11/22/关于Linux与win的基本命令的简要记录/</id>
-    <published>2017-11-22T12:24:35.000Z</published>
-    <updated>2017-11-22T12:26:09.145Z</updated>
-    
-    <content type="html"><![CDATA[<p>基本命令</p><p>实际上的命令通过man /info /—help即可快速掌握命令的使用</p><p>Centos                    Windons</p><p>ls （目录名）            dir            //查看其中的内容<br>ls —help / man ls /info ls                       //查看命令帮助<br>clear                cls            //清屏<br>cd .                    cd  .            //进入当前目录<br>cd . .                cd . .         //进入上级目录<br>cd /xxx/xx<br>cd / / cd ~                                //根目录<br>cd -                             //返回上一级目录<br>pwd                                //显示当前目录<br>whoami    / who                        //查看当前名与版本号等等…<br>lsb_release -a                        //查看系统信息<br>rmdir                            //删除一个空的目录<br>echo $PATH                        //查看用户的配置情况</p><p>～表示自己的主文件夹,即为root根目录</p><p>date （可加相关的对应符号得出对应的理想的日期）         //日前<br>cal（可指名时间）                                //日历<br>bc （quit推出）                                //系统计算器的进入</p><p>shutdown  //关机<br>reboot    //重启<br>有时会因为权限问题导致命令执行失败，即为root与本人的切换可以解决</p><p>chgrp    //改变文件所属用户组<br>chown    //改变文件所有者<br>chmod    //改变文件的权限，r:4 ; w:2; x:1 </p><p>su (root)                            //切换用户<br>exit                                //推出当前的用户<br>chown （用户）(文件目录)                //以给予文件到一个没有权限的用户</p><p>passwd                            //当前用户密码更改<br>以上两者一并使用</p><p>ifconfig                ipconfig            //查看IP地址</p><p>ping (域名地址 / localhost)             //网络延迟<br>有一些需要在有网的情况下ping…</p><p>ll                             //别名, 即为ls -l的命令行罢了<br>alias                                //查看所有别名<br>ls -a -l -h                        //查看当前目录 -h , 人性化 -l ,列表 -a,显示，开头<br>mkdir ~/xxx/x                        //创建目录文件夹<br>touch ~/xxx/x/x.txt                //创建文件，亦可结合相关的参数更改文件的日期<br>echo (内容）&gt; x.txt                    //重定向输出，即为输入内容到此中<br>echo (内容) &gt;&gt; x.txt                //追加内容入文件<br>cat x.txt / more x.txt                type x.txt        //查看文件<br>tac x.txt                            //以最后的行数输出，即与cat的命令功能相反<br>nl （参数）（文件）                //将文件内容添加行数打印出来<br>more / less                             //翻页参考文件内容</p><p>cp x.txt （可有多个一同）x1.txt                        //复制文件</p><p>rm x.txt                            //删除文件</p><p>cp *.txt（可有多个一同） tmp/（可不加 / ）                //复制文件入某个文件夹</p><p>rm *                                //删除当下文件夹全部文件<br>rm x.txt                            //删除文件<br>rm -rf tmp                        //强制删除<br>mv x.txt tmp/                        //强行删除文件夹<br>以上的目录应当清晰自己在哪…</p><p>centos 切换模式:<br>若是在Mac系统的虚拟机运行的系统，则ctrl对应control, alt对应option，按fn显示F键盘<br>ctrl + alt +f6                        //切换到文本模式<br>Ctrl + alt                         //切换鼠标<br>Ctrl + alt +f1                        //切换到桌面模式<br>Ctrl + alt +f5                        //切换到新的文本模式</p><p>Nano文本编译器命令行<br>若是在Mac系统的虚拟机运行的系统，则ctrl对应control, alt对应option，按fn显示F键盘</p><p>nano x.txt                        //打开nano编译器，编译对应的文件<br>在nano的文本编译器中注意本人与root的区别</p><p>ctrl + o                             //保存文件，之后直接回车保存<br>Ctrl + x                             //提出文件<br>Ctrl + k                             //cut文件<br>Ctrl + u                             //uncut / 复制相关的内容到当前文件</p><p>more  （（可加）-5（数字，表示显示多少行））x.txt                         //分屏显示<br>在当前的目录下直接使用more亦可</p><p>tail x.txt                            //最后10行<br>find . | more                        // | 是管道符，前面的命令的输出作为后面命令输入<br>find ~<br>ls<br>head  -(数字）x.txt                        //取出前几行的文件内容<br>tail    -（数字）x.txt                            //取出后面几行的额文件内容<br>od                                 //改为进制表的形式来输出相关的文件内容</p><p>umask (-S)                            //文件默认权限的查看<br>chattr                            //设置文件的隐藏属性，如不能被删除等..<br>lsattr                            //显示文件的隐藏属性<br>file                                //查看一个文件的基本信息<br>which                            //查找“执行文件”，一般的“执行文件”可以理解为可以cd到的文件<br>whereis                            //查找文件地址，或者是说查找包含有相关的字词的文件<br>locate                            //查找相关的字词的文件位置<br>find                                //强大的查找命令，包括有关于日期的，本人的限定条件查找等..<br>还有一些SGID的特殊权限在书中查找即可..</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;基本命令&lt;/p&gt;
-&lt;p&gt;实际上的命令通过man /info /—help即可快速掌握命令的使用&lt;/p&gt;
-&lt;p&gt;Centos                    Windons&lt;/p&gt;
-&lt;p&gt;ls （目录名）            dir            //查看其中
       
     
     </summary>
