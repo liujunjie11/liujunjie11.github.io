@@ -91,7 +91,7 @@
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/3%E6%9C%88-11-2018%2009-49-16.gif">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-11%20%E4%B8%8A%E5%8D%8810.05.02.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-11%20%E4%B8%8A%E5%8D%8810.12.41.png">
-<meta property="og:updated_time" content="2018-03-11T02:21:25.564Z">
+<meta property="og:updated_time" content="2018-03-11T02:38:31.390Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用python3网络爬虫爬取成绩">
 <meta name="twitter:description" content="因为最近在学习python3网络爬虫，想自己写一些小程序来实战一下。爬的是URP教务网。 一开始的思路是利用beautiful模块来进行爬取相关的html信息，直接来得到需要的信息。结果发现程序运行不通… 后来查了一下，发现用re模块好啊…配合python正则表达式那是相当简单… 下面开始分析，代码编写阶段。 分析学习模拟登陆这是第一步，有两种简单的方法，可直接参考的链接：参考链接在此 一种是查看">
@@ -534,8 +534,7 @@ if __name__ == &apos;__main__&apos;:
     response.encoding = &apos;GB2312&apos;
 
     # 设置成为符合需要的表达式以及模式为&apos;任意匹配模式&apos;
-    pattern = re.compile(&apos;&lt;tr.*?class=&quot;even&quot;.*?&lt;/td&gt;.*?&lt;/td&gt;.*?&lt;td align=&quot;center&quot;&gt;(.*?)&lt;/td&gt;.*?&lt;/td&gt;.*?&lt;/td&gt;.*?&lt;/td&gt;.*?&lt;td align=&quot;center&quot;&gt;(.*?)&lt;/td&gt;.*?&lt;/tr&gt;&apos;,
-                         re.S)
+    pattern = re.compile(&apos;&lt;tr.*?class=&quot;even&quot;.*?&lt;/td&gt;.*?&lt;/td&gt;.*?&lt;td align=&quot;center&quot;&gt;(.*?)&lt;/td&gt;.*?&amp;npsb;.*?&lt;/td&gt;.*?&lt;/td&gt;.*?&lt;/td&gt;.*?&lt;td&gt;align=&quot;center&quot;&gt;(.*?)&amp;npsb;&lt;/P&gt;&lt;/td&gt;.*?&amp;npsb;&lt;/P&gt;&apos;,                             re.S)
     # 成绩信息采集
     grades = re.findall(pattern, response.text)
 
