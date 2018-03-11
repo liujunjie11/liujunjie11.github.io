@@ -91,7 +91,7 @@
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/3%E6%9C%88-11-2018%2009-49-16.gif">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-11%20%E4%B8%8A%E5%8D%8810.05.02.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-11%20%E4%B8%8A%E5%8D%8810.12.41.png">
-<meta property="og:updated_time" content="2018-03-11T02:17:47.707Z">
+<meta property="og:updated_time" content="2018-03-11T02:21:25.564Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用python3网络爬虫爬取成绩">
 <meta name="twitter:description" content="因为最近在学习python3网络爬虫，想自己写一些小程序来实战一下。爬的是URP教务网。 一开始的思路是利用beautiful模块来进行爬取相关的html信息，直接来得到需要的信息。结果发现程序运行不通… 后来查了一下，发现用re模块好啊…配合python正则表达式那是相当简单… 下面开始分析，代码编写阶段。 分析学习模拟登陆这是第一步，有两种简单的方法，可直接参考的链接：参考链接在此 一种是查看">
@@ -486,27 +486,28 @@ if __name__ == &apos;__main__&apos;:
 <p>接下来就是编写代码了，以上若是有不懂的地方，还需要利用搜索引擎多多查询哟。</p>
 </blockquote>
 <h2 id="测试代码部分"><a href="#测试代码部分" class="headerlink" title="测试代码部分"></a>测试代码部分</h2><p>编写测试代码，爬取网页<em>html信息</em>：</p>
-<p>import requests</p>
-<pre><code>if __name__ == &apos;__main__&apos;:
+<pre><code>import requests
 
-    # 登陆页面url
-    url = &apos;http://60.219.165.24//bxqcjcxAction.do&apos;
-    # 设置代理相关
-    headers = {
-            &apos;User-Agent&apos;:&apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36&apos;,
-            &apos;Cookie&apos;:&apos;JSExxxxxx=hxxxx-9Ixxxxxxx_xxxxxxxx&apos;,
-            &apos;Connection&apos;: &apos;keep-alive&apos;
-             }
+    if __name__ == &apos;__main__&apos;:
 
-    # 利用session爬取请求,之后可方便的get与post
-    s = requests.session()
-    response = s.post(url=url, headers=headers）
+        # 登陆页面url
+        url = &apos;http://60.219.165.24//bxqcjcxAction.do&apos;
+        # 设置代理相关
+        headers = {
+                &apos;User-Agent&apos;:&apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36&apos;,
+                &apos;Cookie&apos;:&apos;JSExxxxxx=hxxxx-9Ixxxxxxx_xxxxxxxx&apos;,
+                &apos;Connection&apos;: &apos;keep-alive&apos;
+                 }
 
-    # 设置成网页对应的编码格式
-    response.encoding = &apos;GB2312&apos;
+        # 利用session爬取请求,之后可方便的get与post
+        s = requests.session()
+        response = s.post(url=url, headers=headers）
 
-    # 查看相关的网页内容
-    print(response.text)
+        # 设置成网页对应的编码格式
+        response.encoding = &apos;GB2312&apos;
+
+        # 查看相关的网页内容
+        print(response.text)
 </code></pre><p>运行查看效果：</p>
 <p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-11%20%E4%B8%8A%E5%8D%8810.05.02.png" alt=""></p>
 <blockquote>
