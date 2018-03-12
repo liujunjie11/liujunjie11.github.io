@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-03-11T02:38:31.390Z</updated>
+  <updated>2018-03-12T02:42:35.506Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac触摸板小问题记录</title>
+    <link href="https://liujunjie11.github.io/2018/03/12/Mac%E8%A7%A6%E6%91%B8%E6%9D%BF%E5%B0%8F%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <id>https://liujunjie11.github.io/2018/03/12/Mac触摸板小问题记录/</id>
+    <published>2018-03-12T02:40:07.000Z</published>
+    <updated>2018-03-12T02:42:35.506Z</updated>
+    
+    <content type="html"><![CDATA[<p>今早<em>触摸板</em>的<em>三指点击</em>功能不灵了，有点急…</p><p>解决：<strong>重启。</strong></p><blockquote><p>一般电脑上的小问题重启之后可能就会得到解决了。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;今早&lt;em&gt;触摸板&lt;/em&gt;的&lt;em&gt;三指点击&lt;/em&gt;功能不灵了，有点急…&lt;/p&gt;
+&lt;p&gt;解决：&lt;strong&gt;重启。&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一般电脑上的小问题重启之后可能就会得到解决了。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+      
+    
+    </summary>
+    
+      <category term="笔记" scheme="https://liujunjie11.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://liujunjie11.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>利用python3网络爬虫爬取成绩</title>
@@ -507,32 +537,6 @@
       
       
         &lt;p&gt;学习&lt;em&gt;Spark&lt;/em&gt;用的&lt;em&gt;eclipse&lt;/em&gt;习惯了，看了&lt;a href=&quot;http://kevin12.iteye.com/blog/2274179&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这一篇文章&lt;/a&gt;搭建了一个单机环境
-      
-    
-    </summary>
-    
-      <category term="学习 成长" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0-%E6%88%90%E9%95%BF/"/>
-    
-    
-      <category term="学习 成长" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0-%E6%88%90%E9%95%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于在《用python写网络爬虫》一书中的补充</title>
-    <link href="https://liujunjie11.github.io/2017/11/23/%E5%85%B3%E4%BA%8E%E5%9C%A8%E3%80%8A%E7%94%A8python%E5%86%99%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E3%80%8B%E4%B8%80%E4%B9%A6%E4%B8%AD%E7%9A%84%E8%A1%A5%E5%85%85/"/>
-    <id>https://liujunjie11.github.io/2017/11/23/关于在《用python写网络爬虫》一书中的补充/</id>
-    <published>2017-11-23T10:32:52.000Z</published>
-    <updated>2017-11-23T10:40:45.791Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近学习爬虫，感觉挺有意思，在看《用python写网络爬虫》以及《python网络数据采集》，前者使用<em>python2</em>为主，后者则是以<em>python3</em>为主，各有千秋，对我来说都不错。</p><p>不过在前者的书中的一些方法代码却是有时运行容易出错，解决的方法是将书中的方法裁开，用非方法的方式写出相应的代码即可正确。关于此可以参考<a href="http://cuiqingcai.com/1052.html" target="_blank" rel="external">这位大神的博客</a>。博客以<em>python2</em>写的爬虫，有一些实战，与书搭配着看效果非常不错。</p><blockquote><p>另外的一些问题，在我之后在补充。目前问题并没有发现太多。</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;最近学习爬虫，感觉挺有意思，在看《用python写网络爬虫》以及《python网络数据采集》，前者使用&lt;em&gt;python2&lt;/em&gt;为主，后者则是以&lt;em&gt;python3&lt;/em&gt;为主，各有千秋，对我来说都不错。&lt;/p&gt;
-&lt;p&gt;不过在前者的书中的一些方法代码却是有时运行容
       
     
     </summary>
