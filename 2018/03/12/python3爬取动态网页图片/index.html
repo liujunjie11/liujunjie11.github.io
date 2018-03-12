@@ -75,20 +75,21 @@
 
 
 
-<meta name="description" content="在学习基本的网站技术查看就遇到了问题…在此记录一下。 我是在eclipse中编的python，用的是anaconda python2.7。 在eclipse使用builtwith的方法提示需要工程名以builtwith为名的前提下，但是也是失败了（提示builtwith.parse方法找不到…）  解决：  在以后遇到了这类情况可以直接到终端运行就好了，可能第一次运行会出现(‘Error:’, U">
+<meta name="description" content="爬取的URL地址:https://unsplash.com/  这是一个优美图片地址，往下拉就可以出来更多的图片，这显然是一个动态网页呀…  分析关于详细分析以及我的参考可见：http://blog.csdn.net/c406495762/article/details/78123502  因为分析方向一致，我就不在此说了，我跟这位博主的工具有一些出入，实际上用Chrome分析已经足够了。  ##">
 <meta name="keywords" content="学习">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python2.7爬虫使用一些方法问题记录">
-<meta property="og:url" content="https://liujunjie11.github.io/2017/11/18/Python2.7爬虫使用一些方法问题记录/index.html">
+<meta property="og:title" content="python3爬取动态网页图片">
+<meta property="og:url" content="https://liujunjie11.github.io/2018/03/12/python3爬取动态网页图片/index.html">
 <meta property="og:site_name" content="LXiHa`Notes">
-<meta property="og:description" content="在学习基本的网站技术查看就遇到了问题…在此记录一下。 我是在eclipse中编的python，用的是anaconda python2.7。 在eclipse使用builtwith的方法提示需要工程名以builtwith为名的前提下，但是也是失败了（提示builtwith.parse方法找不到…）  解决：  在以后遇到了这类情况可以直接到终端运行就好了，可能第一次运行会出现(‘Error:’, U">
+<meta property="og:description" content="爬取的URL地址:https://unsplash.com/  这是一个优美图片地址，往下拉就可以出来更多的图片，这显然是一个动态网页呀…  分析关于详细分析以及我的参考可见：http://blog.csdn.net/c406495762/article/details/78123502  因为分析方向一致，我就不在此说了，我跟这位博主的工具有一些出入，实际上用Chrome分析已经足够了。  ##">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-18%20%E4%B8%8B%E5%8D%888.42.42.png">
-<meta property="og:updated_time" content="2017-11-23T10:28:00.001Z">
+<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-12%20%E4%B8%8B%E5%8D%888.16.51.png">
+<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-12%20%E4%B8%8B%E5%8D%888.12.58.png">
+<meta property="og:updated_time" content="2018-03-12T12:38:33.555Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python2.7爬虫使用一些方法问题记录">
-<meta name="twitter:description" content="在学习基本的网站技术查看就遇到了问题…在此记录一下。 我是在eclipse中编的python，用的是anaconda python2.7。 在eclipse使用builtwith的方法提示需要工程名以builtwith为名的前提下，但是也是失败了（提示builtwith.parse方法找不到…）  解决：  在以后遇到了这类情况可以直接到终端运行就好了，可能第一次运行会出现(‘Error:’, U">
-<meta name="twitter:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-18%20%E4%B8%8B%E5%8D%888.42.42.png">
+<meta name="twitter:title" content="python3爬取动态网页图片">
+<meta name="twitter:description" content="爬取的URL地址:https://unsplash.com/  这是一个优美图片地址，往下拉就可以出来更多的图片，这显然是一个动态网页呀…  分析关于详细分析以及我的参考可见：http://blog.csdn.net/c406495762/article/details/78123502  因为分析方向一致，我就不在此说了，我跟这位博主的工具有一些出入，实际上用Chrome分析已经足够了。  ##">
+<meta name="twitter:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-12%20%E4%B8%8B%E5%8D%888.16.51.png">
 
 
 
@@ -118,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="https://liujunjie11.github.io/2017/11/18/Python2.7爬虫使用一些方法问题记录/"/>
+  <link rel="canonical" href="https://liujunjie11.github.io/2018/03/12/python3爬取动态网页图片/"/>
 
 
 
 
 
-  <title>Python2.7爬虫使用一些方法问题记录 | LXiHa`Notes</title>
+  <title>python3爬取动态网页图片 | LXiHa`Notes</title>
   
 
 
@@ -295,7 +296,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liujunjie11.github.io/2017/11/18/Python2.7爬虫使用一些方法问题记录/">
+    <link itemprop="mainEntityOfPage" href="https://liujunjie11.github.io/2018/03/12/python3爬取动态网页图片/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘俊">
@@ -312,7 +313,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python2.7爬虫使用一些方法问题记录</h1>
+          <h1 class="post-title" itemprop="name headline">python3爬取动态网页图片</h1>
         
 
         <div class="post-meta">
@@ -324,8 +325,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-18T20:44:17+08:00">
-                2017-11-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-12T20:16:32+08:00">
+                2018-03-12
               </time>
             
 
@@ -365,9 +366,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/11/18/Python2.7爬虫使用一些方法问题记录/#comments" itemprop="discussionUrl">
+                <a href="/2018/03/12/python3爬取动态网页图片/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/11/18/Python2.7爬虫使用一些方法问题记录/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/03/12/python3爬取动态网页图片/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -400,19 +401,75 @@
       
 
       
-        <p>在学习基本的网站技术查看就遇到了问题…在此记录一下。</p>
-<p>我是在<em>eclipse</em>中编的<em>python</em>，用的是<em>anaconda python2.7</em>。</p>
-<p>在<em>eclipse</em>使用<em>builtwith</em>的方法提示需要工程名以<em>builtwith</em>为名的前提下，但是也是失败了（提示<em>builtwith.parse</em>方法找不到…）</p>
-<ul>
-<li><strong>解决</strong>：</li>
-</ul>
-<p>在以后遇到了这类情况可以直接到<em>终端</em>运行就好了，可能第一次运行会出现<em>(‘Error:’, URLError(error(65, ‘No route to host’),))
-</em>的错误问题，不过再重新运行一次就能解决了。如下图：</p>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-18%20%E4%B8%8B%E5%8D%888.42.42.png" alt=""></p>
+        <p>爬取的<em>URL地址</em>:<a href="https://unsplash.com/" target="_blank" rel="external">https://unsplash.com/</a></p>
 <blockquote>
-<p>完美解决。</p>
+<p>这是一个优美图片地址，往下拉就可以出来更多的图片，这显然是一个动态网页呀…</p>
 </blockquote>
-<p><strong>包括有<em>whois.whois</em>的之类的方法，在终端运行都可得到好的解决</strong></p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>关于详细分析以及我的参考可见：<a href="http://blog.csdn.net/c406495762/article/details/78123502" target="_blank" rel="external">http://blog.csdn.net/c406495762/article/details/78123502</a></p>
+<blockquote>
+<p><strong>因为分析方向一致，我就不在此说了，我跟这位博主的工具有一些出入，实际上用<em>Chrome</em>分析已经足够了。</strong></p>
+</blockquote>
+<p>##代码</p>
+<p>这是我后来自己写的代码，比上面博主的简短一些，亦可参考参考。</p>
+<pre><code>&apos;&apos;&apos;
+    函数目标：
+    爬取动态网页的图片
+
+&apos;&apos;&apos;
+
+import requests
+import json
+from urllib.request import urlretrieve
+import os
+import time
+
+if __name__ == &apos;__main__&apos;:
+    url = &apos;https://unsplash.com/napi/feeds/home&apos;
+    &apos;&apos;&apos;
+
+    添加需要的代理:
+    authorization证书配置,有时网站需要此类的代理html信息才会出来...
+    json格式分析js页面的利器，有时用js渲染出来的页面，要注意观察其URL及相对准确的信息
+
+    &apos;&apos;&apos;
+    header = {&apos;user-agent&apos;:&apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36&apos;,
+            &apos;authorization&apos;:&apos;Client-ID c94869b36aa272dd62dfaeefed769d4115fb3189a9d1ec88ed457207747be626&apos;}
+    re = requests.get(url=url, headers=header)
+    re.encoding = &apos;utf-8&apos;
+    # 通过分析易知一页有包括多张图片的ID链接，可用python的json格式处理解析
+    json_info = json.loads(re.text)
+
+    # 建立一个空的列表用于装ID信息
+    list_id = []
+    if &apos;优美图片集&apos; not in os.listdir():
+        os.makedirs(&apos;优美图片集&apos;)
+    for each in json_info[&apos;photos&apos;]:
+        list_id.append(each[&apos;id&apos;])
+
+    # 利用urlretrieve函数一一下载，设置延迟
+    for i in range(0, len(list_id)):
+        print(&apos;开始下载指定页面中的第%d张&apos; % (i + 1))
+        urlretrieve(url=&apos;https://unsplash.com/photos/&apos; + list_id[i] + &apos;/download?force=true.jpg&apos;, filename=&apos;优美图片集/&apos; + &apos;系列%d.jpg&apos; % i)
+
+    print(&apos;下载完成！请查收...&apos;)    
+</code></pre><blockquote>
+<p>虽然说我的代码简短一点，不过我还是支持面对对象模式编程的，方便以后的学习，也是对自己的一种考验。</p>
+</blockquote>
+<p>运行之后在本工程目录可见：</p>
+<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-12%20%E4%B8%8B%E5%8D%888.16.51.png" alt=""></p>
+<p>最后再补充说明一下：</p>
+<p>每一次的拉取新的图片时，进行抓包，得知新的图片ID以及一个页面，通过分析此页面便可得到图片相关的信息，进而进行下载保存了（如下图）。</p>
+<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-12%20%E4%B8%8B%E5%8D%888.12.58.png" alt=""></p>
+<hr>
+<p>简单说说当时的情况，在参考了上面博主的分析过程后，利用了<em>Chrome下载器</em>的下载发现了图片的信息，然后我用<em>urlretrieve函数</em>单张下载的测试，发现成功了…附上代码。</p>
+<pre><code>from urllib.request import urlretrieve
+if __name__ == &apos;__main__&apos;:
+
+    urlretrieve(&apos;https://unsplash.com/photos/NrflUuJJK0I/download?force=true.jpg&apos;, &apos;tu.jpg&apos;)
+         print(&apos;下载完成！&apos;)
+</code></pre><blockquote>
+<p>不过从来都没有见过这种<em>src信息</em>…算是开了眼界，长了知识啦。</p>
+</blockquote>
 
       
     </div>
@@ -443,8 +500,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/18/关于Anaconda-python两个版本共存时的包的下载问题/" rel="next" title="关于Anaconda python两个版本共存时的包的下载问题">
-                <i class="fa fa-chevron-left"></i> 关于Anaconda python两个版本共存时的包的下载问题
+              <a href="/2018/03/12/学习python3网络爬虫的总结/" rel="next" title="学习python3网络爬虫的总结">
+                <i class="fa fa-chevron-left"></i> 学习python3网络爬虫的总结
               </a>
             
           </div>
@@ -452,10 +509,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/19/关于Mac自带语音时而快捷键不灵时的问题/" rel="prev" title="关于Mac自带语音时而快捷键不灵时的问题">
-                关于Mac自带语音时而快捷键不灵时的问题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -540,8 +593,17 @@ var jiathis_config={
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <p class="site-author-name" itemprop="name">刘俊</p>
@@ -635,6 +697,22 @@ var jiathis_config={
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#分析"><span class="nav-number">1.</span> <span class="nav-text">分析</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -833,9 +911,9 @@ var jiathis_config={
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://liujunjie11.github.io/2017/11/18/Python2.7爬虫使用一些方法问题记录/';
-          this.page.identifier = '2017/11/18/Python2.7爬虫使用一些方法问题记录/';
-          this.page.title = 'Python2.7爬虫使用一些方法问题记录';
+          this.page.url = 'https://liujunjie11.github.io/2018/03/12/python3爬取动态网页图片/';
+          this.page.identifier = '2018/03/12/python3爬取动态网页图片/';
+          this.page.title = 'python3爬取动态网页图片';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://—-...disqus.com/embed.js';
