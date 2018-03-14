@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-03-12T12:44:38.949Z</updated>
+  <updated>2018-03-14T11:35:26.345Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用python3爬取新加坡联合早报新闻小视频</title>
+    <link href="https://liujunjie11.github.io/2018/03/14/%E7%94%A8python3%E7%88%AC%E5%8F%96%E6%96%B0%E5%8A%A0%E5%9D%A1%E8%81%94%E5%90%88%E6%97%A9%E6%8A%A5%E6%96%B0%E9%97%BB%E5%B0%8F%E8%A7%86%E9%A2%91/"/>
+    <id>https://liujunjie11.github.io/2018/03/14/用python3爬取新加坡联合早报新闻小视频/</id>
+    <published>2018-03-14T10:58:25.000Z</published>
+    <updated>2018-03-14T11:35:26.345Z</updated>
+    
+    <content type="html"><![CDATA[<p>位于新加坡的<a href="http://www.zaobao.com" target="_blank" rel="external">联合早报</a>是我几乎每天都会看的新闻网址，标题清晰明了，思路严谨踏实，是个好的新闻网站，值得推荐。不过却是被墙了…</p><p>今天看了这一篇文章：<a href="http://www.zaobao.com/realtime/china/story20180313-842407" target="_blank" rel="external">女记者提问冗长 人民大会堂部长通道出现“飙戏”一幕</a></p><blockquote><p>非常有意思，想收藏其中的视频，于是想到了用<em>python</em>爬取好了。</p></blockquote><p>这个新闻网站明显是一个动态网站啊，两种方式：</p><ul><li>第一种：通过抓包，如下可得知相关的<em>video</em>信息</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-14%20%E4%B8%8B%E5%8D%887.03.30.png" alt=""></p><ul><li>第二种：网站自带的连接</li></ul><p>如下操作，点击视频中<em>share</em>，可发现资源地址</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-14%20%E4%B8%8B%E5%8D%887.03.57.png" alt=""></p><blockquote><p>右上角的<em>share</em>。</p></blockquote><p>其中有地址信息。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-14%20%E4%B8%8B%E5%8D%887.04.10.png" alt=""></p><p>在获取的地址前加上<em>http:</em>简单测试一下:</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-14%20%E4%B8%8B%E5%8D%887.07.10.png" alt=""></p><blockquote><p>是正确的，网站真的很贴心呢～</p></blockquote><p>以刚刚的地址输入爬取下来的代码：</p><pre><code>from urllib.request import urlretrieve if __name__ == &apos;__main__&apos;:    print(&apos;开始下载...&apos;)    urlretrieve(url=&apos;http://players.brightcove.net/4802324430001/H1dr7zTWz_default/index.html?videoId=5750255765001.mp4&apos;, filename=&apos;两会小视频.mp4&apos;)    print(&apos;下载完成！&apos;)</code></pre><p><strong>结果：发现可在网上播放的视频下载之后却不能播放…占用的内存才几百kb…这一看就知道地址是错的…</strong></p><hr><p>经过上面网址播放的连接，再次进行抓包，打开相关的网页意外发现了<em>mp4格式</em>的连接：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-14%20%E4%B8%8B%E5%8D%887.28.05.png" alt=""></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-14%20%E4%B8%8B%E5%8D%887.30.37.png" alt=""></p><hr><p><strong>将此链接替换掉上面代码中的URL地址，发现可以了（如下图），完工。</strong></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-14%20%E4%B8%8B%E5%8D%887.31.51.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;位于新加坡的&lt;a href=&quot;http://www.zaobao.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;联合早报&lt;/a&gt;是我几乎每天都会看的新闻网址，标题清晰明了，思路严谨踏实，是个好的新闻网站，值得推荐。不过却是被墙了…&lt;/p&gt;
+&lt;p&gt;今
+      
+    
+    </summary>
+    
+      <category term="学习" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>python3爬取动态网页图片</title>
@@ -521,34 +547,6 @@
     
     
       <category term="成长" scheme="https://liujunjie11.github.io/tags/%E6%88%90%E9%95%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于在eclipse中编译Scala自动补全的添加设置</title>
-    <link href="https://liujunjie11.github.io/2017/11/27/%E5%85%B3%E4%BA%8E%E5%9C%A8eclipse%E4%B8%AD%E7%BC%96%E8%AF%91Scala%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8%E7%9A%84%E6%B7%BB%E5%8A%A0%E8%AE%BE%E7%BD%AE/"/>
-    <id>https://liujunjie11.github.io/2017/11/27/关于在eclipse中编译Scala自动补全的添加设置/</id>
-    <published>2017-11-27T11:40:07.000Z</published>
-    <updated>2017-11-27T11:43:16.533Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li>如下图</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-27%20%E4%B8%8B%E5%8D%887.39.14.png" alt=""></p><blockquote><p>全部打勾上，还犹豫个啥子？编译过程中会发现比之前轻松不少。</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ul&gt;
-&lt;li&gt;如下图&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-27%20%E4%B8%8B%E5%8D%88
-      
-    
-    </summary>
-    
-      <category term="学习" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="学习" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
