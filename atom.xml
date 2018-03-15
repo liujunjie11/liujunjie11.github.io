@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-03-14T11:35:26.345Z</updated>
+  <updated>2018-03-15T08:19:30.026Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用python3爬取QQ音乐列表音乐</title>
+    <link href="https://liujunjie11.github.io/2018/03/14/%E7%94%A8python3%E7%88%AC%E5%8F%96QQ%E9%9F%B3%E4%B9%90%E5%88%97%E8%A1%A8%E9%9F%B3%E4%B9%90/"/>
+    <id>https://liujunjie11.github.io/2018/03/14/用python3爬取QQ音乐列表音乐/</id>
+    <published>2018-03-14T12:57:31.000Z</published>
+    <updated>2018-03-15T08:19:30.026Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近想爬取一些音乐来实战一下，选择了<em>qq音乐</em>。</p><p><em>qq音乐</em>明显的就是一个动态网页，所以需要抓包了。</p><blockquote><p>不懂的关键词可利用好搜索引擎。</p></blockquote><h2 id="分析过程"><a href="#分析过程" class="headerlink" title="分析过程"></a>分析过程</h2><p>在此就说说分析的大致过程吧。</p><p>先看看主页：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8A%E5%8D%8811.08.29.png" alt=""></p><p>我们随便点开一个主题列表：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8A%E5%8D%8811.09.44.png" alt=""></p><p>因为是动态网页，所以就在这里抓包吧，因为<em>qq音乐</em>是动态网页，需要相关的参数信息才能得到想要的音乐地址，随便以播放一首歌曲为例，如下图1中的歌曲<em>ID</em>，点进去这个看看，即点击播放按钮，发现来到了播放页面，打开我用的<em>Chrome</em>中的开发者工具，里面有我们想要的音乐地址（如下图2所示），图3展示得到列表歌曲的所有信息，需要编程清洗之后才能得到我们想要，在此会在下面的代码中标明。</p><ul><li>图1:</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8A%E5%8D%8811.37.52.png" alt=""></p><ul><li>图2:</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8A%E5%8D%8811.41.18.png" alt=""></p><ul><li>图3:</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8A%E5%8D%8811.51.03.png" alt=""></p><p>其中的<em>URL</em>地址，代码中会用到：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8B%E5%8D%8812.48.57.png" alt=""></p><blockquote><p>现在我们可能就会有思路出现了：抓包爬取列表的所有歌曲的<em>ID号</em>以及歌曲信息 <strong>–&gt;</strong> 整合到以<em>ID</em>为基的<em>html</em>地址 <strong>–&gt;</strong> 到播放页面利用<em>beautiful模块</em>爬取相关的音乐地址即可！so easy~</p></blockquote><p><strong>但经过我的测试说明，爬取播放页面的<em>html</em>信息是没有相关的音乐地址的，所以在得到歌曲<em>ID</em>信息，整合到以<em>ID</em>为基的<em>html</em>地址之后，我们还需要对播放页面进行抓包。下面说说如何在播放页面抓包。</strong></p><p>先播放一首歌曲，再进行抓包，发现了这些信息（如下图1），再结合上面的音乐地址分析一下，发现了<em>vkey</em>信息的存在，即每一首歌的<em>vkey</em>信息是不同的，并且经过测试即便是同一个<em>ID</em>，<em>vkey</em>也是一直不断自动变换着的，不过在测试之后可得出结论：<strong>只要得到<em>vkey</em>信息，再整合上面的音乐地址就能抓到音乐信息，并且经过代码编译之后下载下来。</strong></p><blockquote><p>特别说明一下，<strong>下载歌曲的地址以及我们抓包时的<em>URL</em>之中，仅仅有如<em>vkey</em>的不同，或者是一些<em>ID</em>的不同，其他的参数是相同的！</strong>所以我们才能仅仅抓到<em>vkey</em>信息就能方便的下载歌曲，就是这么个意思。不理解的朋友可细心观察一下。</p></blockquote><ul><li>图1:</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8A%E5%8D%8811.55.11.png" alt=""></p><ul><li>图2:</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8A%E5%8D%8811.58.13.png" alt=""></p><p>其中的<em>URL</em>地址：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8B%E5%8D%8812.49.29.png" alt=""></p><hr><h2 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h2><p>‘’’</p><pre><code>函数目标：爬取QQ音乐列表音乐编写时间：2018-3-15&apos;&apos;&apos;import requestsimport os import timeimport json from urllib.request import urlretrieveif __name__ == &apos;__main__&apos;:    # 建立目录用于装爬取的音乐    if &apos;QQ音乐列表音乐&apos; not in os.listdir():        os.makedirs(&apos;QQ音乐列表音乐&apos;)    &apos;&apos;&apos;        从URL中添加代理记忆必要的相关的参数以获取歌曲的ID以及歌曲名                                                            &apos;&apos;&apos;    playlist_url = &apos;https://c.y.qq.com/qzone/fcg-bin/fcg_ucc_getcdinfo_byids_cp.fcg&apos;    # 添加页面中的代理信息    header = {&apos;user-agent&apos;:&apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36&apos;,            &apos;cookie&apos;:&apos;tvfe_boss_uuid=1770396a4ed2d111; pgv_info=ssid=s4189101616; pgv_pvid=7344469728; uin=; pgv_pvi=8737627136; pgv_si=s9378960384; _tucao_userinfo=ZU1hSHhlWVNPSnRoNWgwTjMzc2c4OVYzYjBuTkNjcDNHNjcyVkkzWm9WUkJZMWhxWDJ5SmpTSURFWDhVTk9TYkczU3JWc09EeEsrMEVnQ2RpK2FVNWh4M0x0Y21aOG5Vcms5MW9odmt6ZXNxRWlmeE9PZzM0SlQ1YmVuM0xhRVpUaWh5d2REV2FZcHdQdWdNL0daWE9rTTM0MlFjc1VoaHhNVkh4bkNqbnBOMDN2MG1sOEkxc0dYNFZRa24rd0RY--FeceGG8ErqgRGZz7WWwpsg%3D%3D; _tucao_session=WUVSc2RVVk95Y0ViU2NoNndsWmVlbzZoSG1WaFdpcEk4Q1M5bXZSTG9qanV3OEpuNVNQT3dBc0tBRERUY1NCRDZJek14Y2xYeFdmMWhiaWdkZ282UjdPdXVyT1ZYQnpCeG9BcklQUFBEMU5LQ3F3ajdmd3VWRmZ5QTJoN1ViS1krcEx0aUdUb3plckVNVGc3K0t2Z3pUeFJDcFZMNnU3dEpLUXZ5Zyt4dUpJdU5Hb3ZwZUhpTHM0OEhNQk0vcHJKN2tEOXVZay95WkFpZlFuSVBQZDhoSzlMVUMrVDQxN0llRzJuNkVWUGdTVjdyaVl2WVdscFlyVDJPald4MG9BWA%3D%3D--dDBBK5gXjLaGccOBzx4EBA%3D%3D; ts_refer=www.google.com/; ts_uid=3146042580; qqmusic_fromtag=66; yq_playdata=s; yqq_stat=0; yplayer_open=1; yq_index=0; yq_playschange=0; player_exist=1&apos;,            &apos;referer&apos;:&apos;https://y.qq.com/n/yqq/playlist/3766176211.html&apos;}    # 添加参数信息,有些是非必须的，待研究，有兴趣的可以自己测试    paramter = {                &apos;type&apos;:&apos;1&apos;,                &apos;json&apos;:&apos;1&apos;,                &apos;utf8&apos;:&apos;1&apos;,                &apos;onlysong&apos;:&apos;0&apos;,                &apos;disstid&apos;:&apos;3766176211&apos;,                &apos;format&apos;:&apos;jsonp&apos;,                &apos;g_tk&apos;:&apos;5381&apos;,  # 非必须                &apos;jsonpCallback&apos;:&apos;playlistinfoCallback&apos;,  # 值可更改                &apos;loginUin&apos;:&apos;0&apos;,                &apos;hostUin&apos;:&apos;0&apos;,                &apos;format&apos;:&apos;jsonp&apos;,                &quot;inCharset&quot;:&apos;utf8&apos;,                &apos;outCharset&apos;:&apos;utf-8&apos;,                &apos;notice&apos;:&apos;0&apos;,                &apos;platform&apos;:&apos;yqq&apos;,                &apos;needNewCode&apos;:&apos;0&apos;,                }    playlist_re = requests.get(url=playlist_url, params=paramter, headers=header)    # 指定编码格式    playlist_re.encoding = &apos;utf-8&apos;    # 改变为python可识别的json格式,进行必要的数据清洗,去掉前面的&apos;jsonpCallback&apos;部分    playlist_info = json.loads(playlist_re.text.lstrip(&apos;playlistinfoCallback(&apos;).rstrip(&apos;)&apos;))    # 指定整体索引    playlist_info1 = playlist_info[&apos;cdlist&apos;][0]    # 先存储歌手的姓名,观察可知，一共有19个索引,因为歌曲本身仅仅有20首，取前20个歌手名    singer_name = []    for num in range(0, 17):        singer_eainfo = playlist_info1[&apos;songlist&apos;][num]        for each_info in singer_eainfo[&apos;singer&apos;]:            singer_name.append(each_info[&apos;name&apos;])    num = 0    # 在循环体系中进行下一步的编写    for each in playlist_info1[&apos;songlist&apos;]:        &apos;&apos;&apos;            在获取歌曲vkey的主URL传入相关的参数得到相关的数据之后进行挖掘，得到vkey信息            其中的参数有些是不必要的，可自由修改，有些是必要的                                                               &apos;&apos;&apos;        key_url = &apos;https://c.y.qq.com/base/fcgi-bin/fcg_music_express_mobile3.fcg&apos;        # 传入相关的代理以及参数        header_1 = {&apos;user-agent&apos;:&apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36&apos;,                  &apos;referer&apos;:&apos;https://y.qq.com/portal/player.html&apos;,                  &apos;cookie&apos;:&apos;tvfe_boss_uuid=1770396a4ed2d111; pgv_info=ssid=s4189101616; pgv_pvid=7344469728; uin=; pgv_pvi=8737627136; pgv_si=s9378960384; _tucao_userinfo=ZU1hSHhlWVNPSnRoNWgwTjMzc2c4OVYzYjBuTkNjcDNHNjcyVkkzWm9WUkJZMWhxWDJ5SmpTSURFWDhVTk9TYkczU3JWc09EeEsrMEVnQ2RpK2FVNWh4M0x0Y21aOG5Vcms5MW9odmt6ZXNxRWlmeE9PZzM0SlQ1YmVuM0xhRVpUaWh5d2REV2FZcHdQdWdNL0daWE9rTTM0MlFjc1VoaHhNVkh4bkNqbnBOMDN2MG1sOEkxc0dYNFZRa24rd0RY--FeceGG8ErqgRGZz7WWwpsg%3D%3D; _tucao_session=WUVSc2RVVk95Y0ViU2NoNndsWmVlbzZoSG1WaFdpcEk4Q1M5bXZSTG9qanV3OEpuNVNQT3dBc0tBRERUY1NCRDZJek14Y2xYeFdmMWhiaWdkZ282UjdPdXVyT1ZYQnpCeG9BcklQUFBEMU5LQ3F3ajdmd3VWRmZ5QTJoN1ViS1krcEx0aUdUb3plckVNVGc3K0t2Z3pUeFJDcFZMNnU3dEpLUXZ5Zyt4dUpJdU5Hb3ZwZUhpTHM0OEhNQk0vcHJKN2tEOXVZay95WkFpZlFuSVBQZDhoSzlMVUMrVDQxN0llRzJuNkVWUGdTVjdyaVl2WVdscFlyVDJPald4MG9BWA%3D%3D--dDBBK5gXjLaGccOBzx4EBA%3D%3D; ts_refer=www.google.com/; ts_uid=3146042580; qqmusic_fromtag=66; yq_playdata=s; yqq_stat=0; yq_index=0; yq_playschange=0; player_exist=1; ts_last=y.qq.com/n/yqq/playlist/3766176211.html; yplayer_open=1&apos;}            paramter_1 = {                    &apos;g_tk&apos;:&apos;5381&apos;,  # 非必须                    &apos;jsonpCallback&apos;:&apos;MusicJsonCallback&apos;,  # 非必须，可更改                    &quot;loginUin&quot;:&apos;0&apos;,                    &apos;hostUin&apos;:&apos;0&apos;,                    &apos;format&apos;:&apos;json&apos;,                    &apos;inCharset&apos;:&apos;utf8&apos;,                    &apos;outCharset&apos;:&apos;utf-8&apos;,                    &apos;notice&apos;:&apos;0&apos;,                    &apos;platform&apos;:&quot;yqq&quot;,                    &apos;needNewCode&apos;:&apos;0&apos;,                    &apos;cid&apos;:&apos;205361747&apos;,  # 一致必须                    &apos;callback&apos;:&apos;MusicJsonCallback&apos;,  # 非必须，可更改                    &apos;uin&apos;:&apos;0&apos;,                    # 传入获取的信息                    &apos;songmid&apos;:each[&apos;songmid&apos;],                    &apos;filename&apos;:&apos;C400&apos; + each[&apos;songmid&apos;] + &apos;.m4a&apos;,                    &apos;guid&apos;:&apos;7344469728&apos;                       }        # 解析得到含有vkey的数据信息，然后进行清洗得到想要的信息        key_re = requests.get(url=key_url, params=paramter_1, headers=header_1)        # 指定编码格式        key_re.encoding = &apos;utf-8&apos;        # 转换为python的json格式，进行简单的清洗        key_info = json.loads(key_re.text.lstrip(&apos;MusicJsonCallback(&apos;).rstrip(&apos;)&apos;))        # 进一步的清洗        data_info = key_info[&apos;data&apos;]        items_info = data_info[&apos;items&apos;][0]        print(&apos;数据采集完成，开始下载任务...&apos;)        # 接下来就是可以下载了        urlretrieve(url=&apos;http://dl.stream.qqmusic.qq.com/C4000041FwTv0Ai3Ku.m4a?vkey=&apos; + items_info[&apos;vkey&apos;] + &apos;&amp;guid=7344469728&amp;uin=0&amp;fromtag=66.mp3&apos;, filename=&apos;QQ音乐列表音乐/&apos; + each[&apos;songname&apos;] + &apos;.mp3&apos;)        print(&apos;正在下载:&apos; + singer_name[num] + &apos;的&apos; + each[&apos;songname&apos;] + &apos;!&apos;)        print(&apos;下载中....&apos;)        print(&apos;下载此歌曲完成！&apos;)        # 跳传到下一个歌手名        num = num + 1        time.sleep(1)    print(&apos;全部下载完成，请在本过程目录下查收！&apos;)</code></pre><blockquote><p><strong>在使用urlretrieve函数时，其中的url参数输入时应当加上格式，如下载视频时加上.mp4,下载音乐时加上.mp3,否则会易出现HTTP 403 错误 – 禁止访问 (Forbidden)</strong></p></blockquote><ul><li>链接：<a href="http://www.checkupdown.com/status/E403_zh.html" target="_blank" rel="external">认识HTTP 403 错误 – 禁止访问 (Forbidden)</a></li></ul><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>运行：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8B%E5%8D%884.08.01.png" alt=""></p><p>到目录查看：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8B%E5%8D%884.09.17.png" alt=""></p><blockquote><p>一切还算是顺利。前段时间想爬取腾讯视频，研究了挺久，没有成功，还需要学习，腾讯的资源都在腾讯云上，我想方式都差不多。</p></blockquote><ul><li>参考：<a href="http://blog.csdn.net/lht_okk/article/details/77206510" target="_blank" rel="external">http://blog.csdn.net/lht_okk/article/details/77206510</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;最近想爬取一些音乐来实战一下，选择了&lt;em&gt;qq音乐&lt;/em&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;qq音乐&lt;/em&gt;明显的就是一个动态网页，所以需要抓包了。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;不懂的关键词可利用好搜索引擎。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;分
+      
+    
+    </summary>
+    
+      <category term="学习" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>用python3爬取新加坡联合早报新闻小视频</title>
@@ -522,31 +552,6 @@
     
     
       <category term="学习" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>名人效应</title>
-    <link href="https://liujunjie11.github.io/2017/11/28/%E5%90%8D%E4%BA%BA%E6%95%88%E5%BA%94/"/>
-    <id>https://liujunjie11.github.io/2017/11/28/名人效应/</id>
-    <published>2017-11-28T10:33:07.000Z</published>
-    <updated>2017-11-28T11:03:13.369Z</updated>
-    
-    <content type="html"><![CDATA[<p>“名人效应”在我们的生活中屡见不鲜，当我们在遇到一些挂有所谓的“名气”的人，比如“名校”出来的人，或者是一些本身就是所谓的“名人”的人时，心中大多会不由自主的产生一种敬畏与向往，有时竟然会产生自卑的感觉…我感觉这好似一种“阴差阳错”，又不得不感慨这种“名人效应”对我们的这种“潜移默化”教化的感觉。</p><p>那么这种效应究竟是从何而来？为何又产生这种貌似人与生就有的“天性”？我想可以在我们的生活中可以找到答案。</p><p>因为我们从小到大的生活环境都是如此“教育”我们的，所以在我们身边大部分的人的这种相关的“感觉”会伴随我们成长，久而久之我们也是这般如此了。简要分析可知这一类的大部分人在我们成长的过程中好似又是不可或缺的，又好似是不可避免的，哈哈，难道不是吗，我们身边的大多数父母即是如此，最简单的理解，“考上一个好的大学”。在此我们就知道了，原来世界上有一些“有名”的大学，从身边的一些“名人”的崇拜者，我们与之交流亦或者是道听途说，听多了看多了自然也就易被“名化”了…</p><p>那么“自卑感”又从何而来？…我想这是一种错误的，被“名化”扭曲了的心理活动吧，至少我是这么认为的。这里的“名化”可以理解为被“名”影响化了的意思，这样的人往往不由自主的随波逐流，被“名”波及到。当然，可能也与所谓的“好强心”，所谓的“羡慕嫉妒”也会有一定的挂钩吧。</p><p>不管怎么说，我感觉这就是一种“不应该”，带“名”的东西亦然有其的优势，但是如果一味“随波逐流”的因此把自己搞得扭曲，那真的是得不偿失，对不起自己了…与我而言，真的是一种非常蠢的心理活动呢…</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;“名人效应”在我们的生活中屡见不鲜，当我们在遇到一些挂有所谓的“名气”的人，比如“名校”出来的人，或者是一些本身就是所谓的“名人”的人时，心中大多会不由自主的产生一种敬畏与向往，有时竟然会产生自卑的感觉…我感觉这好似一种“阴差阳错”，又不得不感慨这种“名人效应”对我们的这种
-      
-    
-    </summary>
-    
-      <category term="成长" scheme="https://liujunjie11.github.io/categories/%E6%88%90%E9%95%BF/"/>
-    
-    
-      <category term="成长" scheme="https://liujunjie11.github.io/tags/%E6%88%90%E9%95%BF/"/>
     
   </entry>
   
