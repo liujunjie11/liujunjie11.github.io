@@ -57,7 +57,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="学习," />
+  <meta name="keywords" content="学习笔记," />
 
 
 
@@ -75,30 +75,20 @@
 
 
 
-<meta name="description" content="最近想爬取一些音乐来实战一下，选择了qq音乐。 qq音乐明显的就是一个动态网页，所以需要抓包了。  不懂的关键词可利用好搜索引擎。  分析过程在此就说说分析的大致过程吧。 先看看主页：  我们随便点开一个主题列表：  因为是动态网页，所以就在这里抓包吧，因为qq音乐是动态网页，需要相关的参数信息才能得到想要的音乐地址，随便以播放一首歌曲为例，如下图1中的歌曲ID，点进去这个看看，即点击播放按钮，发">
-<meta name="keywords" content="学习">
+<meta name="description" content="转载自：http://blog.csdn.net/zolalad/article/details/28393209  一．进程、线程、单核处理器 进程和线程都是操作系统的概念。进程是应用程序的执行实例，每个进程是由私有的虚拟地址空间、代码、数据和其它各种系统资源组成，即进程是操作系统进行资源分配的最小单元。进程在运行过程中创建的资源随着进程的终止而被销毁，所使用的系统资源在进程终止时被释放或关闭">
+<meta name="keywords" content="学习笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用python3爬取QQ音乐列表音乐">
-<meta property="og:url" content="https://liujunjie11.github.io/2018/03/14/用python3爬取QQ音乐列表音乐/index.html">
+<meta property="og:title" content="计算机基础知识（二）：单核处理器、多核处理器、多处理器与多线程编程">
+<meta property="og:url" content="https://liujunjie11.github.io/2018/03/15/计算机基础知识（二）：单核处理器、多核处理器、多处理器与多线程编程/index.html">
 <meta property="og:site_name" content="LXiHa`Notes">
-<meta property="og:description" content="最近想爬取一些音乐来实战一下，选择了qq音乐。 qq音乐明显的就是一个动态网页，所以需要抓包了。  不懂的关键词可利用好搜索引擎。  分析过程在此就说说分析的大致过程吧。 先看看主页：  我们随便点开一个主题列表：  因为是动态网页，所以就在这里抓包吧，因为qq音乐是动态网页，需要相关的参数信息才能得到想要的音乐地址，随便以播放一首歌曲为例，如下图1中的歌曲ID，点进去这个看看，即点击播放按钮，发">
+<meta property="og:description" content="转载自：http://blog.csdn.net/zolalad/article/details/28393209  一．进程、线程、单核处理器 进程和线程都是操作系统的概念。进程是应用程序的执行实例，每个进程是由私有的虚拟地址空间、代码、数据和其它各种系统资源组成，即进程是操作系统进行资源分配的最小单元。进程在运行过程中创建的资源随着进程的终止而被销毁，所使用的系统资源在进程终止时被释放或关闭">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8A%E5%8D%8811.08.29.png">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8A%E5%8D%8811.09.44.png">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8A%E5%8D%8811.37.52.png">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8A%E5%8D%8811.41.18.png">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8A%E5%8D%8811.51.03.png">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8B%E5%8D%8812.48.57.png">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8A%E5%8D%8811.55.11.png">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8A%E5%8D%8811.58.13.png">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8B%E5%8D%8812.49.29.png">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8B%E5%8D%884.08.01.png">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8B%E5%8D%884.09.17.png">
-<meta property="og:updated_time" content="2018-03-15T08:48:37.038Z">
+<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/20140509162415500.jpeg">
+<meta property="og:updated_time" content="2018-03-15T14:03:52.921Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="用python3爬取QQ音乐列表音乐">
-<meta name="twitter:description" content="最近想爬取一些音乐来实战一下，选择了qq音乐。 qq音乐明显的就是一个动态网页，所以需要抓包了。  不懂的关键词可利用好搜索引擎。  分析过程在此就说说分析的大致过程吧。 先看看主页：  我们随便点开一个主题列表：  因为是动态网页，所以就在这里抓包吧，因为qq音乐是动态网页，需要相关的参数信息才能得到想要的音乐地址，随便以播放一首歌曲为例，如下图1中的歌曲ID，点进去这个看看，即点击播放按钮，发">
-<meta name="twitter:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8A%E5%8D%8811.08.29.png">
+<meta name="twitter:title" content="计算机基础知识（二）：单核处理器、多核处理器、多处理器与多线程编程">
+<meta name="twitter:description" content="转载自：http://blog.csdn.net/zolalad/article/details/28393209  一．进程、线程、单核处理器 进程和线程都是操作系统的概念。进程是应用程序的执行实例，每个进程是由私有的虚拟地址空间、代码、数据和其它各种系统资源组成，即进程是操作系统进行资源分配的最小单元。进程在运行过程中创建的资源随着进程的终止而被销毁，所使用的系统资源在进程终止时被释放或关闭">
+<meta name="twitter:image" content="http://owudg3xs2.bkt.clouddn.com/20140509162415500.jpeg">
 
 
 
@@ -128,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="https://liujunjie11.github.io/2018/03/14/用python3爬取QQ音乐列表音乐/"/>
+  <link rel="canonical" href="https://liujunjie11.github.io/2018/03/15/计算机基础知识（二）：单核处理器、多核处理器、多处理器与多线程编程/"/>
 
 
 
 
 
-  <title>用python3爬取QQ音乐列表音乐 | LXiHa`Notes</title>
+  <title>计算机基础知识（二）：单核处理器、多核处理器、多处理器与多线程编程 | LXiHa`Notes</title>
   
 
 
@@ -305,7 +295,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liujunjie11.github.io/2018/03/14/用python3爬取QQ音乐列表音乐/">
+    <link itemprop="mainEntityOfPage" href="https://liujunjie11.github.io/2018/03/15/计算机基础知识（二）：单核处理器、多核处理器、多处理器与多线程编程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘俊">
@@ -322,7 +312,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">用python3爬取QQ音乐列表音乐</h1>
+          <h1 class="post-title" itemprop="name headline">计算机基础知识（二）：单核处理器、多核处理器、多处理器与多线程编程</h1>
         
 
         <div class="post-meta">
@@ -334,8 +324,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-14T20:57:31+08:00">
-                2018-03-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-15T21:58:48+08:00">
+                2018-03-15
               </time>
             
 
@@ -357,8 +347,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习/" itemprop="url" rel="index">
-                    <span itemprop="name">学习</span>
+                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">学习笔记</span>
                   </a>
                 </span>
 
@@ -375,9 +365,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/03/14/用python3爬取QQ音乐列表音乐/#comments" itemprop="discussionUrl">
+                <a href="/2018/03/15/计算机基础知识（二）：单核处理器、多核处理器、多处理器与多线程编程/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/03/14/用python3爬取QQ音乐列表音乐/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/03/15/计算机基础知识（二）：单核处理器、多核处理器、多处理器与多线程编程/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -410,190 +400,27 @@
       
 
       
-        <p>最近想爬取一些音乐来实战一下，选择了<em>qq音乐</em>。</p>
-<p><em>qq音乐</em>明显的就是一个动态网页，所以需要抓包了。</p>
-<blockquote>
-<p>不懂的关键词可利用好搜索引擎。</p>
+        <blockquote>
+<p>转载自：<a href="http://blog.csdn.net/zolalad/article/details/28393209" target="_blank" rel="external">http://blog.csdn.net/zolalad/article/details/28393209</a></p>
 </blockquote>
-<h2 id="分析过程"><a href="#分析过程" class="headerlink" title="分析过程"></a>分析过程</h2><p>在此就说说分析的大致过程吧。</p>
-<p>先看看主页：</p>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8A%E5%8D%8811.08.29.png" alt=""></p>
-<p>我们随便点开一个主题列表：</p>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8A%E5%8D%8811.09.44.png" alt=""></p>
-<p>因为是动态网页，所以就在这里抓包吧，因为<em>qq音乐</em>是动态网页，需要相关的参数信息才能得到想要的音乐地址，随便以播放一首歌曲为例，如下图1中的歌曲<em>ID</em>，点进去这个看看，即点击播放按钮，发现来到了播放页面，打开我用的<em>Chrome</em>中的开发者工具，里面有我们想要的音乐地址（如下图2所示），图3展示得到列表歌曲的所有信息，需要编程清洗之后才能得到我们想要，在此会在下面的代码中标明。</p>
-<ul>
-<li>图1:</li>
-</ul>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8A%E5%8D%8811.37.52.png" alt=""></p>
-<ul>
-<li>图2:</li>
-</ul>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8A%E5%8D%8811.41.18.png" alt=""></p>
-<ul>
-<li>图3:</li>
-</ul>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8A%E5%8D%8811.51.03.png" alt=""></p>
-<p>其中的<em>URL</em>地址，代码中会用到：</p>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8B%E5%8D%8812.48.57.png" alt=""></p>
-<blockquote>
-<p>现在我们可能就会有思路出现了：抓包爬取列表的所有歌曲的<em>ID号</em>以及歌曲信息 <strong>–&gt;</strong> 整合到以<em>ID</em>为基的<em>html</em>地址 <strong>–&gt;</strong> 到播放页面利用<em>beautiful模块</em>爬取相关的音乐地址即可！so easy~</p>
-</blockquote>
-<p><strong>但经过我的测试说明，爬取播放页面的<em>html</em>信息是没有相关的音乐地址的，所以在得到歌曲<em>ID</em>信息，整合到以<em>ID</em>为基的<em>html</em>地址之后，我们还需要对播放页面进行抓包。下面说说如何在播放页面抓包。</strong></p>
-<p>先播放一首歌曲，再进行抓包，发现了这些信息（如下图1），再结合上面的音乐地址分析一下，发现了<em>vkey</em>信息的存在，即每一首歌的<em>vkey</em>信息是不同的，并且经过测试即便是同一个<em>ID</em>，<em>vkey</em>也是一直不断自动变换着的，不过在测试之后可得出结论：<strong>只要得到<em>vkey</em>信息，再整合上面的音乐地址就能抓到音乐信息，并且经过代码编译之后下载下来。</strong></p>
-<blockquote>
-<p>特别说明一下，<strong>下载歌曲的地址以及我们抓包时的<em>URL</em>之中，仅仅有如<em>vkey</em>的不同，或者是一些<em>ID</em>的不同，其他的参数是相同的！</strong>所以我们才能仅仅抓到<em>vkey</em>信息就能方便的下载歌曲，就是这么个意思。不理解的朋友可细心观察一下。</p>
-</blockquote>
-<ul>
-<li>图1:</li>
-</ul>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8A%E5%8D%8811.55.11.png" alt=""></p>
-<ul>
-<li>图2:</li>
-</ul>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8A%E5%8D%8811.58.13.png" alt=""></p>
-<p>其中的<em>URL</em>地址：</p>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8B%E5%8D%8812.49.29.png" alt=""></p>
-<hr>
-<h2 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h2><pre><code>&apos;&apos;&apos;
-
-函数目标：
-爬取QQ音乐列表音乐
-
-编写时间：
-2018-3-15
-
-&apos;&apos;&apos;
-
-import requests
-import os 
-import time
-import json 
-from urllib.request import urlretrieve
-
-if __name__ == &apos;__main__&apos;:
-
-    # 建立目录用于装爬取的音乐
-    if &apos;QQ音乐列表音乐&apos; not in os.listdir():
-        os.makedirs(&apos;QQ音乐列表音乐&apos;)
-
-    &apos;&apos;&apos;
-        从URL中添加代理记忆必要的相关的参数以获取歌曲的ID以及歌曲名
-                                                            &apos;&apos;&apos;
-    playlist_url = &apos;https://c.y.qq.com/qzone/fcg-bin/fcg_ucc_getcdinfo_byids_cp.fcg&apos;
-    # 添加页面中的代理信息
-    header = {&apos;user-agent&apos;:&apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36&apos;,
-            &apos;cookie&apos;:&apos;tvfe_boss_uuid=1770396a4ed2d111; pgv_info=ssid=s4189101616; pgv_pvid=7344469728; uin=; pgv_pvi=8737627136; pgv_si=s9378960384; _tucao_userinfo=ZU1hSHhlWVNPSnRoNWgwTjMzc2c4OVYzYjBuTkNjcDNHNjcyVkkzWm9WUkJZMWhxWDJ5SmpTSURFWDhVTk9TYkczU3JWc09EeEsrMEVnQ2RpK2FVNWh4M0x0Y21aOG5Vcms5MW9odmt6ZXNxRWlmeE9PZzM0SlQ1YmVuM0xhRVpUaWh5d2REV2FZcHdQdWdNL0daWE9rTTM0MlFjc1VoaHhNVkh4bkNqbnBOMDN2MG1sOEkxc0dYNFZRa24rd0RY--FeceGG8ErqgRGZz7WWwpsg%3D%3D; _tucao_session=WUVSc2RVVk95Y0ViU2NoNndsWmVlbzZoSG1WaFdpcEk4Q1M5bXZSTG9qanV3OEpuNVNQT3dBc0tBRERUY1NCRDZJek14Y2xYeFdmMWhiaWdkZ282UjdPdXVyT1ZYQnpCeG9BcklQUFBEMU5LQ3F3ajdmd3VWRmZ5QTJoN1ViS1krcEx0aUdUb3plckVNVGc3K0t2Z3pUeFJDcFZMNnU3dEpLUXZ5Zyt4dUpJdU5Hb3ZwZUhpTHM0OEhNQk0vcHJKN2tEOXVZay95WkFpZlFuSVBQZDhoSzlMVUMrVDQxN0llRzJuNkVWUGdTVjdyaVl2WVdscFlyVDJPald4MG9BWA%3D%3D--dDBBK5gXjLaGccOBzx4EBA%3D%3D; ts_refer=www.google.com/; ts_uid=3146042580; qqmusic_fromtag=66; yq_playdata=s; yqq_stat=0; yplayer_open=1; yq_index=0; yq_playschange=0; player_exist=1&apos;,
-            &apos;referer&apos;:&apos;https://y.qq.com/n/yqq/playlist/3766176211.html&apos;}
-
-    # 添加参数信息,有些是非必须的，待研究，有兴趣的可以自己测试
-    paramter = {
-                &apos;type&apos;:&apos;1&apos;,
-                &apos;json&apos;:&apos;1&apos;,
-                &apos;utf8&apos;:&apos;1&apos;,
-                &apos;onlysong&apos;:&apos;0&apos;,
-                &apos;disstid&apos;:&apos;3766176211&apos;,
-                &apos;format&apos;:&apos;jsonp&apos;,
-                &apos;g_tk&apos;:&apos;5381&apos;,  # 非必须
-                &apos;jsonpCallback&apos;:&apos;playlistinfoCallback&apos;,  # 值可更改
-                &apos;loginUin&apos;:&apos;0&apos;,
-                &apos;hostUin&apos;:&apos;0&apos;,
-                &apos;format&apos;:&apos;jsonp&apos;,
-                &quot;inCharset&quot;:&apos;utf8&apos;,
-                &apos;outCharset&apos;:&apos;utf-8&apos;,
-                &apos;notice&apos;:&apos;0&apos;,
-                &apos;platform&apos;:&apos;yqq&apos;,
-                &apos;needNewCode&apos;:&apos;0&apos;,
-                }
-
-    playlist_re = requests.get(url=playlist_url, params=paramter, headers=header)
-    # 指定编码格式
-    playlist_re.encoding = &apos;utf-8&apos;
-    # 改变为python可识别的json格式,进行必要的数据清洗,去掉前面的&apos;jsonpCallback&apos;部分
-    playlist_info = json.loads(playlist_re.text.lstrip(&apos;playlistinfoCallback(&apos;).rstrip(&apos;)&apos;))
-    # 指定整体索引
-    playlist_info1 = playlist_info[&apos;cdlist&apos;][0]
-
-    # 先存储歌手的姓名,观察可知，一共有19个索引,因为歌曲本身仅仅有20首，取前20个歌手名
-    singer_name = []
-    for num in range(0, 17):
-        singer_eainfo = playlist_info1[&apos;songlist&apos;][num]
-        for each_info in singer_eainfo[&apos;singer&apos;]:
-            singer_name.append(each_info[&apos;name&apos;])
-
-    num = 0
-    # 在循环体系中进行下一步的编写
-    for each in playlist_info1[&apos;songlist&apos;]:
-
-        &apos;&apos;&apos;
-            在获取歌曲vkey的主URL传入相关的参数得到相关的数据之后进行挖掘，得到vkey信息
-            其中的参数有些是不必要的，可自由修改，有些是必要的
-                                                               &apos;&apos;&apos;
-
-        key_url = &apos;https://c.y.qq.com/base/fcgi-bin/fcg_music_express_mobile3.fcg&apos;
-        # 传入相关的代理以及参数
-        header_1 = {&apos;user-agent&apos;:&apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36&apos;,
-                  &apos;referer&apos;:&apos;https://y.qq.com/portal/player.html&apos;,
-                  &apos;cookie&apos;:&apos;tvfe_boss_uuid=1770396a4ed2d111; pgv_info=ssid=s4189101616; pgv_pvid=7344469728; uin=; pgv_pvi=8737627136; pgv_si=s9378960384; _tucao_userinfo=ZU1hSHhlWVNPSnRoNWgwTjMzc2c4OVYzYjBuTkNjcDNHNjcyVkkzWm9WUkJZMWhxWDJ5SmpTSURFWDhVTk9TYkczU3JWc09EeEsrMEVnQ2RpK2FVNWh4M0x0Y21aOG5Vcms5MW9odmt6ZXNxRWlmeE9PZzM0SlQ1YmVuM0xhRVpUaWh5d2REV2FZcHdQdWdNL0daWE9rTTM0MlFjc1VoaHhNVkh4bkNqbnBOMDN2MG1sOEkxc0dYNFZRa24rd0RY--FeceGG8ErqgRGZz7WWwpsg%3D%3D; _tucao_session=WUVSc2RVVk95Y0ViU2NoNndsWmVlbzZoSG1WaFdpcEk4Q1M5bXZSTG9qanV3OEpuNVNQT3dBc0tBRERUY1NCRDZJek14Y2xYeFdmMWhiaWdkZ282UjdPdXVyT1ZYQnpCeG9BcklQUFBEMU5LQ3F3ajdmd3VWRmZ5QTJoN1ViS1krcEx0aUdUb3plckVNVGc3K0t2Z3pUeFJDcFZMNnU3dEpLUXZ5Zyt4dUpJdU5Hb3ZwZUhpTHM0OEhNQk0vcHJKN2tEOXVZay95WkFpZlFuSVBQZDhoSzlMVUMrVDQxN0llRzJuNkVWUGdTVjdyaVl2WVdscFlyVDJPald4MG9BWA%3D%3D--dDBBK5gXjLaGccOBzx4EBA%3D%3D; ts_refer=www.google.com/; ts_uid=3146042580; qqmusic_fromtag=66; yq_playdata=s; yqq_stat=0; yq_index=0; yq_playschange=0; player_exist=1; ts_last=y.qq.com/n/yqq/playlist/3766176211.html; yplayer_open=1&apos;}    
-
-        paramter_1 = {
-                    &apos;g_tk&apos;:&apos;5381&apos;,  # 非必须
-                    &apos;jsonpCallback&apos;:&apos;MusicJsonCallback&apos;,  # 非必须，可更改
-                    &quot;loginUin&quot;:&apos;0&apos;,
-                    &apos;hostUin&apos;:&apos;0&apos;,
-                    &apos;format&apos;:&apos;json&apos;,
-                    &apos;inCharset&apos;:&apos;utf8&apos;,
-                    &apos;outCharset&apos;:&apos;utf-8&apos;,
-                    &apos;notice&apos;:&apos;0&apos;,
-                    &apos;platform&apos;:&quot;yqq&quot;,
-                    &apos;needNewCode&apos;:&apos;0&apos;,
-                    &apos;cid&apos;:&apos;205361747&apos;,  # 一致必须
-                    &apos;callback&apos;:&apos;MusicJsonCallback&apos;,  # 非必须，可更改
-                    &apos;uin&apos;:&apos;0&apos;,
-                    # 传入获取的信息
-                    &apos;songmid&apos;:each[&apos;songmid&apos;],
-                    &apos;filename&apos;:&apos;C400&apos; + each[&apos;songmid&apos;] + &apos;.m4a&apos;,
-                    &apos;guid&apos;:&apos;7344469728&apos;   
-                    }
-
-        # 解析得到含有vkey的数据信息，然后进行清洗得到想要的信息
-        key_re = requests.get(url=key_url, params=paramter_1, headers=header_1)
-        # 指定编码格式
-        key_re.encoding = &apos;utf-8&apos;
-        # 转换为python的json格式，进行简单的清洗
-        key_info = json.loads(key_re.text.lstrip(&apos;MusicJsonCallback(&apos;).rstrip(&apos;)&apos;))
-        # 进一步的清洗
-        data_info = key_info[&apos;data&apos;]
-        items_info = data_info[&apos;items&apos;][0]
-
-        print(&apos;数据采集完成，开始下载任务...&apos;)
-        # 接下来就是可以下载了
-        urlretrieve(url=&apos;http://dl.stream.qqmusic.qq.com/C4000041FwTv0Ai3Ku.m4a?vkey=&apos; + items_info[&apos;vkey&apos;] + &apos;&amp;guid=7344469728&amp;uin=0&amp;fromtag=66.mp3&apos;, filename=&apos;QQ音乐列表音乐/&apos; + singer_name[num] + &apos;-&apos; + each[&apos;songname&apos;] + &apos;.mp3&apos;)
-
-        print(&apos;正在下载:&apos; + singer_name[num] + &apos;的&apos; + each[&apos;songname&apos;] + &apos;!&apos;)
-        print(&apos;下载中....&apos;)
-        print(&apos;下载此歌曲完成！&apos;)
-        # 跳传到下一个歌手名
-        num = num + 1
-        time.sleep(1)
-
-    print(&apos;全部下载完成，请在本过程目录下查收！&apos;)
-</code></pre><blockquote>
-<p><strong>在使用urlretrieve函数时，其中的url参数输入时应当加上格式，如下载视频时加上.mp4,下载音乐时加上.mp3,否则会易出现HTTP 403 错误 – 禁止访问 (Forbidden)</strong></p>
-</blockquote>
-<ul>
-<li>链接：<a href="http://www.checkupdown.com/status/E403_zh.html" target="_blank" rel="external">认识HTTP 403 错误 – 禁止访问 (Forbidden)</a></li>
-</ul>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>运行：</p>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8B%E5%8D%884.08.01.png" alt=""></p>
-<p>到目录查看：</p>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8B%E5%8D%884.09.17.png" alt=""></p>
-<blockquote>
-<p>一切还算是顺利。前段时间想爬取腾讯视频，研究了挺久，没有成功，还需要学习，腾讯的资源都在腾讯云上，我想方式都差不多。</p>
-</blockquote>
-<ul>
-<li>参考：<a href="http://blog.csdn.net/lht_okk/article/details/77206510" target="_blank" rel="external">http://blog.csdn.net/lht_okk/article/details/77206510</a></li>
-</ul>
-<h2 id="后续说明"><a href="#后续说明" class="headerlink" title="后续说明"></a>后续说明</h2><p><strong>经过后来的测试，本代码爬取的思路还是正确的，但是爬取的信息流只能是同一个了…即便是不同的ID…</strong></p>
+<p><strong>一．进程、线程、单核处理器</strong></p>
+<p>进程和线程都是操作系统的概念。进程是应用程序的执行实例，每个进程是由私有的虚拟地址空间、代码、数据和其它各种系统资源组成，即进程是操作系统进行资源分配的最小单元。进程在运行过程中创建的资源随着进程的终止而被销毁，所使用的系统资源在进程终止时被释放或关闭。</p>
+<p>线程是进程内部的一个执行单元。系统创建好进程后，实际上就启动执行了该进程的主执行线程，主执行线程以函数地址形式，比如说main或WinMain函数，将程序的启动点提供给Windows系统。主执行线程终止了，进程也就随之终止。</p>
+<p>每一个进程至少有一个主执行线程，它无需由用户去主动创建，是由系统自动创建的。用户根据需要在应用程序中创建其它线程，多个线程并发地运行于同一个进程中。一个进程中的所有线程都在该进程的虚拟地址空间中，共同使用这些虚拟地址空间、全局变量和系统资源，所以线程间的通讯非常方便，多线程技术的应用也较为广泛。</p>
+<p>多线程可以实现并行处理，避免了某项任务长时间占用CPU时间。要说明的一点是，目前大多数的操作系统教材中的单处理器都是指的单核处理器。对于单核单处理器（CPU）的，为了运行所有这些线程，操作系统为每个独立线程安排一些CPU时间，操作系统以轮换方式向线程提供时间片，这就给人一种假象，好象这些线程都在同时运行。由此可见，如果两个非常活跃的线程为了抢夺对CPU的控制权，在线程切换时会消耗很多的CPU资源，反而会降低系统的性能。</p>
+<p>最开始，线程只是用于分配单个处理器的处理时间的一种工具。但假如操作系统本身支持多个处理器，那么每个线程都可分配给一个不同的处理器，真正进入“并行运算”状态。从程序设计语言的角度看，多线程操作最有价值的特性之一就是程序员不必关心到底使用了多少个处理器，程序员只需将程序编写成多线程模式即可。程序在逻辑意义上被分割为数个线程；假如机器本身安装了多个处理器，那么程序会运行得更快，毋需作出任何特殊的调校。根据前面的论述，大家可能感觉线程处理非常简单。但必须注意一个问题：共享资源！如果有多个线程同时运行，而且它们试图访问相同的资源，就会遇到一个问题。举个例子来说，两个线程不能将信息同时发送给一台打印机。为解决这个问题，对那些可共享的资源来说（比如打印机），它们在使用期间必须进入锁定状态。所以一个线程可将资源锁定，在完成了它的任务后，再解开（释放）这个锁，使其他线程可以接着使用同样的资源。</p>
+<p><strong>多线程是为了同步完成多项任务，不是为了提高运行效率，而是为了提高资源使用效率来提高系统的效率。线程是在同一时间需要完成多项任务的时候实现的。
+</strong></p>
+<p>最简单的比喻多线程就像火车的每一节车厢，而进程则是火车。车厢离开火车是无法跑动的，同理火车也不可能只有一节车厢。多线程的出现就是为了提高效率。同时它的出现也带来了一些问题。</p>
+<p><strong>注</strong>：单核处理器并不是一个长久以来存在的概念，在近年来多核心处理器逐步普及之后，单核心的处理器为了与双核和四核对应而提出。顾名思义处理器只有一个逻辑核心。</p>
+<p><strong>二、多核处理器和多处理器的区别</strong></p>
+<p>多核是指一个CPU有多个核心处理器，处理器之间通过CPU内部总线进行通讯。而多CPU是指简单的多个CPU工作在同一个系统上，多个CPU之间的通讯是通过主板上的总线进行的。从以上原理可知，N个核的CPU，要比N个CPU在一起的工作效率要高（单核性能一致的情况下）。</p>
+<p><strong>三、 处理器结构对并发程序的影响</strong></p>
+<p>对称多处理器是最主要的多核处理器架构。在这种架构中所有的CPU共享一条系统总线（BUS）来连接主存。而每一个核又有自己的一级缓存，相对于BUS对称分布[2]，如下图：</p>
+<p><img src="http://owudg3xs2.bkt.clouddn.com/20140509162415500.jpeg" alt=""></p>
+<p>这种架构在并发程序设计中，大致会引来两个问题，一个是内存可见性，一个是Cache一致性流量。内存可见性属于并发安全的问题，Cache一致性流量引起的是性能上的问题。</p>
+<p><strong>内存可见性</strong>：内存可见性在单处理器或单线程情况下是不会发生的。在一个单线程环境中，一个变量选写入值，然后在没有干涉的情况下读取这个变量，得到的值应该是修改过的值。但是在读和写不在同一个线程中的时候，情况却是不可以预料的。Core1和Core2可能会同时把主存中某个位置的值Load到自己的一级缓存中，而Core1修改了自己一级缓存中的值后，却不更新主存中的值，这样对于Core2来讲，永远看不到Core1对值的修改。在Java程序设计中，用锁，关键字volatile，CAS原子操作可以保证内存可见。</p>
+<p><strong>Cache一致性问题</strong>：指的是在SMP结构中，Core1和Core2同时下载了主存中的值到自己的一级缓存中，Core1修改了值后，会通过总线让Core2中的值失效，Core2发现自己存的值失效后，会再通过总线从主存中得到新值。总线的通信能力是固定的，通过总线使各CPU的一级缓存值数据同步的流量过大，那么总线就会成瓶颈。这种影响属于性能上的影响，减小同步竞争就能减少一致性流量。</p>
 
       
     </div>
@@ -611,7 +438,7 @@ if __name__ == &apos;__main__&apos;:
       
         <div class="post-tags">
           
-            <a href="/tags/学习/" rel="tag"># 学习</a>
+            <a href="/tags/学习笔记/" rel="tag"># 学习笔记</a>
           
         </div>
       
@@ -624,8 +451,8 @@ if __name__ == &apos;__main__&apos;:
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/14/用python3爬取新加坡联合早报新闻小视频/" rel="next" title="用python3爬取新加坡联合早报新闻小视频">
-                <i class="fa fa-chevron-left"></i> 用python3爬取新加坡联合早报新闻小视频
+              <a href="/2018/03/14/用python3爬取QQ音乐列表音乐/" rel="next" title="用python3爬取QQ音乐列表音乐">
+                <i class="fa fa-chevron-left"></i> 用python3爬取QQ音乐列表音乐
               </a>
             
           </div>
@@ -634,8 +461,8 @@ if __name__ == &apos;__main__&apos;:
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/03/15/计算机基础知识（二）：单核处理器、多核处理器、多处理器与多线程编程/" rel="prev" title="计算机基础知识（二）：单核处理器、多核处理器、多处理器与多线程编程">
-                计算机基础知识（二）：单核处理器、多核处理器、多处理器与多线程编程 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/03/15/计算机基础知识（三）：带宽单位换算与存储单位换算/" rel="prev" title="计算机基础知识（三）：带宽单位换算与存储单位换算">
+                计算机基础知识（三）：带宽单位换算与存储单位换算 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -721,17 +548,8 @@ var jiathis_config={
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <p class="site-author-name" itemprop="name">刘俊</p>
@@ -825,22 +643,6 @@ var jiathis_config={
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#分析过程"><span class="nav-number">1.</span> <span class="nav-text">分析过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完整代码"><span class="nav-number">2.</span> <span class="nav-text">完整代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最后"><span class="nav-number">3.</span> <span class="nav-text">最后</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后续说明"><span class="nav-number">4.</span> <span class="nav-text">后续说明</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -1039,9 +841,9 @@ var jiathis_config={
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://liujunjie11.github.io/2018/03/14/用python3爬取QQ音乐列表音乐/';
-          this.page.identifier = '2018/03/14/用python3爬取QQ音乐列表音乐/';
-          this.page.title = '用python3爬取QQ音乐列表音乐';
+          this.page.url = 'https://liujunjie11.github.io/2018/03/15/计算机基础知识（二）：单核处理器、多核处理器、多处理器与多线程编程/';
+          this.page.identifier = '2018/03/15/计算机基础知识（二）：单核处理器、多核处理器、多处理器与多线程编程/';
+          this.page.title = '计算机基础知识（二）：单核处理器、多核处理器、多处理器与多线程编程';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://—-...disqus.com/embed.js';
