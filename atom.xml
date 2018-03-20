@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-03-15T14:25:50.120Z</updated>
+  <updated>2018-03-20T01:41:04.007Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用python/R可视化GitHub上的java热门开源项目</title>
+    <link href="https://liujunjie11.github.io/2018/03/19/%E7%94%A8python%E5%8F%AF%E8%A7%86%E5%8C%96GitHub%E4%B8%8A%E7%9A%84java%E7%83%AD%E9%97%A8%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
+    <id>https://liujunjie11.github.io/2018/03/19/用python可视化GitHub上的java热门开源项目/</id>
+    <published>2018-03-19T08:36:14.000Z</published>
+    <updated>2018-03-20T01:41:04.007Z</updated>
+    
+    <content type="html"><![CDATA[<p>直接开始这个小项目吧。</p><ul><li>网页地址：<a href="https://api.github.com/search/repositories?q=language:java&amp;sort=stars" target="_blank" rel="external">https://api.github.com/search/repositories?q=language:java&amp;sort=stars</a></li></ul><blockquote><p>在这个网页中有相关的目前比较热门的开源项目（以<em>star</em>的数目来衡量），打开发现这是典型的<em>json</em>格式啊。</p></blockquote><h2 id="简单分析"><a href="#简单分析" class="headerlink" title="简单分析"></a>简单分析</h2><p>经过抓包可发现：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-19%20%E4%B8%8B%E5%8D%889.31.32.png" alt=""></p><p>即：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-19%20%E4%B8%8B%E5%8D%889.29.37.png" alt=""></p><blockquote><p>换一换就可知道所有编程语言目前比较热门的开源项目了。</p></blockquote><h2 id="python代码实现"><a href="#python代码实现" class="headerlink" title="python代码实现"></a>python代码实现</h2><pre><code>&apos;&apos;&apos;    函数目标：    将GitHub上的java热门的开源项目可视化    编写时间：    2018-3-19&apos;&apos;&apos;import requestsfrom matplotlib import pyplot as pltimport pygalfrom pygal.style import LightColorizedStyle as lcs, LightenStyle as lsif __name__ == &apos;__main__&apos;:    #添加代理配置    url = &apos;https://api.github.com/search/repositories&apos;    header = {&apos;User-Agent&apos;:&apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36&apos;,              &apos;Connection&apos;: &apos;keep-alive&apos;}    paramter = {&apos;q&apos;: &apos;language:java&apos;,              &apos;sort&apos;: &apos;stars&apos;}    re = requests.get(url=url, params=paramter, headers=header)    # 将网页转化为python字典即用json()函数方法才可显示与网页内容一致！    re.encoding = &apos;utf-8&apos;    js_cont = re.json()    item = js_cont[&apos;items&apos;]    star_count = []    names = []    full_names = []    for each in item:            star_count.append(each[&apos;stargazers_count&apos;])            names.append(each[&apos;name&apos;])            full_names.append(each[&apos;full_name&apos;])    # 添加高亮颜色    my_style = ls(&apos;#333366&apos;, base_style=lcs)    # 添加相关的设置    my_config = pygal.Config()    my_config.label_font_size = 28    bar_chart = pygal.Bar(config=my_config, style=my_style, x_label_rotation=60, show_legend=False)    bar_chart.add(&apos;&apos;, star_count)    bar_chart.title = &apos;Java  projects stars on Github&apos;    bar_chart.x_labels = names    # 保存至目录下的文件中    bar_chart.render_to_file(&apos;Java stars in Github.svg&apos;)</code></pre><blockquote><p>之中不懂的可利用好搜索引擎。有一些爬虫的知识。</p></blockquote><p>运行得到：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-19%20%E4%B8%8B%E5%8D%889.24.44.png" alt=""></p><blockquote><p>简单说说用<em>python</em>可视化的感受，比较喜欢用<em>python</em>，用的比较多，意味发现<em>pygal</em>这个库做的图很漂亮。</p></blockquote><h2 id="R代码实现"><a href="#R代码实现" class="headerlink" title="R代码实现"></a>R代码实现</h2><ul><li>说明：因为<em>R</em>的爬虫没怎么看，先用可视化…日后有时间爬虫写上…</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;直接开始这个小项目吧。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;网页地址：&lt;a href=&quot;https://api.github.com/search/repositories?q=language:java&amp;amp;sort=stars&quot; target=&quot;_blank&quot; rel=&quot;ex
+      
+    
+    </summary>
+    
+      <category term="可视化" scheme="https://liujunjie11.github.io/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+    
+      <category term="python/R可视化" scheme="https://liujunjie11.github.io/tags/python-R%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>计算机基础知识（三）：带宽单位换算与存储单位换算</title>
@@ -525,32 +552,6 @@
     
     
       <category term="学习" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于python下载scrapy失败的问题记录</title>
-    <link href="https://liujunjie11.github.io/2017/12/01/%E5%85%B3%E4%BA%8Epython%E4%B8%8B%E8%BD%BDscrapy%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
-    <id>https://liujunjie11.github.io/2017/12/01/关于python下载scrapy失败的问题记录/</id>
-    <published>2017-12-01T05:10:33.000Z</published>
-    <updated>2017-12-01T05:16:20.172Z</updated>
-    
-    <content type="html"><![CDATA[<p>用的<em>anaconda</em>的<em>python3</em>，下载<em>scrapy</em>出现以下情况：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-01%20%E4%B8%8B%E5%8D%881.09.17.png" alt=""></p><blockquote><p>即表示下载失败。</p></blockquote><hr><p><strong>看到网上大部分说的太复杂的解决方案，其实太过于小题大做了。</strong></p><p><strong>解决方法：重新下载一次。</strong></p><ul><li>图1</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-01%20%E4%B8%8B%E5%8D%881.09.23.png" alt=""></p><hr><ul><li>用命令行<em>conda list</em>查看</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-01%20%E4%B8%8B%E5%8D%881.09.36.png" alt=""></p><blockquote><p>下载成功了。</p></blockquote><hr><ul><li><strong>若是失败了，多下载几次大多即可解决。</strong></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;用的&lt;em&gt;anaconda&lt;/em&gt;的&lt;em&gt;python3&lt;/em&gt;，下载&lt;em&gt;scrapy&lt;/em&gt;出现以下情况：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%
-      
-    
-    </summary>
-    
-      <category term="成长" scheme="https://liujunjie11.github.io/categories/%E6%88%90%E9%95%BF/"/>
-    
-    
-      <category term="成长" scheme="https://liujunjie11.github.io/tags/%E6%88%90%E9%95%BF/"/>
     
   </entry>
   
