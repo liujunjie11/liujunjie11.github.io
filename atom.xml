@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-03-20T08:58:49.769Z</updated>
+  <updated>2018-03-20T14:01:51.630Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决python文件读取时的UnicodeDecodeError: &#39;ascii&#39; codec can&#39;t decode byte 0xd4 in position 904: ordinal not in range(128)问题</title>
+    <link href="https://liujunjie11.github.io/2018/03/20/%E8%A7%A3%E5%86%B3python%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%97%B6%E7%9A%84UnicodeDecodeError-ascii-codec-can-t-decode-byte-0xd4-in-position-904-ordinal-not-in-range-128-%E9%97%AE%E9%A2%98/"/>
+    <id>https://liujunjie11.github.io/2018/03/20/解决python文件读取时的UnicodeDecodeError-ascii-codec-can-t-decode-byte-0xd4-in-position-904-ordinal-not-in-range-128-问题/</id>
+    <published>2018-03-20T13:54:55.000Z</published>
+    <updated>2018-03-20T14:01:51.630Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近在处理一个<em>csv格式</em>的数据时，出现了<em>UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xd4 in<br>  position 904: ordinal not in range(128)</em>的错误告知。</p><p>查了一下，发现只要指定<strong><em>encoding=’iso-8859-1’</em></strong>即可解决此问题了。</p><p>代码演示：</p><pre><code>.....        with open(filename, encoding=&apos;iso-8859-1&apos;) as f:        ......</code></pre><hr><p>简单说明一下为何如此指定编码格式：</p><p><strong>ISO 8859-1，正式编号为ISO/IEC 8859-1:1998，又称Latin-1或“西欧语言”，是国际标准化组织内ISO/IEC 8859的第一个8位字符集。它以ASCII为基础，在空置的0xA0-0xFF的范围内，即解决0xA0-0xFF的范围内的编码错误问题，如上我们的0xd4在此范围之内。</strong></p><blockquote><p>详细可见维基百科地址：<a href="https://zh.wikipedia.org/wiki/ISO/IEC_8859-1" target="_blank" rel="external">https://zh.wikipedia.org/wiki/ISO/IEC_8859-1</a></p></blockquote><ul><li>参考：<a href="http://blog.csdn.net/programmer_wei/article/details/50994318" target="_blank" rel="external">http://blog.csdn.net/programmer_wei/article/details/50994318</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;最近在处理一个&lt;em&gt;csv格式&lt;/em&gt;的数据时，出现了&lt;em&gt;UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xd4 in&lt;br&gt;  position 904: ordinal not in range(128)
+      
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="学习笔记" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>理解多线程编程</title>
@@ -526,31 +551,6 @@
     
     
       <category term="学习 成长" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0-%E6%88%90%E9%95%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于Mac关机与iCloud的打不开的问题记录</title>
-    <link href="https://liujunjie11.github.io/2017/12/03/%E5%85%B3%E4%BA%8EMac%E5%85%B3%E6%9C%BA%E4%B8%8EiCloud%E7%9A%84%E6%89%93%E4%B8%8D%E5%BC%80%E7%9A%84%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
-    <id>https://liujunjie11.github.io/2017/12/03/关于Mac关机与iCloud的打不开的问题记录/</id>
-    <published>2017-12-03T07:16:59.000Z</published>
-    <updated>2017-12-03T07:25:22.367Z</updated>
-    
-    <content type="html"><![CDATA[<p>这一段时间因为开的网页比较重要，<em>Mac</em>一直没有关机，晚上睡觉也是合上就这样了，没想到才3天这样，<em>Mac</em>好像支撑不了了…变得有些卡了，在未关机前的硬盘空间大小与关机后打开之后的硬盘空间大小相差了<strong>5个G</strong>，在重启开机时出现了一段绿屏…，由此可知，一段有规律的关机保养还是很有必要的…</p><p>关于<em>iCloud</em>的一些打开错误，如打开查看存储信息时的错误问题等等，一般的解决方法为：换一个网络连接即可解决。</p><blockquote><p>此时换<em>DNS</em>的地址是不管用的。</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;这一段时间因为开的网页比较重要，&lt;em&gt;Mac&lt;/em&gt;一直没有关机，晚上睡觉也是合上就这样了，没想到才3天这样，&lt;em&gt;Mac&lt;/em&gt;好像支撑不了了…变得有些卡了，在未关机前的硬盘空间大小与关机后打开之后的硬盘空间大小相差了&lt;strong&gt;5个G&lt;/strong&gt;，在重
-      
-    
-    </summary>
-    
-      <category term="学习" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="学习" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
