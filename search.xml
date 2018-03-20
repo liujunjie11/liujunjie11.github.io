@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[理解多线程编程]]></title>
+    <url>%2F2018%2F03%2F20%2F%E7%90%86%E8%A7%A3%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[最近想研究研究什么是多线程编程的问题。简单了解了一下之后发现原来我对其的理解都错了…把面对对象编程活生生的说成了多线程…唉，从前文中的”口误“就… 多线程与多进程简单理解这两个一下： 多进程：可先理解为一个应用程序，如我们的上网用的浏览器。 多线程：多线程就是我们浏览器中的各种小工具，如刷新功能与新开一个标签页的功能就是两个在其中的线程。 多个进程是分开的两个应用程序，就像QQ和微信两者就是毫不相干的两个应用程序。多线程就是两个应用程序之中的多个可同时运用的小工具。 多线程编程再来看看多线程编程。 平时我们写程序，会将整个代码构建出各种方法函数，各有各的实现意图，以便在主类当中直接调用，最终实现目标整体意愿。 而多线程编程就是可同时在主类中调用两个实现意图不同的两个方法函数，并且一同被编译器/解释器运行出结果。就成了一个多线程的问题…多线程多线程，就是能将两个不同的方法同时运行出结果。至于是编译器还是解释器得分是什么语言了。]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[用python/R可视化GitHub上的java热门开源项目]]></title>
     <url>%2F2018%2F03%2F19%2F%E7%94%A8python%E5%8F%AF%E8%A7%86%E5%8C%96GitHub%E4%B8%8A%E7%9A%84java%E7%83%AD%E9%97%A8%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%2F</url>
     <content type="text"><![CDATA[直接开始这个小项目吧。 网页地址：https://api.github.com/search/repositories?q=language:java&amp;sort=stars 在这个网页中有相关的目前比较热门的开源项目（以star的数目来衡量），打开发现这是典型的json格式啊。 简单分析经过抓包可发现： 即： 换一换就可知道所有编程语言目前比较热门的开源项目了。 python代码实现&apos;&apos;&apos; 函数目标： 将GitHub上的java热门的开源项目可视化 编写时间： 2018-3-19 &apos;&apos;&apos; import requests from matplotlib import pyplot as plt import pygal from pygal.style import LightColorizedStyle as lcs, LightenStyle as ls if __name__ == &apos;__main__&apos;: #添加代理配置 url = &apos;https://api.github.com/search/repositories&apos; header = {&apos;User-Agent&apos;:&apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36&apos;, &apos;Connection&apos;: &apos;keep-alive&apos;} paramter = {&apos;q&apos;: &apos;language:java&apos;, &apos;sort&apos;: &apos;stars&apos;} re = requests.get(url=url, params=paramter, headers=header) # 将网页转化为python字典即用json()函数方法才可显示与网页内容一致！ re.encoding = &apos;utf-8&apos; js_cont = re.json() item = js_cont[&apos;items&apos;] star_count = [] names = [] full_names = [] for each in item: star_count.append(each[&apos;stargazers_count&apos;]) names.append(each[&apos;name&apos;]) full_names.append(each[&apos;full_name&apos;]) # 添加高亮颜色 my_style = ls(&apos;#333366&apos;, base_style=lcs) # 添加相关的设置 my_config = pygal.Config() my_config.label_font_size = 28 bar_chart = pygal.Bar(config=my_config, style=my_style, x_label_rotation=60, show_legend=False) bar_chart.add(&apos;&apos;, star_count) bar_chart.title = &apos;Java projects stars on Github&apos; bar_chart.x_labels = names # 保存至目录下的文件中 bar_chart.render_to_file(&apos;Java stars in Github.svg&apos;) 之中不懂的可利用好搜索引擎。有一些爬虫的知识。 运行得到： 简单说说用python可视化的感受，比较喜欢用python，用的比较多，意味发现pygal这个库做的图很漂亮。 R代码实现 说明：因为R的爬虫没怎么看，先用可视化…日后有时间爬虫写上… 最后 参考：《python入门与实践》【美】Eric Matthes著]]></content>

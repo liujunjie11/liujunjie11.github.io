@@ -57,7 +57,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="学习笔记," />
 
 
 
@@ -75,16 +75,18 @@
 
 
 
-<meta name="description" content="心灵小窝，记录成长与点滴。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="LXiHa`Notes">
-<meta property="og:url" content="https://liujunjie11.github.io/categories/生活-感悟/index.html">
+<meta name="description" content="最近想研究研究什么是多线程编程的问题。简单了解了一下之后发现原来我对其的理解都错了…把面对对象编程活生生的说成了多线程…唉，从前文中的”口误“就… 多线程与多进程简单理解这两个一下：  多进程：可先理解为一个应用程序，如我们的上网用的浏览器。  多线程：多线程就是我们浏览器中的各种小工具，如刷新功能与新开一个标签页的功能就是两个在其中的线程。    多个进程是分开的两个应用程序，就像QQ和微信两者">
+<meta name="keywords" content="学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="理解多线程编程">
+<meta property="og:url" content="https://liujunjie11.github.io/2018/03/20/理解多线程编程/index.html">
 <meta property="og:site_name" content="LXiHa`Notes">
-<meta property="og:description" content="心灵小窝，记录成长与点滴。">
+<meta property="og:description" content="最近想研究研究什么是多线程编程的问题。简单了解了一下之后发现原来我对其的理解都错了…把面对对象编程活生生的说成了多线程…唉，从前文中的”口误“就… 多线程与多进程简单理解这两个一下：  多进程：可先理解为一个应用程序，如我们的上网用的浏览器。  多线程：多线程就是我们浏览器中的各种小工具，如刷新功能与新开一个标签页的功能就是两个在其中的线程。    多个进程是分开的两个应用程序，就像QQ和微信两者">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-03-20T08:57:18.784Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LXiHa`Notes">
-<meta name="twitter:description" content="心灵小窝，记录成长与点滴。">
+<meta name="twitter:title" content="理解多线程编程">
+<meta name="twitter:description" content="最近想研究研究什么是多线程编程的问题。简单了解了一下之后发现原来我对其的理解都错了…把面对对象编程活生生的说成了多线程…唉，从前文中的”口误“就… 多线程与多进程简单理解这两个一下：  多进程：可先理解为一个应用程序，如我们的上网用的浏览器。  多线程：多线程就是我们浏览器中的各种小工具，如刷新功能与新开一个标签页的功能就是两个在其中的线程。    多个进程是分开的两个应用程序，就像QQ和微信两者">
 
 
 
@@ -114,13 +116,13 @@
 
 
 
-  <link rel="canonical" href="https://liujunjie11.github.io/categories/生活-感悟/"/>
+  <link rel="canonical" href="https://liujunjie11.github.io/2018/03/20/理解多线程编程/"/>
 
 
 
 
 
-  <title>分类: 生活 感悟 | LXiHa`Notes</title>
+  <title>理解多线程编程 | LXiHa`Notes</title>
   
 
 
@@ -139,7 +141,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -277,55 +279,226 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>生活 感悟<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://liujunjie11.github.io/2018/03/20/理解多线程编程/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘俊">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LXiHa`Notes">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/01/22/假期小记/" itemprop="url">
-              
-                <span itemprop="name">假期小记</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">理解多线程编程</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-01-22T18:36:27+08:00"
-              content="2018-01-22" >
-          01-22
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-20T16:37:17+08:00">
+                2018-03-20
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/03/20/理解多线程编程/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/03/20/理解多线程编程/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>最近想研究研究什么是<em>多线程编程</em>的问题。简单了解了一下之后发现原来我对其的理解都错了…把<em>面对对象编程</em>活生生的说成了<em>多线程</em>…唉，从前文中的”口误“就…</p>
+<h2 id="多线程与多进程"><a href="#多线程与多进程" class="headerlink" title="多线程与多进程"></a>多线程与多进程</h2><p>简单理解这两个一下：</p>
+<ul>
+<li><p><strong>多进程：可先理解为一个应用程序，如我们的上网用的浏览器。</strong></p>
+</li>
+<li><p><strong>多线程：多线程就是我们浏览器中的各种小工具，如刷新功能与新开一个标签页的功能就是两个在其中的线程。</strong></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>多个进程是分开的两个应用程序，就像QQ和微信两者就是毫不相干的两个应用程序。多线程就是两个应用程序之中的多个可同时运用的小工具。</strong></p>
+</blockquote>
+<h2 id="多线程编程"><a href="#多线程编程" class="headerlink" title="多线程编程"></a>多线程编程</h2><p>再来看看<em>多线程编程</em>。</p>
+<p>平时我们写程序，会将整个代码构建出各种方法函数，各有各的实现意图，以便在主类当中直接调用，最终实现目标整体意愿。</p>
+<blockquote>
+<p><strong>而多线程编程就是可同时在主类中调用两个实现意图不同的两个方法函数，并且一同被编译器/解释器运行出结果。就成了一个多线程的问题…多线程多线程，就是能将两个不同的方法同时运行出结果。</strong>至于是编译器还是解释器得分是什么语言了。</p>
+</blockquote>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/学习笔记/" rel="tag"># 学习笔记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/19/用python可视化GitHub上的java热门开源项目/" rel="next" title="用python/R可视化GitHub上的java热门开源项目">
+                <i class="fa fa-chevron-left"></i> 用python/R可视化GitHub上的java热门开源项目
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
 
 
           </div>
@@ -333,6 +506,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -353,8 +537,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <p class="site-author-name" itemprop="name">刘俊</p>
@@ -448,6 +641,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程与多进程"><span class="nav-number">1.</span> <span class="nav-text">多线程与多进程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程编程"><span class="nav-number">2.</span> <span class="nav-text">多线程编程</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -643,6 +852,18 @@
       <script id="dsq-count-scr" src="https://—-...disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://liujunjie11.github.io/2018/03/20/理解多线程编程/';
+          this.page.identifier = '2018/03/20/理解多线程编程/';
+          this.page.title = '理解多线程编程';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://—-...disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
@@ -997,26 +1218,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

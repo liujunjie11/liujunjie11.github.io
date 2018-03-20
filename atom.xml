@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-03-20T03:17:59.410Z</updated>
+  <updated>2018-03-20T08:57:18.784Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>理解多线程编程</title>
+    <link href="https://liujunjie11.github.io/2018/03/20/%E7%90%86%E8%A7%A3%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/"/>
+    <id>https://liujunjie11.github.io/2018/03/20/理解多线程编程/</id>
+    <published>2018-03-20T08:37:17.000Z</published>
+    <updated>2018-03-20T08:57:18.784Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近想研究研究什么是<em>多线程编程</em>的问题。简单了解了一下之后发现原来我对其的理解都错了…把<em>面对对象编程</em>活生生的说成了<em>多线程</em>…唉，从前文中的”口误“就…</p><h2 id="多线程与多进程"><a href="#多线程与多进程" class="headerlink" title="多线程与多进程"></a>多线程与多进程</h2><p>简单理解这两个一下：</p><ul><li><p><strong>多进程：可先理解为一个应用程序，如我们的上网用的浏览器。</strong></p></li><li><p><strong>多线程：多线程就是我们浏览器中的各种小工具，如刷新功能与新开一个标签页的功能就是两个在其中的线程。</strong></p></li></ul><blockquote><p><strong>多个进程是分开的两个应用程序，就像QQ和微信两者就是毫不相干的两个应用程序。多线程就是两个应用程序之中的多个可同时运用的小工具。</strong></p></blockquote><h2 id="多线程编程"><a href="#多线程编程" class="headerlink" title="多线程编程"></a>多线程编程</h2><p>再来看看<em>多线程编程</em>。</p><p>平时我们写程序，会将整个代码构建出各种方法函数，各有各的实现意图，以便在主类当中直接调用，最终实现目标整体意愿。</p><blockquote><p><strong>而多线程编程就是可同时在主类中调用两个实现意图不同的两个方法函数，并且一同被编译器/解释器运行出结果。就成了一个多线程的问题…多线程多线程，就是能将两个不同的方法同时运行出结果。</strong>至于是编译器还是解释器得分是什么语言了。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;最近想研究研究什么是&lt;em&gt;多线程编程&lt;/em&gt;的问题。简单了解了一下之后发现原来我对其的理解都错了…把&lt;em&gt;面对对象编程&lt;/em&gt;活生生的说成了&lt;em&gt;多线程&lt;/em&gt;…唉，从前文中的”口误“就…&lt;/p&gt;
+&lt;h2 id=&quot;多线程与多进程&quot;&gt;&lt;a href=&quot;#多线程与多
+      
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="学习笔记" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>用python/R可视化GitHub上的java热门开源项目</title>
@@ -517,33 +543,6 @@
       
       
         &lt;p&gt;这一段时间因为开的网页比较重要，&lt;em&gt;Mac&lt;/em&gt;一直没有关机，晚上睡觉也是合上就这样了，没想到才3天这样，&lt;em&gt;Mac&lt;/em&gt;好像支撑不了了…变得有些卡了，在未关机前的硬盘空间大小与关机后打开之后的硬盘空间大小相差了&lt;strong&gt;5个G&lt;/strong&gt;，在重
-      
-    
-    </summary>
-    
-      <category term="学习" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="学习" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于Mac网速慢的原因记录</title>
-    <link href="https://liujunjie11.github.io/2017/12/01/%E5%85%B3%E4%BA%8EMac%E7%BD%91%E9%80%9F%E6%85%A2%E7%9A%84%E5%8E%9F%E5%9B%A0%E8%AE%B0%E5%BD%95/"/>
-    <id>https://liujunjie11.github.io/2017/12/01/关于Mac网速慢的原因记录/</id>
-    <published>2017-12-01T10:56:07.000Z</published>
-    <updated>2017-12-01T11:07:50.743Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近<em>Mac</em>突然变得很慢，明明网速很快的。</p><p>在网上看了一下，发现可能是<em>DNS</em>的问题，果然换了一下（以前用的都是<em>8.8.8.8</em>估计用的人多了就卡了），把号删除了，发现网速飞的快起…</p><p>不过在平时中下载<em>app</em>失败时可以考虑换回来就好使了。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;最近&lt;em&gt;Mac&lt;/em&gt;突然变得很慢，明明网速很快的。&lt;/p&gt;
-&lt;p&gt;在网上看了一下，发现可能是&lt;em&gt;DNS&lt;/em&gt;的问题，果然换了一下（以前用的都是&lt;em&gt;8.8.8.8&lt;/em&gt;估计用的人多了就卡了），把号删除了，发现网速飞的快起…&lt;/p&gt;
-&lt;p&gt;不过在平时中下
       
     
     </summary>
