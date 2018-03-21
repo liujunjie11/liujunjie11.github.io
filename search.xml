@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于anaconda2与anaconda3两个版本的共存问题]]></title>
+    <url>%2F2018%2F03%2F21%2F%E5%85%B3%E4%BA%8Eanaconda2%E4%B8%8Eanaconda3%E4%B8%A4%E4%B8%AA%E7%89%88%E6%9C%AC%E7%9A%84%E5%85%B1%E5%AD%98%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[最近因为用anaconda的关系，下载的包导致了冲突，编译器总是识别不了，就把以前Mac上的anaconda都卸载了。打算重新来过一遍解决两者（即anaconda2与anaconda3）的共存问题。 简单说明一下anaconda3对应python3，anaconda2对应python2 马上开始吧。 先是在官网上下载了两个版本，如下： 一路确定，直到安装完成为止。不过要说明一下，安装应该分好顺序，最后安装好的即为系统默认的了（即当我们在终端输入命令：python 时会出现最后安装好的那个目录中的python版本，我是最后安装的anaconda3）。如下图所示： Python 3.6.4 |Anaconda, Inc.| 即为anaconda3为系统默认的了。 当我们再输入命令：python2 时与输入命令： python3 时，如下图所示均成为了系统默认的两个版本了。 这样在下载包时就能方便多了，可以直接在终端输入命令：pip install .. 就可以达到anaconda3对应的python3版本的包下载问题了（经过测试，已通过！）。可能有朋友疑惑，python3不是对应着命令pip3吗，实际上经过我的发现，anaconda的python2与python3对应的都是命令pip。 虽然解决了anaconda3下的python3的问题，那么我们必须记得我们的目标是：anaconda3与anaconda2的切换使用问题。不过遗憾的是没有找到解决方案。不过倒是有一个能在同一个版本内（即anaconda3/anaconda2）同时安装两个python版本（2/3）的方案。 在此官网教程中说明了命令。 详细的命令过程可参考此篇文章：https://foofish.net/compatible-py2-and-py3.html 当然参考官网亦可。 最后虽然在同一版本中解决了两个python版本的虚拟环境的问题（可在对应的目录中找到，并且此虚拟环境均可正常使用），但是我们的问题依旧没有得到解决（即anaconda3与anaconda2如何切换使用问题），我试想用指定目录的方法运行命令，但是一无所获。 Anaconda2 includes Python 2.7 and Anaconda3 includes Python 3.6. However, it does not matter which one you download, because you can create new environments that include any version of Python packaged with conda. 官网的解释已经说明了，建立虚拟环境只是解决在同一个anaconda版本下使用不同版本的python而已。所以我们想的关于anaconda2与anaconda3两个版本的共存切换问题目前或许没有办法实现。]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[解决python文件读取时的UnicodeDecodeError: 'ascii' codec can't decode byte 0xd4 in position 904: ordinal not in range(128)问题]]></title>
     <url>%2F2018%2F03%2F20%2F%E8%A7%A3%E5%86%B3python%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%97%B6%E7%9A%84UnicodeDecodeError-ascii-codec-can-t-decode-byte-0xd4-in-position-904-ordinal-not-in-range-128-%E9%97%AE%E9%A2%98%2F</url>
     <content type="text"><![CDATA[最近在处理一个csv格式的数据时，出现了UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xd4 in position 904: ordinal not in range(128)的错误告知。 查了一下，发现只要指定encoding=’iso-8859-1’即可解决此问题了。 代码演示： ..... with open(filename, encoding=&apos;iso-8859-1&apos;) as f: ...... 简单说明一下为何如此指定编码格式： ISO 8859-1，正式编号为ISO/IEC 8859-1:1998，又称Latin-1或“西欧语言”，是国际标准化组织内ISO/IEC 8859的第一个8位字符集。它以ASCII为基础，在空置的0xA0-0xFF的范围内，即解决0xA0-0xFF的范围内的编码错误问题，如上我们的0xd4在此范围之内。 详细可见维基百科地址：https://zh.wikipedia.org/wiki/ISO/IEC_8859-1 参考：http://blog.csdn.net/programmer_wei/article/details/50994318]]></content>
