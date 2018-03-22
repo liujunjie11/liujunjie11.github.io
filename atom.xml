@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-03-21T04:50:04.218Z</updated>
+  <updated>2018-03-22T13:40:22.174Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -17,13 +17,68 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Mac下安装Redis以及其可视化客户端</title>
+    <link href="https://liujunjie11.github.io/2018/03/22/Mac%E4%B8%8B%E5%AE%89%E8%A3%85Redis%E4%BB%A5%E5%8F%8A%E5%85%B6%E5%8F%AF%E8%A7%86%E5%8C%96%E5%AE%A2%E6%88%B7%E7%AB%AF/"/>
+    <id>https://liujunjie11.github.io/2018/03/22/Mac下安装Redis以及其可视化客户端/</id>
+    <published>2018-03-22T13:17:30.000Z</published>
+    <updated>2018-03-22T13:40:22.174Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近想要用<em>Nosql</em>结合做一些小项目，用的是<em>Mac</em>，看到网上的教程有点乱七八糟的了，就打算记录下来了。</p><p>关于这个数据库就不在此介绍了。</p><h2 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h2><blockquote><p>来到官网页面下载：<a href="https://redis.io/download" target="_blank" rel="external">https://redis.io/download</a></p></blockquote><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-22%20%E4%B8%8B%E5%8D%889.35.10.png" alt=""></p><hr><p>下载好之后解压，并且要知道目录文件在哪。现在打开终端，用命令 <code>cd 文件目录地址</code>，如我的是 <code>cd /Users/junjieliu/Documents/编程文件/redis-4.0.8</code>，之后使用命令 <code>sudo make</code> 成功之后出现如下图1所示，之后再使用命令 <code>make test</code>,成功之后出现如图2所示。</p><ul><li>图1:</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-22%20%E4%B8%8B%E5%8D%888.53.59.png" alt=""></p><ul><li>图2:</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-22%20%E4%B8%8B%E5%8D%888.57.13.png" alt=""></p><p>之后，编译安装：在终端中输入命令：<code>sudo make install</code></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-22%20%E4%B8%8B%E5%8D%888.57.56.png" alt=""></p><p>启动Redis,输入命令<code>redis-server</code></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-22%20%E4%B8%8B%E5%8D%888.58.33.png" alt=""></p><blockquote><p>至此就安装成功了，以上命令有时可能会有出现错误的结果，多试试。</p></blockquote><h2 id="安装Redis-Desktop-Manager"><a href="#安装Redis-Desktop-Manager" class="headerlink" title="安装Redis Desktop Manager"></a>安装Redis Desktop Manager</h2><p>到此网站下载即可：<a href="https://sourceforge.net/projects/redis-desktop-manager.mirror/" target="_blank" rel="external">https://sourceforge.net/projects/redis-desktop-manager.mirror/</a></p><blockquote><p>当然可见我的云盘分享：<a href="https://pan.baidu.com/s/1Bvc7_tZ5yUnnwfnH2bDocg" target="_blank" rel="external">https://pan.baidu.com/s/1Bvc7_tZ5yUnnwfnH2bDocg</a></p></blockquote><p>下载完之后将软件移植系统<em>应用程序</em>一栏，打开：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-22%20%E4%B8%8B%E5%8D%889.10.11.png" alt=""></p><hr><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>介绍好评高的一本电子书《Redis实战》：</p><p><a href="http://www.java1234.com/a/javabook/database/2017/0625/8356.html" target="_blank" rel="external">http://www.java1234.com/a/javabook/database/2017/0625/8356.html</a></p><blockquote><p>进入网站即有相关的资源。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;最近想要用&lt;em&gt;Nosql&lt;/em&gt;结合做一些小项目，用的是&lt;em&gt;Mac&lt;/em&gt;，看到网上的教程有点乱七八糟的了，就打算记录下来了。&lt;/p&gt;
+&lt;p&gt;关于这个数据库就不在此介绍了。&lt;/p&gt;
+&lt;h2 id=&quot;安装过程&quot;&gt;&lt;a href=&quot;#安装过程&quot; class=&quot;hea
+      
+    
+    </summary>
+    
+      <category term="教程" scheme="https://liujunjie11.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="教程" scheme="https://liujunjie11.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用python/R数据分析可视化汽车使用燃料情况</title>
+    <link href="https://liujunjie11.github.io/2018/03/21/%E7%94%A8python:R%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%AF%E8%A7%86%E5%8C%96%E6%B1%BD%E8%BD%A6%E4%BD%BF%E7%94%A8%E7%87%83%E6%96%99%E6%83%85%E5%86%B5/"/>
+    <id>https://liujunjie11.github.io/2018/03/21/用python:R数据分析可视化汽车使用燃料情况/</id>
+    <published>2018-03-21T12:40:06.000Z</published>
+    <updated>2018-03-22T07:26:01.239Z</updated>
+    
+    <content type="html"><![CDATA[<p>分析的是美国一个网站统计的多年汽车使用燃料情况的数据，需要从网上下载，在此利用好<em>python爬虫</em>大有裨益，可作为实战运行分析。</p><blockquote><p>此篇文章案例来源于：<img src="" alt=""></p><p>本书文章中用<em>R语言</em>实现的数据可视化，是从网上直接下的文件然后分析，我打算在此用<em>python</em>实现爬取相关文件，并且运用<em>python</em>进行可视化分析。</p></blockquote><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>进入主页，得到了下载文件的主链接：</p><p><img src="" alt=""></p><p>在此可见资源的下载地址：</p><p><img src="" alt=""></p><hr><blockquote><p>接下来就是运用爬虫知识实现此文件的下载了。</p></blockquote><h2 id="爬虫代码"><a href="#爬虫代码" class="headerlink" title="爬虫代码"></a>爬虫代码</h2><p>我们可有这样的思路：<strong>从主页出发 –&gt; 爬取到下载文件页面的链接 –&gt; 再从此爬取到下载地址链接 –&gt; 之后运用相关的函数下载至本目录即可。</strong>以下是实现过程。</p><pre><code>&apos;&apos;&apos;    函数目标：    用python爬取相关的下载文件    编写时间：    2018-03-21&apos;&apos;&apos;import requestsimport refrom bs4 import BeautifulSoupfrom urllib.request import urlretrieve&apos;&apos;&apos;    first_url方法获取进入下载页面的地址    运用了正则表达式的匹配方法                                        &apos;&apos;&apos;def first_url():    url = &apos;https://www.fueleconomy.gov/&apos;    # 添加代理    header = {&apos;Accept&apos;: &apos;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8&apos;,            &apos;Accept-Encoding&apos;: &apos;gzip, deflate, br&apos;,            &apos;Accept-Language&apos;: &apos;zh-CN,zh&apos;,            &apos;Cache-Control&apos;: &apos;max-age=0&apos;,            &apos;Connection&apos;: &apos;keep-alive&apos;,            &apos;Host&apos;: &apos;www.fueleconomy.gov&apos;,            &apos;Upgrade-Insecure-Requests&apos;: &apos;1&apos;,            &apos;User-Agent&apos;: &apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36}&apos;            }    request = requests.get(url=url, headers=header)    # 指定编码格式    request.encoding = &apos;utf-8&apos;    &apos;&apos;&apos;        发现不用指定re.S亦可以完成匹配，用了反而会报错...        注意每次匹配到的数据之后还有索引要记得标明    &apos;&apos;&apos;    link = re.findall(r&apos;&lt;a href=&quot;(.*?)&quot;&gt;Developer Tools&lt;/a&gt;&apos;, request.text)[0]    return link&apos;&apos;&apos;    second_url方法是用来获取下载文件的地址    方法也是运用了正则表达式                                            &apos;&apos;&apos;def second_url():    # 进入下载资源的页面    se_url = &apos;https://www.fueleconomy.gov&apos; + first_url()    # 添加代理,基本上的代理信息没什么变化    header_2 = {            &apos;Accept&apos;: &apos;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8&apos;,            &apos;Accept-Encoding&apos;: &apos;gzip, deflate, br&apos;,            &apos;Accept-Language&apos;: &apos;zh-CN,zh&apos;,            &apos;Cache-Control&apos;: &apos;max-age=0&apos;,            &apos;Connection&apos;: &apos;keep-alive&apos;,            &apos;Host&apos;: &apos;www.fueleconomy.gov&apos;,            &apos;Upgrade-Insecure-Requests&apos;: &apos;1&apos;,            &apos;User-Agent&apos;: &apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36}&apos;            }    request_2 = requests.get(url=se_url, headers=header_2)    request_2.encoding = &apos;utf-8&apos;    # 匹配正则表达式    link_2 = re.findall(r&apos;&lt;a href=&quot;(.*?)&quot;&gt;CSV&lt;/a&gt;&apos;, request_2.text)[0]    return link_2&apos;&apos;&apos;    已经得到了资源下载地址，在主函数中进行下载并且进行解压                                                    &apos;&apos;&apos;if __name__ == &apos;__main__&apos;:    # 获取下载文件的资源地址    down_url = &apos;https://www.fueleconomy.gov&apos; + second_url()    print(&apos;数据采集完成...&apos;)    print(&apos;开始下载文件...&apos;)    # 文件名称是：vehicles.csv.zip，格式也是非常的重要！    urlretrieve(url=down_url, filename=&apos;vehicles.csv.zip&apos;)    print(&apos;下载完成！可在本工程目录查收！&apos;)</code></pre><p>至此可在本目录下查看到下载好的压缩文件：</p><p><img src="" alt=""></p><blockquote><p>当然也可加上运用<em>python</em>解压这一部分的模块，有兴趣的朋友可自行学习运用。</p></blockquote><h2 id="代码可视化分析阶段"><a href="#代码可视化分析阶段" class="headerlink" title="代码可视化分析阶段"></a>代码可视化分析阶段</h2><p>在解压之后可先用<em>excel</em>打开来看看（会发现有<strong>39000+行</strong>数据），在此只需要知道其中的参数<code>year</code>与<code>com08</code>，前者为年份，后者为燃料的使用情况相关的数值。</p><p>可视化实现代码在下：</p><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>这是一个平时做的小项目，适合新手入门。</p><blockquote><p>另外，以上代码中不懂的模块知识，我建议你利用好搜索引擎，查看相关的文档或者是找本书看看。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;分析的是美国一个网站统计的多年汽车使用燃料情况的数据，需要从网上下载，在此利用好&lt;em&gt;python爬虫&lt;/em&gt;大有裨益，可作为实战运行分析。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;此篇文章案例来源于：&lt;img src=&quot;&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;本书文章中用&lt;
+      
+    
+    </summary>
+    
+      <category term="可视化 爬虫" scheme="https://liujunjie11.github.io/categories/%E5%8F%AF%E8%A7%86%E5%8C%96-%E7%88%AC%E8%99%AB/"/>
+    
+    
+      <category term="可视化 爬虫" scheme="https://liujunjie11.github.io/tags/%E5%8F%AF%E8%A7%86%E5%8C%96-%E7%88%AC%E8%99%AB/"/>
+    
+  </entry>
+  
+  <entry>
     <title>关于anaconda2与anaconda3两个版本的共存问题</title>
     <link href="https://liujunjie11.github.io/2018/03/21/%E5%85%B3%E4%BA%8Eanaconda2%E4%B8%8Eanaconda3%E4%B8%A4%E4%B8%AA%E7%89%88%E6%9C%AC%E7%9A%84%E5%85%B1%E5%AD%98%E9%97%AE%E9%A2%98/"/>
     <id>https://liujunjie11.github.io/2018/03/21/关于anaconda2与anaconda3两个版本的共存问题/</id>
     <published>2018-03-21T03:03:01.000Z</published>
-    <updated>2018-03-21T04:50:04.218Z</updated>
+    <updated>2018-03-22T08:11:50.294Z</updated>
     
-    <content type="html"><![CDATA[<p>最近因为用<em>anaconda</em>的关系，下载的包导致了冲突，编译器总是识别不了，就把以前<em>Mac</em>上的<em>anaconda</em>都卸载了。打算重新来过一遍解决两者（即<em>anaconda2</em>与<em>anaconda3</em>）的共存问题。</p><blockquote><p>简单说明一下<em>anaconda3</em>对应<em>python3</em>，<em>anaconda2</em>对应<em>python2</em></p></blockquote><hr><p>马上开始吧。</p><p>先是在<a href="https://www.anaconda.com/download/#macos" target="_blank" rel="external">官网上</a>下载了两个版本，如下：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-21%20%E4%B8%8A%E5%8D%8811.25.39.png" alt=""></p><blockquote><p>一路确定，直到安装完成为止。<strong>不过要说明一下，安装应该分好顺序，最后安装好的即为系统默认的了（即当我们在终端输入命令：<code>python</code> 时会出现最后安装好的那个目录中的<em>python</em>版本，我是最后安装的anaconda3）。</strong>如下图所示：</p></blockquote><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-21%20%E4%B8%8A%E5%8D%8811.29.20.png" alt=""></p><blockquote><p>Python 3.6.4 |Anaconda, Inc.| <strong>即为anaconda3为系统默认的了。</strong></p></blockquote><p>当我们再输入命令：<code>python2</code> 时与输入命令： <code>python3</code> 时，如下图所示均成为了系统默认的两个版本了。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-21%20%E4%B8%8A%E5%8D%8811.33.55.png" alt=""></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-21%20%E4%B8%8A%E5%8D%8811.34.06.png" alt=""></p><blockquote><p>这样在下载包时就能方便多了，<strong>可以直接在终端输入命令：<code>pip install ..</code> 就可以达到anaconda3对应的python3版本的包下载问题了（经过测试，已通过！）。</strong>可能有朋友疑惑，<em>python3</em>不是对应着命令<em>pip3</em>吗，实际上经过我的发现，<em>anaconda</em>的<em>python2</em>与<em>python3</em>对应的都是命令<em>pip</em>。</p></blockquote><p>虽然解决了<em>anaconda3</em>下的<em>python3</em>的问题，<strong>那么我们必须记得我们的目标是：anaconda3与anaconda2的切换使用问题。不过遗憾的是没有找到解决方案。不过倒是有一个能在同一个版本内（即anaconda3/anaconda2）同时安装两个python版本（2/3）的方案。</strong></p><p>在<a href="https://conda.io/docs/user-guide/getting-started.html#managing-envs" target="_blank" rel="external">此官网教程中</a>说明了命令。</p><ul><li>详细的命令过程可参考此篇文章：<a href="https://foofish.net/compatible-py2-and-py3.html" target="_blank" rel="external">https://foofish.net/compatible-py2-and-py3.html</a></li></ul><blockquote><p>当然参考官网亦可。</p></blockquote><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>虽然在同一版本中解决了两个<em>python</em>版本的虚拟环境的问题（可在对应的目录中找到，并且此虚拟环境均可正常使用），但是我们的问题依旧没有得到解决（即anaconda3与anaconda2如何切换使用问题），我试想用指定目录的方法运行命令，但是一无所获。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-21%20%E4%B8%8B%E5%8D%8812.43.20.png" alt=""></p><blockquote><p>Anaconda2 includes Python 2.7 and Anaconda3 includes Python 3.6. However, it does not matter which one you download, because you can create new environments that include any version of Python packaged with conda.</p><p>官网的解释已经说明了，建立虚拟环境只是解决在同一个<em>anaconda</em>版本下使用不同版本的<em>python</em>而已。所以我们想的关于anaconda2与anaconda3两个版本的共存切换问题目前或许没有办法实现。</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p>最近因为用<em>anaconda</em>的关系，下载的包导致了冲突，编译器总是识别不了，就把以前<em>Mac</em>上的<em>anaconda</em>都卸载了。打算重新来过一遍解决两者（即<em>anaconda2</em>与<em>anaconda3</em>）的共存问题。</p><blockquote><p>简单说明一下<em>anaconda3</em>对应<em>python3</em>，<em>anaconda2</em>对应<em>python2</em></p></blockquote><hr><p>马上开始吧。</p><p>先是在<a href="https://www.anaconda.com/download/#macos" target="_blank" rel="external">官网上</a>下载了两个版本，如下：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-21%20%E4%B8%8A%E5%8D%8811.25.39.png" alt=""></p><blockquote><p>一路确定，直到安装完成为止。<strong>不过要说明一下，安装应该分好顺序，最后安装好的即为系统默认的了（即当我们在终端输入命令：<code>python</code> 时会出现最后安装好的那个目录中的<em>python</em>版本，我是最后安装的anaconda3）。</strong>如下图所示：</p></blockquote><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-21%20%E4%B8%8A%E5%8D%8811.29.20.png" alt=""></p><blockquote><p>Python 3.6.4 |Anaconda, Inc.| <strong>即为anaconda3为系统默认的了。</strong></p></blockquote><p>当我们再输入命令：<code>python2</code> 时与输入命令： <code>python3</code> 时，如下图所示均成为了系统默认的两个版本了。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-21%20%E4%B8%8A%E5%8D%8811.33.55.png" alt=""></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-21%20%E4%B8%8A%E5%8D%8811.34.06.png" alt=""></p><blockquote><p>这样在下载包时就能方便多了，<strong>可以直接在终端输入命令：<code>pip install ..</code> 就可以达到anaconda3对应的python3版本的包下载问题了（经过测试，已通过！）。</strong>可能有朋友疑惑，<em>python3</em>不是对应着命令<em>pip3</em>吗，实际上经过我的发现，<em>anaconda</em>的<em>python2</em>与<em>python3</em>对应的都是命令<em>pip</em>。</p></blockquote><p>虽然解决了<em>anaconda3</em>下的<em>python3</em>的问题，<strong>那么我们必须记得我们的目标是：anaconda3与anaconda2的切换使用问题。不过遗憾的是没有找到解决方案。不过倒是有一个能在同一个版本内（即anaconda3/anaconda2）同时安装两个python版本（2/3）的方案。</strong></p><p>在<a href="https://conda.io/docs/user-guide/getting-started.html#managing-envs" target="_blank" rel="external">此官网教程中</a>说明了命令。</p><ul><li>详细的命令过程可参考此篇文章：<a href="https://foofish.net/compatible-py2-and-py3.html" target="_blank" rel="external">https://foofish.net/compatible-py2-and-py3.html</a></li></ul><blockquote><p>当然参考官网亦可。</p></blockquote><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>虽然在同一版本中解决了两个<em>python</em>版本的虚拟环境的问题（可在对应的目录中找到，并且此虚拟环境均可正常使用），但是我们的问题依旧没有得到解决（即anaconda3与anaconda2如何切换使用问题），我试想用指定目录的方法运行命令，但是一无所获。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-21%20%E4%B8%8B%E5%8D%8812.43.20.png" alt=""></p><blockquote><p>Anaconda2 includes Python 2.7 and Anaconda3 includes Python 3.6. However, it does not matter which one you download, because you can create new environments that include any version of Python packaged with conda.</p><p>官网的解释已经说明了，建立虚拟环境只是解决在同一个<em>anaconda</em>版本下使用不同版本的<em>python</em>而已。所以我们想的关于anaconda2与anaconda3两个版本的共存切换问题目前或许没有办法实现。</p></blockquote><hr><p><strong>已经知道了解决方案：那就是打开各个的客户端进行下载即可！！！太简单了！！</strong></p>]]></content>
     
     <summary type="html">
     
@@ -97,9 +152,9 @@
     <link href="https://liujunjie11.github.io/2018/03/19/%E7%94%A8python%E5%8F%AF%E8%A7%86%E5%8C%96GitHub%E4%B8%8A%E7%9A%84java%E7%83%AD%E9%97%A8%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
     <id>https://liujunjie11.github.io/2018/03/19/用python可视化GitHub上的java热门开源项目/</id>
     <published>2018-03-19T08:36:14.000Z</published>
-    <updated>2018-03-20T03:17:59.410Z</updated>
+    <updated>2018-03-22T03:09:33.035Z</updated>
     
-    <content type="html"><![CDATA[<p>直接开始这个小项目吧。</p><ul><li>网页地址：<a href="https://api.github.com/search/repositories?q=language:java&amp;sort=stars" target="_blank" rel="external">https://api.github.com/search/repositories?q=language:java&amp;sort=stars</a></li></ul><blockquote><p>在这个网页中有相关的目前比较热门的开源项目（以<em>star</em>的数目来衡量），打开发现这是典型的<em>json</em>格式啊。</p></blockquote><h2 id="简单分析"><a href="#简单分析" class="headerlink" title="简单分析"></a>简单分析</h2><p>经过抓包可发现：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-19%20%E4%B8%8B%E5%8D%889.31.32.png" alt=""></p><p>即：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-19%20%E4%B8%8B%E5%8D%889.29.37.png" alt=""></p><blockquote><p>换一换就可知道所有编程语言目前比较热门的开源项目了。</p></blockquote><h2 id="python代码实现"><a href="#python代码实现" class="headerlink" title="python代码实现"></a>python代码实现</h2><pre><code>&apos;&apos;&apos;    函数目标：    将GitHub上的java热门的开源项目可视化    编写时间：    2018-3-19&apos;&apos;&apos;import requestsfrom matplotlib import pyplot as pltimport pygalfrom pygal.style import LightColorizedStyle as lcs, LightenStyle as lsif __name__ == &apos;__main__&apos;:    #添加代理配置    url = &apos;https://api.github.com/search/repositories&apos;    header = {&apos;User-Agent&apos;:&apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36&apos;,              &apos;Connection&apos;: &apos;keep-alive&apos;}    paramter = {&apos;q&apos;: &apos;language:java&apos;,              &apos;sort&apos;: &apos;stars&apos;}    re = requests.get(url=url, params=paramter, headers=header)    # 将网页转化为python字典即用json()函数方法才可显示与网页内容一致！    re.encoding = &apos;utf-8&apos;    js_cont = re.json()    item = js_cont[&apos;items&apos;]    star_count = []    names = []    full_names = []    for each in item:            star_count.append(each[&apos;stargazers_count&apos;])            names.append(each[&apos;name&apos;])            full_names.append(each[&apos;full_name&apos;])    # 添加高亮颜色    my_style = ls(&apos;#333366&apos;, base_style=lcs)    # 添加相关的设置    my_config = pygal.Config()    my_config.label_font_size = 28    bar_chart = pygal.Bar(config=my_config, style=my_style, x_label_rotation=60, show_legend=False)    bar_chart.add(&apos;&apos;, star_count)    bar_chart.title = &apos;Java  projects stars on Github&apos;    bar_chart.x_labels = names    # 保存至目录下的文件中    bar_chart.render_to_file(&apos;Java stars in Github.svg&apos;)</code></pre><blockquote><p>之中不懂的可利用好搜索引擎。有一些爬虫的知识。</p></blockquote><p>运行得到：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-19%20%E4%B8%8B%E5%8D%889.24.44.png" alt=""></p><blockquote><p>简单说说用<em>python</em>可视化的感受，比较喜欢用<em>python</em>，用的比较多，意味发现<em>pygal</em>这个库做的图很漂亮。</p></blockquote><h2 id="R代码实现"><a href="#R代码实现" class="headerlink" title="R代码实现"></a>R代码实现</h2><ul><li>说明：因为<em>R</em>的爬虫没怎么看，先用可视化…日后有时间爬虫写上…</li></ul><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><ul><li>参考：《python入门与实践》【美】Eric Matthes著</li></ul>]]></content>
+    <content type="html"><![CDATA[<p>直接开始这个小项目吧。</p><ul><li>网页地址：<a href="https://api.github.com/search/repositories?q=language:java&amp;sort=stars" target="_blank" rel="external">https://api.github.com/search/repositories?q=language:java&amp;sort=stars</a></li></ul><blockquote><p>在这个网页中有相关的目前比较热门的开源项目（以<em>star</em>的数目来衡量），打开发现这是典型的<em>json</em>格式啊。</p></blockquote><h2 id="简单分析"><a href="#简单分析" class="headerlink" title="简单分析"></a>简单分析</h2><p>经过抓包可发现：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-19%20%E4%B8%8B%E5%8D%889.31.32.png" alt=""></p><p>即：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-19%20%E4%B8%8B%E5%8D%889.29.37.png" alt=""></p><blockquote><p>换一换就可知道所有编程语言目前比较热门的开源项目了。</p></blockquote><h2 id="python代码实现"><a href="#python代码实现" class="headerlink" title="python代码实现"></a>python代码实现</h2><pre><code>&apos;&apos;&apos;    函数目标：    将GitHub上的java热门的开源项目可视化    编写时间：    2018-3-19&apos;&apos;&apos;import requestsfrom matplotlib import pyplot as pltimport pygalfrom pygal.style import LightColorizedStyle as lcs, LightenStyle as lsif __name__ == &apos;__main__&apos;:    #添加代理配置    url = &apos;https://api.github.com/search/repositories&apos;    header = {&apos;User-Agent&apos;:&apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36&apos;,              &apos;Connection&apos;: &apos;keep-alive&apos;}    paramter = {&apos;q&apos;: &apos;language:java&apos;,              &apos;sort&apos;: &apos;stars&apos;}    re = requests.get(url=url, params=paramter, headers=header)    # 将网页转化为python字典即用json()函数方法才可显示与网页内容一致！    re.encoding = &apos;utf-8&apos;    js_cont = re.json()    item = js_cont[&apos;items&apos;]    star_count = []    names = []    full_names = []    for each in item:            star_count.append(each[&apos;stargazers_count&apos;])            names.append(each[&apos;name&apos;])            full_names.append(each[&apos;full_name&apos;])    # 添加高亮颜色    my_style = ls(&apos;#333366&apos;, base_style=lcs)    # 添加相关的设置    my_config = pygal.Config()    my_config.label_font_size = 28    bar_chart = pygal.Bar(config=my_config, style=my_style, x_label_rotation=60, show_legend=False)    bar_chart.add(&apos;&apos;, star_count)    bar_chart.title = &apos;Java  projects stars on Github&apos;    bar_chart.x_labels = names    # 保存至目录下的文件中    bar_chart.render_to_file(&apos;Java stars in Github.svg&apos;)</code></pre><blockquote><p>之中不懂的可利用好搜索引擎。有一些爬虫的知识。</p></blockquote><p>运行得到：</p><p><img src="file:///Users/junjieliu/eclipse-workspace/Py3_scarp1/src/Java%20stars%20in%20Github.svg" alt=""></p><blockquote><p>简单说说用<em>python</em>可视化的感受，比较喜欢用<em>python</em>，用的比较多，意味发现<em>pygal</em>这个库做的图很漂亮。</p></blockquote><h2 id="R代码实现"><a href="#R代码实现" class="headerlink" title="R代码实现"></a>R代码实现</h2><ul><li>说明：因为<em>R</em>的爬虫没怎么看，先用可视化…日后有时间爬虫写上…</li></ul><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><ul><li>参考：《python入门与实践》【美】Eric Matthes著</li></ul>]]></content>
     
     <summary type="html">
     
@@ -500,57 +555,6 @@
     
     
       <category term="生活 感悟" scheme="https://liujunjie11.github.io/tags/%E7%94%9F%E6%B4%BB-%E6%84%9F%E6%82%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于在学习python爬虫时的学习记录</title>
-    <link href="https://liujunjie11.github.io/2017/12/08/%E5%85%B3%E4%BA%8E%E5%9C%A8%E5%AD%A6%E4%B9%A0python%E7%88%AC%E8%99%AB%E6%97%B6%E7%9A%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
-    <id>https://liujunjie11.github.io/2017/12/08/关于在学习python爬虫时的学习记录/</id>
-    <published>2017-12-08T13:36:46.000Z</published>
-    <updated>2018-03-13T10:14:18.751Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近学习<em>python3爬虫</em>，看的是<a href="http://blog.csdn.net/c406495762/article/details/78123502" target="_blank" rel="external">这位博主的博客</a>，不得不说，是真的厉害，通俗易懂^ _ ^</p><p><strong>我要学习的还有很多…从基本的<em>python</em>知识，我就被难倒了…</strong></p><p>哎，记录下我的盲点…</p><p>花了近一个钟头测试出来的结果。</p><ul><li>在爬取相关的<em>html</em>时，<strong>text ≠ text[0]</strong></li></ul><blockquote><p>后者是正确的。我一直以为不加的效果也是一样的结果，在我理解看来就是从头开始的，即<strong>从0到尾的所有相关的内容</strong>，实际上我的理解与相关的<em>python</em>基础不谋而和，可能是爬虫就需要如此的？我就默认好了…</p></blockquote><ul><li>在<em>python</em>中的方法后面的<strong><em>（）</em></strong>是不可省去的</li></ul><blockquote><p>在我学过一些其他的语言，在方法后面可不加括号，如<em>Scala</em>，曾经我在其他的<em>python</em>编程中是行得通的…但是在处理爬虫的代码时就报错了，我也默认了…</p></blockquote><ul><li>在<em>class</em>括号中的<em>object</em>是可有可无的</li></ul><blockquote><p> 这无疑是<em>python</em>的基本知识…</p></blockquote><ul><li>关于在<em>python</em>中类似<em>C</em>中的<em>printf</em>函数的使用</li></ul><blockquote><p>基本上是与<em>C</em>中的用法一致的，但是在爬虫中需要将爬取的内容输出，就需要<em>%%</em>来表示了…参考了<a href="http://www.169it.com/article/11773602545120851576.html" target="_blank" rel="external">这篇文章</a>，其中的有句这样解释道：<strong>用进行转义一样，这里用%作为格式标记的标识，也有一个%本身应该如何输出的问题。如果要在”格式标记字符串“中输出%本身，可以用%%来表示。</strong></p></blockquote><p>在用文件的<em>io</em>与<em>requests模块</em>的结合（<strong>x.content()</strong>）,可达到与<em>urlretrieve函数</em>同样的效果（只需输入URL地址即可）。</p><p>总结：还需要更多的学习。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;最近学习&lt;em&gt;python3爬虫&lt;/em&gt;，看的是&lt;a href=&quot;http://blog.csdn.net/c406495762/article/details/78123502&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这位博主的博客&lt;/a&gt;，不
-      
-    
-    </summary>
-    
-      <category term="学习 成长" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0-%E6%88%90%E9%95%BF/"/>
-    
-    
-      <category term="学习 成长" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0-%E6%88%90%E9%95%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>今后的打算</title>
-    <link href="https://liujunjie11.github.io/2017/12/07/%E4%BB%8A%E5%90%8E%E7%9A%84%E6%89%93%E7%AE%97/"/>
-    <id>https://liujunjie11.github.io/2017/12/07/今后的打算/</id>
-    <published>2017-12-07T07:18:53.000Z</published>
-    <updated>2017-12-07T07:49:44.073Z</updated>
-    
-    <content type="html"><![CDATA[<p>恍然大悟，等我看到还有保研一说的政策时，我如今已是一名大二的学生了，保研的机会我基本上已是错过了。在我参考了一些相关的资料时，我又一次看到了人与人之间的差距…</p><p><strong>眼界对于一个人真的是太重要了，一个人不应该总是停留在现在，应该时时思考自己未来的方向。</strong></p><p>在如今的科技浪潮上，更高的学历当然是我所向往的，而我不喜欢考试，我深深的感觉到了自己不擅长考试，不管是小的还是大的，我对于考试已是到了难以忍耐的地步了，我能从内心感觉的到。</p><p>在我的这个时代，人工智能的浪潮早已是滚滚而来了。如今的我们身处在这个看似大好的“时代”，我也想分一杯羹，我也想通过这一次浪潮发挥自己的效用，借此实现自己的理想，为世界带来更多的福利，为世界人民带来更好的生活。</p><p>而在如今的现实是，高学历的普遍存在…这无疑会成为我的短板…而我可能也会因此而做出退让，放弃自己的技术选项…这真的是我的悲剧啊,会是我人生最大的悲剧吗？</p><p>如今的我需要突出自己的优势了，一定要突出自己的优势。更高的学历意味着无疑拥有更大的机会会得到更好的资源与更加广阔的眼界，不得不说，一个人的学习应该是终生的…</p><p>目前的我太过于浮躁与无定向的迷乱了…<strong>我还需要更多的学习与实践，突出自己的优势，必将是我应当做的，就在不远的今后。</strong></p><p><strong>摆正心态，不断实践，突出优势！</strong></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;恍然大悟，等我看到还有保研一说的政策时，我如今已是一名大二的学生了，保研的机会我基本上已是错过了。在我参考了一些相关的资料时，我又一次看到了人与人之间的差距…&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;眼界对于一个人真的是太重要了，一个人不应该总是停留在现在，应该时时思考自己未来的方向
-      
-    
-    </summary>
-    
-      <category term="成长" scheme="https://liujunjie11.github.io/categories/%E6%88%90%E9%95%BF/"/>
-    
-    
-      <category term="成长" scheme="https://liujunjie11.github.io/tags/%E6%88%90%E9%95%BF/"/>
     
   </entry>
   
