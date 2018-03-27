@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于homebrew下载出现"Error:go:version missing for gotools resource!"错误的解决方案.md]]></title>
+    <url>%2F2018%2F03%2F27%2F%E5%85%B3%E4%BA%8Ehomebrew%E4%B8%8B%E8%BD%BD%E5%87%BA%E7%8E%B0%22Error%3A%20go%3Aversion%20missing%20for%20%20gotools%20resource!%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%22%2F</url>
+    <content type="text"><![CDATA[最近用homebrew下载mongodb，发现出现了Error: go: version missing for “gotools” resource!的错误，试了几次都不行，最后在谷歌用英文搜索关键词在GitHub的一个论坛用相关的解决方案。 使用命令行 git -C “$(brew –repo)” fetch –tags 之后再次输入： brew update –force 最后再次用命令行brew install mongodb，发现已经能够正确成功下载了。]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[数据结构与算法：线性表]]></title>
+    <url>%2F2018%2F03%2F26%2F%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%EF%BC%9A%E7%BA%BF%E6%80%A7%E8%A1%A8%2F</url>
+    <content type="text"><![CDATA[打算重新好好系统的学习数据结构了。这是开始。 因为概念已经是烂大街了，在此只记录下我用java或者是python实现相关功能的代码。 查找java实现]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>数据结构与算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[计算机基础知识：认识计算机]]></title>
+    <url>%2F2018%2F03%2F26%2F%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%9A%E8%AE%A4%E8%AF%86%E8%AE%A1%E7%AE%97%E6%9C%BA%2F</url>
+    <content type="text"><![CDATA[计算机发展到了如今这样的一个地步实在让人感兴趣… 于是看了一些书和文章，想了解了解一个计算机是如何跑起来的。 机器本质 计算机的本质 计算机的本质：（电脑）计算机 = 计算机器 没错，如今我们使用的计算机就是和我们小学时按的那个只会加减乘除计算器的本质毫无区别。使用计算机时，我们会先通过键盘或者是语音输入想要了解的信息，之后计算机会通过内部一系列的运算之后，输出相关的界面信息到我们的屏幕上。那我们可理解计算机就是一通过我们输入，然后自己默默运算完输出结果的机器。电脑电脑，正所谓脑子就是人类的计算机器，电脑不过是插上电源才能运行的计算机器。 什么图画啊，文档内容等等均是先转化为相关的数字信息（如我们学过的二进制，十六进制等）后才在显示器上呈现出来的，所以在此可理解为什么还会有那么多各式各样的字符编码了吧。如中文编码常见的GB2312等。 计算机上的1与0 计算机是电子产品，其构造是由一些硬件组成。 再继续说说烂大街的绝大部分地球人都知道的事实：计算机只认识1和0。因为计算机是集成电路（IC）组成,运行起来接上电源之后需要传输数据了（即属于电子数字电路），而在数字电路中，二进制（binary）数是指用二进制记数系统，即以2为基数的记数系统表示的数字。这一系统中，通常用两个不同的符号0（代表零）和1（代表一）来表示。以2为基数代表系统是二进位制的。数字电子电路中，逻辑门的实现直接应用了二进制，因此现代的计算机和依赖计算机的设备里都用到二进制。每个数字称为一个位元（二进制位）或比特（Bit，Binary digit的缩写）。补充：比特是信息的最小单位， 字节是信息的基本单位。 结合上面的说明，可知道数据都是在计算机中以1和0组成的，一是因为计算机本身的结构所致，二是因为这样可方便的转化为其他的数字类型（包括十进制之类的）。对于计算机来说，什么都是数字。只是数字的组成不同而已。 参考 维基百科：https://zh.wikipedia.org/wiki/二进制 书籍：《计算机是怎么跑起来的》 矢泽久雄 著]]></content>
+      <categories>
+        <category>计算机基础知识</category>
+      </categories>
+      <tags>
+        <tag>计算机基础知识</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Mac下安装Redis以及其可视化客户端]]></title>
     <url>%2F2018%2F03%2F22%2FMac%E4%B8%8B%E5%AE%89%E8%A3%85Redis%E4%BB%A5%E5%8F%8A%E5%85%B6%E5%8F%AF%E8%A7%86%E5%8C%96%E5%AE%A2%E6%88%B7%E7%AB%AF%2F</url>
     <content type="text"><![CDATA[最近想要用Nosql结合做一些小项目，用的是Mac，看到网上的教程有点乱七八糟的了，就打算记录下来了。 关于这个数据库就不在此介绍了。 安装过程 来到官网页面下载：https://redis.io/download 下载好之后解压，并且要知道目录文件在哪。现在打开终端，用命令 cd 文件目录地址，如我的是 cd /Users/junjieliu/Documents/编程文件/redis-4.0.8，之后使用命令 sudo make 成功之后出现如下图1所示，之后再使用命令 make test,成功之后出现如图2所示。 图1: 图2: 之后，编译安装：在终端中输入命令：sudo make install 启动Redis,输入命令redis-server 至此就安装成功了，以上命令有时可能会有出现错误的结果，多试试。 安装Redis Desktop Manager到此网站下载即可：https://sourceforge.net/projects/redis-desktop-manager.mirror/ 当然可见我的云盘分享：https://pan.baidu.com/s/1Bvc7_tZ5yUnnwfnH2bDocg 下载完之后将软件移植系统应用程序一栏，打开： 最后介绍好评高的一本电子书《Redis实战》： http://www.java1234.com/a/javabook/database/2017/0625/8356.html 进入网站即有相关的资源。]]></content>

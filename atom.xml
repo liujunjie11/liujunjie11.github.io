@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-03-22T13:40:22.174Z</updated>
+  <updated>2018-03-27T12:55:28.659Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,87 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于homebrew下载出现&quot;Error:go:version missing for  gotools resource!&quot;错误的解决方案.md</title>
+    <link href="https://liujunjie11.github.io/2018/03/27/%E5%85%B3%E4%BA%8Ehomebrew%E4%B8%8B%E8%BD%BD%E5%87%BA%E7%8E%B0%22Error:%20go:version%20missing%20for%20%20gotools%20resource!%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%22/"/>
+    <id>https://liujunjie11.github.io/2018/03/27/关于homebrew下载出现&quot;Error: go:version missing for  gotools resource!错误的解决方案&quot;/</id>
+    <published>2018-03-27T12:48:05.000Z</published>
+    <updated>2018-03-27T12:55:28.659Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近用<em>homebrew</em>下载<em>mongodb</em>，发现出现了<em>Error: go: version missing for “gotools” resource!</em>的错误，试了几次都不行，最后在谷歌用英文搜索关键词在<em>GitHub</em>的一个论坛用相关的解决方案。</p><p><strong>使用命令行</strong></p><blockquote><p><strong>git -C “$(brew –repo)” fetch –tags</strong></p></blockquote><p>之后再次输入：</p><blockquote><p><strong>brew update –force</strong></p></blockquote><p>最后再次用命令行<em>brew install mongodb</em>，发现已经能够正确成功下载了。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;最近用&lt;em&gt;homebrew&lt;/em&gt;下载&lt;em&gt;mongodb&lt;/em&gt;，发现出现了&lt;em&gt;Error: go: version missing for “gotools” resource!&lt;/em&gt;的错误，试了几次都不行，最后在谷歌用英文搜索关键词在&lt;em&gt;GitH
+      
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="学习笔记" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据结构与算法：线性表</title>
+    <link href="https://liujunjie11.github.io/2018/03/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%EF%BC%9A%E7%BA%BF%E6%80%A7%E8%A1%A8/"/>
+    <id>https://liujunjie11.github.io/2018/03/26/数据结构与算法：线性表/</id>
+    <published>2018-03-26T10:56:19.000Z</published>
+    <updated>2018-03-27T02:40:30.033Z</updated>
+    
+    <content type="html"><![CDATA[<p>打算重新好好系统的学习数据结构了。这是开始。</p><p>因为概念已经是烂大街了，在此只记录下我用<em>java</em>或者是<em>python</em>实现相关功能的代码。</p><hr><h2 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h2><h3 id="java实现"><a href="#java实现" class="headerlink" title="java实现"></a>java实现</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;打算重新好好系统的学习数据结构了。这是开始。&lt;/p&gt;
+&lt;p&gt;因为概念已经是烂大街了，在此只记录下我用&lt;em&gt;java&lt;/em&gt;或者是&lt;em&gt;python&lt;/em&gt;实现相关功能的代码。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;查找&quot;&gt;&lt;a href=&quot;#查找&quot; class=&quot;hea
+      
+    
+    </summary>
+    
+      <category term="数据结构与算法" scheme="https://liujunjie11.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="数据结构与算法" scheme="https://liujunjie11.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机基础知识：认识计算机</title>
+    <link href="https://liujunjie11.github.io/2018/03/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%9A%E8%AE%A4%E8%AF%86%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    <id>https://liujunjie11.github.io/2018/03/26/计算机基础知识：认识计算机/</id>
+    <published>2018-03-26T03:44:12.000Z</published>
+    <updated>2018-03-26T05:12:33.821Z</updated>
+    
+    <content type="html"><![CDATA[<p>计算机发展到了如今这样的一个地步实在让人感兴趣…</p><p>于是看了一些书和文章，想了解了解一个计算机是如何跑起来的。</p><hr><h2 id="机器本质"><a href="#机器本质" class="headerlink" title="机器本质"></a>机器本质</h2><blockquote><p><strong>计算机的本质</strong></p></blockquote><ul><li>计算机的本质<strong>：（电脑）计算机 = 计算机器</strong></li></ul><p>没错，如今<strong>我们使用的计算机就是和我们小学时按的那个只会加减乘除计算器的本质毫无区别</strong>。使用计算机时，我们会先通过键盘或者是语音输入想要了解的信息，之后计算机会通过内部一系列的运算之后，输出相关的界面信息到我们的屏幕上。那我们可理解计算机就是一通过我们输入，然后自己默默运算完输出结果的机器。电脑电脑，正所谓脑子就是人类的<strong>计算机器</strong>，电脑不过是插上电源才能运行的计算机器。</p><p><img src="" alt=""></p><p>什么图画啊，文档内容等等均是先转化为相关的数字信息（如我们学过的二进制，十六进制等）后才在显示器上呈现出来的，所以在此可理解为什么还会有那么多各式各样的字符编码了吧。如中文编码常见的<em>GB2312</em>等。</p><blockquote><p><strong>计算机上的1与0</strong></p></blockquote><ul><li><strong>计算机是电子产品，其构造是由一些硬件组成。</strong></li></ul><p>再继续说说烂大街的绝大部分地球人都知道的事实：<strong>计算机只认识1和0</strong>。因为计算机是集成电路（IC）组成,运行起来接上电源之后需要传输数据了（即属于电子数字电路），而在数字电路中，二进制（binary）数是指用二进制记数系统，即以2为基数的记数系统表示的数字。这一系统中，通常用两个不同的符号0（代表零）和1（代表一）来表示。以2为基数代表系统是二进位制的。数字电子电路中，逻辑门的实现直接应用了二进制，因此现代的计算机和依赖计算机的设备里都用到二进制。每个数字称为一个位元（二进制位）或比特（Bit，Binary digit的缩写）。补充：<strong>比特是信息的最小单位， 字节是信息的基本单位。</strong></p><p>结合上面的说明，可知道数据都是在计算机中以1和0组成的，一是因为计算机本身的结构所致，二是因为这样可方便的转化为其他的数字类型（包括十进制之类的）。<strong>对于计算机来说，什么都是数字。只是数字的组成不同而已。</strong></p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><p>维基百科：<a href="https://zh.wikipedia.org/wiki/二进制" target="_blank" rel="external">https://zh.wikipedia.org/wiki/二进制</a></p></li><li><p>书籍：《计算机是怎么跑起来的》 矢泽久雄 著</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;计算机发展到了如今这样的一个地步实在让人感兴趣…&lt;/p&gt;
+&lt;p&gt;于是看了一些书和文章，想了解了解一个计算机是如何跑起来的。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;机器本质&quot;&gt;&lt;a href=&quot;#机器本质&quot; class=&quot;headerlink&quot; title=&quot;机器本质&quot;&gt;&lt;/a&gt;
+      
+    
+    </summary>
+    
+      <category term="计算机基础知识" scheme="https://liujunjie11.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+    
+      <category term="计算机基础知识" scheme="https://liujunjie11.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
   
   <entry>
     <title>Mac下安装Redis以及其可视化客户端</title>
@@ -477,84 +558,6 @@
     
     
       <category term="学习" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python3爬取网络图片的小程序项目</title>
-    <link href="https://liujunjie11.github.io/2018/03/05/python3%E7%88%AC%E5%8F%96%E7%BD%91%E7%BB%9C%E5%9B%BE%E7%89%87%E7%9A%84%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%A1%B9%E7%9B%AE/"/>
-    <id>https://liujunjie11.github.io/2018/03/05/python3爬取网络图片的小程序项目/</id>
-    <published>2018-03-05T13:25:16.000Z</published>
-    <updated>2018-03-10T03:28:35.670Z</updated>
-    
-    <content type="html"><![CDATA[<p> 最近在学习<em>python3网络爬虫</em>，看的是<a href="http://blog.csdn.net/c406495762/article/details/72597755" target="_blank" rel="external">这位学长的博客</a>。</p><blockquote><p>因为刚刚开始接触，想通过实战来一步步学习，所以先记录下我的学习心得，然后再记录下自己实战的成果以及相关的代码程序。</p></blockquote><ul><li><strong>先声明，以下是学习心得，代码原搬，链接在上。</strong></li></ul><p>##开始爬取的图片的下载代码的演示</p><pre><code> &apos;&apos;&apos;        #开始爬取的图片的下载代码的演示 &apos;&apos;&apos;from bs4 import BeautifulSoupfrom urllib.request import urlretrieve import requestsimport osimport timeif __name__ == &apos;__main__&apos;:    # 指定页面图片的多少数量    for num in range(1, 5):        if num == 1:            url = &apos;http://www.shuaia.net/index.html&apos;        else:            url = &apos;http://www.shuaia.net/index_%d.html&apos; % num        # 因为是下载多个页面的图片，所以之后的图片名称与其相应的图片地址的代码抒写在for循环下编写        &apos;&apos;&apos;          #在此需要设置代理，避免爬取失败几率        &apos;&apos;&apos;        headers = {&apos;User-Agent&apos;:                &apos;* Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.94 Safari/537.36&apos;}        # 利用requests模块中的方法获取URL信息，加上我们的代理        re = requests.get(url=url, headers=headers)        # 指定编码，避免中文乱码        re.encoding = &apos;utf-8&apos;        &apos;&apos;&apos;            # 利用beautifulsoup模块来进行处理            #re.text : 转换成规定的字符格式            #&apos;lxml&apos; : 利用lxml解析器进行解析        &apos;&apos;&apos;        bf = BeautifulSoup(re.text, &apos;lxml&apos;)        # 解析完成之后，需要对页面的html信息进行分析了，指定相关的节点        &apos;&apos;&apos;            #class_是为了避免错误混淆，所以不可&quot;原班人马&quot;        &apos;&apos;&apos;        tasges_html = bf.find_all(class_=&apos;item-img&apos;)        # 指定空的列表，装下相关的需要的信息        list = []        # 利用循环，一一导入        for each in tasges_html:            &apos;&apos;&apos;                #加上img是因为&apos;alt&apos;在以下的子节点中，所以需要相关的指明，即一个节点（父，子）一个指明            &apos;&apos;&apos;            list.append(each.img.get(&apos;alt&apos;) + &apos;=&apos; + each.get(&apos;href&apos;))        # 至此，相关的信息就采集完成了        print(&apos;采集over，开始下载：&apos;)    &apos;&apos;&apos;        #开始将采集好的信息一一下载    &apos;&apos;&apos;    for each_img in list:        # 以=分割图片地址与图片名称        img_info = each_img.split(&apos;=&apos;)        target_url = img_info[1]        filename = img_info[0] + &apos;.jpg&apos;        print(&apos;下载：&apos; + filename)        headers = {            &quot;User-Agent&quot;:          &quot;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36&quot;        }        img_req = requests.get(url=target_url, headers=headers)        img_req.encoding = &apos;utf-8&apos;        img_html = img_req.text        img_bf_1 = BeautifulSoup(img_html, &apos;lxml&apos;)        img_url = img_bf_1.find_all(&apos;div&apos;, class_=&apos;wr-single-content-list&apos;)        img_bf_2 = BeautifulSoup(str(img_url), &apos;lxml&apos;)        img_url = &apos;http://www.shuaia.net&apos; + img_bf_2.div.img.get(&apos;src&apos;)        #若是指定的目录不存在则建立一个        if &apos;images&apos; not in os.listdir():            os.makedirs(&apos;images&apos;)        # 即指定URL地址下载        urlretrieve(url=img_url, filename=&apos;images/&apos; + filename)        time.sleep(1)    print(&apos;下载完成！&apos;)</code></pre><blockquote><p><strong>以上是通过学习<a href="http://blog.csdn.net/c406495762/article/details/72597755" target="_blank" rel="external">此篇博客文章</a>的学习心得，相关的加上图片解说可以看这篇博客文章。</strong></p></blockquote><ul><li><strong>附上用得到的知识链接：</strong></li></ul><p><a href="http://qinxuye.me/article/details-about-time-module-in-python/" target="_blank" rel="external">Python中time模块详解</a></p><p><a href="http://blog.csdn.net/vevenlcf/article/details/46777023" target="_blank" rel="external">python3中的urlretrieve() 函数使用</a></p><p><a href="https://docs.python.org/3/library/urllib.request.html" target="_blank" rel="external">urllib.request文档</a></p><p><a href="http://docs.python-requests.org/zh_CN/latest/user/quickstart.html" target="_blank" rel="external">Requests文档</a></p><p><a href="http://www.runoob.com/python3/python3-os-file-methods.html" target="_blank" rel="external">Python3 os模块文件/目录方法</a></p><p><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html" target="_blank" rel="external">Beautiful Soup 4.2.0 文档</a></p><p><a href="http://www.runoob.com/python/python-files-io.html" target="_blank" rel="external">Python 文件I/O模块文档</a></p><h2 id="实战部分-批量爬取美女图片"><a href="#实战部分-批量爬取美女图片" class="headerlink" title="实战部分:批量爬取美女图片"></a>实战部分:批量爬取美女图片</h2><blockquote><p>在这里收藏上<a href="http://www.bijishequ.com/detail/424024?p=" target="_blank" rel="external">这一篇python3爬取图片的快速入门地址</a>，有相关的模块方法介绍，有助于快速入门，再从一系列模块入手，之后再实战，一步步掌握。</p></blockquote><ul><li>通过另外一个网站的分析，爬取其图片并且下载。（下载的图片均可在本工程目录可找到）</li></ul><p><strong>网址：<a href="http://www.27270.com/ent/meinvtupian/2017/223643.html" target="_blank" rel="external">http://www.27270.com/ent/meinvtupian/2017/223643.html</a></strong></p><blockquote><p>搜索的美女图片关键词，随便点开的一个…</p></blockquote><p>现在我们打开网址，利用<em>Chrome</em>浏览器的抓包，看看此网址的<em>html</em>信息（如下）</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-08%20%E4%B8%8B%E5%8D%888.02.32.png" alt=""></p><hr><p>在此有一个特别好用的方法，即为点击下方指出的图标，当我们把鼠标移到网页上的异常时，对应的<em>html</em>信息就会自动对齐。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/3%E6%9C%88-08-2018%2020-10-20.gif" alt=""></p><blockquote><p>现在开始分析代码，这个网址是专题式的…点开一个专题就会有一个类型的图片…就网页看来一个页面仅仅一张图片。</p></blockquote><p><strong>在我们将鼠标移到图片处时，对应的代码也就自动对齐了（图1），还有它在的那个节点（图2），再点击下一张看看，查看<em>html</em>信息（图3），发现它们的节点信息一致，不同的仅仅为对应的标题以及图片的目录地址了（图4），我们可以从这里下手一步步来</strong></p><ul><li><p>图1<br><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-08%20%E4%B8%8B%E5%8D%888.14.53.png" alt=""></p></li><li><p>图2<br><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-08%20%E4%B8%8B%E5%8D%888.14.35.png" alt=""></p></li><li><p>图3<br><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-08%20%E4%B8%8B%E5%8D%888.14.14.png" alt=""></p></li><li><p>图4<br><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-08%20%E4%B8%8B%E5%8D%888.15.00.png" alt=""></p></li></ul><blockquote><p>关于<em>html</em>的基础知识，只需要知道它们的结构以及节点，一些变量等的基础知识就够了，不需要太深入。可以在网上搜索关键词‘html基础知识’查看。这绝对是一劳永逸的。</p></blockquote><p>在分析之后写个测试代码：</p><pre><code>&apos;&apos;&apos;    爬取美女图片实战代码&apos;&apos;&apos;        import requestsfrom bs4 import BeautifulSoupif __name__ == &apos;__main__&apos;:    url = &apos;http://www.27270.com/ent/meinvtupian/2017/223643.html&apos;    re = requests.get(url=url)    # 编译解码格式，避免乱码出现    re.encoding = &apos;utf-8&apos;    # 用beautiful模块进行解析    bf = BeautifulSoup(re.text, &apos;lxml&apos;)    #在此注意find_all与find方法的使用，因为一个页面仅仅有一张图片，用前者会出错    bf_html = bf.find(&apos;div&apos;, class_=&apos;articleV4Body&apos;)    list_html = []    list_html.append(bf_html.img.get(&apos;alt&apos;) + &apos;  :  &apos; + bf_html.img.get(&apos;src&apos;))    print(list_html)</code></pre><p>运行，发现出现了乱码的情况：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-08%20%E4%B8%8B%E5%8D%888.30.29.png" alt=""></p><p>将’utf-8’格式换成了’GB2312’，发现乱码问题得到解决：<br><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-08%20%E4%B8%8B%E5%8D%888.35.17.png" alt=""></p><hr><p>查看了一下<em>html</em>信息，发现’utf-8’格式是不可取的，对于这个网站来说。<br><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-08%20%E4%B8%8B%E5%8D%888.34.26.png" alt=""></p><p>还可以用以下这段代码得出网址的编码方式。</p><pre><code>#关于输出网页编码方式的判断from urllib import requestimport chardetif __name__ == &quot;__main__&quot;:    response = request.urlopen(&quot;http://www.27270.com/ent/meinvtupian/2017/223643.html&quot;)    html = response.read()    charset = chardet.detect(html)    print(charset)    </code></pre><p>运行看看：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-08%20%E4%B8%8B%E5%8D%888.44.21.png" alt=""></p><ul><li>可参考：<a href="http://blog.csdn.net/qq_21460525/article/details/78217697" target="_blank" rel="external">chardet模块简单认识</a></li></ul><blockquote><p>得到了图片的目录信息以及相关的信息之后，就好办了。</p></blockquote><hr><p>为什么这么说？实际上我们爬取图片时仅仅需要图片的目录地址就可以利用一两行<em>python爬虫</em>代码下载下来了，代码利用<em>urllib.requests模块中的urlretrieve() 函数</em>就能轻而易举的办到。代码在下，也可以查看相关的文档来学习。</p><pre><code>from  urllib.request import urlretrieveimport time# 简单爬取一张图片，或者是需要代理的测试if __name__ == &apos;__main__&apos;:    print(&apos;开始下载：&apos;)    urlretrieve(url=&apos;html上的图片src信息&apos;, filename=&apos;xx照片&apos;+&apos;.jpg&apos;)    time.sleep(1)    print(&apos;下载完成！&apos;)</code></pre><blockquote><p>可以自己试试。</p></blockquote><hr><p>因为我们是为了爬取多张图片…所以可以分析一下每一页<em>URL</em>的不同或者是相似点。看图1，2发现了有索引<strong>_2</strong>出现，那再点击下一页会有<strong>_3</strong>…<br>每一页有不同的照片，因为是一个专题…那么照片地址也不一样了（如图3，4）。</p><ul><li><p>图1<br><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-08%20%E4%B8%8B%E5%8D%888.57.34.png" alt=""></p></li><li><p>图2<br><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-08%20%E4%B8%8B%E5%8D%888.57.47.png" alt=""></p></li></ul><hr><ul><li>图3</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-08%20%E4%B8%8B%E5%8D%889.01.44.png" alt=""></p><ul><li>图4<br><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-08%20%E4%B8%8B%E5%8D%889.01.53.png" alt=""></li></ul><blockquote><p>可以轻而易举的发现问题的所在了，接下来直接贴上完整的下载代码，不懂的朋友应当找相关的文档来自己查看，多写多实战！</p></blockquote><h2 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h2><ul><li><p><strong>代码编译步骤：查看信息到分析整合最后是代码实现。</strong></p><pre><code>&apos;&apos;&apos;    函数目标：    爬取美女图片完整代码    编写开始时间：    2018-3-08&apos;&apos;&apos;import requestsfrom bs4 import BeautifulSoupfrom urllib.request import urlretrieveimport os import time if __name__ == &apos;__main__&apos;:    # 一个专题8页..    for  num in range(1, 9):        if num == 1:            url = &apos;http://www.27270.com/ent/meinvtupian/2017/223643.html&apos;          else:            url = &apos;http://www.27270.com/ent/meinvtupian/2017/223643_%d.html&apos; % num        # 在此就不添加代理部分的了，添加可起到隐蔽的效果，在需要的场合应当添加上        re = requests.get(url=url)        # 之指定编码格式        re.encoding = &apos;GB2312&apos;        # 用beautiful模块解析,具体可查看文档内容        bf = BeautifulSoup(re.text, &apos;lxml&apos;)        # 一页一张，用find方法        bf_html = bf.find(&apos;div&apos;, class_=&apos;articleV4Body&apos;)        # 在创建的目录下保存！        urlretrieve(url=bf_html.img.get(&apos;src&apos;), filename=bf_html.img.get(&apos;alt&apos;) + &apos;系列之%d.jpg&apos; % num)        # 一秒一个步骤实行代码        time.sleep(1)        print(&apos;开始下载第%d张&apos; % num)    print(&apos;下载完成，请查收...&apos;)</code></pre></li></ul><p>运行，查看效果：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-09%20%E4%B8%8B%E5%8D%889.47.25.png" alt=""></p><p>在本工程目录夹可查收…</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-09%20%E4%B8%8B%E5%8D%889.50.25.png" alt=""></p><hr><h2 id="最后总结"><a href="#最后总结" class="headerlink" title="最后总结"></a>最后总结</h2><p>代码还可以完善，比如可创建一个目录专门便于我们查收…</p><p>总之，还需要多多学习。</p><h2 id="修改添加目录程序"><a href="#修改添加目录程序" class="headerlink" title="修改添加目录程序"></a>修改添加目录程序</h2><pre><code>import requestsfrom bs4 import BeautifulSoupfrom urllib.request import urlretrieveimport os import time if __name__ == &apos;__main__&apos;:    #可先建立一个专门存放图片的目录文件夹    if &apos;images&apos; not in os.listdir():        os.makedirs(&apos;images&apos;)    print(&apos;建立目录夹完成，开始下载图片！&apos;)    # 一个专题8页..    for  num in range(1, 9):        if num == 1:            url = &apos;http://www.27270.com/ent/meinvtupian/2017/223643.html&apos;          else:            url = &apos;http://www.27270.com/ent/meinvtupian/2017/223643_%d.html&apos; % num        # 在此就不添加代理部分的了，添加可起到隐蔽的效果，在需要的场合应当添加上        re = requests.get(url=url)        # 之指定编码格式        re.encoding = &apos;GB2312&apos;        # 用beautiful模块解析,具体可查看文档内容        bf = BeautifulSoup(re.text, &apos;lxml&apos;)        # 一页一张，用find方法        bf_html = bf.find(&apos;div&apos;, class_=&apos;articleV4Body&apos;)        # 在创建的目录下保存！        urlretrieve(url=bf_html.img.get(&apos;src&apos;), filename=&apos;images/&apos;+bf_html.img.get(&apos;alt&apos;) + &apos;系列之%d.jpg&apos; % num)        # 一秒一个步骤实行代码        time.sleep(1)        print(&apos;开始下载第%d张&apos; % num)    print(&apos;下载完成，请查收...&apos;)</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt; 最近在学习&lt;em&gt;python3网络爬虫&lt;/em&gt;，看的是&lt;a href=&quot;http://blog.csdn.net/c406495762/article/details/72597755&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这位学长的博客&lt;/
-      
-    
-    </summary>
-    
-      <category term="学习" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="学习" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>麻木</title>
-    <link href="https://liujunjie11.github.io/2018/03/03/%E9%BA%BB%E6%9C%A8/"/>
-    <id>https://liujunjie11.github.io/2018/03/03/麻木/</id>
-    <published>2018-03-03T07:15:57.000Z</published>
-    <updated>2018-03-03T07:50:58.179Z</updated>
-    
-    <content type="html"><![CDATA[<p>新的学期开始了。</p><p>当我反思了自己在之前的一些所做所言，我开始了一股深深的愧疚感，我的理想到了哪里去了？我不愿做一个“偏激”的代言人之一，但是麻木亦然不可取。但我应该谨记在心里，不能忘记，更不能因为这现实的种种而丧失了我的初心，忘了我的理想，那我曾经认为的美好。</p><p>我是慢慢的变得麻木了，开始想要得安稳与胸无理想，开始想要的安于现状，这是多么的可怕。</p><p>人在一种环境当中总是或多或少的被影响一些的。如今的我想要一种平静，但那是一种可以应对自如的一种理性，而不是慢慢的陷于麻木的颓废。可能是我太舒服了，变得安于现状了，慢慢的麻木了，开始变得曾经的那些“不喜欢”了。</p><p>写着写着，突然想起来一句话：生于忧患，死于安乐。此时此刻的我对于这句话有了自己的更为深刻的认识。一个人活着应该是为了这个人类社会的忧患做出应有的努力。至少我是认同这样的一种观点的。我有些怀疑过这些许观点的必要性，为什么这样的一种观点会得到我的或者是说为什么会得到如今大部分人类的认同从而占据人类社会的主流思想呢？我认为这与人类道德中的“善”是相挂钩的，这与大部分人的期许相对应符合，大多数的人们都渴望有“平和”（“和谐”）的生活状态与“有教养”的人文社会。而我或许也是其中的一份子。</p><p>我曾经有过的一种强烈的理想：通过发明一种技术，从而造福整个人类，让人们生活的更好。</p><p>我也应当时时刻刻的记得自己的期许，有着自己的见解，有着自己的看法，而不是跟着“世俗”走，以免再一次变得“麻木”，我所认为的麻木。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;新的学期开始了。&lt;/p&gt;
-&lt;p&gt;当我反思了自己在之前的一些所做所言，我开始了一股深深的愧疚感，我的理想到了哪里去了？我不愿做一个“偏激”的代言人之一，但是麻木亦然不可取。但我应该谨记在心里，不能忘记，更不能因为这现实的种种而丧失了我的初心，忘了我的理想，那我曾经认为的美好。
-      
-    
-    </summary>
-    
-      <category term="成长" scheme="https://liujunjie11.github.io/categories/%E6%88%90%E9%95%BF/"/>
-    
-    
-      <category term="成长" scheme="https://liujunjie11.github.io/tags/%E6%88%90%E9%95%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>假期小记</title>
-    <link href="https://liujunjie11.github.io/2018/01/22/%E5%81%87%E6%9C%9F%E5%B0%8F%E8%AE%B0/"/>
-    <id>https://liujunjie11.github.io/2018/01/22/假期小记/</id>
-    <published>2018-01-22T10:36:27.000Z</published>
-    <updated>2018-01-23T09:33:21.122Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近总是想记一些东西，不过总是因为太懒就搁下了。</p><p>我谈恋爱了，是我喜欢的女孩。但是让我感觉有一些不靠谱，让我感觉到一场恋爱的开始是如此的容易…这是我没有想到的。她也喜欢我，我也喜欢她，一场恋爱就这样的开始了。我想开始一场恋爱也就如此而已，哈哈。</p><p>刚刚因为<em>iCloud</em>的一些事搁写了一下，现在继续。说到底<em>Apple</em>关于对于<em>iCloud</em>的宣布是对我有一些影响的，我对于自己的东西总是会有一些担心呢，哈哈。</p><p>我好久没怎么看三毛的书了，我以为我看了一本她的《三毛全集》就以为已将她的书都看完了，我发现还有一本她的书《送你一匹马》，依旧是从前的感觉，不过看的时候我的心情却是比从前平静的多了，但是，在其中带给我的感动总是满满的。</p><p>我如今觉得读书人读太多的书，或许是一种悲哀，一种赤裸裸的悲哀。难道不是吗，很多时候的可笑都是这一群自以为是的读书人做出来的。人都是矛盾的，这一点在读书人身上我却是更加的容易看到。读书人读书人，可笑的就是现在的我呢，哈哈。</p><p>这次放假的生活，也就像在学校一样的，吃喝拉玩睡等，不过玩和睡的比例却是大大的增加的了，哈哈。</p><p>突然的写着写着发现其实也没什么好写的了，不过是生活中的一些小小的记录。生活中的每一次清醒，我都会有一种极端的感觉，既然人生一场本来就是一无所有，我们现在做的却也不过是一场徒劳。不过有意义的总是在生活中的处处场景可以看到，我也一直相信，人生一场，意义是绝对存在的。</p><p>如今我更加的看重生活中的每一处，因为那是生活。我不过也就是一个学习者，我还要多多的学习，向生活学习。我自称学习者，刚刚写完这句话我又想笑了，哈哈。</p><p>算了算了。我发现如今的自己没有从前的那般的“热情记录”了，我变得不想说话在很多时候，其实说到底可能就是一种心态的体现而已。我不见得就是所谓的成长，有些东西随着时间的流逝有得有失，过着过着就变成今天这个样子了。</p><p>有时候总是想记一些东西，总是想写一些东西，有一种不写不舒服的感觉，有时候我觉得有一些欲望总是好的，特别是在这个无所事事的假期，我想我真的是懒得过分了过分了。</p><p>这一篇小记在此就结束了，想写的时候我会再来。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;最近总是想记一些东西，不过总是因为太懒就搁下了。&lt;/p&gt;
-&lt;p&gt;我谈恋爱了，是我喜欢的女孩。但是让我感觉有一些不靠谱，让我感觉到一场恋爱的开始是如此的容易…这是我没有想到的。她也喜欢我，我也喜欢她，一场恋爱就这样的开始了。我想开始一场恋爱也就如此而已，哈哈。&lt;/p&gt;
-&lt;p&gt;
-      
-    
-    </summary>
-    
-      <category term="生活 感悟" scheme="https://liujunjie11.github.io/categories/%E7%94%9F%E6%B4%BB-%E6%84%9F%E6%82%9F/"/>
-    
-    
-      <category term="生活 感悟" scheme="https://liujunjie11.github.io/tags/%E7%94%9F%E6%B4%BB-%E6%84%9F%E6%82%9F/"/>
     
   </entry>
   
