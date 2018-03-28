@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-03-28T02:48:35.030Z</updated>
+  <updated>2018-03-28T10:26:59.245Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于解决python中UnicodeDecodeError: &#39;ascii&#39; codec can&#39;t decode byte 0xe8 in position 67986: ordinal not in range(128)的问题</title>
+    <link href="https://liujunjie11.github.io/2018/03/28/%E5%85%B3%E4%BA%8E%E8%A7%A3%E5%86%B3python%E4%B8%ADUnicodeDecodeError-ascii-codec-can-t-decode-byte-0xe8-in-position-67986-ordinal-not-in-range-128-%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>https://liujunjie11.github.io/2018/03/28/关于解决python中UnicodeDecodeError-ascii-codec-can-t-decode-byte-0xe8-in-position-67986-ordinal-not-in-range-128-的问题/</id>
+    <published>2018-03-28T10:18:54.000Z</published>
+    <updated>2018-03-28T10:26:59.245Z</updated>
+    
+    <content type="html"><![CDATA[<p>在学习爬虫的过程中，在运行编者的代码时出现了<em>UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xe8 in position 67986: ordinal not in range(128)</em>的编码问题。</p><p>具体原因是因为程序默认的解析编码格式发生了冲突造成的，简单来说就是需要解析的内容与<em>API</em>程序默认的解析编码格式不同，所以才会出现如上的错误。</p><p>因为是打算用<em>python</em>解析<em>JS</em>文件，所以我就贴上我的解决方案了：</p><pre><code>ctx = node.compile(open(file, encoding=&apos;utf-8&apos;).read())</code></pre><blockquote><p>加上自行规定的解码格式即可。</p></blockquote><p><strong>解决来源于GitHub论坛…</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在学习爬虫的过程中，在运行编者的代码时出现了&lt;em&gt;UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xe8 in position 67986: ordinal not in range(128)&lt;/em&gt;的编码问题
+      
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="学习笔记" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>关于homebrew下载出现&quot;Error/go/version missing for  gotools resource!&quot;错误的解决方案</title>
@@ -522,34 +547,6 @@
 &lt;/ul&gt;
 &lt;p&gt;在学习&lt;em&gt;urlretrieve&lt;/em&gt;函数方法时，尝试了与&lt;em&gt;BeautifulSoup&lt;/em&gt;模块的结合编码。&lt;/p&gt;
 &lt;p&gt;在&lt;em&gt;request.bulid_opener()&lt;/em&gt;的一类函数方法
-      
-    
-    </summary>
-    
-      <category term="学习" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="学习" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于Charle的简单抓包操作</title>
-    <link href="https://liujunjie11.github.io/2018/03/06/%E5%85%B3%E4%BA%8ECharle%E7%9A%84%E7%AE%80%E5%8D%95%E6%8A%93%E5%8C%85%E6%93%8D%E4%BD%9C/"/>
-    <id>https://liujunjie11.github.io/2018/03/06/关于Charle的简单抓包操作/</id>
-    <published>2018-03-06T03:47:36.000Z</published>
-    <updated>2018-03-06T04:23:05.352Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>最近在看他人的博客学习<em>python3网络爬虫</em>的实战，看到了“抓包”的这个词，以前不知道…</p></blockquote><p>用的是<em>Macbook</em>，在网上搜索了一下，<em>Charle</em>好评多多，急忙到网上找了破解教程…（关于如何找到，可利用百度谷歌搜索关键词）</p><p>第一次用这个，啥都不会，基本操作也不会，摸索了一下，打算记录下来帮助需要的人。</p><h2 id="抓包的操作"><a href="#抓包的操作" class="headerlink" title="抓包的操作"></a>抓包的操作</h2><p>进入主界面先看看快捷键也是个不错的选择。如图：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-06%20%E4%B8%8B%E5%8D%8812.02.02.png" alt=""></p><blockquote><p>可以知道，与<em>Mac本机浏览器</em>的快捷键相似。</p></blockquote><p><em>New Session</em>即为打开一个新的界面。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-06%20%E4%B8%8B%E5%8D%8812.02.46.png" alt=""></p><p>点击<em>钢笔</em>图标，输入<em>URL</em>，自动开始抓包了。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-06%20%E4%B8%8B%E5%8D%8812.09.56.png" alt=""></p><hr><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-06%20%E4%B8%8B%E5%8D%8812.02.58.png" alt=""></p><p>查看相关的快捷键，定向查找<em>html</em>中格式，如<em>json</em>格式</p><ul><li><em>Find</em></li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-06%20%E4%B8%8B%E5%8D%8812.03.49.png" alt=""></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-06%20%E4%B8%8B%E5%8D%8812.03.59.png" alt=""></p><h2 id="系统代理配置"><a href="#系统代理配置" class="headerlink" title="系统代理配置"></a>系统代理配置</h2><ul><li>可以自动对目前系统中的一些<em>URL</em>进行抓包。</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-06%20%E4%B8%8B%E5%8D%8812.02.17.png" alt=""></p><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><ul><li>继续摸索中..听说功能很强大，网上的教程非常多，暂时用不到太多，简单的操作说明到处结束了。</li></ul><ul><li>一些可参考的教程：</li></ul><p><a href="https://www.jianshu.com/p/9822e3f28f0a" target="_blank" rel="external">可参考一</a></p><p><a href="http://blog.csdn.net/liulanghk/article/details/46342205" target="_blank" rel="external">可参考二</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;最近在看他人的博客学习&lt;em&gt;python3网络爬虫&lt;/em&gt;的实战，看到了“抓包”的这个词，以前不知道…&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;用的是&lt;em&gt;Macbook&lt;/em&gt;，在网上搜索了一下，&lt;em&gt;Charle&lt;/em&gt;好评多多，
       
     
     </summary>
