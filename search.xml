@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[关于homebrew下载出现"Error:go:version missing for gotools resource!"错误的解决方案.md]]></title>
-    <url>%2F2018%2F03%2F27%2F%E5%85%B3%E4%BA%8Ehomebrew%E4%B8%8B%E8%BD%BD%E5%87%BA%E7%8E%B0%22Error%3A%20go%3Aversion%20missing%20for%20%20gotools%20resource!%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%22%2F</url>
+    <title><![CDATA[关于homebrew下载出现"Error/go/version missing for gotools resource!"错误的解决方案]]></title>
+    <url>%2F2018%2F03%2F28%2F%E5%85%B3%E4%BA%8Ehomebrew%E4%B8%8B%E8%BD%BD%E5%87%BA%E7%8E%B0Error%3Ago%3Aversion%20missing%20for%20%20gotools%20resource!%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%2F</url>
     <content type="text"><![CDATA[最近用homebrew下载mongodb，发现出现了Error: go: version missing for “gotools” resource!的错误，试了几次都不行，最后在谷歌用英文搜索关键词在GitHub的一个论坛用相关的解决方案。 使用命令行 git -C “$(brew –repo)” fetch –tags 之后再次输入： brew update –force 最后再次用命令行brew install mongodb，发现已经能够正确成功下载了。]]></content>
       <categories>
         <category>学习笔记</category>

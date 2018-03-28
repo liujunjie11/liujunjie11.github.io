@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-03-27T12:55:28.659Z</updated>
+  <updated>2018-03-28T02:48:35.030Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>关于homebrew下载出现&quot;Error:go:version missing for  gotools resource!&quot;错误的解决方案.md</title>
-    <link href="https://liujunjie11.github.io/2018/03/27/%E5%85%B3%E4%BA%8Ehomebrew%E4%B8%8B%E8%BD%BD%E5%87%BA%E7%8E%B0%22Error:%20go:version%20missing%20for%20%20gotools%20resource!%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%22/"/>
-    <id>https://liujunjie11.github.io/2018/03/27/关于homebrew下载出现&quot;Error: go:version missing for  gotools resource!错误的解决方案&quot;/</id>
-    <published>2018-03-27T12:48:05.000Z</published>
-    <updated>2018-03-27T12:55:28.659Z</updated>
+    <title>关于homebrew下载出现&quot;Error/go/version missing for  gotools resource!&quot;错误的解决方案</title>
+    <link href="https://liujunjie11.github.io/2018/03/28/%E5%85%B3%E4%BA%8Ehomebrew%E4%B8%8B%E8%BD%BD%E5%87%BA%E7%8E%B0Error:go:version%20missing%20for%20%20gotools%20resource!%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>https://liujunjie11.github.io/2018/03/28/关于homebrew下载出现Error:go:version missing for  gotools resource!错误的解决方案/</id>
+    <published>2018-03-28T02:47:34.000Z</published>
+    <updated>2018-03-28T02:48:35.030Z</updated>
     
     <content type="html"><![CDATA[<p>最近用<em>homebrew</em>下载<em>mongodb</em>，发现出现了<em>Error: go: version missing for “gotools” resource!</em>的错误，试了几次都不行，最后在谷歌用英文搜索关键词在<em>GitHub</em>的一个论坛用相关的解决方案。</p><p><strong>使用命令行</strong></p><blockquote><p><strong>git -C “$(brew –repo)” fetch –tags</strong></p></blockquote><p>之后再次输入：</p><blockquote><p><strong>brew update –force</strong></p></blockquote><p>最后再次用命令行<em>brew install mongodb</em>，发现已经能够正确成功下载了。</p>]]></content>
     
