@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-03-28T10:26:59.245Z</updated>
+  <updated>2018-04-03T12:42:29.343Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac下的mysql安装以及相关的问题解决</title>
+    <link href="https://liujunjie11.github.io/2018/04/03/Mac%E4%B8%8B%E7%9A%84mysql%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
+    <id>https://liujunjie11.github.io/2018/04/03/Mac下的mysql安装以及相关的问题解决/</id>
+    <published>2018-04-03T11:48:48.000Z</published>
+    <updated>2018-04-03T12:42:29.343Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近因为学习到了爬虫的原因，存储数据需要<em>mysql</em>了，因为以前学习过其命令行，所以在之前安装过了，太久没用了，怎么开都不懂了，搞了几十分钟不想搞了，重新安装。下面记录下遇到的一些问题。</p><hr><h2 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h2><h3 id="第一种方法"><a href="#第一种方法" class="headerlink" title="第一种方法"></a>第一种方法</h3><p>进入官网下载对应<em>Mac</em>的<em>mysql</em>。</p><blockquote><p><a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="external">官网地址</a></p></blockquote><h3 id="第二种方法"><a href="#第二种方法" class="headerlink" title="第二种方法"></a>第二种方法</h3><p>直接用命令行<code>brew Install mysql</code>。</p><blockquote><p>前提是必须安装了<em>homebrew</em>。</p></blockquote><h2 id="配置以及开启过程"><a href="#配置以及开启过程" class="headerlink" title="配置以及开启过程"></a>配置以及开启过程</h2><h3 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h3><p>在手动安装正后一步记下默认的密码（如下图）。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-03%20%E4%B8%8B%E5%8D%888.34.15.png" alt=""></p><blockquote><p>即<strong>QeV.a&gt;zGa1m3</strong>为默认密码。</p></blockquote><p>在<em>偏好系统</em>中手动打开<em>mysql</em>应用。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-03%20%E4%B8%8B%E5%8D%888.34.36.png" alt=""></p><p>之后打开终端，为其配置。（命令行如下依次）</p><p><code>vi ~/bash_profile</code></p><p>进入按字母<em>i</em>进入编辑模式，输入：</p><p><code>export PATH=&quot;$PATH:/usr/local/mysql/bin&quot;</code></p><blockquote><p>在此可能有疑惑，为什么可以直接<code>mysql/bin</code>？因为在我们手动下载<br><em>mysql</em>之后系统已经自动的复制了一遍，并且将其名为<em>mysql</em>，如图在<em>/usr/local/</em>可找到。</p></blockquote><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-03%20%E4%B8%8B%E5%8D%888.18.02.png" alt=""></p><hr><p>接着输入相关的命令…这时已经配置好了，按下<em>esc</em>健进入命令行模式，输入<code>：wq</code>,推出。之后为了快速见效输入<code>source ~/bash_profile</code></p><h3 id="启动过程"><a href="#启动过程" class="headerlink" title="启动过程"></a>启动过程</h3><p>输入命令行<code>mysql -uroot -p</code>,提示输入刚刚的默认密码，进入到了<em>mysql</em>的编译界面之后，我们修改默认密码，输入代码<code>set PASSWORD =PASSWORD(&#39;123456&#39;);</code></p><blockquote><p><strong>其中的<em>123456</em>为新的密码。</strong></p></blockquote><p>之后为测试是否已经修改成功，输入<code>exit();</code>推出界面，输入命令行<code>mysql -uroot -p</code>,提示输入刚刚的新密码，成功进入编译界面。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-03%20%E4%B8%8B%E5%8D%888.32.00.png" alt=""></p><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p><strong>解决问题：ERROR 1045 (28000): Access denied for user ‘root’@’localhost’ (using password: YES)</strong></p><p>可参考：<a href="https://www.digitalocean.com/community/questions/setup-mysql-on-ubuntu-droplet-getting-error-error-1045-28000-access-denied-for-user-root-localhost-using-password-yes" target="_blank" rel="external">https://www.digitalocean.com/community/questions/setup-mysql-on-ubuntu-droplet-getting-error-error-1045-28000-access-denied-for-user-root-localhost-using-password-yes</a></p><p><strong>解决进程问题</strong></p><p>可参考：<a href="https://blog.csdn.net/liumaolincycle/article/details/51896592" target="_blank" rel="external">https://blog.csdn.net/liumaolincycle/article/details/51896592</a></p><h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>有时下载完之后也会出现上面的那个问题，我是通过重新启动电脑之后获得了解决。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;最近因为学习到了爬虫的原因，存储数据需要&lt;em&gt;mysql&lt;/em&gt;了，因为以前学习过其命令行，所以在之前安装过了，太久没用了，怎么开都不懂了，搞了几十分钟不想搞了，重新安装。下面记录下遇到的一些问题。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;安装过程&quot;&gt;&lt;a href=&quot;#安装
+      
+    
+    </summary>
+    
+      <category term="mysql" scheme="https://liujunjie11.github.io/categories/mysql/"/>
+    
+    
+      <category term="mysql" scheme="https://liujunjie11.github.io/tags/mysql/"/>
+    
+  </entry>
   
   <entry>
     <title>关于解决python中UnicodeDecodeError: &#39;ascii&#39; codec can&#39;t decode byte 0xe8 in position 67986: ordinal not in range(128)的问题</title>
@@ -71,7 +98,7 @@
     <link href="https://liujunjie11.github.io/2018/03/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%EF%BC%9A%E7%BA%BF%E6%80%A7%E8%A1%A8/"/>
     <id>https://liujunjie11.github.io/2018/03/26/数据结构与算法：线性表/</id>
     <published>2018-03-26T10:56:19.000Z</published>
-    <updated>2018-03-27T02:40:30.033Z</updated>
+    <updated>2018-04-03T12:29:47.274Z</updated>
     
     <content type="html"><![CDATA[<p>打算重新好好系统的学习数据结构了。这是开始。</p><p>因为概念已经是烂大街了，在此只记录下我用<em>java</em>或者是<em>python</em>实现相关功能的代码。</p><hr><h2 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h2><h3 id="java实现"><a href="#java实现" class="headerlink" title="java实现"></a>java实现</h3>]]></content>
     
@@ -258,9 +285,9 @@
     <link href="https://liujunjie11.github.io/2018/03/19/%E7%94%A8python%E5%8F%AF%E8%A7%86%E5%8C%96GitHub%E4%B8%8A%E7%9A%84java%E7%83%AD%E9%97%A8%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
     <id>https://liujunjie11.github.io/2018/03/19/用python可视化GitHub上的java热门开源项目/</id>
     <published>2018-03-19T08:36:14.000Z</published>
-    <updated>2018-03-22T03:09:33.035Z</updated>
+    <updated>2018-04-03T12:41:40.170Z</updated>
     
-    <content type="html"><![CDATA[<p>直接开始这个小项目吧。</p><ul><li>网页地址：<a href="https://api.github.com/search/repositories?q=language:java&amp;sort=stars" target="_blank" rel="external">https://api.github.com/search/repositories?q=language:java&amp;sort=stars</a></li></ul><blockquote><p>在这个网页中有相关的目前比较热门的开源项目（以<em>star</em>的数目来衡量），打开发现这是典型的<em>json</em>格式啊。</p></blockquote><h2 id="简单分析"><a href="#简单分析" class="headerlink" title="简单分析"></a>简单分析</h2><p>经过抓包可发现：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-19%20%E4%B8%8B%E5%8D%889.31.32.png" alt=""></p><p>即：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-19%20%E4%B8%8B%E5%8D%889.29.37.png" alt=""></p><blockquote><p>换一换就可知道所有编程语言目前比较热门的开源项目了。</p></blockquote><h2 id="python代码实现"><a href="#python代码实现" class="headerlink" title="python代码实现"></a>python代码实现</h2><pre><code>&apos;&apos;&apos;    函数目标：    将GitHub上的java热门的开源项目可视化    编写时间：    2018-3-19&apos;&apos;&apos;import requestsfrom matplotlib import pyplot as pltimport pygalfrom pygal.style import LightColorizedStyle as lcs, LightenStyle as lsif __name__ == &apos;__main__&apos;:    #添加代理配置    url = &apos;https://api.github.com/search/repositories&apos;    header = {&apos;User-Agent&apos;:&apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36&apos;,              &apos;Connection&apos;: &apos;keep-alive&apos;}    paramter = {&apos;q&apos;: &apos;language:java&apos;,              &apos;sort&apos;: &apos;stars&apos;}    re = requests.get(url=url, params=paramter, headers=header)    # 将网页转化为python字典即用json()函数方法才可显示与网页内容一致！    re.encoding = &apos;utf-8&apos;    js_cont = re.json()    item = js_cont[&apos;items&apos;]    star_count = []    names = []    full_names = []    for each in item:            star_count.append(each[&apos;stargazers_count&apos;])            names.append(each[&apos;name&apos;])            full_names.append(each[&apos;full_name&apos;])    # 添加高亮颜色    my_style = ls(&apos;#333366&apos;, base_style=lcs)    # 添加相关的设置    my_config = pygal.Config()    my_config.label_font_size = 28    bar_chart = pygal.Bar(config=my_config, style=my_style, x_label_rotation=60, show_legend=False)    bar_chart.add(&apos;&apos;, star_count)    bar_chart.title = &apos;Java  projects stars on Github&apos;    bar_chart.x_labels = names    # 保存至目录下的文件中    bar_chart.render_to_file(&apos;Java stars in Github.svg&apos;)</code></pre><blockquote><p>之中不懂的可利用好搜索引擎。有一些爬虫的知识。</p></blockquote><p>运行得到：</p><p><img src="file:///Users/junjieliu/eclipse-workspace/Py3_scarp1/src/Java%20stars%20in%20Github.svg" alt=""></p><blockquote><p>简单说说用<em>python</em>可视化的感受，比较喜欢用<em>python</em>，用的比较多，意味发现<em>pygal</em>这个库做的图很漂亮。</p></blockquote><h2 id="R代码实现"><a href="#R代码实现" class="headerlink" title="R代码实现"></a>R代码实现</h2><ul><li>说明：因为<em>R</em>的爬虫没怎么看，先用可视化…日后有时间爬虫写上…</li></ul><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><ul><li>参考：《python入门与实践》【美】Eric Matthes著</li></ul>]]></content>
+    <content type="html"><![CDATA[<p>直接开始这个小项目吧。</p><ul><li>网页地址：<a href="https://api.github.com/search/repositories?q=language:java&amp;sort=stars" target="_blank" rel="external">https://api.github.com/search/repositories?q=language:java&amp;sort=stars</a></li></ul><blockquote><p>在这个网页中有相关的目前比较热门的开源项目（以<em>star</em>的数目来衡量），打开发现这是典型的<em>json</em>格式啊。</p></blockquote><h2 id="简单分析"><a href="#简单分析" class="headerlink" title="简单分析"></a>简单分析</h2><p>经过抓包可发现：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-19%20%E4%B8%8B%E5%8D%889.31.32.png" alt=""></p><p>即：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-19%20%E4%B8%8B%E5%8D%889.29.37.png" alt=""></p><blockquote><p>换一换就可知道所有编程语言目前比较热门的开源项目了。</p></blockquote><h2 id="python代码实现"><a href="#python代码实现" class="headerlink" title="python代码实现"></a>python代码实现</h2><pre><code>&apos;&apos;&apos;    函数目标：    将GitHub上的java热门的开源项目可视化    编写时间：    2018-3-19&apos;&apos;&apos;import requestsfrom matplotlib import pyplot as pltimport pygalfrom pygal.style import LightColorizedStyle as lcs, LightenStyle as lsif __name__ == &apos;__main__&apos;:    #添加代理配置    url = &apos;https://api.github.com/search/repositories&apos;    header = {&apos;User-Agent&apos;:&apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36&apos;,              &apos;Connection&apos;: &apos;keep-alive&apos;}    paramter = {&apos;q&apos;: &apos;language:java&apos;,              &apos;sort&apos;: &apos;stars&apos;}    re = requests.get(url=url, params=paramter, headers=header)    # 将网页转化为python字典即用json()函数方法才可显示与网页内容一致！    re.encoding = &apos;utf-8&apos;    js_cont = re.json()    item = js_cont[&apos;items&apos;]    star_count = []    names = []    full_names = []    for each in item:            star_count.append(each[&apos;stargazers_count&apos;])            names.append(each[&apos;name&apos;])            full_names.append(each[&apos;full_name&apos;])    # 添加高亮颜色    my_style = ls(&apos;#333366&apos;, base_style=lcs)    # 添加相关的设置    my_config = pygal.Config()    my_config.label_font_size = 28    bar_chart = pygal.Bar(config=my_config, style=my_style, x_label_rotation=60, show_legend=False)    bar_chart.add(&apos;&apos;, star_count)    bar_chart.title = &apos;Java  projects stars on Github&apos;    bar_chart.x_labels = names    # 保存至目录下的文件中    bar_chart.render_to_file(&apos;Java stars in Github.svg&apos;)</code></pre><blockquote><p>之中不懂的可利用好搜索引擎。有一些爬虫的知识。</p></blockquote><p>运行得到：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-03%20%E4%B8%8B%E5%8D%888.36.33.png" alt=""></p><blockquote><p>简单说说用<em>python</em>可视化的感受，比较喜欢用<em>python</em>，用的比较多，意味发现<em>pygal</em>这个库做的图很漂亮。</p></blockquote><h2 id="R代码实现"><a href="#R代码实现" class="headerlink" title="R代码实现"></a>R代码实现</h2><ul><li>说明：因为<em>R</em>的爬虫没怎么看，先用可视化…日后有时间爬虫写上…</li></ul><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><ul><li>参考：《python入门与实践》【美】Eric Matthes著</li></ul>]]></content>
     
     <summary type="html">
     
@@ -526,35 +553,6 @@
     
     
       <category term="学习笔记" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于在学习python3网络爬虫模块时的易模糊点</title>
-    <link href="https://liujunjie11.github.io/2018/03/06/%E5%85%B3%E4%BA%8E%E5%9C%A8%E5%AD%A6%E4%B9%A0python3%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E6%A8%A1%E5%9D%97%E6%97%B6%E7%9A%84%E6%98%93%E6%A8%A1%E7%B3%8A%E7%82%B9/"/>
-    <id>https://liujunjie11.github.io/2018/03/06/关于在学习python3网络爬虫模块时的易模糊点/</id>
-    <published>2018-03-06T12:10:44.000Z</published>
-    <updated>2018-03-12T11:31:34.605Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li>两种代理格式</li></ul><p>在学习<em>urlretrieve</em>函数方法时，尝试了与<em>BeautifulSoup</em>模块的结合编码。</p><p>在<em>request.bulid_opener()</em>的一类函数方法中，如：</p><pre><code>headers = (&apos;User-Agent&apos;,&apos;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.94 Safari/537.36&apos;)# 安装openeropener = request.build_opener()# 添加代理opener.addheaders = [headers]# 使用临时的&apos;urlopen&apos;request.install_opener(opener)</code></pre><hr><p>而在有<em>requests.get(url=url,headers=headers…)</em>一类函数方法中，如：</p><pre><code>headers = {&apos;User-Agent&apos;:           &apos;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.94 Safari/537.36&apos;}    # 利用requests模块中的方法获取URL信息，加上我们的代理re = requests.get(url=url, headers=headers)</code></pre><blockquote><p><strong>比较两者易知，两者的代理规定与是否为字典形式有偏差。</strong></p></blockquote><ul><li><p>在利用<em>requests.get()</em>下载图片时</p><pre><code>re = requests.get(url=url)        #应当加上二进制的格式规定，避免不必要的错误麻烦   with open(&apos;美女图片.jpg&apos;,&apos;wb&apos;) as mntu:       for chunk in re.iter_content(chunk_size = 1024):            if chunk:                mntu.write(chunk)                mntu.flush()</code></pre></li></ul><blockquote><p>在查询相关的资料时，有<em>Stream=True</em>的参数说明要加入，但是加入之后却是错误显示。在<em>with</em>下面的<em>for chunk…</em>在下载图片时应当加入。<a href="https://stackoverflow.com/questions/16694907/how-to-download-large-file-in-python-with-requests-py" target="_blank" rel="external">为何要加入，在此可易知</a></p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ul&gt;
-&lt;li&gt;两种代理格式&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;在学习&lt;em&gt;urlretrieve&lt;/em&gt;函数方法时，尝试了与&lt;em&gt;BeautifulSoup&lt;/em&gt;模块的结合编码。&lt;/p&gt;
-&lt;p&gt;在&lt;em&gt;request.bulid_opener()&lt;/em&gt;的一类函数方法
-      
-    
-    </summary>
-    
-      <category term="学习" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="学习" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
