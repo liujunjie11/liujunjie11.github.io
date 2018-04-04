@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-04-03T12:58:55.064Z</updated>
+  <updated>2018-04-04T02:29:05.477Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python3爬取豆瓣Top250电影信息</title>
+    <link href="https://liujunjie11.github.io/2018/04/03/python3%E7%88%AC%E5%8F%96%E8%B1%86%E7%93%A3Top250%E7%94%B5%E5%BD%B1%E4%BF%A1%E6%81%AF/"/>
+    <id>https://liujunjie11.github.io/2018/04/03/python3爬取豆瓣Top250电影信息/</id>
+    <published>2018-04-03T14:09:36.000Z</published>
+    <updated>2018-04-04T02:29:05.477Z</updated>
+    
+    <content type="html"><![CDATA[<p>以下是通过正则表达式爬取的<em>猫眼电影</em>以及<em>豆瓣电影</em>的相关的电影信息的代码过程。</p><hr><h2 id="爬取猫眼电影"><a href="#爬取猫眼电影" class="headerlink" title="爬取猫眼电影"></a>爬取猫眼电影</h2><h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>打开<em>Chrome</em>的调试工具，可发现相关的信息都在，并且以翻页的形式来得到更多的电影信息。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-04%20%E4%B8%8A%E5%8D%8810.17.59.png" alt=""></p><blockquote><p>我们可通过其爬取需要的信息，利用正则表达式来进行文本的挖掘。</p></blockquote><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre><code>&apos;&apos;&apos;    函数目标：    爬取猫眼电影的top100信息    编写时间：    2018-03-28&apos;&apos;&apos;&apos;&apos;&apos;import requestsimport reimport jsonif __name__ == &apos;__main__&apos;:print(&apos;猫眼电影Top100信息如下：&apos;)#循环10次，得出页面上的Top100的电影信息for i in range(0, 10):    url = &quot;http://maoyan.com/board/4?&quot;    header = {            &apos;Host&apos;:&apos;maoyan.com&apos;,            &apos;Referer&apos;:&apos;http://maoyan.com/board/4?offset=20&apos;,            &apos;User-Agent&apos;:&apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36&apos;}    paramters = {            &apos;offset&apos;: i * 10}    request_tasget = requests.get(url=url, headers=header, params=paramters)    request_tasget.encoding = &apos;utf-8&apos;    # 实际上应该考虑考虑网的问题...连不上就一般没有数据返回了，找一个字符作为接口之后利用万能表达式即可    infos_list = re.findall(    r&apos;&lt;dd&gt;.*?board-index.*?&gt;(.*?)&lt;/i&gt;.*?alt.*?src=&quot;(.*?)&quot;.*?&lt;a.*?&gt;(.*?)&lt;/a&gt;.*?&quot;star&quot;&gt;(.*?)&lt;/p&gt;.*?&quot;releasetime&quot;&gt;(.*?)&lt;/p&gt;.*?&quot;integer&quot;&gt;(.*?)&lt;/i&gt;.*?&quot;fraction&quot;&gt;(.*?)&lt;/i&gt;&apos;,    request_tasget.text, re.S)  # @UndefinedVariable    #建立存储信息的字典    for each in infos_list:        yields = {                &apos;index&apos;:each[0],                &apos;image_info&apos;:each[1],                &apos;name&apos;:each[2],                &apos;actor&apos;:each[3].strip(),                &apos;time&apos;:each[4],                &apos;score&apos;:each[5] + each[6]                }        print(yields)</code></pre><h2 id="爬取豆瓣电影"><a href="#爬取豆瓣电影" class="headerlink" title="爬取豆瓣电影"></a>爬取豆瓣电影</h2><h3 id="分析-1"><a href="#分析-1" class="headerlink" title="分析"></a>分析</h3><p>与爬取猫眼电影信息一样，都是一样的，具体的差距还是在豆瓣上爬取信息需要<em>cookie</em>，具体可参考下面的代码。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-04%20%E4%B8%8A%E5%8D%8810.18.27.png" alt=""></p><h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><pre><code>&apos;&apos;&apos;    函数目标：    爬取豆瓣Top250的电影信息    编写时间：    2018-04-01&apos;&apos;&apos;import requestsimport re if __name__ == &apos;__main__&apos;:print(&apos;以下为豆瓣Top250的电影信息：&apos;)# 从页面可看到一共有十页，每页上有25个电影的信息for i in range(0, 10):    url = &quot;https://movie.douban.com/top250?&quot;    header = {            &apos;Connection&apos;: &apos;keep-alive&apos;,            &apos;Cookie&apos;: &apos;bid=x9ipkoKiQgw; _pk_ses.100001.4cf6=*; __utma=30149280.2001666009.1522587991.1522587991.1522587991.1; __utmb=30149280.0.10.1522587991; __utmc=30149280; __utmz=30149280.1522587991.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utma=223695111.1530785565.1522587991.1522587991.1522587991.1; __utmb=223695111.0.10.1522587991; __utmc=223695111; __utmz=223695111.1522587991.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); ll=&quot;118146&quot;; _vwo_uuid_v2=D575771A914BC38B3B7D081C0A0296FDC|939d8f7fdff1f383a97d572dab39fa1a; _pk_id.100001.4cf6=1de732c7ac4dc22b.1522587990.1.1522588516.1522587990.; ct=y&apos;,            &apos;Host&apos;: &apos;movie.douban.com&apos;,            &apos;Referer&apos;: &apos;https://movie.douban.com/top250?start=25&amp;filter=&apos;,            &apos;Upgrade-Insecure-Requests&apos;: &apos;1&apos;,            &apos;User-Agent&apos;: &apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36}&apos;             }    paramters = {             &apos;start&apos;: i * 25,             &apos;filter&apos;:&apos;&apos;              }    tasget = requests.get(url=url, headers=header, params=paramters)    tasget.encoding = &apos;utf-8&apos;    # 匹配正则表达式    infos = re.findall(r&apos;&lt;li&gt;.*?&lt;em class=&quot;&quot;&gt;(.*?)&lt;/em&gt;.*?alt=.*?src=&quot;(.*?)&quot;.*?&quot;title&quot;&gt;(.*?)&lt;/span&gt;.*?class=&quot;title&quot;&gt;&amp;nbsp;/&amp;nbsp;(.*?)&lt;/span&gt;.*?&quot;other&quot;&gt;&amp;nbsp;/&amp;nbsp;(.*?)&lt;/span&gt;.*?&lt;p class=&quot;&quot;&gt;(.*?)&amp;nbsp;&amp;nbsp;&amp;nbsp;(.*?)&lt;br&gt;(.*?)&amp;nbsp;/&amp;nbsp(.*?)&amp;nbsp;/&amp;nbsp(.*?)&lt;/p&gt;.*?average&quot;&gt;(.*?)&lt;/span&gt;&apos;, tasget.text, re.S)  # @UndefinedVariable    # 建立一个空字典用于存储相关的信息    for each in infos:        yields = {            &apos;index&apos;:each[0],  # 排名            &apos;img_info&apos;:each[1],  # 照片地址            &apos;name&apos;:each[2].strip() + &quot;/&quot; + each[3].strip() + &quot;/&quot; + each[4].strip(),  # 影片名称            &apos;director&apos;:each[5].strip(),  # 导演            &apos;actor&apos;:each[6],  # 演员            &apos;time_cy&apos;:each[7].strip() + each[8],  # 上演时间及地区            &apos;type&apos;:each[9].strip(),  # 影片类型            &apos;score&apos;:each[10]  # 评分            }        print(yields)</code></pre><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>简单说说其中的含义，表达式<code>.*?</code>是一个万能的匹配式，<code>(.*?)</code>是匹配想要爬取的内容，并且每一次伴随着一个索引号，每一个索引号对应着的信息不同。利用正则表达式可方便的进行文本与代码的分开挖掘，一般在写正则表达式时用<em>html</em>代码中的一些词来进行过渡就可以方便的写出来了。</p><blockquote><p>多说无益，还是需要自己来进行代码的测试了解的。</p></blockquote><ul><li>参考的博客：<a href="https://cuiqingcai.com" target="_blank" rel="external">https://cuiqingcai.com</a></li></ul><blockquote><p>可根据此博客来学习更多的爬虫知识。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;以下是通过正则表达式爬取的&lt;em&gt;猫眼电影&lt;/em&gt;以及&lt;em&gt;豆瓣电影&lt;/em&gt;的相关的电影信息的代码过程。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;爬取猫眼电影&quot;&gt;&lt;a href=&quot;#爬取猫眼电影&quot; class=&quot;headerlink&quot; title=&quot;爬取猫眼电影&quot;&gt;&lt;/a&gt;
+      
+    
+    </summary>
+    
+      <category term="python爬虫" scheme="https://liujunjie11.github.io/categories/python%E7%88%AC%E8%99%AB/"/>
+    
+    
+      <category term="python3爬虫" scheme="https://liujunjie11.github.io/tags/python3%E7%88%AC%E8%99%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>Mac下的mysql安装以及相关的问题解决</title>
@@ -527,32 +554,6 @@
     
     
       <category term="学习" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于计算机基础知识（一）</title>
-    <link href="https://liujunjie11.github.io/2018/03/08/%E5%85%B3%E4%BA%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89/"/>
-    <id>https://liujunjie11.github.io/2018/03/08/关于计算机基础知识（一）/</id>
-    <published>2018-03-08T00:56:07.000Z</published>
-    <updated>2018-03-08T02:09:56.897Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>平时有些兴趣想要了解一些关于<em>计算机</em>的基础知识，我就想着为何不将其作为一个笔记记录在博客上呢？以后想从事与<em>计算机</em>相关的工作，了解基本的<em>计算机知识</em>必不可少，因为时间，精力的有限，我会将一些认为重要的或者是必要的基础知识记录在此，打算作为一个系列在此展示了，希望能帮助更多的人。</p></blockquote><h2 id="编程语言知识：关于强类型语言与弱类型语言，语言的动静态区分以及解释性语言与编译性语言的理解"><a href="#编程语言知识：关于强类型语言与弱类型语言，语言的动静态区分以及解释性语言与编译性语言的理解" class="headerlink" title="编程语言知识：关于强类型语言与弱类型语言，语言的动静态区分以及解释性语言与编译性语言的理解"></a>编程语言知识：关于<em>强类型语言</em>与<em>弱类型语言</em>，语言的<em>动静态</em>区分以及<em>解释性语言</em>与<em>编译性语言</em>的理解</h2><blockquote><p>可以一张图大概的简单理解一下关于<em>强类型语言</em>与<em>弱类型语言</em>，语言的<em>动静态</em>（下图来源于参考一链接）</p></blockquote><p><img src="http://owudg3xs2.bkt.clouddn.com/1283539-31968e5f19abed4b.jpg" alt=""></p><blockquote><p>那么我们常见的语言分类：</p></blockquote><p><img src="http://owudg3xs2.bkt.clouddn.com/1283539-1820df734cf34260.png" alt=""></p><hr><ul><li>简单总结<em>强类型语言</em>与<em>弱类型语言</em>：</li></ul><ol><li><p>编译时前者需要赋予变量对应的数据类型，后者可不必必须。（如<em>c语言</em>与<em>python</em>的编译时）</p></li><li><p>前者需要改变数据类型时需要相关的函数方法强制改变，后者可忽略。（如在<em>c语言</em>强制要求更改类型时的<strong>（double）变量</strong>）</p></li></ol><ul><li>简单总结语言的<em>动静态</em>区别：</li></ul><ol><li><p><em>动态性语言</em>在编译器上编译时不提供代码数据类型的指错，仅仅是在运行时指出，而静态则是在编译器上编译时就提供代码数据类型的指错。（如<strong><em>int a=’a’;</em></strong>时编译器马上会在一旁提示错误时的便可理解为静态语言，如<em>c语言</em>）</p></li><li><p><em>动态性</em>较于<em>静态性</em>更具有严谨性，可读性。</p></li></ol><ul><li><em>解释性语言</em>与<em>编译性语言</em>的理解（因为在参考4的说明较为详细了，我就直接复制相关的内容好了…）</li></ul><p>首先，我们编程都是用的高级语言(写汇编和机器语言的大牛们除外)，计算机不能直接理解高级语言，只能理解和运行机器语言，所以必须要把高级语言翻译成机器语言，计算机才能运行高级语言所编写的程序。</p><p>说到翻译，其实翻译的方式有两种，一个是编译，一个是解释。两种方式只是翻译的时间不同。</p><p>用编译型语言写的程序执行之前，需要一个专门的编译过程，通过编译系统（不仅仅只是通过编译器，编译器只是编译系统的一部分）把高级语言翻译成机器语言（具体翻译过程可以参看下图），把源高级程序编译成为机器语言文件，比如windows下的exe文件。以后就可以直接运行而不需要编译了，因为翻译只做了一次，运行时不需要翻译，所以编译型语言的程序执行效率高，但也不能一概而论，部分解释型语言的解释器通过在运行时动态优化代码，甚至能够使解释型语言的性能超过编译型语言。<br><img src="http://owudg3xs2.bkt.clouddn.com/20131124170842718.png" alt=""></p><blockquote><p>一个完整的编译系统与 一个用C编写的程序hello.c的编译过程 </p></blockquote><p>解释则不同，解释型语言编写的程序不需要编译。解释型语言在运行的时候才翻译，比如VB语言，在执行的时候，专门有一个解释器能够将VB语言翻译成机器语言，每个语句都是执行的时候才翻译。这样解释型语言每执行一次就要翻译一次，效率比较低。</p><p>编译型与解释型，两者各有利弊。前者由于程序执行速度快，同等条件下对系统要求较低，因此像开发操作系统、大型应用程序、数据库系统等时都采用它，像C/C++、Pascal/Object Pascal（Delphi）等都是编译语言，而一些网页脚本、服务器脚本及辅助开发接口这样的对速度要求不高、对不同系统平台间的兼容性有一定要求的程序则通常使用解释性语言，如JavaScript、VBScript、Perl、Python、Ruby、MATLAB 等等。</p><p>但随着硬件的升级和设计思想的变革，编译型和解释型语言越来越笼统，主要体现在一些新兴的高级语言上，而解释型语言的自身特点也使得编译器厂商愿意花费更多成本来优化解释器，解释型语言性能超过编译型语言也是必然的。</p><ul><li><strong>以下更为详细的参考：</strong></li></ul><p><a href="https://www.jianshu.com/p/336f19772046" target="_blank" rel="external">参考1</a></p><p><a href="https://www.zhihu.com/question/19918532" target="_blank" rel="external">参考2</a></p><p><a href="https://zh.wikipedia.org/wiki/強弱型別" target="_blank" rel="external">参考3</a></p><p><a href="http://blog.csdn.net/zhu_xun/article/details/16921413" target="_blank" rel="external">参考4</a></p><h2 id="计算机基础知识推荐图书"><a href="#计算机基础知识推荐图书" class="headerlink" title="计算机基础知识推荐图书"></a>计算机基础知识推荐图书</h2><blockquote><p>一个日本相关行业人员的书籍系列，通俗易懂。在此分享。</p></blockquote><p><a href="https://pan.baidu.com/s/13OUBV9zvmBAY3eTMI6DlFg" target="_blank" rel="external">网络是怎样链接的</a></p><p><a href="https://pan.baidu.com/s/1XYR5uJasnrbBXY43hupA0w" target="_blank" rel="external">计算机是怎么跑起来的</a></p><p><a href="https://pan.baidu.com/s/1k9KAxONC5pd1qQAHRoEnAg" target="_blank" rel="external">程序是怎么跑起来的</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;平时有些兴趣想要了解一些关于&lt;em&gt;计算机&lt;/em&gt;的基础知识，我就想着为何不将其作为一个笔记记录在博客上呢？以后想从事与&lt;em&gt;计算机&lt;/em&gt;相关的工作，了解基本的&lt;em&gt;计算机知识&lt;/em&gt;必不可少，因为时间，精力的有限，我会将一些认为重要的
-      
-    
-    </summary>
-    
-      <category term="学习笔记" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="学习笔记" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
