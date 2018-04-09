@@ -92,7 +92,7 @@
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-08%20%E4%B8%8B%E5%8D%887.56.39.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-08%20%E4%B8%8B%E5%8D%888.24.11.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-08%20%E4%B8%8B%E5%8D%888.21.47.png">
-<meta property="og:updated_time" content="2018-04-09T03:52:54.664Z">
+<meta property="og:updated_time" content="2018-04-09T03:59:21.431Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python3爬虫：爬取淘宝商品信息的两种方法">
 <meta name="twitter:description" content="爬取淘宝信息：  1，可用selenium模块与driver Chrome插件自动化模拟爬取。 2， 进行抓包爬取。  下面一一进行介绍并且贴出实现代码。但是在此必须说明一下，因为时间有限，相关模块不懂的还需要自行搜索，在此不做教程解说，只提供分析思路与代码实现过程。  学习博客推荐：https://cuiqingcai.com，实际上我也是根据此博客学习到了一些知识，也是我参考学习的唯一博客。">
@@ -596,7 +596,8 @@ if __name__ == &apos;__main__&apos;:
                 &apos;shop_url&apos;:&apos;https://store.taobao.com/shop/view_shop.htm?user_number_id=&apos; + each[5]  # 店铺URL地址
                     }
             print(product)
-</code></pre><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>可以以此数据来进行一些数据分析等等。有时想尝试用各种方法去爬取，但是因为学的东西真的多，所以就不一一尝试了，尽量使用简便的方法…不懂的朋友还需要多多学习，利用好搜索引擎！当然看书也是必须的。</p>
+</code></pre><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>第二种方法期间原本以为可以先转化为<em>json格式</em>来进行处理，没想到发生了<strong>json.decoder.JSONDecodeError:</strong>的错误，结果改用正则表达式进行文本的挖掘，效率也是无形中得到了提升…在此我推荐用正则表达式来处理<em>json格式</em>的文档，这样在绝大多数情况下可能会有更高的效率！</p>
+<p>爬取到的数据可用来进行一些数据分析等等。有时想尝试用各种方法去爬取，但是因为学的东西真的多，所以就不一一尝试了，尽量使用简便的方法…不懂的朋友还需要多多学习，利用好搜索引擎！当然看书也是必须的。</p>
 
       
     </div>
