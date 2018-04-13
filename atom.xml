@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-04-09T03:59:21.431Z</updated>
+  <updated>2018-04-13T05:21:26.770Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于eclipse的风格与主题</title>
+    <link href="https://liujunjie11.github.io/2018/04/13/%E5%85%B3%E4%BA%8Eeclipse%E7%9A%84%E9%A3%8E%E6%A0%BC%E4%B8%8E%E4%B8%BB%E9%A2%98/"/>
+    <id>https://liujunjie11.github.io/2018/04/13/关于eclipse的风格与主题/</id>
+    <published>2018-04-13T04:56:03.000Z</published>
+    <updated>2018-04-13T05:21:26.770Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="eclipse的界面主题更换"><a href="#eclipse的界面主题更换" class="headerlink" title="eclipse的界面主题更换"></a><em>eclipse</em>的界面主题更换</h2><p>关于我的<em>eclipse</em>的界面主题更换（目前为<em>eclipse Oxygen</em>版本），在内置中已经可以作为一种选择了。</p><p>具体看图所示即可：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/4%E6%9C%88-13-2018%2013-07-55.gif" alt=""></p><blockquote><p>可供的选择有三种，其中的<em>dark</em>类型是比较护眼的，均可试试。</p></blockquote><p>实际的<em>dark</em>展示：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-13%20%E4%B8%8B%E5%8D%881.08.27.png" alt=""></p><hr><h2 id="eclipse代码风格更换"><a href="#eclipse代码风格更换" class="headerlink" title="eclipse代码风格更换"></a><em>eclipse</em>代码风格更换</h2><p>可参考此处：<a href="https://blog.csdn.net/zhouchangshi/article/details/37901519" target="_blank" rel="external">https://blog.csdn.net/zhouchangshi/article/details/37901519</a></p><blockquote><p>其中已经有了许多的并且详细的介绍了。</p></blockquote><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul><li>关于更换编译处的字体大小以及字体选择（如图）:</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/4%E6%9C%88-13-2018%2013-11-02.gif" alt=""></p><ul><li>关于控制台的字体更改以及选择（如图）:</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/4%E6%9C%88-13-2018%2013-10-41.gif" alt=""></p><hr><p><strong>参考：</strong></p><p><a href="https://jingyan.baidu.com/article/f96699bb9442f3894e3c1b15.html" target="_blank" rel="external">https://jingyan.baidu.com/article/f96699bb9442f3894e3c1b15.html</a></p><p><a href="https://blog.csdn.net/zhouchangshi/article/details/37901519" target="_blank" rel="external">https://blog.csdn.net/zhouchangshi/article/details/37901519</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;eclipse的界面主题更换&quot;&gt;&lt;a href=&quot;#eclipse的界面主题更换&quot; class=&quot;headerlink&quot; title=&quot;eclipse的界面主题更换&quot;&gt;&lt;/a&gt;&lt;em&gt;eclipse&lt;/em&gt;的界面主题更换&lt;/h2&gt;&lt;p&gt;关于我的&lt;em&gt;eclip
+      
+    
+    </summary>
+    
+      <category term="eclipse" scheme="https://liujunjie11.github.io/categories/eclipse/"/>
+    
+    
+      <category term="eclipse" scheme="https://liujunjie11.github.io/tags/eclipse/"/>
+    
+  </entry>
   
   <entry>
     <title>python3爬虫：爬取淘宝商品信息的两种方法</title>
@@ -527,35 +552,6 @@
     
     
       <category term="学习" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>学习python3网络爬虫的总结</title>
-    <link href="https://liujunjie11.github.io/2018/03/12/%E5%AD%A6%E4%B9%A0python3%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E7%9A%84%E6%80%BB%E7%BB%93/"/>
-    <id>https://liujunjie11.github.io/2018/03/12/学习python3网络爬虫的总结/</id>
-    <published>2018-03-12T11:01:41.000Z</published>
-    <updated>2018-03-13T13:18:32.382Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li>有时在爬取的过程中很慢，以至于没有什么反应，第一应当先检查网络连接的情况，网络带宽突然变得很慢亦是一个问题，遇到了好几次，以为程序出了问题，不想却是网络带宽问题…</li></ul><ul><li>在爬取动态网页中，学会利用抓包进行解决，分析每一个点以及对可以达到目的的每一点进行抓包分析，挖掘其中的信息。另外，在爬取网页信息中，有一些反爬虫的或者是必须加入一些参数代理才可得到需要的信息等，俊需要一个点一个步骤的去分析。</li></ul><ul><li><p>在爬取网页的过程中，编写代码时，检查代码的函数方法的准确性，少一个‘s’与多一个‘s’，都是让人头疼的问题。</p></li><li><p>在编写代码的过程中，追求最好的解决方案，习惯于用面向对象来编写代码，便于以后的学习。</p></li><li><p>编写爬虫代码，要让其像是一个浏览器一般的去爬取数据，所以代理之类的应当要严谨使用。</p></li><li><p>分析html信息，善于用<strong>正则表达式</strong>解决一些代码与文字的混合信息。</p></li><li><p>对URL的分析到位亦然很重要。</p></li><li><p>学会快速判断是否为动态网页。</p></li><li><p><em>python</em> 编程缩进很重要！！！！</p></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ul&gt;
-&lt;li&gt;有时在爬取的过程中很慢，以至于没有什么反应，第一应当先检查网络连接的情况，网络带宽突然变得很慢亦是一个问题，遇到了好几次，以为程序出了问题，不想却是网络带宽问题…&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;在爬取动态网页中，学会利用抓包进行解决，分析每一个点以及对
-      
-    
-    </summary>
-    
-      <category term="学习笔记" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="学习笔记" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
