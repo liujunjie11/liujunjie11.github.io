@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-04-13T05:21:26.770Z</updated>
+  <updated>2018-04-13T12:00:46.995Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于在eclipse中运行scrapy项目</title>
+    <link href="https://liujunjie11.github.io/2018/04/13/%E5%85%B3%E4%BA%8E%E5%9C%A8eclipse%E4%B8%AD%E8%BF%90%E8%A1%8Cscrapy%E9%A1%B9%E7%9B%AE/"/>
+    <id>https://liujunjie11.github.io/2018/04/13/关于在eclipse中运行scrapy项目/</id>
+    <published>2018-04-13T11:23:05.000Z</published>
+    <updated>2018-04-13T12:00:46.995Z</updated>
+    
+    <content type="html"><![CDATA[<p>关于在<em>eclipse</em>中运行爬虫<em>scrapy</em>框架的项目介绍如下。</p><blockquote><p><strong>scrapy官方文档：<a href="http://scrapy-chs.readthedocs.io/zh_CN/0.24/topics/shell.html" target="_blank" rel="external">http://scrapy-chs.readthedocs.io/zh_CN/0.24/topics/shell.html</a></strong></p></blockquote><p>首先打开终端将<code>cd</code>至<em>eclipse</em>目录下的（即<em>eclipse-workspace</em>），使用命令行<code>scrapy startproject tutorial</code>（其中的<em>tutorial</em>是自由选择的），之后会生成一个目录，将其目录移至一个<em>python工程</em>下。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-13%20%E4%B8%8B%E5%8D%887.49.25.png" alt=""></p><blockquote><p>如上图。</p></blockquote><p>在<em>spider</em>包下建立一个脚本文件（如上图我的那个<em>first</em>文件，名字随意），是用来写爬虫程序用的。之后在<em>tutorial</em>包下建立一个名为<em>cmdline</em>的脚本文件（名字随意）。</p><p>下面为了直接达到运行成功的目的，贴上测试用的代码。</p><p><strong>first.py中的代码：</strong></p><pre><code>import scrapyclass DmozSpider(scrapy.Spider):    name = &quot;first&quot; #此处很重要    allowed_domains = [&quot;dmoz.org&quot;]    start_urls = [        &quot;http://www.dmoz.org/Computers/Programming/Languages/Python/Books/&quot;,        &quot;http://www.dmoz.org/Computers/Programming/Languages/Python/Resources/&quot;    ]    def parse(self, response):        filename = response.url.split(&quot;/&quot;)[-2]        with open(filename, &apos;wb&apos;) as f:            f.write(response.body)</code></pre><p><strong>cmdline.py中的代码：</strong></p><pre><code>from scrapy.cmdline import executeif __name__ == &apos;__main__&apos;:    #第三个参数就是上方的first文件名！其他两个参数如下正常    execute(argv=[&apos;scrapy&apos;, &apos;crawl&apos;, &apos;first&apos;])</code></pre><p><strong>items.py中的代码：</strong></p><pre><code>import scrapyclass TutorialItem(scrapy.Item):    # define the fields for your item here like:    # name = scrapy.Field()    title = scrapy.Field()    link = scrapy.Field()    desc = scrapy.Field()</code></pre><blockquote><p>这个文件是与<em>first</em>文件有直接联系的。可参考官方文档介绍。</p></blockquote><h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><p>接下来直接运行<em>cmdline.py</em>可得出结果：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-13%20%E4%B8%8B%E5%8D%887.50.00.png" alt=""></p><hr><h2 id="配置调试"><a href="#配置调试" class="headerlink" title="配置调试"></a>配置调试</h2><p>直接看下面的图上解说吧。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-13%20%E4%B8%8B%E5%8D%887.46.09.png" alt=""></p><hr><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-13%20%E4%B8%8B%E5%8D%887.46.17.png" alt=""></p><blockquote><p>接下来点击debug。</p></blockquote><hr><p><strong>最终两者均可达到输出的效果！</strong></p><p>参考：</p><p><a href="https://blog.csdn.net/otengyue/article/details/48065841" target="_blank" rel="external">https://blog.csdn.net/otengyue/article/details/48065841</a></p><p><a href="http://www.cnblogs.com/v-BigdoG-v/p/7393601.html" target="_blank" rel="external">http://www.cnblogs.com/v-BigdoG-v/p/7393601.html</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;关于在&lt;em&gt;eclipse&lt;/em&gt;中运行爬虫&lt;em&gt;scrapy&lt;/em&gt;框架的项目介绍如下。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;scrapy官方文档：&lt;a href=&quot;http://scrapy-chs.readthedocs.io/zh_CN/
+      
+    
+    </summary>
+    
+      <category term="eclispe scrapy" scheme="https://liujunjie11.github.io/categories/eclispe-scrapy/"/>
+    
+    
+      <category term="eclispe scrapy" scheme="https://liujunjie11.github.io/tags/eclispe-scrapy/"/>
+    
+  </entry>
   
   <entry>
     <title>关于eclipse的风格与主题</title>
@@ -517,33 +544,6 @@
       
         &lt;p&gt;位于新加坡的&lt;a href=&quot;http://www.zaobao.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;联合早报&lt;/a&gt;是我几乎每天都会看的新闻网址，标题清晰明了，思路严谨踏实，是个好的新闻网站，值得推荐。不过却是被墙了…&lt;/p&gt;
 &lt;p&gt;今
-      
-    
-    </summary>
-    
-      <category term="学习" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="学习" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python3爬取动态网页图片</title>
-    <link href="https://liujunjie11.github.io/2018/03/12/python3%E7%88%AC%E5%8F%96%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E5%9B%BE%E7%89%87/"/>
-    <id>https://liujunjie11.github.io/2018/03/12/python3爬取动态网页图片/</id>
-    <published>2018-03-12T12:16:32.000Z</published>
-    <updated>2018-03-12T12:44:38.949Z</updated>
-    
-    <content type="html"><![CDATA[<p>爬取的<em>URL地址</em>:<a href="https://unsplash.com/" target="_blank" rel="external">https://unsplash.com/</a></p><blockquote><p>这是一个优美图片地址，往下拉就可以出来更多的图片，这显然是一个动态网页呀…</p></blockquote><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>关于详细分析以及我的参考可见：<a href="http://blog.csdn.net/c406495762/article/details/78123502" target="_blank" rel="external">http://blog.csdn.net/c406495762/article/details/78123502</a></p><blockquote><p><strong>因为分析方向一致，我就不在此说了，我跟这位博主的工具有一些出入，实际上用<em>Chrome</em>分析已经足够了。</strong></p></blockquote><p>##代码</p><p>这是我后来自己写的代码，比上面博主的简短一些，亦可参考参考。</p><pre><code>&apos;&apos;&apos;    函数目标：    爬取动态网页的图片&apos;&apos;&apos;import requestsimport jsonfrom urllib.request import urlretrieveimport osimport timeif __name__ == &apos;__main__&apos;:    url = &apos;https://unsplash.com/napi/feeds/home&apos;    &apos;&apos;&apos;    添加需要的代理:    authorization证书配置,有时网站需要此类的代理html信息才会出来...    json格式分析js页面的利器，有时用js渲染出来的页面，要注意观察其URL及相对准确的信息    &apos;&apos;&apos;    header = {&apos;user-agent&apos;:&apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36&apos;,            &apos;authorization&apos;:&apos;Client-ID c94869b36aa272dd62dfaeefed769d4115fb3189a9xxxxxxxxxxx&apos;}    re = requests.get(url=url, headers=header)    re.encoding = &apos;utf-8&apos;    # 通过分析易知一页有包括多张图片的ID链接，可用python的json格式处理解析    json_info = json.loads(re.text)    # 建立一个空的列表用于装ID信息    list_id = []    if &apos;优美图片集&apos; not in os.listdir():        os.makedirs(&apos;优美图片集&apos;)    for each in json_info[&apos;photos&apos;]:        list_id.append(each[&apos;id&apos;])    # 利用urlretrieve函数一一下载，设置延迟    for i in range(0, len(list_id)):        print(&apos;开始下载指定页面中的第%d张&apos; % (i + 1))        urlretrieve(url=&apos;https://unsplash.com/photos/&apos; + list_id[i] + &apos;/download?force=true.jpg&apos;, filename=&apos;优美图片集/&apos; + &apos;系列%d.jpg&apos; % i)    print(&apos;下载完成！请查收...&apos;)    </code></pre><blockquote><p>虽然说我的代码简短一点，不过我还是支持面对对象模式编程的，方便以后的学习，也是对自己的一种考验。</p></blockquote><p>运行之后在本工程目录可见：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-12%20%E4%B8%8B%E5%8D%888.16.51.png" alt=""></p><p>最后再补充说明一下：</p><p>每一次的拉取新的图片时，进行抓包，得知新的图片ID以及一个页面，通过分析此页面便可得到图片相关的信息，进而进行下载保存了（如下图）。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-12%20%E4%B8%8B%E5%8D%888.12.58.png" alt=""></p><hr><p>简单说说当时的情况，在参考了上面博主的分析过程后，利用了<em>Chrome下载器</em>的下载发现了图片的信息，然后我用<em>urlretrieve函数</em>单张下载的测试，发现成功了…附上代码。</p><pre><code>from urllib.request import urlretrieveif __name__ == &apos;__main__&apos;:    urlretrieve(&apos;https://unsplash.com/photos/NrflUuJJK0I/download?force=true.jpg&apos;, &apos;tu.jpg&apos;)         print(&apos;下载完成！&apos;)</code></pre><blockquote><p>不过从来都没有见过这种<em>src信息</em>…算是开了眼界，长了知识啦。</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;爬取的&lt;em&gt;URL地址&lt;/em&gt;:&lt;a href=&quot;https://unsplash.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://unsplash.com/&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;这是一个优美图片地址
       
     
     </summary>
