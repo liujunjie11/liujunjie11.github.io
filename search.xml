@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于Parallels Desktop13的简单使用]]></title>
+    <url>%2F2018%2F04%2F17%2F%E5%85%B3%E4%BA%8EParallels-Desktop13%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[Parallels Desktop13破解版的下载以及简单的操作可见：https://blog.csdn.net/weixin_41000111/article/details/79428402 本文仅仅是做一些补充。 关于新建一个虚拟机比如已经有了一个win系统的虚拟机，想建一个Linux的虚拟机。如下图所示，打开在右上角的Parallels Desktop的小图标，点击新建..即可。 之后的安装步骤会有点不一致，不过容易上手。 关于Parallels Desktop13的扩展功能打开在右上角的Parallels Desktop的小图标中的偏好设置，如下图所示下载Toolbox。打开之后发现会有许多的小工具，比如下方的视频下载工具可下载YouTube上的视频文件。更多的新功能可见官网：https://www.parallels.com/products/desktop/ 官网的介绍视频中有相关的详细介绍。 最后说说体验吧。与我之前用过的虚拟机软件VirtualBox相较，Parallels Desktop明显的运行起来比前者更为流畅，更为人性化一些，并且功能更为强大。]]></content>
+      <categories>
+        <category>Parallels Desktop</category>
+      </categories>
+      <tags>
+        <tag>Parallels Desktop</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于在eclipse中运行scrapy项目]]></title>
     <url>%2F2018%2F04%2F13%2F%E5%85%B3%E4%BA%8E%E5%9C%A8eclipse%E4%B8%AD%E8%BF%90%E8%A1%8Cscrapy%E9%A1%B9%E7%9B%AE%2F</url>
     <content type="text"><![CDATA[关于在eclipse中运行爬虫scrapy框架的项目介绍如下。 scrapy官方文档：http://scrapy-chs.readthedocs.io/zh_CN/0.24/topics/shell.html 首先打开终端将cd至eclipse目录下的（即eclipse-workspace），使用命令行scrapy startproject tutorial（其中的tutorial是自由选择的），之后会生成一个目录，将其目录移至一个python工程下。 如上图。 在spider包下建立一个脚本文件（如上图我的那个first文件，名字随意），是用来写爬虫程序用的。之后在tutorial包下建立一个名为cmdline的脚本文件（名字随意）。 下面为了直接达到运行成功的目的，贴上测试用的代码。 first.py中的代码： import scrapy class DmozSpider(scrapy.Spider): name = &quot;first&quot; #此处很重要 allowed_domains = [&quot;dmoz.org&quot;] start_urls = [ &quot;http://www.dmoz.org/Computers/Programming/Languages/Python/Books/&quot;, &quot;http://www.dmoz.org/Computers/Programming/Languages/Python/Resources/&quot; ] def parse(self, response): filename = response.url.split(&quot;/&quot;)[-2] with open(filename, &apos;wb&apos;) as f: f.write(response.body) cmdline.py中的代码： from scrapy.cmdline import execute if __name__ == &apos;__main__&apos;: #第三个参数就是上方的first文件名！其他两个参数如下正常 execute(argv=[&apos;scrapy&apos;, &apos;crawl&apos;, &apos;first&apos;]) items.py中的代码： import scrapy class TutorialItem(scrapy.Item): # define the fields for your item here like: # name = scrapy.Field() title = scrapy.Field() link = scrapy.Field() desc = scrapy.Field() 这个文件是与first文件有直接联系的。可参考官方文档介绍。 运行接下来直接运行cmdline.py可得出结果： 配置调试直接看下面的图上解说吧。 接下来点击debug。 最终两者均可达到输出的效果！ 参考： https://blog.csdn.net/otengyue/article/details/48065841 http://www.cnblogs.com/v-BigdoG-v/p/7393601.html]]></content>

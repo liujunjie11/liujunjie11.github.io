@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-04-13T12:00:46.995Z</updated>
+  <updated>2018-04-17T02:03:53.583Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于Parallels Desktop13的简单使用</title>
+    <link href="https://liujunjie11.github.io/2018/04/17/%E5%85%B3%E4%BA%8EParallels-Desktop13%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/"/>
+    <id>https://liujunjie11.github.io/2018/04/17/关于Parallels-Desktop13的简单使用/</id>
+    <published>2018-04-17T01:44:20.000Z</published>
+    <updated>2018-04-17T02:03:53.583Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p><strong>Parallels Desktop13破解版的下载以及简单的操作可见：<a href="https://blog.csdn.net/weixin_41000111/article/details/79428402" target="_blank" rel="external">https://blog.csdn.net/weixin_41000111/article/details/79428402</a></strong></p></blockquote><p>本文仅仅是做一些补充。</p><h2 id="关于新建一个虚拟机"><a href="#关于新建一个虚拟机" class="headerlink" title="关于新建一个虚拟机"></a>关于新建一个虚拟机</h2><p>比如已经有了一个<em>win</em>系统的虚拟机，想建一个<em>Linux</em>的虚拟机。如下图所示，打开在右上角的<em>Parallels Desktop</em>的小图标，点击<code>新建..</code>即可。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-17%20%E4%B8%8A%E5%8D%889.42.25.png" alt=""></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-17%20%E4%B8%8A%E5%8D%889.42.37.png" alt=""></p><blockquote><p>之后的安装步骤会有点不一致，不过容易上手。</p></blockquote><h2 id="关于Parallels-Desktop13的扩展功能"><a href="#关于Parallels-Desktop13的扩展功能" class="headerlink" title="关于Parallels Desktop13的扩展功能"></a>关于<em>Parallels Desktop13</em>的扩展功能</h2><p>打开在右上角的<em>Parallels Desktop</em>的小图标中的<em>偏好设置</em>，如下图所示下载<em>Toolbox</em>。打开之后发现会有许多的小工具，比如下方的视频下载工具可下载<em>YouTube</em>上的视频文件。更多的新功能可见官网：<strong><a href="https://www.parallels.com/products/desktop/" target="_blank" rel="external">https://www.parallels.com/products/desktop/</a></strong></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-17%20%E4%B8%8A%E5%8D%889.50.08.png" alt=""></p><p><img src="http://owudg3xs2.bkt.clouddn.com/4%E6%9C%88-17-2018%2010-01-17.gif" alt=""></p><blockquote><p>官网的介绍视频中有相关的详细介绍。</p></blockquote><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>说说体验吧。与我之前用过的虚拟机软件<em>VirtualBox</em>相较，<em>Parallels Desktop</em>明显的运行起来比前者更为流畅，更为人性化一些，并且功能更为强大。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Parallels Desktop13破解版的下载以及简单的操作可见：&lt;a href=&quot;https://blog.csdn.net/weixin_41000111/article/details/79428402&quot; target=&quot;
+      
+    
+    </summary>
+    
+      <category term="Parallels Desktop" scheme="https://liujunjie11.github.io/categories/Parallels-Desktop/"/>
+    
+    
+      <category term="Parallels Desktop" scheme="https://liujunjie11.github.io/tags/Parallels-Desktop/"/>
+    
+  </entry>
   
   <entry>
     <title>关于在eclipse中运行scrapy项目</title>
@@ -518,32 +544,6 @@
 &lt;p&gt;不懂的关键词可利用好搜索引擎。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;分
-      
-    
-    </summary>
-    
-      <category term="学习" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="学习" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用python3爬取新加坡联合早报新闻小视频</title>
-    <link href="https://liujunjie11.github.io/2018/03/14/%E7%94%A8python3%E7%88%AC%E5%8F%96%E6%96%B0%E5%8A%A0%E5%9D%A1%E8%81%94%E5%90%88%E6%97%A9%E6%8A%A5%E6%96%B0%E9%97%BB%E5%B0%8F%E8%A7%86%E9%A2%91/"/>
-    <id>https://liujunjie11.github.io/2018/03/14/用python3爬取新加坡联合早报新闻小视频/</id>
-    <published>2018-03-14T10:58:25.000Z</published>
-    <updated>2018-03-14T11:35:26.345Z</updated>
-    
-    <content type="html"><![CDATA[<p>位于新加坡的<a href="http://www.zaobao.com" target="_blank" rel="external">联合早报</a>是我几乎每天都会看的新闻网址，标题清晰明了，思路严谨踏实，是个好的新闻网站，值得推荐。不过却是被墙了…</p><p>今天看了这一篇文章：<a href="http://www.zaobao.com/realtime/china/story20180313-842407" target="_blank" rel="external">女记者提问冗长 人民大会堂部长通道出现“飙戏”一幕</a></p><blockquote><p>非常有意思，想收藏其中的视频，于是想到了用<em>python</em>爬取好了。</p></blockquote><p>这个新闻网站明显是一个动态网站啊，两种方式：</p><ul><li>第一种：通过抓包，如下可得知相关的<em>video</em>信息</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-14%20%E4%B8%8B%E5%8D%887.03.30.png" alt=""></p><ul><li>第二种：网站自带的连接</li></ul><p>如下操作，点击视频中<em>share</em>，可发现资源地址</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-14%20%E4%B8%8B%E5%8D%887.03.57.png" alt=""></p><blockquote><p>右上角的<em>share</em>。</p></blockquote><p>其中有地址信息。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-14%20%E4%B8%8B%E5%8D%887.04.10.png" alt=""></p><p>在获取的地址前加上<em>http:</em>简单测试一下:</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-14%20%E4%B8%8B%E5%8D%887.07.10.png" alt=""></p><blockquote><p>是正确的，网站真的很贴心呢～</p></blockquote><p>以刚刚的地址输入爬取下来的代码：</p><pre><code>from urllib.request import urlretrieve if __name__ == &apos;__main__&apos;:    print(&apos;开始下载...&apos;)    urlretrieve(url=&apos;http://players.brightcove.net/4802324430001/H1dr7zTWz_default/index.html?videoId=5750255765001.mp4&apos;, filename=&apos;两会小视频.mp4&apos;)    print(&apos;下载完成！&apos;)</code></pre><p><strong>结果：发现可在网上播放的视频下载之后却不能播放…占用的内存才几百kb…这一看就知道地址是错的…</strong></p><hr><p>经过上面网址播放的连接，再次进行抓包，打开相关的网页意外发现了<em>mp4格式</em>的连接：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-14%20%E4%B8%8B%E5%8D%887.28.05.png" alt=""></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-14%20%E4%B8%8B%E5%8D%887.30.37.png" alt=""></p><hr><p><strong>将此链接替换掉上面代码中的URL地址，发现可以了（如下图），完工。</strong></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-14%20%E4%B8%8B%E5%8D%887.31.51.png" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;位于新加坡的&lt;a href=&quot;http://www.zaobao.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;联合早报&lt;/a&gt;是我几乎每天都会看的新闻网址，标题清晰明了，思路严谨踏实，是个好的新闻网站，值得推荐。不过却是被墙了…&lt;/p&gt;
-&lt;p&gt;今
       
     
     </summary>
