@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[搭建Django开发环境]]></title>
+    <url>%2F2018%2F04%2F19%2F%E6%90%AD%E5%BB%BADjango%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%2F</url>
+    <content type="text"><![CDATA[老早就想将一些数据库里的数据来进行交互式的实现了，之前看了有主要的两种方法： 一是pyQt5这个库，结合Qt creator来进行完成。 另外就是通过网页形式来进行交互式的实现了。 在接触了前者之后发现学习的时间成本比较高一些，所以打算选择后者了… 安装在终端使用命令行：pip3 install Django 默认python3进行。python2:pip install Django。两者均会下载Django库的最新版本，亦可指定下载那个版本。 测试安装：在编译器中： import django # @UnresolvedImport if __name__ == &apos;__main__&apos;: print(django.get_version()) 在eclipse中会提示导入Django库找不到，但是运行是可以成功的，加上# @UnresolvedImport 让错误提示不再提示。 在终端，先打开python的编译环境，依次输入： import django print(django.get_version()) 以上两者均会输出下载的Django版本号。 测试Django运行项目建立cd 至编译器或者是IDE的开发环境的目录下，使用创建项目命令：django-admin startproject mysite（其中的mysite是项目名称）： 创建项目成功之后刷新在编译器的目录，我的是eclipse，可看到项目目录出来了： 测试在上面的基础下cd至新建的项目之下，启动主文件：python manage.py runserver，打开链接http://127.0.0.1:8000/ 出现了Django成功运行的网页： 最后 在eclipse中的导入Django提示错误，实际上运行无障碍。 详细可参考： https://docs.djangoproject.com/en/2.0/intro/tutorial01/ https://www.w3cschool.cn/django/dl5b8ozt.html]]></content>
+      <categories>
+        <category>Django</category>
+      </categories>
+      <tags>
+        <tag>Django</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于Parallels Desktop13的简单使用]]></title>
     <url>%2F2018%2F04%2F17%2F%E5%85%B3%E4%BA%8EParallels-Desktop13%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%2F</url>
     <content type="text"><![CDATA[Parallels Desktop13破解版的下载以及简单的操作可见：https://blog.csdn.net/weixin_41000111/article/details/79428402 本文仅仅是做一些补充。 关于新建一个虚拟机比如已经有了一个win系统的虚拟机，想建一个Linux的虚拟机。如下图所示，打开在右上角的Parallels Desktop的小图标，点击新建..即可。 之后的安装步骤会有点不一致，不过容易上手。 关于Parallels Desktop13的扩展功能打开在右上角的Parallels Desktop的小图标中的偏好设置，如下图所示下载Toolbox。打开之后发现会有许多的小工具，比如下方的视频下载工具可下载YouTube上的视频文件。更多的新功能可见官网：https://www.parallels.com/products/desktop/ 官网的介绍视频中有相关的详细介绍。 最后说说体验吧。与我之前用过的虚拟机软件VirtualBox相较，Parallels Desktop明显的运行起来比前者更为流畅，更为人性化一些，并且功能更为强大。]]></content>
