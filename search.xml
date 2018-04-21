@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于Jupyter Notebook的简单使用]]></title>
+    <url>%2F2018%2F04%2F21%2F%E5%85%B3%E4%BA%8EJupyter-Notebook%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[关于Jupyter Notebook的介绍就不在此多说了。 官网教程： https://jupyter-notebook.readthedocs.io/en/stable/notebook.html 直接开始介绍整个流程好了。 先下载Anaconda，里面有包含了现成的Jupyter Notebook，之后我们打开Anaconda客户端即可直接使用Jupyter Notebook了。 Anaconda官网：https://www.anaconda.com/download/#macos 其中有两个版本，选择需要的下载的版本与完成之后打开的Jupyter Notebook中的python版本是一致的。 打开客户端，进入Jupyter Notebook： 在Jupyter Notebook中新建一个文本： 接下来就是根据个人的需要来进行编码了，更多的功能暂时用不到，可参考上面的官网教程。 关于Ipython教程可参考：https://itacey.gitbooks.io/learning_ipython/content/第一章.html 关于在Mac中使用Jupyter Notebook编码时的快捷键可参考：https://www.jianshu.com/p/20f6a77dd23c]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[搭建Django开发环境]]></title>
     <url>%2F2018%2F04%2F19%2F%E6%90%AD%E5%BB%BADjango%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%2F</url>
     <content type="text"><![CDATA[老早就想将一些数据库里的数据来进行交互式的实现了，之前看了有主要的两种方法： 一是pyQt5这个库，结合Qt creator来进行完成。 另外就是通过网页形式来进行交互式的实现了。 在接触了前者之后发现学习的时间成本比较高一些，所以打算选择后者了… 安装在终端使用命令行：pip3 install Django 默认python3进行。python2:pip install Django。两者均会下载Django库的最新版本，亦可指定下载那个版本。 测试安装：在编译器中： import django # @UnresolvedImport if __name__ == &apos;__main__&apos;: print(django.get_version()) 在eclipse中会提示导入Django库找不到，但是运行是可以成功的，加上# @UnresolvedImport 让错误提示不再提示。 在终端，先打开python的编译环境，依次输入： import django print(django.get_version()) 以上两者均会输出下载的Django版本号。 测试Django运行项目建立cd 至编译器或者是IDE的开发环境的目录下，使用创建项目命令：django-admin startproject mysite（其中的mysite是项目名称）： 创建项目成功之后刷新在编译器的目录，我的是eclipse，可看到项目目录出来了： 测试在上面的基础下cd至新建的项目之下，启动主文件：python manage.py runserver，打开链接http://127.0.0.1:8000/ 出现了Django成功运行的网页： 最后 在eclipse中的导入Django提示错误，实际上运行无障碍。 详细可参考： https://docs.djangoproject.com/en/2.0/intro/tutorial01/ https://www.w3cschool.cn/django/dl5b8ozt.html]]></content>

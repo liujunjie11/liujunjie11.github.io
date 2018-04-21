@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-04-19T11:34:00.935Z</updated>
+  <updated>2018-04-21T12:58:52.962Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于Jupyter Notebook的简单使用</title>
+    <link href="https://liujunjie11.github.io/2018/04/21/%E5%85%B3%E4%BA%8EJupyter-Notebook%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/"/>
+    <id>https://liujunjie11.github.io/2018/04/21/关于Jupyter-Notebook的简单使用/</id>
+    <published>2018-04-21T12:37:03.000Z</published>
+    <updated>2018-04-21T12:58:52.962Z</updated>
+    
+    <content type="html"><![CDATA[<p>关于<em>Jupyter Notebook</em>的介绍就不在此多说了。</p><p>官网教程：</p><blockquote><p><a href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html" target="_blank" rel="external">https://jupyter-notebook.readthedocs.io/en/stable/notebook.html</a></p></blockquote><p>直接开始介绍整个流程好了。</p><p>先下载<em>Anaconda</em>，里面有包含了现成的<em>Jupyter Notebook</em>，之后我们打开<em>Anaconda</em>客户端即可直接使用<em>Jupyter Notebook</em>了。</p><blockquote><p><em>Anaconda</em>官网：<a href="https://www.anaconda.com/download/#macos" target="_blank" rel="external">https://www.anaconda.com/download/#macos</a></p><p>其中有两个版本，选择需要的下载的版本与完成之后打开的<em>Jupyter Notebook</em>中的<em>python</em>版本是一致的。</p></blockquote><p>打开客户端，进入<em>Jupyter Notebook</em>：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/4%E6%9C%88-21-2018%2020-55-27.gif" alt=""></p><p>在<em>Jupyter Notebook</em>中新建一个文本：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/4%E6%9C%88-21-2018%2020-55-59.gif" alt=""></p><p>接下来就是根据个人的需要来进行编码了，更多的功能暂时用不到，可参考上面的官网教程。</p><blockquote><p>关于<em>Ipython</em>教程可参考：<a href="https://itacey.gitbooks.io/learning_ipython/content/第一章.html" target="_blank" rel="external">https://itacey.gitbooks.io/learning_ipython/content/第一章.html</a></p><p>关于在<em>Mac</em>中使用<em>Jupyter Notebook</em>编码时的快捷键可参考：<a href="https://www.jianshu.com/p/20f6a77dd23c" target="_blank" rel="external">https://www.jianshu.com/p/20f6a77dd23c</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;关于&lt;em&gt;Jupyter Notebook&lt;/em&gt;的介绍就不在此多说了。&lt;/p&gt;
+&lt;p&gt;官网教程：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://jupyter-notebook.readthedocs.io/en/stable/notebo
+      
+    
+    </summary>
+    
+      <category term="python" scheme="https://liujunjie11.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="https://liujunjie11.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>搭建Django开发环境</title>
@@ -517,32 +545,6 @@
 &lt;p&gt;1比特 = 一个二进制位，只有0和1两种状态&lt;br&gt;  1字节 = 8 比特&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;1 Byte(B)＝8bi
-      
-    
-    </summary>
-    
-      <category term="学习笔记" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="学习笔记" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算机基础知识（二）：单核处理器、多核处理器、多处理器与多线程编程</title>
-    <link href="https://liujunjie11.github.io/2018/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9A%E5%8D%95%E6%A0%B8%E5%A4%84%E7%90%86%E5%99%A8%E3%80%81%E5%A4%9A%E6%A0%B8%E5%A4%84%E7%90%86%E5%99%A8%E3%80%81%E5%A4%9A%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%8E%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/"/>
-    <id>https://liujunjie11.github.io/2018/03/15/计算机基础知识（二）：单核处理器、多核处理器、多处理器与多线程编程/</id>
-    <published>2018-03-15T13:58:48.000Z</published>
-    <updated>2018-03-15T14:03:52.921Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>转载自：<a href="http://blog.csdn.net/zolalad/article/details/28393209" target="_blank" rel="external">http://blog.csdn.net/zolalad/article/details/28393209</a></p></blockquote><p><strong>一．进程、线程、单核处理器</strong></p><p>进程和线程都是操作系统的概念。进程是应用程序的执行实例，每个进程是由私有的虚拟地址空间、代码、数据和其它各种系统资源组成，即进程是操作系统进行资源分配的最小单元。进程在运行过程中创建的资源随着进程的终止而被销毁，所使用的系统资源在进程终止时被释放或关闭。</p><p>线程是进程内部的一个执行单元。系统创建好进程后，实际上就启动执行了该进程的主执行线程，主执行线程以函数地址形式，比如说main或WinMain函数，将程序的启动点提供给Windows系统。主执行线程终止了，进程也就随之终止。</p><p>每一个进程至少有一个主执行线程，它无需由用户去主动创建，是由系统自动创建的。用户根据需要在应用程序中创建其它线程，多个线程并发地运行于同一个进程中。一个进程中的所有线程都在该进程的虚拟地址空间中，共同使用这些虚拟地址空间、全局变量和系统资源，所以线程间的通讯非常方便，多线程技术的应用也较为广泛。</p><p>多线程可以实现并行处理，避免了某项任务长时间占用CPU时间。要说明的一点是，目前大多数的操作系统教材中的单处理器都是指的单核处理器。对于单核单处理器（CPU）的，为了运行所有这些线程，操作系统为每个独立线程安排一些CPU时间，操作系统以轮换方式向线程提供时间片，这就给人一种假象，好象这些线程都在同时运行。由此可见，如果两个非常活跃的线程为了抢夺对CPU的控制权，在线程切换时会消耗很多的CPU资源，反而会降低系统的性能。</p><p>最开始，线程只是用于分配单个处理器的处理时间的一种工具。但假如操作系统本身支持多个处理器，那么每个线程都可分配给一个不同的处理器，真正进入“并行运算”状态。从程序设计语言的角度看，多线程操作最有价值的特性之一就是程序员不必关心到底使用了多少个处理器，程序员只需将程序编写成多线程模式即可。程序在逻辑意义上被分割为数个线程；假如机器本身安装了多个处理器，那么程序会运行得更快，毋需作出任何特殊的调校。根据前面的论述，大家可能感觉线程处理非常简单。但必须注意一个问题：共享资源！如果有多个线程同时运行，而且它们试图访问相同的资源，就会遇到一个问题。举个例子来说，两个线程不能将信息同时发送给一台打印机。为解决这个问题，对那些可共享的资源来说（比如打印机），它们在使用期间必须进入锁定状态。所以一个线程可将资源锁定，在完成了它的任务后，再解开（释放）这个锁，使其他线程可以接着使用同样的资源。</p><p><strong>多线程是为了同步完成多项任务，不是为了提高运行效率，而是为了提高资源使用效率来提高系统的效率。线程是在同一时间需要完成多项任务的时候实现的。</strong></p><p>最简单的比喻多线程就像火车的每一节车厢，而进程则是火车。车厢离开火车是无法跑动的，同理火车也不可能只有一节车厢。多线程的出现就是为了提高效率。同时它的出现也带来了一些问题。</p><p><strong>注</strong>：单核处理器并不是一个长久以来存在的概念，在近年来多核心处理器逐步普及之后，单核心的处理器为了与双核和四核对应而提出。顾名思义处理器只有一个逻辑核心。</p><p><strong>二、多核处理器和多处理器的区别</strong></p><p>多核是指一个CPU有多个核心处理器，处理器之间通过CPU内部总线进行通讯。而多CPU是指简单的多个CPU工作在同一个系统上，多个CPU之间的通讯是通过主板上的总线进行的。从以上原理可知，N个核的CPU，要比N个CPU在一起的工作效率要高（单核性能一致的情况下）。</p><p><strong>三、 处理器结构对并发程序的影响</strong></p><p>对称多处理器是最主要的多核处理器架构。在这种架构中所有的CPU共享一条系统总线（BUS）来连接主存。而每一个核又有自己的一级缓存，相对于BUS对称分布[2]，如下图：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/20140509162415500.jpeg" alt=""></p><p>这种架构在并发程序设计中，大致会引来两个问题，一个是内存可见性，一个是Cache一致性流量。内存可见性属于并发安全的问题，Cache一致性流量引起的是性能上的问题。</p><p><strong>内存可见性</strong>：内存可见性在单处理器或单线程情况下是不会发生的。在一个单线程环境中，一个变量选写入值，然后在没有干涉的情况下读取这个变量，得到的值应该是修改过的值。但是在读和写不在同一个线程中的时候，情况却是不可以预料的。Core1和Core2可能会同时把主存中某个位置的值Load到自己的一级缓存中，而Core1修改了自己一级缓存中的值后，却不更新主存中的值，这样对于Core2来讲，永远看不到Core1对值的修改。在Java程序设计中，用锁，关键字volatile，CAS原子操作可以保证内存可见。</p><p><strong>Cache一致性问题</strong>：指的是在SMP结构中，Core1和Core2同时下载了主存中的值到自己的一级缓存中，Core1修改了值后，会通过总线让Core2中的值失效，Core2发现自己存的值失效后，会再通过总线从主存中得到新值。总线的通信能力是固定的，通过总线使各CPU的一级缓存值数据同步的流量过大，那么总线就会成瓶颈。这种影响属于性能上的影响，减小同步竞争就能减少一致性流量。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;转载自：&lt;a href=&quot;http://blog.csdn.net/zolalad/article/details/28393209&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/zola
       
     
     </summary>
