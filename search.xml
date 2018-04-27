@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于Mac的快捷键及fn键设置]]></title>
+    <url>%2F2018%2F04%2F27%2F%E5%85%B3%E4%BA%8EMac%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%8F%8Afn%E9%94%AE%E8%AE%BE%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[最近因为需要，就花了点时间看了一下。本文用于记录下一些常用的在Mac下的一些设置。 快捷键关于在认识Macbook的一些快捷键时，进入步骤：系统偏好设置 –&gt; 键盘–&gt;快捷键–&gt; 左边栏。一个一个都看看，发现快捷键系统的都在。 当然可根据需要自行更改。 fn健的设置按下fn健可显示F1～F12的按键，关于如何设置在特定的软件打开时无需按此就显示F1～F12的按键：系统偏好设置 –&gt; 键盘–&gt;快捷键–&gt;(fn)功能键–&gt;添加软件即可。在这之后会发现打开相应的软件之后，无需按下fn健即可显示出F1～F12的按键了。 关于设置文件的默认打开方式例子：右键打开一个文件，点击显示简介–&gt;打开方式–&gt;选择好想要默认打开用的软件–&gt;全部更改。再次打开此类型的文件均以选定的软件打开显示。 关闭软件通知有时用的破解软件经常提醒要更新…系统偏好设置 –&gt; 通知。里面设置停止通知即可。 最后如果有时发现没有相关的内容，可先重新启动，再次进行操作。不仅此类型的问题需要重新启动，只要是发现很系统奇怪跟往常不一致时均可通过重新启动来解决。 以后有需要用的上的再补上。 主要资料可参考Apple官网的说明即可。]]></content>
+      <categories>
+        <category>Mac教程笔记</category>
+      </categories>
+      <tags>
+        <tag>Mac教程笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于Jupyter Notebook的简单使用]]></title>
     <url>%2F2018%2F04%2F21%2F%E5%85%B3%E4%BA%8EJupyter-Notebook%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%2F</url>
     <content type="text"><![CDATA[关于Jupyter Notebook的介绍就不在此多说了。 官网教程： https://jupyter-notebook.readthedocs.io/en/stable/notebook.html 直接开始介绍整个流程好了。 先下载Anaconda，里面有包含了现成的Jupyter Notebook，之后我们打开Anaconda客户端即可直接使用Jupyter Notebook了。 Anaconda官网：https://www.anaconda.com/download/#macos 其中有两个版本，选择需要的下载的版本与完成之后打开的Jupyter Notebook中的python版本是一致的。 打开客户端，进入Jupyter Notebook： 在Jupyter Notebook中新建一个文本： 在创建了一个脚本文件之后的界面上的小图标各有不同的功能，可以自己点击一下就知道是怎么回事了，再不然可结合文档来进行操作即可。再者接下来就是根据个人的需要来进行编码了，更多的功能暂时用不到，可参考上面的官网教程。 关于Ipython教程可参考：https://itacey.gitbooks.io/learning_ipython/content/第一章.html 关于在Mac中使用Jupyter Notebook编码时的快捷键可参考：https://www.jianshu.com/p/20f6a77dd23c]]></content>

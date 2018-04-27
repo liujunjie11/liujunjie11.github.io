@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-04-21T13:43:33.581Z</updated>
+  <updated>2018-04-27T07:36:01.031Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于Mac的快捷键及fn键设置</title>
+    <link href="https://liujunjie11.github.io/2018/04/27/%E5%85%B3%E4%BA%8EMac%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%8F%8Afn%E9%94%AE%E8%AE%BE%E7%BD%AE/"/>
+    <id>https://liujunjie11.github.io/2018/04/27/关于Mac的快捷键及fn键设置/</id>
+    <published>2018-04-27T05:06:18.000Z</published>
+    <updated>2018-04-27T07:36:01.031Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近因为需要，就花了点时间看了一下。本文用于记录下一些常用的在<em>Mac</em>下的一些设置。</p><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>关于在认识<em>Macbook</em>的一些快捷键时，进入步骤：<code>系统偏好设置</code> –&gt; <code>键盘</code>–&gt;<code>快捷键</code>–&gt; <code>左边栏</code>。一个一个都看看，发现快捷键系统的都在。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/4%E6%9C%88-27-2018%2015-27-50.gif" alt=""></p><blockquote><p>当然可根据需要自行更改。</p></blockquote><h2 id="fn健的设置"><a href="#fn健的设置" class="headerlink" title="fn健的设置"></a>fn健的设置</h2><p>按下<em>fn</em>健可显示<code>F1</code>～<code>F12</code>的按键，关于如何设置在特定的软件打开时无需按此就显示<code>F1</code>～<code>F12</code>的按键：<code>系统偏好设置</code> –&gt; <code>键盘</code>–&gt;<code>快捷键</code>–&gt;<code>(fn)功能键</code>–&gt;添加软件即可。在这之后会发现打开相应的软件之后，无需按下<em>fn</em>健即可显示出<code>F1</code>～<code>F12</code>的按键了。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/4%E6%9C%88-27-2018%2015-28-06.gif" alt=""></p><h2 id="关于设置文件的默认打开方式"><a href="#关于设置文件的默认打开方式" class="headerlink" title="关于设置文件的默认打开方式"></a>关于设置文件的默认打开方式</h2><p>例子：右键打开一个文件，点击<code>显示简介</code>–&gt;<code>打开方式</code>–&gt;选择好想要默认打开用的软件–&gt;<code>全部更改</code>。再次打开此类型的文件均以选定的软件打开显示。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/4%E6%9C%88-27-2018%2015-28-21.gif" alt=""></p><h2 id="关闭软件通知"><a href="#关闭软件通知" class="headerlink" title="关闭软件通知"></a>关闭软件通知</h2><p>有时用的破解软件经常提醒要更新…<code>系统偏好设置</code> –&gt; <code>通知</code>。里面设置停止通知即可。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/4%E6%9C%88-27-2018%2015-28-39.gif" alt=""></p><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>如果有时发现没有相关的内容，可先重新启动，再次进行操作。不仅此类型的问题需要重新启动，只要是发现很系统奇怪跟往常不一致时均可通过重新启动来解决。</p><p>以后有需要用的上的再补上。</p><blockquote><p>主要资料可参考<em>Apple</em>官网的说明即可。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;最近因为需要，就花了点时间看了一下。本文用于记录下一些常用的在&lt;em&gt;Mac&lt;/em&gt;下的一些设置。&lt;/p&gt;
+&lt;h2 id=&quot;快捷键&quot;&gt;&lt;a href=&quot;#快捷键&quot; class=&quot;headerlink&quot; title=&quot;快捷键&quot;&gt;&lt;/a&gt;快捷键&lt;/h2&gt;&lt;p&gt;关于在认识&lt;em
+      
+    
+    </summary>
+    
+      <category term="Mac教程笔记" scheme="https://liujunjie11.github.io/categories/Mac%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Mac教程笔记" scheme="https://liujunjie11.github.io/tags/Mac%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>关于Jupyter Notebook的简单使用</title>
@@ -524,35 +550,6 @@
     
     
       <category term="python/R可视化" scheme="https://liujunjie11.github.io/tags/python-R%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算机基础知识（三）：带宽单位换算与存储单位换算</title>
-    <link href="https://liujunjie11.github.io/2018/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E5%B8%A6%E5%AE%BD%E5%8D%95%E4%BD%8D%E6%8D%A2%E7%AE%97%E4%B8%8E%E5%AD%98%E5%82%A8%E5%8D%95%E4%BD%8D%E6%8D%A2%E7%AE%97/"/>
-    <id>https://liujunjie11.github.io/2018/03/15/计算机基础知识（三）：带宽单位换算与存储单位换算/</id>
-    <published>2018-03-15T14:06:15.000Z</published>
-    <updated>2018-03-15T14:25:50.120Z</updated>
-    
-    <content type="html"><![CDATA[<p>位/比特（bit/b）：内存中最小的单位，二进制数序列中的一个0或一个1就是一比比特.</p><blockquote><p>1比特 = 一个二进制位，只有0和1两种状态<br>  1字节 = 8 比特</p></blockquote><p>1 Byte(B)＝8bit（位）<br>1KB＝1024Byte（字节）</p><ul><li>再来看看平时常见的下载参数：</li></ul><p><strong>Mbps：</strong>带宽单位，在 Mbps 单位中的“b”是指“Bit（位）</p><p><strong>MB/s：</strong>速度单位，其中的 B 是指“Byte（字节）</p><blockquote><p>其中1MB/s=8Mbps，下载工具一般以Bps计算，所以它们之间有8bit=1Byte的换算关系，一个字节，是由八位二进制位组成的，所以可解释一个200M的网，换算为字节，实际上仅仅极限速度能达到200/8=25M的速度。</p></blockquote><h2 id="存储单位的换算"><a href="#存储单位的换算" class="headerlink" title="存储单位的换算"></a>存储单位的换算</h2><p>计算机存储单位一般用bit、B、KB、MB、GB、TB、PB、EB、ZB、YB、BB、NB、DB……来表示，它们之间的关系是：<br>位 bit (比特)(Binary Digits)：存放一位二进制数，即 0 或 1，最小的存储单位。</p><p><strong>换算：</strong></p><p>字节byte：8个二进制位为一个字节(B)，最常用的单位。</p><p>1 Byte（B） = 8 bit</p><p>1 Kilo Byte（KB） = 1024B</p><p>1 Mega Byte（MB） = 1024 KB</p><p>1 Giga Byte （GB）= 1024 MB</p><p>1 Tera Byte（TB）= 1024 GB</p><p>1 Peta Byte（PB） = 1024 TB</p><p>1 Exa Byte（EB） = 1024 PB</p><p>1 Zetta Byte（ZB） = 1024 EB</p><p>1Yotta Byte（YB）= 1024 ZB</p><p>1 Bronto Byte（BB） = 1024 YB</p><p>1Nona Byte（NB）=1024 BB</p><p>1 Dogga Byte（DB）=1024 NB</p><p>1 Corydon Byte（CB）=1024DB</p><p>1 Xero Byte （XB）=1024CB</p><blockquote><p>进制单位全称及译音：</p><p>yotta，[尧]它， Y. 10^24，</p><p>zetta，[泽]它， Z. 10^21，</p><p>exa，[艾]可萨， E. 10^18，</p><p>peta，[拍]它， P. 10^15，</p><p>tera，[太]拉， T. 10^12，</p><p>giga，[吉]咖， G. 10^9，</p><p>mega，[兆]，M. 10^6</p></blockquote><ul><li><strong>b(bit)与B的认识</strong></li></ul><p>字节(B)是电脑中表示信息含义的最小单位，通常情况下一个ACSII码就是一个字节的空间来存放。而事实上电脑中还有比字节更小的单位，因为一个字节是由八个二进制位组成的，换一句话说，每个二进制位所占的空间才是电脑中最小的单位，我们把它称为位，也称比特（bit）。一个字节等于八位。人们之所以把字节称为电脑中表示信息含义的最小单位，是因为一位并不能表示我们现实生活中的一个相对完整的信息。</p><ul><li><strong>计算机储存单位的进率是1024而不是1000？</strong></li></ul><p>目前计算机都是二进制的，让它们计算单位，只有2的整数幂时才能非常方便计算机计算，因为电脑内部的电路工作有高电平和低电平两种状态.所以就用二进制来表示信号，(控制信号和数据)，以便计算机识别。而人习惯于使用10进制，所以存储器厂商们才用1000作进率。这样导致的后果就是实际容量要比标称容量少，不过这是合法的。1024是2的10次方，因为如果取大了，不接近10的整数次方，不方便人们计算；取小了，进率太低，单位要更多才能满足需求，所以取2的10次方正好。<br>计算实例：标称100GB的硬盘，其实际容量为100×1000×1000×1000字节/1024×1024×1024≈93.1GB<br>可见产品容量缩水只要满足计算的实际容量结果（上下误差应该在10%内）。</p><ul><li>参考：</li></ul><p><a href="https://baike.baidu.com/item/存储单位/3943356?fromtitle=计算机存储单位&amp;fromid=795305" target="_blank" rel="external">https://baike.baidu.com/item/存储单位/3943356?fromtitle=计算机存储单位&amp;fromid=795305</a></p><p><a href="https://www.jianshu.com/p/2b57116c27de" target="_blank" rel="external">https://www.jianshu.com/p/2b57116c27de</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;位/比特（bit/b）：内存中最小的单位，二进制数序列中的一个0或一个1就是一比比特.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;1比特 = 一个二进制位，只有0和1两种状态&lt;br&gt;  1字节 = 8 比特&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;1 Byte(B)＝8bi
-      
-    
-    </summary>
-    
-      <category term="学习笔记" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="学习笔记" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
