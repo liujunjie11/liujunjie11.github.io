@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-04-27T07:36:01.031Z</updated>
+  <updated>2018-04-29T13:26:28.269Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我对学习计算机基础的一些心得见解</title>
+    <link href="https://liujunjie11.github.io/2018/04/29/%E6%88%91%E5%AF%B9%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BF%83%E5%BE%97%E8%A7%81%E8%A7%A3/"/>
+    <id>https://liujunjie11.github.io/2018/04/29/我对学习计算机基础的一些心得见解/</id>
+    <published>2018-04-29T12:54:29.000Z</published>
+    <updated>2018-04-29T13:26:28.269Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近总是遇到了许多的瓶颈…即感觉认识的知道的太少了。</p><p>在前些天看到了一些关于<em>python</em>的优化内容之后，加上之前用<em>python</em>也有一段时间了，突然的感觉到一些基础细节才是最重要的，我意识到了<strong>这往往可能就是人与人技术之间的一个分水岭，也往往是突破瓶颈关键点，也往往能决定一个人技术的所在点。基础细节知识是能决定一个人能走多远的</strong></p><p>平时在写程序时不应满足于功能的实现，更加应当注意那些可优化的细节问题，就好比一个算法的时间复杂度与空间复杂度一样的，写的每一个程序(无论那种编程语言)均有可优化的最优解选择。在我平时因为涉及的数据规模不大，这种问题目前是看不出来的，如果运用到的是一个数据规模大的问题上，优化必然是重要的，不可或缺的。</p><p>平时想问题总是感觉能联想到的知识太少，回过头来看，发现自己对计算机的认识本来也不够全面(注意是全面！而非透彻！)。这往往也限制了我许多的想象，从而造成了我的瓶颈突出明显。</p><p>说了这么多，只是想说一个问题：<strong>计算机基础知识(包括编程基础知识)是能决定一个人技术的高度的。</strong>至少我现在就有这种感觉，写一个程序不应满足于功能的实现，更应探索最优解的选择。<strong>这往往就是技术<code>好</code>与<code>坏</code>的一个区分标准吧。</strong></p><p>关于如何学习以上说的基础知识，我有一些见解在此想要说明一下。</p><ul><li><p>知识尽量要了解全面，不能为了速度而一知半解的，那样只会浪费时间，最后还是什么都不知道。</p></li><li><p>有些知识可能会引起我们的好奇，想要进一步理解透彻(彻彻底底)，但是这其中却是有太多的知识链关联着的…这点我深有体会。如果顺着知识链步步了解，我们的确也能学习到许多的知识，但是最后会发现其实这些在我们实际需要中根本没有多大的作用，仅仅当时作为一种科普了，当然现在学习到的知识也是以后我们技术的一种铺垫，如果实在有兴趣就当我没说，兴趣是学习一种知识最好的引导。</p></li><li><p>有些是需要理解透彻的，有些(大部分)可能仅仅是需要了解一下就好的。</p></li><li><p>根据目前的需求来进行学习也是一种好的驱动力。</p></li><li><p>一些必要的基础知识是需要了解的，比如学习了计算机概论，那一般以后买电脑时就会有自己的一些见解了。学习了数据结构与算法基础之后，编程时就不会仅仅以达到目的而“不择手段”编写程序了，因为再学习了这些基础知识之后我们脑子里必然会有一些规则“约束”了。</p></li></ul><p>最后，我还是想说，对于底层的电路什么的那种我想我是不愿也是不情愿接触的…</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;最近总是遇到了许多的瓶颈…即感觉认识的知道的太少了。&lt;/p&gt;
+&lt;p&gt;在前些天看到了一些关于&lt;em&gt;python&lt;/em&gt;的优化内容之后，加上之前用&lt;em&gt;python&lt;/em&gt;也有一段时间了，突然的感觉到一些基础细节才是最重要的，我意识到了&lt;strong&gt;这往往可能就是人与
+      
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="学习笔记" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python3爬虫与GUI：一个简易的搜索实用小工具</title>
+    <link href="https://liujunjie11.github.io/2018/04/28/python3%E7%88%AC%E8%99%AB%E4%B8%8EGUI%EF%BC%9A%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%9A%84%E6%90%9C%E7%B4%A2%E5%AE%9E%E7%94%A8%E5%B0%8F%E5%B7%A5%E5%85%B7/"/>
+    <id>https://liujunjie11.github.io/2018/04/28/python3爬虫与GUI：一个简易的搜索实用小工具/</id>
+    <published>2018-04-28T02:31:30.000Z</published>
+    <updated>2018-04-28T02:31:30.200Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>关于Mac的快捷键及fn键设置</title>
@@ -497,59 +537,6 @@
     
     
       <category term="学习笔记" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>理解多线程编程</title>
-    <link href="https://liujunjie11.github.io/2018/03/20/%E7%90%86%E8%A7%A3%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/"/>
-    <id>https://liujunjie11.github.io/2018/03/20/理解多线程编程/</id>
-    <published>2018-03-20T08:37:17.000Z</published>
-    <updated>2018-03-20T08:58:49.769Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近想研究研究什么是<em>多线程编程</em>的问题。简单了解了一下之后发现原来我对其的理解都错了…把<em>面对对象编程</em>活生生的说成了<em>多线程</em>…唉，从前文中的”口误“就…</p><h2 id="多线程与多进程"><a href="#多线程与多进程" class="headerlink" title="多线程与多进程"></a>多线程与多进程</h2><p>简单理解这两个一下：</p><ul><li><p><strong>多进程：可先理解为一个应用程序，如我们的上网用的浏览器。</strong></p></li><li><p><strong>多线程：多线程就是我们浏览器中的各种小工具，如刷新功能与新开一个标签页的功能就是两个在其中的线程。</strong></p></li></ul><blockquote><p><strong>多个进程是分开的两个应用程序，就像QQ和微信两者就是毫不相干的两个应用程序。多线程就是两个应用程序之中的多个可同时运用的小工具。</strong></p></blockquote><h2 id="多线程编程"><a href="#多线程编程" class="headerlink" title="多线程编程"></a>多线程编程</h2><p>再来看看<em>多线程编程</em>。</p><p>平时我们写程序，会将整个代码构建出各种方法函数，各有各的实现意图，以便在主类当中直接调用，最终实现目标整体意愿。</p><blockquote><p><strong>而多线程编程就是可同时在主类中调用两个或者是多个实现意图不同的方法函数，并且一同被编译器/解释器运行出结果。就成了一个多线程的问题…多线程多线程，就是能将两个或者是多个不同的方法同时运行出结果。</strong>至于是编译器还是解释器得分是什么语言了。</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;最近想研究研究什么是&lt;em&gt;多线程编程&lt;/em&gt;的问题。简单了解了一下之后发现原来我对其的理解都错了…把&lt;em&gt;面对对象编程&lt;/em&gt;活生生的说成了&lt;em&gt;多线程&lt;/em&gt;…唉，从前文中的”口误“就…&lt;/p&gt;
-&lt;h2 id=&quot;多线程与多进程&quot;&gt;&lt;a href=&quot;#多线程与多
-      
-    
-    </summary>
-    
-      <category term="学习笔记" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="学习笔记" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用python/R可视化GitHub上的java热门开源项目</title>
-    <link href="https://liujunjie11.github.io/2018/03/19/%E7%94%A8python%E5%8F%AF%E8%A7%86%E5%8C%96GitHub%E4%B8%8A%E7%9A%84java%E7%83%AD%E9%97%A8%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
-    <id>https://liujunjie11.github.io/2018/03/19/用python可视化GitHub上的java热门开源项目/</id>
-    <published>2018-03-19T08:36:14.000Z</published>
-    <updated>2018-04-03T12:41:40.170Z</updated>
-    
-    <content type="html"><![CDATA[<p>直接开始这个小项目吧。</p><ul><li>网页地址：<a href="https://api.github.com/search/repositories?q=language:java&amp;sort=stars" target="_blank" rel="external">https://api.github.com/search/repositories?q=language:java&amp;sort=stars</a></li></ul><blockquote><p>在这个网页中有相关的目前比较热门的开源项目（以<em>star</em>的数目来衡量），打开发现这是典型的<em>json</em>格式啊。</p></blockquote><h2 id="简单分析"><a href="#简单分析" class="headerlink" title="简单分析"></a>简单分析</h2><p>经过抓包可发现：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-19%20%E4%B8%8B%E5%8D%889.31.32.png" alt=""></p><p>即：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-19%20%E4%B8%8B%E5%8D%889.29.37.png" alt=""></p><blockquote><p>换一换就可知道所有编程语言目前比较热门的开源项目了。</p></blockquote><h2 id="python代码实现"><a href="#python代码实现" class="headerlink" title="python代码实现"></a>python代码实现</h2><pre><code>&apos;&apos;&apos;    函数目标：    将GitHub上的java热门的开源项目可视化    编写时间：    2018-3-19&apos;&apos;&apos;import requestsfrom matplotlib import pyplot as pltimport pygalfrom pygal.style import LightColorizedStyle as lcs, LightenStyle as lsif __name__ == &apos;__main__&apos;:    #添加代理配置    url = &apos;https://api.github.com/search/repositories&apos;    header = {&apos;User-Agent&apos;:&apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36&apos;,              &apos;Connection&apos;: &apos;keep-alive&apos;}    paramter = {&apos;q&apos;: &apos;language:java&apos;,              &apos;sort&apos;: &apos;stars&apos;}    re = requests.get(url=url, params=paramter, headers=header)    # 将网页转化为python字典即用json()函数方法才可显示与网页内容一致！    re.encoding = &apos;utf-8&apos;    js_cont = re.json()    item = js_cont[&apos;items&apos;]    star_count = []    names = []    full_names = []    for each in item:            star_count.append(each[&apos;stargazers_count&apos;])            names.append(each[&apos;name&apos;])            full_names.append(each[&apos;full_name&apos;])    # 添加高亮颜色    my_style = ls(&apos;#333366&apos;, base_style=lcs)    # 添加相关的设置    my_config = pygal.Config()    my_config.label_font_size = 28    bar_chart = pygal.Bar(config=my_config, style=my_style, x_label_rotation=60, show_legend=False)    bar_chart.add(&apos;&apos;, star_count)    bar_chart.title = &apos;Java  projects stars on Github&apos;    bar_chart.x_labels = names    # 保存至目录下的文件中    bar_chart.render_to_file(&apos;Java stars in Github.svg&apos;)</code></pre><blockquote><p>之中不懂的可利用好搜索引擎。有一些爬虫的知识。</p></blockquote><p>运行得到：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-03%20%E4%B8%8B%E5%8D%888.36.33.png" alt=""></p><blockquote><p>简单说说用<em>python</em>可视化的感受，比较喜欢用<em>python</em>，用的比较多，意味发现<em>pygal</em>这个库做的图很漂亮。</p></blockquote><h2 id="R代码实现"><a href="#R代码实现" class="headerlink" title="R代码实现"></a>R代码实现</h2><ul><li>说明：因为<em>R</em>的爬虫没怎么看，先用可视化…日后有时间爬虫写上…</li></ul><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><ul><li>参考：《python入门与实践》【美】Eric Matthes著</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;直接开始这个小项目吧。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;网页地址：&lt;a href=&quot;https://api.github.com/search/repositories?q=language:java&amp;amp;sort=stars&quot; target=&quot;_blank&quot; rel=&quot;ex
-      
-    
-    </summary>
-    
-      <category term="可视化" scheme="https://liujunjie11.github.io/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
-    
-    
-      <category term="python/R可视化" scheme="https://liujunjie11.github.io/tags/python-R%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     
   </entry>
   
