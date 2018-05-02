@@ -495,6 +495,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python-GUI学习/" itemprop="url" rel="index">
+                    <span itemprop="name">python-GUI学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -535,8 +557,21 @@
       
         
           
-          
-          
+          平时在获取爬虫之后，会不满足于仅仅得到了结果，而是想经过一个交互式的界面来进一步的完善，获取更多的功能，从而可以更好的展示数据。
+下面运用了python的pyqt5库来进行GUI的设计。
+用pyqt5这个库实现简单的界面化有两种方法：
+
+编写代码(一般为几十行代码足够了)。
+
+结合QT Creator来进行界面设计，加入信号与槽的机制，槽这一方面还是需要编写相应的几行代码。
+
+
+
+下面一一进行简单的介绍。
+
+代码编写方式假设我已经利用爬虫写出来了百度百科，维基百科的接口的代码程序，接下来仅仅需要设计好界面，再者之后利用好信号与槽的机制将接口代码与界面相连接即可完成一个简易的搜索实用小工具了。
+
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/04/28/python3爬虫与GUI：一个简易的搜索实用小工具/#more" rel="contents">
@@ -1999,7 +2034,7 @@ selenium.common.exceptions.WebDriverException: Message:  ‘chromedriver ‘ exe
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">40</span>
+                <span class="site-state-item-count">41</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -2010,7 +2045,7 @@ selenium.common.exceptions.WebDriverException: Message:  ‘chromedriver ‘ exe
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">44</span>
+                <span class="site-state-item-count">45</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
