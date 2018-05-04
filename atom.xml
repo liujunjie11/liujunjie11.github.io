@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-05-02T13:18:47.590Z</updated>
+  <updated>2018-05-04T11:20:25.483Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据结构与算法书籍资源共享</title>
+    <link href="https://liujunjie11.github.io/2018/05/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E4%B9%A6%E7%B1%8D%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%AB/"/>
+    <id>https://liujunjie11.github.io/2018/05/04/数据结构与算法书籍资源共享/</id>
+    <published>2018-05-04T11:15:05.000Z</published>
+    <updated>2018-05-04T11:20:25.483Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>计算机程序设计艺术(卷1～卷四全)：</li></ul><blockquote><p><a href="https://pan.baidu.com/s/1922E16LZR0iXZHZQCgsbLg" target="_blank" rel="external">https://pan.baidu.com/s/1922E16LZR0iXZHZQCgsbLg</a></p></blockquote><ul><li>算法导论(第三版)：</li></ul><blockquote><p><a href="https://pan.baidu.com/s/1XqAeeJx803rcVCx7QMA62g" target="_blank" rel="external">https://pan.baidu.com/s/1XqAeeJx803rcVCx7QMA62g</a></p></blockquote><p>以上资源来于网络，感谢默默分享的人们！</p><p>还有一些其他的金典书籍，我都没怎么看啊..</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;计算机程序设计艺术(卷1～卷四全)：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://pan.baidu.com/s/1922E16LZR0iXZHZQCgsbLg&quot; target=&quot;_blank&quot; rel=&quot;extern
+      
+    
+    </summary>
+    
+      <category term="书籍" scheme="https://liujunjie11.github.io/categories/%E4%B9%A6%E7%B1%8D/"/>
+    
+    
+      <category term="书籍" scheme="https://liujunjie11.github.io/tags/%E4%B9%A6%E7%B1%8D/"/>
+    
+  </entry>
   
   <entry>
     <title>计算机网络知识总结</title>
@@ -528,31 +557,6 @@
     
     
       <category term="可视化 爬虫" scheme="https://liujunjie11.github.io/tags/%E5%8F%AF%E8%A7%86%E5%8C%96-%E7%88%AC%E8%99%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于anaconda2与anaconda3两个版本的共存问题</title>
-    <link href="https://liujunjie11.github.io/2018/03/21/%E5%85%B3%E4%BA%8Eanaconda2%E4%B8%8Eanaconda3%E4%B8%A4%E4%B8%AA%E7%89%88%E6%9C%AC%E7%9A%84%E5%85%B1%E5%AD%98%E9%97%AE%E9%A2%98/"/>
-    <id>https://liujunjie11.github.io/2018/03/21/关于anaconda2与anaconda3两个版本的共存问题/</id>
-    <published>2018-03-21T03:03:01.000Z</published>
-    <updated>2018-03-22T08:11:50.294Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近因为用<em>anaconda</em>的关系，下载的包导致了冲突，编译器总是识别不了，就把以前<em>Mac</em>上的<em>anaconda</em>都卸载了。打算重新来过一遍解决两者（即<em>anaconda2</em>与<em>anaconda3</em>）的共存问题。</p><blockquote><p>简单说明一下<em>anaconda3</em>对应<em>python3</em>，<em>anaconda2</em>对应<em>python2</em></p></blockquote><hr><p>马上开始吧。</p><p>先是在<a href="https://www.anaconda.com/download/#macos" target="_blank" rel="external">官网上</a>下载了两个版本，如下：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-21%20%E4%B8%8A%E5%8D%8811.25.39.png" alt=""></p><blockquote><p>一路确定，直到安装完成为止。<strong>不过要说明一下，安装应该分好顺序，最后安装好的即为系统默认的了（即当我们在终端输入命令：<code>python</code> 时会出现最后安装好的那个目录中的<em>python</em>版本，我是最后安装的anaconda3）。</strong>如下图所示：</p></blockquote><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-21%20%E4%B8%8A%E5%8D%8811.29.20.png" alt=""></p><blockquote><p>Python 3.6.4 |Anaconda, Inc.| <strong>即为anaconda3为系统默认的了。</strong></p></blockquote><p>当我们再输入命令：<code>python2</code> 时与输入命令： <code>python3</code> 时，如下图所示均成为了系统默认的两个版本了。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-21%20%E4%B8%8A%E5%8D%8811.33.55.png" alt=""></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-21%20%E4%B8%8A%E5%8D%8811.34.06.png" alt=""></p><blockquote><p>这样在下载包时就能方便多了，<strong>可以直接在终端输入命令：<code>pip install ..</code> 就可以达到anaconda3对应的python3版本的包下载问题了（经过测试，已通过！）。</strong>可能有朋友疑惑，<em>python3</em>不是对应着命令<em>pip3</em>吗，实际上经过我的发现，<em>anaconda</em>的<em>python2</em>与<em>python3</em>对应的都是命令<em>pip</em>。</p></blockquote><p>虽然解决了<em>anaconda3</em>下的<em>python3</em>的问题，<strong>那么我们必须记得我们的目标是：anaconda3与anaconda2的切换使用问题。不过遗憾的是没有找到解决方案。不过倒是有一个能在同一个版本内（即anaconda3/anaconda2）同时安装两个python版本（2/3）的方案。</strong></p><p>在<a href="https://conda.io/docs/user-guide/getting-started.html#managing-envs" target="_blank" rel="external">此官网教程中</a>说明了命令。</p><ul><li>详细的命令过程可参考此篇文章：<a href="https://foofish.net/compatible-py2-and-py3.html" target="_blank" rel="external">https://foofish.net/compatible-py2-and-py3.html</a></li></ul><blockquote><p>当然参考官网亦可。</p></blockquote><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>虽然在同一版本中解决了两个<em>python</em>版本的虚拟环境的问题（可在对应的目录中找到，并且此虚拟环境均可正常使用），但是我们的问题依旧没有得到解决（即anaconda3与anaconda2如何切换使用问题），我试想用指定目录的方法运行命令，但是一无所获。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-21%20%E4%B8%8B%E5%8D%8812.43.20.png" alt=""></p><blockquote><p>Anaconda2 includes Python 2.7 and Anaconda3 includes Python 3.6. However, it does not matter which one you download, because you can create new environments that include any version of Python packaged with conda.</p><p>官网的解释已经说明了，建立虚拟环境只是解决在同一个<em>anaconda</em>版本下使用不同版本的<em>python</em>而已。所以我们想的关于anaconda2与anaconda3两个版本的共存切换问题目前或许没有办法实现。</p></blockquote><hr><p><strong>已经知道了解决方案：那就是打开各个的客户端进行下载即可！！！太简单了！！</strong></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;最近因为用&lt;em&gt;anaconda&lt;/em&gt;的关系，下载的包导致了冲突，编译器总是识别不了，就把以前&lt;em&gt;Mac&lt;/em&gt;上的&lt;em&gt;anaconda&lt;/em&gt;都卸载了。打算重新来过一遍解决两者（即&lt;em&gt;anaconda2&lt;/em&gt;与&lt;em&gt;anaconda3&lt;/em&gt;
-      
-    
-    </summary>
-    
-      <category term="学习笔记" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="学习笔记" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
