@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-05-04T11:20:25.483Z</updated>
+  <updated>2018-05-06T14:38:37.256Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python3爬取拉勾网职位信息</title>
+    <link href="https://liujunjie11.github.io/2018/05/05/python3%E7%88%AC%E5%8F%96%E6%8B%89%E5%8B%BE%E7%BD%91%E8%81%8C%E4%BD%8D%E4%BF%A1%E6%81%AF/"/>
+    <id>https://liujunjie11.github.io/2018/05/05/python3爬取拉勾网职位信息/</id>
+    <published>2018-05-05T10:05:56.000Z</published>
+    <updated>2018-05-06T14:38:37.256Z</updated>
+    
+    <content type="html"><![CDATA[<p>爬取拉勾网的最大障碍：<strong>普通模块难以实现翻页爬取。</strong>自己加了参数<code>page</code>，经过抓包查询之后也达不到我的理想要求。</p><p>没办法了，只好用<em>selenium</em>模块结合浏览器来实现边翻页边爬取了。</p><blockquote><p>实际上比较浪费系统资源，这种情况不得已还是尽量别用的好。</p></blockquote><p>在此记录下主要的过程，包括实现的代码。</p><p>还是要说明一下：<strong>不懂的地方还是需要自己去查询了解，代码不过就是几个模块的知识运用罢了。</strong></p><h2 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h2><p>启动<em>Chrome**webdriver</em>插件，之后复制其所在地址，加入代码中启动<em>selenium</em>模块程序。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/5%E6%9C%88-06-2018%2022-29-25.gif" alt=""></p><blockquote><p>启动插件。</p></blockquote><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.28.45.png" alt=""></p><blockquote><p>本机此插件所在的目录位置。</p></blockquote><h2 id="分析过程"><a href="#分析过程" class="headerlink" title="分析过程"></a>分析过程</h2><p>经过简单的分析，发现页面的切换的同时URL没有任何的改变(这就是我为何要用<em>selenium</em>来爬取的原因！)：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.32.58.png" alt=""></p><p>我们的目标是，点击在此符合条件的发布公司链接，进入招聘信息详细的界面爬取详细的所有需要的信息：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.34.40.png" alt=""></p><blockquote><p>一一进入进行爬取。</p></blockquote><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.35.34.png" alt=""></p><blockquote><p>进入之后详细的招聘信息页面。</p></blockquote><p>那么思路一下就出来了：<strong>用selenium模块实现翻页的功能，并且返回对应页面的源代码，并且一一进行分析提取即可。</strong></p><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><pre><code>&quot;&quot;&quot;函数目标：翻页爬取拉勾网的职位信息编写时间：2018-05-05&quot;&quot;&quot;from selenium import webdriverfrom selenium.webdriver.common.by import Byfrom selenium.webdriver.support import expected_conditions as ECfrom selenium.webdriver.support.wait import WebDriverWaitfrom pyquery import PyQuery as pqfrom urllib.parse import quoteimport requestsimport reimport time# 启动对象驱动，并且设置预期的等待时间browser = webdriver.Chrome(&apos;/Users/junjieliu/Downloads/webdirver小插件/chromedriver&apos;)wait = WebDriverWait(browser, 10)def page_content(pages):    &quot;&quot;&quot;    返回每一页的页面源代码，顾名知义，从URL中可知许多的筛选信息了，可自行选择，    在此仅以职位关键词职位作为输入。    &quot;&quot;&quot;    print(&apos;-&apos; * 10 + &apos;正在爬取第&apos; + str(pages) + &apos;页的内容&apos; + &apos;.&apos; * 6)    keyword = &apos;数据分析师&apos;  # 职位关键词    url = &apos;https://www.lagou.com/jobs/list_&apos; + quote(keyword) + &apos;?&apos; + &apos;px=default&amp;gx=实习&amp;gj=&amp;xl=本科&amp;isSchoolJob=1&amp;city=全国#filterBox&apos;     browser.get(url)    if pages &gt; 1:        # 如果页面数大于1页则启用自动翻页        next_botton = wait.until(                    EC.element_to_be_clickable((By.CSS_SELECTOR, &apos;#s_position_list &gt; div.item_con_pager &gt; div &gt; span.pager_next&apos;)))        next_botton.click()    # 指定要爬取区域,非必须要写    wait.until(            EC.presence_of_element_located((By.CSS_SELECTOR, &apos;#s_position_list &gt; ul &gt; li.con_list_item&apos;)))    print(&apos;爬取此页源码成功！以下是本页一系列相关的内容：&apos;)    informations_save()def informations_save():    &quot;&quot;&quot;    一一进入内部URL，爬取详细的招聘信息！    &quot;&quot;&quot;    source_code = browser.page_source    doc = pq(source_code)    url = re.findall(r&apos;class=&quot;position_link&quot;.*?href=&quot;(.*?)&quot;&apos;, source_code, re.S)  # @UndefinedVariable      for i in range(0, len(url)):        header = {        &apos;Connection&apos;: &apos;keep-alive&apos;,        &apos;Host&apos;: &apos;www.lagou.com&apos;,        &apos;Upgrade-Insecure-Requests&apos;: &apos;1&apos;,        &apos;User-Agent&apos;: &apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36&apos;    }        response = requests.get(url=url[i], headers=header)        response.encoding = &apos;utf-8&apos;        doc1 = pq(response.text)        infor = {            &apos;company&apos;:doc1.find(&apos;body &gt; div.position-head &gt; div &gt; div.position-content-l &gt; div &gt; div.company&apos;).text(),  # 公司名称            &apos;infor_url&apos;:doc1.find(&apos;#job_company &gt; dt &gt; a&apos;).attr(&apos;href&apos;),  # 此公司详细介绍网站            &apos;position&apos;:doc1.find(&apos;body &gt; div.position-head &gt; div &gt; div.position-content-l &gt; div &gt; span.name&apos;).text(),  # 职位            &apos;salary&apos;:doc1.find(&apos;body &gt; div.position-head &gt; div &gt; div.position-content-l &gt; dd &gt; p:nth-child(1) &gt; span.salary&apos;).text(),  # 工资            &apos;locale&apos;:doc1.find(&apos;#job_detail &gt; dd.job-address.clearfix &gt; input[type=&quot;hidden&quot;]:nth-child(6)&apos;).text().replace(&apos;/&apos;, &apos;&apos;),  # 地点            &apos;place&apos;:doc1.find(&apos;#job_detail &gt; dd.job-address.clearfix &gt; div.work_addr&apos;).text(),  # 具体位置            &apos;required&apos;:doc1.find(&apos;div.position-content-l &gt; dd &gt; p:nth-child(1) &gt; span:nth-child(3)&apos;).text().replace(&apos;/&apos;, &apos;&apos;),  # 经验要求            &apos;education&apos;:doc1.find(&apos;div.position-content-l &gt; dd &gt; p:nth-child(1) &gt; span:nth-child(4)&apos;).text().replace(&apos;/&apos;, &apos;&apos;),  # 学历要求            &apos;job_nature&apos;:doc1.find(&apos;div.position-content-l &gt; dd &gt; p:nth-child(1) &gt; span:nth-child(5)&apos;).text().replace(&apos;/&apos;, &apos;&apos;),  # 工作性质            &apos;attract&apos;:doc1.find(&apos;#job_detail &gt; dd.job-advantage&apos;).text().replace(&apos;\n&apos;, &apos; &apos;),  # 工作诱惑            &apos;describe&apos;:doc1.find(&apos;#job_detail &gt; dd.job_bt&apos;).text().replace(&apos;\n&apos;, &apos; &apos;)  # 工作描述        }        print(infor)         if __name__ == &quot;__main__&quot;:    pages = 6  # 总的页面数，从网页第一面就可知了，6是测试用的数字页码    for i in range(1, pages + 1):        page_content(i)        time.sleep(20)</code></pre><blockquote><p>最后我选择将爬取的内容保存至一个<code>.txt</code>文件下。</p></blockquote><h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.27.19.png" alt=""></p><blockquote><p>运行之后的效果，有些爬取不了，明明源代码都没什么变化…</p></blockquote><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><ul><li><p>这个代码的模型并不能爬取页面上对应的全部内容，这个我也是有点疑惑。</p></li><li><p>有时会跳到需要登录的界面，重新来几次就行了，总有一次能爬取。</p></li></ul><p>有不懂的知识可参考：<a href="https://cuiqingcai.com/5630.html" target="_blank" rel="external">https://cuiqingcai.com/5630.html</a></p><blockquote><p>以及相关的模块的官网亦可。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;爬取拉勾网的最大障碍：&lt;strong&gt;普通模块难以实现翻页爬取。&lt;/strong&gt;自己加了参数&lt;code&gt;page&lt;/code&gt;，经过抓包查询之后也达不到我的理想要求。&lt;/p&gt;
+&lt;p&gt;没办法了，只好用&lt;em&gt;selenium&lt;/em&gt;模块结合浏览器来实现边翻页边爬取了。&lt;/
+      
+    
+    </summary>
+    
+      <category term="python爬虫" scheme="https://liujunjie11.github.io/categories/python%E7%88%AC%E8%99%AB/"/>
+    
+    
+      <category term="python爬虫" scheme="https://liujunjie11.github.io/tags/python%E7%88%AC%E8%99%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>数据结构与算法书籍资源共享</title>
@@ -529,34 +555,6 @@
     
     
       <category term="教程" scheme="https://liujunjie11.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用python/R数据分析可视化汽车使用燃料情况</title>
-    <link href="https://liujunjie11.github.io/2018/03/21/%E7%94%A8python:R%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%AF%E8%A7%86%E5%8C%96%E6%B1%BD%E8%BD%A6%E4%BD%BF%E7%94%A8%E7%87%83%E6%96%99%E6%83%85%E5%86%B5/"/>
-    <id>https://liujunjie11.github.io/2018/03/21/用python:R数据分析可视化汽车使用燃料情况/</id>
-    <published>2018-03-21T12:40:06.000Z</published>
-    <updated>2018-03-22T07:26:01.239Z</updated>
-    
-    <content type="html"><![CDATA[<p>分析的是美国一个网站统计的多年汽车使用燃料情况的数据，需要从网上下载，在此利用好<em>python爬虫</em>大有裨益，可作为实战运行分析。</p><blockquote><p>此篇文章案例来源于：<img src="" alt=""></p><p>本书文章中用<em>R语言</em>实现的数据可视化，是从网上直接下的文件然后分析，我打算在此用<em>python</em>实现爬取相关文件，并且运用<em>python</em>进行可视化分析。</p></blockquote><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>进入主页，得到了下载文件的主链接：</p><p><img src="" alt=""></p><p>在此可见资源的下载地址：</p><p><img src="" alt=""></p><hr><blockquote><p>接下来就是运用爬虫知识实现此文件的下载了。</p></blockquote><h2 id="爬虫代码"><a href="#爬虫代码" class="headerlink" title="爬虫代码"></a>爬虫代码</h2><p>我们可有这样的思路：<strong>从主页出发 –&gt; 爬取到下载文件页面的链接 –&gt; 再从此爬取到下载地址链接 –&gt; 之后运用相关的函数下载至本目录即可。</strong>以下是实现过程。</p><pre><code>&apos;&apos;&apos;    函数目标：    用python爬取相关的下载文件    编写时间：    2018-03-21&apos;&apos;&apos;import requestsimport refrom bs4 import BeautifulSoupfrom urllib.request import urlretrieve&apos;&apos;&apos;    first_url方法获取进入下载页面的地址    运用了正则表达式的匹配方法                                        &apos;&apos;&apos;def first_url():    url = &apos;https://www.fueleconomy.gov/&apos;    # 添加代理    header = {&apos;Accept&apos;: &apos;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8&apos;,            &apos;Accept-Encoding&apos;: &apos;gzip, deflate, br&apos;,            &apos;Accept-Language&apos;: &apos;zh-CN,zh&apos;,            &apos;Cache-Control&apos;: &apos;max-age=0&apos;,            &apos;Connection&apos;: &apos;keep-alive&apos;,            &apos;Host&apos;: &apos;www.fueleconomy.gov&apos;,            &apos;Upgrade-Insecure-Requests&apos;: &apos;1&apos;,            &apos;User-Agent&apos;: &apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36}&apos;            }    request = requests.get(url=url, headers=header)    # 指定编码格式    request.encoding = &apos;utf-8&apos;    &apos;&apos;&apos;        发现不用指定re.S亦可以完成匹配，用了反而会报错...        注意每次匹配到的数据之后还有索引要记得标明    &apos;&apos;&apos;    link = re.findall(r&apos;&lt;a href=&quot;(.*?)&quot;&gt;Developer Tools&lt;/a&gt;&apos;, request.text)[0]    return link&apos;&apos;&apos;    second_url方法是用来获取下载文件的地址    方法也是运用了正则表达式                                            &apos;&apos;&apos;def second_url():    # 进入下载资源的页面    se_url = &apos;https://www.fueleconomy.gov&apos; + first_url()    # 添加代理,基本上的代理信息没什么变化    header_2 = {            &apos;Accept&apos;: &apos;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8&apos;,            &apos;Accept-Encoding&apos;: &apos;gzip, deflate, br&apos;,            &apos;Accept-Language&apos;: &apos;zh-CN,zh&apos;,            &apos;Cache-Control&apos;: &apos;max-age=0&apos;,            &apos;Connection&apos;: &apos;keep-alive&apos;,            &apos;Host&apos;: &apos;www.fueleconomy.gov&apos;,            &apos;Upgrade-Insecure-Requests&apos;: &apos;1&apos;,            &apos;User-Agent&apos;: &apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36}&apos;            }    request_2 = requests.get(url=se_url, headers=header_2)    request_2.encoding = &apos;utf-8&apos;    # 匹配正则表达式    link_2 = re.findall(r&apos;&lt;a href=&quot;(.*?)&quot;&gt;CSV&lt;/a&gt;&apos;, request_2.text)[0]    return link_2&apos;&apos;&apos;    已经得到了资源下载地址，在主函数中进行下载并且进行解压                                                    &apos;&apos;&apos;if __name__ == &apos;__main__&apos;:    # 获取下载文件的资源地址    down_url = &apos;https://www.fueleconomy.gov&apos; + second_url()    print(&apos;数据采集完成...&apos;)    print(&apos;开始下载文件...&apos;)    # 文件名称是：vehicles.csv.zip，格式也是非常的重要！    urlretrieve(url=down_url, filename=&apos;vehicles.csv.zip&apos;)    print(&apos;下载完成！可在本工程目录查收！&apos;)</code></pre><p>至此可在本目录下查看到下载好的压缩文件：</p><p><img src="" alt=""></p><blockquote><p>当然也可加上运用<em>python</em>解压这一部分的模块，有兴趣的朋友可自行学习运用。</p></blockquote><h2 id="代码可视化分析阶段"><a href="#代码可视化分析阶段" class="headerlink" title="代码可视化分析阶段"></a>代码可视化分析阶段</h2><p>在解压之后可先用<em>excel</em>打开来看看（会发现有<strong>39000+行</strong>数据），在此只需要知道其中的参数<code>year</code>与<code>com08</code>，前者为年份，后者为燃料的使用情况相关的数值。</p><p>可视化实现代码在下：</p><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>这是一个平时做的小项目，适合新手入门。</p><blockquote><p>另外，以上代码中不懂的模块知识，我建议你利用好搜索引擎，查看相关的文档或者是找本书看看。</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;分析的是美国一个网站统计的多年汽车使用燃料情况的数据，需要从网上下载，在此利用好&lt;em&gt;python爬虫&lt;/em&gt;大有裨益，可作为实战运行分析。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;此篇文章案例来源于：&lt;img src=&quot;&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;本书文章中用&lt;
-      
-    
-    </summary>
-    
-      <category term="可视化 爬虫" scheme="https://liujunjie11.github.io/categories/%E5%8F%AF%E8%A7%86%E5%8C%96-%E7%88%AC%E8%99%AB/"/>
-    
-    
-      <category term="可视化 爬虫" scheme="https://liujunjie11.github.io/tags/%E5%8F%AF%E8%A7%86%E5%8C%96-%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
