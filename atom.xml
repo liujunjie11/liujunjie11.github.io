@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-05-08T08:49:10.828Z</updated>
+  <updated>2018-05-14T09:22:26.636Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>理解常用传统算法的合集资源总结</title>
+    <link href="https://liujunjie11.github.io/2018/05/10/%E7%90%86%E8%A7%A3%E5%B8%B8%E7%94%A8%E4%BC%A0%E7%BB%9F%E7%AE%97%E6%B3%95%E7%9A%84%E5%90%88%E9%9B%86%E8%B5%84%E6%BA%90%E6%80%BB%E7%BB%93/"/>
+    <id>https://liujunjie11.github.io/2018/05/10/理解常用传统算法的合集资源总结/</id>
+    <published>2018-05-10T13:13:35.000Z</published>
+    <updated>2018-05-14T09:22:26.636Z</updated>
+    
+    <content type="html"><![CDATA[<p>平时学习算法是为了理解其中的原理以及思想，另外还有各种算法之间的比较以及应用场景。下面是一些常用常见的传统算法，我在<em>YouTube</em>上找了一些可简单理解其原理思想的视频，真正的做到通俗易懂！</p><p>另外关于算法的各种时间复杂度以及空间复杂度均在此小列出来。关于以下各种算法的应用场景实际上还是需要自己去结合这些算法的思想去选择的，就不在此多说了。</p><blockquote><p>参考了许多的网页，包括<em>YouTube</em>，<em>维基百科</em>等灯，也从中学习到了许多，就是在此汇总一下。<strong>另外参考的网页就不一一列出来了，感谢他们/她们的付出与分享。</strong></p></blockquote><p><strong>主要参考：</strong></p><ul><li><p><a href="http://wiki.jikexueyuan.com/project/data-structure-sorting/insertion-sort.html" target="_blank" rel="external">http://wiki.jikexueyuan.com/project/data-structure-sorting/insertion-sort.html</a></p></li><li><p><a href="https://github.com/francistao/LearningNotes/blob/master/Part3/Algorithm/Sort/面试中的%2010%20大排序算法总结.md" target="_blank" rel="external">https://github.com/francistao/LearningNotes/blob/master/Part3/Algorithm/Sort/面试中的%2010%20大排序算法总结.md</a></p></li><li><p>常用排序算法总结(一):<a href="http://www.cnblogs.com/eniac12/p/5329396.html" target="_blank" rel="external">http://www.cnblogs.com/eniac12/p/5329396.html</a></p></li><li><p>常用排序算法总结(二):<a href="http://www.cnblogs.com/eniac12/p/5332117.html" target="_blank" rel="external">http://www.cnblogs.com/eniac12/p/5332117.html</a></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;平时学习算法是为了理解其中的原理以及思想，另外还有各种算法之间的比较以及应用场景。下面是一些常用常见的传统算法，我在&lt;em&gt;YouTube&lt;/em&gt;上找了一些可简单理解其原理思想的视频，真正的做到通俗易懂！&lt;/p&gt;
+&lt;p&gt;另外关于算法的各种时间复杂度以及空间复杂度均在此小列
+      
+    
+    </summary>
+    
+      <category term="数据结构与算法" scheme="https://liujunjie11.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="数据结构与算法" scheme="https://liujunjie11.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>python3爬虫与GUI:基于有道词典的词典小工具</title>
@@ -526,34 +552,6 @@
     
     
       <category term="学习笔记" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据结构与算法：线性表</title>
-    <link href="https://liujunjie11.github.io/2018/03/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%EF%BC%9A%E7%BA%BF%E6%80%A7%E8%A1%A8/"/>
-    <id>https://liujunjie11.github.io/2018/03/26/数据结构与算法：线性表/</id>
-    <published>2018-03-26T10:56:19.000Z</published>
-    <updated>2018-04-03T12:29:47.274Z</updated>
-    
-    <content type="html"><![CDATA[<p>打算重新好好系统的学习数据结构了。这是开始。</p><p>因为概念已经是烂大街了，在此只记录下我用<em>java</em>或者是<em>python</em>实现相关功能的代码。</p><hr><h2 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h2><h3 id="java实现"><a href="#java实现" class="headerlink" title="java实现"></a>java实现</h3>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;打算重新好好系统的学习数据结构了。这是开始。&lt;/p&gt;
-&lt;p&gt;因为概念已经是烂大街了，在此只记录下我用&lt;em&gt;java&lt;/em&gt;或者是&lt;em&gt;python&lt;/em&gt;实现相关功能的代码。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;查找&quot;&gt;&lt;a href=&quot;#查找&quot; class=&quot;hea
-      
-    
-    </summary>
-    
-      <category term="数据结构与算法" scheme="https://liujunjie11.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="数据结构与算法" scheme="https://liujunjie11.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
