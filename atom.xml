@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-05-14T09:22:26.636Z</updated>
+  <updated>2018-05-29T11:30:49.404Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac下载2018CAD破解</title>
+    <link href="https://liujunjie11.github.io/2018/05/29/Mac%E4%B8%8B%E8%BD%BD2018CAD%E7%A0%B4%E8%A7%A3/"/>
+    <id>https://liujunjie11.github.io/2018/05/29/Mac下载2018CAD破解/</id>
+    <published>2018-05-29T11:25:20.000Z</published>
+    <updated>2018-05-29T11:30:49.404Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近因为选修课要用到<em>CAD</em>，用的恰好是<em>Mac book</em>，就在此记录</p><h1 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h1><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>先去官网下载好2018的试用版：<a href="https://www.autodesk.com.cn/products/autocad/free-trial#0" target="_blank" rel="external">https://www.autodesk.com.cn/products/autocad/free-trial#0</a></p><blockquote><p><strong>需要注意的是：选择企业注册就好，不然很麻烦…</strong></p></blockquote><h1 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h1><h2 id="参考以下文章即可"><a href="#参考以下文章即可" class="headerlink" title="参考以下文章即可.."></a>参考以下文章即可..</h2><ul><li>参考：<a href="http://www.anyxz.com/index.php/2902.html" target="_blank" rel="external">http://www.anyxz.com/index.php/2902.html</a></li></ul><blockquote><p>因为我只是完成作业就卸载了..所以一个试用版就足够..</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;最近因为选修课要用到&lt;em&gt;CAD&lt;/em&gt;，用的恰好是&lt;em&gt;Mac book&lt;/em&gt;，就在此记录&lt;/p&gt;
+&lt;h1 id=&quot;第一步&quot;&gt;&lt;a href=&quot;#第一步&quot; class=&quot;headerlink&quot; title=&quot;第一步&quot;&gt;&lt;/a&gt;第一步&lt;/h1&gt;&lt;h2 id=&quot;下载
+      
+    
+    </summary>
+    
+      <category term="Mac软件教程" scheme="https://liujunjie11.github.io/categories/Mac%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Mac软件教程" scheme="https://liujunjie11.github.io/tags/Mac%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>理解常用传统算法的合集资源总结</title>
@@ -519,31 +545,6 @@
       
       
         &lt;p&gt;在学习爬虫的过程中，在运行编者的代码时出现了&lt;em&gt;UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xe8 in position 67986: ordinal not in range(128)&lt;/em&gt;的编码问题
-      
-    
-    </summary>
-    
-      <category term="学习笔记" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="学习笔记" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于homebrew下载出现&quot;Error/go/version missing for  gotools resource!&quot;错误的解决方案</title>
-    <link href="https://liujunjie11.github.io/2018/03/28/%E5%85%B3%E4%BA%8Ehomebrew%E4%B8%8B%E8%BD%BD%E5%87%BA%E7%8E%B0Error:go:version%20missing%20for%20%20gotools%20resource!%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    <id>https://liujunjie11.github.io/2018/03/28/关于homebrew下载出现Error:go:version missing for  gotools resource!错误的解决方案/</id>
-    <published>2018-03-28T02:47:34.000Z</published>
-    <updated>2018-03-28T02:48:35.030Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近用<em>homebrew</em>下载<em>mongodb</em>，发现出现了<em>Error: go: version missing for “gotools” resource!</em>的错误，试了几次都不行，最后在谷歌用英文搜索关键词在<em>GitHub</em>的一个论坛用相关的解决方案。</p><p><strong>使用命令行</strong></p><blockquote><p><strong>git -C “$(brew –repo)” fetch –tags</strong></p></blockquote><p>之后再次输入：</p><blockquote><p><strong>brew update –force</strong></p></blockquote><p>最后再次用命令行<em>brew install mongodb</em>，发现已经能够正确成功下载了。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;最近用&lt;em&gt;homebrew&lt;/em&gt;下载&lt;em&gt;mongodb&lt;/em&gt;，发现出现了&lt;em&gt;Error: go: version missing for “gotools” resource!&lt;/em&gt;的错误，试了几次都不行，最后在谷歌用英文搜索关键词在&lt;em&gt;GitH
       
     
     </summary>
