@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[在Jupyter Notebook中安装多种语言内核]]></title>
+    <url>%2F2018%2F06%2F04%2F%E5%9C%A8Jupyter-Notebook%E4%B8%AD%E5%AE%89%E8%A3%85%E5%A4%9A%E7%A7%8D%E8%AF%AD%E8%A8%80%E5%86%85%E6%A0%B8%2F</url>
+    <content type="text"><![CDATA[Jupyter Notrbook有一个好的编译界面，输出内容也一目了然，让人感觉像是发现了一个新大陆.. 下面来说说如何在其中安装多种语言内核。 支持的语言内核可查：https://github.com/jupyter/jupyter/wiki/Jupyter-kernels 安装python2内核因为我的默认已经安装了python3，所以就在此讲解一下如何安装python2内核。 在notebook为开启情况下，依次输入命令： pip install ipykernel python2 -m ipykernel install 参考：https://www.jianshu.com/p/8b90c2f12856 安装R内核上面的文章也有相关的介绍了。 但是在anaconda中一行命令即可完成下载： conda install r-essential 或者是 conda install -c r r-essentials 参考：https://kangliping.wordpress.com/2017/09/15/anaconda_r/ 下载第一次可能有几个包不成功，我经过重新输入命令行之后再次下载得到了解决。 安装bash内核新开一个终端，依次使用命令行： pip install bash_kernel python -m bash_kernel.install 参考：https://blog.csdn.net/SA14023053/article/details/52053649 安装基于Scala的spark应用 具体移步：https://blog.csdn.net/Xmo_jiao/article/details/72674687 其中需要的内容在spark启动页面中都能找到。没办法，内容太多，又懒得写.. 但是需要注意的每次均要启动spark再进行进一步的编程操作。在已经安装spark的前提下输入命令行：spark-shell启动spark。 最后输入以下命令行查看已安装的内核列表： jupyter kernelspec list 先写这么多，以后有需要再进行补充。]]></content>
+      <categories>
+        <category>Notebook</category>
+      </categories>
+      <tags>
+        <tag>Notebook</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Mac下载2018CAD破解]]></title>
     <url>%2F2018%2F05%2F29%2FMac%E4%B8%8B%E8%BD%BD2018CAD%E7%A0%B4%E8%A7%A3%2F</url>
     <content type="text"><![CDATA[最近因为选修课要用到CAD，用的恰好是Mac book，就在此记录 第一步下载先去官网下载好2018的试用版：https://www.autodesk.com.cn/products/autocad/free-trial#0 需要注意的是：选择企业注册就好，不然很麻烦… 第二步参考以下文章即可.. 参考：http://www.anyxz.com/index.php/2902.html 因为我只是完成作业就卸载了..所以一个试用版就足够..]]></content>

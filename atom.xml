@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-05-29T11:30:49.404Z</updated>
+  <updated>2018-06-04T12:53:03.622Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在Jupyter Notebook中安装多种语言内核</title>
+    <link href="https://liujunjie11.github.io/2018/06/04/%E5%9C%A8Jupyter-Notebook%E4%B8%AD%E5%AE%89%E8%A3%85%E5%A4%9A%E7%A7%8D%E8%AF%AD%E8%A8%80%E5%86%85%E6%A0%B8/"/>
+    <id>https://liujunjie11.github.io/2018/06/04/在Jupyter-Notebook中安装多种语言内核/</id>
+    <published>2018-06-04T12:33:26.000Z</published>
+    <updated>2018-06-04T12:53:03.622Z</updated>
+    
+    <content type="html"><![CDATA[<p><em>Jupyter Notrbook</em>有一个好的编译界面，输出内容也一目了然，让人感觉像是发现了一个新大陆..</p><p>下面来说说如何在其中安装多种语言内核。</p><blockquote><p>支持的语言内核可查：<a href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels" target="_blank" rel="external">https://github.com/jupyter/jupyter/wiki/Jupyter-kernels</a></p></blockquote><h1 id="安装python2内核"><a href="#安装python2内核" class="headerlink" title="安装python2内核"></a>安装<em>python2</em>内核</h1><p>因为我的默认已经安装了<em>python3</em>，所以就在此讲解一下如何安装<em>python2</em>内核。</p><ul><li>在<em>notebook</em>为开启情况下，依次输入命令：</li></ul><p><code>pip install ipykernel</code></p><p><code>python2 -m ipykernel install</code></p><blockquote><p>参考：<a href="https://www.jianshu.com/p/8b90c2f12856" target="_blank" rel="external">https://www.jianshu.com/p/8b90c2f12856</a></p></blockquote><h1 id="安装R内核"><a href="#安装R内核" class="headerlink" title="安装R内核"></a>安装<em>R</em>内核</h1><p>上面的文章也有相关的介绍了。</p><p>但是在<em>anaconda</em>中一行命令即可完成下载：</p><p><code>conda install r-essential</code></p><p>或者是</p><p><code>conda  install -c r r-essentials</code></p><blockquote><p>参考：<a href="https://kangliping.wordpress.com/2017/09/15/anaconda_r/" target="_blank" rel="external">https://kangliping.wordpress.com/2017/09/15/anaconda_r/</a></p></blockquote><p><strong>下载第一次可能有几个包不成功，我经过重新输入命令行之后再次下载得到了解决。</strong></p><h1 id="安装bash内核"><a href="#安装bash内核" class="headerlink" title="安装bash内核"></a>安装<em>bash</em>内核</h1><p>新开一个终端，依次使用命令行：</p><p><code>pip install bash_kernel</code></p><p><code>python -m bash_kernel.install</code></p><blockquote><p>参考：<a href="https://blog.csdn.net/SA14023053/article/details/52053649" target="_blank" rel="external">https://blog.csdn.net/SA14023053/article/details/52053649</a></p></blockquote><h1 id="安装基于Scala的spark应用"><a href="#安装基于Scala的spark应用" class="headerlink" title="安装基于Scala的spark应用"></a>安装基于<em>Scala</em>的<em>spark</em>应用</h1><blockquote><p>具体移步：<a href="https://blog.csdn.net/Xmo_jiao/article/details/72674687" target="_blank" rel="external">https://blog.csdn.net/Xmo_jiao/article/details/72674687</a></p></blockquote><p>其中需要的内容在<em>spark</em>启动页面中都能找到。没办法，内容太多，又懒得写..</p><p><strong>但是需要注意的每次均要启动spark再进行进一步的编程操作。在已经安装<em>spark</em>的前提下输入命令行：<code>spark-shell</code>启动spark。</strong></p><h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>输入以下命令行查看已安装的内核列表：</p><p><code>jupyter kernelspec list</code></p><p>先写这么多，以后有需要再进行补充。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;em&gt;Jupyter Notrbook&lt;/em&gt;有一个好的编译界面，输出内容也一目了然，让人感觉像是发现了一个新大陆..&lt;/p&gt;
+&lt;p&gt;下面来说说如何在其中安装多种语言内核。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;支持的语言内核可查：&lt;a href=&quot;https://g
+      
+    
+    </summary>
+    
+      <category term="Notebook" scheme="https://liujunjie11.github.io/categories/Notebook/"/>
+    
+    
+      <category term="Notebook" scheme="https://liujunjie11.github.io/tags/Notebook/"/>
+    
+  </entry>
   
   <entry>
     <title>Mac下载2018CAD破解</title>
@@ -528,31 +556,6 @@
     
     
       <category term="mysql" scheme="https://liujunjie11.github.io/tags/mysql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于解决python中UnicodeDecodeError: &#39;ascii&#39; codec can&#39;t decode byte 0xe8 in position 67986: ordinal not in range(128)的问题</title>
-    <link href="https://liujunjie11.github.io/2018/03/28/%E5%85%B3%E4%BA%8E%E8%A7%A3%E5%86%B3python%E4%B8%ADUnicodeDecodeError-ascii-codec-can-t-decode-byte-0xe8-in-position-67986-ordinal-not-in-range-128-%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>https://liujunjie11.github.io/2018/03/28/关于解决python中UnicodeDecodeError-ascii-codec-can-t-decode-byte-0xe8-in-position-67986-ordinal-not-in-range-128-的问题/</id>
-    <published>2018-03-28T10:18:54.000Z</published>
-    <updated>2018-03-28T10:26:59.245Z</updated>
-    
-    <content type="html"><![CDATA[<p>在学习爬虫的过程中，在运行编者的代码时出现了<em>UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xe8 in position 67986: ordinal not in range(128)</em>的编码问题。</p><p>具体原因是因为程序默认的解析编码格式发生了冲突造成的，简单来说就是需要解析的内容与<em>API</em>程序默认的解析编码格式不同，所以才会出现如上的错误。</p><p>因为是打算用<em>python</em>解析<em>JS</em>文件，所以我就贴上我的解决方案了：</p><pre><code>ctx = node.compile(open(file, encoding=&apos;utf-8&apos;).read())</code></pre><blockquote><p>加上自行规定的解码格式即可。</p></blockquote><p><strong>解决来源于GitHub论坛…</strong></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;在学习爬虫的过程中，在运行编者的代码时出现了&lt;em&gt;UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xe8 in position 67986: ordinal not in range(128)&lt;/em&gt;的编码问题
-      
-    
-    </summary>
-    
-      <category term="学习笔记" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="学习笔记" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
