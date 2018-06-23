@@ -83,7 +83,7 @@
 <meta property="og:site_name" content="LXiHa`Notes">
 <meta property="og:description" content="Jupyter Notrbook有一个好的编译界面，输出内容也一目了然，让人感觉像是发现了一个新大陆.. 下面来说说如何在其中安装多种语言内核。  支持的语言内核可查：https://github.com/jupyter/jupyter/wiki/Jupyter-kernels  安装python2内核因为我的默认已经安装了python3，所以就在此讲解一下如何安装python2内核。  在not">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-04T12:53:03.622Z">
+<meta property="og:updated_time" content="2018-06-23T12:25:08.209Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在Jupyter Notebook中安装多种语言内核">
 <meta name="twitter:description" content="Jupyter Notrbook有一个好的编译界面，输出内容也一目了然，让人感觉像是发现了一个新大陆.. 下面来说说如何在其中安装多种语言内核。  支持的语言内核可查：https://github.com/jupyter/jupyter/wiki/Jupyter-kernels  安装python2内核因为我的默认已经安装了python3，所以就在此讲解一下如何安装python2内核。  在not">
@@ -435,6 +435,22 @@
 <h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>输入以下命令行查看已安装的内核列表：</p>
 <p><code>jupyter kernelspec list</code></p>
 <p>先写这么多，以后有需要再进行补充。</p>
+<p><strong>关于在下载完之后发现启动内核失败(dead kernel的情况)</strong></p>
+<p>可参考以下链接：</p>
+<ol>
+<li><p><a href="https://blog.csdn.net/liangdagongjue/article/details/79533538" target="_blank" rel="external">https://blog.csdn.net/liangdagongjue/article/details/79533538</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/wobeatit/article/details/78885339" target="_blank" rel="external">https://blog.csdn.net/wobeatit/article/details/78885339</a></p>
+</li>
+</ol>
+<blockquote>
+<p>即实际上就是我将<em>Anaconda</em>升级之后出现了以上的<code>dead kernel</code>的情况，后来发现真的是软件更新没有跟上的问题，将<em>notebook</em>之类的一并更新一遍即可解决。</p>
+</blockquote>
+<p>实际使用命令行如下：</p>
+<p><code>conda upgrade notebook</code></p>
+<p><code>conda upgrade jupyter</code></p>
+<p><code>conda update mkl</code></p>
+<p>一并更新之后重新打开会发现一切都可以正常使用了。</p>
 
       
     </div>
