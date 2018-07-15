@@ -97,7 +97,7 @@
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-08%20%E4%B8%8B%E5%8D%884.23.42.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-08%20%E4%B8%8B%E5%8D%884.31.13.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/5%E6%9C%88-08-2018%2016-32-56.gif">
-<meta property="og:updated_time" content="2018-05-08T08:49:10.828Z">
+<meta property="og:updated_time" content="2018-07-15T06:18:02.349Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python3爬虫与GUI:基于有道词典的词典小工具">
 <meta name="twitter:description" content="最近看到了一篇文章，一个基于有道的词典小工具，心血来潮，想着自己来写一个试试看。  下面我将用python完成接口的对接(即进行抓包)，并且用pyQT5实现对应的GUI界面。接下来就是事件机制的编写了，这样任务就完成了。  分析在分析的过程中需要分析网页中的JS代码，因为有道现在使用加密算法来进行翻译结果的加密了。下面一一进行简单的说明。 首先用Chrome浏览器打开有道在线翻译页面，随便输入一个">
@@ -472,12 +472,7 @@
 <blockquote>
 <p>关于<em>pyQt5</em>不清楚可参考我之前的相关博文，或者是利用好搜索引擎。</p>
 </blockquote>
-<pre><code>&apos;&apos;&apos;
-Created on 2018年5月8日
-
-@author: junjieliu
-&apos;&apos;&apos;
-&quot;&quot;&quot;
+<pre><code>&quot;&quot;&quot;
 
 函数目标：
 基于有道的GUI搜索小工具
@@ -535,7 +530,7 @@ class Example(QWidget):
 
         # 在代理中需要加入cookies信息，否则会出现代码错误信息的返回
         header = {
-            &apos;Cookie&apos;: &apos;OUTFOX_SEARCH_USER_ID=; _ntes_nnid=25aff2b1480f17471ca1585f6f2f4293,1512024136653;  JSESSIONID=aaa3TFIg-JJJN4xEog6mw; ___rl__test__cookies=1525691300664&apos;,
+            &apos;Cookie&apos;: XXXXXXXXXXXXXXXXXXXntes_nnid=25aff2b1480f17471ca1585f6f2f4293,15120241366&apos;,
             &apos;Referer&apos;: &apos;http://fanyi.youdao.com/&apos;,
             &apos;User-Agent&apos;: &apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36&apos;
         }
@@ -615,7 +610,7 @@ if __name__ == &quot;__main__&quot;:
     ex = Example()
     sys.exit(app.exec_())
 </code></pre><blockquote>
-<p><strong>上面的<em>cookies</em>值是必须要的！否则会出现错误，当然，在上面的代码我的<em>cookies</em>数值我进行了更改，如果需要测试运行，可加上自己浏览器上有道在线翻译的<em>cookies</em>。</strong></p>
+<p><strong>上面的<em>cookies</em>值是必须要的！否则会出现错误，当然，在上面的代码我的<em>cookies</em>数值我进行了隐藏更改，如果需要测试运行，可加上自己浏览器上有道在线翻译的<em>cookies</em>。</strong></p>
 </blockquote>
 <p>运行演示：</p>
 <p><img src="http://owudg3xs2.bkt.clouddn.com/5%E6%9C%88-08-2018%2016-32-56.gif" alt=""></p>
