@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-06-29T07:01:01.044Z</updated>
+  <updated>2018-07-18T12:56:33.215Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用PS软件的记录</title>
+    <link href="https://liujunjie11.github.io/2018/07/18/%E4%BD%BF%E7%94%A8PS%E8%BD%AF%E4%BB%B6%E7%9A%84%E8%AE%B0%E5%BD%95/"/>
+    <id>https://liujunjie11.github.io/2018/07/18/使用PS软件的记录/</id>
+    <published>2018-07-18T12:45:33.000Z</published>
+    <updated>2018-07-18T12:56:33.215Z</updated>
+    
+    <content type="html"><![CDATA[<p>此文是关于<em>PS软件</em>的使用记录，因为使用的不多，但是是经常需要用到的一些小技巧，记录在此，以便日后查看。不定时更新。</p><h1 id="图片合并"><a href="#图片合并" class="headerlink" title="图片合并"></a>图片合并</h1><p><em>1，</em>在软件中新建一个默认的空白层，将需要合并的图片一并拖入其中，排版调整好，保存退出，即可完成合并任务。</p><h1 id="去水印"><a href="#去水印" class="headerlink" title="去水印"></a>去水印</h1><blockquote><p><strong>大小水印均可去除使用。</strong></p></blockquote><p><em>1，</em><a href="https://jingyan.baidu.com/article/4ae03de3e41dd33eff9e6bb9.html" target="_blank" rel="external">https://jingyan.baidu.com/article/4ae03de3e41dd33eff9e6bb9.html</a></p><blockquote><p>看其中教程视频的第一个方法即可完成任务。</p></blockquote><p><em>2，</em><a href="https://jingyan.baidu.com/article/a24b33cd2361e819fe002bed.html" target="_blank" rel="external">https://jingyan.baidu.com/article/a24b33cd2361e819fe002bed.html</a></p><blockquote><p>不稳定方法。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;此文是关于&lt;em&gt;PS软件&lt;/em&gt;的使用记录，因为使用的不多，但是是经常需要用到的一些小技巧，记录在此，以便日后查看。不定时更新。&lt;/p&gt;
+&lt;h1 id=&quot;图片合并&quot;&gt;&lt;a href=&quot;#图片合并&quot; class=&quot;headerlink&quot; title=&quot;图片合并&quot;&gt;&lt;/a&gt;
+      
+    
+    </summary>
+    
+      <category term="软件使用" scheme="https://liujunjie11.github.io/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
+    
+    
+      <category term="软件使用" scheme="https://liujunjie11.github.io/tags/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>反思记录</title>
@@ -525,36 +551,6 @@
     
     
       <category term="eclipse" scheme="https://liujunjie11.github.io/tags/eclipse/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python3爬虫：爬取淘宝商品信息的两种方法</title>
-    <link href="https://liujunjie11.github.io/2018/04/08/python3%E7%88%AC%E8%99%AB%EF%BC%9A%E7%88%AC%E5%8F%96%E6%B7%98%E5%AE%9D%E5%95%86%E5%93%81%E4%BF%A1%E6%81%AF%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95/"/>
-    <id>https://liujunjie11.github.io/2018/04/08/python3爬虫：爬取淘宝商品信息的两种方法/</id>
-    <published>2018-04-08T10:58:00.000Z</published>
-    <updated>2018-04-09T03:59:21.431Z</updated>
-    
-    <content type="html"><![CDATA[<p>爬取淘宝信息：</p><blockquote><p>1，可用<em>selenium</em>模块与<em>driver Chrome</em>插件自动化模拟爬取。</p><p>2， 进行抓包爬取。</p></blockquote><p><strong>下面一一进行介绍并且贴出实现代码。但是在此必须说明一下，因为时间有限，相关模块不懂的还需要自行搜索，在此不做教程解说，只提供分析思路与代码实现过程。</strong></p><blockquote><p>学习博客推荐：<a href="https://cuiqingcai.com，" target="_blank" rel="external">https://cuiqingcai.com，</a><br>实际上我也是根据此博客学习到了一些知识，也是我参考学习的唯一博客。</p></blockquote><h2 id="自动化模拟爬取"><a href="#自动化模拟爬取" class="headerlink" title="自动化模拟爬取"></a>自动化模拟爬取</h2><p>python爬虫的<em>selenium</em>模块是一个可以实现模拟浏览器相关动作，并且可跳过<em>JavaScript动态渲染</em>直接返回其网页源代码的一个自动化测试工具。如下我们需要爬取关键词为<em>MacBook Pro</em>的商品信息，可用它来实现自动翻页并且返回每一页的源代码直接进行相关信息的爬取。</p><h3 id="分析过程"><a href="#分析过程" class="headerlink" title="分析过程"></a>分析过程</h3><p>下面直接进行分析过程。</p><p>首先打开淘宝主页：<a href="https://www.taobao.com" target="_blank" rel="external">https://www.taobao.com</a> ，进入其中输入关键词观察一下页面，可以看到下面翻页的一些跳转功能。（以下使用的都是<em>Chrome</em>自带的<em>开发者工具</em>）</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-08%20%E4%B8%8B%E5%8D%888.10.59.png" alt=""></p><p>因为要实现自动翻页的过程，则我们需要查看有关翻页这个功能按钮的源代码是什么样子。其中涉及到了输入框，然后点击旁边的确定按钮。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-08%20%E4%B8%8B%E5%8D%888.15.27.png" alt=""></p><blockquote><p>输入框对应的源代码。</p></blockquote><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-08%20%E4%B8%8B%E5%8D%888.18.39.png" alt=""></p><blockquote><p>确定按钮对应的源代码。</p></blockquote><p>在知道了以上的一些按钮信息之后我们还需要知道翻页之后目前对应的页数在哪，以便在对应的页数正确之后，可以得到对应页面的源代码，这样可直接运用一些相关的模块进行节点锁定爬取即可。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-08%20%E4%B8%8B%E5%8D%888.19.13.png" alt=""></p><blockquote><p>确定页数码的源代码。</p></blockquote><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-08%20%E4%B8%8B%E5%8D%887.32.20.png" alt=""></p><blockquote><p>页面上商品信息的html源代码。</p></blockquote><p>为什么要这样分析每一个相关功能的源代码？<strong>因为在selenium模块中可以实现自动化的过程，但是需要指定页面上相关的源代码才行，对于selenium来说等于开放了这个功能的接口一样。</strong></p><p><strong>思路分析：将要用相关模块挖掘源代码信息做为一个函数，将要爬取的页面源代码做为一个函数，其中实现自动翻页功能，即若是大于1，自动跳到其页面并且返回其页源代码，否则返回第一页页面的源代码。最后代入前者挖掘的函数。</strong></p><h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><pre><code>&apos;&apos;&apos;    函数目标：    利用selenium的自动翻页进行爬去相关的内容    编写时间：    2018-04-07&apos;&apos;&apos;from selenium import webdriverfrom selenium.webdriver.common.by import Byfrom selenium.webdriver.support import expected_conditions as ECfrom selenium.webdriver.support.wait import WebDriverWaitfrom urllib.parse import quotefrom pyquery import PyQuery as pqbrowser = webdriver.Chrome(&apos;/Users/junjieliu/Downloads/小插件/chromedriver&apos;)wait = WebDriverWait(browser, 10)keys = &apos;macbookpro&apos;&apos;&apos;&apos;    函数说明：实现自动化翻页。    仅仅当需要时进行翻页的选项    &apos;&apos;&apos;def index_source(page):    print(&apos;正在爬取第&apos; + str(page) + &apos;页内容..&apos; + &apos;\n&apos; + &apos;.&apos; * 15)    url = &apos;https://s.taobao.com/search?q=&apos; + quote(keys)    browser.get(url)    # 果然页数大于1则自动翻页功能启动    if page &gt; 1:        # 输入框定位        input = wait.until(            EC.presence_of_element_located((By.CSS_SELECTOR, &apos;#mainsrp-pager div.form &gt; input.input.J_Input&apos;)))        # 确定按钮定位        button = wait.until(            EC.element_to_be_clickable((By.CSS_SELECTOR, &apos;#mainsrp-pager div.form &gt; span.btn.J_Submit&apos;)))        # 清理，输入，点击一体化        input.clear()        input.send_keys(page)        button.click()    &apos;&apos;&apos;    获取源代码，传入爬取数据的函数    获取源代码过程：    第一步确定为在那一页    第二步确定爬取内容    &apos;&apos;&apos;    wait.until(        EC.text_to_be_present_in_element((By.CSS_SELECTOR, &apos;#mainsrp-pager li.item.active &gt; span.num&apos;), str(page)))    wait.until(        EC.presence_of_element_located((By.CSS_SELECTOR, &apos;.m-itemlist .items .item&apos;)))    print(&apos;获取本页源码成功，以下为相关的信息：&apos; + &apos;\n&apos;)    get_product()&apos;&apos;&apos;    函数说明：    用pyquery爬取其中的商品内容    &apos;&apos;&apos;def get_product():    html_source = browser.page_source    doc = pq(html_source)    items = doc(&apos;#mainsrp-itemlist .items .item&apos;).items()    &apos;&apos;&apos;        以下匹配内容可查看网页源代码可知        &apos;&apos;&apos;    for item in items:        product_infos = {            &apos;img_url&apos;:&apos;https:&apos; + item.find(&apos;.pic .img&apos;).attr(&apos;data-src&apos;),  # 店铺主图片地址            &apos;product_desc&apos;:item.find(&apos;.pic .img&apos;).attr(&apos;alt&apos;),  # 商品描述            &apos;price&apos;:item.find(&apos;.price&apos;).text().replace(&apos;\n&apos;, &apos;&apos;),  # 价格            &apos;people&apos;:item.find(&apos;.deal-cnt&apos;).text(),  # 购买人数            &apos;shop_url&apos;:&apos;https:&apos; + item.find(&apos;.shop .shopname&apos;).attr(&apos;href&apos;),  # 店铺信息            &apos;shop_name&apos;:item.find(&apos;.shop&apos;).text(),  # 店铺名称            &apos;shop_location&apos;:item.find(&apos;.location&apos;).text()  # 店铺所在地            }        print(product_infos)if __name__ == &apos;__main__&apos;:    pages = 100  # 根据页面分析可知总共有100页的信息    for num in range(1, pages + 1):        index_source(num)     </code></pre><blockquote><p>当然还可以进行正则表达式的匹配来完成爬取，因为需要时间来测试相关的表达式，所以推荐用<em>pyquery</em>这个库来完成爬取工作，相比于使用过的<em>beautiful</em>模块以及正则表达式，我感觉轻松了不少。</p></blockquote><h2 id="抓包爬取"><a href="#抓包爬取" class="headerlink" title="抓包爬取"></a>抓包爬取</h2><p>以下的抓包是利用的<em>Chrome</em>浏览器完成的，在这之前说了，因为时间关系，关于抓包是什么就不在此做详细介绍了…相信你看了我下面的分析过程会隐约明白一点。</p><h3 id="分析过程-1"><a href="#分析过程-1" class="headerlink" title="分析过程"></a>分析过程</h3><p>打开淘宝主页，输入关键词，在第一页上打开<em>Chrome</em>自带的<em>开发者工具</em>，这样就可以看到第一页的源代码信息了。以下图过程可以看到我们在第一页抓到的相关的<em>淘宝API</em>的数据包。里面有相关的商品信息，均为<em>json</em>格式。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-08%20%E4%B8%8B%E5%8D%887.55.32.png" alt=""></p><hr><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-08%20%E4%B8%8B%E5%8D%887.56.39.png" alt=""></p><blockquote><p>其中的<em>XHR格式</em>不懂可参考此篇文章：<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest" target="_blank" rel="external">https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest</a></p></blockquote><p>浏览器新建一个标签页，打开上面的那个地址看看有什么。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-08%20%E4%B8%8B%E5%8D%888.24.11.png" alt=""></p><p><strong>经过一系列的测试发现了其中的那个参数<em>bcoffset=</em>是跳转的决定点，更改其值可得到不同的信息。</strong>这样我们进行思路分析就一目了然了。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-08%20%E4%B8%8B%E5%8D%888.21.47.png" alt=""></p><p><strong>思路分析：传入上面的说的API的URL，根据上面的那个参数的值更改，返回其中的文档信息，即可爬取到商品信息。</strong></p><h3 id="代码实现-1"><a href="#代码实现-1" class="headerlink" title="代码实现"></a>代码实现</h3><pre><code>&apos;&apos;&apos;    函数说明：    利用抓包返回的信息直接爬取商品信息    编写时间：    2018-04-08&apos;&apos;&apos;import requestsimport reif __name__ == &apos;__main__&apos;:    # 设定爬取100页，实际上还要多...    pages = 100    for num in range(1, pages + 1):        print(&apos;开始爬取第&apos; + str(num) + &apos;页内容...&apos; + &apos;\n&apos; + &apos;.&apos; * 10)        url = &apos;https://s.taobao.com/api?_ksTS=1523191565870_226&amp;callback=jsonp227&amp;ajax=true&amp;m=customized&amp;stats_click=search_radio_all:1&amp;q=macbookpro&amp;p4ppushleft=1,48&amp;ntoffset=4&amp;s=36&amp;imgfile=&amp;initiative_id=staobaoz_20180408&amp;bcoffset=&apos; + str(num) + &apos;&amp;js=1&amp;ie=utf8&amp;rn=5bd3f39c2ca57f21abe4db8ca60ee49f&apos;        # 代理信息        header = {                &apos;cookie&apos;: &apos;t=da97f7b09403e3340cd6d50780a9385e; cna=PoshExqPgw0CAQG9KdLV29qM; hng=CN%7Czh-CN%7CCNY%7C156; thw=cn; enc=MuF%2FWOzFnau5EcbgcPck31M%2FMhER8txA4ZnjdZI2Dt8xzHdAr%2FN4f0OsOD%2FUcrNpOZWIfEG0GSbPQ8C4U%2BU70A%3D%3D; mt=ci%3D-1_1; cookie2=1f17bf1dfa8b6cf01c17d0fe7306c672; v=0; _tb_token_=eaefe3a15f0bf; JSESSIONID=0BC0D7637EFFD50CA56F8A8F4E451813; isg=BD09zFTCO5bo0p_z6P-VaFHGTJ_3cnEiA2cTwf-D2RRsNl5oySop_Xqg5Wpwlonk&apos;,                &apos;referer&apos;: &apos;https://s.taobao.com/search?q=macbookpro&amp;imgfile=&amp;js=1&amp;stats_click=search_radio_all%3A1&amp;initiative_id=staobaoz_20180408&amp;ie=utf8&amp;bcoffset=4&amp;p4ppushleft=1%2C48&amp;ntoffset=4&amp;s=0&apos;,                &apos;user-agent&apos;: &apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36&apos;,                &apos;x-requested-with&apos;: &apos;XMLHttpRequest&apos;}        responed = requests.get(url=url, headers=header)        # 指定编码格式        responed.encoding = &apos;utf-8&apos;        re_text = responed.text        &apos;&apos;&apos;            进入数据清洗与筛选阶段            因为转化json格式始终失败...所以改用正则表达式来进行匹配        &apos;&apos;&apos;        print(&apos;获取源代码成功，以下为相关商品的信息：&apos;)        target = re.findall(r&apos;&quot;raw_title&quot;:&quot;(.*?)&quot;.*?&quot;pic_url&quot;:&quot;(.*?)&quot;.*?&quot;view_price&quot;:&quot;(.*?)&quot;.*?&quot;item_loc&quot;:&quot;(.*?)&quot;.*?&quot;view_sales&quot;:&quot;(.*?)&quot;.*?&quot;user_id&quot;:&quot;(.*?)&quot;.*?&quot;nick&quot;:&quot;(.*?)&quot;&apos;, re_text, re.S)  # @UndefinedVariable        for each in target:            product = {                &apos;shop_title&apos;:each[0],  # 店铺主题                &apos;pic_url&apos;:&apos;https:&apos; + each[1],  # 店铺图片地址                &apos;price&apos;:each[2],  # 价格                &apos;sales_people&apos;:each[4],  # 购买人数                &apos;shop_name&apos;:each[6],  # 店铺名称                &apos;loc&apos;:each[3],  # 店铺所在地                &apos;shop_url&apos;:&apos;https://store.taobao.com/shop/view_shop.htm?user_number_id=&apos; + each[5]  # 店铺URL地址                    }            print(product)</code></pre><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>第二种方法期间原本以为可以先转化为<em>json格式</em>来进行处理，没想到发生了<strong>json.decoder.JSONDecodeError:</strong>的错误，结果改用正则表达式进行文本的挖掘，效率也是无形中得到了提升…在此我推荐用正则表达式来处理<em>json格式</em>的文档，这样在绝大多数情况下可能会有更高的效率！</p><p>爬取到的数据可用来进行一些数据分析等等。有时想尝试用各种方法去爬取，但是因为学的东西真的多，所以就不一一尝试了，尽量使用简便的方法…不懂的朋友还需要多多学习，利用好搜索引擎！当然看书也是必须的。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;爬取淘宝信息：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;1，可用&lt;em&gt;selenium&lt;/em&gt;模块与&lt;em&gt;driver Chrome&lt;/em&gt;插件自动化模拟爬取。&lt;/p&gt;
-&lt;p&gt;2， 进行抓包爬取。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;下面一一进
-      
-    
-    </summary>
-    
-      <category term="python爬虫" scheme="https://liujunjie11.github.io/categories/python%E7%88%AC%E8%99%AB/"/>
-    
-    
-      <category term="python爬虫" scheme="https://liujunjie11.github.io/tags/python%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
