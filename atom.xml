@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-07-18T12:56:33.215Z</updated>
+  <updated>2018-07-20T03:31:22.401Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>心声</title>
+    <link href="https://liujunjie11.github.io/2018/07/18/%E5%BF%83%E5%A3%B0/"/>
+    <id>https://liujunjie11.github.io/2018/07/18/心声/</id>
+    <published>2018-07-18T13:35:08.000Z</published>
+    <updated>2018-07-20T03:31:22.401Z</updated>
+    
+    <content type="html"><![CDATA[<p>我已沉默了许久了。</p><p>直到今日我看到了一个<a href="https://www.youtube.com/watch?v=1yY0U801tUs&amp;feature=youtu.be" target="_blank" rel="external">视频链接</a>，看到了下方的一个同胞说到“我一直在流泪，孩子。”。我的心顿时在流血一般的，泪水一度忍不住的留..</p><p>现在中国的年轻一代们，你们为何不去了解政治？你们有什么理由不去了解自己国家的政治？看到身边的行尸走肉们，我有时感到一股孤独感由然而生。幸好，我并不是一个人坚持着，在世界的各个角落都有我的同胞都有人在关心着这个国家与这里的人民生活的怎么样，想到这里，我总是有一股欣慰感。</p><p>我不是什么象牙塔里的花朵，我也不想为谁辩论什么。我只是想关心我的国家，在这里，我出生在这里，在出生之后我知道我是一个中国人，我的一个“大家”叫中国，这里有我的许许多多的兄弟姐妹，大家相依为命，情同手足…这曾经是在我的梦里时常出现的幻梦，如今依旧不变着。</p><p>这里的土地应当由这里的人民来当家作主，不是从什么地方过来的二流子政权来把这里搞得民不聊生，人人自危，看看吧，如今的这片土地上，什么荒谬的事情每天都在发生，一次又一次的冲击着无数人的底线。没有最荒谬的事在这里，只有更为荒谬的。虽然主体都是人，难道就与政治没有关系？政治关系着社会人民生活的方方面面，有什么理由不关心自己国家的政治？作为一个中国人。</p><p>如今的这个国家有着一部分的人利用着这个体制获取着从多数人民身上得来的不义之财，打着各种为这个国家为人民着想的口号，吃着人血馒头，过着丝毫没有悔改，为所欲为的生活。这些人只要有存在的一天，就是这个国家最大的心患，是不必要的，需清除的寄生虫！他们带坏了整个国家社会的风气，导致一些臭味相投的人跟着这歪风，一起欺压压榨着我们的人民，有点少人因为被逼的放弃自己的底线、良知与善良？只有大家一同关注起来，一同团结起来才能将这些人绳之于法，用我们自己的真正的“法”！</p><p>作为这个国家的一份子，在有些时候就不应该继续沉默着，勇敢的发出自己的声音，与更多的那些勇敢的人民一起前进！人们也不应太过于冷漠，这个国家社会终究是我们一个个组成，大家都心怀热情，保持善良的人格，理智的并且去热衷于帮助身边需要的每一个人！当身边越来越好一些了之后，整体才会慢慢的变好。</p><p>大家一起加油！！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;我已沉默了许久了。&lt;/p&gt;
+&lt;p&gt;直到今日我看到了一个&lt;a href=&quot;https://www.youtube.com/watch?v=1yY0U801tUs&amp;amp;feature=youtu.be&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;视频链接
+      
+    
+    </summary>
+    
+      <category term="成长" scheme="https://liujunjie11.github.io/categories/%E6%88%90%E9%95%BF/"/>
+    
+    
+      <category term="成长" scheme="https://liujunjie11.github.io/tags/%E6%88%90%E9%95%BF/"/>
+    
+  </entry>
   
   <entry>
     <title>使用PS软件的记录</title>
@@ -526,31 +552,6 @@
     
     
       <category term="eclispe scrapy" scheme="https://liujunjie11.github.io/tags/eclispe-scrapy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于eclipse的风格与主题</title>
-    <link href="https://liujunjie11.github.io/2018/04/13/%E5%85%B3%E4%BA%8Eeclipse%E7%9A%84%E9%A3%8E%E6%A0%BC%E4%B8%8E%E4%B8%BB%E9%A2%98/"/>
-    <id>https://liujunjie11.github.io/2018/04/13/关于eclipse的风格与主题/</id>
-    <published>2018-04-13T04:56:03.000Z</published>
-    <updated>2018-04-13T05:21:26.770Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="eclipse的界面主题更换"><a href="#eclipse的界面主题更换" class="headerlink" title="eclipse的界面主题更换"></a><em>eclipse</em>的界面主题更换</h2><p>关于我的<em>eclipse</em>的界面主题更换（目前为<em>eclipse Oxygen</em>版本），在内置中已经可以作为一种选择了。</p><p>具体看图所示即可：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/4%E6%9C%88-13-2018%2013-07-55.gif" alt=""></p><blockquote><p>可供的选择有三种，其中的<em>dark</em>类型是比较护眼的，均可试试。</p></blockquote><p>实际的<em>dark</em>展示：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-13%20%E4%B8%8B%E5%8D%881.08.27.png" alt=""></p><hr><h2 id="eclipse代码风格更换"><a href="#eclipse代码风格更换" class="headerlink" title="eclipse代码风格更换"></a><em>eclipse</em>代码风格更换</h2><p>可参考此处：<a href="https://blog.csdn.net/zhouchangshi/article/details/37901519" target="_blank" rel="external">https://blog.csdn.net/zhouchangshi/article/details/37901519</a></p><blockquote><p>其中已经有了许多的并且详细的介绍了。</p></blockquote><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul><li>关于更换编译处的字体大小以及字体选择（如图）:</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/4%E6%9C%88-13-2018%2013-11-02.gif" alt=""></p><ul><li>关于控制台的字体更改以及选择（如图）:</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/4%E6%9C%88-13-2018%2013-10-41.gif" alt=""></p><hr><p><strong>参考：</strong></p><p><a href="https://jingyan.baidu.com/article/f96699bb9442f3894e3c1b15.html" target="_blank" rel="external">https://jingyan.baidu.com/article/f96699bb9442f3894e3c1b15.html</a></p><p><a href="https://blog.csdn.net/zhouchangshi/article/details/37901519" target="_blank" rel="external">https://blog.csdn.net/zhouchangshi/article/details/37901519</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;eclipse的界面主题更换&quot;&gt;&lt;a href=&quot;#eclipse的界面主题更换&quot; class=&quot;headerlink&quot; title=&quot;eclipse的界面主题更换&quot;&gt;&lt;/a&gt;&lt;em&gt;eclipse&lt;/em&gt;的界面主题更换&lt;/h2&gt;&lt;p&gt;关于我的&lt;em&gt;eclip
-      
-    
-    </summary>
-    
-      <category term="eclipse" scheme="https://liujunjie11.github.io/categories/eclipse/"/>
-    
-    
-      <category term="eclipse" scheme="https://liujunjie11.github.io/tags/eclipse/"/>
     
   </entry>
   
