@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>%2F2018%2F08%2F16%2F%E5%85%B3%E4%BA%8Epython%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E8%B0%83%E7%94%A8%E6%96%B9%E6%B3%95%E7%9A%84%E7%AE%80%E5%8D%95%E6%80%9D%E8%80%83%2F</url>
+    <content type="text"><![CDATA[title: 关于python函数式编程以及相关调用方法的简单思考date: 2018-08-16 18:58:04tags: python编程categories: python编程 comments: true最近在参加kaggle上的一个入门级的比赛，在参考他人的代码时学习到了应用一些东西，在这里说的python函数式编程实际上在看书时看到了好几遍了，但是在真正的应用时是有一股“意想不到的”欣喜感的，哈哈.. 在此简单记录一下，以便以后参考用。 在所谓的函数式编程中，若是简单的直接调用出结果那真的是大材小用了..实际上只是我认知较浅..哈哈~ 在使用这些函数时，我发现会有惊人的效果，而且可以达到理想的效果，就如在处理一些数据中结合本身的变量时真的有一股得心应手的感觉～～ 这里的变量一般为DataFrame的数据类型，也可称为一个特征向量，维度。 再者，如是需要以自定义的函数结合变量达到理想的效果，不妨可以试试appley这个方法，大胆的调用起来！真的是挺好的一个工具，哈哈。 学到了不少实用的东西～]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[为Hexo博客(next主题)加上评论功能]]></title>
     <url>%2F2018%2F08%2F15%2F%E4%B8%BAHexo%E5%8D%9A%E5%AE%A2-next%E4%B8%BB%E9%A2%98-%E5%8A%A0%E4%B8%8A%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD%2F</url>
     <content type="text"><![CDATA[一直想加一个评论的功能，现在有时间了。 下面来说说简单的过程。 用的是来必力这个评论系统。 首先需要进入其中进行注册。 前面的注册过程具体参考下面这篇文章吧，但是后面的过程回来参考我的即可。 文章地址：https://segmentfault.com/a/1190000012918417 如上面的文章可知，每个人注册成功之后会有一个独立的uid。 接下来打开目录位置目标/Users/XX/XXXX/themes/next/_config.yml，搜索关键词liver，将此位置改成 livere: on: true #控制开关 livere_uid: 你的uid 如下图所示： 接下来进行最重要的一步，打开目录位置目标/Users/XX/XXXX/themes/next/layout/_partials/comments.swig，将其中的改成如下图所示： 保存之后再有顺序的使用命令： hexo s -debug #调试并且展示 hexo g -d #完成文件上传生成 另外可在自己的来必力设置界面设置成自己想要的样子： 之后打开自己的网站就可以看到效果如何啦： 参考&amp;最后参考：https://www.jianshu.com/p/f5c184047e72 实话说，加上评论功能之后网站加载时间多了那么几毫秒…总体来说还不错。另外我用的Mac，其他系统也无大碍，看目录位置即可。]]></content>
