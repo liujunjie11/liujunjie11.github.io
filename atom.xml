@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-08-16T11:26:11.856Z</updated>
+  <updated>2018-08-16T11:43:37.992Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pandas.Series.str.get()的简单使用</title>
+    <link href="https://liujunjie11.github.io/2018/08/16/pandas-Series-str-get-%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/"/>
+    <id>https://liujunjie11.github.io/2018/08/16/pandas-Series-str-get-的简单使用/</id>
+    <published>2018-08-16T11:34:16.000Z</published>
+    <updated>2018-08-16T11:43:37.992Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>关于这个函数可在官网找到：<br><a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.str.get.html" target="_blank" rel="external">https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.str.get.html</a></p></blockquote><p>实际上我在此只是起到一个翻译的作用…</p><p>这个函数语法如下：</p><p><code>Series.str.get(i)</code></p><blockquote><p>其中：</p><p>Parameters:    <code>i : int类型输入</code>，用于返回制定元素的一个位置(可理解为一个针对自身元素身上的一个索引)</p><p>Returns:<br>items : <code>Series/Index of objects</code>，即返回的数据类型</p></blockquote><p>具体使用参考官网上的例子：</p><pre><code>&gt;&gt;&gt; s = pd.Series([&quot;String&quot;,           (1, 2, 3),           [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;],           123, -456,           {1:&quot;Hello&quot;, &quot;2&quot;:&quot;World&quot;}])&gt;&gt;&gt; s0                        String1                     (1, 2, 3)2                     [a, b, c]3                           1234                          -4565    {1: &apos;Hello&apos;, &apos;2&apos;: &apos;World&apos;}dtype: object&gt;&gt;&gt; s.str.get(1)0        t1        22        b3      NaN4      NaN5    Hellodtype: object&gt;&gt;&gt; s.str.get(-1)0      g1      32      c3    NaN4    NaN5    NaNdtype: object</code></pre><p>好了就这样吧，记录这个是因为有预感以后会再次用到…</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;关于这个函数可在官网找到：&lt;br&gt;&lt;a href=&quot;https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.str.get.html&quot; target=&quot;_blank&quot;
+      
+    
+    </summary>
+    
+      <category term="python编程" scheme="https://liujunjie11.github.io/categories/python%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="python编程" scheme="https://liujunjie11.github.io/tags/python%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>关于python函数式编程以及相关调用方法的简单思考</title>
@@ -524,33 +550,6 @@
     
     
       <category term="学习笔记" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python3爬虫与GUI：一个简易的搜索实用小工具</title>
-    <link href="https://liujunjie11.github.io/2018/04/28/python3%E7%88%AC%E8%99%AB%E4%B8%8EGUI%EF%BC%9A%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%9A%84%E6%90%9C%E7%B4%A2%E5%AE%9E%E7%94%A8%E5%B0%8F%E5%B7%A5%E5%85%B7/"/>
-    <id>https://liujunjie11.github.io/2018/04/28/python3爬虫与GUI：一个简易的搜索实用小工具/</id>
-    <published>2018-04-28T02:31:30.000Z</published>
-    <updated>2018-05-02T13:04:39.933Z</updated>
-    
-    <content type="html"><![CDATA[<p>平时在获取爬虫之后，会不满足于仅仅得到了结果，而是想经过一个交互式的界面来进一步的完善，获取更多的功能，从而可以更好的展示数据。</p><p>下面运用了<em>python</em>的<em>pyqt5</em>库来进行<em>GUI</em>的设计。</p><p>用<em>pyqt5</em>这个库实现简单的界面化有两种方法：</p><ul><li><p>编写代码(一般为几十行代码足够了)。</p></li><li><p>结合<em>QT Creator</em>来进行界面设计，加入信号与槽的机制，槽这一方面还是需要编写相应的几行代码。</p></li></ul><blockquote><p>下面一一进行简单的介绍。</p></blockquote><h2 id="代码编写方式"><a href="#代码编写方式" class="headerlink" title="代码编写方式"></a>代码编写方式</h2><p>假设我已经利用爬虫写出来了<em>百度百科</em>，<em>维基百科</em>的接口的代码程序，接下来仅仅需要设计好界面，再者之后利用好信号与槽的机制将接口代码与界面相连接即可完成一个简易的搜索实用小工具了。</p><p>在此简单理解一下信号与槽机制以及所谓的事件机制：<strong>比如我们有一个按钮，点击此按钮便弹出一个写有‘Hello’的窗口，点击到弹出新窗口的这一过程，有个响应的过程，我们可以理解为发送信号(点击按钮)，之后有弹出新窗口(响应),而这一系列过程包括弹出的内容我们可称之为事件。</strong></p><blockquote><p>关于学习<em>pyqt5</em>库的中文教程地址：<a href="https://maicss.gitbooks.io/pyqt5/content/事件和信号.html" target="_blank" rel="external">https://maicss.gitbooks.io/pyqt5/content/事件和信号.html</a></p></blockquote><p>从头开始看一下，之后再看这一篇大概就知道简单的交互式界面是如何生成的了。</p><p>简单描述一下思路：<strong>先设计布局好界面(包括定义好相关按钮的快捷键)，写入爬虫代码，信号与槽机制的连接设定，即完成了此次的任务。</strong></p><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre><code>import sysimport urllib.request  from bs4 import BeautifulSoupimport refrom urllib.parse import quote from PyQt5.QtWidgets import (QPushButton, QWidget, QLabel, QLineEdit, QTextEdit, QGridLayout, QApplication,    QComboBox)from PyQt5.QtCore import QCoreApplicationclass Example(QWidget):     def __init__(self):        &apos;&apos;&apos;        初始化        &apos;&apos;&apos;        super().__init__()        self.initUI()    def baidu_baike(self, entry):          &apos;&apos;&apos;        百度百科词条内容爬取代码        entry：词条        因为太懒了..所以爬取的代码没有自己写..        &apos;&apos;&apos;        url = &apos;https://baike.baidu.com/item/&apos; + urllib.parse.quote(entry)        html = urllib.request.urlopen(url)          content = html.read().decode(&apos;utf-8&apos;)        html.close()        # lxml器进行解析        soup = BeautifulSoup(content, &quot;lxml&quot;)          text = soup.find(&apos;div&apos;, class_=&quot;lemma-summary&quot;).children  # 簡介部分        intro_text = &apos;&apos;        # 数据爬取        for x in text:            word = re.sub(re.compile(r&quot;&lt;(.+?)&gt;&quot;), &apos;&apos;, str(x))            words = re.sub(re.compile(r&quot;\[(.+?)\]&quot;), &apos;&apos;, word)            intro_text += words        return intro_text  # 返回文本(str格式)    def intro_final(self, entry):          &apos;&apos;&apos;        异常处理        &apos;&apos;&apos;        try:            return self.baidu_baike(entry)        except AttributeError:            return &quot;词条定义不够清晰/词条目前未成立！&quot;    def initUI(self):        # GUI布局及控件放置        search_label = QLabel(&quot;请输入搜索词条：&quot;)        search_item = QLineEdit()        combo = QComboBox(self)        combo.addItem(&quot;百度百科&quot;)        combo.addItem(&quot;维基百科(不可用)&quot;)        btn1 = QPushButton(&quot;开始搜索&quot;, self)        # shortcut快捷键的设置        btn1.setShortcut(&apos;return&apos;)        btn2 = QPushButton(&quot;清空&quot;, self)        btn2.setShortcut(&apos;esc&apos;)        btn3 = QPushButton(&apos;退出&apos;, self)        btn3.setShortcut(&apos;command+q&apos;)        btn3.setShortcut(&apos;Ctrl+q&apos;)        btn3.clicked.connect(QCoreApplication.instance().quit)        search_result = QTextEdit()        grid = QGridLayout()        grid.setSpacing(5)        grid.addWidget(search_label, 1, 0)        grid.addWidget(btn3, 2, 1)        grid.addWidget(search_item, 2, 0)        grid.addWidget(btn1, 3, 0)        grid.addWidget(btn2, 3, 1)        grid.addWidget(search_result, 4, 0, 5 , 0)        self.setLayout(grid)        # 信号机制的设置，定义为一个方法作为反映的对象，这里很好理解        def search():            &apos;&apos;&apos;            搜索信号反映的响应            &apos;&apos;&apos;            search_result.setText(self.intro_final(search_item.text()))        btn1.clicked.connect(search)        def clear():            &apos;&apos;&apos;            清空信号反映的响应            &apos;&apos;&apos;            search_result.setText(&quot;&quot;)            search_item.setText(&quot;&quot;)        btn2.clicked.connect(clear)        # 设置窗口大小        self.setGeometry(500, 150, 600, 500)        self.setWindowTitle(&quot;搜索引擎GUI&quot;)        self.show()if __name__ == &quot;__main__&quot;:    app = QApplication(sys.argv)    ex = Example()    sys.exit(app.exec_())</code></pre><blockquote><p>以上有不懂的地方均可在<a href="https://maicss.gitbooks.io/pyqt5/content/hello_world.html" target="_blank" rel="external">pyqt5中文教程</a>中找到思路。</p></blockquote><h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><p><img src="http://owudg3xs2.bkt.clouddn.com/5%E6%9C%88-02-2018%2019-31-44.gif" alt=""></p><h2 id="结合QT-Creator的界面设计"><a href="#结合QT-Creator的界面设计" class="headerlink" title="结合QT Creator的界面设计"></a>结合<em>QT Creator</em>的界面设计</h2><p>结合<em>QT Creator</em>的界面，我们肯定会想到：那当我们进行界面设计完成之后，就算是转化为<code>.py</code>的<em>python</em>脚本，那我们又该如何定义信号与槽的机制以及事件的机制呢？</p><p>下面的解说就是解决这个疑惑的。</p><p>第一步当然是去官网下载好软件了。</p><blockquote><p>参考此篇文章：<a href="https://blog.csdn.net/win_turn/article/details/50465127" target="_blank" rel="external">https://blog.csdn.net/win_turn/article/details/50465127</a></p></blockquote><p><strong>话不多说了，下载的时候其实有一个坑，即要记得下载有调试的那个版本，否则在设计界面时无法得到运行。</strong></p><h3 id="创建文件并且设计"><a href="#创建文件并且设计" class="headerlink" title="创建文件并且设计"></a>创建文件并且设计</h3><p>在这里仅仅是为了达到解说的目的所以简单设计一下就好，说说设计下面的思路：<strong>定义一个按钮(名为确定)，一个输入框，一个输出框，达到的目的是从输入框输入文字，按下确定按钮，输出框中输出与输入框一致的内容。</strong></p><p>创建新的文件过程如图所示：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/5%E6%9C%88-02-2018%2019-42-52.gif" alt=""></p><blockquote><p>总之就是如上图一路点击下去即可。</p></blockquote><p>之后会发现有这样的界面出现：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-02%20%E4%B8%8B%E5%8D%887.43.59.png" alt=""></p><p>这个<em>mainwindow.ui</em>不说就能轻易知道就是用它来进行界面设计的。双击它即可进入设计界面(如图1)，当然可选择<em>Qt Designer</em>进行设计(对其右键可弹出选项，如图2)。</p><ul><li>图1</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-02%20%E4%B8%8B%E5%8D%887.49.34.png" alt=""></p><ul><li>图2</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-02%20%E4%B8%8B%E5%8D%887.47.52.png" alt=""></p><p>为了尽快达到写完的目的，我简单的来进行一下示范…</p><p>先在界面中，设计一个按钮：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/5%E6%9C%88-02-2018%2020-15-04.gif" alt=""></p><p>然后添加下面两种组件：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/5%E6%9C%88-02-2018%2020-15-15.gif" alt=""></p><p><img src="http://owudg3xs2.bkt.clouddn.com/5%E6%9C%88-02-2018%2020-15-38.gif" alt=""></p><h3 id="定义信号与槽"><a href="#定义信号与槽" class="headerlink" title="定义信号与槽"></a>定义信号与槽</h3><p>在这之前先将设计好的转为<code>.py</code><em>python</em>脚本文件。<code>cd</code>到相应的文件的目录下(即上面的<em>mainwindow.ui</em>所在的目录。注意，此步非常重要！)利用命令行：<code>pyuic5 -o  mainwindow.py mainwindow.ui</code></p><blockquote><p>关于此命令行具体可参考：<a href="https://blog.csdn.net/yingmutongxue/article/details/8487348" target="_blank" rel="external">https://blog.csdn.net/yingmutongxue/article/details/8487348</a><br><strong>(在此需要注意的是，我使用的是<em>pyqt5</em>，所以对应的命令行应当是pyuic5开头，若是<em>pyqt4</em>，则为pyuic4开头了。)</strong></p></blockquote><p>这样在本目录下即可找到转为后的<em>python</em>文件了。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-02%20%E4%B8%8B%E5%8D%889.04.04.png" alt=""></p><p>再者，我们需要在这个文件实现上面说的思路，即相应的信号与槽机制的代码。因为时间问题，就不在此实现了(是真的写不下去了…)。</p><p>在完成之后，我们直接将此调入<em>eclipse</em>的工程目录下(我用的是<em>eclipse</em>)，之后我们直接调用此文件即可。</p><pre><code>import sysfrom PyQt5.QtWidgets import QApplication , QMainWindowfrom mainwindow import *if __name__ == &apos;__main__&apos;:#     主函数    app = QtWidgets.QApplication(sys.argv)    MainWindow = QtWidgets.QMainWindow()    ui = Ui_MainWindow()    ui.setupUi(MainWindow)    MainWindow.show()    sys.exit(app.exec_())</code></pre><blockquote><p>这样即可完成结合软件设计界面，并在<em>python</em>中运行的一条龙服务了…</p><p>其实在<em>Qt creator</em>中就有信号与槽机制以及快捷键的设置了，这个可参考：<a href="https://wizardforcel.gitbooks.io/qt-beginning/content/60.html" target="_blank" rel="external">https://wizardforcel.gitbooks.io/qt-beginning/content/60.html</a><br>(<strong>全面介绍了</strong>)</p></blockquote><p>简单认识一下设计界面上的那些按钮功能(网上的图，出处忘记了…)</p><p><img src="http://owudg3xs2.bkt.clouddn.com/d.png" alt=""></p><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>唉..突然感觉直接写代码都还要方便多了…结合软件设计搞的时间浪费的还要多…</p><ul><li>参考：</li></ul><blockquote><p><a href="https://blog.csdn.net/jclian91/article/details/77407723" target="_blank" rel="external">https://blog.csdn.net/jclian91/article/details/77407723</a></p><p><a href="https://maicss.gitbooks.io/pyqt5/content/介绍.html" target="_blank" rel="external">https://maicss.gitbooks.io/pyqt5/content/介绍.html</a><br><strong>(以上所有内容的拼接均可根据此pyqt5库中文教程来进行理解学习，还是一句话，要多动脑多动手实践。)</strong></p><p><a href="https://cuiqingcai.com/5551.html" target="_blank" rel="external">https://cuiqingcai.com/5551.html</a><br><strong>（pyquery的使用教程）</strong></p></blockquote><ul><li>关于将<em>python</em>文件打包生成app的工具库：</li></ul><blockquote><p>py2app:.py –&gt; .dmg</p><p>py2exe:.py –&gt; .exe </p></blockquote><ul><li>关于<em>css选择器</em>等其他内容的快速获取(基于<em>chrome</em>浏览器)：</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/5%E6%9C%88-02-2018%2019-33-40.gif" alt=""></p><blockquote><p>看上方的动图，选择完之后粘贴即可得出对应的内容(可适当删除中间字段而不影响达到目的)，当然最好学会一点相关的内容，其实也不难上手。</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;平时在获取爬虫之后，会不满足于仅仅得到了结果，而是想经过一个交互式的界面来进一步的完善，获取更多的功能，从而可以更好的展示数据。&lt;/p&gt;
-&lt;p&gt;下面运用了&lt;em&gt;python&lt;/em&gt;的&lt;em&gt;pyqt5&lt;/em&gt;库来进行&lt;em&gt;GUI&lt;/em&gt;的设计。&lt;/p&gt;
-&lt;p&gt;用&lt;
-      
-    
-    </summary>
-    
-      <category term="python-GUI学习" scheme="https://liujunjie11.github.io/categories/python-GUI%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="python-GUI学习" scheme="https://liujunjie11.github.io/tags/python-GUI%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
