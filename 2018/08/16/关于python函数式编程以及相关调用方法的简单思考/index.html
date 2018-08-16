@@ -57,7 +57,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="python编程," />
 
 
 
@@ -75,17 +75,18 @@
 
 
 
-<meta name="description" content="title: 关于python函数式编程以及相关调用方法的简单思考date: 2018-08-16 18:58:04tags: python编程categories: python编程 comments: true最近在参加kaggle上的一个入门级的比赛，在参考他人的代码时学习到了应用一些东西，在这里说的python函数式编程实际上在看书时看到了好几遍了，但是在真正的应用时是有一股“意想不到的">
+<meta name="description" content="最近在参加kaggle上的一个入门级的比赛，在参考他人的代码时学习到了应用一些东西，在这里说的python函数式编程实际上在看书时看到了好几遍了，但是在真正的应用时是有一股“意想不到的”欣喜感的，哈哈.. 在此简单记录一下，以便以后参考用。 在所谓的函数式编程中，若是简单的直接调用出结果那真的是大材小用了..实际上只是我认知较浅..哈哈~ 在使用这些函数时，我发现会有惊人的效果，而且可以达到理想的">
+<meta name="keywords" content="python编程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LXiHa`Notes">
+<meta property="og:title" content="关于python函数式编程以及相关调用方法的简单思考">
 <meta property="og:url" content="https://liujunjie11.github.io/2018/08/16/关于python函数式编程以及相关调用方法的简单思考/index.html">
 <meta property="og:site_name" content="LXiHa`Notes">
-<meta property="og:description" content="title: 关于python函数式编程以及相关调用方法的简单思考date: 2018-08-16 18:58:04tags: python编程categories: python编程 comments: true最近在参加kaggle上的一个入门级的比赛，在参考他人的代码时学习到了应用一些东西，在这里说的python函数式编程实际上在看书时看到了好几遍了，但是在真正的应用时是有一股“意想不到的">
+<meta property="og:description" content="最近在参加kaggle上的一个入门级的比赛，在参考他人的代码时学习到了应用一些东西，在这里说的python函数式编程实际上在看书时看到了好几遍了，但是在真正的应用时是有一股“意想不到的”欣喜感的，哈哈.. 在此简单记录一下，以便以后参考用。 在所谓的函数式编程中，若是简单的直接调用出结果那真的是大材小用了..实际上只是我认知较浅..哈哈~ 在使用这些函数时，我发现会有惊人的效果，而且可以达到理想的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-16T11:10:03.562Z">
+<meta property="og:updated_time" content="2018-08-16T11:18:25.080Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LXiHa`Notes">
-<meta name="twitter:description" content="title: 关于python函数式编程以及相关调用方法的简单思考date: 2018-08-16 18:58:04tags: python编程categories: python编程 comments: true最近在参加kaggle上的一个入门级的比赛，在参考他人的代码时学习到了应用一些东西，在这里说的python函数式编程实际上在看书时看到了好几遍了，但是在真正的应用时是有一股“意想不到的">
+<meta name="twitter:title" content="关于python函数式编程以及相关调用方法的简单思考">
+<meta name="twitter:description" content="最近在参加kaggle上的一个入门级的比赛，在参考他人的代码时学习到了应用一些东西，在这里说的python函数式编程实际上在看书时看到了好几遍了，但是在真正的应用时是有一股“意想不到的”欣喜感的，哈哈.. 在此简单记录一下，以便以后参考用。 在所谓的函数式编程中，若是简单的直接调用出结果那真的是大材小用了..实际上只是我认知较浅..哈哈~ 在使用这些函数时，我发现会有惊人的效果，而且可以达到理想的">
 
 
 
@@ -121,7 +122,7 @@
 
 
 
-  <title> | LXiHa`Notes</title>
+  <title>关于python函数式编程以及相关调用方法的简单思考 | LXiHa`Notes</title>
   
 
 
@@ -309,7 +310,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">关于python函数式编程以及相关调用方法的简单思考</h1>
         
 
         <div class="post-meta">
@@ -321,7 +322,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-16T18:58:04+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-16T19:16:27+08:00">
                 2018-08-16
               </time>
             
@@ -331,6 +332,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python编程/" itemprop="url" rel="index">
+                    <span itemprop="name">python编程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -375,9 +398,7 @@
       
 
       
-        <hr>
-<p>title: 关于python函数式编程以及相关调用方法的简单思考<br>date: 2018-08-16 18:58:04<br>tags: python编程<br>categories: python编程</p>
-<h2 id="comments-true"><a href="#comments-true" class="headerlink" title="comments: true"></a>comments: true</h2><p>最近在参加<em>kaggle</em>上的一个入门级的比赛，在参考他人的代码时学习到了应用一些东西，在这里说的<em>python函数式编程</em>实际上在看书时看到了好几遍了，但是在真正的应用时是有一股“意想不到的”欣喜感的，哈哈..</p>
+        <p>最近在参加<em>kaggle</em>上的一个入门级的比赛，在参考他人的代码时学习到了应用一些东西，在这里说的<em>python函数式编程</em>实际上在看书时看到了好几遍了，但是在真正的应用时是有一股“意想不到的”欣喜感的，哈哈..</p>
 <p>在此简单记录一下，以便以后参考用。</p>
 <p>在所谓的<em>函数式编程</em>中，若是简单的直接调用出结果那真的是大材小用了..实际上只是我认知较浅..哈哈~</p>
 <p>在使用这些<em>函数</em>时，我发现会有惊人的效果，而且可以达到理想的效果，就如在处理一些数据中结合本身的<em>变量</em>时真的有一股得心应手的感觉～～</p>
@@ -400,6 +421,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python编程/" rel="tag"># python编程</a>
+          
+        </div>
       
 
       
@@ -510,17 +537,8 @@ var jiathis_config={
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <p class="site-author-name" itemprop="name">刘俊</p>
@@ -545,7 +563,7 @@ var jiathis_config={
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">52</span>
+                <span class="site-state-item-count">53</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -556,7 +574,7 @@ var jiathis_config={
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">55</span>
+                <span class="site-state-item-count">56</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -614,22 +632,6 @@ var jiathis_config={
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#comments-true"><span class="nav-number">1.</span> <span class="nav-text">comments: true</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -830,7 +832,7 @@ var jiathis_config={
         var disqus_config = function () {
           this.page.url = 'https://liujunjie11.github.io/2018/08/16/关于python函数式编程以及相关调用方法的简单思考/';
           this.page.identifier = '2018/08/16/关于python函数式编程以及相关调用方法的简单思考/';
-          this.page.title = '';
+          this.page.title = '关于python函数式编程以及相关调用方法的简单思考';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://—-...disqus.com/embed.js';
