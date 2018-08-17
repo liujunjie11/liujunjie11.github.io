@@ -57,7 +57,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="python编程," />
 
 
 
@@ -75,16 +75,18 @@
 
 
 
-<meta name="description" content="心灵小窝，记录成长与点滴。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="LXiHa`Notes">
-<meta property="og:url" content="https://liujunjie11.github.io/categories/python-matploylib/index.html">
+<meta name="description" content="如题。 map函数属于python函数式编程，具体的就不说了，可参考官网说明或者是直接看大神说明：  https://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/00141861202544241651579c69d4399a9aa135afef28c44000  在此简要说说如何理解，因为">
+<meta name="keywords" content="python编程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python编程map函数及as_matrix函数简明">
+<meta property="og:url" content="https://liujunjie11.github.io/2018/08/17/python编程map函数及as-matrix函数简明/index.html">
 <meta property="og:site_name" content="LXiHa`Notes">
-<meta property="og:description" content="心灵小窝，记录成长与点滴。">
+<meta property="og:description" content="如题。 map函数属于python函数式编程，具体的就不说了，可参考官网说明或者是直接看大神说明：  https://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/00141861202544241651579c69d4399a9aa135afef28c44000  在此简要说说如何理解，因为">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-08-17T05:15:42.322Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LXiHa`Notes">
-<meta name="twitter:description" content="心灵小窝，记录成长与点滴。">
+<meta name="twitter:title" content="python编程map函数及as_matrix函数简明">
+<meta name="twitter:description" content="如题。 map函数属于python函数式编程，具体的就不说了，可参考官网说明或者是直接看大神说明：  https://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/00141861202544241651579c69d4399a9aa135afef28c44000  在此简要说说如何理解，因为">
 
 
 
@@ -114,13 +116,13 @@
 
 
 
-  <link rel="canonical" href="https://liujunjie11.github.io/categories/python-matploylib/"/>
+  <link rel="canonical" href="https://liujunjie11.github.io/2018/08/17/python编程map函数及as-matrix函数简明/"/>
 
 
 
 
 
-  <title>分类: python matploylib | LXiHa`Notes</title>
+  <title>python编程map函数及as_matrix函数简明 | LXiHa`Notes</title>
   
 
 
@@ -139,7 +141,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -277,55 +279,267 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>python matploylib<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://liujunjie11.github.io/2018/08/17/python编程map函数及as-matrix函数简明/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘俊">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LXiHa`Notes">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/08/08/Mac下的matploylib绘图中文乱码问题/" itemprop="url">
-              
-                <span itemprop="name">Mac下的matploylib绘图中文乱码问题</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">python编程map函数及as_matrix函数简明</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-08T13:55:24+08:00"
-              content="2018-08-08" >
-          08-08
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-17T13:01:34+08:00">
+                2018-08-17
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python编程/" itemprop="url" rel="index">
+                    <span itemprop="name">python编程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/08/17/python编程map函数及as-matrix函数简明/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/08/17/python编程map函数及as-matrix函数简明/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>如题。</p>
+<p><em>map函数</em>属于<em>python函数式编程</em>，具体的就不说了，可参考官网说明或者是直接看大神说明：</p>
+<blockquote>
+<p><a href="https://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/00141861202544241651579c69d4399a9aa135afef28c44000" target="_blank" rel="external">https://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/00141861202544241651579c69d4399a9aa135afef28c44000</a></p>
+</blockquote>
+<p>在此简要说说如何理解，因为之前我有一点困惑。</p>
+<p>已知：</p>
+<pre><code>&gt;&gt;&gt; def f(x):
+...     return x * x
+...
+&gt;&gt;&gt; map(f, [1, 2, 3, 4, 5, 6, 7, 8, 9])
+[1, 4, 9, 16, 25, 36, 49, 64, 81]
+</code></pre><p>那么在理解以下代码时：</p>
+<pre><code>Title_Dict = {}
+#进行添加工作,将其中相关的字词以统一字词以替换
+Title_Dict.update(dict.fromkeys([&apos;Capt&apos;,&apos;Col&apos;,&apos;Major&apos;,&apos;Dr&apos;,&apos;Rev&apos;],&apos;Officer&apos;))
+Title_Dict.update(dict.fromkeys([&apos;Don&apos;,&apos;Sir&apos;,&apos;the Countess&apos;,&apos;Dona&apos;,&apos;Lady&apos;],&apos;Royalty&apos;))
+Title_Dict.update(dict.fromkeys([&apos;Mme&apos;,&apos;Ms&apos;,&apos;Mrs&apos;],&apos;Mrs&apos;))
+Title_Dict.update(dict.fromkeys([&apos;Mlle&apos;,&apos;Miss&apos;],&apos;Miss&apos;))
+Title_Dict.update(dict.fromkeys([&apos;Mr&apos;],&apos;Mr&apos;))
+Title_Dict.update(dict.fromkeys([&apos;Mme&apos;,&apos;Ms&apos;,&apos;Mrs&apos;],&apos;Master&apos;))
+all_data[&apos;Title&apos;] = all_data[&apos;Title&apos;].map(Title_Dict)#(在此中相当于返回了设定的值，与函数式返回类似)新建立一个列表，并且将先前统一好的代入进行整体分类
+sns.barplot(x=&apos;Title&apos;,y=&apos;Survived&apos;,data=all_data,palette=&apos;Set2&apos;)
+</code></pre><p>可以简单的理解为一个函数：</p>
+<pre><code>if [&apos;Capt&apos;,&apos;Col&apos;,&apos;Major&apos;,&apos;Dr&apos;,&apos;Rev&apos;]:
+    return &apos;Officer&apos;
+</code></pre><blockquote>
+<p>这样在结合变量使用时就容易理解的多了～</p>
+</blockquote>
+<p>在说说<code>as_matrix函数</code>。</p>
+<p>如下代码：</p>
+<pre><code>df = pd.DataFrame(np.random.randn(3,4) ,columns=list(&apos;abcd&apos;))
+print (df)
+输出：
+          a         b         c         d
+0  0.702272  0.199382  0.590453 -0.177694
+1  0.692848 -1.113005 -0.373606 -0.249216
+2 -0.928320 -0.920277  0.804570 -0.383224
+
+print (df.values)
+输出：
+[[ 0.70227209  0.19938178  0.59045266 -0.17769368]
+ [ 0.69284849 -1.11300544 -0.37360597 -0.24921559]
+ [-0.92831955 -0.92027708  0.80457031 -0.38322414]]
+
+print (df.as_matrix(columns=None))
+输出：
+[[ 0.70227209  0.19938178  0.59045266 -0.17769368]
+ [ 0.69284849 -1.11300544 -0.37360597 -0.24921559]
+ [-0.92831955 -0.92027708  0.80457031 -0.38322414]]
+</code></pre><ul>
+<li>参考代码来源：<a href="https://blog.csdn.net/yan456jie/article/details/52089128" target="_blank" rel="external">https://blog.csdn.net/yan456jie/article/details/52089128</a></li>
+</ul>
+<blockquote>
+<p>实际上两者的转换就如同有无特征名称之间的来来往往…</p>
+</blockquote>
+<p>之前有些困惑，现在简单理解了一点。</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python编程/" rel="tag"># python编程</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/16/pandas-Series-str-get-的简单使用/" rel="next" title="pandas.Series.str.get()的简单使用">
+                <i class="fa fa-chevron-left"></i> pandas.Series.str.get()的简单使用
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
 
 
           </div>
@@ -333,6 +547,22 @@
 
 
           
+  <div id="lv-container" data-id="city" data-uid="MTAyMC8zODkxOS8xNTQ0Nw==">
+<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+</script>
+<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
 
 
 
@@ -645,6 +875,18 @@
       <script id="dsq-count-scr" src="https://—-...disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://liujunjie11.github.io/2018/08/17/python编程map函数及as-matrix函数简明/';
+          this.page.identifier = '2018/08/17/python编程map函数及as-matrix函数简明/';
+          this.page.title = 'python编程map函数及as_matrix函数简明';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://—-...disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
@@ -999,26 +1241,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

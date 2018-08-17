@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-08-16T11:43:37.992Z</updated>
+  <updated>2018-08-17T05:15:42.322Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python编程map函数及as_matrix函数简明</title>
+    <link href="https://liujunjie11.github.io/2018/08/17/python%E7%BC%96%E7%A8%8Bmap%E5%87%BD%E6%95%B0%E5%8F%8Aas-matrix%E5%87%BD%E6%95%B0%E7%AE%80%E6%98%8E/"/>
+    <id>https://liujunjie11.github.io/2018/08/17/python编程map函数及as-matrix函数简明/</id>
+    <published>2018-08-17T05:01:34.000Z</published>
+    <updated>2018-08-17T05:15:42.322Z</updated>
+    
+    <content type="html"><![CDATA[<p>如题。</p><p><em>map函数</em>属于<em>python函数式编程</em>，具体的就不说了，可参考官网说明或者是直接看大神说明：</p><blockquote><p><a href="https://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/00141861202544241651579c69d4399a9aa135afef28c44000" target="_blank" rel="external">https://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/00141861202544241651579c69d4399a9aa135afef28c44000</a></p></blockquote><p>在此简要说说如何理解，因为之前我有一点困惑。</p><p>已知：</p><pre><code>&gt;&gt;&gt; def f(x):...     return x * x...&gt;&gt;&gt; map(f, [1, 2, 3, 4, 5, 6, 7, 8, 9])[1, 4, 9, 16, 25, 36, 49, 64, 81]</code></pre><p>那么在理解以下代码时：</p><pre><code>Title_Dict = {}#进行添加工作,将其中相关的字词以统一字词以替换Title_Dict.update(dict.fromkeys([&apos;Capt&apos;,&apos;Col&apos;,&apos;Major&apos;,&apos;Dr&apos;,&apos;Rev&apos;],&apos;Officer&apos;))Title_Dict.update(dict.fromkeys([&apos;Don&apos;,&apos;Sir&apos;,&apos;the Countess&apos;,&apos;Dona&apos;,&apos;Lady&apos;],&apos;Royalty&apos;))Title_Dict.update(dict.fromkeys([&apos;Mme&apos;,&apos;Ms&apos;,&apos;Mrs&apos;],&apos;Mrs&apos;))Title_Dict.update(dict.fromkeys([&apos;Mlle&apos;,&apos;Miss&apos;],&apos;Miss&apos;))Title_Dict.update(dict.fromkeys([&apos;Mr&apos;],&apos;Mr&apos;))Title_Dict.update(dict.fromkeys([&apos;Mme&apos;,&apos;Ms&apos;,&apos;Mrs&apos;],&apos;Master&apos;))all_data[&apos;Title&apos;] = all_data[&apos;Title&apos;].map(Title_Dict)#(在此中相当于返回了设定的值，与函数式返回类似)新建立一个列表，并且将先前统一好的代入进行整体分类sns.barplot(x=&apos;Title&apos;,y=&apos;Survived&apos;,data=all_data,palette=&apos;Set2&apos;)</code></pre><p>可以简单的理解为一个函数：</p><pre><code>if [&apos;Capt&apos;,&apos;Col&apos;,&apos;Major&apos;,&apos;Dr&apos;,&apos;Rev&apos;]:    return &apos;Officer&apos;</code></pre><blockquote><p>这样在结合变量使用时就容易理解的多了～</p></blockquote><p>在说说<code>as_matrix函数</code>。</p><p>如下代码：</p><pre><code>df = pd.DataFrame(np.random.randn(3,4) ,columns=list(&apos;abcd&apos;))print (df)输出：          a         b         c         d0  0.702272  0.199382  0.590453 -0.1776941  0.692848 -1.113005 -0.373606 -0.2492162 -0.928320 -0.920277  0.804570 -0.383224print (df.values)输出：[[ 0.70227209  0.19938178  0.59045266 -0.17769368] [ 0.69284849 -1.11300544 -0.37360597 -0.24921559] [-0.92831955 -0.92027708  0.80457031 -0.38322414]]print (df.as_matrix(columns=None))输出：[[ 0.70227209  0.19938178  0.59045266 -0.17769368] [ 0.69284849 -1.11300544 -0.37360597 -0.24921559] [-0.92831955 -0.92027708  0.80457031 -0.38322414]]</code></pre><ul><li>参考代码来源：<a href="https://blog.csdn.net/yan456jie/article/details/52089128" target="_blank" rel="external">https://blog.csdn.net/yan456jie/article/details/52089128</a></li></ul><blockquote><p>实际上两者的转换就如同有无特征名称之间的来来往往…</p></blockquote><p>之前有些困惑，现在简单理解了一点。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;如题。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;map函数&lt;/em&gt;属于&lt;em&gt;python函数式编程&lt;/em&gt;，具体的就不说了，可参考官网说明或者是直接看大神说明：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.liaoxuefeng.com/wiki/
+      
+    
+    </summary>
+    
+      <category term="python编程" scheme="https://liujunjie11.github.io/categories/python%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="python编程" scheme="https://liujunjie11.github.io/tags/python%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>pandas.Series.str.get()的简单使用</title>
@@ -524,32 +552,6 @@
     
     
       <category term="计算机网络" scheme="https://liujunjie11.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我对学习计算机基础的一些心得见解</title>
-    <link href="https://liujunjie11.github.io/2018/04/29/%E6%88%91%E5%AF%B9%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BF%83%E5%BE%97%E8%A7%81%E8%A7%A3/"/>
-    <id>https://liujunjie11.github.io/2018/04/29/我对学习计算机基础的一些心得见解/</id>
-    <published>2018-04-29T12:54:29.000Z</published>
-    <updated>2018-04-29T13:26:28.269Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近总是遇到了许多的瓶颈…即感觉认识的知道的太少了。</p><p>在前些天看到了一些关于<em>python</em>的优化内容之后，加上之前用<em>python</em>也有一段时间了，突然的感觉到一些基础细节才是最重要的，我意识到了<strong>这往往可能就是人与人技术之间的一个分水岭，也往往是突破瓶颈关键点，也往往能决定一个人技术的所在点。基础细节知识是能决定一个人能走多远的</strong></p><p>平时在写程序时不应满足于功能的实现，更加应当注意那些可优化的细节问题，就好比一个算法的时间复杂度与空间复杂度一样的，写的每一个程序(无论那种编程语言)均有可优化的最优解选择。在我平时因为涉及的数据规模不大，这种问题目前是看不出来的，如果运用到的是一个数据规模大的问题上，优化必然是重要的，不可或缺的。</p><p>平时想问题总是感觉能联想到的知识太少，回过头来看，发现自己对计算机的认识本来也不够全面(注意是全面！而非透彻！)。这往往也限制了我许多的想象，从而造成了我的瓶颈突出明显。</p><p>说了这么多，只是想说一个问题：<strong>计算机基础知识(包括编程基础知识)是能决定一个人技术的高度的。</strong>至少我现在就有这种感觉，写一个程序不应满足于功能的实现，更应探索最优解的选择。<strong>这往往就是技术<code>好</code>与<code>坏</code>的一个区分标准吧。</strong></p><p>关于如何学习以上说的基础知识，我有一些见解在此想要说明一下。</p><ul><li><p>知识尽量要了解全面，不能为了速度而一知半解的，那样只会浪费时间，最后还是什么都不知道。</p></li><li><p>有些知识可能会引起我们的好奇，想要进一步理解透彻(彻彻底底)，但是这其中却是有太多的知识链关联着的…这点我深有体会。如果顺着知识链步步了解，我们的确也能学习到许多的知识，但是最后会发现其实这些在我们实际需要中根本没有多大的作用，仅仅当时作为一种科普了，当然现在学习到的知识也是以后我们技术的一种铺垫，如果实在有兴趣就当我没说，兴趣是学习一种知识最好的引导。</p></li><li><p>有些是需要理解透彻的，有些(大部分)可能仅仅是需要了解一下就好的。</p></li><li><p>根据目前的需求来进行学习也是一种好的驱动力。</p></li><li><p>一些必要的基础知识是需要了解的，比如学习了计算机概论，那一般以后买电脑时就会有自己的一些见解了。学习了数据结构与算法基础之后，编程时就不会仅仅以达到目的而“不择手段”编写程序了，因为再学习了这些基础知识之后我们脑子里必然会有一些规则“约束”了。</p></li></ul><p>最后，我还是想说，对于底层的电路什么的那种我想我是不愿也是不情愿接触的…</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;最近总是遇到了许多的瓶颈…即感觉认识的知道的太少了。&lt;/p&gt;
-&lt;p&gt;在前些天看到了一些关于&lt;em&gt;python&lt;/em&gt;的优化内容之后，加上之前用&lt;em&gt;python&lt;/em&gt;也有一段时间了，突然的感觉到一些基础细节才是最重要的，我意识到了&lt;strong&gt;这往往可能就是人与
-      
-    
-    </summary>
-    
-      <category term="学习笔记" scheme="https://liujunjie11.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="学习笔记" scheme="https://liujunjie11.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
