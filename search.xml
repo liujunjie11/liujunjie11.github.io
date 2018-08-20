@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于错误'ValueError: Found array with 0 sample(s) (shape=(0, 4)) while a minimum of 1 is required.']]></title>
+    <url>%2F2018%2F08%2F20%2F%E5%85%B3%E4%BA%8E%E9%94%99%E8%AF%AF-ValueError-Found-array-with-0-sample-s-shape-0-4-while-a-minimum-of-1-is-required%2F</url>
+    <content type="text"><![CDATA[在参考他人的代码时运行出现了错误： ‘ValueError: Found array with 0 sample(s) (shape=(0, 4)) while a minimum of 1 is required.’ 这是因为数据的改动造成的，本身自己所有的数据与他人的不同… 解决方案： 在运行此相关的代码时重新运行一遍你的数据源程序(就是你的那个包涵数据源的变量的那段代码) 这个解决方案对我来说是可行的。我想我说的已经够明白了吧… 参考： https://www.jianshu.com/p/bbfbdedc3c1c]]></content>
+      <categories>
+        <category>python机器学习</category>
+      </categories>
+      <tags>
+        <tag>python机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[python编程map函数及as_matrix函数简明]]></title>
     <url>%2F2018%2F08%2F17%2Fpython%E7%BC%96%E7%A8%8Bmap%E5%87%BD%E6%95%B0%E5%8F%8Aas-matrix%E5%87%BD%E6%95%B0%E7%AE%80%E6%98%8E%2F</url>
     <content type="text"><![CDATA[如题。 map函数属于python函数式编程，具体的就不说了，可参考官网说明或者是直接看大神说明：https://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/00141861202544241651579c69d4399a9aa135afef28c44000 在此简要说说如何理解，因为之前我有一点困惑。 已知： &gt;&gt;&gt; def f(x): ... return x * x ... &gt;&gt;&gt; map(f, [1, 2, 3, 4, 5, 6, 7, 8, 9]) [1, 4, 9, 16, 25, 36, 49, 64, 81] 那么在理解以下代码时： Title_Dict = {} #进行添加工作,将其中相关的字词以统一字词以替换 Title_Dict.update(dict.fromkeys([&apos;Capt&apos;,&apos;Col&apos;,&apos;Major&apos;,&apos;Dr&apos;,&apos;Rev&apos;],&apos;Officer&apos;)) Title_Dict.update(dict.fromkeys([&apos;Don&apos;,&apos;Sir&apos;,&apos;the Countess&apos;,&apos;Dona&apos;,&apos;Lady&apos;],&apos;Royalty&apos;)) Title_Dict.update(dict.fromkeys([&apos;Mme&apos;,&apos;Ms&apos;,&apos;Mrs&apos;],&apos;Mrs&apos;)) Title_Dict.update(dict.fromkeys([&apos;Mlle&apos;,&apos;Miss&apos;],&apos;Miss&apos;)) Title_Dict.update(dict.fromkeys([&apos;Mr&apos;],&apos;Mr&apos;)) Title_Dict.update(dict.fromkeys([&apos;Mme&apos;,&apos;Ms&apos;,&apos;Mrs&apos;],&apos;Master&apos;)) all_data[&apos;Title&apos;] = all_data[&apos;Title&apos;].map(Title_Dict)#(在此中相当于返回了设定的值，与函数式返回类似)新建立一个列表，并且将先前统一好的代入进行整体分类 sns.barplot(x=&apos;Title&apos;,y=&apos;Survived&apos;,data=all_data,palette=&apos;Set2&apos;) 可以简单的理解为一个函数： if [&apos;Capt&apos;,&apos;Col&apos;,&apos;Major&apos;,&apos;Dr&apos;,&apos;Rev&apos;]: return &apos;Officer&apos; 这样在结合变量使用时就容易理解的多了～ 在说说as_matrix函数。 如下代码： df = pd.DataFrame(np.random.randn(3,4) ,columns=list(&apos;abcd&apos;)) print (df) 输出： a b c d 0 0.702272 0.199382 0.590453 -0.177694 1 0.692848 -1.113005 -0.373606 -0.249216 2 -0.928320 -0.920277 0.804570 -0.383224 print (df.values) 输出： [[ 0.70227209 0.19938178 0.59045266 -0.17769368] [ 0.69284849 -1.11300544 -0.37360597 -0.24921559] [-0.92831955 -0.92027708 0.80457031 -0.38322414]] print (df.as_matrix(columns=None)) 输出： [[ 0.70227209 0.19938178 0.59045266 -0.17769368] [ 0.69284849 -1.11300544 -0.37360597 -0.24921559] [-0.92831955 -0.92027708 0.80457031 -0.38322414]] 参考代码来源：https://blog.csdn.net/yan456jie/article/details/52089128 实际上两者的转换就如同有无特征名称之间的来来往往… 之前有些困惑，现在简单理解了一点。]]></content>
