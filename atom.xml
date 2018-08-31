@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-08-20T06:27:03.256Z</updated>
+  <updated>2018-08-31T14:00:45.362Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>duet display在升级Macos 13.6之后崩溃的可行解决方法</title>
+    <link href="https://liujunjie11.github.io/2018/08/31/duet-display%E5%9C%A8%E5%8D%87%E7%BA%A7Macos-13-6%E4%B9%8B%E5%90%8E%E5%B4%A9%E6%BA%83%E7%9A%84%E5%8F%AF%E8%A1%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    <id>https://liujunjie11.github.io/2018/08/31/duet-display在升级Macos-13-6之后崩溃的可行解决方法/</id>
+    <published>2018-08-31T13:38:40.000Z</published>
+    <updated>2018-08-31T14:00:45.362Z</updated>
+    
+    <content type="html"><![CDATA[<p>下午看见<em>app store</em>里有更新系统的提示，心里想着好久未曾更新过哥的<em>mac</em>系统了，之前一直怕升级有什么毛病，就一直停留在<em>13.1</em>的系统。结果一升级悲剧了，哥昨天刚刚买的<em>duet display</em>一打开不显灵了…妈个鸡…</p><p>想过换回以前的系统，懒得搞了，麻烦…</p><p>想过替代品，暂时找不到，另外一方面：没钱加不想花钱了…</p><p>一怒之下哥把<em>duet display</em>删除了重装。没想到效果出奇的好：</p><blockquote><p><strong>软件可以正常使用了，不过就是在iPad上的显示不是全屏了，多了下面的一大条黑边，但是功能是和以前一样的，没区别。</strong></p></blockquote><p>下面简单说说解决方案：</p><ul><li>1、重装软件，仅<em>Mac端</em>；</li><li>2、在连接之后，顶部出现下边的镜像设置，如下设置：</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-08-31%20%E4%B8%8B%E5%8D%889.50.07.png" alt=""></p><ul><li>3、在<em>duet</em>软件点击<em>高级设置</em>，如下设置：</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-08-31%20%E4%B8%8B%E5%8D%889.50.28.png" alt=""></p><blockquote><p>不取消这个<em>镜像小勾勾</em>则永远不会成功！不然就是一系列的软件闪退！<strong>亲生经历，请勿模仿！！</strong></p></blockquote><ul><li>4、连接上之后在<em>偏好系统</em>中的<em>显示器</em>设置界面的<em>排列</em>如下设置：</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-08-31%20%E4%B8%8B%E5%8D%889.50.39.png" alt=""></p><blockquote><p>根据自身情况将扩展屏设置放在左边或者是右边，即达到一个鼠标可以自由通行的效果。</p></blockquote><p>就这样吧，软件虽然界面变小了一圈，但是也能接受。</p><p>还是那么流畅，还是那么好用，还是那么美滋滋～～</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;下午看见&lt;em&gt;app store&lt;/em&gt;里有更新系统的提示，心里想着好久未曾更新过哥的&lt;em&gt;mac&lt;/em&gt;系统了，之前一直怕升级有什么毛病，就一直停留在&lt;em&gt;13.1&lt;/em&gt;的系统。结果一升级悲剧了，哥昨天刚刚买的&lt;em&gt;duet display&lt;/em&gt;一打开
+      
+    
+    </summary>
+    
+      <category term="Mac教程" scheme="https://liujunjie11.github.io/categories/Mac%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Mac教程" scheme="https://liujunjie11.github.io/tags/Mac%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>关于错误&#39;ValueError: Found array with 0 sample(s) (shape=(0, 4)) while a minimum of 1 is required.&#39;</title>
@@ -49,7 +74,7 @@
     <link href="https://liujunjie11.github.io/2018/08/17/python%E7%BC%96%E7%A8%8Bmap%E5%87%BD%E6%95%B0%E5%8F%8Aas-matrix%E5%87%BD%E6%95%B0%E7%AE%80%E6%98%8E/"/>
     <id>https://liujunjie11.github.io/2018/08/17/python编程map函数及as-matrix函数简明/</id>
     <published>2018-08-17T05:01:34.000Z</published>
-    <updated>2018-08-17T06:05:29.514Z</updated>
+    <updated>2018-08-20T09:59:52.141Z</updated>
     
     <content type="html"><![CDATA[<p>如题。</p><p><em>map函数</em>属于<em>python函数式编程</em>，具体的就不说了，可参考官网说明或者是直接看大神说明：<a href="https://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/00141861202544241651579c69d4399a9aa135afef28c44000" target="_blank" rel="external">https://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/00141861202544241651579c69d4399a9aa135afef28c44000</a></p><p>在此简要说说如何理解，因为之前我有一点困惑。</p><p>已知：</p><pre><code>&gt;&gt;&gt; def f(x):...     return x * x...&gt;&gt;&gt; map(f, [1, 2, 3, 4, 5, 6, 7, 8, 9])[1, 4, 9, 16, 25, 36, 49, 64, 81]</code></pre><p>那么在理解以下代码时：</p><pre><code>Title_Dict = {}#进行添加工作,将其中相关的字词以统一字词以替换Title_Dict.update(dict.fromkeys([&apos;Capt&apos;,&apos;Col&apos;,&apos;Major&apos;,&apos;Dr&apos;,&apos;Rev&apos;],&apos;Officer&apos;))Title_Dict.update(dict.fromkeys([&apos;Don&apos;,&apos;Sir&apos;,&apos;the Countess&apos;,&apos;Dona&apos;,&apos;Lady&apos;],&apos;Royalty&apos;))Title_Dict.update(dict.fromkeys([&apos;Mme&apos;,&apos;Ms&apos;,&apos;Mrs&apos;],&apos;Mrs&apos;))Title_Dict.update(dict.fromkeys([&apos;Mlle&apos;,&apos;Miss&apos;],&apos;Miss&apos;))Title_Dict.update(dict.fromkeys([&apos;Mr&apos;],&apos;Mr&apos;))Title_Dict.update(dict.fromkeys([&apos;Mme&apos;,&apos;Ms&apos;,&apos;Mrs&apos;],&apos;Master&apos;))all_data[&apos;Title&apos;] = all_data[&apos;Title&apos;].map(Title_Dict)#(在此中相当于返回了设定的值，与函数式返回类似)新建立一个列表，并且将先前统一好的代入进行整体分类sns.barplot(x=&apos;Title&apos;,y=&apos;Survived&apos;,data=all_data,palette=&apos;Set2&apos;)</code></pre><p>可以简单的理解为一个函数：</p><pre><code>if [&apos;Capt&apos;,&apos;Col&apos;,&apos;Major&apos;,&apos;Dr&apos;,&apos;Rev&apos;]:    return &apos;Officer&apos;</code></pre><blockquote><p>这样在结合变量使用时就容易理解的多了～</p></blockquote><p>在说说<code>as_matrix函数</code>。</p><p>如下代码：</p><pre><code>df = pd.DataFrame(np.random.randn(3,4) ,columns=list(&apos;abcd&apos;))print (df)输出：          a         b         c         d0  0.702272  0.199382  0.590453 -0.1776941  0.692848 -1.113005 -0.373606 -0.2492162 -0.928320 -0.920277  0.804570 -0.383224print (df.values)输出：[[ 0.70227209  0.19938178  0.59045266 -0.17769368] [ 0.69284849 -1.11300544 -0.37360597 -0.24921559] [-0.92831955 -0.92027708  0.80457031 -0.38322414]]print (df.as_matrix(columns=None))输出：[[ 0.70227209  0.19938178  0.59045266 -0.17769368] [ 0.69284849 -1.11300544 -0.37360597 -0.24921559] [-0.92831955 -0.92027708  0.80457031 -0.38322414]]</code></pre><ul><li>参考代码来源：<a href="https://blog.csdn.net/yan456jie/article/details/52089128" target="_blank" rel="external">https://blog.csdn.net/yan456jie/article/details/52089128</a></li></ul><blockquote><p>实际上两者的转换就如同有无特征名称之间的来来往往…</p></blockquote><p>之前有些困惑，现在简单理解了一点。</p>]]></content>
     
@@ -521,35 +546,6 @@
     
     
       <category term="python爬虫" scheme="https://liujunjie11.github.io/tags/python%E7%88%AC%E8%99%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据结构与算法书籍资源共享</title>
-    <link href="https://liujunjie11.github.io/2018/05/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E4%B9%A6%E7%B1%8D%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%AB/"/>
-    <id>https://liujunjie11.github.io/2018/05/04/数据结构与算法书籍资源共享/</id>
-    <published>2018-05-04T11:15:05.000Z</published>
-    <updated>2018-05-04T11:20:25.483Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li>计算机程序设计艺术(卷1～卷四全)：</li></ul><blockquote><p><a href="https://pan.baidu.com/s/1922E16LZR0iXZHZQCgsbLg" target="_blank" rel="external">https://pan.baidu.com/s/1922E16LZR0iXZHZQCgsbLg</a></p></blockquote><ul><li>算法导论(第三版)：</li></ul><blockquote><p><a href="https://pan.baidu.com/s/1XqAeeJx803rcVCx7QMA62g" target="_blank" rel="external">https://pan.baidu.com/s/1XqAeeJx803rcVCx7QMA62g</a></p></blockquote><p>以上资源来于网络，感谢默默分享的人们！</p><p>还有一些其他的金典书籍，我都没怎么看啊..</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ul&gt;
-&lt;li&gt;计算机程序设计艺术(卷1～卷四全)：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://pan.baidu.com/s/1922E16LZR0iXZHZQCgsbLg&quot; target=&quot;_blank&quot; rel=&quot;extern
-      
-    
-    </summary>
-    
-      <category term="书籍" scheme="https://liujunjie11.github.io/categories/%E4%B9%A6%E7%B1%8D/"/>
-    
-    
-      <category term="书籍" scheme="https://liujunjie11.github.io/tags/%E4%B9%A6%E7%B1%8D/"/>
     
   </entry>
   
