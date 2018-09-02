@@ -58,7 +58,7 @@
   <entry>
     <title><![CDATA[为Hexo博客(next主题)加上评论功能]]></title>
     <url>%2F2018%2F08%2F15%2F%E4%B8%BAHexo%E5%8D%9A%E5%AE%A2-next%E4%B8%BB%E9%A2%98-%E5%8A%A0%E4%B8%8A%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD%2F</url>
-    <content type="text"><![CDATA[一直想加一个评论的功能，现在有时间了。 下面来说说简单的过程。 用的是来必力这个评论系统。 首先需要进入其中进行注册。 前面的注册过程具体参考下面这篇文章吧，但是后面的过程回来参考我的即可。 文章地址：https://segmentfault.com/a/1190000012918417 如上面的文章可知，每个人注册成功之后会有一个独立的uid。 接下来打开目录位置目标/Users/XX/XXXX/themes/next/_config.yml，搜索关键词liver，将此位置改成 livere: on: true #控制开关 livere_uid: 你的uid 如下图所示： 接下来进行最重要的一步，打开目录位置目标/Users/XX/XXXX/themes/next/layout/_partials/comments.swig，将其中的改成如下图所示： 保存之后再有顺序的使用命令： hexo s -debug #调试并且展示 hexo g -d #完成文件上传生成 另外可在自己的来必力设置界面设置成自己想要的样子： 之后打开自己的网站就可以看到效果如何啦： 参考&amp;最后参考：https://www.jianshu.com/p/f5c184047e72 实话说，加上评论功能之后网站加载时间多了那么几毫秒…总体来说还不错。另外我用的Mac，其他系统也无大碍，看目录位置即可。]]></content>
+    <content type="text"><![CDATA[一直想加一个评论的功能，现在有时间了。 下面来说说简单的过程。 用的是来必力这个评论系统。 首先需要进入其中进行注册。 前面的注册过程具体参考下面这篇文章吧，但是后面的过程回来参考我的即可。 文章地址：https://segmentfault.com/a/1190000012918417 如上面的文章可知，每个人注册成功之后会有一个独立的uid。 接下来打开目录位置目标/Users/XX/XXXX/themes/next/_config.yml，搜索关键词liver，将此位置改成 livere: on: true #控制开关 livere_uid: 你的uid 如下图所示： 接下来进行最重要的一步，打开目录位置目标/Users/XX/XXXX/themes/next/layout/_partials/comments.swig，将其中的改成如下图所示： 保存之后再有顺序的使用命令： hexo s -debug #调试并且展示 hexo g -d #完成文件上传生成 另外可在自己的来必力设置界面设置成自己想要的样子： 之后打开自己的网站就可以看到效果如何啦： 参考&amp;最后参考：https://www.jianshu.com/p/f5c184047e72 实话说，加上评论功能之后网站加载时间多了那么几毫秒…总体来说还不错。另外我用的Mac，其他系统也无大碍，看目录位置即可。 最后补充一点: 有时这个评论系统加载不出来，可能有几点原因： 网速不行，加载过慢； 来比利系统上的cookie过期了，重新登陆管理界面看看； 待发掘…]]></content>
       <categories>
         <category>Hexo博客教程</category>
       </categories>
