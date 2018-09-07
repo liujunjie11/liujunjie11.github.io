@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[关于错误Error: Permission denied @ dir_s_mkdir - /usr/local/Frameworks]]></title>
     <url>%2F2018%2F09%2F07%2F%E5%85%B3%E4%BA%8E%E9%94%99%E8%AF%AFError-Permission-denied-dir-s-mkdir-usr-local-Frameworks%2F</url>
-    <content type="text"><![CDATA[最近在用homebrew下载东西遇到了如下错误： Error: Permission denied @ dir_s_mkdir - /usr/local/Frameworks 解决方案： 依次使用命令行： sudo mkdir /usr/local/Frameworks sudo chown $(whoami):admin /usr/local/Frameworks 这样重新使用之前的命令行即可正常行使了。]]></content>
+    <content type="text"><![CDATA[最近在用homebrew下载东西遇到了如下错误： Error: Permission denied @ dir_s_mkdir - /usr/local/Frameworks 解决方案： 依次使用命令行： sudo mkdir /usr/local/Frameworks sudo chown $(whoami):admin /usr/local/Frameworks 这样重新使用之前的命令行即可正常行使了。 参考：https://github.com/Homebrew/homebrew-core/issues/19286]]></content>
       <categories>
         <category>解决方案</category>
       </categories>
