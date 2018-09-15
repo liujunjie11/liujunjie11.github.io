@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[接受“大和”？]]></title>
+    <url>%2F2018%2F09%2F15%2F%E6%8E%A5%E5%8F%97%E2%80%9C%E5%A4%A7%E5%92%8C%E2%80%9D%EF%BC%9F%2F</url>
+    <content type="text"><![CDATA[不知不觉，自身的思想发生了一些变化，这种变化已维持好久了。 什么时候，曾经有些玩世不恭，对于什么事都“满腔热血”的我开始变得有些动摇了，开始变得接受这世界的“大同”思维了，我也因此而麻木了好许长的时间了。以“大同”思维来说服自己，让自己不再“焦虑”，这是我变化的根本啊。 今日忽地觉醒了，今日的我真的与从前的我在思维上有了很大的不同，在接受“大同”的抉择上我开始了质疑，是的，我承认因此我变得有些冷漠有些麻木了，我也因此付出了代价，变成了这世界千千万万麻木不仁者其中一员…我感到落寞。 我还记得这种思维是我在接触所谓哲学类书籍所产生的，开始以“世间普遍”来镇压着我的各种焦虑与猜疑直至今日此时此刻。由不堪变成了柔和甚至是一而再再而三的所谓的”理解“，我以为是我成长了，以为是我长大了…如今在此重新思考此类问题，我有些话想说。 成长是变得越来越愿意接受这世间的“大同”，但若是把握的不好，却是会变成认同这种“大同”，这是两个完全不同的抉择。而曾经的我就陷入了后者之中。 究竟是我选择认同了“大同”，还是“大同”说服了我？我想这两者均有在不同时期交叉出现过，我从此也慢慢变得落寞了… “大同”使我慢慢的愿意接受平庸！这是铁的事实，再者接受这世俗的说法，容易染上各种各样的颜色…我，终究还是太年轻了啊… 有一段时间，我没有把本心守护好，这是我最大的过失，我也因此付出了巨大的代价。是“安乐”？是“平庸世俗”？说到底不过是我意志上的欠缺罢了。]]></content>
+      <categories>
+        <category>生活笔记</category>
+      </categories>
+      <tags>
+        <tag>生活笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于错误Error: Permission denied @ dir_s_mkdir - /usr/local/Frameworks]]></title>
     <url>%2F2018%2F09%2F07%2F%E5%85%B3%E4%BA%8E%E9%94%99%E8%AF%AFError-Permission-denied-dir-s-mkdir-usr-local-Frameworks%2F</url>
     <content type="text"><![CDATA[最近在用homebrew下载东西遇到了如下错误： Error: Permission denied @ dir_s_mkdir - /usr/local/Frameworks 解决方案： 依次使用命令行： sudo mkdir /usr/local/Frameworks sudo chown $(whoami):admin /usr/local/Frameworks 这样重新使用之前的命令行即可正常行使了。 参考：https://github.com/Homebrew/homebrew-core/issues/19286]]></content>
