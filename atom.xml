@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-09-27T13:35:32.008Z</updated>
+  <updated>2018-09-28T13:47:40.144Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://liujunjie11.github.io/2018/09/28/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%EF%BC%8C%E8%87%AA%E5%BB%BAVPS-SS%E5%BA%94%E7%94%A8/"/>
+    <id>https://liujunjie11.github.io/2018/09/28/科学上网，自建VPS-SS应用/</id>
+    <published>2018-09-28T10:42:00.386Z</published>
+    <updated>2018-09-28T13:47:40.144Z</updated>
+    
+    <content type="html"><![CDATA[<hr><p>title: 科学上网，自建VPS-SS应用<br>date: 2018-09-28 18:42:00<br>tags: 科学上网<br>categories: 科学上网</p><h2 id="comments-true"><a href="#comments-true" class="headerlink" title="comments: true"></a>comments: true</h2><p>最近因为需求想自己搭建一个VPS加SS应用。用的是<a href="https://my.vultr.com/subs/?SUBID=19062805#subsusage" target="_blank" rel="external">Vultr</a>这个平台。</p><p>唉…这东西的教程已经是满大街都是了，我就不重复造轮子了，现在的轮子还没有失效。</p><p>具体的服务器租建过程可参考：</p><ul><li><p><a href="https://github.com/Alvin9999/new-pac/wiki/自建ss服务器教程" target="_blank" rel="external">自建ss服务器教程</a></p></li><li><p><a href="https://medium.com/@zoomyale/科学上网的终极姿势-在-vultr-vps-上搭建-shadowsocks-fd57c807d97e" target="_blank" rel="external">科学上网的终极姿势-在-vultr-vps-上搭建</a></p></li><li><p><a href="http://mpc2008cn.github.io/2015/10/22/vps/" target="_blank" rel="external">Vultr的vps搭建shadowsocks翻墙</a></p></li><li><p><a href="https://segmentfault.com/a/1190000015558387" target="_blank" rel="external">超详细 Vultr（VPS）搭建 SS / 新手图文指导教程</a></p></li></ul><p>关于在<em>TCP Fast Open</em>过程中命令行增加的一些补充(我自己加上的)：</p><blockquote><p>每一次的…ipv4…之外我都加上了…ipv6…的一样的命令行。</p><p>如：<code>echo 3 &gt; /proc/sys/net/ipv4/tcp_fastopen</code><br>另外加上了：<code>echo 3 &gt; /proc/sys/net/ipv6/tcp_fastopen</code></p><p>如：<code>net.ipv4.tcp_fastopen = 3</code><br>另外加上了：<code>net.ipv6.tcp_fastopen = 3</code></p></blockquote><p>…</p><p><strong>其中注意的细节是：</strong></p><ol><li><p><strong>开通服务器时，当出现了ip，不要立马去ping或者用xshell去连接，再等5分钟之后，有个缓冲时间。</strong></p></li><li><p><strong>注意加密算法的对齐填写。</strong></p></li><li><p>后续补充…</p></li></ol><p>简单说说体验吧，用的是在日本的服务器，经过上面的参考之后，换了好几台服务器才有了现在的暂时稳定…另外要补充一下：如果在使用命令行<code>ssh root@&lt;ip&gt;</code>不通时(即没有提示要求输入密码登陆的出现的其他情况，比如超时)，直接重新另外开一台就是了，不用再花多余的时间去测试了。</p><p>我一共换了好几台才有3台是可以用的…心累…可能是我太急了？？有可能。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;p&gt;title: 科学上网，自建VPS-SS应用&lt;br&gt;date: 2018-09-28 18:42:00&lt;br&gt;tags: 科学上网&lt;br&gt;categories: 科学上网&lt;/p&gt;
+&lt;h2 id=&quot;comments-true&quot;&gt;&lt;a href=&quot;#comments-
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>读西游，得“真经”</title>
@@ -523,34 +546,6 @@
     
     
       <category term="教程" scheme="https://liujunjie11.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在Jupyter Notebook中安装多种语言内核</title>
-    <link href="https://liujunjie11.github.io/2018/06/04/%E5%9C%A8Jupyter-Notebook%E4%B8%AD%E5%AE%89%E8%A3%85%E5%A4%9A%E7%A7%8D%E8%AF%AD%E8%A8%80%E5%86%85%E6%A0%B8/"/>
-    <id>https://liujunjie11.github.io/2018/06/04/在Jupyter-Notebook中安装多种语言内核/</id>
-    <published>2018-06-04T12:33:26.000Z</published>
-    <updated>2018-06-23T12:25:08.209Z</updated>
-    
-    <content type="html"><![CDATA[<p><em>Jupyter Notrbook</em>有一个好的编译界面，输出内容也一目了然，让人感觉像是发现了一个新大陆..</p><p>下面来说说如何在其中安装多种语言内核。</p><blockquote><p>支持的语言内核可查：<a href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels" target="_blank" rel="external">https://github.com/jupyter/jupyter/wiki/Jupyter-kernels</a></p></blockquote><h1 id="安装python2内核"><a href="#安装python2内核" class="headerlink" title="安装python2内核"></a>安装<em>python2</em>内核</h1><p>因为我的默认已经安装了<em>python3</em>，所以就在此讲解一下如何安装<em>python2</em>内核。</p><ul><li>在<em>notebook</em>为开启情况下，依次输入命令：</li></ul><p><code>pip install ipykernel</code></p><p><code>python2 -m ipykernel install</code></p><blockquote><p>参考：<a href="https://www.jianshu.com/p/8b90c2f12856" target="_blank" rel="external">https://www.jianshu.com/p/8b90c2f12856</a></p></blockquote><h1 id="安装R内核"><a href="#安装R内核" class="headerlink" title="安装R内核"></a>安装<em>R</em>内核</h1><p>上面的文章也有相关的介绍了。</p><p>但是在<em>anaconda</em>中一行命令即可完成下载：</p><p><code>conda install r-essential</code></p><p>或者是</p><p><code>conda  install -c r r-essentials</code></p><blockquote><p>参考：<a href="https://kangliping.wordpress.com/2017/09/15/anaconda_r/" target="_blank" rel="external">https://kangliping.wordpress.com/2017/09/15/anaconda_r/</a></p></blockquote><p><strong>下载第一次可能有几个包不成功，我经过重新输入命令行之后再次下载得到了解决。</strong></p><h1 id="安装bash内核"><a href="#安装bash内核" class="headerlink" title="安装bash内核"></a>安装<em>bash</em>内核</h1><p>新开一个终端，依次使用命令行：</p><p><code>pip install bash_kernel</code></p><p><code>python -m bash_kernel.install</code></p><blockquote><p>参考：<a href="https://blog.csdn.net/SA14023053/article/details/52053649" target="_blank" rel="external">https://blog.csdn.net/SA14023053/article/details/52053649</a></p></blockquote><h1 id="安装基于Scala的spark应用"><a href="#安装基于Scala的spark应用" class="headerlink" title="安装基于Scala的spark应用"></a>安装基于<em>Scala</em>的<em>spark</em>应用</h1><blockquote><p>具体移步：<a href="https://blog.csdn.net/Xmo_jiao/article/details/72674687" target="_blank" rel="external">https://blog.csdn.net/Xmo_jiao/article/details/72674687</a></p></blockquote><p>其中需要的内容在<em>spark</em>启动页面中都能找到。没办法，内容太多，又懒得写..</p><p><strong>但是需要注意的每次均要启动spark再进行进一步的编程操作。在已经安装<em>spark</em>的前提下输入命令行：<code>spark-shell</code>启动spark。</strong></p><h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>输入以下命令行查看已安装的内核列表：</p><p><code>jupyter kernelspec list</code></p><p>先写这么多，以后有需要再进行补充。</p><p><strong>关于在下载完之后发现启动内核失败(dead kernel的情况)</strong></p><p>可参考以下链接：</p><ol><li><p><a href="https://blog.csdn.net/liangdagongjue/article/details/79533538" target="_blank" rel="external">https://blog.csdn.net/liangdagongjue/article/details/79533538</a></p></li><li><p><a href="https://blog.csdn.net/wobeatit/article/details/78885339" target="_blank" rel="external">https://blog.csdn.net/wobeatit/article/details/78885339</a></p></li></ol><blockquote><p>即实际上就是我将<em>Anaconda</em>升级之后出现了以上的<code>dead kernel</code>的情况，后来发现真的是软件更新没有跟上的问题，将<em>notebook</em>之类的一并更新一遍即可解决。</p></blockquote><p>实际使用命令行如下：</p><p><code>conda upgrade notebook</code></p><p><code>conda upgrade jupyter</code></p><p><code>conda update mkl</code></p><p>一并更新之后重新打开会发现一切都可以正常使用了。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;em&gt;Jupyter Notrbook&lt;/em&gt;有一个好的编译界面，输出内容也一目了然，让人感觉像是发现了一个新大陆..&lt;/p&gt;
-&lt;p&gt;下面来说说如何在其中安装多种语言内核。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;支持的语言内核可查：&lt;a href=&quot;https://g
-      
-    
-    </summary>
-    
-      <category term="Notebook" scheme="https://liujunjie11.github.io/categories/Notebook/"/>
-    
-    
-      <category term="Notebook" scheme="https://liujunjie11.github.io/tags/Notebook/"/>
     
   </entry>
   
