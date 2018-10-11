@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-09-29T12:25:03.564Z</updated>
+  <updated>2018-10-11T03:18:45.078Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac升级到Mojave版本之后的Safari插件问题</title>
+    <link href="https://liujunjie11.github.io/2018/10/11/Mac%E5%8D%87%E7%BA%A7%E5%88%B0Mojave%E7%89%88%E6%9C%AC%E4%B9%8B%E5%90%8E%E7%9A%84Safari%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/"/>
+    <id>https://liujunjie11.github.io/2018/10/11/Mac升级到Mojave版本之后的Safari插件问题/</id>
+    <published>2018-10-11T02:57:55.000Z</published>
+    <updated>2018-10-11T03:18:45.078Z</updated>
+    
+    <content type="html"><![CDATA[<p>在升级到了<em>Mojave</em>最新版本之后的最大问题发现就是<em>Safari</em>浏览器之前一些常用的插件不能用了，其他的对我来说都是优点，系统比以前更加流畅了，优化了不少。</p><p>废话不多说了，我在此仅列出我常用的插件列表以及如何再次正常使用它们。</p><h1 id="插件一：Search-Engine-Switcher"><a href="#插件一：Search-Engine-Switcher" class="headerlink" title="插件一：Search Engine Switcher"></a>插件一：<em>Search Engine Switcher</em></h1><p>这款插件能够使得在使用浏览器搜索关键词时可以在百度、谷歌之间的搜索引擎变换搜索相关内容。在升级之后本来不被<em>Safari</em>支持了。</p><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>打开新版的<em>app store</em>搜索关键词<em>Search Engine Switcher</em>直接下载即可用了。</p><h1 id="插件二：Adblock-Plus"><a href="#插件二：Adblock-Plus" class="headerlink" title="插件二：Adblock Plus"></a>插件二：<em>Adblock Plus</em></h1><p>这是一个让人头疼的问题，没有了之后广告太多了，受不了，找了一些付费的替代品，但是还是都不如<em>Adblock Plus</em>好用，在逛国外的一些论坛时发现了一个解决方案。</p><h2 id="解决方案-1"><a href="#解决方案-1" class="headerlink" title="解决方案"></a>解决方案</h2><p>下载<em>Adblock Plus</em>的最后一个在<em>Safari</em>的插件版本即可完美解决这个问题，不用去<em>app store</em>下载了，那个根本没什么用。</p><p>具体的可以先去下载这个插件即可直接使用了：</p><ul><li><strong><a href="https://uploadfiles.io/3q7wu" target="_blank" rel="external">https://uploadfiles.io/3q7wu</a></strong></li></ul><blockquote><p>这个链接是国外网友的分享，链接在此：<a href="https://forums.macrumors.com/threads/adblock-plus-not-working.2121621/" target="_blank" rel="external">https://forums.macrumors.com/threads/adblock-plus-not-working.2121621/</a></p><p>这是他的原话：Here you go dude: <a href="https://ufile.io/3q7wu" target="_blank" rel="external">https://ufile.io/3q7wu</a><br>It’s the original AdBlock.safariextz latest version! Just put it in the folder I mentioned above and enable it in Safari’s preferences. It should work. Good luck!</p></blockquote><p>下载完之后会跳转到这个网页：<a href="https://safari-extensions.apple.com/details/?id=com.betafish.adblockforsafari-UAMUU4S2D9" target="_blank" rel="external">https://safari-extensions.apple.com/details/?id=com.betafish.adblockforsafari-UAMUU4S2D9</a></p><p>直接下载就是了，一切和从前一样了…</p><p>如果在你下载之后没有得到什么实质性的作用，不妨可以看看官方的<a href="https://getadblock.com/update/2.70.0/?u=a210xe6x25809560" target="_blank" rel="external">解释</a>：</p><blockquote><p>在 2019 年的某个时候，我们将停止对传统扩展的支持，极少数特例除外。 我们强烈建议您迁移到我们的新 Mac 应用上来。 我们将在新的应用上投入全部精力，让 AdBlock for Safari 成为 Apple 设备上最好的广告拦截工具。</p></blockquote><p>这是好像有点运气成分的…</p><p>就这样了，that’s all!good luck~~</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在升级到了&lt;em&gt;Mojave&lt;/em&gt;最新版本之后的最大问题发现就是&lt;em&gt;Safari&lt;/em&gt;浏览器之前一些常用的插件不能用了，其他的对我来说都是优点，系统比以前更加流畅了，优化了不少。&lt;/p&gt;
+&lt;p&gt;废话不多说了，我在此仅列出我常用的插件列表以及如何再次正常使用它们
+      
+    
+    </summary>
+    
+      <category term="Mac教程" scheme="https://liujunjie11.github.io/categories/Mac%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Mac教程" scheme="https://liujunjie11.github.io/tags/Mac%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>旅程</title>
@@ -520,35 +546,6 @@
     
     
       <category term="成长" scheme="https://liujunjie11.github.io/tags/%E6%88%90%E9%95%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Excel使用记录</title>
-    <link href="https://liujunjie11.github.io/2018/06/27/Excel%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/"/>
-    <id>https://liujunjie11.github.io/2018/06/27/Excel使用记录/</id>
-    <published>2018-06-27T13:16:51.000Z</published>
-    <updated>2018-06-27T13:24:42.656Z</updated>
-    
-    <content type="html"><![CDATA[<p>以下是我在学习<em>Excel</em>这个软件时的学习记录，以便以后方便查找，随便也希望可以帮助需要的人。不定时更新。</p><blockquote><p>所有的学习来源均来自网络。</p></blockquote><h1 id="excel整列求和的两种方法"><a href="#excel整列求和的两种方法" class="headerlink" title="excel整列求和的两种方法"></a>excel整列求和的两种方法</h1><blockquote><p><a href="http://www.ittribalwo.com/article/1324.html" target="_blank" rel="external">http://www.ittribalwo.com/article/1324.html</a></p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;以下是我在学习&lt;em&gt;Excel&lt;/em&gt;这个软件时的学习记录，以便以后方便查找，随便也希望可以帮助需要的人。不定时更新。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;所有的学习来源均来自网络。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&quot;excel整列求和的两种方法&quot;
-      
-    
-    </summary>
-    
-      <category term="Excel" scheme="https://liujunjie11.github.io/categories/Excel/"/>
-    
-    
-      <category term="Excel" scheme="https://liujunjie11.github.io/tags/Excel/"/>
     
   </entry>
   
