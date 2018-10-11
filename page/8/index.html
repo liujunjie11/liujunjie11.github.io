@@ -437,14 +437,7 @@
 
       
         
-          
-          这一段时间因为开的网页比较重要，Mac一直没有关机，晚上睡觉也是合上就这样了，没想到才3天这样，Mac好像支撑不了了…变得有些卡了，在未关机前的硬盘空间大小与关机后打开之后的硬盘空间大小相差了5个G，在重启开机时出现了一段绿屏…，由此可知，一段有规律的关机保养还是很有必要的…
-关于iCloud的一些打开错误，如打开查看存储信息时的错误问题等等，一般的解决方法为：换一个网络连接即可解决。
-
-此时换DNS的地址是不管用的。
-
-
-          
+          <p>这一段时间因为开的网页比较重要，<em>Mac</em>一直没有关机，晚上睡觉也是合上就这样了，没想到才3天这样，<em>Mac</em>好像支撑不了了…变得有些卡了，在未关机前的硬盘空间大小与关机后打开之后的硬盘空间大小相差了<strong>5个G</strong>，在重启开机时出现了一段绿屏…，由此可知，一段有规律的关机保养还是很有必要的…</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/12/03/关于Mac关机与iCloud的打不开的问题记录/#more" rel="contents">
@@ -639,12 +632,9 @@
 
       
         
-          
-          最近Mac突然变得很慢，明明网速很快的。
-在网上看了一下，发现可能是DNS的问题，果然换了一下（以前用的都是8.8.8.8估计用的人多了就卡了），把号删除了，发现网速飞的快起…
-不过在平时中下载app失败时可以考虑换回来就好使了。
-
-          
+          <p>最近<em>Mac</em>突然变得很慢，明明网速很快的。</p>
+<p>在网上看了一下，发现可能是<em>DNS</em>的问题，果然换了一下（以前用的都是<em>8.8.8.8</em>估计用的人多了就卡了），把号删除了，发现网速飞的快起…</p>
+<p>不过在平时中下载<em>app</em>失败时可以考虑换回来就好使了。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/12/01/关于Mac网速慢的原因记录/#more" rel="contents">
@@ -839,33 +829,8 @@
 
       
         
-          
-          用的anaconda的python3，下载scrapy出现以下情况：
-
-
-即表示下载失败。
-
-
-看到网上大部分说的太复杂的解决方案，其实太过于小题大做了。
-解决方法：重新下载一次。
-
-图1
-
-
-
-
-用命令行conda list查看
-
-
-
-下载成功了。
-
-
-
-若是失败了，多下载几次大多即可解决。
-
-
-          
+          <p>用的<em>anaconda</em>的<em>python3</em>，下载<em>scrapy</em>出现以下情况：</p>
+<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-01%20%E4%B8%8B%E5%8D%881.09.17.png" alt=""></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/12/01/关于python下载scrapy失败的问题记录/#more" rel="contents">
@@ -1060,36 +1025,7 @@
 
       
         
-          
-          最近在学习spark，顺便也学习了Scala的在其间的使用。我发现与用java编译的mapreduce相比，用Scala编译的spark更加的容易让人被其折服…
-直接看图说话吧，感受spark的强大！以统计单词为例。
-
-以下为java编译的mapreduce
-
-
-
-70+行的代码。
-
-
-
-Scala编译的spark
-
-
-
-仅仅为6行代码….
-
-
-
-同样的结果如下：
-
-
-
-
-最后，据说官方会考虑将mapreduce优化,拭目以待吧…相比如今的spark的威力…
-
-记录此文章仅仅是为了表达我心中的兴奋，因为遇到了spark…
-
-          
+          <p>最近在学习<em>spark</em>，顺便也学习了<em>Scala</em>的在其间的使用。我发现与用<em>java</em>编译的<em>mapreduce</em>相比，用<em>Scala</em>编译的<em>spark</em>更加的容易让人被其折服…</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/11/29/关于用java编译的mapreduce与用Scala编译的spark的对比（单词统计的例子说明）/#more" rel="contents">
@@ -1284,25 +1220,7 @@ Scala编译的spark
 
       
         
-          
-          在学习spark中，reduce方法是绕不开的。但是我在测试时发现与从前的规则好像有一点冲突了…
-如下分析：
-
-输入代码   
-
-
-1, val a=sc.parallelize(1 to 10)//理论上理解为0～9的数字放在一个分区
-2, a.reduce((x,y) =&gt; x+y)
-
-
-输出
-
-
-55//即意味着从0（0可省亦可）到10(包括10在内了，与上方的to方法冲突了)都被相加了…
-
-这测试我想了老半天了…没想到是这种结果…bug???
-
-          
+          <p>在学习<em>spark</em>中，<em>reduce</em>方法是绕不开的。但是我在测试时发现与从前的规则好像有一点冲突了…</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/11/28/关于在用Scala编译spark中的reduce方法计算的问题疑惑记录/#more" rel="contents">
@@ -1497,11 +1415,7 @@ Scala编译的spark
 
       
         
-          
-          “名人效应”在我们的生活中屡见不鲜，当我们在遇到一些挂有所谓的“名气”的人，比如“名校”出来的人，或者是一些本身就是所谓的“名人”的人时，心中大多会不由自主的产生一种敬畏与向往，有时竟然会产生自卑的感觉…我感觉这好似一种“阴差阳错”，又不得不感慨这种“名人效应”对我们的这种“潜移默化”教化的感觉。
-那么这种效应究竟是从何而来？为何又产生这种貌似人与生就有的“天性”？我想可以在我们的生活中可以找到答案。
-因为我们从小到大的生活环境都是如此“教育”我们的，所以在我们身边大部分的人的这种相关的“感觉”会伴随我们成长，久而久之我们也是这般如此了。简要分析可知这一类的大部分人在我们成长的过程中好似又是不
-          ...
+          <p>“名人效应”在我们的生活中屡见不鲜，当我们在遇到一些挂有所谓的“名气”的人，比如“名校”出来的人，或者是一些本身就是所谓的“名人”的人时，心中大多会不由自主的产生一种敬畏与向往，有时竟然会产生自卑的感觉…我感觉这好似一种“阴差阳错”，又不得不感慨这种“名人效应”对我们的这种“潜移默化”教化的感觉。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/11/28/名人效应/#more" rel="contents">
@@ -1696,16 +1610,13 @@ Scala编译的spark
 
       
         
-          
-          
-如下图
-
-
-
-全部打勾上，还犹豫个啥子？编译过程中会发现比之前轻松不少。
-
-
-          
+          <ul>
+<li>如下图</li>
+</ul>
+<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-27%20%E4%B8%8B%E5%8D%887.39.14.png" alt=""></p>
+<blockquote>
+<p>全部打勾上，还犹豫个啥子？编译过程中会发现比之前轻松不少。</p>
+</blockquote>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/11/27/关于在eclipse中编译Scala自动补全的添加设置/#more" rel="contents">
@@ -1900,30 +1811,7 @@ Scala编译的spark
 
       
         
-          
-          在简要学习Scala的一些基本的使用，有一些学习上的感到疑惑的问题记录在此。
-
-调用方法时不加“.”一样可以，在方法最后不加“return”亦可，不过为了可读性，一般都是加的。
-
-在语句时常出现的“-”
-
-
-其实这就是一种变量的简写。打个比方：
-val a = Array(1, 2, 3, 4)
-val b = a.map(_ * 2)
-输出变量b：（2，4，6，8）
-
-则易可知其中的语句val b = a.map(_ * 2)就相当于val b = a.map(a * 2)
-
-
-关于其中的lazy
-
-
-详细可以参考此文章
-
-如下打个比方：
-lazy val property = initPr
-          ...
+          <p>在简要学习<em>Scala</em>的一些基本的使用，有一些学习上的感到疑惑的问题记录在此。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/11/27/关于在简要学习Scala中的疑惑记录/#more" rel="contents">
@@ -2118,30 +2006,19 @@ lazy val property = initPr
 
       
         
-          
-          学习Spark用的eclipse习惯了，看了这一篇文章搭建了一个单机环境，不过这个单机环境搭建起来了，以后的集群环境我相信也容易了…
-准备
-本地下载Scala
-
-本地有下载Spark
-
-本地有下载eclipse以及Scala的插件
-
-
-
-以上过程在网上已经有一大堆教程了。
-
-
-搭建过程
-我的搭建过程与上方的文章有一些差距，毕竟年代久远了…
-
-
-第一步：以上的环境都搭建好以后，建一个Scala工程。
-
-第二步：在此工程下建一个Scala Object，在Scala中是以建立一个Object为准的，意思就是相当于python的一个方法工程。Scala一向诡异，看它的语法就知道了…
-
-第三步：导入s
-          ...
+          <p>学习<em>Spark</em>用的<em>eclipse</em>习惯了，看了<a href="http://kevin12.iteye.com/blog/2274179" target="_blank" rel="external">这一篇文章</a>搭建了一个单机环境，不过这个单机环境搭建起来了，以后的集群环境我相信也容易了…</p>
+<h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><ul>
+<li><p><em>本地下载Scala</em></p>
+</li>
+<li><p><em>本地有下载Spark</em></p>
+</li>
+<li><p><em>本地有下载eclipse以及Scala的插件</em></p>
+</li>
+</ul>
+<blockquote>
+<p>以上过程在网上已经有一大堆教程了。</p>
+</blockquote>
+<hr>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/11/26/用eclipse搭建Spark的运行环境(单机)/#more" rel="contents">
@@ -2336,14 +2213,7 @@ lazy val property = initPr
 
       
         
-          
-          最近学习爬虫，感觉挺有意思，在看《用python写网络爬虫》以及《python网络数据采集》，前者使用python2为主，后者则是以python3为主，各有千秋，对我来说都不错。
-不过在前者的书中的一些方法代码却是有时运行容易出错，解决的方法是将书中的方法裁开，用非方法的方式写出相应的代码即可正确。关于此可以参考这位大神的博客。博客以python2写的爬虫，有一些实战，与书搭配着看效果非常不错。
-
-另外的一些问题，在我之后在补充。目前问题并没有发现太多。
-
-
-          
+          <p>最近学习爬虫，感觉挺有意思，在看《用python写网络爬虫》以及《python网络数据采集》，前者使用<em>python2</em>为主，后者则是以<em>python3</em>为主，各有千秋，对我来说都不错。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/11/23/关于在《用python写网络爬虫》一书中的补充/#more" rel="contents">

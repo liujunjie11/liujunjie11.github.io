@@ -437,14 +437,15 @@
 
       
         
-          
-          最近学习一些python爬虫的框架，用selenium与Chromedriver插件结合Chrome浏览器来爬去网页源数据。
-发现了如题的错误信息：
-
-selenium.common.exceptions.WebDriverException: Message:  ‘chromedriver ‘ executable needs to be in PATH. Please see  https://sites.google.com/a/chromium.org/chromedriver/home
-
-在已配置好系统环境的前提下，用如下代码指定位置，或者是将Chromedriver插件放在工程文件
-          ...
+          <p>最近学习一些<em>python</em>爬虫的框架，用<em>selenium</em>与<em>Chromedriver</em>插件结合<em>Chrome浏览器</em>来爬去网页源数据。</p>
+<p>发现了如题的错误信息：</p>
+<blockquote>
+<p>selenium.common.exceptions.WebDriverException: Message:<br>  ‘chromedriver ‘ executable needs to be in PATH. Please see<br>  <a href="https://sites.google.com/a/chromium.org/chromedriver/home" target="_blank" rel="external">https://sites.google.com/a/chromium.org/chromedriver/home</a></p>
+</blockquote>
+<p>在已配置好系统环境的前提下，用如下代码指定位置，或者是将<em>Chromedriver</em>插件放在工程文件下，均得到了如上的错误信息。</p>
+<pre><code>from selenium import webdriver
+browser = webdriver.Chrome(&apos;/Users/junjieliu/Downloads/小插件/chromedriver&apos;)
+</code></pre><hr>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/04/05/关于记录Chromedriver的selenium-common-exceptions-WebDriverException-Message-chromedriver-executable-needs-to-be-in-PATH-Please-see-https-sites-google-com-a-chromium-org-chromedriver-home/#more" rel="contents">
@@ -639,30 +640,8 @@ selenium.common.exceptions.WebDriverException: Message:  ‘chromedriver ‘ exe
 
       
         
-          
-          以下是通过正则表达式爬取的猫眼电影以及豆瓣电影的相关的电影信息的代码过程。
-
-爬取猫眼电影分析打开Chrome的调试工具，可发现相关的信息都在，并且以翻页的形式来得到更多的电影信息。
-
-
-我们可通过其爬取需要的信息，利用正则表达式来进行文本的挖掘。
-
-代码&apos;&apos;&apos;
-    函数目标：
-    爬取猫眼电影的top100信息
-
-    编写时间：
-    2018-03-28
-
-&apos;&apos;&apos;
-
-&apos;&apos;&apos;
-import requests
-import re
-import json
-
-if __name__ == &ap
-          ...
+          <p>以下是通过正则表达式爬取的<em>猫眼电影</em>以及<em>豆瓣电影</em>的相关的电影信息的代码过程。</p>
+<hr>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/04/03/python3爬取豆瓣Top250电影信息/#more" rel="contents">
@@ -857,27 +836,8 @@ if __name__ == &ap
 
       
         
-          
-          最近因为学习到了爬虫的原因，存储数据需要mysql了，因为以前学习过其命令行，所以在之前安装过了，太久没用了，怎么开都不懂了，搞了几十分钟不想搞了，重新安装。下面记录下遇到的一些问题。
-
-安装过程第一种方法进入官网下载对应Mac的mysql。
-
-官网地址
-
-第二种方法直接用命令行brew Install mysql。
-
-前提是必须安装了homebrew。
-
-配置以及开启过程配置过程在手动安装正后一步记下默认的密码（如下图）。
-
-
-即QeV.a&gt;zGa1m3为默认密码。
-
-在偏好系统中手动打开mysql应用。
-
-之后打开终端，为其配置。（命令行如下依次）
-vi ~/bash_profile
-          ...
+          <p>最近因为学习到了爬虫的原因，存储数据需要<em>mysql</em>了，因为以前学习过其命令行，所以在之前安装过了，太久没用了，怎么开都不懂了，搞了几十分钟不想搞了，重新安装。下面记录下遇到的一些问题。</p>
+<hr>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/04/03/Mac下的mysql安装以及相关的问题解决/#more" rel="contents">
@@ -1072,12 +1032,8 @@ vi ~/bash_profile
 
       
         
-          
-          在学习爬虫的过程中，在运行编者的代码时出现了UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xe8 in position 67986: ordinal not in range(128)的编码问题。
-具体原因是因为程序默认的解析编码格式发生了冲突造成的，简单来说就是需要解析的内容与API程序默认的解析编码格式不同，所以才会出现如上的错误。
-因为是打算用python解析JS文件，所以我就贴上我的解决方案了：
-ctx = node.compile(open(file, encoding=&apos;utf-8&apos;).read())
-          ...
+          <p>在学习爬虫的过程中，在运行编者的代码时出现了<em>UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xe8 in position 67986: ordinal not in range(128)</em>的编码问题。</p>
+<p>具体原因是因为程序默认的解析编码格式发生了冲突造成的，简单来说就是需要解析的内容与<em>API</em>程序默认的解析编码格式不同，所以才会出现如上的错误。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/28/关于解决python中UnicodeDecodeError-ascii-codec-can-t-decode-byte-0xe8-in-position-67986-ordinal-not-in-range-128-的问题/#more" rel="contents">
@@ -1272,19 +1228,7 @@ ctx = node.compile(open(file, encoding=&apos;utf-8&apos;).read())
 
       
         
-          
-          最近用homebrew下载mongodb，发现出现了Error: go: version missing for “gotools” resource!的错误，试了几次都不行，最后在谷歌用英文搜索关键词在GitHub的一个论坛用相关的解决方案。
-使用命令行
-
-git -C “$(brew –repo)” fetch –tags
-
-之后再次输入：
-
-brew update –force
-
-最后再次用命令行brew install mongodb，发现已经能够正确成功下载了。
-
-          
+          <p>最近用<em>homebrew</em>下载<em>mongodb</em>，发现出现了<em>Error: go: version missing for “gotools” resource!</em>的错误，试了几次都不行，最后在谷歌用英文搜索关键词在<em>GitHub</em>的一个论坛用相关的解决方案。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/28/关于homebrew下载出现Error:go:version missing for  gotools resource!错误的解决方案/#more" rel="contents">
@@ -1479,12 +1423,10 @@ brew update –force
 
       
         
-          
-          打算重新好好系统的学习数据结构了。这是开始。
-因为概念已经是烂大街了，在此只记录下我用java或者是python实现相关功能的代码。
-
-查找java实现
-          
+          <p>打算重新好好系统的学习数据结构了。这是开始。</p>
+<p>因为概念已经是烂大街了，在此只记录下我用<em>java</em>或者是<em>python</em>实现相关功能的代码。</p>
+<hr>
+<h2 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h2><h3 id="java实现"><a href="#java实现" class="headerlink" title="java实现"></a>java实现</h3>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/26/数据结构与算法：线性表/#more" rel="contents">
@@ -1679,20 +1621,9 @@ brew update –force
 
       
         
-          
-          计算机发展到了如今这样的一个地步实在让人感兴趣…
-于是看了一些书和文章，想了解了解一个计算机是如何跑起来的。
-
-机器本质
-计算机的本质
-
-
-计算机的本质：（电脑）计算机 = 计算机器
-
-没错，如今我们使用的计算机就是和我们小学时按的那个只会加减乘除计算器的本质毫无区别。使用计算机时，我们会先通过键盘或者是语音输入想要了解的信息，之后计算机会通过内部一系列的运算之后，输出相关的界面信息到我们的屏幕上。那我们可理解计算机就是一通过我们输入，然后自己默默运算完输出结果的机器。电脑电脑，正所谓脑子就是人类的计算机器，电脑不过是插上电源才能运行的计算机器。
-
-什么图画啊，文档内容等等均是先转化为相关的数
-          ...
+          <p>计算机发展到了如今这样的一个地步实在让人感兴趣…</p>
+<p>于是看了一些书和文章，想了解了解一个计算机是如何跑起来的。</p>
+<hr>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/26/计算机基础知识：认识计算机/#more" rel="contents">
@@ -1887,25 +1818,8 @@ brew update –force
 
       
         
-          
-          最近想要用Nosql结合做一些小项目，用的是Mac，看到网上的教程有点乱七八糟的了，就打算记录下来了。
-关于这个数据库就不在此介绍了。
-安装过程
-来到官网页面下载：https://redis.io/download
-
-
-
-下载好之后解压，并且要知道目录文件在哪。现在打开终端，用命令 cd 文件目录地址，如我的是 cd /Users/junjieliu/Documents/编程文件/redis-4.0.8，之后使用命令 sudo make 成功之后出现如下图1所示，之后再使用命令 make test,成功之后出现如图2所示。
-
-图1:
-
-
-
-图2:
-
-
-之后，编译安装：在终端中输入命令：sudo
-          ...
+          <p>最近想要用<em>Nosql</em>结合做一些小项目，用的是<em>Mac</em>，看到网上的教程有点乱七八糟的了，就打算记录下来了。</p>
+<p>关于这个数据库就不在此介绍了。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/22/Mac下安装Redis以及其可视化客户端/#more" rel="contents">
@@ -2100,22 +2014,11 @@ brew update –force
 
       
         
-          
-          分析的是美国一个网站统计的多年汽车使用燃料情况的数据，需要从网上下载，在此利用好python爬虫大有裨益，可作为实战运行分析。
-
-此篇文章案例来源于：
-本书文章中用R语言实现的数据可视化，是从网上直接下的文件然后分析，我打算在此用python实现爬取相关文件，并且运用python进行可视化分析。
-
-分析进入主页，得到了下载文件的主链接：
-
-在此可见资源的下载地址：
-
-
-
-接下来就是运用爬虫知识实现此文件的下载了。
-
-爬虫代码我们可有这样的思路：从主页出发 –&gt; 爬取到下载文件页面的链接 –&gt; 再从此爬取到下载地址链接 –&gt; 之后运用相关的函数下载至本目录即可。以下是实现过程。
-          ...
+          <p>分析的是美国一个网站统计的多年汽车使用燃料情况的数据，需要从网上下载，在此利用好<em>python爬虫</em>大有裨益，可作为实战运行分析。</p>
+<blockquote>
+<p>此篇文章案例来源于：<img src="" alt=""></p>
+<p>本书文章中用<em>R语言</em>实现的数据可视化，是从网上直接下的文件然后分析，我打算在此用<em>python</em>实现爬取相关文件，并且运用<em>python</em>进行可视化分析。</p>
+</blockquote>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/21/用python:R数据分析可视化汽车使用燃料情况/#more" rel="contents">
@@ -2310,22 +2213,11 @@ brew update –force
 
       
         
-          
-          最近因为用anaconda的关系，下载的包导致了冲突，编译器总是识别不了，就把以前Mac上的anaconda都卸载了。打算重新来过一遍解决两者（即anaconda2与anaconda3）的共存问题。
-
-简单说明一下anaconda3对应python3，anaconda2对应python2
-
-
-马上开始吧。
-先是在官网上下载了两个版本，如下：
-
-
-一路确定，直到安装完成为止。不过要说明一下，安装应该分好顺序，最后安装好的即为系统默认的了（即当我们在终端输入命令：python 时会出现最后安装好的那个目录中的python版本，我是最后安装的anaconda3）。如下图所示：
-
-
-
-Python 3
-          ...
+          <p>最近因为用<em>anaconda</em>的关系，下载的包导致了冲突，编译器总是识别不了，就把以前<em>Mac</em>上的<em>anaconda</em>都卸载了。打算重新来过一遍解决两者（即<em>anaconda2</em>与<em>anaconda3</em>）的共存问题。</p>
+<blockquote>
+<p>简单说明一下<em>anaconda3</em>对应<em>python3</em>，<em>anaconda2</em>对应<em>python2</em></p>
+</blockquote>
+<hr>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/21/关于anaconda2与anaconda3两个版本的共存问题/#more" rel="contents">

@@ -85,13 +85,13 @@
 
 
 
-<meta name="description" content="前言最近对python爬虫很感兴趣，就花了一些时间来学习，学习了近一周的时间，终于在看了一些其他博客的大神写的教程之后，学会了利用beautifulsoup的方法爬取了一些网站的小说。在此分享我学习的成果。  关于详细的python3爬虫的学习教程以及参考：学习教程   本文参考并且学习了：这篇文章   在以下的文中主要介绍爬小说的技巧。  爬取的过程素材 笔趣阁小说网  小说阅读网    技巧分">
+<meta name="description" content="前言最近对python爬虫很感兴趣，就花了一些时间来学习，学习了近一周的时间，终于在看了一些其他博客的大神写的教程之后，学会了利用beautifulsoup的方法爬取了一些网站的小说。在此分享我学习的成果。  关于详细的python3爬虫的学习教程以及参考：学习教程   本文参考并且学习了：这篇文章   在以下的文中主要介绍爬小说的技巧。">
 <meta name="keywords" content="学习 成长">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于利用python爬虫爬取小说的实战例子">
 <meta property="og:url" content="https://liujunjie11.github.io/2017/12/04/关于利用python爬虫爬取小说的实战例子/index.html">
 <meta property="og:site_name" content="LXiHa`Notes">
-<meta property="og:description" content="前言最近对python爬虫很感兴趣，就花了一些时间来学习，学习了近一周的时间，终于在看了一些其他博客的大神写的教程之后，学会了利用beautifulsoup的方法爬取了一些网站的小说。在此分享我学习的成果。  关于详细的python3爬虫的学习教程以及参考：学习教程   本文参考并且学习了：这篇文章   在以下的文中主要介绍爬小说的技巧。  爬取的过程素材 笔趣阁小说网  小说阅读网    技巧分">
+<meta property="og:description" content="前言最近对python爬虫很感兴趣，就花了一些时间来学习，学习了近一周的时间，终于在看了一些其他博客的大神写的教程之后，学会了利用beautifulsoup的方法爬取了一些网站的小说。在此分享我学习的成果。  关于详细的python3爬虫的学习教程以及参考：学习教程   本文参考并且学习了：这篇文章   在以下的文中主要介绍爬小说的技巧。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-05%20%E4%B8%8B%E5%8D%8812.50.43.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-05%20%E4%B8%8B%E5%8D%8812.49.48.png">
@@ -101,10 +101,10 @@
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-05%20%E4%B8%8B%E5%8D%883.25.26.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-05%20%E4%B8%8B%E5%8D%883.27.06.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-05%20%E4%B8%8B%E5%8D%883.27.17.png">
-<meta property="og:updated_time" content="2018-10-11T06:51:57.052Z">
+<meta property="og:updated_time" content="2018-10-11T13:00:33.496Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于利用python爬虫爬取小说的实战例子">
-<meta name="twitter:description" content="前言最近对python爬虫很感兴趣，就花了一些时间来学习，学习了近一周的时间，终于在看了一些其他博客的大神写的教程之后，学会了利用beautifulsoup的方法爬取了一些网站的小说。在此分享我学习的成果。  关于详细的python3爬虫的学习教程以及参考：学习教程   本文参考并且学习了：这篇文章   在以下的文中主要介绍爬小说的技巧。  爬取的过程素材 笔趣阁小说网  小说阅读网    技巧分">
+<meta name="twitter:description" content="前言最近对python爬虫很感兴趣，就花了一些时间来学习，学习了近一周的时间，终于在看了一些其他博客的大神写的教程之后，学会了利用beautifulsoup的方法爬取了一些网站的小说。在此分享我学习的成果。  关于详细的python3爬虫的学习教程以及参考：学习教程   本文参考并且学习了：这篇文章   在以下的文中主要介绍爬小说的技巧。">
 <meta name="twitter:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-05%20%E4%B8%8B%E5%8D%8812.50.43.png">
 
 
@@ -459,6 +459,7 @@
 <ul>
 <li>在以下的文中主要介绍<strong>爬小说的技巧</strong>。</li>
 </ul>
+<a id="more"></a>
 <h1 id="爬取的过程"><a href="#爬取的过程" class="headerlink" title="爬取的过程"></a>爬取的过程</h1><h2 id="素材"><a href="#素材" class="headerlink" title="素材"></a>素材</h2><ul>
 <li><p><a href="http://www.biqukan.com/38_38278/17032848.html" target="_blank" rel="external">笔趣阁小说网</a></p>
 </li>
@@ -558,7 +559,7 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月11日 - 14:10</p>
+  <p><span>最后更新:</span>2018年10月11日 - 21:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 

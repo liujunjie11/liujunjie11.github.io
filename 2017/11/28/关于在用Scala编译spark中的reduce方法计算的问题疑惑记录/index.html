@@ -85,18 +85,18 @@
 
 
 
-<meta name="description" content="在学习spark中，reduce方法是绕不开的。但是我在测试时发现与从前的规则好像有一点冲突了… 如下分析：  输入代码      1, val a=sc.parallelize(1 to 10)//理论上理解为0～9的数字放在一个分区 2, a.reduce((x,y) =&amp;gt; x+y)   输出   55//即意味着从0（0可省亦可）到10(包括10在内了，与上方的to方法冲突了)都被相加">
+<meta name="description" content="在学习spark中，reduce方法是绕不开的。但是我在测试时发现与从前的规则好像有一点冲突了…">
 <meta name="keywords" content="学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于在用Scala编译spark中的reduce方法计算的问题疑惑记录">
 <meta property="og:url" content="https://liujunjie11.github.io/2017/11/28/关于在用Scala编译spark中的reduce方法计算的问题疑惑记录/index.html">
 <meta property="og:site_name" content="LXiHa`Notes">
-<meta property="og:description" content="在学习spark中，reduce方法是绕不开的。但是我在测试时发现与从前的规则好像有一点冲突了… 如下分析：  输入代码      1, val a=sc.parallelize(1 to 10)//理论上理解为0～9的数字放在一个分区 2, a.reduce((x,y) =&amp;gt; x+y)   输出   55//即意味着从0（0可省亦可）到10(包括10在内了，与上方的to方法冲突了)都被相加">
+<meta property="og:description" content="在学习spark中，reduce方法是绕不开的。但是我在测试时发现与从前的规则好像有一点冲突了…">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-28T13:46:19.143Z">
+<meta property="og:updated_time" content="2018-10-11T12:59:58.238Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于在用Scala编译spark中的reduce方法计算的问题疑惑记录">
-<meta name="twitter:description" content="在学习spark中，reduce方法是绕不开的。但是我在测试时发现与从前的规则好像有一点冲突了… 如下分析：  输入代码      1, val a=sc.parallelize(1 to 10)//理论上理解为0～9的数字放在一个分区 2, a.reduce((x,y) =&amp;gt; x+y)   输出   55//即意味着从0（0可省亦可）到10(包括10在内了，与上方的to方法冲突了)都被相加">
+<meta name="twitter:description" content="在学习spark中，reduce方法是绕不开的。但是我在测试时发现与从前的规则好像有一点冲突了…">
 
 
 
@@ -441,6 +441,7 @@
 
       
         <p>在学习<em>spark</em>中，<em>reduce</em>方法是绕不开的。但是我在测试时发现与从前的规则好像有一点冲突了…</p>
+<a id="more"></a>
 <p>如下分析：</p>
 <ul>
 <li>输入代码   </li>

@@ -85,13 +85,13 @@
 
 
 
-<meta name="description" content="因为最近在学习python3网络爬虫，想自己写一些小程序来实战一下。爬的是URP教务网。 一开始的思路是利用beautiful模块来进行爬取相关的html信息，直接来得到需要的信息。结果发现程序运行不通… 后来查了一下，发现用re模块好啊…配合python正则表达式那是相当简单… 下面开始分析，代码编写阶段。 分析学习模拟登陆这是第一步，有两种简单的方法，可直接参考的链接：参考链接在此 一种是查看">
+<meta name="description" content="因为最近在学习python3网络爬虫，想自己写一些小程序来实战一下。爬的是URP教务网。 一开始的思路是利用beautiful模块来进行爬取相关的html信息，直接来得到需要的信息。结果发现程序运行不通… 后来查了一下，发现用re模块好啊…配合python正则表达式那是相当简单… 下面开始分析，代码编写阶段。">
 <meta name="keywords" content="学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="利用python3网络爬虫爬取成绩">
 <meta property="og:url" content="https://liujunjie11.github.io/2018/03/10/利用python3网络爬虫爬取成绩/index.html">
 <meta property="og:site_name" content="LXiHa`Notes">
-<meta property="og:description" content="因为最近在学习python3网络爬虫，想自己写一些小程序来实战一下。爬的是URP教务网。 一开始的思路是利用beautiful模块来进行爬取相关的html信息，直接来得到需要的信息。结果发现程序运行不通… 后来查了一下，发现用re模块好啊…配合python正则表达式那是相当简单… 下面开始分析，代码编写阶段。 分析学习模拟登陆这是第一步，有两种简单的方法，可直接参考的链接：参考链接在此 一种是查看">
+<meta property="og:description" content="因为最近在学习python3网络爬虫，想自己写一些小程序来实战一下。爬的是URP教务网。 一开始的思路是利用beautiful模块来进行爬取相关的html信息，直接来得到需要的信息。结果发现程序运行不通… 后来查了一下，发现用re模块好啊…配合python正则表达式那是相当简单… 下面开始分析，代码编写阶段。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-11%20%E4%B8%8A%E5%8D%889.44.02.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-11%20%E4%B8%8A%E5%8D%889.44.21.png">
@@ -101,10 +101,10 @@
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/3%E6%9C%88-11-2018%2009-49-16.gif">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-11%20%E4%B8%8A%E5%8D%8810.05.02.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-11%20%E4%B8%8A%E5%8D%8810.12.41.png">
-<meta property="og:updated_time" content="2018-10-11T06:52:20.603Z">
+<meta property="og:updated_time" content="2018-10-11T13:01:32.595Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用python3网络爬虫爬取成绩">
-<meta name="twitter:description" content="因为最近在学习python3网络爬虫，想自己写一些小程序来实战一下。爬的是URP教务网。 一开始的思路是利用beautiful模块来进行爬取相关的html信息，直接来得到需要的信息。结果发现程序运行不通… 后来查了一下，发现用re模块好啊…配合python正则表达式那是相当简单… 下面开始分析，代码编写阶段。 分析学习模拟登陆这是第一步，有两种简单的方法，可直接参考的链接：参考链接在此 一种是查看">
+<meta name="twitter:description" content="因为最近在学习python3网络爬虫，想自己写一些小程序来实战一下。爬的是URP教务网。 一开始的思路是利用beautiful模块来进行爬取相关的html信息，直接来得到需要的信息。结果发现程序运行不通… 后来查了一下，发现用re模块好啊…配合python正则表达式那是相当简单… 下面开始分析，代码编写阶段。">
 <meta name="twitter:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-11%20%E4%B8%8A%E5%8D%889.44.02.png">
 
 
@@ -453,6 +453,7 @@
 <p>一开始的思路是利用<em>beautiful</em>模块来进行爬取相关的<em>html信息</em>，直接来得到需要的信息。结果发现程序运行不通…</p>
 <p>后来查了一下，发现用<em><a href="https://docs.python.org/3/library/re.html" target="_blank" rel="external">re模块</a></em>好啊…配合<em><a href="https://cuiqingcai.com/977.html" target="_blank" rel="external">python正则表达式</a></em>那是相当简单…</p>
 <p>下面开始分析，代码编写阶段。</p>
+<a id="more"></a>
 <h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><h2 id="学习模拟登陆"><a href="#学习模拟登陆" class="headerlink" title="学习模拟登陆"></a>学习模拟登陆</h2><p>这是第一步，有两种简单的方法，可直接参考的链接：<a href="http://blog.csdn.net/JoeHF/article/details/48424335" target="_blank" rel="external">参考链接在此</a></p>
 <p>一种是查看抓的包中的：</p>
 <p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-11%20%E4%B8%8A%E5%8D%889.44.02.png" alt=""></p>
@@ -641,7 +642,7 @@ if __name__ == &apos;__main__&apos;:
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月11日 - 14:10</p>
+  <p><span>最后更新:</span>2018年10月11日 - 21:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 

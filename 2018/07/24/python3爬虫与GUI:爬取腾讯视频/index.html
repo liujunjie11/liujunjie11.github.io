@@ -85,13 +85,13 @@
 
 
 
-<meta name="description" content="最近想研究一下用python爬虫爬一些经常看的视频网站，其中包括有腾讯视频、YouTube、Twitter。本文从腾讯开始，之后会慢慢的更新其他两个的。 腾讯视频我之前就有过尝试，结果都失败了(我的目标是直接爬取完整视频！实际上这视频分析来分析去都是分段来的..)花了不少时间，结果还是停留在了只能爬取分段视频的阶段..下面也来简单说说如何爬取一些分段片段！ 爬取视频片段分析在我们经过抓包的过程中可">
+<meta name="description" content="最近想研究一下用python爬虫爬一些经常看的视频网站，其中包括有腾讯视频、YouTube、Twitter。本文从腾讯开始，之后会慢慢的更新其他两个的。 腾讯视频我之前就有过尝试，结果都失败了(我的目标是直接爬取完整视频！实际上这视频分析来分析去都是分段来的..)花了不少时间，结果还是停留在了只能爬取分段视频的阶段..下面也来简单说说如何爬取一些分段片段！">
 <meta name="keywords" content="python3爬虫">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python3爬虫与GUI:爬取腾讯视频">
 <meta property="og:url" content="https://liujunjie11.github.io/2018/07/24/python3爬虫与GUI:爬取腾讯视频/index.html">
 <meta property="og:site_name" content="LXiHa`Notes">
-<meta property="og:description" content="最近想研究一下用python爬虫爬一些经常看的视频网站，其中包括有腾讯视频、YouTube、Twitter。本文从腾讯开始，之后会慢慢的更新其他两个的。 腾讯视频我之前就有过尝试，结果都失败了(我的目标是直接爬取完整视频！实际上这视频分析来分析去都是分段来的..)花了不少时间，结果还是停留在了只能爬取分段视频的阶段..下面也来简单说说如何爬取一些分段片段！ 爬取视频片段分析在我们经过抓包的过程中可">
+<meta property="og:description" content="最近想研究一下用python爬虫爬一些经常看的视频网站，其中包括有腾讯视频、YouTube、Twitter。本文从腾讯开始，之后会慢慢的更新其他两个的。 腾讯视频我之前就有过尝试，结果都失败了(我的目标是直接爬取完整视频！实际上这视频分析来分析去都是分段来的..)花了不少时间，结果还是停留在了只能爬取分段视频的阶段..下面也来简单说说如何爬取一些分段片段！">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.36.23.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.38.43.png">
@@ -100,10 +100,10 @@
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.42.42.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.46.32.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/7%E6%9C%88-24-2018%2020-00-51.gif">
-<meta property="og:updated_time" content="2018-10-11T06:56:39.921Z">
+<meta property="og:updated_time" content="2018-10-11T13:06:44.378Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python3爬虫与GUI:爬取腾讯视频">
-<meta name="twitter:description" content="最近想研究一下用python爬虫爬一些经常看的视频网站，其中包括有腾讯视频、YouTube、Twitter。本文从腾讯开始，之后会慢慢的更新其他两个的。 腾讯视频我之前就有过尝试，结果都失败了(我的目标是直接爬取完整视频！实际上这视频分析来分析去都是分段来的..)花了不少时间，结果还是停留在了只能爬取分段视频的阶段..下面也来简单说说如何爬取一些分段片段！ 爬取视频片段分析在我们经过抓包的过程中可">
+<meta name="twitter:description" content="最近想研究一下用python爬虫爬一些经常看的视频网站，其中包括有腾讯视频、YouTube、Twitter。本文从腾讯开始，之后会慢慢的更新其他两个的。 腾讯视频我之前就有过尝试，结果都失败了(我的目标是直接爬取完整视频！实际上这视频分析来分析去都是分段来的..)花了不少时间，结果还是停留在了只能爬取分段视频的阶段..下面也来简单说说如何爬取一些分段片段！">
 <meta name="twitter:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.36.23.png">
 
 
@@ -450,6 +450,7 @@
       
         <p>最近想研究一下用<em>python爬虫</em>爬一些经常看的视频网站，其中包括有<em>腾讯视频、YouTube、Twitter</em>。本文从腾讯开始，之后会慢慢的更新其他两个的。</p>
 <p>腾讯视频我之前就有过尝试，结果都失败了(我的目标是直接爬取完整视频！实际上这视频分析来分析去都是分段来的..)花了不少时间，结果还是停留在了只能爬取分段视频的阶段..下面也来简单说说如何爬取一些分段片段！</p>
+<a id="more"></a>
 <h1 id="爬取视频片段分析"><a href="#爬取视频片段分析" class="headerlink" title="爬取视频片段分析"></a>爬取视频片段分析</h1><p>在我们经过抓包的过程中可发现一些有用的信息，比如<code>getinfo</code>、<code>getkey</code>的数据包。下面简单分析一下，实际上只用到<code>getinfo</code>数据包的内容即可！</p>
 <p>为了简便直接放出相关的链接：</p>
 <blockquote>
@@ -577,7 +578,7 @@ for each in referer:
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月11日 - 14:10</p>
+  <p><span>最后更新:</span>2018年10月11日 - 21:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 

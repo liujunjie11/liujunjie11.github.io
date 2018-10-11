@@ -102,7 +102,7 @@
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-08%20%E4%B8%8B%E5%8D%887.56.39.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-08%20%E4%B8%8B%E5%8D%888.24.11.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-08%20%E4%B8%8B%E5%8D%888.21.47.png">
-<meta property="og:updated_time" content="2018-10-11T06:54:22.813Z">
+<meta property="og:updated_time" content="2018-10-11T13:04:09.468Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python3爬虫：爬取淘宝商品信息的两种方法">
 <meta name="twitter:description" content="爬取淘宝信息：  1，可用selenium模块与driver Chrome插件自动化模拟爬取。 2， 进行抓包爬取。  下面一一进行介绍并且贴出实现代码。但是在此必须说明一下，因为时间有限，相关模块不懂的还需要自行搜索，在此不做教程解说，只提供分析思路与代码实现过程。  学习博客推荐：https://cuiqingcai.com，实际上我也是根据此博客学习到了一些知识，也是我参考学习的唯一博客。">
@@ -459,6 +459,7 @@
 <blockquote>
 <p>学习博客推荐：<a href="https://cuiqingcai.com，" target="_blank" rel="external">https://cuiqingcai.com，</a><br>实际上我也是根据此博客学习到了一些知识，也是我参考学习的唯一博客。</p>
 </blockquote>
+<a id="more"></a>
 <h2 id="自动化模拟爬取"><a href="#自动化模拟爬取" class="headerlink" title="自动化模拟爬取"></a>自动化模拟爬取</h2><p>python爬虫的<em>selenium</em>模块是一个可以实现模拟浏览器相关动作，并且可跳过<em>JavaScript动态渲染</em>直接返回其网页源代码的一个自动化测试工具。如下我们需要爬取关键词为<em>MacBook Pro</em>的商品信息，可用它来实现自动翻页并且返回每一页的源代码直接进行相关信息的爬取。</p>
 <h3 id="分析过程"><a href="#分析过程" class="headerlink" title="分析过程"></a>分析过程</h3><p>下面直接进行分析过程。</p>
 <p>首先打开淘宝主页：<a href="https://www.taobao.com" target="_blank" rel="external">https://www.taobao.com</a> ，进入其中输入关键词观察一下页面，可以看到下面翻页的一些跳转功能。（以下使用的都是<em>Chrome</em>自带的<em>开发者工具</em>）</p>
@@ -669,7 +670,7 @@ if __name__ == &apos;__main__&apos;:
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月11日 - 14:10</p>
+  <p><span>最后更新:</span>2018年10月11日 - 21:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 

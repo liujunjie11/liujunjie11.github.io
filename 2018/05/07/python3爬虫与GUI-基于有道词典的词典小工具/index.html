@@ -85,13 +85,13 @@
 
 
 
-<meta name="description" content="最近看到了一篇文章，一个基于有道的词典小工具，心血来潮，想着自己来写一个试试看。  下面我将用python完成接口的对接(即进行抓包)，并且用pyQT5实现对应的GUI界面。接下来就是事件机制的编写了，这样任务就完成了。  分析在分析的过程中需要分析网页中的JS代码，因为有道现在使用加密算法来进行翻译结果的加密了。下面一一进行简单的说明。 首先用Chrome浏览器打开有道在线翻译页面，随便输入一个">
+<meta name="description" content="最近看到了一篇文章，一个基于有道的词典小工具，心血来潮，想着自己来写一个试试看。  下面我将用python完成接口的对接(即进行抓包)，并且用pyQT5实现对应的GUI界面。接下来就是事件机制的编写了，这样任务就完成了。">
 <meta name="keywords" content="python爬虫与GUI">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python3爬虫与GUI:基于有道词典的词典小工具">
 <meta property="og:url" content="https://liujunjie11.github.io/2018/05/07/python3爬虫与GUI-基于有道词典的词典小工具/index.html">
 <meta property="og:site_name" content="LXiHa`Notes">
-<meta property="og:description" content="最近看到了一篇文章，一个基于有道的词典小工具，心血来潮，想着自己来写一个试试看。  下面我将用python完成接口的对接(即进行抓包)，并且用pyQT5实现对应的GUI界面。接下来就是事件机制的编写了，这样任务就完成了。  分析在分析的过程中需要分析网页中的JS代码，因为有道现在使用加密算法来进行翻译结果的加密了。下面一一进行简单的说明。 首先用Chrome浏览器打开有道在线翻译页面，随便输入一个">
+<meta property="og:description" content="最近看到了一篇文章，一个基于有道的词典小工具，心血来潮，想着自己来写一个试试看。  下面我将用python完成接口的对接(即进行抓包)，并且用pyQT5实现对应的GUI界面。接下来就是事件机制的编写了，这样任务就完成了。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-08%20%E4%B8%8B%E5%8D%884.17.22.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/5%E6%9C%88-08-2018%2016-32-38.gif">
@@ -107,10 +107,10 @@
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-08%20%E4%B8%8B%E5%8D%884.23.42.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-08%20%E4%B8%8B%E5%8D%884.31.13.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/5%E6%9C%88-08-2018%2016-32-56.gif">
-<meta property="og:updated_time" content="2018-10-11T06:55:37.710Z">
+<meta property="og:updated_time" content="2018-10-11T13:05:43.282Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python3爬虫与GUI:基于有道词典的词典小工具">
-<meta name="twitter:description" content="最近看到了一篇文章，一个基于有道的词典小工具，心血来潮，想着自己来写一个试试看。  下面我将用python完成接口的对接(即进行抓包)，并且用pyQT5实现对应的GUI界面。接下来就是事件机制的编写了，这样任务就完成了。  分析在分析的过程中需要分析网页中的JS代码，因为有道现在使用加密算法来进行翻译结果的加密了。下面一一进行简单的说明。 首先用Chrome浏览器打开有道在线翻译页面，随便输入一个">
+<meta name="twitter:description" content="最近看到了一篇文章，一个基于有道的词典小工具，心血来潮，想着自己来写一个试试看。  下面我将用python完成接口的对接(即进行抓包)，并且用pyQT5实现对应的GUI界面。接下来就是事件机制的编写了，这样任务就完成了。">
 <meta name="twitter:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-08%20%E4%B8%8B%E5%8D%884.17.22.png">
 
 
@@ -459,6 +459,7 @@
 <blockquote>
 <p>下面我将用<em>python</em>完成接口的对接(即进行抓包)，并且用<em>pyQT5</em>实现对应的GUI界面。接下来就是事件机制的编写了，这样任务就完成了。</p>
 </blockquote>
+<a id="more"></a>
 <h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>在分析的过程中需要分析网页中的<em>JS</em>代码，因为有道现在使用加密算法来进行翻译结果的加密了。下面一一进行简单的说明。</p>
 <p>首先用<em>Chrome浏览器</em>打开<a href="http://fanyi.youdao.com/" target="_blank" rel="external">有道在线翻译页面</a>，随便输入一个中文，会自动检测翻译成英文。(在我们已经都知道有道现在是加密的情况下我就不废话太多了，下面直接挑重点的说。)打开其自带的开发者工具查看到相关的包信息：</p>
 <p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-08%20%E4%B8%8B%E5%8D%884.17.22.png" alt=""></p>
@@ -725,7 +726,7 @@ if __name__ == &quot;__main__&quot;:
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月11日 - 14:10</p>
+  <p><span>最后更新:</span>2018年10月11日 - 21:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 

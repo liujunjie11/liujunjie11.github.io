@@ -437,23 +437,11 @@
 
       
         
-          
-          在参考他人的代码时运行出现了错误：
-
-‘ValueError: Found array with 0 sample(s) (shape=(0, 4)) while a minimum of 1 is required.’
-
-这是因为数据的改动造成的，本身自己所有的数据与他人的不同…
-解决方案：
-在运行此相关的代码时重新运行一遍你的数据源程序(就是你的那个包涵数据源的变量的那段代码)
-这个解决方案对我来说是可行的。我想我说的已经够明白了吧…
-
-参考：
-
-
-https://www.jianshu.com/p/bbfbdedc3c1c
-
-
-          
+          <p>在参考他人的代码时运行出现了错误：</p>
+<blockquote>
+<p>‘ValueError: Found array with 0 sample(s) (shape=(0, 4)) while a minimum of 1 is required.’</p>
+</blockquote>
+<p>这是因为数据的改动造成的，本身自己所有的数据与他人的不同…</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/08/20/关于错误-ValueError-Found-array-with-0-sample-s-shape-0-4-while-a-minimum-of-1-is-required/#more" rel="contents">
@@ -648,16 +636,9 @@ https://www.jianshu.com/p/bbfbdedc3c1c
 
       
         
-          
-          如题。
-map函数属于python函数式编程，具体的就不说了，可参考官网说明或者是直接看大神说明：https://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/00141861202544241651579c69d4399a9aa135afef28c44000
-在此简要说说如何理解，因为之前我有一点困惑。
-已知：
-&gt;&gt;&gt; def f(x):
-...     return x * x
-...
-&gt;&gt;&gt; map(f, [1, 2, 3, 4, 5, 6, 7,
-          ...
+          <p>如题。</p>
+<p><em>map函数</em>属于<em>python函数式编程</em>，具体的就不说了，可参考官网说明或者是直接看大神说明：<a href="https://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/00141861202544241651579c69d4399a9aa135afef28c44000" target="_blank" rel="external">https://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/00141861202544241651579c69d4399a9aa135afef28c44000</a></p>
+<p>在此简要说说如何理解，因为之前我有一点困惑。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/08/17/python编程map函数及as-matrix函数简明/#more" rel="contents">
@@ -852,21 +833,10 @@ map函数属于python函数式编程，具体的就不说了，可参考官网�
 
       
         
-          
-          
-关于这个函数可在官网找到：https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.str.get.html
-
-实际上我在此只是起到一个翻译的作用…
-这个函数语法如下：
-Series.str.get(i)
-
-其中：
-Parameters:    i : int类型输入，用于返回制定元素的一个位置(可理解为一个针对自身元素身上的一个索引)
-Returns:items : Series/Index of objects，即返回的数据类型
-
-具体使用参考官网上的例子：
-&gt;&gt;&gt; s = pd.Serie
-          ...
+          <blockquote>
+<p>关于这个函数可在官网找到：<br><a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.str.get.html" target="_blank" rel="external">https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.str.get.html</a></p>
+</blockquote>
+<p>实际上我在此只是起到一个翻译的作用…</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/08/16/pandas-Series-str-get-的简单使用/#more" rel="contents">
@@ -1061,16 +1031,8 @@ Returns:items : Series/Index of objects，即返回的数据类型
 
       
         
-          
-          最近在参加kaggle上的一个入门级的比赛，在参考他人的代码时学习到了应用一些东西，在这里说的python函数式编程实际上在看书时看到了好几遍了，但是在真正的应用时是有一股“意想不到的”欣喜感的，哈哈..
-在此简单记录一下，以便以后参考用。
-在所谓的函数式编程中，若是简单的直接调用出结果那真的是大材小用了..实际上只是我认知较浅..哈哈~
-在使用这些函数时，我发现会有惊人的效果，而且可以达到理想的效果，就如在处理一些数据中结合本身的变量时真的有一股得心应手的感觉～～
-
-这里的变量一般为DataFrame的数据类型，也可称为一个特征向量，维度。
-
-再者，如是需要以自定义的函数结合变量达到理想的效
-          ...
+          <p>最近在参加<em>kaggle</em>上的一个入门级的比赛，在参考他人的代码时学习到了应用一些东西，在这里说的<em>python函数式编程</em>实际上在看书时看到了好几遍了，但是在真正的应用时是有一股“意想不到的”欣喜感的，哈哈..</p>
+<p>在此简单记录一下，以便以后参考用。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/08/16/关于python函数式编程以及相关调用方法的简单思考/#more" rel="contents">
@@ -1265,22 +1227,8 @@ Returns:items : Series/Index of objects，即返回的数据类型
 
       
         
-          
-          一直想加一个评论的功能，现在有时间了。
-下面来说说简单的过程。
-用的是来必力这个评论系统。
-首先需要进入其中进行注册。
-
-前面的注册过程具体参考下面这篇文章吧，但是后面的过程回来参考我的即可。
-文章地址：https://segmentfault.com/a/1190000012918417
-
-如上面的文章可知，每个人注册成功之后会有一个独立的uid。
-接下来打开目录位置目标/Users/XX/XXXX/themes/next/_config.yml，搜索关键词liver，将此位置改成
-livere:
-    on: true #控制开关
-    livere_uid: 你的uid
-如下图所示：
-          ...
+          <p>一直想加一个评论的功能，现在有时间了。</p>
+<p>下面来说说简单的过程。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/08/15/为Hexo博客-next主题-加上评论功能/#more" rel="contents">
@@ -1475,24 +1423,7 @@ livere:
 
       
         
-          
-          在学习其相关的一些库时有一些自己的理解，简单记录记录，方便以后理解。
-pandas.Dataframe.plot()此函数而言：
-
-x轴线对应着第一列值，y轴线对应着第二列值or后面的列，而其中的属性对应着将要标记在上方的标签展示使用。
-
-在切片的理解中：
-
-[:]为全体；
-[1:] or [1]需要考虑从0开始的顺序；
-[:1]即直接从1开始，无需从0开始；
-[:,:]表示行与列。
-[1::]表示从第二位置开始以1为跨度逐渐到最后一位(0为第一个位置)。
-[::1]表示从第一个位置开始逐渐以1为跨度直至最后一个位置。
-
-That’s all！
-
-          
+          <p>在学习其相关的一些库时有一些自己的理解，简单记录记录，方便以后理解。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/08/13/pandas-Dataframe-plot-及数值切片的一些记录/#more" rel="contents">
@@ -1687,18 +1618,8 @@ That’s all！
 
       
         
-          
-          最近在接触一些在notebook上用matploylib这个库绘图时出现了中文乱码的问题，就是常见的那种小方块式的中文乱码问题。
-下面简单说说解决方法。
-Mac本机上的字体册利用在打开Mac自带的字体册，可发现有许多的中文字体供我们选择使用，在此就能帮忙我们解决中文乱码的问题。
-选择一个字体，找到他的文件位置在何处。之后需要添加的代码要用到。
-
-
-这样就知道了位置的所在。
-
-需要添加的代码如下添加代码，加上上面说的中文字体的所在位置，然后在每一次需要中文显示时，均要加上fontproperties=font（font即指下方的变量）。
-from matplotlib.font_manager 
-          ...
+          <p>最近在接触一些在notebook上用<em>matploylib</em>这个库绘图时出现了中文乱码的问题，就是常见的那种小方块式的中文乱码问题。</p>
+<p>下面简单说说解决方法。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/08/08/Mac下的matploylib绘图中文乱码问题/#more" rel="contents">
@@ -1893,14 +1814,8 @@ from matplotlib.font_manager
 
       
         
-          
-          最近想研究一下用python爬虫爬一些经常看的视频网站，其中包括有腾讯视频、YouTube、Twitter。本文从腾讯开始，之后会慢慢的更新其他两个的。
-腾讯视频我之前就有过尝试，结果都失败了(我的目标是直接爬取完整视频！实际上这视频分析来分析去都是分段来的..)花了不少时间，结果还是停留在了只能爬取分段视频的阶段..下面也来简单说说如何爬取一些分段片段！
-爬取视频片段分析在我们经过抓包的过程中可发现一些有用的信息，比如getinfo、getkey的数据包。下面简单分析一下，实际上只用到getinfo数据包的内容即可！
-为了简便直接放出相关的链接：
-
-getinfo:http://vv.vid
-          ...
+          <p>最近想研究一下用<em>python爬虫</em>爬一些经常看的视频网站，其中包括有<em>腾讯视频、YouTube、Twitter</em>。本文从腾讯开始，之后会慢慢的更新其他两个的。</p>
+<p>腾讯视频我之前就有过尝试，结果都失败了(我的目标是直接爬取完整视频！实际上这视频分析来分析去都是分段来的..)花了不少时间，结果还是停留在了只能爬取分段视频的阶段..下面也来简单说说如何爬取一些分段片段！</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/07/24/python3爬虫与GUI:爬取腾讯视频/#more" rel="contents">
@@ -2095,12 +2010,8 @@ getinfo:http://vv.vid
 
       
         
-          
-          我已沉默了许久了。
-直到今日我看到了一个视频链接，看到了下方的一个同胞说到“我一直在流泪，孩子。”。我的心顿时在流血一般的，泪水一度忍不住的留..
-现在中国的年轻一代们，你们为何不去了解政治？你们有什么理由不去了解自己国家的政治？看到身边的行尸走肉们，我有时感到一股孤独感由然而生。幸好，我并不是一个人坚持着，在世界的各个角落都有我的同胞都有人在关心着这个国家与这里的人民生活的怎么样，想到这里，我总是有一股欣慰感。
-我不是什么象牙塔里的花朵，我也不想为谁辩论什么。我只是想关心我的国家，在这里，我出生在这里，在出生之后我知道我是一个中国人，我的一个“大家”叫中国，这里有我的许许多多的兄弟姐妹，大家
-          ...
+          <p>我已沉默了许久了。</p>
+<p>直到今日我看到了一个<a href="https://www.youtube.com/watch?v=1yY0U801tUs&amp;feature=youtu.be" target="_blank" rel="external">视频链接</a>，看到了下方的一个同胞说到“我一直在流泪，孩子。”。我的心顿时在流血一般的，泪水一度忍不住的留..</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/07/18/心声/#more" rel="contents">
@@ -2295,22 +2206,7 @@ getinfo:http://vv.vid
 
       
         
-          
-          此文是关于PS软件的使用记录，因为使用的不多，但是是经常需要用到的一些小技巧，记录在此，以便日后查看。不定时更新。
-图片合并1，在软件中新建一个默认的空白层，将需要合并的图片一并拖入其中，排版调整好，保存退出，即可完成合并任务。
-去水印
-大小水印均可去除使用。
-
-1，https://jingyan.baidu.com/article/4ae03de3e41dd33eff9e6bb9.html
-
-看其中教程视频的第一个方法即可完成任务。
-
-2，https://jingyan.baidu.com/article/a24b33cd2361e819fe002bed.html
-
-不稳定方法。
-
-
-          
+          <p>此文是关于<em>PS软件</em>的使用记录，因为使用的不多，但是是经常需要用到的一些小技巧，记录在此，以便日后查看。不定时更新。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/07/18/使用PS软件的记录/#more" rel="contents">

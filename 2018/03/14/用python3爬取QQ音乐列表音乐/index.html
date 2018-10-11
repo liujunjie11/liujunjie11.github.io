@@ -85,13 +85,13 @@
 
 
 
-<meta name="description" content="最近想爬取一些音乐来实战一下，选择了qq音乐。 qq音乐明显的就是一个动态网页，所以需要抓包了。  不懂的关键词可利用好搜索引擎。  分析过程在此就说说分析的大致过程吧。 先看看主页：  我们随便点开一个主题列表：  因为是动态网页，所以就在这里抓包吧，因为qq音乐是动态网页，需要相关的参数信息才能得到想要的音乐地址，随便以播放一首歌曲为例，如下图1中的歌曲ID，点进去这个看看，即点击播放按钮，发">
+<meta name="description" content="最近想爬取一些音乐来实战一下，选择了qq音乐。 qq音乐明显的就是一个动态网页，所以需要抓包了。  不懂的关键词可利用好搜索引擎。">
 <meta name="keywords" content="学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用python3爬取QQ音乐列表音乐">
 <meta property="og:url" content="https://liujunjie11.github.io/2018/03/14/用python3爬取QQ音乐列表音乐/index.html">
 <meta property="og:site_name" content="LXiHa`Notes">
-<meta property="og:description" content="最近想爬取一些音乐来实战一下，选择了qq音乐。 qq音乐明显的就是一个动态网页，所以需要抓包了。  不懂的关键词可利用好搜索引擎。  分析过程在此就说说分析的大致过程吧。 先看看主页：  我们随便点开一个主题列表：  因为是动态网页，所以就在这里抓包吧，因为qq音乐是动态网页，需要相关的参数信息才能得到想要的音乐地址，随便以播放一首歌曲为例，如下图1中的歌曲ID，点进去这个看看，即点击播放按钮，发">
+<meta property="og:description" content="最近想爬取一些音乐来实战一下，选择了qq音乐。 qq音乐明显的就是一个动态网页，所以需要抓包了。  不懂的关键词可利用好搜索引擎。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8A%E5%8D%8811.08.29.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8A%E5%8D%8811.09.44.png">
@@ -104,10 +104,10 @@
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8B%E5%8D%8812.49.29.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8B%E5%8D%884.08.01.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8B%E5%8D%884.09.17.png">
-<meta property="og:updated_time" content="2018-10-11T06:52:40.267Z">
+<meta property="og:updated_time" content="2018-10-11T13:02:07.812Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用python3爬取QQ音乐列表音乐">
-<meta name="twitter:description" content="最近想爬取一些音乐来实战一下，选择了qq音乐。 qq音乐明显的就是一个动态网页，所以需要抓包了。  不懂的关键词可利用好搜索引擎。  分析过程在此就说说分析的大致过程吧。 先看看主页：  我们随便点开一个主题列表：  因为是动态网页，所以就在这里抓包吧，因为qq音乐是动态网页，需要相关的参数信息才能得到想要的音乐地址，随便以播放一首歌曲为例，如下图1中的歌曲ID，点进去这个看看，即点击播放按钮，发">
+<meta name="twitter:description" content="最近想爬取一些音乐来实战一下，选择了qq音乐。 qq音乐明显的就是一个动态网页，所以需要抓包了。  不懂的关键词可利用好搜索引擎。">
 <meta name="twitter:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8A%E5%8D%8811.08.29.png">
 
 
@@ -457,6 +457,7 @@
 <blockquote>
 <p>不懂的关键词可利用好搜索引擎。</p>
 </blockquote>
+<a id="more"></a>
 <h2 id="分析过程"><a href="#分析过程" class="headerlink" title="分析过程"></a>分析过程</h2><p>在此就说说分析的大致过程吧。</p>
 <p>先看看主页：</p>
 <p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8A%E5%8D%8811.08.29.png" alt=""></p>
@@ -665,7 +666,7 @@ if __name__ == &apos;__main__&apos;:
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月11日 - 14:10</p>
+  <p><span>最后更新:</span>2018年10月11日 - 21:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 

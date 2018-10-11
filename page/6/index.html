@@ -437,17 +437,7 @@
 
       
         
-          
-          最近在处理一个csv格式的数据时，出现了UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xd4 in  position 904: ordinal not in range(128)的错误告知。
-查了一下，发现只要指定encoding=’iso-8859-1’即可解决此问题了。
-代码演示：
-.....
-        with open(filename, encoding=&apos;iso-8859-1&apos;) as f:
-        ......
-
-简单说明一下为何如此指定编码格式：
-ISO 8859-1，正式编号为IS
-          ...
+          <p>最近在处理一个<em>csv格式</em>的数据时，出现了<em>UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xd4 in<br>  position 904: ordinal not in range(128)</em>的错误告知。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/20/解决python文件读取时的UnicodeDecodeError-ascii-codec-can-t-decode-byte-0xd4-in-position-904-ordinal-not-in-range-128-问题/#more" rel="contents">
@@ -642,21 +632,7 @@ ISO 8859-1，正式编号为IS
 
       
         
-          
-          最近想研究研究什么是多线程编程的问题。简单了解了一下之后发现原来我对其的理解都错了…把面对对象编程活生生的说成了多线程…唉，从前文中的”口误“就…
-多线程与多进程简单理解这两个一下：
-
-多进程：可先理解为一个应用程序，如我们的上网用的浏览器。
-
-多线程：多线程就是我们浏览器中的各种小工具，如刷新功能与新开一个标签页的功能就是两个在其中的线程。
-
-
-
-多个进程是分开的两个应用程序，就像QQ和微信两者就是毫不相干的两个应用程序。多线程就是两个应用程序之中的多个可同时运用的小工具。
-
-多线程编程再来看看多线程编程。
-平时我们写程序，会将整个代码构建出各种方法函数，各有各的实现意图，以便在主类当中直接
-          ...
+          <p>最近想研究研究什么是<em>多线程编程</em>的问题。简单了解了一下之后发现原来我对其的理解都错了…把<em>面对对象编程</em>活生生的说成了<em>多线程</em>…唉，从前文中的”口误“就…</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/20/理解多线程编程/#more" rel="contents">
@@ -851,31 +827,13 @@ ISO 8859-1，正式编号为IS
 
       
         
-          
-          直接开始这个小项目吧。
-
-网页地址：https://api.github.com/search/repositories?q=language:java&amp;sort=stars
-
-
-在这个网页中有相关的目前比较热门的开源项目（以star的数目来衡量），打开发现这是典型的json格式啊。
-
-简单分析经过抓包可发现：
-
-即：
-
-
-换一换就可知道所有编程语言目前比较热门的开源项目了。
-
-python代码实现&apos;&apos;&apos;
-
-    函数目标：
-    将GitHub上的java热门的开源项目可视化
-
-    编写时间：
-    2018-3-19
-
-&apos;&apos
-          ...
+          <p>直接开始这个小项目吧。</p>
+<ul>
+<li>网页地址：<a href="https://api.github.com/search/repositories?q=language:java&amp;sort=stars" target="_blank" rel="external">https://api.github.com/search/repositories?q=language:java&amp;sort=stars</a></li>
+</ul>
+<blockquote>
+<p>在这个网页中有相关的目前比较热门的开源项目（以<em>star</em>的数目来衡量），打开发现这是典型的<em>json</em>格式啊。</p>
+</blockquote>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/19/用python可视化GitHub上的java热门开源项目/#more" rel="contents">
@@ -1070,20 +1028,11 @@ python代码实现&apos;&apos;&apos;
 
       
         
-          
-          位/比特（bit/b）：内存中最小的单位，二进制数序列中的一个0或一个1就是一比比特.
-
-1比特 = 一个二进制位，只有0和1两种状态  1字节 = 8 比特
-
-1 Byte(B)＝8bit（位）1KB＝1024Byte（字节）
-
-再来看看平时常见的下载参数：
-
-Mbps：带宽单位，在 Mbps 单位中的“b”是指“Bit（位）
-MB/s：速度单位，其中的 B 是指“Byte（字节）
-
-其中1MB/s=8Mbps，下载工具一般以Bps计算，所以它们之间有8bit=1Byte的换算关系，一个字节，是由八位二进制位组成的，所以可解释一个200M的网，换算为字节，实际上仅仅极限速度能达到200/8=
-          ...
+          <p>位/比特（bit/b）：内存中最小的单位，二进制数序列中的一个0或一个1就是一比比特.</p>
+<blockquote>
+<p>1比特 = 一个二进制位，只有0和1两种状态<br>  1字节 = 8 比特</p>
+</blockquote>
+<p>1 Byte(B)＝8bit（位）<br>1KB＝1024Byte（字节）</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/15/计算机基础知识（三）：带宽单位换算与存储单位换算/#more" rel="contents">
@@ -1278,14 +1227,11 @@ MB/s：速度单位，其中的 B 是指“Byte（字节）
 
       
         
-          
-          
-转载自：http://blog.csdn.net/zolalad/article/details/28393209
-
-一．进程、线程、单核处理器
-进程和线程都是操作系统的概念。进程是应用程序的执行实例，每个进程是由私有的虚拟地址空间、代码、数据和其它各种系统资源组成，即进程是操作系统进行资源分配的最小单元。进程在运行过程中创建的资源随着进程的终止而被销毁，所使用的系统资源在进程终止时被释放或关闭。
-线程是进程内部的一个执行单元。系统创建好进程后，实际上就启动执行了该进程的主执行线程，主执行线程以函数地址形式，比如说main或WinMain函数，将程序的启动点提供给Windows系统。主执行线
-          ...
+          <blockquote>
+<p>转载自：<a href="http://blog.csdn.net/zolalad/article/details/28393209" target="_blank" rel="external">http://blog.csdn.net/zolalad/article/details/28393209</a></p>
+</blockquote>
+<p><strong>一．进程、线程、单核处理器</strong></p>
+<p>进程和线程都是操作系统的概念。进程是应用程序的执行实例，每个进程是由私有的虚拟地址空间、代码、数据和其它各种系统资源组成，即进程是操作系统进行资源分配的最小单元。进程在运行过程中创建的资源随着进程的终止而被销毁，所使用的系统资源在进程终止时被释放或关闭。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/15/计算机基础知识（二）：单核处理器、多核处理器、多处理器与多线程编程/#more" rel="contents">
@@ -1480,21 +1426,11 @@ MB/s：速度单位，其中的 B 是指“Byte（字节）
 
       
         
-          
-          最近想爬取一些音乐来实战一下，选择了qq音乐。
-qq音乐明显的就是一个动态网页，所以需要抓包了。
-
-不懂的关键词可利用好搜索引擎。
-
-分析过程在此就说说分析的大致过程吧。
-先看看主页：
-
-我们随便点开一个主题列表：
-
-因为是动态网页，所以就在这里抓包吧，因为qq音乐是动态网页，需要相关的参数信息才能得到想要的音乐地址，随便以播放一首歌曲为例，如下图1中的歌曲ID，点进去这个看看，即点击播放按钮，发现来到了播放页面，打开我用的Chrome中的开发者工具，里面有我们想要的音乐地址（如下图2所示），图3展示得到列表歌曲的所有信息，需要编程清洗之后才能得到我们想要，在此会在下面的代码中标明。
-
-图1:
-          ...
+          <p>最近想爬取一些音乐来实战一下，选择了<em>qq音乐</em>。</p>
+<p><em>qq音乐</em>明显的就是一个动态网页，所以需要抓包了。</p>
+<blockquote>
+<p>不懂的关键词可利用好搜索引擎。</p>
+</blockquote>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/14/用python3爬取QQ音乐列表音乐/#more" rel="contents">
@@ -1689,34 +1625,7 @@ qq音乐明显的就是一个动态网页，所以需要抓包了。
 
       
         
-          
-          位于新加坡的联合早报是我几乎每天都会看的新闻网址，标题清晰明了，思路严谨踏实，是个好的新闻网站，值得推荐。不过却是被墙了…
-今天看了这一篇文章：女记者提问冗长 人民大会堂部长通道出现“飙戏”一幕
-
-非常有意思，想收藏其中的视频，于是想到了用python爬取好了。
-
-这个新闻网站明显是一个动态网站啊，两种方式：
-
-第一种：通过抓包，如下可得知相关的video信息
-
-
-
-第二种：网站自带的连接
-
-如下操作，点击视频中share，可发现资源地址
-
-
-右上角的share。
-
-其中有地址信息。
-
-在获取的地址前加上http:简单测试一下:
-
-
-是正确的，网站真的很贴心呢～
-
-以刚刚的地址输入爬取下来的代
-          ...
+          <p>位于新加坡的<a href="http://www.zaobao.com" target="_blank" rel="external">联合早报</a>是我几乎每天都会看的新闻网址，标题清晰明了，思路严谨踏实，是个好的新闻网站，值得推荐。不过却是被墙了…</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/14/用python3爬取新加坡联合早报新闻小视频/#more" rel="contents">
@@ -1911,25 +1820,10 @@ qq音乐明显的就是一个动态网页，所以需要抓包了。
 
       
         
-          
-          爬取的URL地址:https://unsplash.com/
-
-这是一个优美图片地址，往下拉就可以出来更多的图片，这显然是一个动态网页呀…
-
-分析关于详细分析以及我的参考可见：http://blog.csdn.net/c406495762/article/details/78123502
-
-因为分析方向一致，我就不在此说了，我跟这位博主的工具有一些出入，实际上用Chrome分析已经足够了。
-
-##代码
-这是我后来自己写的代码，比上面博主的简短一些，亦可参考参考。
-&apos;&apos;&apos;
-    函数目标：
-    爬取动态网页的图片
-
-&apos;&apos;&apos;
-
-im
-          ...
+          <p>爬取的<em>URL地址</em>:<a href="https://unsplash.com/" target="_blank" rel="external">https://unsplash.com/</a></p>
+<blockquote>
+<p>这是一个优美图片地址，往下拉就可以出来更多的图片，这显然是一个动态网页呀…</p>
+</blockquote>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/12/python3爬取动态网页图片/#more" rel="contents">
@@ -2124,20 +2018,9 @@ im
 
       
         
-          
-          
-有时在爬取的过程中很慢，以至于没有什么反应，第一应当先检查网络连接的情况，网络带宽突然变得很慢亦是一个问题，遇到了好几次，以为程序出了问题，不想却是网络带宽问题…
-
-
-在爬取动态网页中，学会利用抓包进行解决，分析每一个点以及对可以达到目的的每一点进行抓包分析，挖掘其中的信息。另外，在爬取网页信息中，有一些反爬虫的或者是必须加入一些参数代理才可得到需要的信息等，俊需要一个点一个步骤的去分析。
-
-
-在爬取网页的过程中，编写代码时，检查代码的函数方法的准确性，少一个‘s’与多一个‘s’，都是让人头疼的问题。
-
-在编写代码的过程中，追求最好的解决方案，习惯于用面向对象来编写代码，便于以后的学习。
-
-
-          ...
+          <ul>
+<li>有时在爬取的过程中很慢，以至于没有什么反应，第一应当先检查网络连接的情况，网络带宽突然变得很慢亦是一个问题，遇到了好几次，以为程序出了问题，不想却是网络带宽问题…</li>
+</ul>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/12/学习python3网络爬虫的总结/#more" rel="contents">
@@ -2332,14 +2215,11 @@ im
 
       
         
-          
-          今早触摸板的三指点击功能不灵了，有点急…
-解决：重启。
-
-一般电脑上的小问题重启之后可能就会得到解决了。
-
-
-          
+          <p>今早<em>触摸板</em>的<em>三指点击</em>功能不灵了，有点急…</p>
+<p>解决：<strong>重启。</strong></p>
+<blockquote>
+<p>一般电脑上的小问题重启之后可能就会得到解决了。</p>
+</blockquote>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/12/Mac触摸板小问题记录/#more" rel="contents">
