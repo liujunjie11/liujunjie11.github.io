@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-10-12T01:38:32.262Z</updated>
+  <updated>2018-10-12T07:06:50.077Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo博客绑定独立域名以及转移云服务器</title>
+    <link href="https://liujunjie11.github.io/2018/10/12/Hexo%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E7%8B%AC%E7%AB%8B%E5%9F%9F%E5%90%8D%E4%BB%A5%E5%8F%8A%E8%BD%AC%E7%A7%BB%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <id>https://liujunjie11.github.io/2018/10/12/Hexo博客绑定独立域名以及转移云服务器/</id>
+    <published>2018-10-12T06:41:54.000Z</published>
+    <updated>2018-10-12T07:06:50.077Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近对我的博客进行了一系列大换血，以前的样子太难看了，而且速度也一直不怎么满意，这次想好好的修改一下，其中包括了买了个域名，转移到了云服务器上运行。</p><p>当然在昨天开始就开始折腾了，所以把所有想要记录的都在此记录一下。</p><a id="more"></a><h1 id="大换血修改设置"><a href="#大换血修改设置" class="headerlink" title="大换血修改设置"></a>大换血修改设置</h1><p>关于这个我就贴上相关的链接好了，毕竟重复造轮子不是我的初衷。</p><p>一些对我有帮助的链接，谢谢分享的网友们：</p><ul><li><p><a href="https://asdfv1929.github.io/2018/01/21/daovoice/" target="_blank" rel="external">Hexo NexT主题内接入网页在线联系功能</a></p></li><li><p><a href="https://blog.csdn.net/qq_33699981/article/details/72716951" target="_blank" rel="external">hexo的next主题个性化教程：打造炫酷网站</a></p></li><li><p><a href="http://blog.sciencenet.cn/blog-3247241-1139774.html" target="_blank" rel="external">hexo博客解决不蒜子统计无法显示问题</a></p></li><li><p><a href="http://zouzls.github.io/2017/03/17/Next主题背景个性化DIY/" target="_blank" rel="external">Next主题背景个性化DIY</a></p></li><li><p><a href="https://www.jianshu.com/p/b20fc983005f" target="_blank" rel="external">Hexo设置主题以及Next主题个性设置</a></p></li><li><p><a href="http://leozzy.com/2017/09/08/hexo-sidebar-auto/" target="_blank" rel="external">2017版 Hexo Next主题侧边栏 Sidebar 配置自动展开教程</a></p></li><li><p><a href="https://ohmyarch.github.io/2014/12/24/Hexo主页显示摘要/" target="_blank" rel="external">Hexo主页显示摘要</a></p></li><li><p><a href="https://segmentfault.com/q/1010000004840061/a-1020000004895286" target="_blank" rel="external">hexo next主题如何在首页摘要里显示文章图片？</a></p></li></ul><blockquote><p>以上就不在写明作者了，都是一些比较有帮助的文章。</p></blockquote><p>在此简单说明一下关于我在<code>next</code>主题设置头像的问题，其实在主页的<code>_config.yml</code>设置一下就可以得出头像了，如下图，我将图片发在七牛云上，将外链拿到这里存放就好了。</p><p><img src="" alt=""></p><hr><h1 id="关于hexo博客绑定域名"><a href="#关于hexo博客绑定域名" class="headerlink" title="关于hexo博客绑定域名"></a>关于hexo博客绑定域名</h1><p>关于这个事我简单说一下好了，先放有用的链接，再稍微补充一下。</p><ul><li><p><a href="http://fengdaoting.com/2017/11/12/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E7%BB%91%E5%AE%9AGithub%E4%B8%8A%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%88%B0Godaddy%E5%9F%9F%E5%90%8D/" target="_blank" rel="external">绑定Github上的个人博客到Godaddy域名</a></p></li><li><p><a href="http://hushiyu1995.com/2017/10/01/build-web-1/index.html" target="_blank" rel="external">Github Page + Hexo + Godaddy 搭建一个个性域名的博客网站</a></p></li><li><p><a href="https://www.jianshu.com/p/6a3ee5b5abfd" target="_blank" rel="external">基于github和hexo搭建博客—-绑定个人域名</a></p></li><li><p><a href="https://www.dute.me/godaddy-alipay.html" target="_blank" rel="external">GoDaddy不支持支付宝的解决办法</a></p></li><li><p><a href="https://www.dute.me/" target="_blank" rel="external">GoDaddy优惠码</a></p></li></ul><h2 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h2><h3 id="关于查找GitHub-pages的ip"><a href="#关于查找GitHub-pages的ip" class="headerlink" title="关于查找GitHub pages的ip"></a>关于查找GitHub pages的ip</h3><p>两种方法：</p><p>第一种：</p><blockquote><p><code>ping liujunjie11.github.io</code> ping值得目录地址</p></blockquote><p>如图：</p><p><img src="" alt=""></p><p>第二种：</p><p>打开网站<a href="https://help.github.com/articles/troubleshooting-custom-domains/，拉到下面查看相关的IP，如图：" target="_blank" rel="external">https://help.github.com/articles/troubleshooting-custom-domains/，拉到下面查看相关的IP，如图：</a></p><p><img src="" alt=""></p><h3 id="建立CNAME文件的存放目录"><a href="#建立CNAME文件的存放目录" class="headerlink" title="建立CNAME文件的存放目录"></a>建立CNAME文件的存放目录</h3><p>是要放在Hexo项目的sources目录下的，我为了保险在next的sources目录下也放了一份。</p><p>补充的就这么点了。</p><h1 id="Hexo转移到云服务器"><a href="#Hexo转移到云服务器" class="headerlink" title="Hexo转移到云服务器"></a>Hexo转移到云服务器</h1>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近对我的博客进行了一系列大换血，以前的样子太难看了，而且速度也一直不怎么满意，这次想好好的修改一下，其中包括了买了个域名，转移到了云服务器上运行。&lt;/p&gt;
+&lt;p&gt;当然在昨天开始就开始折腾了，所以把所有想要记录的都在此记录一下。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Heox博客" scheme="https://liujunjie11.github.io/categories/Heox%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="Heox博客" scheme="https://liujunjie11.github.io/tags/Heox%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>关于错误ERROR Asset render failed: css/main.css</title>
@@ -105,9 +128,9 @@ failed to locate @import file _variables/base.styl
     <link href="https://liujunjie11.github.io/2018/09/28/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%EF%BC%8C%E8%87%AA%E5%BB%BAVPS-SS%E5%BA%94%E7%94%A8/"/>
     <id>https://liujunjie11.github.io/2018/09/28/科学上网，自建VPS-SS应用/</id>
     <published>2018-09-28T14:15:07.000Z</published>
-    <updated>2018-10-11T12:49:05.819Z</updated>
+    <updated>2018-10-12T07:27:38.026Z</updated>
     
-    <content type="html"><![CDATA[<p>最近因为需求想自己搭建一个VPS加SS应用。用的是<a href="https://www.vultr.com/?ref=7548655" target="_blank" rel="external">Vultr</a>这个平台。</p><p>唉…这东西的教程已经是满大街都是了，我就不重复造轮子了，现在的轮子还没有失效。</p><a id="more"></a><p>具体的服务器租建过程可参考：</p><ul><li><p><a href="https://github.com/Alvin9999/new-pac/wiki/自建ss服务器教程" target="_blank" rel="external">自建ss服务器教程</a></p></li><li><p><a href="https://medium.com/@zoomyale/科学上网的终极姿势-在-vultr-vps-上搭建-shadowsocks-fd57c807d97e" target="_blank" rel="external">科学上网的终极姿势-在-vultr-vps-上搭建</a></p></li><li><p><a href="http://mpc2008cn.github.io/2015/10/22/vps/" target="_blank" rel="external">Vultr的vps搭建shadowsocks翻墙</a></p></li><li><p><a href="https://segmentfault.com/a/1190000015558387" target="_blank" rel="external">超详细 Vultr（VPS）搭建 SS / 新手图文指导教程</a></p></li></ul><p>关于在<em>TCP Fast Open</em>过程中命令行增加的一些补充(我自己加上的)：</p><blockquote><p>每一次的…ipv4…之外我都加上了…ipv6…的一样的命令行。</p><p>如：<code>echo 3 &gt; /proc/sys/net/ipv4/tcp_fastopen</code><br>另外加上了：<code>echo 3 &gt; /proc/sys/net/ipv6/tcp_fastopen</code></p><p>如：<code>net.ipv4.tcp_fastopen = 3</code><br>另外加上了：<code>net.ipv6.tcp_fastopen = 3</code></p></blockquote><p>…</p><p><strong>其中注意的细节是：</strong></p><ol><li><p><strong>开通服务器时，当出现了ip，不要立马去ping或者用xshell去连接，再等5分钟之后，有个缓冲时间。</strong></p></li><li><p><strong>注意加密算法的对齐填写。</strong></p></li><li><p>后续补充…</p></li></ol><p>简单说说体验吧，用的是在日本的服务器，经过上面的参考之后，换了好几台服务器才有了现在的暂时稳定…另外要补充一下：如果在使用命令行<code>ssh root@&lt;ip&gt;</code>不通时(即没有提示要求输入密码登陆的出现的其他情况，比如超时)，直接重新另外开一台就是了，不用再花多余的时间去测试了。</p><p>我一共换了好几台才有3台是可以用的…心累…可能是我太急了？？有可能。</p><p><strong>补充：目前上YouTube测试最高连接可以达到25M/s…超级快的哈哈哈哈～～估计还可以上升～～～美滋滋～～</strong></p>]]></content>
+    <content type="html"><![CDATA[<p>最近因为需求想自己搭建一个VPS加SS应用。用的是<a href="https://www.vultr.com/?ref=7548655" target="_blank" rel="external">Vultr</a>这个平台。</p><p>唉…这东西的教程已经是满大街都是了，我就不重复造轮子了，现在的轮子还没有失效。</p><a id="more"></a><p>具体的服务器租建过程可参考：</p><ul><li><p><a href="https://github.com/Alvin9999/new-pac/wiki/自建ss服务器教程" target="_blank" rel="external">自建ss服务器教程</a></p></li><li><p><a href="https://medium.com/@zoomyale/科学上网的终极姿势-在-vultr-vps-上搭建-shadowsocks-fd57c807d97e" target="_blank" rel="external">科学上网的终极姿势-在-vultr-vps-上搭建</a></p></li><li><p><a href="http://mpc2008cn.github.io/2015/10/22/vps/" target="_blank" rel="external">Vultr的vps搭建shadowsocks翻墙</a></p></li><li><p><a href="https://segmentfault.com/a/1190000015558387" target="_blank" rel="external">超详细 Vultr（VPS）搭建 SS / 新手图文指导教程</a></p></li><li><p><a href="https://blog.whsir.com/post-1045.html" target="_blank" rel="external">如何查看修改ss服务器的端口密码</a></p></li></ul><p>关于在<em>TCP Fast Open</em>过程中命令行增加的一些补充(我自己加上的)：</p><blockquote><p>每一次的…ipv4…之外我都加上了…ipv6…的一样的命令行。</p><p>如：<code>echo 3 &gt; /proc/sys/net/ipv4/tcp_fastopen</code><br>另外加上了：<code>echo 3 &gt; /proc/sys/net/ipv6/tcp_fastopen</code></p><p>如：<code>net.ipv4.tcp_fastopen = 3</code><br>另外加上了：<code>net.ipv6.tcp_fastopen = 3</code></p></blockquote><p>…</p><p><strong>其中注意的细节是：</strong></p><ol><li><p><strong>开通服务器时，当出现了ip，不要立马去ping或者用xshell去连接，再等5分钟之后，有个缓冲时间。</strong></p></li><li><p><strong>注意加密算法的对齐填写。</strong></p></li><li><p>后续补充…</p></li></ol><p>简单说说体验吧，用的是在日本的服务器，经过上面的参考之后，换了好几台服务器才有了现在的暂时稳定…另外要补充一下：如果在使用命令行<code>ssh root@&lt;ip&gt;</code>不通时(即没有提示要求输入密码登陆的出现的其他情况，比如超时)，直接重新另外开一台就是了，不用再花多余的时间去测试了。</p><p>我一共换了好几台才有3台是可以用的…心累…可能是我太急了？？有可能。</p><p><strong>补充：目前上YouTube测试最高连接可以达到25M/s…超级快的哈哈哈哈～～估计还可以上升～～～美滋滋～～</strong></p>]]></content>
     
     <summary type="html">
     
@@ -480,28 +503,6 @@ failed to locate @import file _variables/base.styl
     
     
       <category term="成长" scheme="https://liujunjie11.github.io/tags/%E6%88%90%E9%95%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用PS软件的记录</title>
-    <link href="https://liujunjie11.github.io/2018/07/18/%E4%BD%BF%E7%94%A8PS%E8%BD%AF%E4%BB%B6%E7%9A%84%E8%AE%B0%E5%BD%95/"/>
-    <id>https://liujunjie11.github.io/2018/07/18/使用PS软件的记录/</id>
-    <published>2018-07-18T12:45:33.000Z</published>
-    <updated>2018-10-11T13:06:33.836Z</updated>
-    
-    <content type="html"><![CDATA[<p>此文是关于<em>PS软件</em>的使用记录，因为使用的不多，但是是经常需要用到的一些小技巧，记录在此，以便日后查看。不定时更新。</p><a id="more"></a><h1 id="图片合并"><a href="#图片合并" class="headerlink" title="图片合并"></a>图片合并</h1><p><em>1，</em>在软件中新建一个默认的空白层，将需要合并的图片一并拖入其中，排版调整好，保存退出，即可完成合并任务。</p><h1 id="去水印"><a href="#去水印" class="headerlink" title="去水印"></a>去水印</h1><blockquote><p><strong>大小水印均可去除使用。</strong></p></blockquote><p><em>1，</em><a href="https://jingyan.baidu.com/article/4ae03de3e41dd33eff9e6bb9.html" target="_blank" rel="external">https://jingyan.baidu.com/article/4ae03de3e41dd33eff9e6bb9.html</a></p><blockquote><p>看其中教程视频的第一个方法即可完成任务。</p></blockquote><p><em>2，</em><a href="https://jingyan.baidu.com/article/a24b33cd2361e819fe002bed.html" target="_blank" rel="external">https://jingyan.baidu.com/article/a24b33cd2361e819fe002bed.html</a></p><blockquote><p>不稳定方法。</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;此文是关于&lt;em&gt;PS软件&lt;/em&gt;的使用记录，因为使用的不多，但是是经常需要用到的一些小技巧，记录在此，以便日后查看。不定时更新。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="软件使用" scheme="https://liujunjie11.github.io/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
-    
-    
-      <category term="软件使用" scheme="https://liujunjie11.github.io/tags/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
     
   </entry>
   

@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Hexo博客绑定独立域名以及转移云服务器]]></title>
+    <url>%2F2018%2F10%2F12%2FHexo%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E7%8B%AC%E7%AB%8B%E5%9F%9F%E5%90%8D%E4%BB%A5%E5%8F%8A%E8%BD%AC%E7%A7%BB%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%2F</url>
+    <content type="text"><![CDATA[最近对我的博客进行了一系列大换血，以前的样子太难看了，而且速度也一直不怎么满意，这次想好好的修改一下，其中包括了买了个域名，转移到了云服务器上运行。 当然在昨天开始就开始折腾了，所以把所有想要记录的都在此记录一下。 大换血修改设置关于这个我就贴上相关的链接好了，毕竟重复造轮子不是我的初衷。 一些对我有帮助的链接，谢谢分享的网友们： Hexo NexT主题内接入网页在线联系功能 hexo的next主题个性化教程：打造炫酷网站 hexo博客解决不蒜子统计无法显示问题 Next主题背景个性化DIY Hexo设置主题以及Next主题个性设置 2017版 Hexo Next主题侧边栏 Sidebar 配置自动展开教程 Hexo主页显示摘要 hexo next主题如何在首页摘要里显示文章图片？ 以上就不在写明作者了，都是一些比较有帮助的文章。 在此简单说明一下关于我在next主题设置头像的问题，其实在主页的_config.yml设置一下就可以得出头像了，如下图，我将图片发在七牛云上，将外链拿到这里存放就好了。 关于hexo博客绑定域名关于这个事我简单说一下好了，先放有用的链接，再稍微补充一下。 绑定Github上的个人博客到Godaddy域名 Github Page + Hexo + Godaddy 搭建一个个性域名的博客网站 基于github和hexo搭建博客—-绑定个人域名 GoDaddy不支持支付宝的解决办法 GoDaddy优惠码 补充说明关于查找GitHub pages的ip两种方法： 第一种： ping liujunjie11.github.io ping值得目录地址 如图： 第二种： 打开网站https://help.github.com/articles/troubleshooting-custom-domains/，拉到下面查看相关的IP，如图： 建立CNAME文件的存放目录是要放在Hexo项目的sources目录下的，我为了保险在next的sources目录下也放了一份。 补充的就这么点了。 Hexo转移到云服务器]]></content>
+      <categories>
+        <category>Heox博客</category>
+      </categories>
+      <tags>
+        <tag>Heox博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于错误ERROR Asset render failed: css/main.css]]></title>
     <url>%2F2018%2F10%2F11%2F%E5%85%B3%E4%BA%8E%E9%94%99%E8%AF%AFERROR-Asset-render-failed-css-main-css%2F</url>
     <content type="text"><![CDATA[在修改一些字体的时候使用hexo s/hexo s -debug时出现了以下错误： ERROR Asset render failed: css/main.css Error: /Users/junjieliu/liujunjie11.github.io/themes/next/source/css/main.styl:14:27 10| 11| // Variables Layer 12| // -------------------------------------------------- 13| for $variable in $variables 14| @import &quot;_variables/&quot; + $variable; ---------------------------------^ 15| 16| 17| // Mixins Layer failed to locate @import file _variables/base.styl 如图： 解决方案有个文件在我修改了一个字体参数之后出现了(如图)。还好我记得前面打开目录时是没有这个文件存在的，之后我把它删除再使用上面的命令就没有再报错了。 这个文件估计是在第一次修改相关文件的参数时才会出现，删除之后就能恢复正常了。 更新在删除之后发现问题还是解决不了，折腾了一下，去文件所指的目录地址去看了一下，发现了以下问题(如图)： 在此处的文件名自己发生了改变了，而且不知为何当初自己进了垃圾桶…把名字改回来base.styl之后再使用命令就没有再出现以上错误了。 以下是这次错误相关的文件目录：]]></content>
@@ -36,7 +47,7 @@
   <entry>
     <title><![CDATA[科学上网，自建VPS-SS应用]]></title>
     <url>%2F2018%2F09%2F28%2F%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%EF%BC%8C%E8%87%AA%E5%BB%BAVPS-SS%E5%BA%94%E7%94%A8%2F</url>
-    <content type="text"><![CDATA[最近因为需求想自己搭建一个VPS加SS应用。用的是Vultr这个平台。 唉…这东西的教程已经是满大街都是了，我就不重复造轮子了，现在的轮子还没有失效。 具体的服务器租建过程可参考： 自建ss服务器教程 科学上网的终极姿势-在-vultr-vps-上搭建 Vultr的vps搭建shadowsocks翻墙 超详细 Vultr（VPS）搭建 SS / 新手图文指导教程 关于在TCP Fast Open过程中命令行增加的一些补充(我自己加上的)： 每一次的…ipv4…之外我都加上了…ipv6…的一样的命令行。 如：echo 3 &gt; /proc/sys/net/ipv4/tcp_fastopen另外加上了：echo 3 &gt; /proc/sys/net/ipv6/tcp_fastopen 如：net.ipv4.tcp_fastopen = 3另外加上了：net.ipv6.tcp_fastopen = 3 … 其中注意的细节是： 开通服务器时，当出现了ip，不要立马去ping或者用xshell去连接，再等5分钟之后，有个缓冲时间。 注意加密算法的对齐填写。 后续补充… 简单说说体验吧，用的是在日本的服务器，经过上面的参考之后，换了好几台服务器才有了现在的暂时稳定…另外要补充一下：如果在使用命令行ssh root@&lt;ip&gt;不通时(即没有提示要求输入密码登陆的出现的其他情况，比如超时)，直接重新另外开一台就是了，不用再花多余的时间去测试了。 我一共换了好几台才有3台是可以用的…心累…可能是我太急了？？有可能。 补充：目前上YouTube测试最高连接可以达到25M/s…超级快的哈哈哈哈～～估计还可以上升～～～美滋滋～～]]></content>
+    <content type="text"><![CDATA[最近因为需求想自己搭建一个VPS加SS应用。用的是Vultr这个平台。 唉…这东西的教程已经是满大街都是了，我就不重复造轮子了，现在的轮子还没有失效。 具体的服务器租建过程可参考： 自建ss服务器教程 科学上网的终极姿势-在-vultr-vps-上搭建 Vultr的vps搭建shadowsocks翻墙 超详细 Vultr（VPS）搭建 SS / 新手图文指导教程 如何查看修改ss服务器的端口密码 关于在TCP Fast Open过程中命令行增加的一些补充(我自己加上的)： 每一次的…ipv4…之外我都加上了…ipv6…的一样的命令行。 如：echo 3 &gt; /proc/sys/net/ipv4/tcp_fastopen另外加上了：echo 3 &gt; /proc/sys/net/ipv6/tcp_fastopen 如：net.ipv4.tcp_fastopen = 3另外加上了：net.ipv6.tcp_fastopen = 3 … 其中注意的细节是： 开通服务器时，当出现了ip，不要立马去ping或者用xshell去连接，再等5分钟之后，有个缓冲时间。 注意加密算法的对齐填写。 后续补充… 简单说说体验吧，用的是在日本的服务器，经过上面的参考之后，换了好几台服务器才有了现在的暂时稳定…另外要补充一下：如果在使用命令行ssh root@&lt;ip&gt;不通时(即没有提示要求输入密码登陆的出现的其他情况，比如超时)，直接重新另外开一台就是了，不用再花多余的时间去测试了。 我一共换了好几台才有3台是可以用的…心累…可能是我太急了？？有可能。 补充：目前上YouTube测试最高连接可以达到25M/s…超级快的哈哈哈哈～～估计还可以上升～～～美滋滋～～]]></content>
       <categories>
         <category>科学上网</category>
       </categories>
