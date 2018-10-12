@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-10-11T12:48:40.696Z</updated>
+  <updated>2018-10-12T01:38:32.262Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://liujunjie11.github.io/2018/10/11/%E5%85%B3%E4%BA%8E%E9%94%99%E8%AF%AFERROR-Asset-render-failed-css-main-css/"/>
     <id>https://liujunjie11.github.io/2018/10/11/关于错误ERROR-Asset-render-failed-css-main-css/</id>
     <published>2018-10-11T11:54:03.000Z</published>
-    <updated>2018-10-11T12:48:40.696Z</updated>
+    <updated>2018-10-12T01:38:32.262Z</updated>
     
-    <content type="html"><![CDATA[<p>在修改一些字体的时候使用<code>hexo s</code>/<code>hexo s -debug</code>时出现了以下错误：</p><pre><code>ERROR Asset render failed: css/main.cssError: /Users/junjieliu/liujunjie11.github.io/themes/next/source/css/main.styl:14:27   10|    11| // Variables Layer   12| // --------------------------------------------------   13| for $variable in $variables   14|   @import &quot;_variables/&quot; + $variable;---------------------------------^   15|    16|    17| // Mixins Layerfailed to locate @import file _variables/base.styl</code></pre><a id="more"></a><p>如图：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-11%20%E4%B8%8B%E5%8D%887.48.37.png" alt=""></p><h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>有个文件在我修改了一个字体参数之后出现了(如图)。还好我记得前面打开目录时是没有这个文件存在的，之后我把它删除再使用上面的命令就没有再报错了。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-11%20%E4%B8%8B%E5%8D%887.47.24.png" alt=""></p><blockquote><p>这个文件估计是在第一次修改相关文件的参数时才会出现，删除之后就能恢复正常了。</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p>在修改一些字体的时候使用<code>hexo s</code>/<code>hexo s -debug</code>时出现了以下错误：</p><pre><code>ERROR Asset render failed: css/main.cssError: /Users/junjieliu/liujunjie11.github.io/themes/next/source/css/main.styl:14:27   10|    11| // Variables Layer   12| // --------------------------------------------------   13| for $variable in $variables   14|   @import &quot;_variables/&quot; + $variable;---------------------------------^   15|    16|    17| // Mixins Layerfailed to locate @import file _variables/base.styl</code></pre><a id="more"></a><p>如图：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-11%20%E4%B8%8B%E5%8D%887.48.37.png" alt=""></p><h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>有个文件在我修改了一个字体参数之后出现了(如图)。还好我记得前面打开目录时是没有这个文件存在的，之后我把它删除再使用上面的命令就没有再报错了。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-11%20%E4%B8%8B%E5%8D%887.47.24.png" alt=""></p><blockquote><p>这个文件估计是在第一次修改相关文件的参数时才会出现，删除之后就能恢复正常了。</p></blockquote><h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><p>在删除之后发现问题还是解决不了，折腾了一下，去文件所指的目录地址去看了一下，发现了以下问题(如图)：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-12%20%E4%B8%8A%E5%8D%889.31.21.png" alt=""></p><blockquote><p>在此处的文件名自己发生了改变了，而且不知为何当初自己进了垃圾桶…把名字改回来<code>base.styl</code>之后再使用命令就没有再出现以上错误了。</p></blockquote><p>以下是这次错误相关的文件目录：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-12%20%E4%B8%8A%E5%8D%889.32.59.png" alt=""></p>]]></content>
     
     <summary type="html">
     

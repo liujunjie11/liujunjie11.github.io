@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[关于错误ERROR Asset render failed: css/main.css]]></title>
     <url>%2F2018%2F10%2F11%2F%E5%85%B3%E4%BA%8E%E9%94%99%E8%AF%AFERROR-Asset-render-failed-css-main-css%2F</url>
-    <content type="text"><![CDATA[在修改一些字体的时候使用hexo s/hexo s -debug时出现了以下错误： ERROR Asset render failed: css/main.css Error: /Users/junjieliu/liujunjie11.github.io/themes/next/source/css/main.styl:14:27 10| 11| // Variables Layer 12| // -------------------------------------------------- 13| for $variable in $variables 14| @import &quot;_variables/&quot; + $variable; ---------------------------------^ 15| 16| 17| // Mixins Layer failed to locate @import file _variables/base.styl 如图： 解决方案有个文件在我修改了一个字体参数之后出现了(如图)。还好我记得前面打开目录时是没有这个文件存在的，之后我把它删除再使用上面的命令就没有再报错了。 这个文件估计是在第一次修改相关文件的参数时才会出现，删除之后就能恢复正常了。]]></content>
+    <content type="text"><![CDATA[在修改一些字体的时候使用hexo s/hexo s -debug时出现了以下错误： ERROR Asset render failed: css/main.css Error: /Users/junjieliu/liujunjie11.github.io/themes/next/source/css/main.styl:14:27 10| 11| // Variables Layer 12| // -------------------------------------------------- 13| for $variable in $variables 14| @import &quot;_variables/&quot; + $variable; ---------------------------------^ 15| 16| 17| // Mixins Layer failed to locate @import file _variables/base.styl 如图： 解决方案有个文件在我修改了一个字体参数之后出现了(如图)。还好我记得前面打开目录时是没有这个文件存在的，之后我把它删除再使用上面的命令就没有再报错了。 这个文件估计是在第一次修改相关文件的参数时才会出现，删除之后就能恢复正常了。 更新在删除之后发现问题还是解决不了，折腾了一下，去文件所指的目录地址去看了一下，发现了以下问题(如图)： 在此处的文件名自己发生了改变了，而且不知为何当初自己进了垃圾桶…把名字改回来base.styl之后再使用命令就没有再出现以上错误了。 以下是这次错误相关的文件目录：]]></content>
       <categories>
         <category>Hexo博客</category>
       </categories>
