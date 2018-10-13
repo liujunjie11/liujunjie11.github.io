@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[吾道]]></title>
+    <url>%2F2018%2F10%2F13%2F%E5%90%BE%E9%81%93%2F</url>
+    <content type="text"><![CDATA[道非道，自成道。 吾道，非常言道，非万物道，吾道属吾道。 吾道，在吾一念之间，可从无，可从有。 吾道，吾道，还在继往开来之时。 吾道，与时无关，与实无关，可有可无。 吾道，贪恋未来，不念过往。 吾道之成，在终了之时。]]></content>
+      <categories>
+        <category>何为吾道</category>
+      </categories>
+      <tags>
+        <tag>何为吾道</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hexo博客绑定独立域名以及转移云服务器]]></title>
     <url>%2F2018%2F10%2F12%2FHexo%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E7%8B%AC%E7%AB%8B%E5%9F%9F%E5%90%8D%E4%BB%A5%E5%8F%8A%E8%BD%AC%E7%A7%BB%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%2F</url>
     <content type="text"><![CDATA[最近对我的博客进行了一系列大换血，以前的样子太难看了，而且速度也一直不怎么满意，这次想好好的修改一下，其中包括了买了个域名，转移到了云服务器上运行。 当然在昨天开始就开始折腾了，所以把所有想要记录的都在此记录一下。 大换血修改设置关于这个我就贴上相关的链接好了，毕竟重复造轮子不是我的初衷。 一些对我有帮助的链接，谢谢分享的网友们： Hexo NexT主题内接入网页在线联系功能 hexo的next主题个性化教程：打造炫酷网站 hexo博客解决不蒜子统计无法显示问题 Next主题背景个性化DIY Hexo设置主题以及Next主题个性设置 2017版 Hexo Next主题侧边栏 Sidebar 配置自动展开教程 Hexo主页显示摘要 hexo next主题如何在首页摘要里显示文章图片？ 以上就不在写明作者了，都是一些比较有帮助的文章。 在此简单说明一下关于我在next主题设置头像的问题，其实在主页的_config.yml设置一下就可以得出头像了，如下图，我将图片发在七牛云上，将外链拿到这里存放就好了。 关于hexo博客绑定域名关于这个事我简单说一下好了，先放有用的链接，再稍微补充一下。 绑定Github上的个人博客到Godaddy域名 Github Page + Hexo + Godaddy 搭建一个个性域名的博客网站 基于github和hexo搭建博客—-绑定个人域名 GoDaddy不支持支付宝的解决办法 GoDaddy优惠码 补充说明关于查找GitHub pages的ip两种方法： 第一种： ping liujunjie11.github.io ping自己的博客目录地址 如图： 第二种： 打开网站https://help.github.com/articles/troubleshooting-custom-domains/，拉到下面查看相关的IP，如图： 建立CNAME文件的存放目录是要放在Hexo项目的sources目录下的，我为了保险在next的sources目录下也放了一份。 补充的就这么点了。 Hexo转移到云服务器这地方因为不怎么懂而且自身能力也不够，所以遇到了很多的坑，唉，有些人可能自己都搞不清楚就写文章了，搞完所有流程又不对…真的是无力吐槽了，花费了那么多精力。现在还没搞好，到时候补上需要说明的。 因为GitHub允许每个仓库在1GB左右的空间，而我现在寄托在GitHub的博客大小才130M…so,我现在不打算转移到云服务器了，到时候再说吧。 GitHub的仓库内存说明：https://help.github.com/articles/what-is-my-disk-quota/ 贴上参考过的链接： 阿里云VPS搭建自己的的Hexo博客 VPS服务器搭建Hexo博客教程 利用云服务器搭架Hexo个人博客 HEXO 部署到云服务器详细指南 也就是在云服务器上建好一些需要的软件，然后就像使用命令hexo g -d一样上传GitHub一样，并不需要重新开始所有。]]></content>
