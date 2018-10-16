@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-10-15T13:17:01.567Z</updated>
+  <updated>2018-10-16T02:54:38.932Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac上下载xgboost</title>
+    <link href="https://liujunjie11.github.io/2018/10/15/Mac%E4%B8%8A%E4%B8%8B%E8%BD%BDxgboost/"/>
+    <id>https://liujunjie11.github.io/2018/10/15/Mac上下载xgboost/</id>
+    <published>2018-10-15T14:01:48.000Z</published>
+    <updated>2018-10-16T02:54:38.932Z</updated>
+    
+    <content type="html"><![CDATA[<p>这会有事了，感觉有必要记录一下。</p><p>最近想搞搞<em>kaggle</em>的入门级比赛，参考他人的<em>kernel</em>用到了<em>xgboost</em>，但是安装时遇到了一些坑，特别是<a href="https://xgboost.readthedocs.io/en/latest/build.html" target="_blank" rel="external">官网的安装教程</a>…真的让人吐血，根本不能解决我要安装的欲望。以下是我参考了一些文章并且成功安装的经验记录</p><a id="more"></a><h1 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h1><p>先用homebrew下载相关的依赖：</p><pre><code>brew install gcc --without-multilib</code></pre><blockquote><p>加上<code>--without-multilib</code>目的是开启默认不开启支持多线程的插件。</p></blockquote><p>然后git下载在GitHub上的xgboost：</p><pre><code>git clone --recursive https://github.com/dmlc/xgboost</code></pre><blockquote><p>最好下载在根目录。</p></blockquote><p>下载完成之后：</p><pre><code>cd xgboost</code></pre><p>修改相关的配置文件：</p><pre><code>vi config.mk</code></pre><blockquote><p>实际上这个文件有好多个，我最终都修改成一致的了…如下图</p></blockquote><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-16%20%E4%B8%8A%E5%8D%8810.25.58.png" alt=""></p><p>修改内容为，改成用homebrew下载的gcc版本目录地址：</p><pre><code>export CC = /usr/local/Cellar/gcc/8.2.0/bin/gcc-8export CXX = /usr/local/Cellar/gcc/8.2.0/bin/g++-8export MPICXX = /usr/local/Cellar/gcc/8.2.0/bin/mpicxx</code></pre><p>如图：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-16%20%E4%B8%8A%E5%8D%8810.27.14.png" alt=""></p><p>之后使用命令行：</p><pre><code>cp make/config.mk ./config.mkmake -j4</code></pre><blockquote><p><code>-j4</code>是开启4个线程的意思。</p></blockquote><p>之后就是编译成包的过程了：</p><pre><code>cd python-packagepython setup.py install</code></pre><blockquote><p>我用的是anaconda的python版本。</p></blockquote><h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><p>如图：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-16%20%E4%B8%8A%E5%8D%8810.31.22.png" alt=""></p><p>这样就大功告成了。</p><h1 id="期间遇到过的问题"><a href="#期间遇到过的问题" class="headerlink" title="期间遇到过的问题"></a>期间遇到过的问题</h1><h2 id="问题一："><a href="#问题一：" class="headerlink" title="问题一："></a>问题一：</h2><pre><code>XGBoostLibraryNotFound: Cannot find XGBoost Libarary in the candidate path, did you install compilers and run build.sh in root path?List of candidates:/home/dmlc/anaconda/lib/python3.6/site-packages/xgboost-0.4-py3.6.egg/xgboost/libxgboostwrapper.so/home/dmlc/anaconda/lib/python3.6/site-packages/xgboost-0.4-py3.6.egg/xgboost/../../wrapper/libxgboostwrapper.so/home/dmlc/anaconda/lib/python3.6/site-packages/xgboost-0.4-py3.6.egg/xgboost/./wrapper/libxgboostwrapper.so</code></pre><p>此类问题，可能是<code>git clone --recursive https://github.com/dmlc/xgboost</code>下载执行未完全。</p><h2 id="问题二"><a href="#问题二" class="headerlink" title="问题二"></a>问题二</h2><p>使用命令行<code>make -j4</code>时出现：</p><pre><code>clang: error: unsupported option &apos;-fopenmp&apos;</code></pre><p>如图：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-16%20%E4%B8%8A%E5%8D%8810.47.57.png" alt=""></p><p>解决方案：</p><pre><code>export CC = /usr/local/Cellar/gcc/8.2.0/bin/gcc-8export CXX = /usr/local/Cellar/gcc/8.2.0/bin/g++-8export MPICXX = /usr/local/Cellar/gcc/8.2.0/bin/mpicxx</code></pre><blockquote><p>这只是未能识别相关插件的问题，修改文件<code>config.mk</code>相关的部分如上即可。</p><p>在此参考了：<a href="https://stackoverflow.com/questions/36211018/clang-error-errorunsupported-option-fopenmp-on-mac-osx-el-capitan-buildin" target="_blank" rel="external">https://stackoverflow.com/questions/36211018/clang-error-errorunsupported-option-fopenmp-on-mac-osx-el-capitan-buildin</a></p></blockquote><h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ul><li><p><a href="https://www.jianshu.com/p/c2b0c3067d84" target="_blank" rel="external">https://www.jianshu.com/p/c2b0c3067d84</a></p></li><li><p><a href="https://www.jianshu.com/p/76ff402a8b58" target="_blank" rel="external">https://www.jianshu.com/p/76ff402a8b58</a></p></li><li><p><a href="https://www.jianshu.com/p/c2b0c3067d84" target="_blank" rel="external">https://www.jianshu.com/p/c2b0c3067d84</a></p></li><li><p><a href="https://zhuanlan.zhihu.com/p/23996104" target="_blank" rel="external">https://zhuanlan.zhihu.com/p/23996104</a></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这会有事了，感觉有必要记录一下。&lt;/p&gt;
+&lt;p&gt;最近想搞搞&lt;em&gt;kaggle&lt;/em&gt;的入门级比赛，参考他人的&lt;em&gt;kernel&lt;/em&gt;用到了&lt;em&gt;xgboost&lt;/em&gt;，但是安装时遇到了一些坑，特别是&lt;a href=&quot;https://xgboost.readthedocs.io/en/latest/build.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官网的安装教程&lt;/a&gt;…真的让人吐血，根本不能解决我要安装的欲望。以下是我参考了一些文章并且成功安装的经验记录&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="机器学习" scheme="https://liujunjie11.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="机器学习" scheme="https://liujunjie11.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>思考意义</title>
@@ -481,29 +504,6 @@ failed to locate @import file _variables/base.styl
     
     
       <category term="python数据分析/挖掘" scheme="https://liujunjie11.github.io/tags/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E6%8C%96%E6%8E%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac下的matploylib绘图中文乱码问题</title>
-    <link href="https://liujunjie11.github.io/2018/08/08/Mac%E4%B8%8B%E7%9A%84matploylib%E7%BB%98%E5%9B%BE%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/"/>
-    <id>https://liujunjie11.github.io/2018/08/08/Mac下的matploylib绘图中文乱码问题/</id>
-    <published>2018-08-08T05:55:24.000Z</published>
-    <updated>2018-10-11T13:06:49.250Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近在接触一些在notebook上用<em>matploylib</em>这个库绘图时出现了中文乱码的问题，就是常见的那种小方块式的中文乱码问题。</p><p>下面简单说说解决方法。</p><a id="more"></a><h2 id="Mac本机上的字体册利用"><a href="#Mac本机上的字体册利用" class="headerlink" title="Mac本机上的字体册利用"></a>Mac本机上的字体册利用</h2><p>在打开<em>Mac</em>自带的字体册，可发现有许多的中文字体供我们选择使用，在此就能帮忙我们解决中文乱码的问题。</p><p>选择一个字体，找到他的文件位置在何处。之后需要添加的代码要用到。</p><p><img src="http://owudg3xs2.bkt.clouddn.com/8%E6%9C%88-08-2018%2014-10-08.gif" alt=""></p><blockquote><p>这样就知道了位置的所在。</p></blockquote><h2 id="需要添加的代码"><a href="#需要添加的代码" class="headerlink" title="需要添加的代码"></a>需要添加的代码</h2><p>如下添加代码，加上上面说的中文字体的所在位置，<strong>然后在每一次需要中文显示时，均要加上<code>fontproperties=font</code>（font即指下方的变量）。</strong></p><pre><code>from matplotlib.font_manager import FontPropertiesfont = FontProperties(fname=&apos;/Library/Fonts/Songti.ttc&apos;)&gt; 如：plt.subplot2grid((2,3),(1,0),colspan=2) #在此即为多行的占用data_train.Age[data_train.Pclass == 1].plot(kind=&apos;kde&apos;) #两者的结合绘图data_train.Age[data_train.Pclass == 2].plot(kind=&apos;kde&apos;)data_train.Age[data_train.Pclass == 3].plot(kind=&apos;kde&apos;)plt.xlabel(&apos;年龄&apos;,fontproperties=font)plt.ylabel(&apos;密度&apos;,fontproperties=font)plt.title(&apos;各等级的乘客年龄分布&apos;,fontproperties=font)plt.legend((&apos;Pclass1&apos;,&apos;Pclass2&apos;,&apos;Pclass3&apos;),loc=&apos;best&apos;) #多个说明，自动排好说明位置</code></pre><p>这样中文乱码的问题就能得到完美的解决了…唉，网上的一些方案根本没有用啊，折腾了几个小时，心累..</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近在接触一些在notebook上用&lt;em&gt;matploylib&lt;/em&gt;这个库绘图时出现了中文乱码的问题，就是常见的那种小方块式的中文乱码问题。&lt;/p&gt;
-&lt;p&gt;下面简单说说解决方法。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="python matploylib" scheme="https://liujunjie11.github.io/categories/python-matploylib/"/>
-    
-    
-      <category term="python matploylib" scheme="https://liujunjie11.github.io/tags/python-matploylib/"/>
     
   </entry>
   
