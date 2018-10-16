@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-10-16T03:01:06.727Z</updated>
+  <updated>2018-10-16T05:34:01.331Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac下安装lightGBM</title>
+    <link href="https://liujunjie11.github.io/2018/10/16/Mac%E4%B8%8B%E5%AE%89%E8%A3%85lightGBM/"/>
+    <id>https://liujunjie11.github.io/2018/10/16/Mac下安装lightGBM/</id>
+    <published>2018-10-16T05:13:23.000Z</published>
+    <updated>2018-10-16T05:34:01.331Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近需要这个算法做点东西，在此记录一下安装的过程。</p><a id="more"></a><h1 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h1><p>用homebrew安装相关的插件：</p><pre><code>brew install cmakebrew install gcc --without-multilib</code></pre><blockquote><p>在安装之后如果在使用<code>cmake ..</code>命令行出现了关于在下载的<em>cmake</em>的相关的问题时，可以考虑<code>brew uninstall cmake</code>，然后重新下载。这种问题我就遇上了…</p></blockquote><p>下砸好gcc之后，我配置了一下环境问题，如图：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-16%20%E4%B8%8B%E5%8D%881.25.10.png" alt=""></p><blockquote><p>使用命令行<code>vi ~/.bash_profile</code>配置环境变量问题。</p></blockquote><p>接下来是git下载相关的GitHub资源：</p><pre><code>git clone --recursive https://github.com/Microsoft/LightGBM </code></pre><p>依次使用下方命令：</p><pre><code>cd LightGBMexport CXX=g++-8 CC=gcc-8mkdir build cd buildcmake ..make -j4</code></pre><blockquote><p>这样只要相关的插件下载完全了，一般就没什么问题出现了。</p></blockquote><p>之后可以使用pip命令下载了：</p><pre><code>pip install --no-binary :all: lightgbm</code></pre><blockquote><p>由于不是很懂这个命令，我又使用了<code>pip install lightgbm</code>。</p></blockquote><h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><p>如图：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-16%20%E4%B8%8B%E5%8D%881.23.55.png" alt=""></p><blockquote><p>用的是anaconda默认的python3环境。</p></blockquote><h1 id="遇到的错误问题"><a href="#遇到的错误问题" class="headerlink" title="遇到的错误问题"></a>遇到的错误问题</h1><p>如下类似问题：</p><pre><code>OSError: dlopen(/usr/local/lib/python3.6/site-packages/lightgbm/lib_lightgbm.so, 6): Library not loaded: /usr/local/opt/gcc/lib/gcc/7/libgomp.1.dylib  Referenced from: /usr/local/lib/python3.6/site-packages/lightgbm/lib_lightgbm.so  Reason: image not found</code></pre><blockquote><p>解决方案：<a href="https://github.com/Microsoft/LightGBM/issues/1369" target="_blank" rel="external">https://github.com/Microsoft/LightGBM/issues/1369</a></p></blockquote><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul><li><p><a href="http://lightgbm.apachecn.org/cn/latest/Installation-Guide.html" target="_blank" rel="external">http://lightgbm.apachecn.org/cn/latest/Installation-Guide.html</a></p></li><li><p><a href="https://blog.csdn.net/fitzgerald0/article/details/78321527?utm_source=blogxgwz4" target="_blank" rel="external">https://blog.csdn.net/fitzgerald0/article/details/78321527?utm_source=blogxgwz4</a></p></li><li><p><a href="https://github.com/Microsoft/LightGBM/issues/1369" target="_blank" rel="external">https://github.com/Microsoft/LightGBM/issues/1369</a></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近需要这个算法做点东西，在此记录一下安装的过程。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="机器学习" scheme="https://liujunjie11.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="机器学习" scheme="https://liujunjie11.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>Mac上下载xgboost</title>
@@ -482,28 +504,6 @@ failed to locate @import file _variables/base.styl
     
     
       <category term="Hexo博客教程" scheme="https://liujunjie11.github.io/tags/Hexo%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>pandas.Dataframe.plot()及数值切片的一些记录</title>
-    <link href="https://liujunjie11.github.io/2018/08/13/pandas-Dataframe-plot-%E5%8F%8A%E6%95%B0%E5%80%BC%E5%88%87%E7%89%87%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95/"/>
-    <id>https://liujunjie11.github.io/2018/08/13/pandas-Dataframe-plot-及数值切片的一些记录/</id>
-    <published>2018-08-13T05:04:02.000Z</published>
-    <updated>2018-10-11T13:06:56.356Z</updated>
-    
-    <content type="html"><![CDATA[<p>在学习其相关的一些库时有一些自己的理解，简单记录记录，方便以后理解。</p><a id="more"></a><p><code>pandas.Dataframe.plot()</code>此函数而言：</p><blockquote><p><code>x轴线</code>对应着第一列值，<code>y轴线</code>对应着第二列值or后面的列，而其中的属性对应着将要标记在上方的标签展示使用。</p></blockquote><p>在切片的理解中：</p><blockquote><p><code>[:]</code>为全体；</p><p><code>[1:]</code> or <code>[1]</code>需要考虑从0开始的顺序；</p><p><code>[:1]</code>即直接从1开始，无需从0开始；</p><p><code>[:,:]</code>表示行与列。</p><p><code>[1::]</code>表示从第二位置开始以1为跨度逐渐到最后一位(0为第一个位置)。</p><p><code>[::1]</code>表示从第一个位置开始逐渐以1为跨度直至最后一个位置。</p></blockquote><p>That’s all！</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在学习其相关的一些库时有一些自己的理解，简单记录记录，方便以后理解。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="python数据分析/挖掘" scheme="https://liujunjie11.github.io/categories/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E6%8C%96%E6%8E%98/"/>
-    
-    
-      <category term="python数据分析/挖掘" scheme="https://liujunjie11.github.io/tags/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E6%8C%96%E6%8E%98/"/>
     
   </entry>
   
