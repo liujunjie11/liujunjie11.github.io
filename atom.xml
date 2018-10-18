@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-10-16T05:42:14.486Z</updated>
+  <updated>2018-10-18T12:15:45.908Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>python机器学习系列：预测房价并且可视化</title>
+    <link href="https://liujunjie11.github.io/2018/10/18/python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97%EF%BC%9A%E9%A2%84%E6%B5%8B%E6%88%BF%E4%BB%B7%E5%B9%B6%E4%B8%94%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    <id>https://liujunjie11.github.io/2018/10/18/python机器学习系列：预测房价并且可视化/</id>
+    <published>2018-10-18T10:38:51.000Z</published>
+    <updated>2018-10-18T12:15:45.908Z</updated>
+    
+    <content type="html"><![CDATA[<p>这篇文章不是给纯粹的小白看的，需要一定的基础，需要小白补充一定的基础知识，在我的博客有<a href="http://liujunworld.com/2018/09/16/%E5%88%9D%E5%AD%A6%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/" target="_blank" rel="external">相关的资源</a>介绍。</p><p>在这里记录下这篇文章时因为很实用，并且也希望以此帮助需要的人。</p><p>这是我在<em>YouTube</em>上学习到的：</p><blockquote><p><a href="https://www.youtube.com/watch?v=QLVMqwpOLPk&amp;list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v&amp;index=5" target="_blank" rel="external">https://www.youtube.com/watch?v=QLVMqwpOLPk&amp;list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v&amp;index=5</a></p><p>对应的网页课程地址在此：<a href="https://pythonprogramming.net/forecasting-predicting-machine-learning-tutorial/" target="_blank" rel="external">https://pythonprogramming.net/forecasting-predicting-machine-learning-tutorial/</a></p></blockquote><p>在作者的基础上进行了一点点的改动。说明一下：<strong>相关的库自行安装，就不一一废话了。</strong></p><a id="more"></a><h1 id="项目开始"><a href="#项目开始" class="headerlink" title="项目开始"></a>项目开始</h1><p><strong>项目过程：从开放的数据接口拿到数据，并且做简单的数据处理，自行做好数据标签用于算法训练，之后在利用相关的模块做好预测得到的数值与相应的时间值的对接，得出数据的图表(包括预测部分)，项目完成。</strong></p><h2 id="获取数据以及简单数据处理"><a href="#获取数据以及简单数据处理" class="headerlink" title="获取数据以及简单数据处理"></a>获取数据以及简单数据处理</h2><p>代码：</p><pre><code>import quandl,mathimport numpy as npfrom sklearn import preprocessingfrom sklearn.model_selection import train_test_splitfrom sklearn.linear_model import LinearRegression#获取公共数据接口df = quandl.get(&quot;WIKI/GOOGL&quot;)#简单的数据特征处理、整理，目的是得出“标签”特征列（因为仅仅是做到实践的效果，所以就不多说了，看代码便知）。df = df[[&apos;Adj. Open&apos;, &apos;Adj. High&apos;, &apos;Adj. Low&apos;, &apos;Adj. Close&apos;, &apos;Adj. Volume&apos;]]  #取用时需要用大括号df[&apos;HL_PCT&apos;] = (df[&apos;Adj. High&apos;] - df[&apos;Adj. Close&apos;]) / df[&apos;Adj. Close&apos;] * 100.0df[&apos;PCT_change&apos;] = (df[&apos;Adj. Close&apos;] - df[&apos;Adj. Open&apos;]) /df[&apos;Adj. Open&apos;] * 100.0df = df[[&apos;Adj. Close&apos;, &apos;Adj. Volume&apos;,&apos;HL_PCT&apos;,&apos;PCT_change&apos;]]forecast_col = &apos;Adj. Close&apos;df.fillna(value=-99999, inplace=True)forecast_out = int(math.ceil(0.01 * len(df)))#得出标签特征列，以便直接用于训练df[&apos;label&apos;] = df[forecast_col].shift(-forecast_out)</code></pre><blockquote><p>关于<a href="https://www.quandl.com" target="_blank" rel="external">quandl</a>,是个公开的数据网站，有免费的，也有收费的，它有很好的支持python的数据接口。可用<code>pip install quandl</code>下载相关的支持模块。</p></blockquote><h2 id="算法预测"><a href="#算法预测" class="headerlink" title="算法预测"></a>算法预测</h2><p>代码：</p><pre><code>X = np.array(df.drop([&apos;label&apos;], 1))X = preprocessing.scale(X)#这里是取数据的后面一小部分用于预测得出的数值使用X_lately = X[-forecast_out:]X = X[:-forecast_out]df.dropna(inplace=True)y = np.array(df[&apos;label&apos;])#数据分割X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)clf = LinearRegression(n_jobs=-1)clf.fit(X_train, y_train)#预测准确性confidence = clf.score(X_test, y_test)#最后预测的数值部分forecast_set = clf.predict(X_lately)</code></pre><blockquote><p>这里是简单的预测部分了，其中有一些简单的数据处理部分。</p></blockquote><h2 id="时间与预测值的对应以及图表的描绘"><a href="#时间与预测值的对应以及图表的描绘" class="headerlink" title="时间与预测值的对应以及图表的描绘"></a>时间与预测值的对应以及图表的描绘</h2><p>代码：</p><pre><code>import datetimeimport matplotlib.pyplot as plt#matplotlib的美化图表风格plt.style.use(&apos;ggplot&apos;)#预测标签df[&apos;Forecast&apos;] = np.nan#获取源数据最后一天日期last_date = df.iloc[-1].namelast_unix = last_date.timestamp()one_day = 86400 #一天的时间戳next_unix = last_unix + one_dayfor i in forecast_set:    next_date = datetime.datetime.fromtimestamp(next_unix)    next_unix += 86400    #将此日期对应的前面五列不相干的均设为nan，而仅仅加上预测的数值，即仅仅有相应的时间对应相应的预测数值    df.loc[next_date] = [np.nan for _ in range(len(df.columns)-1)]+[i] #如果这里不理解的话，可以查看df的head和tail部分试试，就能一目了然了#图表描绘df[&apos;Adj. Close&apos;].plot()df[&apos;Forecast&apos;].plot()plt.legend(loc=4)plt.xlabel(&apos;Date&apos;)plt.ylabel(&apos;Price&apos;)plt.show()</code></pre><blockquote><p>这里有些难理解，但是其实很好理解，只是一些代码根本没见到过，所以导致阅读障碍。</p></blockquote><h2 id="完整代码："><a href="#完整代码：" class="headerlink" title="完整代码："></a>完整代码：</h2><pre><code>import quandl,math,datetimeimport numpy as npfrom sklearn import preprocessing,svmfrom sklearn.model_selection import train_test_splitfrom sklearn.linear_model import LinearRegressionimport matplotlib.pyplot as pltplt.style.use(&apos;ggplot&apos;)df = quandl.get(&quot;WIKI/GOOGL&quot;)df = df[[&apos;Adj. Open&apos;, &apos;Adj. High&apos;, &apos;Adj. Low&apos;, &apos;Adj. Close&apos;, &apos;Adj. Volume&apos;]] #取用时需要用大括号df[&apos;HL_PCT&apos;] = (df[&apos;Adj. High&apos;] - df[&apos;Adj. Close&apos;]) / df[&apos;Adj. Close&apos;] * 100.0df[&apos;PCT_change&apos;] = (df[&apos;Adj. Close&apos;] - df[&apos;Adj. Open&apos;]) /df[&apos;Adj. Open&apos;] * 100.0df = df[[&apos;Adj. Close&apos;, &apos;Adj. Volume&apos;,&apos;HL_PCT&apos;,&apos;PCT_change&apos;]]forecast_col = &apos;Adj. Close&apos;df.fillna(value=-99999, inplace=True)forecast_out = int(math.ceil(0.01 * len(df)))df[&apos;label&apos;] = df[forecast_col].shift(-forecast_out)X = np.array(df.drop([&apos;label&apos;], 1))X = preprocessing.scale(X)X_lately = X[-forecast_out:]X = X[:-forecast_out]df.dropna(inplace=True)y = np.array(df[&apos;label&apos;])X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)clf = LinearRegression(n_jobs=-1)clf.fit(X_train, y_train)confidence = clf.score(X_test, y_test)forecast_set = clf.predict(X_lately)df[&apos;Forecast&apos;] = np.nanlast_date = df.iloc[-1].namelast_unix = last_date.timestamp()one_day = 86400next_unix = last_unix + one_dayfor i in forecast_set:    next_date = datetime.datetime.fromtimestamp(next_unix)    next_unix += 86400    df.loc[next_date] = [np.nan for _ in range(len(df.columns)-1)]+[i]df[&apos;Adj. Close&apos;].plot()df[&apos;Forecast&apos;].plot()plt.legend(loc=4)plt.xlabel(&apos;Date&apos;)plt.ylabel(&apos;Price&apos;)plt.show()</code></pre><h2 id="最终效果展示"><a href="#最终效果展示" class="headerlink" title="最终效果展示"></a>最终效果展示</h2><p><img src="http://owudg3xs2.bkt.clouddn.com/Oct-18-2018%2020-13-50.gif" alt=""></p><blockquote><p>可以查看到预测的部分展示。</p></blockquote><h2 id="补助链接"><a href="#补助链接" class="headerlink" title="补助链接"></a>补助链接</h2><p>这里是帮助理解的链接。</p><ul><li><p><a href="https://blog.csdn.net/brucewong0516/article/details/80157639" target="_blank" rel="external">python pandas库常用函数之shift详解</a></p></li><li><p><a href="https://zhuanlan.zhihu.com/p/37891729" target="_blank" rel="external">样式美化matplotlib.pyplot.style.use定制画布风格</a></p></li><li><p><a href="http://www.wklken.me/posts/2015/03/03/python-base-datetime.html#6-huo-qu-ben-zhou-ben-yue-shang-yue-zui-hou-yi-tian" target="_blank" rel="external">PYTHON-基础-时间日期处理小结</a></p></li><li><p><a href="https://morvanzhou.github.io/tutorials/data-manipulation/np-pd/3-2-pd-indexing/" target="_blank" rel="external">Pandas 选择数据</a></p></li><li><p><a href="https://morvanzhou.github.io/tutorials/data-manipulation/plt/2-5-lagend/" target="_blank" rel="external">Legend 图例</a></p></li></ul><p>值得说明一下<em>Legend 图例</em>的一些知识：</p><p>使用<code>plt.legend(loc=n)</code>中<code>n</code>的选择代表什么：</p><pre><code>&apos;best&apos; : 0,          &apos;upper right&apos;  : 1,&apos;upper left&apos;   : 2,&apos;lower left&apos;   : 3,&apos;lower right&apos;  : 4,&apos;right&apos;        : 5,&apos;center left&apos;  : 6,&apos;center right&apos; : 7,&apos;lower center&apos; : 8,&apos;upper center&apos; : 9,&apos;center&apos;       : 10。</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这篇文章不是给纯粹的小白看的，需要一定的基础，需要小白补充一定的基础知识，在我的博客有&lt;a href=&quot;http://liujunworld.com/2018/09/16/%E5%88%9D%E5%AD%A6%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;相关的资源&lt;/a&gt;介绍。&lt;/p&gt;
+&lt;p&gt;在这里记录下这篇文章时因为很实用，并且也希望以此帮助需要的人。&lt;/p&gt;
+&lt;p&gt;这是我在&lt;em&gt;YouTube&lt;/em&gt;上学习到的：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=QLVMqwpOLPk&amp;amp;list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v&amp;amp;index=5&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.youtube.com/watch?v=QLVMqwpOLPk&amp;amp;list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v&amp;amp;index=5&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;对应的网页课程地址在此：&lt;a href=&quot;https://pythonprogramming.net/forecasting-predicting-machine-learning-tutorial/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://pythonprogramming.net/forecasting-predicting-machine-learning-tutorial/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在作者的基础上进行了一点点的改动。说明一下：&lt;strong&gt;相关的库自行安装，就不一一废话了。&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="机器学习" scheme="https://liujunjie11.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="机器学习" scheme="https://liujunjie11.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Mac下安装lightGBM</title>
     <link href="https://liujunjie11.github.io/2018/10/16/Mac%E4%B8%8B%E5%AE%89%E8%A3%85lightGBM/"/>
     <id>https://liujunjie11.github.io/2018/10/16/Mac下安装lightGBM/</id>
     <published>2018-10-16T05:13:23.000Z</published>
-    <updated>2018-10-16T05:42:14.486Z</updated>
+    <updated>2018-10-16T10:13:25.512Z</updated>
     
     <content type="html"><![CDATA[<p>最近需要这个算法做点东西，在此记录一下安装的过程。</p><a id="more"></a><h1 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h1><p>用homebrew安装相关的插件：</p><pre><code>brew install cmakebrew install gcc --without-multilib</code></pre><blockquote><p>在安装之后如果在使用<code>cmake ..</code>命令行出现了关于在下载的<em>cmake</em>的相关的问题时，可以考虑<code>brew uninstall cmake</code>，然后重新下载。这种问题我就遇上了…</p></blockquote><p>下载好gcc之后，我配置了一下环境问题，如图：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-16%20%E4%B8%8B%E5%8D%881.25.10.png" alt=""></p><blockquote><p>使用命令行<code>vi ~/.bash_profile</code>配置环境变量问题。</p></blockquote><p>接下来是git下载相关的GitHub资源：</p><pre><code>git clone --recursive https://github.com/Microsoft/LightGBM </code></pre><p>依次使用下方命令：</p><pre><code>cd LightGBMexport CXX=g++-8 CC=gcc-8mkdir build cd buildcmake ..make -j4</code></pre><blockquote><p>这样只要相关的插件下载完全了，一般就没什么问题出现了。</p></blockquote><p>之后可以使用pip命令下载了：</p><pre><code>pip install --no-binary :all: lightgbm</code></pre><blockquote><p>由于不是很懂这个命令，我又使用了<code>pip install lightgbm</code>。</p></blockquote><h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><p>如图：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-16%20%E4%B8%8B%E5%8D%881.23.55.png" alt=""></p><blockquote><p>用的是anaconda默认的python3环境。</p></blockquote><h1 id="遇到的错误问题"><a href="#遇到的错误问题" class="headerlink" title="遇到的错误问题"></a>遇到的错误问题</h1><p>如下类似问题：</p><pre><code>OSError: dlopen(/usr/local/lib/python3.6/site-packages/lightgbm/lib_lightgbm.so, 6): Library not loaded: /usr/local/opt/gcc/lib/gcc/7/libgomp.1.dylib  Referenced from: /usr/local/lib/python3.6/site-packages/lightgbm/lib_lightgbm.so  Reason: image not found</code></pre><blockquote><p>解决方案：<a href="https://github.com/Microsoft/LightGBM/issues/1369" target="_blank" rel="external">https://github.com/Microsoft/LightGBM/issues/1369</a></p></blockquote><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul><li><p><a href="http://lightgbm.apachecn.org/cn/latest/Installation-Guide.html" target="_blank" rel="external">http://lightgbm.apachecn.org/cn/latest/Installation-Guide.html</a></p></li><li><p><a href="https://blog.csdn.net/fitzgerald0/article/details/78321527?utm_source=blogxgwz4" target="_blank" rel="external">https://blog.csdn.net/fitzgerald0/article/details/78321527?utm_source=blogxgwz4</a></p></li><li><p><a href="https://github.com/Microsoft/LightGBM/issues/1369" target="_blank" rel="external">https://github.com/Microsoft/LightGBM/issues/1369</a></p></li></ul>]]></content>
     
@@ -481,29 +510,6 @@ failed to locate @import file _variables/base.styl
     
     
       <category term="python编程" scheme="https://liujunjie11.github.io/tags/python%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>为Hexo博客(next主题)加上评论功能</title>
-    <link href="https://liujunjie11.github.io/2018/08/15/%E4%B8%BAHexo%E5%8D%9A%E5%AE%A2-next%E4%B8%BB%E9%A2%98-%E5%8A%A0%E4%B8%8A%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/"/>
-    <id>https://liujunjie11.github.io/2018/08/15/为Hexo博客-next主题-加上评论功能/</id>
-    <published>2018-08-15T13:51:57.000Z</published>
-    <updated>2018-10-11T13:07:02.554Z</updated>
-    
-    <content type="html"><![CDATA[<p>一直想加一个评论的功能，现在有时间了。</p><p>下面来说说简单的过程。</p><a id="more"></a><p>用的是<a href="https://livere.com" target="_blank" rel="external">来必力</a>这个评论系统。</p><p>首先需要进入其中进行注册。</p><blockquote><p>前面的注册过程具体参考下面这篇文章吧，但是后面的过程回来参考我的即可。</p><p>文章地址：<a href="https://segmentfault.com/a/1190000012918417" target="_blank" rel="external">https://segmentfault.com/a/1190000012918417</a></p></blockquote><p>如上面的文章可知，每个人注册成功之后会有一个独立的<code>uid</code>。</p><p>接下来打开目录位置目标<code>/Users/XX/XXXX/themes/next/_config.yml</code>，搜索关键词<code>liver</code>，将此位置改成</p><pre><code>livere:    on: true #控制开关    livere_uid: 你的uid</code></pre><p>如下图所示：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-08-15%20%E4%B8%8B%E5%8D%8810.02.45.png" alt=""></p><p><strong>接下来进行最重要的一步，打开目录位置目标<code>/Users/XX/XXXX/themes/next/layout/_partials/comments.swig</code></strong>，将其中的改成如下图所示：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-08-15%20%E4%B8%8B%E5%8D%889.35.56.png" alt=""></p><p>保存之后再有顺序的使用命令：</p><p><code>hexo s -debug</code> #调试并且展示</p><p><code>hexo g -d</code> #完成文件上传生成</p><p>另外可在自己的<em>来必力</em>设置界面设置成自己想要的样子：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-08-15%20%E4%B8%8B%E5%8D%8810.14.05.png" alt=""></p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-08-15%20%E4%B8%8B%E5%8D%8810.14.11.png" alt=""></p><p>之后打开自己的网站就可以看到效果如何啦：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-08-15%20%E4%B8%8B%E5%8D%8810.14.40.png" alt=""></p><h1 id="参考-amp-最后"><a href="#参考-amp-最后" class="headerlink" title="参考&amp;最后"></a>参考&amp;最后</h1><p>参考：<a href="https://www.jianshu.com/p/f5c184047e72" target="_blank" rel="external">https://www.jianshu.com/p/f5c184047e72</a></p><blockquote><p>实话说，加上评论功能之后网站加载时间多了那么几毫秒…总体来说还不错。另外我用的<em>Mac</em>，其他系统也无大碍，看目录位置即可。</p></blockquote><ul><li><strong>最后补充一点:</strong></li></ul><p><strong>有时这个评论系统加载不出来，可能有几点原因：</strong></p><blockquote><ol><li>网速不行，加载过慢；</li><li>来比利系统上的<em>cookie</em>过期了，重新登陆管理界面看看；</li><li>待发掘…</li></ol></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;一直想加一个评论的功能，现在有时间了。&lt;/p&gt;
-&lt;p&gt;下面来说说简单的过程。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Hexo博客教程" scheme="https://liujunjie11.github.io/categories/Hexo%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="Hexo博客教程" scheme="https://liujunjie11.github.io/tags/Hexo%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
