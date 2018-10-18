@@ -94,7 +94,7 @@
 <meta property="og:description" content="这篇文章不是给纯粹的小白看的，需要一定的基础，需要小白补充一定的基础知识，在我的博客有相关的资源介绍。 在这里记录下这篇文章时因为很实用，并且也希望以此帮助需要的人。 这是我在YouTube上学习到的：  https://www.youtube.com/watch?v=QLVMqwpOLPk&amp;amp;list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v&amp;amp;index">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/Oct-18-2018%2020-13-50.gif">
-<meta property="og:updated_time" content="2018-10-18T13:02:00.627Z">
+<meta property="og:updated_time" content="2018-10-18T13:49:09.819Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python机器学习系列：预测房价并且可视化">
 <meta name="twitter:description" content="这篇文章不是给纯粹的小白看的，需要一定的基础，需要小白补充一定的基础知识，在我的博客有相关的资源介绍。 在这里记录下这篇文章时因为很实用，并且也希望以此帮助需要的人。 这是我在YouTube上学习到的：  https://www.youtube.com/watch?v=QLVMqwpOLPk&amp;amp;list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v&amp;amp;index">
@@ -405,7 +405,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.8k
+                  2.7k
                 </span>
               
 
@@ -421,7 +421,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  8
+                  13
                 </span>
               
             </div>
@@ -447,6 +447,7 @@
 <p>这是我在<em>YouTube</em>上学习到的：</p>
 <blockquote>
 <p><a href="https://www.youtube.com/watch?v=QLVMqwpOLPk&amp;list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v&amp;index=5" target="_blank" rel="external">https://www.youtube.com/watch?v=QLVMqwpOLPk&amp;list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v&amp;index=5</a></p>
+<p>中文地址：<a href="http://playlist.yxgapp.com/static/video/d1741aa2-287f-4100-9ae3-39a51fd125cf.html" target="_blank" rel="external">http://playlist.yxgapp.com/static/video/d1741aa2-287f-4100-9ae3-39a51fd125cf.html</a></p>
 <p>对应的网页课程地址在此：<a href="https://pythonprogramming.net/forecasting-predicting-machine-learning-tutorial/" target="_blank" rel="external">https://pythonprogramming.net/forecasting-predicting-machine-learning-tutorial/</a></p>
 </blockquote>
 <p>在作者的基础上进行了一点点的改动。说明一下：<strong>相关的库自行安装，就不一一废话了。</strong></p>
@@ -667,7 +668,161 @@ plt.show()
 &apos;lower center&apos; : 8,
 &apos;upper center&apos; : 9,
 &apos;center&apos;       : 10。
-</code></pre>
+</code></pre><h1 id="补充添加序列化保存预测模型"><a href="#补充添加序列化保存预测模型" class="headerlink" title="补充添加序列化保存预测模型"></a>补充添加序列化保存预测模型</h1><p>添加了如何将预测代码序列化的过程加相关的代码。</p>
+<p>序列化可简单理解为：先保存了这个预测的模型(序列化的过程)，然后我们可以拿出这个模型直接进行以后的预测(反序列化的过程)。</p>
+<p>加上代码：</p>
+<pre><code>import pickle
+
+with open(&apos;houseforecastmodel.pickle&apos;,&apos;wb&apos;) as f:
+#下载模型
+pickle.dump(clf,f)
+
+pickle_in = open(&apos;houseforecastmodel.pickle&apos;,&apos;rb&apos;)
+clf = pickle.load(pickle_in) #加载模型
+</code></pre><p>完整代码：</p>
+<pre><code>import quandl,math,datetime
+import numpy as np
+from sklearn import preprocessing,svm
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+import matplotlib.pyplot as plt
+import pickle
+
+plt.style.use(&apos;ggplot&apos;)
+
+df = quandl.get(&quot;WIKI/GOOGL&quot;)
+
+df = df[[&apos;Adj. Open&apos;, &apos;Adj. High&apos;, &apos;Adj. Low&apos;, &apos;Adj. Close&apos;, &apos;Adj. Volume&apos;]] #取用时需要用大括号
+df[&apos;HL_PCT&apos;] = (df[&apos;Adj. High&apos;] - df[&apos;Adj. Close&apos;]) / df[&apos;Adj. Close&apos;] * 100.0
+df[&apos;PCT_change&apos;] = (df[&apos;Adj. Close&apos;] - df[&apos;Adj. Open&apos;]) /df[&apos;Adj. Open&apos;] * 100.0
+
+df = df[[&apos;Adj. Close&apos;, &apos;Adj. Volume&apos;,&apos;HL_PCT&apos;,&apos;PCT_change&apos;]]
+
+forecast_col = &apos;Adj. Close&apos;
+
+df.fillna(value=-99999, inplace=True)
+forecast_out = int(math.ceil(0.01 * len(df)))
+df[&apos;label&apos;] = df[forecast_col].shift(-forecast_out)
+
+X = np.array(df.drop([&apos;label&apos;], 1))
+X = preprocessing.scale(X)
+X_lately = X[-forecast_out:]
+X = X[:-forecast_out]
+
+df.dropna(inplace=True)
+
+y = np.array(df[&apos;label&apos;])
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+clf = LinearRegression(n_jobs=-1)
+clf.fit(X_train, y_train)
+
+with open(&apos;houseforecastmodel.pickle&apos;,&apos;wb&apos;) as f:
+#下载模型
+pickle.dump(clf,f)
+
+pickle_in = open(&apos;houseforecastmodel.pickle&apos;,&apos;rb&apos;)
+clf = pickle.load(pickle_in) #加载模型
+
+confidence = clf.score(X_test, y_test)
+
+forecast_set = clf.predict(X_lately)
+df[&apos;Forecast&apos;] = np.nan
+
+last_date = df.iloc[-1].name
+last_unix = last_date.timestamp()
+one_day = 86400
+next_unix = last_unix + one_day
+
+for i in forecast_set:
+    next_date = datetime.datetime.fromtimestamp(next_unix)
+    next_unix += 86400
+    df.loc[next_date] = [np.nan for _ in range(len(df.columns)-1)]+[i]
+
+df[&apos;Adj. Close&apos;].plot()
+df[&apos;Forecast&apos;].plot()
+plt.legend(loc=4)
+plt.xlabel(&apos;Date&apos;)
+plt.ylabel(&apos;Price&apos;)
+plt.show()
+</code></pre><p>在运行一遍以上的代码之后，就可以直接从保存的文件来加载模型来预测数据啦，如下可测试：</p>
+<pre><code>import quandl,math,datetime
+import numpy as np
+from sklearn import preprocessing,svm
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+import matplotlib.pyplot as plt
+import pickle
+
+plt.style.use(&apos;ggplot&apos;)
+
+df = quandl.get(&quot;WIKI/GOOGL&quot;)
+
+df = df[[&apos;Adj. Open&apos;, &apos;Adj. High&apos;, &apos;Adj. Low&apos;, &apos;Adj. Close&apos;, &apos;Adj. Volume&apos;]] #取用时需要用大括号
+df[&apos;HL_PCT&apos;] = (df[&apos;Adj. High&apos;] - df[&apos;Adj. Close&apos;]) / df[&apos;Adj. Close&apos;] * 100.0
+df[&apos;PCT_change&apos;] = (df[&apos;Adj. Close&apos;] - df[&apos;Adj. Open&apos;]) /df[&apos;Adj. Open&apos;] * 100.0
+
+df = df[[&apos;Adj. Close&apos;, &apos;Adj. Volume&apos;,&apos;HL_PCT&apos;,&apos;PCT_change&apos;]]
+
+forecast_col = &apos;Adj. Close&apos;
+
+df.fillna(value=-99999, inplace=True)
+forecast_out = int(math.ceil(0.01 * len(df)))
+df[&apos;label&apos;] = df[forecast_col].shift(-forecast_out)
+
+X = np.array(df.drop([&apos;label&apos;], 1))
+X = preprocessing.scale(X)
+X_lately = X[-forecast_out:]
+X = X[:-forecast_out]
+
+df.dropna(inplace=True)
+
+y = np.array(df[&apos;label&apos;])
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+clf = LinearRegression(n_jobs=-1)
+clf.fit(X_train, y_train)
+
+with open(&apos;houseforecastmodel.pickle&apos;,&apos;wb&apos;) as f:
+#下载模型
+pickle.dump(clf,f)
+
+pickle_in = open(&apos;houseforecastmodel.pickle&apos;,&apos;rb&apos;)
+clf = pickle.load(pickle_in) #加载模型
+
+confidence = clf.score(X_test, y_test)
+
+forecast_set = clf.predict(X_lately)
+df[&apos;Forecast&apos;] = np.nan
+
+last_date = df.iloc[-1].name
+last_unix = last_date.timestamp()
+one_day = 86400
+next_unix = last_unix + one_day
+
+for i in forecast_set:
+    next_date = datetime.datetime.fromtimestamp(next_unix)
+    next_unix += 86400
+    df.loc[next_date] = [np.nan for _ in range(len(df.columns)-1)]+[i]
+
+df[&apos;Adj. Close&apos;].plot()
+df[&apos;Forecast&apos;].plot()
+plt.legend(loc=4)
+plt.xlabel(&apos;Date&apos;)
+plt.ylabel(&apos;Price&apos;)
+plt.show()
+</code></pre><blockquote>
+<p>得出的结果与上方展示的一致。</p>
+</blockquote>
+<h2 id="了解pickle"><a href="#了解pickle" class="headerlink" title="了解pickle"></a>了解pickle</h2><ul>
+<li><p><a href="https://morvanzhou.github.io/tutorials/python-basic/basic/13-08-pickle/" target="_blank" rel="external">pickle 保存数据</a></p>
+</li>
+<li><p><a href="https://docs.python.org/3/library/pickle.html" target="_blank" rel="external">pickle — Python object serialization</a></p>
+</li>
+<li><p><a href="https://www.jianshu.com/p/113f33ab6f31" target="_blank" rel="external">scikit-learn系列之如何存储和导入机器学习模型</a></p>
+</li>
+</ul>
+
       
     </div>
     
@@ -987,7 +1142,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#项目开始"><span class="nav-number">1.</span> <span class="nav-text">项目开始</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取数据以及简单数据处理"><span class="nav-number">1.1.</span> <span class="nav-text">获取数据以及简单数据处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法预测"><span class="nav-number">1.2.</span> <span class="nav-text">算法预测</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#时间与预测值的对应以及图表的描绘"><span class="nav-number">1.3.</span> <span class="nav-text">时间与预测值的对应以及图表的描绘</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是时间戳"><span class="nav-number">1.3.1.</span> <span class="nav-text">什么是时间戳?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完整代码："><span class="nav-number">1.4.</span> <span class="nav-text">完整代码：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最终效果展示"><span class="nav-number">1.5.</span> <span class="nav-text">最终效果展示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#补助链接"><span class="nav-number">1.6.</span> <span class="nav-text">补助链接</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#项目开始"><span class="nav-number">1.</span> <span class="nav-text">项目开始</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取数据以及简单数据处理"><span class="nav-number">1.1.</span> <span class="nav-text">获取数据以及简单数据处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法预测"><span class="nav-number">1.2.</span> <span class="nav-text">算法预测</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#时间与预测值的对应以及图表的描绘"><span class="nav-number">1.3.</span> <span class="nav-text">时间与预测值的对应以及图表的描绘</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是时间戳"><span class="nav-number">1.3.1.</span> <span class="nav-text">什么是时间戳?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完整代码："><span class="nav-number">1.4.</span> <span class="nav-text">完整代码：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最终效果展示"><span class="nav-number">1.5.</span> <span class="nav-text">最终效果展示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#补助链接"><span class="nav-number">1.6.</span> <span class="nav-text">补助链接</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#补充添加序列化保存预测模型"><span class="nav-number">2.</span> <span class="nav-text">补充添加序列化保存预测模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#了解pickle"><span class="nav-number">2.1.</span> <span class="nav-text">了解pickle</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1025,7 +1180,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      199.2k
+      200.1k
     </span>
   
 </div>
