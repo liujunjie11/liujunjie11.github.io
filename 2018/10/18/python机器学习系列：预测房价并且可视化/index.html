@@ -94,7 +94,7 @@
 <meta property="og:description" content="这篇文章不是给纯粹的小白看的，需要一定的基础，需要小白补充一定的基础知识，在我的博客有相关的资源介绍。 在这里记录下这篇文章时因为很实用，并且也希望以此帮助需要的人。 这是我在YouTube上学习到的：  https://www.youtube.com/watch?v=QLVMqwpOLPk&amp;amp;list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v&amp;amp;index">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/Oct-18-2018%2020-13-50.gif">
-<meta property="og:updated_time" content="2018-10-18T12:19:14.447Z">
+<meta property="og:updated_time" content="2018-10-18T13:02:00.627Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python机器学习系列：预测房价并且可视化">
 <meta name="twitter:description" content="这篇文章不是给纯粹的小白看的，需要一定的基础，需要小白补充一定的基础知识，在我的博客有相关的资源介绍。 在这里记录下这篇文章时因为很实用，并且也希望以此帮助需要的人。 这是我在YouTube上学习到的：  https://www.youtube.com/watch?v=QLVMqwpOLPk&amp;amp;list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v&amp;amp;index">
@@ -405,7 +405,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.5k
+                  1.8k
                 </span>
               
 
@@ -421,7 +421,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  6
+                  8
                 </span>
               
             </div>
@@ -475,7 +475,7 @@ forecast_out = int(math.ceil(0.01 * len(df)))
 #得出标签特征列，以便直接用于训练
 df[&apos;label&apos;] = df[forecast_col].shift(-forecast_out)
 </code></pre><blockquote>
-<p>关于<a href="https://www.quandl.com" target="_blank" rel="external">quandl</a>,是个公开的数据网站，有免费的，也有收费的，它有很好的支持python的数据接口。可用<code>pip install quandl</code>下载相关的支持模块。</p>
+<p>关于<a href="https://www.quandl.com" target="_blank" rel="external">quandl</a>,是个公开的数据网站，有免费的，也有收费的，它有很好的支持python的数据接口。可用<code>pip install quandl</code>下载相关的支持模块。<strong>如果有时获取数据出错了，重新运行直到没错误出现为止。</strong></p>
 </blockquote>
 <h2 id="算法预测"><a href="#算法预测" class="headerlink" title="算法预测"></a>算法预测</h2><p>代码：</p>
 <pre><code>X = np.array(df.drop([&apos;label&apos;], 1))
@@ -532,6 +532,47 @@ plt.ylabel(&apos;Price&apos;)
 plt.show()
 </code></pre><blockquote>
 <p>这里有些难理解，但是其实很好理解，只是一些代码根本没见到过，所以导致阅读障碍。</p>
+</blockquote>
+<p>估计有人不理解这段<code>df.loc[next_date] = [np.nan for _ in range(len(df.columns)-1)]+[i]</code>代码，我来简单说明一下。</p>
+<pre><code>for i in forecast_set:
+    next_date = datetime.datetime.fromtimestamp(next_unix)
+    next_unix += 86400
+    df.loc[next_date] = [np.nan for _ in range(len(df.columns)-1)]+[i]
+
+print(df.head())   
+
+输出：
+
+             Adj. Close  Adj. Volume   HL_PCT  PCT_change   label      Forecast
+Date                                                                          
+2004-08-19   50.322842   44659000.0  3.712563    0.324968  69.078238       NaN
+2004-08-20   54.322689   22834300.0  0.710922    7.227007  67.839414       NaN
+2004-08-23   54.869377   18256100.0  3.729433   -1.227880  68.912727       NaN
+2004-08-24   52.597363   15247300.0  6.417469   -5.726357  70.668146       NaN
+2004-08-25   53.164113    9188600.0  1.886792    1.183658  71.219849       NaN 
+
+
+print(df.tail())
+
+输出：
+
+                         Adj. Close  Adj. Volume  HL_PCT  PCT_change  label  \
+Date                                                                      
+2018-03-08 08:00:00         NaN          NaN     NaN         NaN    NaN   
+2018-03-09 08:00:00         NaN          NaN     NaN         NaN    NaN   
+2018-03-10 08:00:00         NaN          NaN     NaN         NaN    NaN   
+2018-03-11 08:00:00         NaN          NaN     NaN         NaN    NaN   
+2018-03-12 08:00:00         NaN          NaN     NaN         NaN    NaN   
+
+                        Forecast  
+Date                              
+2018-03-08 08:00:00  1113.922012  
+2018-03-09 08:00:00  1071.104993  
+2018-03-10 08:00:00  1043.810593  
+2018-03-11 08:00:00  1073.778780  
+2018-03-12 08:00:00  1022.639186 
+</code></pre><blockquote>
+<p>就是这样，已经很明了了，就是仅仅为了让预测的时间对应预测的房价数值而已。</p>
 </blockquote>
 <h3 id="什么是时间戳"><a href="#什么是时间戳" class="headerlink" title="什么是时间戳?"></a>什么是时间戳?</h3><p>简单说说：时间戳是自1970年1月1日（00:00:00 UTC/GMT）以来的秒数。它也被称为Unix时间戳（Unix Timestam、Unix epoch、POSIX time、Unix timestamp）是从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数，不考虑闰秒。</p>
 <p>  UNIX时间戳的0按照ISO 8601规范为：1970-01-01T00:00:00Z</p>
@@ -655,7 +696,7 @@ plt.show()
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月18日 - 20:10</p>
+  <p><span>最后更新:</span>2018年10月18日 - 21:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -984,7 +1025,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      198.9k
+      199.2k
     </span>
   
 </div>
