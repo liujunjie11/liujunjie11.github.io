@@ -98,7 +98,7 @@
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/best-fit-slope.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/best-fit-y-intercept.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/Figure_1.png">
-<meta property="og:updated_time" content="2018-10-19T04:39:23.348Z">
+<meta property="og:updated_time" content="2018-10-19T04:46:44.997Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python机器学习系列：线性回归算法的实现">
 <meta name="twitter:description" content="本来不想写太多关于这方面的基础知识的，但是为了加强理解，我想不妨直接写博文记录也是一个好的选择，也可以顺便帮助需要的人，何乐而不为呢？ 那么开始吧。我在原课程的基础上进行那么一点点修改。  这是我学习的课程地址：https://pythonprogramming.net/how-to-program-best-fit-line-machine-learning-tutorial/?complete">
@@ -465,7 +465,7 @@
 <p><img src="http://owudg3xs2.bkt.clouddn.com/linear-regression-python-tutorial.png" alt=""></p>
 <h2 id="求解m"><a href="#求解m" class="headerlink" title="求解m:"></a>求解<code>m</code>:</h2><p>如图：</p>
 <p><img src="http://owudg3xs2.bkt.clouddn.com/best-fit-slope.png" alt=""></p>
-<h2 id="求解y"><a href="#求解y" class="headerlink" title="求解y:"></a>求解<code>y</code>:</h2><p>如图：</p>
+<h2 id="求解b"><a href="#求解b" class="headerlink" title="求解b:"></a>求解<code>b</code>:</h2><p>如图：</p>
 <p><img src="http://owudg3xs2.bkt.clouddn.com/best-fit-y-intercept.png" alt=""></p>
 <p>经过python实现编写对应的公式再进行可视化验证即可完成任务了。</p>
 <h2 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h2><p>因为仅仅是为了说明算法的实现，所以数值就随便取的来用了。</p>
@@ -862,7 +862,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#算法原理"><span class="nav-number">1.</span> <span class="nav-text">算法原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#求解m"><span class="nav-number">1.1.</span> <span class="nav-text">求解m:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#求解y"><span class="nav-number">1.2.</span> <span class="nav-text">求解y:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法实现"><span class="nav-number">1.3.</span> <span class="nav-text">算法实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数值取值："><span class="nav-number">1.3.1.</span> <span class="nav-text">数值取值：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码实现公式原理"><span class="nav-number">1.3.2.</span> <span class="nav-text">代码实现公式原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#画图预测展示"><span class="nav-number">1.3.3.</span> <span class="nav-text">画图预测展示</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完整代码"><span class="nav-number">1.4.</span> <span class="nav-text">完整代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#铺助理解链接"><span class="nav-number">1.5.</span> <span class="nav-text">铺助理解链接</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#算法原理"><span class="nav-number">1.</span> <span class="nav-text">算法原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#求解m"><span class="nav-number">1.1.</span> <span class="nav-text">求解m:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#求解b"><span class="nav-number">1.2.</span> <span class="nav-text">求解b:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法实现"><span class="nav-number">1.3.</span> <span class="nav-text">算法实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数值取值："><span class="nav-number">1.3.1.</span> <span class="nav-text">数值取值：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码实现公式原理"><span class="nav-number">1.3.2.</span> <span class="nav-text">代码实现公式原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#画图预测展示"><span class="nav-number">1.3.3.</span> <span class="nav-text">画图预测展示</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完整代码"><span class="nav-number">1.4.</span> <span class="nav-text">完整代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#铺助理解链接"><span class="nav-number">1.5.</span> <span class="nav-text">铺助理解链接</span></a></li></ol></li></ol></div>
             
 
           </div>
