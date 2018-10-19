@@ -97,7 +97,7 @@
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-19%20%E4%B8%8B%E5%8D%887.30.32.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-19%20%E4%B8%8B%E5%8D%887.30.55.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-19%20%E4%B8%8B%E5%8D%887.31.09.png">
-<meta property="og:updated_time" content="2018-10-11T13:04:41.391Z">
+<meta property="og:updated_time" content="2018-10-19T23:37:22.480Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建Django开发环境">
 <meta name="twitter:description" content="老早就想将一些数据库里的数据来进行交互式的实现了，之前看了有主要的两种方法：  一是pyQt5这个库，结合Qt creator来进行完成。  另外就是通过网页形式来进行交互式的实现了。    在接触了前者之后发现学习的时间成本比较高一些，所以打算选择后者了…">
@@ -132,6 +132,7 @@
 
 
   <link rel="canonical" href="https://liujunjie11.github.io/2018/04/19/搭建Django开发环境/"/>
+
 
 
 
@@ -408,7 +409,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  404
+                  406
                 </span>
               
 
@@ -461,18 +462,8 @@
 <p>默认<em>python3</em>进行。<em>python2</em>:<code>pip install Django</code>。两者均会下载<em>Django</em>库的最新版本，亦可指定下载那个版本。</p>
 </blockquote>
 <h3 id="测试安装："><a href="#测试安装：" class="headerlink" title="测试安装："></a>测试安装：</h3><p>在编译器中：</p>
-<pre><code>import django  # @UnresolvedImport
-
-if __name__ == &apos;__main__&apos;:
-
-        print(django.get_version())
-</code></pre><blockquote>
-<p><strong>在<em>eclipse</em>中会提示导入Django库找不到，但是运行是可以成功的，加上# @UnresolvedImport 让错误提示不再提示。</strong></p>
-</blockquote>
-<p>在终端，先打开<em>python</em>的编译环境，依次输入：</p>
-<pre><code>import django
-print(django.get_version())
-</code></pre><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">	<span class="keyword">import</span> django  <span class="comment"># @UnresolvedImport</span></div><div class="line">	</div><div class="line">	<span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">	</div><div class="line">		    print(django.get_version())</div><div class="line">```		    </div><div class="line"></div><div class="line">&gt; **在*eclipse*中会提示导入Django库找不到，但是运行是可以成功的，加上<span class="comment"># @UnresolvedImport 让错误提示不再提示。**</span></div><div class="line"></div><div class="line">在终端，先打开*python*的编译环境，依次输入：</div><div class="line"></div><div class="line">```python</div><div class="line">	<span class="keyword">import</span> django</div><div class="line">	print(django.get_version())</div></pre></td></tr></table></figure>
+<blockquote>
 <p>以上两者均会输出下载的<em>Django</em>版本号。</p>
 </blockquote>
 <h2 id="测试Django运行"><a href="#测试Django运行" class="headerlink" title="测试Django运行"></a>测试Django运行</h2><h3 id="项目建立"><a href="#项目建立" class="headerlink" title="项目建立"></a>项目建立</h3><p><code>cd</code> 至编译器或者是IDE的开发环境的目录下，使用创建项目命令：<code>django-admin startproject mysite</code><strong>（其中的mysite是项目名称）</strong>：</p>
@@ -520,7 +511,7 @@ print(django.get_version())
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月11日 - 21:10</p>
+  <p><span>最后更新:</span>2018年10月20日 - 07:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -853,7 +844,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      201.6k
+      200.1k
     </span>
   
 </div>
@@ -866,6 +857,7 @@ var jiathis_config={
   <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
 
 -->
+
 
         
 <div class="busuanzi-count">
@@ -1362,6 +1354,7 @@ var jiathis_config={
   
 
   
+
 
 </body>
 </html>

@@ -96,7 +96,7 @@
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-19%20%E4%B8%8B%E5%8D%889.31.32.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-19%20%E4%B8%8B%E5%8D%889.29.37.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-03%20%E4%B8%8B%E5%8D%888.36.33.png">
-<meta property="og:updated_time" content="2018-10-11T13:02:34.856Z">
+<meta property="og:updated_time" content="2018-10-19T23:42:39.933Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用python&#x2F;R可视化GitHub上的java热门开源项目">
 <meta name="twitter:description" content="直接开始这个小项目吧。  网页地址：https://api.github.com/search/repositories?q=language:java&amp;amp;sort=stars   在这个网页中有相关的目前比较热门的开源项目（以star的数目来衡量），打开发现这是典型的json格式啊。">
@@ -131,6 +131,7 @@
 
 
   <link rel="canonical" href="https://liujunjie11.github.io/2018/03/19/用python可视化GitHub上的java热门开源项目/"/>
+
 
 
 
@@ -407,7 +408,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  486
+                  442
                 </span>
               
 
@@ -423,7 +424,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  1
                 </span>
               
             </div>
@@ -459,56 +460,8 @@
 <blockquote>
 <p>换一换就可知道所有编程语言目前比较热门的开源项目了。</p>
 </blockquote>
-<h2 id="python代码实现"><a href="#python代码实现" class="headerlink" title="python代码实现"></a>python代码实现</h2><pre><code>&apos;&apos;&apos;
-
-    函数目标：
-    将GitHub上的java热门的开源项目可视化
-
-    编写时间：
-    2018-3-19
-
-&apos;&apos;&apos;
-
-import requests
-from matplotlib import pyplot as plt
-import pygal
-from pygal.style import LightColorizedStyle as lcs, LightenStyle as ls
-
-
-if __name__ == &apos;__main__&apos;:
-    #添加代理配置
-    url = &apos;https://api.github.com/search/repositories&apos;
-    header = {&apos;User-Agent&apos;:&apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36&apos;,
-              &apos;Connection&apos;: &apos;keep-alive&apos;}
-
-    paramter = {&apos;q&apos;: &apos;language:java&apos;,
-              &apos;sort&apos;: &apos;stars&apos;}
-    re = requests.get(url=url, params=paramter, headers=header)
-    # 将网页转化为python字典即用json()函数方法才可显示与网页内容一致！
-    re.encoding = &apos;utf-8&apos;
-    js_cont = re.json()
-    item = js_cont[&apos;items&apos;]
-    star_count = []
-    names = []
-    full_names = []
-    for each in item:
-            star_count.append(each[&apos;stargazers_count&apos;])
-            names.append(each[&apos;name&apos;])
-            full_names.append(each[&apos;full_name&apos;])
-    # 添加高亮颜色
-    my_style = ls(&apos;#333366&apos;, base_style=lcs)
-
-    # 添加相关的设置
-    my_config = pygal.Config()
-    my_config.label_font_size = 28
-
-    bar_chart = pygal.Bar(config=my_config, style=my_style, x_label_rotation=60, show_legend=False)
-    bar_chart.add(&apos;&apos;, star_count)
-    bar_chart.title = &apos;Java  projects stars on Github&apos;
-    bar_chart.x_labels = names
-    # 保存至目录下的文件中
-    bar_chart.render_to_file(&apos;Java stars in Github.svg&apos;)
-</code></pre><blockquote>
+<h2 id="python代码实现"><a href="#python代码实现" class="headerlink" title="python代码实现"></a>python代码实现</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="string">'''</span></div><div class="line"><span class="string">    </span></div><div class="line"><span class="string">    函数目标：</span></div><div class="line"><span class="string">    将GitHub上的java热门的开源项目可视化</span></div><div class="line"><span class="string">    </span></div><div class="line"><span class="string">    编写时间：</span></div><div class="line"><span class="string">    2018-3-19</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">'''</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> requests</div><div class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</div><div class="line"><span class="keyword">import</span> pygal</div><div class="line"><span class="keyword">from</span> pygal.style <span class="keyword">import</span> LightColorizedStyle <span class="keyword">as</span> lcs, LightenStyle <span class="keyword">as</span> ls</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">	<span class="comment">#添加代理配置</span></div><div class="line">    url = <span class="string">'https://api.github.com/search/repositories'</span></div><div class="line">    header = &#123;<span class="string">'User-Agent'</span>:<span class="string">'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36'</span>,</div><div class="line">              <span class="string">'Connection'</span>: <span class="string">'keep-alive'</span>&#125;</div><div class="line">        </div><div class="line">    paramter = &#123;<span class="string">'q'</span>: <span class="string">'language:java'</span>,</div><div class="line">              <span class="string">'sort'</span>: <span class="string">'stars'</span>&#125;</div><div class="line">    re = requests.get(url=url, params=paramter, headers=header)</div><div class="line">    <span class="comment"># 将网页转化为python字典即用json()函数方法才可显示与网页内容一致！</span></div><div class="line">    re.encoding = <span class="string">'utf-8'</span></div><div class="line">    js_cont = re.json()</div><div class="line">    item = js_cont[<span class="string">'items'</span>]</div><div class="line">    star_count = []</div><div class="line">    names = []</div><div class="line">    full_names = []</div><div class="line">    <span class="keyword">for</span> each <span class="keyword">in</span> item:</div><div class="line">    		star_count.append(each[<span class="string">'stargazers_count'</span>])</div><div class="line">            names.append(each[<span class="string">'name'</span>])</div><div class="line">            full_names.append(each[<span class="string">'full_name'</span>])</div><div class="line">    <span class="comment"># 添加高亮颜色</span></div><div class="line">    my_style = ls(<span class="string">'#333366'</span>, base_style=lcs)</div><div class="line">    </div><div class="line">    <span class="comment"># 添加相关的设置</span></div><div class="line">    my_config = pygal.Config()</div><div class="line">    my_config.label_font_size = <span class="number">28</span></div><div class="line">    </div><div class="line">    bar_chart = pygal.Bar(config=my_config, style=my_style, x_label_rotation=<span class="number">60</span>, show_legend=<span class="keyword">False</span>)</div><div class="line">    bar_chart.add(<span class="string">''</span>, star_count)</div><div class="line">    bar_chart.title = <span class="string">'Java  projects stars on Github'</span></div><div class="line">    bar_chart.x_labels = names</div><div class="line">    <span class="comment"># 保存至目录下的文件中</span></div><div class="line">    bar_chart.render_to_file(<span class="string">'Java stars in Github.svg'</span>)</div></pre></td></tr></table></figure>
+<blockquote>
 <p>之中不懂的可利用好搜索引擎。有一些爬虫的知识。</p>
 </blockquote>
 <p>运行得到：</p>
@@ -551,7 +504,7 @@ if __name__ == &apos;__main__&apos;:
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月11日 - 21:10</p>
+  <p><span>最后更新:</span>2018年10月20日 - 07:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -884,7 +837,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      201.6k
+      200.1k
     </span>
   
 </div>
@@ -897,6 +850,7 @@ var jiathis_config={
   <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
 
 -->
+
 
         
 <div class="busuanzi-count">
@@ -1393,6 +1347,7 @@ var jiathis_config={
   
 
   
+
 
 </body>
 </html>

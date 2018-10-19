@@ -97,7 +97,7 @@
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-16%20%E4%B8%8A%E5%8D%8810.27.14.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-16%20%E4%B8%8A%E5%8D%8810.31.22.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-16%20%E4%B8%8A%E5%8D%8810.47.57.png">
-<meta property="og:updated_time" content="2018-10-16T10:13:16.276Z">
+<meta property="og:updated_time" content="2018-10-19T22:41:12.096Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac上下载xgboost">
 <meta name="twitter:description" content="这会有事了，感觉有必要记录一下。 最近想搞搞kaggle的入门级比赛，参考他人的kernel用到了xgboost，但是安装时遇到了一些坑，特别是官网的安装教程…真的让人吐血，根本不能解决我要安装的欲望。以下是我参考了一些文章并且成功安装的经验记录。">
@@ -132,6 +132,7 @@
 
 
   <link rel="canonical" href="https://liujunjie11.github.io/2018/10/15/Mac上下载xgboost/"/>
+
 
 
 
@@ -408,7 +409,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  568
+                  567
                 </span>
               
 
@@ -449,20 +450,20 @@
 <p>最近想搞搞<em>kaggle</em>的入门级比赛，参考他人的<em>kernel</em>用到了<em>xgboost</em>，但是安装时遇到了一些坑，特别是<a href="https://xgboost.readthedocs.io/en/latest/build.html" target="_blank" rel="external">官网的安装教程</a>…真的让人吐血，根本不能解决我要安装的欲望。以下是我参考了一些文章并且成功安装的经验记录。</p>
 <a id="more"></a>
 <h1 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h1><p>先用homebrew下载相关的依赖：</p>
-<pre><code>brew install gcc --without-multilib
-</code></pre><blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install gcc --without-multilib</div></pre></td></tr></table></figure>
+<blockquote>
 <p>加上<code>--without-multilib</code>目的是开启默认不开启支持多线程的插件。</p>
 </blockquote>
 <p>然后git下载在GitHub上的xgboost：</p>
-<pre><code>git clone --recursive https://github.com/dmlc/xgboost
-</code></pre><blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> --recursive https://github.com/dmlc/xgboost</div></pre></td></tr></table></figure>
+<blockquote>
 <p>最好下载在根目录。</p>
 </blockquote>
 <p>下载完成之后：</p>
-<pre><code>cd xgboost
-</code></pre><p>修改相关的配置文件：</p>
-<pre><code>vi config.mk
-</code></pre><blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> xgboost</div></pre></td></tr></table></figure>
+<p>修改相关的配置文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi config.mk</div></pre></td></tr></table></figure>
+<blockquote>
 <p>实际上这个文件有好多个，我最终都修改成一致的了…如下图</p>
 </blockquote>
 <p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-16%20%E4%B8%8A%E5%8D%8810.25.58.png" alt=""></p>
@@ -473,15 +474,13 @@ export MPICXX = /usr/local/Cellar/gcc/8.2.0/bin/mpicxx
 </code></pre><p>如图：</p>
 <p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-16%20%E4%B8%8A%E5%8D%8810.27.14.png" alt=""></p>
 <p>之后使用命令行：</p>
-<pre><code>cp make/config.mk ./config.mk
-make -j4
-</code></pre><blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cp make/config.mk ./config.mk</div><div class="line">make -j4</div></pre></td></tr></table></figure>
+<blockquote>
 <p><code>-j4</code>是开启4个线程的意思。</p>
 </blockquote>
 <p>之后就是编译成包的过程了：</p>
-<pre><code>cd python-package
-python setup.py install
-</code></pre><blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> python-package</div><div class="line">   python setup.py install</div></pre></td></tr></table></figure>
+<blockquote>
 <p>我用的是anaconda的python版本。</p>
 </blockquote>
 <h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><p>如图：</p>
@@ -542,7 +541,7 @@ export MPICXX = /usr/local/Cellar/gcc/8.2.0/bin/mpicxx
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月16日 - 18:10</p>
+  <p><span>最后更新:</span>2018年10月20日 - 06:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -875,7 +874,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      201.6k
+      200.1k
     </span>
   
 </div>
@@ -888,6 +887,7 @@ var jiathis_config={
   <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
 
 -->
+
 
         
 <div class="busuanzi-count">
@@ -1384,6 +1384,7 @@ var jiathis_config={
   
 
   
+
 
 </body>
 </html>

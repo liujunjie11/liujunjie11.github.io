@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="LXiHa`Notes">
 <meta property="og:description" content="关于vi / vim命令的记录">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-11T12:59:09.233Z">
+<meta property="og:updated_time" content="2018-10-19T23:48:11.031Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于Vi&#x2F;Vim的基本使用的记录">
 <meta name="twitter:description" content="关于vi / vim命令的记录">
@@ -127,6 +127,7 @@
 
 
   <link rel="canonical" href="https://liujunjie11.github.io/2017/11/22/关于Vi-Vim的基本使用的记录/"/>
+
 
 
 
@@ -444,16 +445,7 @@
 <li><strong>关于vi / vim命令的记录</strong></li>
 </ul>
 <a id="more"></a>
-<p><em>其中的命令的快捷键均对应Mac的“control”键</em></p>
-<p>一般模式到编辑模式：i,o,a,r(可大写)  按下ESC推回<br>            ↑↑<br>           编译模式与命令模式两者不可切换<br>            ↓↓<br>一般模式到命令模式：：，/，？进入 按下ESC推回</p>
-<p>vi /vim （文件）        //编译一个文件</p>
-<p>在一般模式中输入“：wq” 保存之后离开vi（输入“：wq!”可强行写入，即在权限可改的前提下）<br>另外用“：w”可获得文件的相关的基本信息，利用“：q”可直接推出编译</p>
-<p>alias 的使用得知一些命令行名字的改变</p>
-<p>vim 与 vi的区别：<br>最为简单的一点为两者在打开文件的显示亦然不同，前者的功能亦然是相比后者多多的。</p>
-<p>即在一般模式下的关于文件内容的选择相关的操作（亦称为所谓的Visual Block，即块选择）：<br>在需要的地方按下Ctrl+v —&gt; 移动到需求的地方，开始发白…此时即可进行相关的操作了（y:复制，p:粘贴，d:删除）</p>
-<p>vim的多文本的编译：<br>多个文件的打开：vim (文件名1） （文件名2）<br>多个文本编译的按键<br>:n    编译下一个文件<br>:N    编译上一个文件<br>:fiel    目前所有的文件展示<br>其中的快捷键记录：“G:到最后一行”，“u:还原数据”，“q:推出”</p>
-<p>vim多个窗口的实现：<br>:sp    在目前的窗口中按下得出同一个文件的另一个新的窗口<br>:sp (文件名)    在目前的窗口打开新的文件的一个新的窗口<br>Ctrl+w+j / ↓    换窗口操作，按ctrl不放，在按下w放开所有的键按下最后的键即可<br>Ctrl+w+k / ↑     如上操作<br>Ctrl +w+q    等于在一个窗口中按下“:q”推出现在的窗口</p>
-<p>关于在vim之中的一些环境设置可参考其他的材料。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">*其中的命令的快捷键均对应Mac的“control”键*</div><div class="line"></div><div class="line">一般模式到编辑模式：i,o,a,r(可大写)  按下ESC推回</div><div class="line">			↑↑</div><div class="line">		   编译模式与命令模式两者不可切换</div><div class="line">			↓↓</div><div class="line">一般模式到命令模式：：，/，？进入 按下ESC推回</div><div class="line"></div><div class="line">vi /vim （文件）		//编译一个文件</div><div class="line"></div><div class="line">在一般模式中输入“：wq” 保存之后离开vi（输入“：wq!”可强行写入，即在权限可改的前提下）</div><div class="line">另外用“：w”可获得文件的相关的基本信息，利用“：q”可直接推出编译</div><div class="line"></div><div class="line"><span class="built_in">alias</span> 的使用得知一些命令行名字的改变</div><div class="line"></div><div class="line">vim 与 vi的区别：</div><div class="line">最为简单的一点为两者在打开文件的显示亦然不同，前者的功能亦然是相比后者多多的。</div><div class="line"></div><div class="line">即在一般模式下的关于文件内容的选择相关的操作（亦称为所谓的Visual Block，即块选择）：</div><div class="line">在需要的地方按下Ctrl+v —&gt; 移动到需求的地方，开始发白…此时即可进行相关的操作了（y:复制，p:粘贴，d:删除）</div><div class="line"></div><div class="line">vim的多文本的编译：</div><div class="line">多个文件的打开：vim (文件名1） （文件名2）</div><div class="line">多个文本编译的按键	</div><div class="line">:n	编译下一个文件</div><div class="line">:N	编译上一个文件</div><div class="line">:fiel	目前所有的文件展示</div><div class="line">其中的快捷键记录：“G:到最后一行”，“u:还原数据”，“q:推出”</div><div class="line"></div><div class="line">vim多个窗口的实现：</div><div class="line">:sp	在目前的窗口中按下得出同一个文件的另一个新的窗口</div><div class="line">:sp (文件名)	在目前的窗口打开新的文件的一个新的窗口</div><div class="line">Ctrl+w+j / ↓	换窗口操作，按ctrl不放，在按下w放开所有的键按下最后的键即可</div><div class="line">Ctrl+w+k / ↑ 	如上操作</div><div class="line">Ctrl +w+q	等于在一个窗口中按下“:q”推出现在的窗口</div><div class="line"></div><div class="line">关于在vim之中的一些环境设置可参考其他的材料。</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -483,7 +475,7 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月11日 - 20:10</p>
+  <p><span>最后更新:</span>2018年10月20日 - 07:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -791,7 +783,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      201.6k
+      200.1k
     </span>
   
 </div>
@@ -804,6 +796,7 @@ var jiathis_config={
   <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
 
 -->
+
 
         
 <div class="busuanzi-count">
@@ -1300,6 +1293,7 @@ var jiathis_config={
   
 
   
+
 
 </body>
 </html>

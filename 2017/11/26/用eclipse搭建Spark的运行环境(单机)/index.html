@@ -98,7 +98,7 @@
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-26%20%E4%B8%8B%E5%8D%887.01.52.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-26%20%E4%B8%8B%E5%8D%886.35.33.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-29%20%E4%B8%8B%E5%8D%889.43.20.png">
-<meta property="og:updated_time" content="2018-10-11T12:59:26.733Z">
+<meta property="og:updated_time" content="2018-10-19T23:47:33.434Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用eclipse搭建Spark的运行环境(单机)">
 <meta name="twitter:description" content="学习Spark用的eclipse习惯了，看了这一篇文章搭建了一个单机环境，不过这个单机环境搭建起来了，以后的集群环境我相信也容易了… 准备 本地下载Scala  本地有下载Spark  本地有下载eclipse以及Scala的插件    以上过程在网上已经有一大堆教程了。">
@@ -133,6 +133,7 @@
 
 
   <link rel="canonical" href="https://liujunjie11.github.io/2017/11/26/用eclipse搭建Spark的运行环境(单机)/"/>
+
 
 
 
@@ -409,7 +410,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  910
+                  919
                 </span>
               
 
@@ -481,10 +482,7 @@
 <h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><ul>
 <li>环境搭建就是那么的简单，在此测试一下。在刚刚建好的工程下输入以下代码，<strong>注意其中的提示</strong></li>
 </ul>
-<blockquote>
-<p>import org.apache.spark.SparkConf<br>import org.apache.spark.SparkContext<br>      //以下主类名为工程名<br>object First<em>Spark {<br>  def main(args: Array[String]): Unit = {<br>    val conf = new SparkConf()<br>    conf.setAppName(“Frist Spark”)<br>    conf.setMaster(“local”)<br>    val sc = new SparkContext(conf)<br>                             //以下为文件的所在地<br>    val lines = sc.textFile(“/Users/junjieliu/Downloads/README.md”, 1)<br>    val words = lines.flatMap { (lines =&gt; lines.split(“ “)) }<br>    val pairs = words.map { word =&gt; (word, 1) }<br>    val wordcount = pairs.reduceByKey(</em> + _)<br>    wordcount.foreach(pair =&gt; println(pair._1 + “:” + pair._2))<br>    sc.stop()<br>  }</p>
-</blockquote>
-<p>}</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> org.apache.spark.SparkConf</div><div class="line"><span class="keyword">import</span> org.apache.spark.SparkContext</div><div class="line">      <span class="comment">//以下主类名为工程名</span></div><div class="line">object First_Spark &#123;</div><div class="line">  <span class="function">def <span class="title">main</span><span class="params">(args: Array[String])</span>: Unit </span>= &#123;</div><div class="line">    val conf = <span class="keyword">new</span> SparkConf()</div><div class="line">    conf.setAppName(<span class="string">"Frist Spark"</span>)</div><div class="line">    conf.setMaster(<span class="string">"local"</span>)</div><div class="line">    val sc = <span class="keyword">new</span> SparkContext(conf)</div><div class="line">                             <span class="comment">//以下为文件的所在地</span></div><div class="line">    val lines = sc.textFile(<span class="string">"/Users/junjieliu/Downloads/README.md"</span>, <span class="number">1</span>)</div><div class="line">    val words = lines.flatMap &#123; (lines =&gt; lines.split(<span class="string">" "</span>)) &#125;</div><div class="line">    val pairs = words.map &#123; word =&gt; (word, <span class="number">1</span>) &#125;</div><div class="line">    val wordcount = pairs.reduceByKey(_ + _)</div><div class="line">    wordcount.foreach(pair =&gt; println(pair._1 + <span class="string">":"</span> + pair._2))</div><div class="line">    sc.stop()</div><div class="line">  &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <hr>
 <ul>
 <li>运行，点击<em>run</em>（如图）</li>
@@ -541,7 +539,7 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月11日 - 20:10</p>
+  <p><span>最后更新:</span>2018年10月20日 - 07:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -874,7 +872,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      201.6k
+      200.1k
     </span>
   
 </div>
@@ -887,6 +885,7 @@ var jiathis_config={
   <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
 
 -->
+
 
         
 <div class="busuanzi-count">
@@ -1383,6 +1382,7 @@ var jiathis_config={
   
 
   
+
 
 </body>
 </html>

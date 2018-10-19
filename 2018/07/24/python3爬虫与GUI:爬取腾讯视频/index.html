@@ -100,7 +100,7 @@
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.42.42.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.46.32.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/7%E6%9C%88-24-2018%2020-00-51.gif">
-<meta property="og:updated_time" content="2018-10-11T13:06:44.378Z">
+<meta property="og:updated_time" content="2018-10-19T22:47:47.550Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python3爬虫与GUI:爬取腾讯视频">
 <meta name="twitter:description" content="最近想研究一下用python爬虫爬一些经常看的视频网站，其中包括有腾讯视频、YouTube、Twitter。本文从腾讯开始，之后会慢慢的更新其他两个的。 腾讯视频我之前就有过尝试，结果都失败了(我的目标是直接爬取完整视频！实际上这视频分析来分析去都是分段来的..)花了不少时间，结果还是停留在了只能爬取分段视频的阶段..下面也来简单说说如何爬取一些分段片段！">
@@ -135,6 +135,7 @@
 
 
   <link rel="canonical" href="https://liujunjie11.github.io/2018/07/24/python3爬虫与GUI:爬取腾讯视频/"/>
+
 
 
 
@@ -490,58 +491,7 @@
 <p><strong>至此，就都已经分析完了，只剩下代码的事了。</strong></p>
 <h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><p><strong>先说一下，这样的代码我写过太多次了..有点腻了…写不下去了，感觉总是在做一些重复的事，我就不打算写太多了，大概说一下思路吧，将各个片段下载来之后，再利用一个<em>python</em>处理视频的模块库将择好几个片段一同进行连接即可完成了。但是，貌似今天我看到好像没有分片段了？好像直接可以爬到完整版了？难道是错觉？算了，反正我也不怎么下载腾讯视频..哈哈～</strong></p>
 <p>核心代码，剩下的代码可参考我的其他博文，自己写吧，腻死了..这段代码已经达到能够爬取到所有分片段了..</p>
-<pre><code>`
-&apos;&apos;&apos;
-Created on 2018年7月24日
-
-@author: junjieliu
-&apos;&apos;&apos;
-
-&quot;&quot;&quot;
-函数目标：结合pyQT5界面化爬取腾讯视频
-
-编写时间：2018-7.24
-&quot;&quot;&quot;
-
-import time 
-import requests
-import sys
-import re 
-from PyQt5.QtCore import QCoreApplication
-from PyQt5.QtWidgets import (QPushButton, QWidget, QLineEdit, QTextEdit, QGridLayout, QApplication, QComboBox)
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.wait import WebDriverWait
-from urllib.parse import quote
-from pyquery import PyQuery as pq
-
-browser = webdriver.Chrome(&apos;/Users/junjieliu/Documents/webdirver小插件/chromedriver&apos;)
-# 设置显示等待，超过时间返回失败，否则就地正法！
-wait = WebDriverWait(browser, 40)
-input_url = &apos;https://v.qq.com/x/cover/fzfi0p4etjrckhh/a00260ipkjg.html&apos;
-
-url = &apos;http://www.weibodang.cn/dang.php&apos;
-browser.get(url)
-input = wait.until(
-    EC.presence_of_element_located((By.CSS_SELECTOR, &apos;#aform &gt; div &gt; div &gt; div &gt; input&apos;)))
-button = wait.until(
-    EC.element_to_be_clickable((By.CSS_SELECTOR, &apos;#aform &gt; div &gt; div &gt; div &gt; span &gt; input&apos;)))
-# button = browser.find_element_by_name(&apos;check&apos;)
-
-input.clear()
-input.send_keys(input_url)
-button.click()
-html = browser.page_source
-
-# 直接爬取相关的内容，即播放地址，再进行一番清洗得到正确的地址
-referer = re.findall(r&apos;&lt;video src=&quot;(.*?)&quot;&apos;, html, re.S)
-for_name = re.match(r&apos;视频如下可直接播放，.*?：&quot;(.*?)&quot;&apos;, html, re.S)
-print(for_name)
-for each in referer:
-    results = each.replace(&apos;;&apos;, &apos;&amp;&apos;)
-     print(results)
-</code></pre><p>`</p>
+ <figure class="highlight python"><figcaption><span>`</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line">	<span class="string">'''</span></div><div class="line"><span class="string">	Created on 2018年7月24日</span></div><div class="line"><span class="string">	</span></div><div class="line"><span class="string">	@author: junjieliu</span></div><div class="line"><span class="string">	'''</span></div><div class="line">	</div><div class="line">	<span class="string">"""</span></div><div class="line"><span class="string">	函数目标：结合pyQT5界面化爬取腾讯视频</span></div><div class="line"><span class="string">	</span></div><div class="line"><span class="string">	编写时间：2018-7.24</span></div><div class="line"><span class="string">	"""</span></div><div class="line">	</div><div class="line">	<span class="keyword">import</span> time </div><div class="line">	<span class="keyword">import</span> requests</div><div class="line">	<span class="keyword">import</span> sys</div><div class="line">	<span class="keyword">import</span> re </div><div class="line">	<span class="keyword">from</span> PyQt5.QtCore <span class="keyword">import</span> QCoreApplication</div><div class="line">	<span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> (QPushButton, QWidget, QLineEdit, QTextEdit, QGridLayout, QApplication, QComboBox)</div><div class="line">	<span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</div><div class="line">	<span class="keyword">from</span> selenium.webdriver.common.by <span class="keyword">import</span> By</div><div class="line">	<span class="keyword">from</span> selenium.webdriver.support <span class="keyword">import</span> expected_conditions <span class="keyword">as</span> EC</div><div class="line">	<span class="keyword">from</span> selenium.webdriver.support.wait <span class="keyword">import</span> WebDriverWait</div><div class="line">	<span class="keyword">from</span> urllib.parse <span class="keyword">import</span> quote</div><div class="line">	<span class="keyword">from</span> pyquery <span class="keyword">import</span> PyQuery <span class="keyword">as</span> pq</div><div class="line">	</div><div class="line">	browser = webdriver.Chrome(<span class="string">'/Users/junjieliu/Documents/webdirver小插件/chromedriver'</span>)</div><div class="line">	<span class="comment"># 设置显示等待，超过时间返回失败，否则就地正法！</span></div><div class="line">	wait = WebDriverWait(browser, <span class="number">40</span>)</div><div class="line">	input_url = <span class="string">'https://v.qq.com/x/cover/fzfi0p4etjrckhh/a00260ipkjg.html'</span></div><div class="line">	</div><div class="line">	url = <span class="string">'http://www.weibodang.cn/dang.php'</span></div><div class="line">	browser.get(url)</div><div class="line">	input = wait.until(</div><div class="line">	    EC.presence_of_element_located((By.CSS_SELECTOR, <span class="string">'#aform &gt; div &gt; div &gt; div &gt; input'</span>)))</div><div class="line">	button = wait.until(</div><div class="line">	    EC.element_to_be_clickable((By.CSS_SELECTOR, <span class="string">'#aform &gt; div &gt; div &gt; div &gt; span &gt; input'</span>)))</div><div class="line">	<span class="comment"># button = browser.find_element_by_name('check')</span></div><div class="line">	</div><div class="line">	input.clear()</div><div class="line">	input.send_keys(input_url)</div><div class="line">	button.click()</div><div class="line">	html = browser.page_source</div><div class="line">	</div><div class="line">	<span class="comment"># 直接爬取相关的内容，即播放地址，再进行一番清洗得到正确的地址</span></div><div class="line">	referer = re.findall(<span class="string">r'&lt;video src="(.*?)"'</span>, html, re.S)</div><div class="line">	for_name = re.match(<span class="string">r'视频如下可直接播放，.*?："(.*?)"'</span>, html, re.S)</div><div class="line">	print(for_name)</div><div class="line">	<span class="keyword">for</span> each <span class="keyword">in</span> referer:</div><div class="line">	    results = each.replace(<span class="string">';'</span>, <span class="string">'&amp;'</span>)</div><div class="line">		 print(results)</div><div class="line"></div><div class="line">`</div></pre></td></tr></table></figure>
 <blockquote>
 <p><strong>对了，GUI用的<em>pyQT5在我之前的博文也有介绍了，不说了..我承认我有点懶～</em></strong></p>
 </blockquote>
@@ -578,7 +528,7 @@ for each in referer:
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月11日 - 21:10</p>
+  <p><span>最后更新:</span>2018年10月20日 - 06:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -911,7 +861,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      201.6k
+      200.1k
     </span>
   
 </div>
@@ -924,6 +874,7 @@ var jiathis_config={
   <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
 
 -->
+
 
         
 <div class="busuanzi-count">
@@ -1420,6 +1371,7 @@ var jiathis_config={
   
 
   
+
 
 </body>
 </html>

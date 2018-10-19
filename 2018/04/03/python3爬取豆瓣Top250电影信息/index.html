@@ -95,7 +95,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-04%20%E4%B8%8A%E5%8D%8810.17.59.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-04%20%E4%B8%8A%E5%8D%8810.18.27.png">
-<meta property="og:updated_time" content="2018-10-11T13:03:52.982Z">
+<meta property="og:updated_time" content="2018-10-19T23:39:19.041Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python3爬取豆瓣Top250电影信息">
 <meta name="twitter:description" content="以下是通过正则表达式爬取的猫眼电影以及豆瓣电影的相关的电影信息的代码过程。">
@@ -130,6 +130,7 @@
 
 
   <link rel="canonical" href="https://liujunjie11.github.io/2018/04/03/python3爬取豆瓣Top250电影信息/"/>
+
 
 
 
@@ -406,7 +407,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.1k
+                  958
                 </span>
               
 
@@ -422,7 +423,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  4
                 </span>
               
             </div>
@@ -451,108 +452,63 @@
 <blockquote>
 <p>我们可通过其爬取需要的信息，利用正则表达式来进行文本的挖掘。</p>
 </blockquote>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre><code>&apos;&apos;&apos;
-    函数目标：
-    爬取猫眼电影的top100信息
-
-    编写时间：
-    2018-03-28
-
-&apos;&apos;&apos;
-
-&apos;&apos;&apos;
-import requests
-import re
-import json
-
-if __name__ == &apos;__main__&apos;:
-
-print(&apos;猫眼电影Top100信息如下：&apos;)
-#循环10次，得出页面上的Top100的电影信息
-for i in range(0, 10):
-
-    url = &quot;http://maoyan.com/board/4?&quot;
-    header = {
-            &apos;Host&apos;:&apos;maoyan.com&apos;,
-            &apos;Referer&apos;:&apos;http://maoyan.com/board/4?offset=20&apos;,
-            &apos;User-Agent&apos;:&apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36&apos;}
-
-    paramters = {
-            &apos;offset&apos;: i * 10}
-    request_tasget = requests.get(url=url, headers=header, params=paramters)
-    request_tasget.encoding = &apos;utf-8&apos;
-
-    # 实际上应该考虑考虑网的问题...连不上就一般没有数据返回了，找一个字符作为接口之后利用万能表达式即可
-    infos_list = re.findall(
-    r&apos;&lt;dd&gt;.*?board-index.*?&gt;(.*?)&lt;/i&gt;.*?alt.*?src=&quot;(.*?)&quot;.*?&lt;a.*?&gt;(.*?)&lt;/a&gt;.*?&quot;star&quot;&gt;(.*?)&lt;/p&gt;.*?&quot;releasetime&quot;&gt;(.*?)&lt;/p&gt;.*?&quot;integer&quot;&gt;(.*?)&lt;/i&gt;.*?&quot;fraction&quot;&gt;(.*?)&lt;/i&gt;&apos;,
-    request_tasget.text, re.S)  # @UndefinedVariable
-
-    #建立存储信息的字典
-    for each in infos_list:
-        yields = {
-                &apos;index&apos;:each[0],
-                &apos;image_info&apos;:each[1],
-                &apos;name&apos;:each[2],
-                &apos;actor&apos;:each[3].strip(),
-                &apos;time&apos;:each[4],
-                &apos;score&apos;:each[5] + each[6]
-                }
-        print(yields)
-</code></pre><h2 id="爬取豆瓣电影"><a href="#爬取豆瓣电影" class="headerlink" title="爬取豆瓣电影"></a>爬取豆瓣电影</h2><h3 id="分析-1"><a href="#分析-1" class="headerlink" title="分析"></a>分析</h3><p>与爬取猫眼电影信息一样，都是一样的，具体的差距还是在豆瓣上爬取信息需要<em>cookie</em>，具体可参考下面的代码。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="string">'''</span></div><div class="line"><span class="string">    函数目标：</span></div><div class="line"><span class="string">    爬取猫眼电影的top100信息</span></div><div class="line"><span class="string">    </span></div><div class="line"><span class="string">    编写时间：</span></div><div class="line"><span class="string">    2018-03-28</span></div><div class="line"><span class="string">    </span></div><div class="line"><span class="string">'''</span></div><div class="line"></div><div class="line"><span class="string">'''</span></div><div class="line"><span class="string">import requests</span></div><div class="line"><span class="string">import re</span></div><div class="line"><span class="string">import json</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">if __name__ == '__main__':</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">   print('猫眼电影Top100信息如下：')</span></div><div class="line"><span class="string">   #循环10次，得出页面上的Top100的电影信息</span></div><div class="line"><span class="string">   for i in range(0, 10):</span></div><div class="line"><span class="string">       </span></div><div class="line"><span class="string">       url = "http://maoyan.com/board/4?"</span></div><div class="line"><span class="string">       header = &#123;</span></div><div class="line"><span class="string">               'Host':'maoyan.com',</span></div><div class="line"><span class="string">               'Referer':'http://maoyan.com/board/4?offset=20',</span></div><div class="line"><span class="string">               'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'&#125;</span></div><div class="line"><span class="string">       </span></div><div class="line"><span class="string">       paramters = &#123;</span></div><div class="line"><span class="string">               'offset': i * 10&#125;</span></div><div class="line"><span class="string">       request_tasget = requests.get(url=url, headers=header, params=paramters)</span></div><div class="line"><span class="string">       request_tasget.encoding = 'utf-8'</span></div><div class="line"><span class="string">       </span></div><div class="line"><span class="string">       # 实际上应该考虑考虑网的问题...连不上就一般没有数据返回了，找一个字符作为接口之后利用万能表达式即可</span></div><div class="line"><span class="string">       infos_list = re.findall(</span></div><div class="line"><span class="string">       r'&lt;dd&gt;.*?board-index.*?&gt;(.*?)&lt;/i&gt;.*?alt.*?src="(.*?)".*?&lt;a.*?&gt;(.*?)&lt;/a&gt;.*?"star"&gt;(.*?)&lt;/p&gt;.*?"releasetime"&gt;(.*?)&lt;/p&gt;.*?"integer"&gt;(.*?)&lt;/i&gt;.*?"fraction"&gt;(.*?)&lt;/i&gt;',</span></div><div class="line"><span class="string">       request_tasget.text, re.S)  # @UndefinedVariable</span></div><div class="line"><span class="string">       </span></div><div class="line"><span class="string">       #建立存储信息的字典</span></div><div class="line"><span class="string">       for each in infos_list:</span></div><div class="line"><span class="string">           yields = &#123;</span></div><div class="line"><span class="string">                   'index':each[0],</span></div><div class="line"><span class="string">                   'image_info':each[1],</span></div><div class="line"><span class="string">                   'name':each[2],</span></div><div class="line"><span class="string">                   'actor':each[3].strip(),</span></div><div class="line"><span class="string">                   'time':each[4],</span></div><div class="line"><span class="string">                   'score':each[5] + each[6]</span></div><div class="line"><span class="string">                   &#125;</span></div><div class="line"><span class="string">           print(yields)</span></div></pre></td></tr></table></figure>
+<h2 id="爬取豆瓣电影"><a href="#爬取豆瓣电影" class="headerlink" title="爬取豆瓣电影"></a>爬取豆瓣电影</h2><h3 id="分析-1"><a href="#分析-1" class="headerlink" title="分析"></a>分析</h3><p>与爬取猫眼电影信息一样，都是一样的，具体的差距还是在豆瓣上爬取信息需要<em>cookie</em>，具体可参考下面的代码。</p>
 <p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-04%20%E4%B8%8A%E5%8D%8810.18.27.png" alt=""></p>
-<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><pre><code>&apos;&apos;&apos;
-    函数目标：
-    爬取豆瓣Top250的电影信息
+<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><pre><code class="python"><span class="string">'''</span>
+<span class="string">    函数目标：</span>
+<span class="string">    爬取豆瓣Top250的电影信息</span>
+<span class="string"></span>
+<span class="string">    编写时间：</span>
+<span class="string">    2018-04-01</span>
+<span class="string">'''</span>
 
-    编写时间：
-    2018-04-01
-&apos;&apos;&apos;
+<span class="keyword">import</span> requests
+<span class="keyword">import</span> re 
 
-import requests
-import re 
+<span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:
 
-if __name__ == &apos;__main__&apos;:
+print(<span class="string">'以下为豆瓣Top250的电影信息：'</span>)
 
-print(&apos;以下为豆瓣Top250的电影信息：&apos;)
+<span class="comment"># 从页面可看到一共有十页，每页上有25个电影的信息</span>
+<span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">10</span>):
 
-# 从页面可看到一共有十页，每页上有25个电影的信息
-for i in range(0, 10):
-
-    url = &quot;https://movie.douban.com/top250?&quot;
+    url = <span class="string">"https://movie.douban.com/top250?"</span>
     header = {
-            &apos;Connection&apos;: &apos;keep-alive&apos;,
-            &apos;Cookie&apos;: &apos;bid=x9ipkoKiQgw; _pk_ses.100001.4cf6=*; __utma=30149280.2001666009.1522587991.1522587991.1522587991.1; __utmb=30149280.0.10.1522587991; __utmc=30149280; __utmz=30149280.1522587991.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utma=223695111.1530785565.1522587991.1522587991.1522587991.1; __utmb=223695111.0.10.1522587991; __utmc=223695111; __utmz=223695111.1522587991.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); ll=&quot;118146&quot;; _vwo_uuid_v2=D575771A914BC38B3B7D081C0A0296FDC|939d8f7fdff1f383a97d572dab39fa1a; _pk_id.100001.4cf6=1de732c7ac4dc22b.1522587990.1.1522588516.1522587990.; ct=y&apos;,
-            &apos;Host&apos;: &apos;movie.douban.com&apos;,
-            &apos;Referer&apos;: &apos;https://movie.douban.com/top250?start=25&amp;filter=&apos;,
-            &apos;Upgrade-Insecure-Requests&apos;: &apos;1&apos;,
-            &apos;User-Agent&apos;: &apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36}&apos;
+            <span class="string">'Connection'</span>: <span class="string">'keep-alive'</span>,
+            <span class="string">'Cookie'</span>: <span class="string">'bid=x9ipkoKiQgw; _pk_ses.100001.4cf6=*; __utma=30149280.2001666009.1522587991.1522587991.1522587991.1; __utmb=30149280.0.10.1522587991; __utmc=30149280; __utmz=30149280.1522587991.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utma=223695111.1530785565.1522587991.1522587991.1522587991.1; __utmb=223695111.0.10.1522587991; __utmc=223695111; __utmz=223695111.1522587991.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); ll="118146"; _vwo_uuid_v2=D575771A914BC38B3B7D081C0A0296FDC|939d8f7fdff1f383a97d572dab39fa1a; _pk_id.100001.4cf6=1de732c7ac4dc22b.1522587990.1.1522588516.1522587990.; ct=y'</span>,
+            <span class="string">'Host'</span>: <span class="string">'movie.douban.com'</span>,
+            <span class="string">'Referer'</span>: <span class="string">'https://movie.douban.com/top250?start=25&amp;filter='</span>,
+            <span class="string">'Upgrade-Insecure-Requests'</span>: <span class="string">'1'</span>,
+            <span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36}'</span>
              }
     paramters = {
-             &apos;start&apos;: i * 25,
-             &apos;filter&apos;:&apos;&apos; 
+             <span class="string">'start'</span>: i * <span class="number">25</span>,
+             <span class="string">'filter'</span>:<span class="string">''</span> 
              }
 
     tasget = requests.get(url=url, headers=header, params=paramters)
-    tasget.encoding = &apos;utf-8&apos;
+    tasget.encoding = <span class="string">'utf-8'</span>
 
-    # 匹配正则表达式
-    infos = re.findall(r&apos;&lt;li&gt;.*?&lt;em class=&quot;&quot;&gt;(.*?)&lt;/em&gt;.*?alt=.*?src=&quot;(.*?)&quot;.*?&quot;title&quot;&gt;(.*?)&lt;/span&gt;.*?class=&quot;title&quot;&gt;&amp;nbsp;/&amp;nbsp;(.*?)&lt;/span&gt;.*?&quot;other&quot;&gt;&amp;nbsp;/&amp;nbsp;(.*?)&lt;/span&gt;.*?&lt;p class=&quot;&quot;&gt;(.*?)&amp;nbsp;&amp;nbsp;&amp;nbsp;(.*?)&lt;br&gt;(.*?)&amp;nbsp;/&amp;nbsp(.*?)&amp;nbsp;/&amp;nbsp(.*?)&lt;/p&gt;.*?average&quot;&gt;(.*?)&lt;/span&gt;&apos;, tasget.text, re.S)  # @UndefinedVariable
+    <span class="comment"># 匹配正则表达式</span>
+    infos = re.findall(<span class="string">r'&lt;li&gt;.*?&lt;em class=""&gt;(.*?)&lt;/em&gt;.*?alt=.*?src="(.*?)".*?"title"&gt;(.*?)&lt;/span&gt;.*?class="title"&gt;&amp;nbsp;/&amp;nbsp;(.*?)&lt;/span&gt;.*?"other"&gt;&amp;nbsp;/&amp;nbsp;(.*?)&lt;/span&gt;.*?&lt;p class=""&gt;(.*?)&amp;nbsp;&amp;nbsp;&amp;nbsp;(.*?)&lt;br&gt;(.*?)&amp;nbsp;/&amp;nbsp(.*?)&amp;nbsp;/&amp;nbsp(.*?)&lt;/p&gt;.*?average"&gt;(.*?)&lt;/span&gt;'</span>, tasget.text, re.S)  <span class="comment"># @UndefinedVariable</span>
 
-    # 建立一个空字典用于存储相关的信息
-    for each in infos:
+    <span class="comment"># 建立一个空字典用于存储相关的信息</span>
+    <span class="keyword">for</span> each <span class="keyword">in</span> infos:
         yields = {
-            &apos;index&apos;:each[0],  # 排名
-            &apos;img_info&apos;:each[1],  # 照片地址
-            &apos;name&apos;:each[2].strip() + &quot;/&quot; + each[3].strip() + &quot;/&quot; + each[4].strip(),  # 影片名称
-            &apos;director&apos;:each[5].strip(),  # 导演
-            &apos;actor&apos;:each[6],  # 演员
-            &apos;time_cy&apos;:each[7].strip() + each[8],  # 上演时间及地区
-            &apos;type&apos;:each[9].strip(),  # 影片类型
-            &apos;score&apos;:each[10]  # 评分
+            <span class="string">'index'</span>:each[<span class="number">0</span>],  <span class="comment"># 排名</span>
+            <span class="string">'img_info'</span>:each[<span class="number">1</span>],  <span class="comment"># 照片地址</span>
+            <span class="string">'name'</span>:each[<span class="number">2</span>].strip() + <span class="string">"/"</span> + each[<span class="number">3</span>].strip() + <span class="string">"/"</span> + each[<span class="number">4</span>].strip(),  <span class="comment"># 影片名称</span>
+            <span class="string">'director'</span>:each[<span class="number">5</span>].strip(),  <span class="comment"># 导演</span>
+            <span class="string">'actor'</span>:each[<span class="number">6</span>],  <span class="comment"># 演员</span>
+            <span class="string">'time_cy'</span>:each[<span class="number">7</span>].strip() + each[<span class="number">8</span>],  <span class="comment"># 上演时间及地区</span>
+            <span class="string">'type'</span>:each[<span class="number">9</span>].strip(),  <span class="comment"># 影片类型</span>
+            <span class="string">'score'</span>:each[<span class="number">10</span>]  <span class="comment"># 评分</span>
             }
 
         print(yields)
-</code></pre><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>简单说说其中的含义，表达式<code>.*?</code>是一个万能的匹配式，<code>(.*?)</code>是匹配想要爬取的内容，并且每一次伴随着一个索引号，每一个索引号对应着的信息不同。利用正则表达式可方便的进行文本与代码的分开挖掘，一般在写正则表达式时用<em>html</em>代码中的一些词来进行过渡就可以方便的写出来了。</p>
+</code></pre>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>简单说说其中的含义，表达式<code>.*?</code>是一个万能的匹配式，<code>(.*?)</code>是匹配想要爬取的内容，并且每一次伴随着一个索引号，每一个索引号对应着的信息不同。利用正则表达式可方便的进行文本与代码的分开挖掘，一般在写正则表达式时用<em>html</em>代码中的一些词来进行过渡就可以方便的写出来了。</p>
 <blockquote>
 <p>多说无益，还是需要自己来进行代码的测试了解的。</p>
 </blockquote>
@@ -591,7 +547,7 @@ for i in range(0, 10):
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月11日 - 21:10</p>
+  <p><span>最后更新:</span>2018年10月20日 - 07:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -924,7 +880,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      201.6k
+      200.1k
     </span>
   
 </div>
@@ -937,6 +893,7 @@ var jiathis_config={
   <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
 
 -->
+
 
         
 <div class="busuanzi-count">
@@ -1433,6 +1390,7 @@ var jiathis_config={
   
 
   
+
 
 </body>
 </html>

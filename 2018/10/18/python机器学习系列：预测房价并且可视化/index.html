@@ -94,7 +94,7 @@
 <meta property="og:description" content="这篇文章不是给纯粹的小白看的，需要一定的基础，需要小白补充一定的基础知识，在我的博客有相关的资源介绍。 在这里记录下这篇文章时因为很实用，并且也希望以此帮助需要的人。 这是我在YouTube上学习到的：  https://www.youtube.com/watch?v=QLVMqwpOLPk&amp;amp;list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v&amp;amp;index">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/Oct-18-2018%2020-13-50.gif">
-<meta property="og:updated_time" content="2018-10-19T05:29:07.451Z">
+<meta property="og:updated_time" content="2018-10-19T22:35:24.804Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python机器学习系列：预测房价并且可视化">
 <meta name="twitter:description" content="这篇文章不是给纯粹的小白看的，需要一定的基础，需要小白补充一定的基础知识，在我的博客有相关的资源介绍。 在这里记录下这篇文章时因为很实用，并且也希望以此帮助需要的人。 这是我在YouTube上学习到的：  https://www.youtube.com/watch?v=QLVMqwpOLPk&amp;amp;list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v&amp;amp;index">
@@ -129,6 +129,7 @@
 
 
   <link rel="canonical" href="https://liujunjie11.github.io/2018/10/18/python机器学习系列：预测房价并且可视化/"/>
+
 
 
 
@@ -405,7 +406,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.7k
+                  2.3k
                 </span>
               
 
@@ -421,7 +422,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  13
+                  11
                 </span>
               
             </div>
@@ -447,134 +448,39 @@
 <p>这是我在<em>YouTube</em>上学习到的：</p>
 <blockquote>
 <p><a href="https://www.youtube.com/watch?v=QLVMqwpOLPk&amp;list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v&amp;index=5" target="_blank" rel="external">https://www.youtube.com/watch?v=QLVMqwpOLPk&amp;list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v&amp;index=5</a></p>
-<p>中文地址：<a href="http://playlist.yxgapp.com/static/video/d1741aa2-287f-4100-9ae3-39a51fd125cf.html" target="_blank" rel="external">http://playlist.yxgapp.com/static/video/d1741aa2-287f-4100-9ae3-39a51fd125cf.html</a></p>
-<p><a href="https://www.google.com/search?q=%E8%AF%91%E5%AD%A6%E9%A6%86+%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0Python%E5%AE%9E%E8%B7%B5&amp;ei=MmDJW86rEsGuoAT-qrfICQ&amp;start=10&amp;sa=N&amp;biw=1152&amp;bih=720" target="_blank" rel="external">中文地址集合</a></p>
-<p><a href="http://edu.evget.com/video/6086" target="_blank" rel="external">这个也是</a></p>
+</blockquote>
+<ul>
+<li><p><a href="http://playlist.yxgapp.com/static/video/d1741aa2-287f-4100-9ae3-39a51fd125cf.html" target="_blank" rel="external">中文地址</a></p>
+</li>
+<li><p><a href="https://www.google.com/search?q=%E8%AF%91%E5%AD%A6%E9%A6%86+%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0Python%E5%AE%9E%E8%B7%B5&amp;ei=MmDJW86rEsGuoAT-qrfICQ&amp;start=10&amp;sa=N&amp;biw=1152&amp;bih=720" target="_blank" rel="external">中文地址集合</a></p>
+</li>
+<li><p><a href="http://edu.evget.com/video/6086" target="_blank" rel="external">这个也是</a></p>
+</li>
+</ul>
+<blockquote>
 <p>对应的网页课程地址在此：<a href="https://pythonprogramming.net/forecasting-predicting-machine-learning-tutorial/" target="_blank" rel="external">https://pythonprogramming.net/forecasting-predicting-machine-learning-tutorial/</a></p>
 </blockquote>
 <p>在作者的基础上进行了一点点的改动。说明一下：<strong>相关的库自行安装，就不一一废话了。</strong></p>
 <a id="more"></a>
 <h1 id="项目开始"><a href="#项目开始" class="headerlink" title="项目开始"></a>项目开始</h1><p><strong>项目过程：从开放的数据接口拿到数据，并且做简单的数据处理，自行做好数据标签用于算法训练，之后在利用相关的模块做好预测得到的数值与相应的时间值的对接，得出数据的图表(包括预测部分)，项目完成。</strong></p>
 <h2 id="获取数据以及简单数据处理"><a href="#获取数据以及简单数据处理" class="headerlink" title="获取数据以及简单数据处理"></a>获取数据以及简单数据处理</h2><p>代码：</p>
-<pre><code>import quandl,math
-import numpy as np
-from sklearn import preprocessing
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-
-#获取公共数据接口
-df = quandl.get(&quot;WIKI/GOOGL&quot;)
-
-#简单的数据特征处理、整理，目的是得出“标签”特征列（因为仅仅是做到实践的效果，所以就不多说了，看代码便知）。
-df = df[[&apos;Adj. Open&apos;, &apos;Adj. High&apos;, &apos;Adj. Low&apos;, &apos;Adj. Close&apos;, &apos;Adj. Volume&apos;]]  #取用时需要用大括号
-df[&apos;HL_PCT&apos;] = (df[&apos;Adj. High&apos;] - df[&apos;Adj. Close&apos;]) / df[&apos;Adj. Close&apos;] * 100.0
-df[&apos;PCT_change&apos;] = (df[&apos;Adj. Close&apos;] - df[&apos;Adj. Open&apos;]) /df[&apos;Adj. Open&apos;] * 100.0
-
-df = df[[&apos;Adj. Close&apos;, &apos;Adj. Volume&apos;,&apos;HL_PCT&apos;,&apos;PCT_change&apos;]]
-
-forecast_col = &apos;Adj. Close&apos;
-df.fillna(value=-99999, inplace=True)
-forecast_out = int(math.ceil(0.01 * len(df)))
-#得出标签特征列，以便直接用于训练
-df[&apos;label&apos;] = df[forecast_col].shift(-forecast_out)
-</code></pre><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> quandl,math</div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> preprocessing</div><div class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</div><div class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LinearRegression</div><div class="line"></div><div class="line"><span class="comment">#获取公共数据接口</span></div><div class="line">df = quandl.get(<span class="string">"WIKI/GOOGL"</span>)</div><div class="line"></div><div class="line"><span class="comment">#简单的数据特征处理、整理，目的是得出“标签”特征列（因为仅仅是做到实践的效果，所以就不多说了，看代码便知）。</span></div><div class="line">df = df[[<span class="string">'Adj. Open'</span>, <span class="string">'Adj. High'</span>, <span class="string">'Adj. Low'</span>, <span class="string">'Adj. Close'</span>, <span class="string">'Adj. Volume'</span>]]  <span class="comment">#取用时需要用大括号</span></div><div class="line">df[<span class="string">'HL_PCT'</span>] = (df[<span class="string">'Adj. High'</span>] - df[<span class="string">'Adj. Close'</span>]) / df[<span class="string">'Adj. Close'</span>] * <span class="number">100.0</span></div><div class="line">df[<span class="string">'PCT_change'</span>] = (df[<span class="string">'Adj. Close'</span>] - df[<span class="string">'Adj. Open'</span>]) /df[<span class="string">'Adj. Open'</span>] * <span class="number">100.0</span></div><div class="line"></div><div class="line">df = df[[<span class="string">'Adj. Close'</span>, <span class="string">'Adj. Volume'</span>,<span class="string">'HL_PCT'</span>,<span class="string">'PCT_change'</span>]]</div><div class="line"></div><div class="line">forecast_col = <span class="string">'Adj. Close'</span></div><div class="line">df.fillna(value=<span class="number">-99999</span>, inplace=<span class="keyword">True</span>)</div><div class="line">forecast_out = int(math.ceil(<span class="number">0.01</span> * len(df)))</div><div class="line"><span class="comment">#得出标签特征列，以便直接用于训练</span></div><div class="line">df[<span class="string">'label'</span>] = df[forecast_col].shift(-forecast_out)</div></pre></td></tr></table></figure>
+<blockquote>
 <p>关于<a href="https://www.quandl.com" target="_blank" rel="external">quandl</a>,是个公开的数据网站，有免费的，也有收费的，它有很好的支持python的数据接口。可用<code>pip install quandl</code>下载相关的支持模块。<strong>如果有时获取数据出错了，重新运行直到没错误出现为止。</strong></p>
 </blockquote>
 <h2 id="算法预测"><a href="#算法预测" class="headerlink" title="算法预测"></a>算法预测</h2><p>代码：</p>
-<pre><code>X = np.array(df.drop([&apos;label&apos;], 1))
-X = preprocessing.scale(X)
-
-#这里是取数据的后面一小部分用于预测得出的数值使用
-X_lately = X[-forecast_out:]
-X = X[:-forecast_out]
-
-df.dropna(inplace=True)
-
-y = np.array(df[&apos;label&apos;])
-
-#数据分割
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
-clf = LinearRegression(n_jobs=-1)
-clf.fit(X_train, y_train)
-#预测准确性
-confidence = clf.score(X_test, y_test)
-
-#最后预测的数值部分
-forecast_set = clf.predict(X_lately)
-</code></pre><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">X = np.array(df.drop([<span class="string">'label'</span>], <span class="number">1</span>))</div><div class="line">X = preprocessing.scale(X)</div><div class="line"></div><div class="line"><span class="comment">#这里是取数据的后面一小部分用于预测得出的数值使用</span></div><div class="line">X_lately = X[-forecast_out:]</div><div class="line">X = X[:-forecast_out]</div><div class="line"></div><div class="line">df.dropna(inplace=<span class="keyword">True</span>)</div><div class="line"></div><div class="line">y = np.array(df[<span class="string">'label'</span>])</div><div class="line"></div><div class="line"><span class="comment">#数据分割</span></div><div class="line">X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=<span class="number">0.2</span>)</div><div class="line">clf = LinearRegression(n_jobs=<span class="number">-1</span>)</div><div class="line">clf.fit(X_train, y_train)</div><div class="line"><span class="comment">#预测准确性</span></div><div class="line">confidence = clf.score(X_test, y_test)</div><div class="line"></div><div class="line"><span class="comment">#最后预测的数值部分</span></div><div class="line">forecast_set = clf.predict(X_lately)</div></pre></td></tr></table></figure>
+<blockquote>
 <p>这里是简单的预测部分了，其中有一些简单的数据处理部分。</p>
 </blockquote>
 <h2 id="时间与预测值的对应以及图表的描绘"><a href="#时间与预测值的对应以及图表的描绘" class="headerlink" title="时间与预测值的对应以及图表的描绘"></a>时间与预测值的对应以及图表的描绘</h2><p>代码：</p>
-<pre><code>import datetime
-import matplotlib.pyplot as plt
-
-#matplotlib的美化图表风格
-plt.style.use(&apos;ggplot&apos;)
-
-#预测标签
-df[&apos;Forecast&apos;] = np.nan
-
-#获取源数据最后一天日期
-last_date = df.iloc[-1].name
-last_unix = last_date.timestamp()
-one_day = 86400 #一天的时间戳
-next_unix = last_unix + one_day
-
-for i in forecast_set:
-    next_date = datetime.datetime.fromtimestamp(next_unix)
-    next_unix += 86400
-    #将此日期对应的前面五列不相干的均设为nan，而仅仅加上预测的数值，即仅仅有相应的时间对应相应的预测数值
-    df.loc[next_date] = [np.nan for _ in range(len(df.columns)-1)]+[i] #如果这里不理解的话，可以查看df的head和tail部分试试，就能一目了然了
-
-#图表描绘
-df[&apos;Adj. Close&apos;].plot()
-df[&apos;Forecast&apos;].plot()
-plt.legend(loc=4)
-plt.xlabel(&apos;Date&apos;)
-plt.ylabel(&apos;Price&apos;)
-plt.show()
-</code></pre><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> datetime</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"></div><div class="line"><span class="comment">#matplotlib的美化图表风格</span></div><div class="line">plt.style.use(<span class="string">'ggplot'</span>)</div><div class="line"></div><div class="line"><span class="comment">#预测标签</span></div><div class="line">df[<span class="string">'Forecast'</span>] = np.nan</div><div class="line"></div><div class="line"><span class="comment">#获取源数据最后一天日期</span></div><div class="line">last_date = df.iloc[<span class="number">-1</span>].name</div><div class="line">last_unix = last_date.timestamp()</div><div class="line">one_day = <span class="number">86400</span> <span class="comment">#一天的时间戳</span></div><div class="line">next_unix = last_unix + one_day</div><div class="line"></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> forecast_set:</div><div class="line">    next_date = datetime.datetime.fromtimestamp(next_unix)</div><div class="line">    next_unix += <span class="number">86400</span></div><div class="line">    <span class="comment">#将此日期对应的前面五列不相干的均设为nan，而仅仅加上预测的数值，即仅仅有相应的时间对应相应的预测数值</span></div><div class="line">    df.loc[next_date] = [np.nan <span class="keyword">for</span> _ <span class="keyword">in</span> range(len(df.columns)<span class="number">-1</span>)]+[i] <span class="comment">#如果这里不理解的话，可以查看df的head和tail部分试试，就能一目了然了</span></div><div class="line"></div><div class="line"><span class="comment">#图表描绘</span></div><div class="line">df[<span class="string">'Adj. Close'</span>].plot()</div><div class="line">df[<span class="string">'Forecast'</span>].plot()</div><div class="line">plt.legend(loc=<span class="number">4</span>)</div><div class="line">plt.xlabel(<span class="string">'Date'</span>)</div><div class="line">plt.ylabel(<span class="string">'Price'</span>)</div><div class="line">plt.show()</div></pre></td></tr></table></figure>
+<blockquote>
 <p>这里有些难理解，但是其实很好理解，只是一些代码根本没见到过，所以导致阅读障碍。</p>
 </blockquote>
 <p>估计有人不理解这段<code>df.loc[next_date] = [np.nan for _ in range(len(df.columns)-1)]+[i]</code>代码，我来简单说明一下。</p>
-<pre><code>for i in forecast_set:
-    next_date = datetime.datetime.fromtimestamp(next_unix)
-    next_unix += 86400
-    df.loc[next_date] = [np.nan for _ in range(len(df.columns)-1)]+[i]
-
-print(df.head())   
-
-输出：
-
-             Adj. Close  Adj. Volume   HL_PCT  PCT_change   label      Forecast
-Date                                                                          
-2004-08-19   50.322842   44659000.0  3.712563    0.324968  69.078238       NaN
-2004-08-20   54.322689   22834300.0  0.710922    7.227007  67.839414       NaN
-2004-08-23   54.869377   18256100.0  3.729433   -1.227880  68.912727       NaN
-2004-08-24   52.597363   15247300.0  6.417469   -5.726357  70.668146       NaN
-2004-08-25   53.164113    9188600.0  1.886792    1.183658  71.219849       NaN 
-
-
-print(df.tail())
-
-输出：
-
-                         Adj. Close  Adj. Volume  HL_PCT  PCT_change  label  \
-Date                                                                      
-2018-03-08 08:00:00         NaN          NaN     NaN         NaN    NaN   
-2018-03-09 08:00:00         NaN          NaN     NaN         NaN    NaN   
-2018-03-10 08:00:00         NaN          NaN     NaN         NaN    NaN   
-2018-03-11 08:00:00         NaN          NaN     NaN         NaN    NaN   
-2018-03-12 08:00:00         NaN          NaN     NaN         NaN    NaN   
-
-                        Forecast  
-Date                              
-2018-03-08 08:00:00  1113.922012  
-2018-03-09 08:00:00  1071.104993  
-2018-03-10 08:00:00  1043.810593  
-2018-03-11 08:00:00  1073.778780  
-2018-03-12 08:00:00  1022.639186 
-</code></pre><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> forecast_set:</div><div class="line">    next_date = datetime.datetime.fromtimestamp(next_unix)</div><div class="line">    next_unix += <span class="number">86400</span></div><div class="line">    df.loc[next_date] = [np.nan <span class="keyword">for</span> _ <span class="keyword">in</span> range(len(df.columns)<span class="number">-1</span>)]+[i]</div><div class="line"></div><div class="line">print(df.head())   </div><div class="line"></div><div class="line">输出：</div><div class="line"></div><div class="line">	         Adj. Close  Adj. Volume   HL_PCT  PCT_change   label      Forecast</div><div class="line">Date                                                                          </div><div class="line"><span class="number">2004</span><span class="number">-08</span><span class="number">-19</span>   <span class="number">50.322842</span>   <span class="number">44659000.0</span>  <span class="number">3.712563</span>    <span class="number">0.324968</span>  <span class="number">69.078238</span>       NaN</div><div class="line"><span class="number">2004</span><span class="number">-08</span><span class="number">-20</span>   <span class="number">54.322689</span>   <span class="number">22834300.0</span>  <span class="number">0.710922</span>    <span class="number">7.227007</span>  <span class="number">67.839414</span>       NaN</div><div class="line"><span class="number">2004</span><span class="number">-08</span><span class="number">-23</span>   <span class="number">54.869377</span>   <span class="number">18256100.0</span>  <span class="number">3.729433</span>   <span class="number">-1.227880</span>  <span class="number">68.912727</span>       NaN</div><div class="line"><span class="number">2004</span><span class="number">-08</span><span class="number">-24</span>   <span class="number">52.597363</span>   <span class="number">15247300.0</span>  <span class="number">6.417469</span>   <span class="number">-5.726357</span>  <span class="number">70.668146</span>       NaN</div><div class="line"><span class="number">2004</span><span class="number">-08</span><span class="number">-25</span>   <span class="number">53.164113</span>    <span class="number">9188600.0</span>  <span class="number">1.886792</span>    <span class="number">1.183658</span>  <span class="number">71.219849</span>       NaN </div><div class="line"></div><div class="line"></div><div class="line">print(df.tail())</div><div class="line"></div><div class="line">输出：</div><div class="line">	</div><div class="line">	                     Adj. Close  Adj. Volume  HL_PCT  PCT_change  label  \</div><div class="line">Date                                                                      </div><div class="line"><span class="number">2018</span><span class="number">-03</span><span class="number">-08</span> <span class="number">08</span>:<span class="number">00</span>:<span class="number">00</span>         NaN          NaN     NaN         NaN    NaN   </div><div class="line"><span class="number">2018</span><span class="number">-03</span><span class="number">-09</span> <span class="number">08</span>:<span class="number">00</span>:<span class="number">00</span>         NaN          NaN     NaN         NaN    NaN   </div><div class="line"><span class="number">2018</span><span class="number">-03</span><span class="number">-10</span> <span class="number">08</span>:<span class="number">00</span>:<span class="number">00</span>         NaN          NaN     NaN         NaN    NaN   </div><div class="line"><span class="number">2018</span><span class="number">-03</span><span class="number">-11</span> <span class="number">08</span>:<span class="number">00</span>:<span class="number">00</span>         NaN          NaN     NaN         NaN    NaN   </div><div class="line"><span class="number">2018</span><span class="number">-03</span><span class="number">-12</span> <span class="number">08</span>:<span class="number">00</span>:<span class="number">00</span>         NaN          NaN     NaN         NaN    NaN   </div><div class="line"></div><div class="line">                        Forecast  </div><div class="line">Date                              </div><div class="line"><span class="number">2018</span><span class="number">-03</span><span class="number">-08</span> <span class="number">08</span>:<span class="number">00</span>:<span class="number">00</span>  <span class="number">1113.922012</span>  </div><div class="line"><span class="number">2018</span><span class="number">-03</span><span class="number">-09</span> <span class="number">08</span>:<span class="number">00</span>:<span class="number">00</span>  <span class="number">1071.104993</span>  </div><div class="line"><span class="number">2018</span><span class="number">-03</span><span class="number">-10</span> <span class="number">08</span>:<span class="number">00</span>:<span class="number">00</span>  <span class="number">1043.810593</span>  </div><div class="line"><span class="number">2018</span><span class="number">-03</span><span class="number">-11</span> <span class="number">08</span>:<span class="number">00</span>:<span class="number">00</span>  <span class="number">1073.778780</span>  </div><div class="line"><span class="number">2018</span><span class="number">-03</span><span class="number">-12</span> <span class="number">08</span>:<span class="number">00</span>:<span class="number">00</span>  <span class="number">1022.639186</span></div></pre></td></tr></table></figure>
+<blockquote>
 <p>就是这样，已经很明了了，就是仅仅为了让预测的时间对应预测的房价数值而已。</p>
 </blockquote>
 <h3 id="什么是时间戳"><a href="#什么是时间戳" class="headerlink" title="什么是时间戳?"></a>什么是时间戳?</h3><p>简单说说：时间戳是自1970年1月1日（00:00:00 UTC/GMT）以来的秒数。它也被称为Unix时间戳（Unix Timestam、Unix epoch、POSIX time、Unix timestamp）是从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数，不考虑闰秒。</p>
@@ -583,64 +489,8 @@ Date
 <blockquote>
 <p>来自：<a href="http://www.htmer.com/article/420.htm" target="_blank" rel="external">http://www.htmer.com/article/420.htm</a></p>
 </blockquote>
-<h2 id="完整代码："><a href="#完整代码：" class="headerlink" title="完整代码："></a>完整代码：</h2><pre><code>import quandl,math,datetime
-import numpy as np
-from sklearn import preprocessing,svm
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-import matplotlib.pyplot as plt
-
-
-plt.style.use(&apos;ggplot&apos;)
-
-df = quandl.get(&quot;WIKI/GOOGL&quot;)
-
-df = df[[&apos;Adj. Open&apos;, &apos;Adj. High&apos;, &apos;Adj. Low&apos;, &apos;Adj. Close&apos;, &apos;Adj. Volume&apos;]] #取用时需要用大括号
-df[&apos;HL_PCT&apos;] = (df[&apos;Adj. High&apos;] - df[&apos;Adj. Close&apos;]) / df[&apos;Adj. Close&apos;] * 100.0
-df[&apos;PCT_change&apos;] = (df[&apos;Adj. Close&apos;] - df[&apos;Adj. Open&apos;]) /df[&apos;Adj. Open&apos;] * 100.0
-
-df = df[[&apos;Adj. Close&apos;, &apos;Adj. Volume&apos;,&apos;HL_PCT&apos;,&apos;PCT_change&apos;]]
-
-forecast_col = &apos;Adj. Close&apos;
-
-df.fillna(value=-99999, inplace=True)
-forecast_out = int(math.ceil(0.01 * len(df)))
-df[&apos;label&apos;] = df[forecast_col].shift(-forecast_out)
-
-X = np.array(df.drop([&apos;label&apos;], 1))
-X = preprocessing.scale(X)
-X_lately = X[-forecast_out:]
-X = X[:-forecast_out]
-
-df.dropna(inplace=True)
-
-y = np.array(df[&apos;label&apos;])
-
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
-clf = LinearRegression(n_jobs=-1)
-clf.fit(X_train, y_train)
-confidence = clf.score(X_test, y_test)
-
-forecast_set = clf.predict(X_lately)
-df[&apos;Forecast&apos;] = np.nan
-
-last_date = df.iloc[-1].name
-last_unix = last_date.timestamp()
-one_day = 86400
-next_unix = last_unix + one_day
-
-for i in forecast_set:
-    next_date = datetime.datetime.fromtimestamp(next_unix)
-    next_unix += 86400
-    df.loc[next_date] = [np.nan for _ in range(len(df.columns)-1)]+[i]
-
-df[&apos;Adj. Close&apos;].plot()
-df[&apos;Forecast&apos;].plot()
-plt.legend(loc=4)
-plt.xlabel(&apos;Date&apos;)
-plt.ylabel(&apos;Price&apos;)
-plt.show()
-</code></pre><h2 id="最终效果展示"><a href="#最终效果展示" class="headerlink" title="最终效果展示"></a>最终效果展示</h2><p><img src="http://owudg3xs2.bkt.clouddn.com/Oct-18-2018%2020-13-50.gif" alt=""></p>
+<h2 id="完整代码："><a href="#完整代码：" class="headerlink" title="完整代码："></a>完整代码：</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> quandl,math,datetime</div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> preprocessing,svm</div><div class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</div><div class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LinearRegression</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"></div><div class="line"></div><div class="line">plt.style.use(<span class="string">'ggplot'</span>)</div><div class="line"></div><div class="line">df = quandl.get(<span class="string">"WIKI/GOOGL"</span>)</div><div class="line"></div><div class="line">df = df[[<span class="string">'Adj. Open'</span>, <span class="string">'Adj. High'</span>, <span class="string">'Adj. Low'</span>, <span class="string">'Adj. Close'</span>, <span class="string">'Adj. Volume'</span>]] <span class="comment">#取用时需要用大括号</span></div><div class="line">df[<span class="string">'HL_PCT'</span>] = (df[<span class="string">'Adj. High'</span>] - df[<span class="string">'Adj. Close'</span>]) / df[<span class="string">'Adj. Close'</span>] * <span class="number">100.0</span></div><div class="line">df[<span class="string">'PCT_change'</span>] = (df[<span class="string">'Adj. Close'</span>] - df[<span class="string">'Adj. Open'</span>]) /df[<span class="string">'Adj. Open'</span>] * <span class="number">100.0</span></div><div class="line"></div><div class="line">df = df[[<span class="string">'Adj. Close'</span>, <span class="string">'Adj. Volume'</span>,<span class="string">'HL_PCT'</span>,<span class="string">'PCT_change'</span>]]</div><div class="line"></div><div class="line">forecast_col = <span class="string">'Adj. Close'</span></div><div class="line"></div><div class="line">df.fillna(value=<span class="number">-99999</span>, inplace=<span class="keyword">True</span>)</div><div class="line">forecast_out = int(math.ceil(<span class="number">0.01</span> * len(df)))</div><div class="line">df[<span class="string">'label'</span>] = df[forecast_col].shift(-forecast_out)</div><div class="line"></div><div class="line">X = np.array(df.drop([<span class="string">'label'</span>], <span class="number">1</span>))</div><div class="line">X = preprocessing.scale(X)</div><div class="line">X_lately = X[-forecast_out:]</div><div class="line">X = X[:-forecast_out]</div><div class="line"></div><div class="line">df.dropna(inplace=<span class="keyword">True</span>)</div><div class="line"></div><div class="line">y = np.array(df[<span class="string">'label'</span>])</div><div class="line"></div><div class="line">X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=<span class="number">0.2</span>)</div><div class="line">clf = LinearRegression(n_jobs=<span class="number">-1</span>)</div><div class="line">clf.fit(X_train, y_train)</div><div class="line">confidence = clf.score(X_test, y_test)</div><div class="line"></div><div class="line">forecast_set = clf.predict(X_lately)</div><div class="line">df[<span class="string">'Forecast'</span>] = np.nan</div><div class="line"></div><div class="line">last_date = df.iloc[<span class="number">-1</span>].name</div><div class="line">last_unix = last_date.timestamp()</div><div class="line">one_day = <span class="number">86400</span></div><div class="line">next_unix = last_unix + one_day</div><div class="line"></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> forecast_set:</div><div class="line">    next_date = datetime.datetime.fromtimestamp(next_unix)</div><div class="line">    next_unix += <span class="number">86400</span></div><div class="line">    df.loc[next_date] = [np.nan <span class="keyword">for</span> _ <span class="keyword">in</span> range(len(df.columns)<span class="number">-1</span>)]+[i]</div><div class="line"></div><div class="line">df[<span class="string">'Adj. Close'</span>].plot()</div><div class="line">df[<span class="string">'Forecast'</span>].plot()</div><div class="line">plt.legend(loc=<span class="number">4</span>)</div><div class="line">plt.xlabel(<span class="string">'Date'</span>)</div><div class="line">plt.ylabel(<span class="string">'Price'</span>)</div><div class="line">plt.show()</div></pre></td></tr></table></figure>
+<h2 id="最终效果展示"><a href="#最终效果展示" class="headerlink" title="最终效果展示"></a>最终效果展示</h2><p><img src="http://owudg3xs2.bkt.clouddn.com/Oct-18-2018%2020-13-50.gif" alt=""></p>
 <blockquote>
 <p>可以查看到预测的部分展示。</p>
 </blockquote>
@@ -659,161 +509,16 @@ plt.show()
 </ul>
 <p>值得说明一下<em>Legend 图例</em>的一些知识：</p>
 <p>使用<code>plt.legend(loc=n)</code>中<code>n</code>的选择代表什么：</p>
-<pre><code>&apos;best&apos; : 0,          
-&apos;upper right&apos;  : 1,
-&apos;upper left&apos;   : 2,
-&apos;lower left&apos;   : 3,
-&apos;lower right&apos;  : 4,
-&apos;right&apos;        : 5,
-&apos;center left&apos;  : 6,
-&apos;center right&apos; : 7,
-&apos;lower center&apos; : 8,
-&apos;upper center&apos; : 9,
-&apos;center&apos;       : 10。
-</code></pre><h1 id="补充添加序列化保存预测模型"><a href="#补充添加序列化保存预测模型" class="headerlink" title="补充添加序列化保存预测模型"></a>补充添加序列化保存预测模型</h1><p>添加了如何将预测代码序列化的过程加相关的代码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="string">'best'</span> : <span class="number">0</span>,          </div><div class="line"><span class="string">'upper right'</span>  : <span class="number">1</span>,</div><div class="line"><span class="string">'upper left'</span>   : <span class="number">2</span>,</div><div class="line"><span class="string">'lower left'</span>   : <span class="number">3</span>,</div><div class="line"><span class="string">'lower right'</span>  : <span class="number">4</span>,</div><div class="line"><span class="string">'right'</span>        : <span class="number">5</span>,</div><div class="line"><span class="string">'center left'</span>  : <span class="number">6</span>,</div><div class="line"><span class="string">'center right'</span> : <span class="number">7</span>,</div><div class="line"><span class="string">'lower center'</span> : <span class="number">8</span>,</div><div class="line"><span class="string">'upper center'</span> : <span class="number">9</span>,</div><div class="line"><span class="string">'center'</span>       : <span class="number">10</span>。</div></pre></td></tr></table></figure>
+<h1 id="补充添加序列化保存预测模型"><a href="#补充添加序列化保存预测模型" class="headerlink" title="补充添加序列化保存预测模型"></a>补充添加序列化保存预测模型</h1><p>添加了如何将预测代码序列化的过程加相关的代码。</p>
 <p>序列化可简单理解为：先保存了这个预测的模型(序列化的过程)，然后我们可以拿出这个模型直接进行以后的预测(反序列化的过程)。</p>
 <p>加上代码：</p>
-<pre><code>import pickle
-
-with open(&apos;houseforecastmodel.pickle&apos;,&apos;wb&apos;) as f:
-#下载模型
-pickle.dump(clf,f)
-
-pickle_in = open(&apos;houseforecastmodel.pickle&apos;,&apos;rb&apos;)
-clf = pickle.load(pickle_in) #加载模型
-</code></pre><p>完整代码：</p>
-<pre><code>import quandl,math,datetime
-import numpy as np
-from sklearn import preprocessing,svm
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-import matplotlib.pyplot as plt
-import pickle
-
-plt.style.use(&apos;ggplot&apos;)
-
-df = quandl.get(&quot;WIKI/GOOGL&quot;)
-
-df = df[[&apos;Adj. Open&apos;, &apos;Adj. High&apos;, &apos;Adj. Low&apos;, &apos;Adj. Close&apos;, &apos;Adj. Volume&apos;]] #取用时需要用大括号
-df[&apos;HL_PCT&apos;] = (df[&apos;Adj. High&apos;] - df[&apos;Adj. Close&apos;]) / df[&apos;Adj. Close&apos;] * 100.0
-df[&apos;PCT_change&apos;] = (df[&apos;Adj. Close&apos;] - df[&apos;Adj. Open&apos;]) /df[&apos;Adj. Open&apos;] * 100.0
-
-df = df[[&apos;Adj. Close&apos;, &apos;Adj. Volume&apos;,&apos;HL_PCT&apos;,&apos;PCT_change&apos;]]
-
-forecast_col = &apos;Adj. Close&apos;
-
-df.fillna(value=-99999, inplace=True)
-forecast_out = int(math.ceil(0.01 * len(df)))
-df[&apos;label&apos;] = df[forecast_col].shift(-forecast_out)
-
-X = np.array(df.drop([&apos;label&apos;], 1))
-X = preprocessing.scale(X)
-X_lately = X[-forecast_out:]
-X = X[:-forecast_out]
-
-df.dropna(inplace=True)
-
-y = np.array(df[&apos;label&apos;])
-
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
-clf = LinearRegression(n_jobs=-1)
-clf.fit(X_train, y_train)
-
-with open(&apos;houseforecastmodel.pickle&apos;,&apos;wb&apos;) as f:
-#下载模型
-pickle.dump(clf,f)
-
-pickle_in = open(&apos;houseforecastmodel.pickle&apos;,&apos;rb&apos;)
-clf = pickle.load(pickle_in) #加载模型
-
-confidence = clf.score(X_test, y_test)
-
-forecast_set = clf.predict(X_lately)
-df[&apos;Forecast&apos;] = np.nan
-
-last_date = df.iloc[-1].name
-last_unix = last_date.timestamp()
-one_day = 86400
-next_unix = last_unix + one_day
-
-for i in forecast_set:
-    next_date = datetime.datetime.fromtimestamp(next_unix)
-    next_unix += 86400
-    df.loc[next_date] = [np.nan for _ in range(len(df.columns)-1)]+[i]
-
-df[&apos;Adj. Close&apos;].plot()
-df[&apos;Forecast&apos;].plot()
-plt.legend(loc=4)
-plt.xlabel(&apos;Date&apos;)
-plt.ylabel(&apos;Price&apos;)
-plt.show()
-</code></pre><p>在运行一遍以上的代码之后，就可以直接从保存的文件来加载模型来预测数据啦，如下可测试：</p>
-<pre><code>import quandl,math,datetime
-import numpy as np
-from sklearn import preprocessing,svm
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-import matplotlib.pyplot as plt
-import pickle
-
-plt.style.use(&apos;ggplot&apos;)
-
-df = quandl.get(&quot;WIKI/GOOGL&quot;)
-
-df = df[[&apos;Adj. Open&apos;, &apos;Adj. High&apos;, &apos;Adj. Low&apos;, &apos;Adj. Close&apos;, &apos;Adj. Volume&apos;]] #取用时需要用大括号
-df[&apos;HL_PCT&apos;] = (df[&apos;Adj. High&apos;] - df[&apos;Adj. Close&apos;]) / df[&apos;Adj. Close&apos;] * 100.0
-df[&apos;PCT_change&apos;] = (df[&apos;Adj. Close&apos;] - df[&apos;Adj. Open&apos;]) /df[&apos;Adj. Open&apos;] * 100.0
-
-df = df[[&apos;Adj. Close&apos;, &apos;Adj. Volume&apos;,&apos;HL_PCT&apos;,&apos;PCT_change&apos;]]
-
-forecast_col = &apos;Adj. Close&apos;
-
-df.fillna(value=-99999, inplace=True)
-forecast_out = int(math.ceil(0.01 * len(df)))
-df[&apos;label&apos;] = df[forecast_col].shift(-forecast_out)
-
-X = np.array(df.drop([&apos;label&apos;], 1))
-X = preprocessing.scale(X)
-X_lately = X[-forecast_out:]
-X = X[:-forecast_out]
-
-df.dropna(inplace=True)
-
-y = np.array(df[&apos;label&apos;])
-
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
-#clf = LinearRegression(n_jobs=-1)
-#clf.fit(X_train, y_train)
-
-#with open(&apos;houseforecastmodel.pickle&apos;,&apos;wb&apos;) as f:
-#下载模型
-#pickle.dump(clf,f)
-
-pickle_in = open(&apos;houseforecastmodel.pickle&apos;,&apos;rb&apos;)
-clf = pickle.load(pickle_in) #加载模型
-
-confidence = clf.score(X_test, y_test)
-
-forecast_set = clf.predict(X_lately)
-df[&apos;Forecast&apos;] = np.nan
-
-last_date = df.iloc[-1].name
-last_unix = last_date.timestamp()
-one_day = 86400
-next_unix = last_unix + one_day
-
-for i in forecast_set:
-    next_date = datetime.datetime.fromtimestamp(next_unix)
-    next_unix += 86400
-    df.loc[next_date] = [np.nan for _ in range(len(df.columns)-1)]+[i]
-
-df[&apos;Adj. Close&apos;].plot()
-df[&apos;Forecast&apos;].plot()
-plt.legend(loc=4)
-plt.xlabel(&apos;Date&apos;)
-plt.ylabel(&apos;Price&apos;)
-plt.show()
-</code></pre><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> pickle</div><div class="line"></div><div class="line"><span class="keyword">with</span> open(<span class="string">'houseforecastmodel.pickle'</span>,<span class="string">'wb'</span>) <span class="keyword">as</span> f:</div><div class="line">   <span class="comment">#下载模型</span></div><div class="line">   pickle.dump(clf,f)</div><div class="line"></div><div class="line">pickle_in = open(<span class="string">'houseforecastmodel.pickle'</span>,<span class="string">'rb'</span>)</div><div class="line">clf = pickle.load(pickle_in) <span class="comment">#加载模型</span></div></pre></td></tr></table></figure>
+<p>完整代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> quandl,math,datetime</div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> preprocessing,svm</div><div class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</div><div class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LinearRegression</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"><span class="keyword">import</span> pickle</div><div class="line"></div><div class="line">plt.style.use(<span class="string">'ggplot'</span>)</div><div class="line"></div><div class="line">df = quandl.get(<span class="string">"WIKI/GOOGL"</span>)</div><div class="line"></div><div class="line">df = df[[<span class="string">'Adj. Open'</span>, <span class="string">'Adj. High'</span>, <span class="string">'Adj. Low'</span>, <span class="string">'Adj. Close'</span>, <span class="string">'Adj. Volume'</span>]] <span class="comment">#取用时需要用大括号</span></div><div class="line">df[<span class="string">'HL_PCT'</span>] = (df[<span class="string">'Adj. High'</span>] - df[<span class="string">'Adj. Close'</span>]) / df[<span class="string">'Adj. Close'</span>] * <span class="number">100.0</span></div><div class="line">df[<span class="string">'PCT_change'</span>] = (df[<span class="string">'Adj. Close'</span>] - df[<span class="string">'Adj. Open'</span>]) /df[<span class="string">'Adj. Open'</span>] * <span class="number">100.0</span></div><div class="line"></div><div class="line">df = df[[<span class="string">'Adj. Close'</span>, <span class="string">'Adj. Volume'</span>,<span class="string">'HL_PCT'</span>,<span class="string">'PCT_change'</span>]]</div><div class="line"></div><div class="line">forecast_col = <span class="string">'Adj. Close'</span></div><div class="line"></div><div class="line">df.fillna(value=<span class="number">-99999</span>, inplace=<span class="keyword">True</span>)</div><div class="line">forecast_out = int(math.ceil(<span class="number">0.01</span> * len(df)))</div><div class="line">df[<span class="string">'label'</span>] = df[forecast_col].shift(-forecast_out)</div><div class="line"></div><div class="line">X = np.array(df.drop([<span class="string">'label'</span>], <span class="number">1</span>))</div><div class="line">X = preprocessing.scale(X)</div><div class="line">X_lately = X[-forecast_out:]</div><div class="line">X = X[:-forecast_out]</div><div class="line"></div><div class="line">df.dropna(inplace=<span class="keyword">True</span>)</div><div class="line"></div><div class="line">y = np.array(df[<span class="string">'label'</span>])</div><div class="line"></div><div class="line">X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=<span class="number">0.2</span>)</div><div class="line">clf = LinearRegression(n_jobs=<span class="number">-1</span>)</div><div class="line">clf.fit(X_train, y_train)</div><div class="line"></div><div class="line"><span class="keyword">with</span> open(<span class="string">'houseforecastmodel.pickle'</span>,<span class="string">'wb'</span>) <span class="keyword">as</span> f:</div><div class="line">   <span class="comment">#下载模型</span></div><div class="line">   pickle.dump(clf,f)</div><div class="line"></div><div class="line">pickle_in = open(<span class="string">'houseforecastmodel.pickle'</span>,<span class="string">'rb'</span>)</div><div class="line">clf = pickle.load(pickle_in) <span class="comment">#加载模型</span></div><div class="line"></div><div class="line">confidence = clf.score(X_test, y_test)</div><div class="line"></div><div class="line">forecast_set = clf.predict(X_lately)</div><div class="line">df[<span class="string">'Forecast'</span>] = np.nan</div><div class="line"></div><div class="line">last_date = df.iloc[<span class="number">-1</span>].name</div><div class="line">last_unix = last_date.timestamp()</div><div class="line">one_day = <span class="number">86400</span></div><div class="line">next_unix = last_unix + one_day</div><div class="line"></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> forecast_set:</div><div class="line">    next_date = datetime.datetime.fromtimestamp(next_unix)</div><div class="line">    next_unix += <span class="number">86400</span></div><div class="line">    df.loc[next_date] = [np.nan <span class="keyword">for</span> _ <span class="keyword">in</span> range(len(df.columns)<span class="number">-1</span>)]+[i]</div><div class="line"></div><div class="line">df[<span class="string">'Adj. Close'</span>].plot()</div><div class="line">df[<span class="string">'Forecast'</span>].plot()</div><div class="line">plt.legend(loc=<span class="number">4</span>)</div><div class="line">plt.xlabel(<span class="string">'Date'</span>)</div><div class="line">plt.ylabel(<span class="string">'Price'</span>)</div><div class="line">plt.show()</div></pre></td></tr></table></figure>
+<p>在运行一遍以上的代码之后，就可以直接从保存的文件来加载模型来预测数据啦，如下可测试：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> quandl,math,datetime</div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> preprocessing,svm</div><div class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</div><div class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LinearRegression</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"><span class="keyword">import</span> pickle</div><div class="line"></div><div class="line">plt.style.use(<span class="string">'ggplot'</span>)</div><div class="line"></div><div class="line">df = quandl.get(<span class="string">"WIKI/GOOGL"</span>)</div><div class="line"></div><div class="line">df = df[[<span class="string">'Adj. Open'</span>, <span class="string">'Adj. High'</span>, <span class="string">'Adj. Low'</span>, <span class="string">'Adj. Close'</span>, <span class="string">'Adj. Volume'</span>]] <span class="comment">#取用时需要用大括号</span></div><div class="line">df[<span class="string">'HL_PCT'</span>] = (df[<span class="string">'Adj. High'</span>] - df[<span class="string">'Adj. Close'</span>]) / df[<span class="string">'Adj. Close'</span>] * <span class="number">100.0</span></div><div class="line">df[<span class="string">'PCT_change'</span>] = (df[<span class="string">'Adj. Close'</span>] - df[<span class="string">'Adj. Open'</span>]) /df[<span class="string">'Adj. Open'</span>] * <span class="number">100.0</span></div><div class="line"></div><div class="line">df = df[[<span class="string">'Adj. Close'</span>, <span class="string">'Adj. Volume'</span>,<span class="string">'HL_PCT'</span>,<span class="string">'PCT_change'</span>]]</div><div class="line"></div><div class="line">forecast_col = <span class="string">'Adj. Close'</span></div><div class="line"></div><div class="line">df.fillna(value=<span class="number">-99999</span>, inplace=<span class="keyword">True</span>)</div><div class="line">forecast_out = int(math.ceil(<span class="number">0.01</span> * len(df)))</div><div class="line">df[<span class="string">'label'</span>] = df[forecast_col].shift(-forecast_out)</div><div class="line"></div><div class="line">X = np.array(df.drop([<span class="string">'label'</span>], <span class="number">1</span>))</div><div class="line">X = preprocessing.scale(X)</div><div class="line">X_lately = X[-forecast_out:]</div><div class="line">X = X[:-forecast_out]</div><div class="line"></div><div class="line">df.dropna(inplace=<span class="keyword">True</span>)</div><div class="line"></div><div class="line">y = np.array(df[<span class="string">'label'</span>])</div><div class="line"></div><div class="line">X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=<span class="number">0.2</span>)</div><div class="line"><span class="comment">#clf = LinearRegression(n_jobs=-1)</span></div><div class="line"><span class="comment">#clf.fit(X_train, y_train)</span></div><div class="line"></div><div class="line"><span class="comment">#with open('houseforecastmodel.pickle','wb') as f:</span></div><div class="line">   <span class="comment">#下载模型</span></div><div class="line">   <span class="comment">#pickle.dump(clf,f)</span></div><div class="line"></div><div class="line">pickle_in = open(<span class="string">'houseforecastmodel.pickle'</span>,<span class="string">'rb'</span>)</div><div class="line">clf = pickle.load(pickle_in) <span class="comment">#加载模型</span></div><div class="line"></div><div class="line">confidence = clf.score(X_test, y_test)</div><div class="line"></div><div class="line">forecast_set = clf.predict(X_lately)</div><div class="line">df[<span class="string">'Forecast'</span>] = np.nan</div><div class="line"></div><div class="line">last_date = df.iloc[<span class="number">-1</span>].name</div><div class="line">last_unix = last_date.timestamp()</div><div class="line">one_day = <span class="number">86400</span></div><div class="line">next_unix = last_unix + one_day</div><div class="line"></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> forecast_set:</div><div class="line">    next_date = datetime.datetime.fromtimestamp(next_unix)</div><div class="line">    next_unix += <span class="number">86400</span></div><div class="line">    df.loc[next_date] = [np.nan <span class="keyword">for</span> _ <span class="keyword">in</span> range(len(df.columns)<span class="number">-1</span>)]+[i]</div><div class="line"></div><div class="line">df[<span class="string">'Adj. Close'</span>].plot()</div><div class="line">df[<span class="string">'Forecast'</span>].plot()</div><div class="line">plt.legend(loc=<span class="number">4</span>)</div><div class="line">plt.xlabel(<span class="string">'Date'</span>)</div><div class="line">plt.ylabel(<span class="string">'Price'</span>)</div><div class="line">plt.show()</div></pre></td></tr></table></figure>
+<blockquote>
 <p>得出的结果与上方展示的一致。</p>
 </blockquote>
 <h2 id="了解pickle"><a href="#了解pickle" class="headerlink" title="了解pickle"></a>了解pickle</h2><ul>
@@ -853,7 +558,7 @@ plt.show()
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月19日 - 13:10</p>
+  <p><span>最后更新:</span>2018年10月20日 - 06:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -1186,7 +891,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      201.6k
+      200.1k
     </span>
   
 </div>
@@ -1199,6 +904,7 @@ var jiathis_config={
   <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
 
 -->
+
 
         
 <div class="busuanzi-count">
@@ -1695,6 +1401,7 @@ var jiathis_config={
   
 
   
+
 
 </body>
 </html>

@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="LXiHa`Notes">
 <meta property="og:description" content="最近在处理一个csv格式的数据时，出现了UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xd4 in  position 904: ordinal not in range(128)的错误告知。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-11T13:02:48.440Z">
+<meta property="og:updated_time" content="2018-10-19T23:42:17.845Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="解决python文件读取时的UnicodeDecodeError: &#39;ascii&#39; codec can&#39;t decode byte 0xd4 in position 904: ordinal not in range(128)问题">
 <meta name="twitter:description" content="最近在处理一个csv格式的数据时，出现了UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xd4 in  position 904: ordinal not in range(128)的错误告知。">
@@ -127,6 +127,7 @@
 
 
   <link rel="canonical" href="https://liujunjie11.github.io/2018/03/20/解决python文件读取时的UnicodeDecodeError-ascii-codec-can-t-decode-byte-0xd4-in-position-904-ordinal-not-in-range-128-问题/"/>
+
 
 
 
@@ -403,7 +404,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  205
+                  204
                 </span>
               
 
@@ -444,10 +445,8 @@
   <a id="more"></a>
 <p>查了一下，发现只要指定<strong><em>encoding=’iso-8859-1’</em></strong>即可解决此问题了。</p>
 <p>代码演示：</p>
-<pre><code>.....
-        with open(filename, encoding=&apos;iso-8859-1&apos;) as f:
-        ......
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.....</div><div class="line">		<span class="keyword">with</span> open(filename, encoding=<span class="string">'iso-8859-1'</span>) <span class="keyword">as</span> f:</div><div class="line">		......</div></pre></td></tr></table></figure>
+<hr>
 <p>简单说明一下为何如此指定编码格式：</p>
 <p><strong>ISO 8859-1，正式编号为ISO/IEC 8859-1:1998，又称Latin-1或“西欧语言”，是国际标准化组织内ISO/IEC 8859的第一个8位字符集。它以ASCII为基础，在空置的0xA0-0xFF的范围内，即解决0xA0-0xFF的范围内的编码错误问题，如上我们的0xd4在此范围之内。</strong></p>
 <blockquote>
@@ -485,7 +484,7 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月11日 - 21:10</p>
+  <p><span>最后更新:</span>2018年10月20日 - 07:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -793,7 +792,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      201.6k
+      200.1k
     </span>
   
 </div>
@@ -806,6 +805,7 @@ var jiathis_config={
   <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
 
 -->
+
 
         
 <div class="busuanzi-count">
@@ -1302,6 +1302,7 @@ var jiathis_config={
   
 
   
+
 
 </body>
 </html>

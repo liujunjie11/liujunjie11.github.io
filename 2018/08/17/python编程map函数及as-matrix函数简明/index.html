@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="LXiHa`Notes">
 <meta property="og:description" content="如题。 map函数属于python函数式编程，具体的就不说了，可参考官网说明或者是直接看大神说明：https://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/00141861202544241651579c69d4399a9aa135afef28c44000 在此简要说说如何理解，因为之前我">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-11T13:07:28.849Z">
+<meta property="og:updated_time" content="2018-10-19T22:46:14.172Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python编程map函数及as_matrix函数简明">
 <meta name="twitter:description" content="如题。 map函数属于python函数式编程，具体的就不说了，可参考官网说明或者是直接看大神说明：https://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/00141861202544241651579c69d4399a9aa135afef28c44000 在此简要说说如何理解，因为之前我">
@@ -127,6 +127,7 @@
 
 
   <link rel="canonical" href="https://liujunjie11.github.io/2018/08/17/python编程map函数及as-matrix函数简明/"/>
+
 
 
 
@@ -403,7 +404,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  522
+                  447
                 </span>
               
 
@@ -445,50 +446,18 @@
 <p>在此简要说说如何理解，因为之前我有一点困惑。</p>
 <a id="more"></a>
 <p>已知：</p>
-<pre><code>&gt;&gt;&gt; def f(x):
-...     return x * x
-...
-&gt;&gt;&gt; map(f, [1, 2, 3, 4, 5, 6, 7, 8, 9])
-[1, 4, 9, 16, 25, 36, 49, 64, 81]
-</code></pre><p>那么在理解以下代码时：</p>
-<pre><code>Title_Dict = {}
-#进行添加工作,将其中相关的字词以统一字词以替换
-Title_Dict.update(dict.fromkeys([&apos;Capt&apos;,&apos;Col&apos;,&apos;Major&apos;,&apos;Dr&apos;,&apos;Rev&apos;],&apos;Officer&apos;))
-Title_Dict.update(dict.fromkeys([&apos;Don&apos;,&apos;Sir&apos;,&apos;the Countess&apos;,&apos;Dona&apos;,&apos;Lady&apos;],&apos;Royalty&apos;))
-Title_Dict.update(dict.fromkeys([&apos;Mme&apos;,&apos;Ms&apos;,&apos;Mrs&apos;],&apos;Mrs&apos;))
-Title_Dict.update(dict.fromkeys([&apos;Mlle&apos;,&apos;Miss&apos;],&apos;Miss&apos;))
-Title_Dict.update(dict.fromkeys([&apos;Mr&apos;],&apos;Mr&apos;))
-Title_Dict.update(dict.fromkeys([&apos;Mme&apos;,&apos;Ms&apos;,&apos;Mrs&apos;],&apos;Master&apos;))
-all_data[&apos;Title&apos;] = all_data[&apos;Title&apos;].map(Title_Dict)#(在此中相当于返回了设定的值，与函数式返回类似)新建立一个列表，并且将先前统一好的代入进行整体分类
-sns.barplot(x=&apos;Title&apos;,y=&apos;Survived&apos;,data=all_data,palette=&apos;Set2&apos;)
-</code></pre><p>可以简单的理解为一个函数：</p>
-<pre><code>if [&apos;Capt&apos;,&apos;Col&apos;,&apos;Major&apos;,&apos;Dr&apos;,&apos;Rev&apos;]:
-    return &apos;Officer&apos;
-</code></pre><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(x)</span>:</span></div><div class="line"><span class="meta">... </span>    <span class="keyword">return</span> x * x</div><div class="line">...</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>map(f, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>])</div><div class="line">[<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>, <span class="number">36</span>, <span class="number">49</span>, <span class="number">64</span>, <span class="number">81</span>]</div></pre></td></tr></table></figure>
+<p>那么在理解以下代码时：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">Title_Dict = &#123;&#125;</div><div class="line"><span class="comment">#进行添加工作,将其中相关的字词以统一字词以替换</span></div><div class="line">Title_Dict.update(dict.fromkeys([<span class="string">'Capt'</span>,<span class="string">'Col'</span>,<span class="string">'Major'</span>,<span class="string">'Dr'</span>,<span class="string">'Rev'</span>],<span class="string">'Officer'</span>))</div><div class="line">Title_Dict.update(dict.fromkeys([<span class="string">'Don'</span>,<span class="string">'Sir'</span>,<span class="string">'the Countess'</span>,<span class="string">'Dona'</span>,<span class="string">'Lady'</span>],<span class="string">'Royalty'</span>))</div><div class="line">Title_Dict.update(dict.fromkeys([<span class="string">'Mme'</span>,<span class="string">'Ms'</span>,<span class="string">'Mrs'</span>],<span class="string">'Mrs'</span>))</div><div class="line">Title_Dict.update(dict.fromkeys([<span class="string">'Mlle'</span>,<span class="string">'Miss'</span>],<span class="string">'Miss'</span>))</div><div class="line">Title_Dict.update(dict.fromkeys([<span class="string">'Mr'</span>],<span class="string">'Mr'</span>))</div><div class="line">Title_Dict.update(dict.fromkeys([<span class="string">'Mme'</span>,<span class="string">'Ms'</span>,<span class="string">'Mrs'</span>],<span class="string">'Master'</span>))</div><div class="line">all_data[<span class="string">'Title'</span>] = all_data[<span class="string">'Title'</span>].map(Title_Dict)<span class="comment">#(在此中相当于返回了设定的值，与函数式返回类似)新建立一个列表，并且将先前统一好的代入进行整体分类</span></div><div class="line">sns.barplot(x=<span class="string">'Title'</span>,y=<span class="string">'Survived'</span>,data=all_data,palette=<span class="string">'Set2'</span>)</div></pre></td></tr></table></figure>
+<p>可以简单的理解为一个函数：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> [<span class="string">'Capt'</span>,<span class="string">'Col'</span>,<span class="string">'Major'</span>,<span class="string">'Dr'</span>,<span class="string">'Rev'</span>]:</div><div class="line">	<span class="keyword">return</span> <span class="string">'Officer'</span></div></pre></td></tr></table></figure>
+<blockquote>
 <p>这样在结合变量使用时就容易理解的多了～</p>
 </blockquote>
 <p>在说说<code>as_matrix函数</code>。</p>
 <p>如下代码：</p>
-<pre><code>df = pd.DataFrame(np.random.randn(3,4) ,columns=list(&apos;abcd&apos;))
-print (df)
-输出：
-          a         b         c         d
-0  0.702272  0.199382  0.590453 -0.177694
-1  0.692848 -1.113005 -0.373606 -0.249216
-2 -0.928320 -0.920277  0.804570 -0.383224
-
-print (df.values)
-输出：
-[[ 0.70227209  0.19938178  0.59045266 -0.17769368]
- [ 0.69284849 -1.11300544 -0.37360597 -0.24921559]
- [-0.92831955 -0.92027708  0.80457031 -0.38322414]]
-
-print (df.as_matrix(columns=None))
-输出：
-[[ 0.70227209  0.19938178  0.59045266 -0.17769368]
- [ 0.69284849 -1.11300544 -0.37360597 -0.24921559]
- [-0.92831955 -0.92027708  0.80457031 -0.38322414]]
-</code></pre><ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">df = pd.DataFrame(np.random.randn(<span class="number">3</span>,<span class="number">4</span>) ,columns=list(<span class="string">'abcd'</span>))</div><div class="line"><span class="keyword">print</span> (df)</div><div class="line">输出：</div><div class="line">          a         b         c         d</div><div class="line"><span class="number">0</span>  <span class="number">0.702272</span>  <span class="number">0.199382</span>  <span class="number">0.590453</span> <span class="number">-0.177694</span></div><div class="line"><span class="number">1</span>  <span class="number">0.692848</span> <span class="number">-1.113005</span> <span class="number">-0.373606</span> <span class="number">-0.249216</span></div><div class="line"><span class="number">2</span> <span class="number">-0.928320</span> <span class="number">-0.920277</span>  <span class="number">0.804570</span> <span class="number">-0.383224</span></div><div class="line"></div><div class="line"><span class="keyword">print</span> (df.values)</div><div class="line">输出：</div><div class="line">[[ <span class="number">0.70227209</span>  <span class="number">0.19938178</span>  <span class="number">0.59045266</span> <span class="number">-0.17769368</span>]</div><div class="line"> [ <span class="number">0.69284849</span> <span class="number">-1.11300544</span> <span class="number">-0.37360597</span> <span class="number">-0.24921559</span>]</div><div class="line"> [<span class="number">-0.92831955</span> <span class="number">-0.92027708</span>  <span class="number">0.80457031</span> <span class="number">-0.38322414</span>]]</div><div class="line"> </div><div class="line"><span class="keyword">print</span> (df.as_matrix(columns=<span class="keyword">None</span>))</div><div class="line">输出：</div><div class="line">[[ <span class="number">0.70227209</span>  <span class="number">0.19938178</span>  <span class="number">0.59045266</span> <span class="number">-0.17769368</span>]</div><div class="line"> [ <span class="number">0.69284849</span> <span class="number">-1.11300544</span> <span class="number">-0.37360597</span> <span class="number">-0.24921559</span>]</div><div class="line"> [<span class="number">-0.92831955</span> <span class="number">-0.92027708</span>  <span class="number">0.80457031</span> <span class="number">-0.38322414</span>]]</div></pre></td></tr></table></figure>
+<ul>
 <li>参考代码来源：<a href="https://blog.csdn.net/yan456jie/article/details/52089128" target="_blank" rel="external">https://blog.csdn.net/yan456jie/article/details/52089128</a></li>
 </ul>
 <blockquote>
@@ -524,7 +493,7 @@ print (df.as_matrix(columns=None))
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月11日 - 21:10</p>
+  <p><span>最后更新:</span>2018年10月20日 - 06:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -832,7 +801,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      201.6k
+      200.1k
     </span>
   
 </div>
@@ -845,6 +814,7 @@ var jiathis_config={
   <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
 
 -->
+
 
         
 <div class="busuanzi-count">
@@ -1341,6 +1311,7 @@ var jiathis_config={
   
 
   
+
 
 </body>
 </html>

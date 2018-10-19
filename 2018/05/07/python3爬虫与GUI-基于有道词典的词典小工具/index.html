@@ -107,7 +107,7 @@
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-08%20%E4%B8%8B%E5%8D%884.23.42.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-08%20%E4%B8%8B%E5%8D%884.31.13.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/5%E6%9C%88-08-2018%2016-32-56.gif">
-<meta property="og:updated_time" content="2018-10-11T13:05:43.282Z">
+<meta property="og:updated_time" content="2018-10-19T23:35:32.309Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python3爬虫与GUI:基于有道词典的词典小工具">
 <meta name="twitter:description" content="最近看到了一篇文章，一个基于有道的词典小工具，心血来潮，想着自己来写一个试试看。  下面我将用python完成接口的对接(即进行抓包)，并且用pyQT5实现对应的GUI界面。接下来就是事件机制的编写了，这样任务就完成了。">
@@ -142,6 +142,7 @@
 
 
   <link rel="canonical" href="https://liujunjie11.github.io/2018/05/07/python3爬虫与GUI-基于有道词典的词典小工具/"/>
+
 
 
 
@@ -418,7 +419,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.9k
+                  1.8k
                 </span>
               
 
@@ -434,7 +435,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  8
+                  7
                 </span>
               
             </div>
@@ -515,144 +516,8 @@
 <blockquote>
 <p>关于<em>pyQt5</em>不清楚可参考我之前的相关博文，或者是利用好搜索引擎。</p>
 </blockquote>
-<pre><code>&quot;&quot;&quot;
-
-函数目标：
-基于有道的GUI搜索小工具
-
-编写时间：
-2018-5-08
-
-&quot;&quot;&quot;
-
-import time 
-import requests
-import hashlib
-import random
-import json
-import sys
-from PyQt5.QtCore import QCoreApplication
-from PyQt5.QtWidgets import (QPushButton, QWidget, QLabel, QLineEdit, QTextEdit, QGridLayout, QApplication,
-    QComboBox)
-
-
-class Example(QWidget):
-
-    def __init__(self):
-
-        super().__init__()
-        self.initUI()
-
-    def save_translateResult(self, word):
-        &quot;&quot;&quot;
-        本函数用于翻译结果的返回。
-        &quot;&quot;&quot;
-
-        r = str(int(time.time() * 1000 + random.randint(1, 10)))  # 模仿JS代码的仿写
-        S = &apos;fanyideskweb&apos;
-        n = word
-        D = &quot;ebSeFb%=XZ%T[KZ)c(sy!&quot;  # 在完整的JS代码中可找到
-
-        o = hashlib.md5((S + n + str(r) + D).encode(&apos;utf-8&apos;)).hexdigest()
-
-        data = {
-            &apos;i&apos;: word,
-            &apos;from&apos;: &apos;AUTO&apos;,
-            &apos;to&apos;: &apos;AUTO&apos;,
-            &apos;smartresult&apos;: &apos;dict&apos;,
-            &apos;client&apos;: S,
-            &apos;salt&apos;: r,
-            &apos;sign&apos;: o,
-            &apos;doctype&apos;: &apos;json&apos;,
-            &apos;version&apos;: &apos;2.1&apos;,
-            &apos;keyfrom&apos;: &apos;fanyi.web&apos;,
-            &apos;action&apos;: &apos;FY_BY_REALTIME&apos;,
-            &apos;typoResult&apos;: &apos;false&apos;
-        }
-        url = &apos;http://fanyi.youdao.com/translate_o?smartresult=dict&amp;smartresult=rule&apos;
-
-        # 在代理中需要加入cookies信息，否则会出现代码错误信息的返回
-        header = {
-            &apos;Cookie&apos;: XXXXXXXXXXXXXXXXXXXntes_nnid=25aff2b1480f17471ca1585f6f2f4293,15120241366&apos;,
-            &apos;Referer&apos;: &apos;http://fanyi.youdao.com/&apos;,
-            &apos;User-Agent&apos;: &apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36&apos;
-        }
-        response = requests.post(url=url, headers=header, data=data)
-        response.encoding = &apos;utf-8&apos;
-
-        translateResult = json.loads(response.text)[&quot;translateResult&quot;][0][0][&apos;tgt&apos;]
-        return translateResult
-
-    def take_test(self, word):
-        &quot;&quot;&quot;
-        本函数用于输出测试。
-        &quot;&quot;&quot;
-        try:
-            return self.save_translateResult(word)
-
-        except AttributeError:
-            return &quot;输入点有误/输出出现问题！！&quot;
-
-    def initUI(self):
-        # 组件添加
-        combo = QComboBox(self)
-        combo.addItem(&apos;有道词典&apos;)
-
-        label = QLabel(&quot;请输入:&quot;)
-        line = QLineEdit()
-        button_1 = QPushButton(&apos;开始翻译&apos;, self)
-        button_2 = QPushButton(&apos;退出&apos;, self)
-        button_3 = QPushButton(&apos;清空&apos;, self)
-
-        result = QTextEdit()
-
-        # 布局设置
-        grip = QGridLayout()
-        grip.setSpacing(4)
-        grip.addWidget(label, 1, 0)
-        grip.addWidget(line, 2, 0)
-        grip.addWidget(button_3, 2, 1)
-        grip.addWidget(button_1, 3, 0)
-        grip.addWidget(button_2, 3, 1)
-        grip.addWidget(result, 4, 0)
-
-        self.setLayout(grip)
-        combo.move(500, 0)
-
-        # 基于Macbook设置基本的快捷键以及推出程序的信号槽
-        button_1.setShortcut(&apos;return&apos;)
-        button_2.setShortcut(&apos;command+q&apos;)
-        button_2.clicked.connect(QCoreApplication.instance().quit)
-        button_3.setShortcut(&apos;esc&apos;)
-
-        def translate():
-            &quot;&quot;&quot;
-            本函数用于返回翻译按钮之后的结果输出！
-            &quot;&quot;&quot;
-            result.setText(self.take_test(line.text()))
-
-        button_1.clicked.connect(translate)
-
-        def clear():
-            &quot;&quot;&quot;
-            本函数用于输入输出框的清空！
-            &quot;&quot;&quot;
-            line.setText(&quot;&quot;)
-            result.setText(&quot;&quot;)
-
-        button_3.clicked.connect(clear)
-
-        # 设置窗口大小
-        self.setGeometry(500, 150, 600, 500)
-        self.setWindowTitle(&quot;有道翻译小工具&quot;)
-        self.show()
-
-
-if __name__ == &quot;__main__&quot;:
-    app = QApplication(sys.argv)
-    ex = Example()
-    sys.exit(app.exec_())
-</code></pre><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div></pre></td><td class="code"><pre><div class="line"><span class="string">"""</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">函数目标：</span></div><div class="line"><span class="string">基于有道的GUI搜索小工具</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">编写时间：</span></div><div class="line"><span class="string">2018-5-08</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">"""</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> time </div><div class="line"><span class="keyword">import</span> requests</div><div class="line"><span class="keyword">import</span> hashlib</div><div class="line"><span class="keyword">import</span> random</div><div class="line"><span class="keyword">import</span> json</div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="keyword">from</span> PyQt5.QtCore <span class="keyword">import</span> QCoreApplication</div><div class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> (QPushButton, QWidget, QLabel, QLineEdit, QTextEdit, QGridLayout, QApplication,</div><div class="line">    QComboBox)</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span><span class="params">(QWidget)</span>:</span></div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        </div><div class="line">        super().__init__()</div><div class="line">        self.initUI()</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">save_translateResult</span><span class="params">(self, word)</span>:</span></div><div class="line">        <span class="string">"""</span></div><div class="line"><span class="string">        本函数用于翻译结果的返回。</span></div><div class="line"><span class="string">        """</span></div><div class="line">        </div><div class="line">        r = str(int(time.time() * <span class="number">1000</span> + random.randint(<span class="number">1</span>, <span class="number">10</span>)))  <span class="comment"># 模仿JS代码的仿写</span></div><div class="line">        S = <span class="string">'fanyideskweb'</span></div><div class="line">        n = word</div><div class="line">        D = <span class="string">"ebSeFb%=XZ%T[KZ)c(sy!"</span>  <span class="comment"># 在完整的JS代码中可找到</span></div><div class="line">        </div><div class="line">        o = hashlib.md5((S + n + str(r) + D).encode(<span class="string">'utf-8'</span>)).hexdigest()</div><div class="line">        </div><div class="line">        data = &#123;</div><div class="line">            <span class="string">'i'</span>: word,</div><div class="line">            <span class="string">'from'</span>: <span class="string">'AUTO'</span>,</div><div class="line">            <span class="string">'to'</span>: <span class="string">'AUTO'</span>,</div><div class="line">            <span class="string">'smartresult'</span>: <span class="string">'dict'</span>,</div><div class="line">            <span class="string">'client'</span>: S,</div><div class="line">            <span class="string">'salt'</span>: r,</div><div class="line">            <span class="string">'sign'</span>: o,</div><div class="line">            <span class="string">'doctype'</span>: <span class="string">'json'</span>,</div><div class="line">            <span class="string">'version'</span>: <span class="string">'2.1'</span>,</div><div class="line">            <span class="string">'keyfrom'</span>: <span class="string">'fanyi.web'</span>,</div><div class="line">            <span class="string">'action'</span>: <span class="string">'FY_BY_REALTIME'</span>,</div><div class="line">            <span class="string">'typoResult'</span>: <span class="string">'false'</span></div><div class="line">        &#125;</div><div class="line">        url = <span class="string">'http://fanyi.youdao.com/translate_o?smartresult=dict&amp;smartresult=rule'</span></div><div class="line">        </div><div class="line">        <span class="comment"># 在代理中需要加入cookies信息，否则会出现代码错误信息的返回</span></div><div class="line">        header = &#123;</div><div class="line">            <span class="string">'Cookie'</span>: XXXXXXXXXXXXXXXXXXXntes_nnid=<span class="number">25</span>aff2b1480f17471ca1585f6f2f4293,<span class="number">15120241366</span><span class="string">',</span></div><div class="line"><span class="string">            '</span>Refere<span class="string">r': '</span>http://fanyi.youdao.com/<span class="string">',</span></div><div class="line"><span class="string">            '</span>User-Agent<span class="string">': '</span>Mozilla/<span class="number">5.0</span> (Macintosh; Intel Mac OS X <span class="number">10</span>_13_1) AppleWebKit/<span class="number">537.36</span> (KHTML, like Gecko) Chrome/<span class="number">66.0</span><span class="number">.3359</span><span class="number">.139</span> Safari/<span class="number">537.36</span><span class="string">'</span></div><div class="line"><span class="string">        &#125;</span></div><div class="line"><span class="string">        response = requests.post(url=url, headers=header, data=data)</span></div><div class="line"><span class="string">        response.encoding = '</span>utf<span class="number">-8</span><span class="string">'</span></div><div class="line"><span class="string">        </span></div><div class="line"><span class="string">        translateResult = json.loads(response.text)["translateResult"][0][0]['</span>tgt<span class="string">']</span></div><div class="line"><span class="string">        return translateResult</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">    def take_test(self, word):</span></div><div class="line"><span class="string">        """</span></div><div class="line"><span class="string">        本函数用于输出测试。</span></div><div class="line"><span class="string">        """</span></div><div class="line"><span class="string">        try:</span></div><div class="line"><span class="string">            return self.save_translateResult(word)</span></div><div class="line"><span class="string">        </span></div><div class="line"><span class="string">        except AttributeError:</span></div><div class="line"><span class="string">            return "输入点有误/输出出现问题！！"</span></div><div class="line"><span class="string">        </span></div><div class="line"><span class="string">    def initUI(self):</span></div><div class="line"><span class="string">        # 组件添加</span></div><div class="line"><span class="string">        combo = QComboBox(self)</span></div><div class="line"><span class="string">        combo.addItem('</span>有道词典<span class="string">')</span></div><div class="line"><span class="string">        </span></div><div class="line"><span class="string">        label = QLabel("请输入:")</span></div><div class="line"><span class="string">        line = QLineEdit()</span></div><div class="line"><span class="string">        button_1 = QPushButton('</span>开始翻译<span class="string">', self)</span></div><div class="line"><span class="string">        button_2 = QPushButton('</span>退出<span class="string">', self)</span></div><div class="line"><span class="string">        button_3 = QPushButton('</span>清空<span class="string">', self)</span></div><div class="line"><span class="string">        </span></div><div class="line"><span class="string">        result = QTextEdit()</span></div><div class="line"><span class="string">        </span></div><div class="line"><span class="string">        # 布局设置</span></div><div class="line"><span class="string">        grip = QGridLayout()</span></div><div class="line"><span class="string">        grip.setSpacing(4)</span></div><div class="line"><span class="string">        grip.addWidget(label, 1, 0)</span></div><div class="line"><span class="string">        grip.addWidget(line, 2, 0)</span></div><div class="line"><span class="string">        grip.addWidget(button_3, 2, 1)</span></div><div class="line"><span class="string">        grip.addWidget(button_1, 3, 0)</span></div><div class="line"><span class="string">        grip.addWidget(button_2, 3, 1)</span></div><div class="line"><span class="string">        grip.addWidget(result, 4, 0)</span></div><div class="line"><span class="string">        </span></div><div class="line"><span class="string">        self.setLayout(grip)</span></div><div class="line"><span class="string">        combo.move(500, 0)</span></div><div class="line"><span class="string">        </span></div><div class="line"><span class="string">        # 基于Macbook设置基本的快捷键以及推出程序的信号槽</span></div><div class="line"><span class="string">        button_1.setShortcut('</span><span class="keyword">return</span><span class="string">')</span></div><div class="line"><span class="string">        button_2.setShortcut('</span>command+q<span class="string">')</span></div><div class="line"><span class="string">        button_2.clicked.connect(QCoreApplication.instance().quit)</span></div><div class="line"><span class="string">        button_3.setShortcut('</span>esc<span class="string">')</span></div><div class="line"><span class="string">        </span></div><div class="line"><span class="string">        def translate():</span></div><div class="line"><span class="string">            """</span></div><div class="line"><span class="string">            本函数用于返回翻译按钮之后的结果输出！</span></div><div class="line"><span class="string">            """</span></div><div class="line"><span class="string">            result.setText(self.take_test(line.text()))</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">        button_1.clicked.connect(translate)</span></div><div class="line"><span class="string">        </span></div><div class="line"><span class="string">        def clear():</span></div><div class="line"><span class="string">            """</span></div><div class="line"><span class="string">            本函数用于输入输出框的清空！</span></div><div class="line"><span class="string">            """</span></div><div class="line"><span class="string">            line.setText("")</span></div><div class="line"><span class="string">            result.setText("")</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">        button_3.clicked.connect(clear)</span></div><div class="line"><span class="string">        </span></div><div class="line"><span class="string">        # 设置窗口大小</span></div><div class="line"><span class="string">        self.setGeometry(500, 150, 600, 500)</span></div><div class="line"><span class="string">        self.setWindowTitle("有道翻译小工具")</span></div><div class="line"><span class="string">        self.show()</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">        </span></div><div class="line"><span class="string">if __name__ == "__main__":</span></div><div class="line"><span class="string">    app = QApplication(sys.argv)</span></div><div class="line"><span class="string">    ex = Example()</span></div><div class="line"><span class="string">    sys.exit(app.exec_())</span></div></pre></td></tr></table></figure>
+<blockquote>
 <p><strong>上面的<em>cookies</em>值是必须要的！否则会出现错误，当然，在上面的代码我的<em>cookies</em>数值我进行了隐藏更改，如果需要测试运行，可加上自己浏览器上有道在线翻译的<em>cookies</em>。</strong></p>
 </blockquote>
 <p>运行演示：</p>
@@ -726,7 +591,7 @@ if __name__ == &quot;__main__&quot;:
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月11日 - 21:10</p>
+  <p><span>最后更新:</span>2018年10月20日 - 07:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -1059,7 +924,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      201.6k
+      200.1k
     </span>
   
 </div>
@@ -1072,6 +937,7 @@ var jiathis_config={
   <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
 
 -->
+
 
         
 <div class="busuanzi-count">
@@ -1568,6 +1434,7 @@ var jiathis_config={
   
 
   
+
 
 </body>
 </html>

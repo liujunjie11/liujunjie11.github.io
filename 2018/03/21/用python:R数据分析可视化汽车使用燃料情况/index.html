@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="LXiHa`Notes">
 <meta property="og:description" content="分析的是美国一个网站统计的多年汽车使用燃料情况的数据，需要从网上下载，在此利用好python爬虫大有裨益，可作为实战运行分析。  此篇文章案例来源于： 本书文章中用R语言实现的数据可视化，是从网上直接下的文件然后分析，我打算在此用python实现爬取相关文件，并且运用python进行可视化分析。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-11T13:03:01.941Z">
+<meta property="og:updated_time" content="2018-10-19T23:41:39.454Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用python&#x2F;R数据分析可视化汽车使用燃料情况">
 <meta name="twitter:description" content="分析的是美国一个网站统计的多年汽车使用燃料情况的数据，需要从网上下载，在此利用好python爬虫大有裨益，可作为实战运行分析。  此篇文章案例来源于： 本书文章中用R语言实现的数据可视化，是从网上直接下的文件然后分析，我打算在此用python实现爬取相关文件，并且运用python进行可视化分析。">
@@ -127,6 +127,7 @@
 
 
   <link rel="canonical" href="https://liujunjie11.github.io/2018/03/21/用python:R数据分析可视化汽车使用燃料情况/"/>
+
 
 
 
@@ -403,7 +404,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1k
+                  906
                 </span>
               
 
@@ -419,7 +420,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4
+                  3
                 </span>
               
             </div>
@@ -455,93 +456,94 @@
 <p>接下来就是运用爬虫知识实现此文件的下载了。</p>
 </blockquote>
 <h2 id="爬虫代码"><a href="#爬虫代码" class="headerlink" title="爬虫代码"></a>爬虫代码</h2><p>我们可有这样的思路：<strong>从主页出发 –&gt; 爬取到下载文件页面的链接 –&gt; 再从此爬取到下载地址链接 –&gt; 之后运用相关的函数下载至本目录即可。</strong>以下是实现过程。</p>
-<pre><code>&apos;&apos;&apos;
+<pre><code class="python"><span class="string">'''</span>
+<span class="string"></span>
+<span class="string">    函数目标：</span>
+<span class="string">    用python爬取相关的下载文件</span>
+<span class="string"></span>
+<span class="string">    编写时间：</span>
+<span class="string">    2018-03-21</span>
+<span class="string"></span>
+<span class="string">'''</span>
+<span class="keyword">import</span> requests
+<span class="keyword">import</span> re
+<span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup
+<span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlretrieve
 
-    函数目标：
-    用python爬取相关的下载文件
+<span class="string">'''</span>
+<span class="string">    first_url方法获取进入下载页面的地址</span>
+<span class="string">    运用了正则表达式的匹配方法</span>
+<span class="string">                                        '''</span>
+<span class="function"><span class="keyword">def</span> <span class="title">first_url</span><span class="params">()</span>:</span>
 
-    编写时间：
-    2018-03-21
-
-&apos;&apos;&apos;
-import requests
-import re
-from bs4 import BeautifulSoup
-from urllib.request import urlretrieve
-
-&apos;&apos;&apos;
-    first_url方法获取进入下载页面的地址
-    运用了正则表达式的匹配方法
-                                        &apos;&apos;&apos;
-def first_url():
-
-    url = &apos;https://www.fueleconomy.gov/&apos;
-    # 添加代理
-    header = {&apos;Accept&apos;: &apos;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8&apos;,
-            &apos;Accept-Encoding&apos;: &apos;gzip, deflate, br&apos;,
-            &apos;Accept-Language&apos;: &apos;zh-CN,zh&apos;,
-            &apos;Cache-Control&apos;: &apos;max-age=0&apos;,
-            &apos;Connection&apos;: &apos;keep-alive&apos;,
-            &apos;Host&apos;: &apos;www.fueleconomy.gov&apos;,
-            &apos;Upgrade-Insecure-Requests&apos;: &apos;1&apos;,
-            &apos;User-Agent&apos;: &apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36}&apos;
+    url = <span class="string">'https://www.fueleconomy.gov/'</span>
+    <span class="comment"># 添加代理</span>
+    header = {<span class="string">'Accept'</span>: <span class="string">'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'</span>,
+            <span class="string">'Accept-Encoding'</span>: <span class="string">'gzip, deflate, br'</span>,
+            <span class="string">'Accept-Language'</span>: <span class="string">'zh-CN,zh'</span>,
+            <span class="string">'Cache-Control'</span>: <span class="string">'max-age=0'</span>,
+            <span class="string">'Connection'</span>: <span class="string">'keep-alive'</span>,
+            <span class="string">'Host'</span>: <span class="string">'www.fueleconomy.gov'</span>,
+            <span class="string">'Upgrade-Insecure-Requests'</span>: <span class="string">'1'</span>,
+            <span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36}'</span>
             }
 
     request = requests.get(url=url, headers=header)
-    # 指定编码格式
-    request.encoding = &apos;utf-8&apos;
+    <span class="comment"># 指定编码格式</span>
+    request.encoding = <span class="string">'utf-8'</span>
 
-    &apos;&apos;&apos;
-        发现不用指定re.S亦可以完成匹配，用了反而会报错...
-        注意每次匹配到的数据之后还有索引要记得标明
-    &apos;&apos;&apos;
-    link = re.findall(r&apos;&lt;a href=&quot;(.*?)&quot;&gt;Developer Tools&lt;/a&gt;&apos;, request.text)[0]
-    return link
+    <span class="string">'''</span>
+<span class="string">        发现不用指定re.S亦可以完成匹配，用了反而会报错...</span>
+<span class="string">        注意每次匹配到的数据之后还有索引要记得标明</span>
+<span class="string">    '''</span>
+    link = re.findall(<span class="string">r'&lt;a href="(.*?)"&gt;Developer Tools&lt;/a&gt;'</span>, request.text)[<span class="number">0</span>]
+    <span class="keyword">return</span> link
 
 
-&apos;&apos;&apos;
-    second_url方法是用来获取下载文件的地址
-    方法也是运用了正则表达式
-                                            &apos;&apos;&apos;
-def second_url():
+<span class="string">'''</span>
+<span class="string">    second_url方法是用来获取下载文件的地址</span>
+<span class="string">    方法也是运用了正则表达式</span>
+<span class="string">                                            '''</span>
+<span class="function"><span class="keyword">def</span> <span class="title">second_url</span><span class="params">()</span>:</span>
 
-    # 进入下载资源的页面
-    se_url = &apos;https://www.fueleconomy.gov&apos; + first_url()
-    # 添加代理,基本上的代理信息没什么变化
+    <span class="comment"># 进入下载资源的页面</span>
+    se_url = <span class="string">'https://www.fueleconomy.gov'</span> + first_url()
+    <span class="comment"># 添加代理,基本上的代理信息没什么变化</span>
     header_2 = {
-            &apos;Accept&apos;: &apos;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8&apos;,
-            &apos;Accept-Encoding&apos;: &apos;gzip, deflate, br&apos;,
-            &apos;Accept-Language&apos;: &apos;zh-CN,zh&apos;,
-            &apos;Cache-Control&apos;: &apos;max-age=0&apos;,
-            &apos;Connection&apos;: &apos;keep-alive&apos;,
-            &apos;Host&apos;: &apos;www.fueleconomy.gov&apos;,
-            &apos;Upgrade-Insecure-Requests&apos;: &apos;1&apos;,
-            &apos;User-Agent&apos;: &apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36}&apos;
+            <span class="string">'Accept'</span>: <span class="string">'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'</span>,
+            <span class="string">'Accept-Encoding'</span>: <span class="string">'gzip, deflate, br'</span>,
+            <span class="string">'Accept-Language'</span>: <span class="string">'zh-CN,zh'</span>,
+            <span class="string">'Cache-Control'</span>: <span class="string">'max-age=0'</span>,
+            <span class="string">'Connection'</span>: <span class="string">'keep-alive'</span>,
+            <span class="string">'Host'</span>: <span class="string">'www.fueleconomy.gov'</span>,
+            <span class="string">'Upgrade-Insecure-Requests'</span>: <span class="string">'1'</span>,
+            <span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36}'</span>
             }
 
     request_2 = requests.get(url=se_url, headers=header_2)
-    request_2.encoding = &apos;utf-8&apos;
+    request_2.encoding = <span class="string">'utf-8'</span>
 
-    # 匹配正则表达式
-    link_2 = re.findall(r&apos;&lt;a href=&quot;(.*?)&quot;&gt;CSV&lt;/a&gt;&apos;, request_2.text)[0]
+    <span class="comment"># 匹配正则表达式</span>
+    link_2 = re.findall(<span class="string">r'&lt;a href="(.*?)"&gt;CSV&lt;/a&gt;'</span>, request_2.text)[<span class="number">0</span>]
 
-    return link_2
+    <span class="keyword">return</span> link_2
 
 
-&apos;&apos;&apos;
-    已经得到了资源下载地址，在主函数中进行下载并且进行解压
-                                                    &apos;&apos;&apos;
-if __name__ == &apos;__main__&apos;:
+<span class="string">'''</span>
+<span class="string">    已经得到了资源下载地址，在主函数中进行下载并且进行解压</span>
+<span class="string">                                                    '''</span>
+<span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:
 
-    # 获取下载文件的资源地址
-    down_url = &apos;https://www.fueleconomy.gov&apos; + second_url()
-    print(&apos;数据采集完成...&apos;)
-    print(&apos;开始下载文件...&apos;)
+    <span class="comment"># 获取下载文件的资源地址</span>
+    down_url = <span class="string">'https://www.fueleconomy.gov'</span> + second_url()
+    print(<span class="string">'数据采集完成...'</span>)
+    print(<span class="string">'开始下载文件...'</span>)
 
-    # 文件名称是：vehicles.csv.zip，格式也是非常的重要！
-    urlretrieve(url=down_url, filename=&apos;vehicles.csv.zip&apos;)
-    print(&apos;下载完成！可在本工程目录查收！&apos;)
-</code></pre><p>至此可在本目录下查看到下载好的压缩文件：</p>
+    <span class="comment"># 文件名称是：vehicles.csv.zip，格式也是非常的重要！</span>
+    urlretrieve(url=down_url, filename=<span class="string">'vehicles.csv.zip'</span>)
+    print(<span class="string">'下载完成！可在本工程目录查收！'</span>)
+</code></pre>
+<p>至此可在本目录下查看到下载好的压缩文件：</p>
 <p><img src="" alt=""></p>
 <blockquote>
 <p>当然也可加上运用<em>python</em>解压这一部分的模块，有兴趣的朋友可自行学习运用。</p>
@@ -581,7 +583,7 @@ if __name__ == &apos;__main__&apos;:
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月11日 - 21:10</p>
+  <p><span>最后更新:</span>2018年10月20日 - 07:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -914,7 +916,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      201.6k
+      200.1k
     </span>
   
 </div>
@@ -927,6 +929,7 @@ var jiathis_config={
   <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
 
 -->
+
 
         
 <div class="busuanzi-count">
@@ -1423,6 +1426,7 @@ var jiathis_config={
   
 
   
+
 
 </body>
 </html>

@@ -95,7 +95,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-12%20%E4%B8%8B%E5%8D%888.16.51.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-12%20%E4%B8%8B%E5%8D%888.12.58.png">
-<meta property="og:updated_time" content="2018-10-11T13:01:50.607Z">
+<meta property="og:updated_time" content="2018-10-19T23:43:43.245Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python3爬取动态网页图片">
 <meta name="twitter:description" content="爬取的URL地址:https://unsplash.com/  这是一个优美图片地址，往下拉就可以出来更多的图片，这显然是一个动态网页呀…">
@@ -130,6 +130,7 @@
 
 
   <link rel="canonical" href="https://liujunjie11.github.io/2018/03/12/python3爬取动态网页图片/"/>
+
 
 
 
@@ -406,7 +407,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  713
+                  656
                 </span>
               
 
@@ -422,7 +423,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  2
                 </span>
               
             </div>
@@ -454,48 +455,8 @@
 </blockquote>
 <p>##代码</p>
 <p>这是我后来自己写的代码，比上面博主的简短一些，亦可参考参考。</p>
-<pre><code>&apos;&apos;&apos;
-    函数目标：
-    爬取动态网页的图片
-
-&apos;&apos;&apos;
-
-import requests
-import json
-from urllib.request import urlretrieve
-import os
-import time
-
-if __name__ == &apos;__main__&apos;:
-    url = &apos;https://unsplash.com/napi/feeds/home&apos;
-    &apos;&apos;&apos;
-
-    添加需要的代理:
-    authorization证书配置,有时网站需要此类的代理html信息才会出来...
-    json格式分析js页面的利器，有时用js渲染出来的页面，要注意观察其URL及相对准确的信息
-
-    &apos;&apos;&apos;
-    header = {&apos;user-agent&apos;:&apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36&apos;,
-            &apos;authorization&apos;:&apos;Client-ID c94869b36aa272dd62dfaeefed769d4115fb3189a9xxxxxxxxxxx&apos;}
-    re = requests.get(url=url, headers=header)
-    re.encoding = &apos;utf-8&apos;
-    # 通过分析易知一页有包括多张图片的ID链接，可用python的json格式处理解析
-    json_info = json.loads(re.text)
-
-    # 建立一个空的列表用于装ID信息
-    list_id = []
-    if &apos;优美图片集&apos; not in os.listdir():
-        os.makedirs(&apos;优美图片集&apos;)
-    for each in json_info[&apos;photos&apos;]:
-        list_id.append(each[&apos;id&apos;])
-
-    # 利用urlretrieve函数一一下载，设置延迟
-    for i in range(0, len(list_id)):
-        print(&apos;开始下载指定页面中的第%d张&apos; % (i + 1))
-        urlretrieve(url=&apos;https://unsplash.com/photos/&apos; + list_id[i] + &apos;/download?force=true.jpg&apos;, filename=&apos;优美图片集/&apos; + &apos;系列%d.jpg&apos; % i)
-
-    print(&apos;下载完成！请查收...&apos;)    
-</code></pre><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="string">'''</span></div><div class="line"><span class="string">    函数目标：</span></div><div class="line"><span class="string">    爬取动态网页的图片</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">'''</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> requests</div><div class="line"><span class="keyword">import</span> json</div><div class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlretrieve</div><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">import</span> time</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    url = <span class="string">'https://unsplash.com/napi/feeds/home'</span></div><div class="line">    <span class="string">'''</span></div><div class="line"><span class="string">    </span></div><div class="line"><span class="string">    添加需要的代理:</span></div><div class="line"><span class="string">    authorization证书配置,有时网站需要此类的代理html信息才会出来...</span></div><div class="line"><span class="string">    json格式分析js页面的利器，有时用js渲染出来的页面，要注意观察其URL及相对准确的信息</span></div><div class="line"><span class="string">    </span></div><div class="line"><span class="string">    '''</span></div><div class="line">    header = &#123;<span class="string">'user-agent'</span>:<span class="string">'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36'</span>,</div><div class="line">            <span class="string">'authorization'</span>:<span class="string">'Client-ID c94869b36aa272dd62dfaeefed769d4115fb3189a9xxxxxxxxxxx'</span>&#125;</div><div class="line">    re = requests.get(url=url, headers=header)</div><div class="line">    re.encoding = <span class="string">'utf-8'</span></div><div class="line">    <span class="comment"># 通过分析易知一页有包括多张图片的ID链接，可用python的json格式处理解析</span></div><div class="line">    json_info = json.loads(re.text)</div><div class="line">    </div><div class="line">    <span class="comment"># 建立一个空的列表用于装ID信息</span></div><div class="line">    list_id = []</div><div class="line">    <span class="keyword">if</span> <span class="string">'优美图片集'</span> <span class="keyword">not</span> <span class="keyword">in</span> os.listdir():</div><div class="line">        os.makedirs(<span class="string">'优美图片集'</span>)</div><div class="line">    <span class="keyword">for</span> each <span class="keyword">in</span> json_info[<span class="string">'photos'</span>]:</div><div class="line">        list_id.append(each[<span class="string">'id'</span>])</div><div class="line">        </div><div class="line">    <span class="comment"># 利用urlretrieve函数一一下载，设置延迟</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(list_id)):</div><div class="line">        print(<span class="string">'开始下载指定页面中的第%d张'</span> % (i + <span class="number">1</span>))</div><div class="line">        urlretrieve(url=<span class="string">'https://unsplash.com/photos/'</span> + list_id[i] + <span class="string">'/download?force=true.jpg'</span>, filename=<span class="string">'优美图片集/'</span> + <span class="string">'系列%d.jpg'</span> % i)</div><div class="line">        </div><div class="line">    print(<span class="string">'下载完成！请查收...'</span>)</div></pre></td></tr></table></figure>
+<blockquote>
 <p>虽然说我的代码简短一点，不过我还是支持面对对象模式编程的，方便以后的学习，也是对自己的一种考验。</p>
 </blockquote>
 <p>运行之后在本工程目录可见：</p>
@@ -505,12 +466,8 @@ if __name__ == &apos;__main__&apos;:
 <p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-12%20%E4%B8%8B%E5%8D%888.12.58.png" alt=""></p>
 <hr>
 <p>简单说说当时的情况，在参考了上面博主的分析过程后，利用了<em>Chrome下载器</em>的下载发现了图片的信息，然后我用<em>urlretrieve函数</em>单张下载的测试，发现成功了…附上代码。</p>
-<pre><code>from urllib.request import urlretrieve
-if __name__ == &apos;__main__&apos;:
-
-    urlretrieve(&apos;https://unsplash.com/photos/NrflUuJJK0I/download?force=true.jpg&apos;, &apos;tu.jpg&apos;)
-         print(&apos;下载完成！&apos;)
-</code></pre><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlretrieve</div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line"></div><div class="line">	urlretrieve(<span class="string">'https://unsplash.com/photos/NrflUuJJK0I/download?force=true.jpg'</span>, <span class="string">'tu.jpg'</span>)</div><div class="line">	     print(<span class="string">'下载完成！'</span>)</div></pre></td></tr></table></figure>
+<blockquote>
 <p>不过从来都没有见过这种<em>src信息</em>…算是开了眼界，长了知识啦。</p>
 </blockquote>
 
@@ -542,7 +499,7 @@ if __name__ == &apos;__main__&apos;:
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月11日 - 21:10</p>
+  <p><span>最后更新:</span>2018年10月20日 - 07:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -875,7 +832,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      201.6k
+      200.1k
     </span>
   
 </div>
@@ -888,6 +845,7 @@ var jiathis_config={
   <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
 
 -->
+
 
         
 <div class="busuanzi-count">
@@ -1384,6 +1342,7 @@ var jiathis_config={
   
 
   
+
 
 </body>
 </html>

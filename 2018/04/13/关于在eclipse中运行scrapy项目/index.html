@@ -97,7 +97,7 @@
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-13%20%E4%B8%8B%E5%8D%887.50.00.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-13%20%E4%B8%8B%E5%8D%887.46.09.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-13%20%E4%B8%8B%E5%8D%887.46.17.png">
-<meta property="og:updated_time" content="2018-10-11T13:04:28.005Z">
+<meta property="og:updated_time" content="2018-10-19T23:38:03.858Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于在eclipse中运行scrapy项目">
 <meta name="twitter:description" content="关于在eclipse中运行爬虫scrapy框架的项目介绍如下。  scrapy官方文档：http://scrapy-chs.readthedocs.io/zh_CN/0.24/topics/shell.html  首先打开终端将cd至eclipse目录下的（即eclipse-workspace），使用命令行scrapy startproject tutorial（其中的tutorial是自由选择的">
@@ -132,6 +132,7 @@
 
 
   <link rel="canonical" href="https://liujunjie11.github.io/2018/04/13/关于在eclipse中运行scrapy项目/"/>
+
 
 
 
@@ -408,7 +409,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  421
+                  399
                 </span>
               
 
@@ -458,38 +459,21 @@
 <p>在<em>spider</em>包下建立一个脚本文件（如上图我的那个<em>first</em>文件，名字随意），是用来写爬虫程序用的。之后在<em>tutorial</em>包下建立一个名为<em>cmdline</em>的脚本文件（名字随意）。</p>
 <p>下面为了直接达到运行成功的目的，贴上测试用的代码。</p>
 <p><strong>first.py中的代码：</strong></p>
-<pre><code>import scrapy
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> scrapy</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">DmozSpider</span><span class="params">(scrapy.Spider)</span>:</span></div><div class="line">    name = <span class="string">"first"</span> <span class="comment">#此处很重要</span></div><div class="line">    allowed_domains = [<span class="string">"dmoz.org"</span>]</div><div class="line">    start_urls = [</div><div class="line">        <span class="string">"http://www.dmoz.org/Computers/Programming/Languages/Python/Books/"</span>,</div><div class="line">        <span class="string">"http://www.dmoz.org/Computers/Programming/Languages/Python/Resources/"</span></div><div class="line">    ]</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">parse</span><span class="params">(self, response)</span>:</span></div><div class="line">        filename = response.url.split(<span class="string">"/"</span>)[<span class="number">-2</span>]</div><div class="line">        <span class="keyword">with</span> open(filename, <span class="string">'wb'</span>) <span class="keyword">as</span> f:</div><div class="line">            f.write(response.body)</div></pre></td></tr></table></figure>
+<p><strong>cmdline.py中的代码：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> scrapy.cmdline <span class="keyword">import</span> execute</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">	<span class="comment">#第三个参数就是上方的first文件名！其他两个参数如下正常</span></div><div class="line">    execute(argv=[<span class="string">'scrapy'</span>, <span class="string">'crawl'</span>, <span class="string">'first'</span>])</div></pre></td></tr></table></figure>
+<p><strong>items.py中的代码：</strong></p>
+<pre><code class="python"><span class="keyword">import</span> scrapy
 
 
-class DmozSpider(scrapy.Spider):
-    name = &quot;first&quot; #此处很重要
-    allowed_domains = [&quot;dmoz.org&quot;]
-    start_urls = [
-        &quot;http://www.dmoz.org/Computers/Programming/Languages/Python/Books/&quot;,
-        &quot;http://www.dmoz.org/Computers/Programming/Languages/Python/Resources/&quot;
-    ]
-
-    def parse(self, response):
-        filename = response.url.split(&quot;/&quot;)[-2]
-        with open(filename, &apos;wb&apos;) as f:
-            f.write(response.body)
-</code></pre><p><strong>cmdline.py中的代码：</strong></p>
-<pre><code>from scrapy.cmdline import execute
-
-if __name__ == &apos;__main__&apos;:
-    #第三个参数就是上方的first文件名！其他两个参数如下正常
-    execute(argv=[&apos;scrapy&apos;, &apos;crawl&apos;, &apos;first&apos;])
-</code></pre><p><strong>items.py中的代码：</strong></p>
-<pre><code>import scrapy
-
-
-class TutorialItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
+<span class="class"><span class="keyword">class</span> <span class="title">TutorialItem</span><span class="params">(scrapy.Item)</span>:</span>
+    <span class="comment"># define the fields for your item here like:</span>
+    <span class="comment"># name = scrapy.Field()</span>
     title = scrapy.Field()
     link = scrapy.Field()
     desc = scrapy.Field()
-</code></pre><blockquote>
+</code></pre>
+<blockquote>
 <p>这个文件是与<em>first</em>文件有直接联系的。可参考官方文档介绍。</p>
 </blockquote>
 <h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><p>接下来直接运行<em>cmdline.py</em>可得出结果：</p>
@@ -536,7 +520,7 @@ class TutorialItem(scrapy.Item):
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月11日 - 21:10</p>
+  <p><span>最后更新:</span>2018年10月20日 - 07:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -869,7 +853,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      201.6k
+      200.1k
     </span>
   
 </div>
@@ -882,6 +866,7 @@ var jiathis_config={
   <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
 
 -->
+
 
         
 <div class="busuanzi-count">
@@ -1378,6 +1363,7 @@ var jiathis_config={
   
 
   
+
 
 </body>
 </html>

@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="LXiHa`Notes">
 <meta property="og:description" content="最近用homebrew下载mongodb，发现出现了Error: go: version missing for “gotools” resource!的错误，试了几次都不行，最后在谷歌用英文搜索关键词在GitHub的一个论坛用相关的解决方案。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-11T13:03:31.298Z">
+<meta property="og:updated_time" content="2018-10-19T23:41:02.029Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于homebrew下载出现&quot;Error&#x2F;go&#x2F;version missing for  gotools resource!&quot;错误的解决方案">
 <meta name="twitter:description" content="最近用homebrew下载mongodb，发现出现了Error: go: version missing for “gotools” resource!的错误，试了几次都不行，最后在谷歌用英文搜索关键词在GitHub的一个论坛用相关的解决方案。">
@@ -127,6 +127,7 @@
 
 
   <link rel="canonical" href="https://liujunjie11.github.io/2018/03/28/关于homebrew下载出现Error:go:version missing for  gotools resource!错误的解决方案/"/>
+
 
 
 
@@ -443,13 +444,9 @@
         <p>最近用<em>homebrew</em>下载<em>mongodb</em>，发现出现了<em>Error: go: version missing for “gotools” resource!</em>的错误，试了几次都不行，最后在谷歌用英文搜索关键词在<em>GitHub</em>的一个论坛用相关的解决方案。</p>
 <a id="more"></a>
 <p><strong>使用命令行</strong></p>
-<blockquote>
-<p><strong>git -C “$(brew –repo)” fetch –tags</strong></p>
-</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git -C <span class="string">"<span class="variable">$(brew --repo)</span>"</span> fetch --tags</div></pre></td></tr></table></figure>
 <p>之后再次输入：</p>
-<blockquote>
-<p><strong>brew update –force</strong></p>
-</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew update --force</div></pre></td></tr></table></figure>
 <p>最后再次用命令行<em>brew install mongodb</em>，发现已经能够正确成功下载了。</p>
 
       
@@ -480,7 +477,7 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月11日 - 21:10</p>
+  <p><span>最后更新:</span>2018年10月20日 - 07:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -788,7 +785,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      201.6k
+      200.1k
     </span>
   
 </div>
@@ -801,6 +798,7 @@ var jiathis_config={
   <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
 
 -->
+
 
         
 <div class="busuanzi-count">
@@ -1297,6 +1295,7 @@ var jiathis_config={
   
 
   
+
 
 </body>
 </html>

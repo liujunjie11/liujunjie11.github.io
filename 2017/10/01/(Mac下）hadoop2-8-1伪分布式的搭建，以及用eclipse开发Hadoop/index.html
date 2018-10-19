@@ -126,7 +126,7 @@
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-01%20%E4%B8%8B%E5%8D%882.19.59.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-01%20%E4%B8%8B%E5%8D%882.25.26.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-01%20%E4%B8%8B%E5%8D%882.28.04.png">
-<meta property="og:updated_time" content="2018-10-11T12:53:28.517Z">
+<meta property="og:updated_time" content="2018-10-19T23:51:03.037Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="(Mac下）hadoop2.8.1伪分布式的搭建，以及用eclipse开发Hadoop">
 <meta name="twitter:description" content="前言 声明  我所有参考的文章，均在我的简书中已标明参考链接出处。   Mac系统。（当然其他的系统也可以参考，区别并不大。）  Hadoop2.8.1  homebrew  eclipse  相关的插件      最近在学习Hadoop，在搭建环境当中遇到了一些问题，如今总算是解决了，花了不少时间，毕竟万事开头难嘛，现在也有一些了解了。在此，我将记录下我遇到的所有的问题以及搭建的所有详细过程，以">
@@ -161,6 +161,7 @@
 
 
   <link rel="canonical" href="https://liujunjie11.github.io/2017/10/01/(Mac下）hadoop2-8-1伪分布式的搭建，以及用eclipse开发Hadoop/"/>
+
 
 
 
@@ -437,7 +438,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.3k
+                  2.4k
                 </span>
               
 
@@ -453,7 +454,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  9
+                  10
                 </span>
               
             </div>
@@ -556,13 +557,14 @@
 <hr>
 <p>`</p>
 <h3 id="打开-core-site-xml"><a href="#打开-core-site-xml" class="headerlink" title="打开 core-site.xml"></a>打开 <code>core-site.xml</code></h3><p>添加配置如下：</p>
-<p>` <configuration></configuration></p>
-<pre><code>&lt;property&gt;  
-&lt;name&gt;fs.defaultFS&lt;/name&gt;
-&lt;value&gt;hdfs://localhost:9000&lt;/value&gt;          
-  &lt;/property&gt;
-</code></pre><p>`</p>
-<p>如图：</p>
+<pre><code>` &lt;configuration&gt;
+
+    &lt;property&gt;  
+    &lt;name&gt;fs.defaultFS&lt;/name&gt;
+    &lt;value&gt;hdfs://localhost:9000&lt;/value&gt;          
+      &lt;/property&gt;
+&lt;/configuration&gt;`
+</code></pre><p>如图：</p>
 <p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-01%20%E4%B8%8B%E5%8D%881.44.27.png" alt=""></p>
 <blockquote>
 <p>其中端口号：<code>9000</code>的对应以下的用eclipse搭建Hadoop时的窗口连接的 <code>DFS Master Port</code></p>
@@ -570,12 +572,15 @@
 </blockquote>
 <hr>
 <h3 id="打开-hdfs-site-xml"><a href="#打开-hdfs-site-xml" class="headerlink" title="打开 hdfs-site.xml"></a>打开 <code>hdfs-site.xml</code></h3><p>添加配置如下：</p>
-<p>`<configuration></configuration></p>
-<pre><code> &lt;property&gt;
-   &lt;name&gt;dfs.replication&lt;/name&gt;
-   &lt;value&gt;1&lt;/value&gt;
-&lt;/property&gt;
-</code></pre><p><br>`</p>
+<pre><code>`&lt;configuration&gt;
+
+     &lt;property&gt;
+       &lt;name&gt;dfs.replication&lt;/name&gt;
+       &lt;value&gt;1&lt;/value&gt;
+    &lt;/property&gt;
+
+&lt;/configuration&gt;
+</code></pre><p>`</p>
 <blockquote>
 <p>因为是一台机伪分布式，<code>1</code> 即可</p>
 </blockquote>
@@ -619,7 +624,7 @@
 <ul>
 <li>启动</li>
 </ul>
-<p><code>./start-all.sh</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">`./start-all.sh`</div></pre></td></tr></table></figure>
 <ul>
 <li>输入 <code>jps</code>,查看是否部署伪分布式成功（如图）</li>
 </ul>
@@ -627,7 +632,7 @@
 <ul>
 <li>在想要关闭Hadoop可以如下输入推出</li>
 </ul>
-<p><code>./stop-all.sh</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">`./stop-all.sh`</div></pre></td></tr></table></figure>
 <blockquote>
 <p>配置Hadoop伪分布式介绍结束，开始eclipse的Hadoop开发环境搭建，这是一个折磨人的过程，我花了一天时间终于建好（比较幸运了..）。记录在下</p>
 </blockquote>
@@ -765,16 +770,7 @@
 <li>在建立的工程中输入如下</li>
 </ul>
 </blockquote>
-<p>import java.io.IOException;<br>import java.util.StringTokenizer;</p>
-<p>import org.apache.hadoop.conf.Configuration;<br>import org.apache.hadoop.fs.Path;<br>import org.apache.hadoop.io.IntWritable;<br>import org.apache.hadoop.io.Text;<br>import org.apache.hadoop.mapreduce.Job;<br>import org.apache.hadoop.mapreduce.Mapper;<br>import org.apache.hadoop.mapreduce.Reducer;<br>import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;<br>import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;<br>import org.apache.hadoop.util.GenericOptionsParser;</p>
-<p>public class WordCount {</p>
-<p>public static class TokenizerMapper<br>    extends Mapper<object, text,="" intwritable="">{</object,></p>
-<p> private final static IntWritable one = new IntWritable(1);<br> private Text word = new Text();</p>
-<p> public void map(Object key, Text value, Context context<br>                 ) throws IOException, InterruptedException {<br>   StringTokenizer itr = new StringTokenizer(value.toString());<br>   while (itr.hasMoreTokens()) {<br>     word.set(itr.nextToken());<br>     context.write(word, one);<br>   }</p>
-<p> }<br>}<br>    public static class IntSumReducer<br>    extends Reducer<text,intwritable,text,intwritable> {<br> private IntWritable result = new IntWritable();</text,intwritable,text,intwritable></p>
-<p> public void reduce(Text key, Iterable<intwritable> values,<br>                    Context context<br>                    ) throws IOException, InterruptedException {<br>   int sum = 0;<br>   for (IntWritable val : values) {<br>     sum += val.get();<br>   }<br>   result.set(sum);<br>   context.write(key, result);<br> }<br>}<br>    public static void main(String[] args) throws Exception {<br>        Configuration conf = new Configuration();<br>        String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();<br>        if (otherArgs.length != 2) {<br>          System.err.println(“Usage: wordcount <in> <out>“);<br>          System.exit(2);<br>        }<br>        Job job = new Job(conf, “word count”);<br>        job.setJarByClass(WordCount.class);<br>        job.setMapperClass(TokenizerMapper.class);<br>        job.setCombinerClass(IntSumReducer.class);<br>        job.setReducerClass(IntSumReducer.class);<br>        job.setOutputKeyClass(Text.class);<br>        job.setOutputValueClass(IntWritable.class);<br>        FileInputFormat.addInputPath(job, new Path(otherArgs[0]));<br>        FileOutputFormat.setOutputPath(job, new Path(otherArgs[1]));<br>        System.exit(job.waitForCompletion(true) ? 0 : 1);</out></in></intwritable></p>
-<p>}</p>
-<p>}</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.io.IOException;</div><div class="line"><span class="keyword">import</span> java.util.StringTokenizer;</div><div class="line"> </div><div class="line"><span class="keyword">import</span> org.apache.hadoop.conf.Configuration;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.fs.Path;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.io.IntWritable;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.io.Text;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.Job;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.Mapper;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.Reducer;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.input.FileInputFormat;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.util.GenericOptionsParser;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WordCount</span> </span>&#123;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">TokenizerMapper</span> </span></div><div class="line"><span class="class">    <span class="keyword">extends</span> <span class="title">Mapper</span>&lt;<span class="title">Object</span>, <span class="title">Text</span>, <span class="title">Text</span>, <span class="title">IntWritable</span>&gt;</span>&#123;</div><div class="line"></div><div class="line"> <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> IntWritable one = <span class="keyword">new</span> IntWritable(<span class="number">1</span>);</div><div class="line"> <span class="keyword">private</span> Text word = <span class="keyword">new</span> Text();</div><div class="line"></div><div class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">map</span><span class="params">(Object key, Text value, Context context</span></span></div><div class="line"><span class="function"><span class="params">                 )</span> <span class="keyword">throws</span> IOException, InterruptedException </span>&#123;</div><div class="line">   StringTokenizer itr = <span class="keyword">new</span> StringTokenizer(value.toString());</div><div class="line">   <span class="keyword">while</span> (itr.hasMoreTokens()) &#123;</div><div class="line">     word.set(itr.nextToken());</div><div class="line">     context.write(word, one);</div><div class="line">   &#125;</div><div class="line">   </div><div class="line"> &#125;</div><div class="line">&#125;</div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">IntSumReducer</span> </span></div><div class="line"><span class="class">    <span class="keyword">extends</span> <span class="title">Reducer</span>&lt;<span class="title">Text</span>,<span class="title">IntWritable</span>,<span class="title">Text</span>,<span class="title">IntWritable</span>&gt; </span>&#123;</div><div class="line"> <span class="keyword">private</span> IntWritable result = <span class="keyword">new</span> IntWritable();</div><div class="line"></div><div class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">reduce</span><span class="params">(Text key, Iterable&lt;IntWritable&gt; values, </span></span></div><div class="line"><span class="function"><span class="params">                    Context context</span></span></div><div class="line"><span class="function"><span class="params">                    )</span> <span class="keyword">throws</span> IOException, InterruptedException </span>&#123;</div><div class="line">   <span class="keyword">int</span> sum = <span class="number">0</span>;</div><div class="line">   <span class="keyword">for</span> (IntWritable val : values) &#123;</div><div class="line">     sum += val.get();</div><div class="line">   &#125;</div><div class="line">   result.set(sum);</div><div class="line">   context.write(key, result);</div><div class="line"> &#125;</div><div class="line">&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">	    Configuration conf = <span class="keyword">new</span> Configuration();</div><div class="line">	    String[] otherArgs = <span class="keyword">new</span> GenericOptionsParser(conf, args).getRemainingArgs();</div><div class="line">	    <span class="keyword">if</span> (otherArgs.length != <span class="number">2</span>) &#123;</div><div class="line">	      System.err.println(<span class="string">"Usage: wordcount &lt;in&gt; &lt;out&gt;"</span>);</div><div class="line">	      System.exit(<span class="number">2</span>);</div><div class="line">	    &#125;</div><div class="line">	    Job job = <span class="keyword">new</span> Job(conf, <span class="string">"word count"</span>);</div><div class="line">	    job.setJarByClass(WordCount.class);</div><div class="line">	    job.setMapperClass(TokenizerMapper.class);</div><div class="line">	    job.setCombinerClass(IntSumReducer.class);</div><div class="line">	    job.setReducerClass(IntSumReducer.class);</div><div class="line">	    job.setOutputKeyClass(Text.class);</div><div class="line">	    job.setOutputValueClass(IntWritable.class);</div><div class="line">	    FileInputFormat.addInputPath(job, <span class="keyword">new</span> Path(otherArgs[<span class="number">0</span>]));</div><div class="line">	    FileOutputFormat.setOutputPath(job, <span class="keyword">new</span> Path(otherArgs[<span class="number">1</span>]));</div><div class="line">	    System.exit(job.waitForCompletion(<span class="keyword">true</span>) ? <span class="number">0</span> : <span class="number">1</span>);</div><div class="line">	  </div><div class="line">&#125;</div><div class="line">	  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="配置参数"><a href="#配置参数" class="headerlink" title="配置参数"></a>配置参数</h2><ul>
 <li><p>如图1，如图2，其中的参数配置，<strong>即机号，端口号，我们先前建立的 <code>user</code> <code>hadoop</code> <code>input</code> 一一对应，可以根据需要自行更改，其中的 <code>output</code> 是结果出来以后自行创建的，并且记得要在每一次运行结果前更改 <code>output</code> 为其他的不冲突的名字，比如 <code>output1</code>(如图3）</strong></p>
 </li>
@@ -864,7 +860,7 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月11日 - 20:10</p>
+  <p><span>最后更新:</span>2018年10月20日 - 07:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -1197,7 +1193,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      201.6k
+      200.1k
     </span>
   
 </div>
@@ -1210,6 +1206,7 @@ var jiathis_config={
   <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
 
 -->
+
 
         
 <div class="busuanzi-count">
@@ -1706,6 +1703,7 @@ var jiathis_config={
   
 
   
+
 
 </body>
 </html>

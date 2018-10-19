@@ -94,7 +94,7 @@
 <meta property="og:description" content="最近在接触一些在notebook上用matploylib这个库绘图时出现了中文乱码的问题，就是常见的那种小方块式的中文乱码问题。 下面简单说说解决方法。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/8%E6%9C%88-08-2018%2014-10-08.gif">
-<meta property="og:updated_time" content="2018-10-11T13:06:49.250Z">
+<meta property="og:updated_time" content="2018-10-19T22:47:28.727Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac下的matploylib绘图中文乱码问题">
 <meta name="twitter:description" content="最近在接触一些在notebook上用matploylib这个库绘图时出现了中文乱码的问题，就是常见的那种小方块式的中文乱码问题。 下面简单说说解决方法。">
@@ -129,6 +129,7 @@
 
 
   <link rel="canonical" href="https://liujunjie11.github.io/2018/08/08/Mac下的matploylib绘图中文乱码问题/"/>
+
 
 
 
@@ -405,7 +406,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  375
+                  352
                 </span>
               
 
@@ -452,20 +453,8 @@
 <p>这样就知道了位置的所在。</p>
 </blockquote>
 <h2 id="需要添加的代码"><a href="#需要添加的代码" class="headerlink" title="需要添加的代码"></a>需要添加的代码</h2><p>如下添加代码，加上上面说的中文字体的所在位置，<strong>然后在每一次需要中文显示时，均要加上<code>fontproperties=font</code>（font即指下方的变量）。</strong></p>
-<pre><code>from matplotlib.font_manager import FontProperties
-font = FontProperties(fname=&apos;/Library/Fonts/Songti.ttc&apos;)
-
-
-&gt; 如：
-plt.subplot2grid((2,3),(1,0),colspan=2) #在此即为多行的占用
-data_train.Age[data_train.Pclass == 1].plot(kind=&apos;kde&apos;) #两者的结合绘图
-data_train.Age[data_train.Pclass == 2].plot(kind=&apos;kde&apos;)
-data_train.Age[data_train.Pclass == 3].plot(kind=&apos;kde&apos;)
-plt.xlabel(&apos;年龄&apos;,fontproperties=font)
-plt.ylabel(&apos;密度&apos;,fontproperties=font)
-plt.title(&apos;各等级的乘客年龄分布&apos;,fontproperties=font)
-plt.legend((&apos;Pclass1&apos;,&apos;Pclass2&apos;,&apos;Pclass3&apos;),loc=&apos;best&apos;) #多个说明，自动排好说明位置
-</code></pre><p>这样中文乱码的问题就能得到完美的解决了…唉，网上的一些方案根本没有用啊，折腾了几个小时，心累..</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> matplotlib.font_manager <span class="keyword">import</span> FontProperties</div><div class="line">font = FontProperties(fname=<span class="string">'/Library/Fonts/Songti.ttc'</span>)</div><div class="line"></div><div class="line"></div><div class="line">&gt; 如：</div><div class="line">plt.subplot2grid((<span class="number">2</span>,<span class="number">3</span>),(<span class="number">1</span>,<span class="number">0</span>),colspan=<span class="number">2</span>) <span class="comment">#在此即为多行的占用</span></div><div class="line">data_train.Age[data_train.Pclass == <span class="number">1</span>].plot(kind=<span class="string">'kde'</span>) <span class="comment">#两者的结合绘图</span></div><div class="line">data_train.Age[data_train.Pclass == <span class="number">2</span>].plot(kind=<span class="string">'kde'</span>)</div><div class="line">data_train.Age[data_train.Pclass == <span class="number">3</span>].plot(kind=<span class="string">'kde'</span>)</div><div class="line">plt.xlabel(<span class="string">'年龄'</span>,fontproperties=font)</div><div class="line">plt.ylabel(<span class="string">'密度'</span>,fontproperties=font)</div><div class="line">plt.title(<span class="string">'各等级的乘客年龄分布'</span>,fontproperties=font)</div><div class="line">plt.legend((<span class="string">'Pclass1'</span>,<span class="string">'Pclass2'</span>,<span class="string">'Pclass3'</span>),loc=<span class="string">'best'</span>) <span class="comment">#多个说明，自动排好说明位置</span></div></pre></td></tr></table></figure>
+<p>这样中文乱码的问题就能得到完美的解决了…唉，网上的一些方案根本没有用啊，折腾了几个小时，心累..</p>
 
       
     </div>
@@ -495,7 +484,7 @@ plt.legend((&apos;Pclass1&apos;,&apos;Pclass2&apos;,&apos;Pclass3&apos;),loc=&ap
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月11日 - 21:10</p>
+  <p><span>最后更新:</span>2018年10月20日 - 06:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -828,7 +817,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      201.6k
+      200.1k
     </span>
   
 </div>
@@ -841,6 +830,7 @@ var jiathis_config={
   <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
 
 -->
+
 
         
 <div class="busuanzi-count">
@@ -1337,6 +1327,7 @@ var jiathis_config={
   
 
   
+
 
 </body>
 </html>

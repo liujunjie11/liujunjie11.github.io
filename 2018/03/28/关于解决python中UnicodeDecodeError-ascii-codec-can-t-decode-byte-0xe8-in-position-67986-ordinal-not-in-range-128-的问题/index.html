@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="LXiHa`Notes">
 <meta property="og:description" content="在学习爬虫的过程中，在运行编者的代码时出现了UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xe8 in position 67986: ordinal not in range(128)的编码问题。 具体原因是因为程序默认的解析编码格式发生了冲突造成的，简单来说就是需要解析的内容与API程序默认的解析编码格式不同，所以才会出现如上的错误。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-11T13:03:38.757Z">
+<meta property="og:updated_time" content="2018-10-19T23:40:08.148Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于解决python中UnicodeDecodeError: &#39;ascii&#39; codec can&#39;t decode byte 0xe8 in position 67986: ordinal not in range(128)的问题">
 <meta name="twitter:description" content="在学习爬虫的过程中，在运行编者的代码时出现了UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xe8 in position 67986: ordinal not in range(128)的编码问题。 具体原因是因为程序默认的解析编码格式发生了冲突造成的，简单来说就是需要解析的内容与API程序默认的解析编码格式不同，所以才会出现如上的错误。">
@@ -127,6 +127,7 @@
 
 
   <link rel="canonical" href="https://liujunjie11.github.io/2018/03/28/关于解决python中UnicodeDecodeError-ascii-codec-can-t-decode-byte-0xe8-in-position-67986-ordinal-not-in-range-128-的问题/"/>
+
 
 
 
@@ -403,7 +404,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  163
+                  161
                 </span>
               
 
@@ -444,8 +445,8 @@
 <p>具体原因是因为程序默认的解析编码格式发生了冲突造成的，简单来说就是需要解析的内容与<em>API</em>程序默认的解析编码格式不同，所以才会出现如上的错误。</p>
 <a id="more"></a>
 <p>因为是打算用<em>python</em>解析<em>JS</em>文件，所以我就贴上我的解决方案了：</p>
-<pre><code>ctx = node.compile(open(file, encoding=&apos;utf-8&apos;).read())
-</code></pre><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ctx = node.compile(open(file, encoding=<span class="string">'utf-8'</span>).read())</div></pre></td></tr></table></figure>
+<blockquote>
 <p>加上自行规定的解码格式即可。</p>
 </blockquote>
 <p><strong>解决来源于GitHub论坛…</strong></p>
@@ -478,7 +479,7 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月11日 - 21:10</p>
+  <p><span>最后更新:</span>2018年10月20日 - 07:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -786,7 +787,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      201.6k
+      200.1k
     </span>
   
 </div>
@@ -799,6 +800,7 @@ var jiathis_config={
   <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
 
 -->
+
 
         
 <div class="busuanzi-count">
@@ -1295,6 +1297,7 @@ var jiathis_config={
   
 
   
+
 
 </body>
 </html>

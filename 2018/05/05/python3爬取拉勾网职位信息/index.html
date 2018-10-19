@@ -99,7 +99,7 @@
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.34.40.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.35.34.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.27.19.png">
-<meta property="og:updated_time" content="2018-10-11T13:05:31.124Z">
+<meta property="og:updated_time" content="2018-10-19T23:35:59.246Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python3爬取拉勾网职位信息">
 <meta name="twitter:description" content="爬取拉勾网的最大障碍：普通模块难以实现翻页爬取。自己加了参数page，经过抓包查询之后也达不到我的理想要求。 没办法了，只好用selenium模块结合浏览器来实现边翻页边爬取了。  实际上比较浪费系统资源，这种情况不得已还是尽量别用的好。  在此记录下主要的过程，包括实现的代码。 还是要说明一下：不懂的地方还是需要自己去查询了解，代码不过就是几个模块的知识运用罢了。">
@@ -134,6 +134,7 @@
 
 
   <link rel="canonical" href="https://liujunjie11.github.io/2018/05/05/python3爬取拉勾网职位信息/"/>
+
 
 
 
@@ -410,7 +411,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.3k
+                  1.2k
                 </span>
               
 
@@ -426,7 +427,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  6
+                  5
                 </span>
               
             </div>
@@ -476,97 +477,8 @@
 <p>进入之后详细的招聘信息页面。</p>
 </blockquote>
 <p>那么思路一下就出来了：<strong>用selenium模块实现翻页的功能，并且返回对应页面的源代码，并且一一进行分析提取即可。</strong></p>
-<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><pre><code>&quot;&quot;&quot;
-
-函数目标：
-翻页爬取拉勾网的职位信息
-
-编写时间：
-2018-05-05
-
-&quot;&quot;&quot;
-
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.wait import WebDriverWait
-from pyquery import PyQuery as pq
-from urllib.parse import quote
-import requests
-import re
-import time
-
-# 启动对象驱动，并且设置预期的等待时间
-browser = webdriver.Chrome(&apos;/Users/junjieliu/Downloads/webdirver小插件/chromedriver&apos;)
-wait = WebDriverWait(browser, 10)
-
-
-def page_content(pages):
-    &quot;&quot;&quot;
-    返回每一页的页面源代码，顾名知义，从URL中可知许多的筛选信息了，可自行选择，
-    在此仅以职位关键词职位作为输入。
-    &quot;&quot;&quot;
-    print(&apos;-&apos; * 10 + &apos;正在爬取第&apos; + str(pages) + &apos;页的内容&apos; + &apos;.&apos; * 6)
-    keyword = &apos;数据分析师&apos;  # 职位关键词
-    url = &apos;https://www.lagou.com/jobs/list_&apos; + quote(keyword) + &apos;?&apos; + &apos;px=default&amp;gx=实习&amp;gj=&amp;xl=本科&amp;isSchoolJob=1&amp;city=全国#filterBox&apos; 
-
-    browser.get(url)
-    if pages &gt; 1:
-        # 如果页面数大于1页则启用自动翻页
-        next_botton = wait.until(
-                    EC.element_to_be_clickable((By.CSS_SELECTOR, &apos;#s_position_list &gt; div.item_con_pager &gt; div &gt; span.pager_next&apos;)))
-
-        next_botton.click()
-    # 指定要爬取区域,非必须要写
-    wait.until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, &apos;#s_position_list &gt; ul &gt; li.con_list_item&apos;)))
-    print(&apos;爬取此页源码成功！以下是本页一系列相关的内容：&apos;)
-    informations_save()
-
-
-def informations_save():
-    &quot;&quot;&quot;
-    一一进入内部URL，爬取详细的招聘信息！
-    &quot;&quot;&quot;
-    source_code = browser.page_source
-    doc = pq(source_code)
-    url = re.findall(r&apos;class=&quot;position_link&quot;.*?href=&quot;(.*?)&quot;&apos;, source_code, re.S)  # @UndefinedVariable  
-
-    for i in range(0, len(url)):
-
-        header = {
-        &apos;Connection&apos;: &apos;keep-alive&apos;,
-        &apos;Host&apos;: &apos;www.lagou.com&apos;,
-        &apos;Upgrade-Insecure-Requests&apos;: &apos;1&apos;,
-        &apos;User-Agent&apos;: &apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36&apos;
-    }
-        response = requests.get(url=url[i], headers=header)
-        response.encoding = &apos;utf-8&apos;
-        doc1 = pq(response.text)
-
-        infor = {
-            &apos;company&apos;:doc1.find(&apos;body &gt; div.position-head &gt; div &gt; div.position-content-l &gt; div &gt; div.company&apos;).text(),  # 公司名称
-            &apos;infor_url&apos;:doc1.find(&apos;#job_company &gt; dt &gt; a&apos;).attr(&apos;href&apos;),  # 此公司详细介绍网站
-            &apos;position&apos;:doc1.find(&apos;body &gt; div.position-head &gt; div &gt; div.position-content-l &gt; div &gt; span.name&apos;).text(),  # 职位
-            &apos;salary&apos;:doc1.find(&apos;body &gt; div.position-head &gt; div &gt; div.position-content-l &gt; dd &gt; p:nth-child(1) &gt; span.salary&apos;).text(),  # 工资
-            &apos;locale&apos;:doc1.find(&apos;#job_detail &gt; dd.job-address.clearfix &gt; input[type=&quot;hidden&quot;]:nth-child(6)&apos;).text().replace(&apos;/&apos;, &apos;&apos;),  # 地点
-            &apos;place&apos;:doc1.find(&apos;#job_detail &gt; dd.job-address.clearfix &gt; div.work_addr&apos;).text(),  # 具体位置
-            &apos;required&apos;:doc1.find(&apos;div.position-content-l &gt; dd &gt; p:nth-child(1) &gt; span:nth-child(3)&apos;).text().replace(&apos;/&apos;, &apos;&apos;),  # 经验要求
-            &apos;education&apos;:doc1.find(&apos;div.position-content-l &gt; dd &gt; p:nth-child(1) &gt; span:nth-child(4)&apos;).text().replace(&apos;/&apos;, &apos;&apos;),  # 学历要求
-            &apos;job_nature&apos;:doc1.find(&apos;div.position-content-l &gt; dd &gt; p:nth-child(1) &gt; span:nth-child(5)&apos;).text().replace(&apos;/&apos;, &apos;&apos;),  # 工作性质
-            &apos;attract&apos;:doc1.find(&apos;#job_detail &gt; dd.job-advantage&apos;).text().replace(&apos;\n&apos;, &apos; &apos;),  # 工作诱惑
-            &apos;describe&apos;:doc1.find(&apos;#job_detail &gt; dd.job_bt&apos;).text().replace(&apos;\n&apos;, &apos; &apos;)  # 工作描述
-
-        }
-        print(infor)         
-
-if __name__ == &quot;__main__&quot;:
-
-    pages = 6  # 总的页面数，从网页第一面就可知了，6是测试用的数字页码
-    for i in range(1, pages + 1):
-        page_content(i)
-        time.sleep(20)
-</code></pre><blockquote>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div></pre></td><td class="code"><pre><div class="line"><span class="string">"""</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">函数目标：</span></div><div class="line"><span class="string">翻页爬取拉勾网的职位信息</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">编写时间：</span></div><div class="line"><span class="string">2018-05-05</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">"""</span></div><div class="line"></div><div class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</div><div class="line"><span class="keyword">from</span> selenium.webdriver.common.by <span class="keyword">import</span> By</div><div class="line"><span class="keyword">from</span> selenium.webdriver.support <span class="keyword">import</span> expected_conditions <span class="keyword">as</span> EC</div><div class="line"><span class="keyword">from</span> selenium.webdriver.support.wait <span class="keyword">import</span> WebDriverWait</div><div class="line"><span class="keyword">from</span> pyquery <span class="keyword">import</span> PyQuery <span class="keyword">as</span> pq</div><div class="line"><span class="keyword">from</span> urllib.parse <span class="keyword">import</span> quote</div><div class="line"><span class="keyword">import</span> requests</div><div class="line"><span class="keyword">import</span> re</div><div class="line"><span class="keyword">import</span> time</div><div class="line"> </div><div class="line"><span class="comment"># 启动对象驱动，并且设置预期的等待时间</span></div><div class="line">browser = webdriver.Chrome(<span class="string">'/Users/junjieliu/Downloads/webdirver小插件/chromedriver'</span>)</div><div class="line">wait = WebDriverWait(browser, <span class="number">10</span>)</div><div class="line"> </div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">page_content</span><span class="params">(pages)</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line"><span class="string">    返回每一页的页面源代码，顾名知义，从URL中可知许多的筛选信息了，可自行选择，</span></div><div class="line"><span class="string">    在此仅以职位关键词职位作为输入。</span></div><div class="line"><span class="string">    """</span></div><div class="line">    print(<span class="string">'-'</span> * <span class="number">10</span> + <span class="string">'正在爬取第'</span> + str(pages) + <span class="string">'页的内容'</span> + <span class="string">'.'</span> * <span class="number">6</span>)</div><div class="line">    keyword = <span class="string">'数据分析师'</span>  <span class="comment"># 职位关键词</span></div><div class="line">    url = <span class="string">'https://www.lagou.com/jobs/list_'</span> + quote(keyword) + <span class="string">'?'</span> + <span class="string">'px=default&amp;gx=实习&amp;gj=&amp;xl=本科&amp;isSchoolJob=1&amp;city=全国#filterBox'</span> </div><div class="line">     </div><div class="line">    browser.get(url)</div><div class="line">    <span class="keyword">if</span> pages &gt; <span class="number">1</span>:</div><div class="line">        <span class="comment"># 如果页面数大于1页则启用自动翻页</span></div><div class="line">        next_botton = wait.until(</div><div class="line">                    EC.element_to_be_clickable((By.CSS_SELECTOR, <span class="string">'#s_position_list &gt; div.item_con_pager &gt; div &gt; span.pager_next'</span>)))</div><div class="line">         </div><div class="line">        next_botton.click()</div><div class="line">    <span class="comment"># 指定要爬取区域,非必须要写</span></div><div class="line">    wait.until(</div><div class="line">            EC.presence_of_element_located((By.CSS_SELECTOR, <span class="string">'#s_position_list &gt; ul &gt; li.con_list_item'</span>)))</div><div class="line">    print(<span class="string">'爬取此页源码成功！以下是本页一系列相关的内容：'</span>)</div><div class="line">    informations_save()</div><div class="line">     </div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">informations_save</span><span class="params">()</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line"><span class="string">    一一进入内部URL，爬取详细的招聘信息！</span></div><div class="line"><span class="string">    """</span></div><div class="line">    source_code = browser.page_source</div><div class="line">    doc = pq(source_code)</div><div class="line">    url = re.findall(<span class="string">r'class="position_link".*?href="(.*?)"'</span>, source_code, re.S)  <span class="comment"># @UndefinedVariable  </span></div><div class="line">    </div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(url)):</div><div class="line">           </div><div class="line">        header = &#123;</div><div class="line">        <span class="string">'Connection'</span>: <span class="string">'keep-alive'</span>,</div><div class="line">        <span class="string">'Host'</span>: <span class="string">'www.lagou.com'</span>,</div><div class="line">        <span class="string">'Upgrade-Insecure-Requests'</span>: <span class="string">'1'</span>,</div><div class="line">        <span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36'</span></div><div class="line">    &#125;</div><div class="line">        response = requests.get(url=url[i], headers=header)</div><div class="line">        response.encoding = <span class="string">'utf-8'</span></div><div class="line">        doc1 = pq(response.text)</div><div class="line">           </div><div class="line">        infor = &#123;</div><div class="line">            <span class="string">'company'</span>:doc1.find(<span class="string">'body &gt; div.position-head &gt; div &gt; div.position-content-l &gt; div &gt; div.company'</span>).text(),  <span class="comment"># 公司名称</span></div><div class="line">            <span class="string">'infor_url'</span>:doc1.find(<span class="string">'#job_company &gt; dt &gt; a'</span>).attr(<span class="string">'href'</span>),  <span class="comment"># 此公司详细介绍网站</span></div><div class="line">            <span class="string">'position'</span>:doc1.find(<span class="string">'body &gt; div.position-head &gt; div &gt; div.position-content-l &gt; div &gt; span.name'</span>).text(),  <span class="comment"># 职位</span></div><div class="line">            <span class="string">'salary'</span>:doc1.find(<span class="string">'body &gt; div.position-head &gt; div &gt; div.position-content-l &gt; dd &gt; p:nth-child(1) &gt; span.salary'</span>).text(),  <span class="comment"># 工资</span></div><div class="line">            <span class="string">'locale'</span>:doc1.find(<span class="string">'#job_detail &gt; dd.job-address.clearfix &gt; input[type="hidden"]:nth-child(6)'</span>).text().replace(<span class="string">'/'</span>, <span class="string">''</span>),  <span class="comment"># 地点</span></div><div class="line">            <span class="string">'place'</span>:doc1.find(<span class="string">'#job_detail &gt; dd.job-address.clearfix &gt; div.work_addr'</span>).text(),  <span class="comment"># 具体位置</span></div><div class="line">            <span class="string">'required'</span>:doc1.find(<span class="string">'div.position-content-l &gt; dd &gt; p:nth-child(1) &gt; span:nth-child(3)'</span>).text().replace(<span class="string">'/'</span>, <span class="string">''</span>),  <span class="comment"># 经验要求</span></div><div class="line">            <span class="string">'education'</span>:doc1.find(<span class="string">'div.position-content-l &gt; dd &gt; p:nth-child(1) &gt; span:nth-child(4)'</span>).text().replace(<span class="string">'/'</span>, <span class="string">''</span>),  <span class="comment"># 学历要求</span></div><div class="line">            <span class="string">'job_nature'</span>:doc1.find(<span class="string">'div.position-content-l &gt; dd &gt; p:nth-child(1) &gt; span:nth-child(5)'</span>).text().replace(<span class="string">'/'</span>, <span class="string">''</span>),  <span class="comment"># 工作性质</span></div><div class="line">            <span class="string">'attract'</span>:doc1.find(<span class="string">'#job_detail &gt; dd.job-advantage'</span>).text().replace(<span class="string">'\n'</span>, <span class="string">' '</span>),  <span class="comment"># 工作诱惑</span></div><div class="line">            <span class="string">'describe'</span>:doc1.find(<span class="string">'#job_detail &gt; dd.job_bt'</span>).text().replace(<span class="string">'\n'</span>, <span class="string">' '</span>)  <span class="comment"># 工作描述</span></div><div class="line">            </div><div class="line">        &#125;</div><div class="line">        print(infor)	     </div><div class="line">        </div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">     </div><div class="line">    pages = <span class="number">6</span>  <span class="comment"># 总的页面数，从网页第一面就可知了，6是测试用的数字页码</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, pages + <span class="number">1</span>):</div><div class="line">        page_content(i)</div><div class="line">        time.sleep(<span class="number">20</span>)</div></pre></td></tr></table></figure>
+<blockquote>
 <p>最后我选择将爬取的内容保存至一个<code>.txt</code>文件下。</p>
 </blockquote>
 <h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.27.19.png" alt=""></p>
@@ -612,7 +524,7 @@ if __name__ == &quot;__main__&quot;:
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月11日 - 21:10</p>
+  <p><span>最后更新:</span>2018年10月20日 - 07:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -945,7 +857,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      201.6k
+      200.1k
     </span>
   
 </div>
@@ -958,6 +870,7 @@ var jiathis_config={
   <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
 
 -->
+
 
         
 <div class="busuanzi-count">
@@ -1454,6 +1367,7 @@ var jiathis_config={
   
 
   
+
 
 </body>
 </html>

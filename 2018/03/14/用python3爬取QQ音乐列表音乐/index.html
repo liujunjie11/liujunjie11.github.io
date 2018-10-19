@@ -104,7 +104,7 @@
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8B%E5%8D%8812.49.29.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8B%E5%8D%884.08.01.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8B%E5%8D%884.09.17.png">
-<meta property="og:updated_time" content="2018-10-11T13:02:07.812Z">
+<meta property="og:updated_time" content="2018-10-19T23:43:02.474Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用python3爬取QQ音乐列表音乐">
 <meta name="twitter:description" content="最近想爬取一些音乐来实战一下，选择了qq音乐。 qq音乐明显的就是一个动态网页，所以需要抓包了。  不懂的关键词可利用好搜索引擎。">
@@ -139,6 +139,7 @@
 
 
   <link rel="canonical" href="https://liujunjie11.github.io/2018/03/14/用python3爬取QQ音乐列表音乐/"/>
+
 
 
 
@@ -415,7 +416,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.9k
+                  1.7k
                 </span>
               
 
@@ -431,7 +432,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  8
+                  7
                 </span>
               
             </div>
@@ -497,130 +498,8 @@
 <p>其中的<em>URL</em>地址：</p>
 <p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-15%20%E4%B8%8B%E5%8D%8812.49.29.png" alt=""></p>
 <hr>
-<h2 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h2><pre><code>&apos;&apos;&apos;
-
-函数目标：
-爬取QQ音乐列表音乐
-
-编写时间：
-2018-3-15
-
-&apos;&apos;&apos;
-
-import requests
-import os 
-import time
-import json 
-from urllib.request import urlretrieve
-
-if __name__ == &apos;__main__&apos;:
-
-    # 建立目录用于装爬取的音乐
-    if &apos;QQ音乐列表音乐&apos; not in os.listdir():
-        os.makedirs(&apos;QQ音乐列表音乐&apos;)
-
-    &apos;&apos;&apos;
-        从URL中添加代理记忆必要的相关的参数以获取歌曲的ID以及歌曲名
-                                                            &apos;&apos;&apos;
-    playlist_url = &apos;https://c.y.qq.com/qzone/fcg-bin/fcg_ucc_getcdinfo_byids_cp.fcg&apos;
-    # 添加页面中的代理信息
-    header = {&apos;user-agent&apos;:&apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36&apos;,
-            &apos;cookie&apos;:&apos;tvfe_boss_uuid=1770396a4ed2d111; pgv_info=ssid=s4189101616; pgv_pvid=7344469728; uin=; pgv_pvi=8737627136; pgv_si=s9378960384; _tucao_userinfo=ZU1hSHhlWVNPSnRoNWgwTjMzc2c4OVYzYjBuTkNjcDNHNjcyVkkzWm9WUkJZMWhxWDJ5SmpTSURFWDhVTk9TYkczU3JWc09EeEsrMEVnQ2RpK2FVNWh4M0x0Y21aOG5Vcms5MW9odmt6ZXNxRWlmeE9PZzM0SlQ1YmVuM0xhRVpUaWh5d2REV2FZcHdQdWdNL0daWE9rTTM0MlFjc1VoaHhNVkh4bkNqbnBOMDN2MG1sOEkxc0dYNFZRa24rd0RY--FeceGG8ErqgRGZz7WWwpsg%3D%3D; _tucao_session=WUVSc2RVVk95Y0ViU2NoNndsWmVlbzZoSG1WaFdpcEk4Q1M5bXZSTG9qanV3OEpuNVNQT3dBc0tBRERUY1NCRDZJek14Y2xYeFdmMWhiaWdkZ282UjdPdXVyT1ZYQnpCeG9BcklQUFBEMU5LQ3F3ajdmd3VWRmZ5QTJoN1ViS1krcEx0aUdUb3plckVNVGc3K0t2Z3pUeFJDcFZMNnU3dEpLUXZ5Zyt4dUpJdU5Hb3ZwZUhpTHM0OEhNQk0vcHJKN2tEOXVZay95WkFpZlFuSVBQZDhoSzlMVUMrVDQxN0llRzJuNkVWUGdTVjdyaVl2WVdscFlyVDJPald4MG9BWA%3D%3D--dDBBK5gXjLaGccOBzx4EBA%3D%3D; ts_refer=www.google.com/; ts_uid=3146042580; qqmusic_fromtag=66; yq_playdata=s; yqq_stat=0; yplayer_open=1; yq_index=0; yq_playschange=0; player_exist=1&apos;,
-            &apos;referer&apos;:&apos;https://y.qq.com/n/yqq/playlist/3766176211.html&apos;}
-
-    # 添加参数信息,有些是非必须的，待研究，有兴趣的可以自己测试
-    paramter = {
-                &apos;type&apos;:&apos;1&apos;,
-                &apos;json&apos;:&apos;1&apos;,
-                &apos;utf8&apos;:&apos;1&apos;,
-                &apos;onlysong&apos;:&apos;0&apos;,
-                &apos;disstid&apos;:&apos;3766176211&apos;,
-                &apos;format&apos;:&apos;jsonp&apos;,
-                &apos;g_tk&apos;:&apos;5381&apos;,  # 非必须
-                &apos;jsonpCallback&apos;:&apos;playlistinfoCallback&apos;,  # 值可更改
-                &apos;loginUin&apos;:&apos;0&apos;,
-                &apos;hostUin&apos;:&apos;0&apos;,
-                &apos;format&apos;:&apos;jsonp&apos;,
-                &quot;inCharset&quot;:&apos;utf8&apos;,
-                &apos;outCharset&apos;:&apos;utf-8&apos;,
-                &apos;notice&apos;:&apos;0&apos;,
-                &apos;platform&apos;:&apos;yqq&apos;,
-                &apos;needNewCode&apos;:&apos;0&apos;,
-                }
-
-    playlist_re = requests.get(url=playlist_url, params=paramter, headers=header)
-    # 指定编码格式
-    playlist_re.encoding = &apos;utf-8&apos;
-    # 改变为python可识别的json格式,进行必要的数据清洗,去掉前面的&apos;jsonpCallback&apos;部分
-    playlist_info = json.loads(playlist_re.text.lstrip(&apos;playlistinfoCallback(&apos;).rstrip(&apos;)&apos;))
-    # 指定整体索引
-    playlist_info1 = playlist_info[&apos;cdlist&apos;][0]
-
-    # 先存储歌手的姓名,观察可知，一共有19个索引,因为歌曲本身仅仅有20首，取前20个歌手名
-    singer_name = []
-    for num in range(0, 17):
-        singer_eainfo = playlist_info1[&apos;songlist&apos;][num]
-        for each_info in singer_eainfo[&apos;singer&apos;]:
-            singer_name.append(each_info[&apos;name&apos;])
-
-    num = 0
-    # 在循环体系中进行下一步的编写
-    for each in playlist_info1[&apos;songlist&apos;]:
-
-        &apos;&apos;&apos;
-            在获取歌曲vkey的主URL传入相关的参数得到相关的数据之后进行挖掘，得到vkey信息
-            其中的参数有些是不必要的，可自由修改，有些是必要的
-                                                               &apos;&apos;&apos;
-
-        key_url = &apos;https://c.y.qq.com/base/fcgi-bin/fcg_music_express_mobile3.fcg&apos;
-        # 传入相关的代理以及参数
-        header_1 = {&apos;user-agent&apos;:&apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36&apos;,
-                  &apos;referer&apos;:&apos;https://y.qq.com/portal/player.html&apos;,
-                  &apos;cookie&apos;:&apos;tvfe_boss_uuid=1770396a4ed2d111; pgv_info=ssid=s4189101616; pgv_pvid=7344469728; uin=; pgv_pvi=8737627136; pgv_si=s9378960384; _tucao_userinfo=ZU1hSHhlWVNPSnRoNWgwTjMzc2c4OVYzYjBuTkNjcDNHNjcyVkkzWm9WUkJZMWhxWDJ5SmpTSURFWDhVTk9TYkczU3JWc09EeEsrMEVnQ2RpK2FVNWh4M0x0Y21aOG5Vcms5MW9odmt6ZXNxRWlmeE9PZzM0SlQ1YmVuM0xhRVpUaWh5d2REV2FZcHdQdWdNL0daWE9rTTM0MlFjc1VoaHhNVkh4bkNqbnBOMDN2MG1sOEkxc0dYNFZRa24rd0RY--FeceGG8ErqgRGZz7WWwpsg%3D%3D; _tucao_session=WUVSc2RVVk95Y0ViU2NoNndsWmVlbzZoSG1WaFdpcEk4Q1M5bXZSTG9qanV3OEpuNVNQT3dBc0tBRERUY1NCRDZJek14Y2xYeFdmMWhiaWdkZ282UjdPdXVyT1ZYQnpCeG9BcklQUFBEMU5LQ3F3ajdmd3VWRmZ5QTJoN1ViS1krcEx0aUdUb3plckVNVGc3K0t2Z3pUeFJDcFZMNnU3dEpLUXZ5Zyt4dUpJdU5Hb3ZwZUhpTHM0OEhNQk0vcHJKN2tEOXVZay95WkFpZlFuSVBQZDhoSzlMVUMrVDQxN0llRzJuNkVWUGdTVjdyaVl2WVdscFlyVDJPald4MG9BWA%3D%3D--dDBBK5gXjLaGccOBzx4EBA%3D%3D; ts_refer=www.google.com/; ts_uid=3146042580; qqmusic_fromtag=66; yq_playdata=s; yqq_stat=0; yq_index=0; yq_playschange=0; player_exist=1; ts_last=y.qq.com/n/yqq/playlist/3766176211.html; yplayer_open=1&apos;}    
-
-        paramter_1 = {
-                    &apos;g_tk&apos;:&apos;5381&apos;,  # 非必须
-                    &apos;jsonpCallback&apos;:&apos;MusicJsonCallback&apos;,  # 非必须，可更改
-                    &quot;loginUin&quot;:&apos;0&apos;,
-                    &apos;hostUin&apos;:&apos;0&apos;,
-                    &apos;format&apos;:&apos;json&apos;,
-                    &apos;inCharset&apos;:&apos;utf8&apos;,
-                    &apos;outCharset&apos;:&apos;utf-8&apos;,
-                    &apos;notice&apos;:&apos;0&apos;,
-                    &apos;platform&apos;:&quot;yqq&quot;,
-                    &apos;needNewCode&apos;:&apos;0&apos;,
-                    &apos;cid&apos;:&apos;205361747&apos;,  # 一致必须
-                    &apos;callback&apos;:&apos;MusicJsonCallback&apos;,  # 非必须，可更改
-                    &apos;uin&apos;:&apos;0&apos;,
-                    # 传入获取的信息
-                    &apos;songmid&apos;:each[&apos;songmid&apos;],
-                    &apos;filename&apos;:&apos;C400&apos; + each[&apos;songmid&apos;] + &apos;.m4a&apos;,
-                    &apos;guid&apos;:&apos;7344469728&apos;   
-                    }
-
-        # 解析得到含有vkey的数据信息，然后进行清洗得到想要的信息
-        key_re = requests.get(url=key_url, params=paramter_1, headers=header_1)
-        # 指定编码格式
-        key_re.encoding = &apos;utf-8&apos;
-        # 转换为python的json格式，进行简单的清洗
-        key_info = json.loads(key_re.text.lstrip(&apos;MusicJsonCallback(&apos;).rstrip(&apos;)&apos;))
-        # 进一步的清洗
-        data_info = key_info[&apos;data&apos;]
-        items_info = data_info[&apos;items&apos;][0]
-
-        print(&apos;数据采集完成，开始下载任务...&apos;)
-        # 接下来就是可以下载了
-        urlretrieve(url=&apos;http://dl.stream.qqmusic.qq.com/C4000041FwTv0Ai3Ku.m4a?vkey=&apos; + items_info[&apos;vkey&apos;] + &apos;&amp;guid=7344469728&amp;uin=0&amp;fromtag=66.mp3&apos;, filename=&apos;QQ音乐列表音乐/&apos; + singer_name[num] + &apos;-&apos; + each[&apos;songname&apos;] + &apos;.mp3&apos;)
-
-        print(&apos;正在下载:&apos; + singer_name[num] + &apos;的&apos; + each[&apos;songname&apos;] + &apos;!&apos;)
-        print(&apos;下载中....&apos;)
-        print(&apos;下载此歌曲完成！&apos;)
-        # 跳传到下一个歌手名
-        num = num + 1
-        time.sleep(1)
-
-    print(&apos;全部下载完成，请在本过程目录下查收！&apos;)
-</code></pre><blockquote>
+<h2 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div></pre></td><td class="code"><pre><div class="line"><span class="string">'''</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">   函数目标：</span></div><div class="line"><span class="string">   爬取QQ音乐列表音乐</span></div><div class="line"><span class="string">   </span></div><div class="line"><span class="string">   编写时间：</span></div><div class="line"><span class="string">   2018-3-15</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">'''</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> requests</div><div class="line"><span class="keyword">import</span> os </div><div class="line"><span class="keyword">import</span> time</div><div class="line"><span class="keyword">import</span> json </div><div class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlretrieve</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">   </div><div class="line">    <span class="comment"># 建立目录用于装爬取的音乐</span></div><div class="line">    <span class="keyword">if</span> <span class="string">'QQ音乐列表音乐'</span> <span class="keyword">not</span> <span class="keyword">in</span> os.listdir():</div><div class="line">        os.makedirs(<span class="string">'QQ音乐列表音乐'</span>)</div><div class="line">    </div><div class="line">    <span class="string">'''</span></div><div class="line"><span class="string">        从URL中添加代理记忆必要的相关的参数以获取歌曲的ID以及歌曲名</span></div><div class="line"><span class="string">                                                            '''</span></div><div class="line">    playlist_url = <span class="string">'https://c.y.qq.com/qzone/fcg-bin/fcg_ucc_getcdinfo_byids_cp.fcg'</span></div><div class="line">    <span class="comment"># 添加页面中的代理信息</span></div><div class="line">    header = &#123;<span class="string">'user-agent'</span>:<span class="string">'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36'</span>,</div><div class="line">            <span class="string">'cookie'</span>:<span class="string">'tvfe_boss_uuid=1770396a4ed2d111; pgv_info=ssid=s4189101616; pgv_pvid=7344469728; uin=; pgv_pvi=8737627136; pgv_si=s9378960384; _tucao_userinfo=ZU1hSHhlWVNPSnRoNWgwTjMzc2c4OVYzYjBuTkNjcDNHNjcyVkkzWm9WUkJZMWhxWDJ5SmpTSURFWDhVTk9TYkczU3JWc09EeEsrMEVnQ2RpK2FVNWh4M0x0Y21aOG5Vcms5MW9odmt6ZXNxRWlmeE9PZzM0SlQ1YmVuM0xhRVpUaWh5d2REV2FZcHdQdWdNL0daWE9rTTM0MlFjc1VoaHhNVkh4bkNqbnBOMDN2MG1sOEkxc0dYNFZRa24rd0RY--FeceGG8ErqgRGZz7WWwpsg%3D%3D; _tucao_session=WUVSc2RVVk95Y0ViU2NoNndsWmVlbzZoSG1WaFdpcEk4Q1M5bXZSTG9qanV3OEpuNVNQT3dBc0tBRERUY1NCRDZJek14Y2xYeFdmMWhiaWdkZ282UjdPdXVyT1ZYQnpCeG9BcklQUFBEMU5LQ3F3ajdmd3VWRmZ5QTJoN1ViS1krcEx0aUdUb3plckVNVGc3K0t2Z3pUeFJDcFZMNnU3dEpLUXZ5Zyt4dUpJdU5Hb3ZwZUhpTHM0OEhNQk0vcHJKN2tEOXVZay95WkFpZlFuSVBQZDhoSzlMVUMrVDQxN0llRzJuNkVWUGdTVjdyaVl2WVdscFlyVDJPald4MG9BWA%3D%3D--dDBBK5gXjLaGccOBzx4EBA%3D%3D; ts_refer=www.google.com/; ts_uid=3146042580; qqmusic_fromtag=66; yq_playdata=s; yqq_stat=0; yplayer_open=1; yq_index=0; yq_playschange=0; player_exist=1'</span>,</div><div class="line">            <span class="string">'referer'</span>:<span class="string">'https://y.qq.com/n/yqq/playlist/3766176211.html'</span>&#125;</div><div class="line">    </div><div class="line">    <span class="comment"># 添加参数信息,有些是非必须的，待研究，有兴趣的可以自己测试</span></div><div class="line">    paramter = &#123;</div><div class="line">                <span class="string">'type'</span>:<span class="string">'1'</span>,</div><div class="line">                <span class="string">'json'</span>:<span class="string">'1'</span>,</div><div class="line">                <span class="string">'utf8'</span>:<span class="string">'1'</span>,</div><div class="line">                <span class="string">'onlysong'</span>:<span class="string">'0'</span>,</div><div class="line">                <span class="string">'disstid'</span>:<span class="string">'3766176211'</span>,</div><div class="line">                <span class="string">'format'</span>:<span class="string">'jsonp'</span>,</div><div class="line">                <span class="string">'g_tk'</span>:<span class="string">'5381'</span>,  <span class="comment"># 非必须</span></div><div class="line">                <span class="string">'jsonpCallback'</span>:<span class="string">'playlistinfoCallback'</span>,  <span class="comment"># 值可更改</span></div><div class="line">                <span class="string">'loginUin'</span>:<span class="string">'0'</span>,</div><div class="line">                <span class="string">'hostUin'</span>:<span class="string">'0'</span>,</div><div class="line">                <span class="string">'format'</span>:<span class="string">'jsonp'</span>,</div><div class="line">                <span class="string">"inCharset"</span>:<span class="string">'utf8'</span>,</div><div class="line">                <span class="string">'outCharset'</span>:<span class="string">'utf-8'</span>,</div><div class="line">                <span class="string">'notice'</span>:<span class="string">'0'</span>,</div><div class="line">                <span class="string">'platform'</span>:<span class="string">'yqq'</span>,</div><div class="line">                <span class="string">'needNewCode'</span>:<span class="string">'0'</span>,</div><div class="line">                &#125;</div><div class="line">    </div><div class="line">    playlist_re = requests.get(url=playlist_url, params=paramter, headers=header)</div><div class="line">    <span class="comment"># 指定编码格式</span></div><div class="line">    playlist_re.encoding = <span class="string">'utf-8'</span></div><div class="line">    <span class="comment"># 改变为python可识别的json格式,进行必要的数据清洗,去掉前面的'jsonpCallback'部分</span></div><div class="line">    playlist_info = json.loads(playlist_re.text.lstrip(<span class="string">'playlistinfoCallback('</span>).rstrip(<span class="string">')'</span>))</div><div class="line">    <span class="comment"># 指定整体索引</span></div><div class="line">    playlist_info1 = playlist_info[<span class="string">'cdlist'</span>][<span class="number">0</span>]</div><div class="line">    </div><div class="line">    <span class="comment"># 先存储歌手的姓名,观察可知，一共有19个索引,因为歌曲本身仅仅有20首，取前20个歌手名</span></div><div class="line">    singer_name = []</div><div class="line">    <span class="keyword">for</span> num <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">17</span>):</div><div class="line">        singer_eainfo = playlist_info1[<span class="string">'songlist'</span>][num]</div><div class="line">        <span class="keyword">for</span> each_info <span class="keyword">in</span> singer_eainfo[<span class="string">'singer'</span>]:</div><div class="line">            singer_name.append(each_info[<span class="string">'name'</span>])</div><div class="line">    </div><div class="line">    num = <span class="number">0</span></div><div class="line">    <span class="comment"># 在循环体系中进行下一步的编写</span></div><div class="line">    <span class="keyword">for</span> each <span class="keyword">in</span> playlist_info1[<span class="string">'songlist'</span>]:</div><div class="line">        </div><div class="line">        <span class="string">'''</span></div><div class="line"><span class="string">            在获取歌曲vkey的主URL传入相关的参数得到相关的数据之后进行挖掘，得到vkey信息</span></div><div class="line"><span class="string">            其中的参数有些是不必要的，可自由修改，有些是必要的</span></div><div class="line"><span class="string">                                                               '''</span></div><div class="line">        </div><div class="line">        key_url = <span class="string">'https://c.y.qq.com/base/fcgi-bin/fcg_music_express_mobile3.fcg'</span></div><div class="line">        <span class="comment"># 传入相关的代理以及参数</span></div><div class="line">        header_1 = &#123;<span class="string">'user-agent'</span>:<span class="string">'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36'</span>,</div><div class="line">                  <span class="string">'referer'</span>:<span class="string">'https://y.qq.com/portal/player.html'</span>,</div><div class="line">                  <span class="string">'cookie'</span>:<span class="string">'tvfe_boss_uuid=1770396a4ed2d111; pgv_info=ssid=s4189101616; pgv_pvid=7344469728; uin=; pgv_pvi=8737627136; pgv_si=s9378960384; _tucao_userinfo=ZU1hSHhlWVNPSnRoNWgwTjMzc2c4OVYzYjBuTkNjcDNHNjcyVkkzWm9WUkJZMWhxWDJ5SmpTSURFWDhVTk9TYkczU3JWc09EeEsrMEVnQ2RpK2FVNWh4M0x0Y21aOG5Vcms5MW9odmt6ZXNxRWlmeE9PZzM0SlQ1YmVuM0xhRVpUaWh5d2REV2FZcHdQdWdNL0daWE9rTTM0MlFjc1VoaHhNVkh4bkNqbnBOMDN2MG1sOEkxc0dYNFZRa24rd0RY--FeceGG8ErqgRGZz7WWwpsg%3D%3D; _tucao_session=WUVSc2RVVk95Y0ViU2NoNndsWmVlbzZoSG1WaFdpcEk4Q1M5bXZSTG9qanV3OEpuNVNQT3dBc0tBRERUY1NCRDZJek14Y2xYeFdmMWhiaWdkZ282UjdPdXVyT1ZYQnpCeG9BcklQUFBEMU5LQ3F3ajdmd3VWRmZ5QTJoN1ViS1krcEx0aUdUb3plckVNVGc3K0t2Z3pUeFJDcFZMNnU3dEpLUXZ5Zyt4dUpJdU5Hb3ZwZUhpTHM0OEhNQk0vcHJKN2tEOXVZay95WkFpZlFuSVBQZDhoSzlMVUMrVDQxN0llRzJuNkVWUGdTVjdyaVl2WVdscFlyVDJPald4MG9BWA%3D%3D--dDBBK5gXjLaGccOBzx4EBA%3D%3D; ts_refer=www.google.com/; ts_uid=3146042580; qqmusic_fromtag=66; yq_playdata=s; yqq_stat=0; yq_index=0; yq_playschange=0; player_exist=1; ts_last=y.qq.com/n/yqq/playlist/3766176211.html; yplayer_open=1'</span>&#125;    </div><div class="line">        </div><div class="line">        paramter_1 = &#123;</div><div class="line">                    <span class="string">'g_tk'</span>:<span class="string">'5381'</span>,  <span class="comment"># 非必须</span></div><div class="line">                    <span class="string">'jsonpCallback'</span>:<span class="string">'MusicJsonCallback'</span>,  <span class="comment"># 非必须，可更改</span></div><div class="line">                    <span class="string">"loginUin"</span>:<span class="string">'0'</span>,</div><div class="line">                    <span class="string">'hostUin'</span>:<span class="string">'0'</span>,</div><div class="line">                    <span class="string">'format'</span>:<span class="string">'json'</span>,</div><div class="line">                    <span class="string">'inCharset'</span>:<span class="string">'utf8'</span>,</div><div class="line">                    <span class="string">'outCharset'</span>:<span class="string">'utf-8'</span>,</div><div class="line">                    <span class="string">'notice'</span>:<span class="string">'0'</span>,</div><div class="line">                    <span class="string">'platform'</span>:<span class="string">"yqq"</span>,</div><div class="line">                    <span class="string">'needNewCode'</span>:<span class="string">'0'</span>,</div><div class="line">                    <span class="string">'cid'</span>:<span class="string">'205361747'</span>,  <span class="comment"># 一致必须</span></div><div class="line">                    <span class="string">'callback'</span>:<span class="string">'MusicJsonCallback'</span>,  <span class="comment"># 非必须，可更改</span></div><div class="line">                    <span class="string">'uin'</span>:<span class="string">'0'</span>,</div><div class="line">                    <span class="comment"># 传入获取的信息</span></div><div class="line">                    <span class="string">'songmid'</span>:each[<span class="string">'songmid'</span>],</div><div class="line">                    <span class="string">'filename'</span>:<span class="string">'C400'</span> + each[<span class="string">'songmid'</span>] + <span class="string">'.m4a'</span>,</div><div class="line">                    <span class="string">'guid'</span>:<span class="string">'7344469728'</span>   </div><div class="line">                    &#125;</div><div class="line">        </div><div class="line">        <span class="comment"># 解析得到含有vkey的数据信息，然后进行清洗得到想要的信息</span></div><div class="line">        key_re = requests.get(url=key_url, params=paramter_1, headers=header_1)</div><div class="line">        <span class="comment"># 指定编码格式</span></div><div class="line">        key_re.encoding = <span class="string">'utf-8'</span></div><div class="line">        <span class="comment"># 转换为python的json格式，进行简单的清洗</span></div><div class="line">        key_info = json.loads(key_re.text.lstrip(<span class="string">'MusicJsonCallback('</span>).rstrip(<span class="string">')'</span>))</div><div class="line">        <span class="comment"># 进一步的清洗</span></div><div class="line">        data_info = key_info[<span class="string">'data'</span>]</div><div class="line">        items_info = data_info[<span class="string">'items'</span>][<span class="number">0</span>]</div><div class="line">        </div><div class="line">        print(<span class="string">'数据采集完成，开始下载任务...'</span>)</div><div class="line">        <span class="comment"># 接下来就是可以下载了</span></div><div class="line">        urlretrieve(url=<span class="string">'http://dl.stream.qqmusic.qq.com/C4000041FwTv0Ai3Ku.m4a?vkey='</span> + items_info[<span class="string">'vkey'</span>] + <span class="string">'&amp;guid=7344469728&amp;uin=0&amp;fromtag=66.mp3'</span>, filename=<span class="string">'QQ音乐列表音乐/'</span> + singer_name[num] + <span class="string">'-'</span> + each[<span class="string">'songname'</span>] + <span class="string">'.mp3'</span>)</div><div class="line">        </div><div class="line">        print(<span class="string">'正在下载:'</span> + singer_name[num] + <span class="string">'的'</span> + each[<span class="string">'songname'</span>] + <span class="string">'!'</span>)</div><div class="line">        print(<span class="string">'下载中....'</span>)</div><div class="line">        print(<span class="string">'下载此歌曲完成！'</span>)</div><div class="line">        <span class="comment"># 跳传到下一个歌手名</span></div><div class="line">        num = num + <span class="number">1</span></div><div class="line">        time.sleep(<span class="number">1</span>)</div><div class="line">        </div><div class="line">    print(<span class="string">'全部下载完成，请在本过程目录下查收！'</span>)</div></pre></td></tr></table></figure>
+<blockquote>
 <p><strong>在使用urlretrieve函数时，其中的url参数输入时应当加上格式，如下载视频时加上.mp4,下载音乐时加上.mp3,否则会易出现HTTP 403 错误 – 禁止访问 (Forbidden)</strong></p>
 </blockquote>
 <ul>
@@ -666,7 +545,7 @@ if __name__ == &apos;__main__&apos;:
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月11日 - 21:10</p>
+  <p><span>最后更新:</span>2018年10月20日 - 07:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -999,7 +878,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      201.6k
+      200.1k
     </span>
   
 </div>
@@ -1012,6 +891,7 @@ var jiathis_config={
   <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
 
 -->
+
 
         
 <div class="busuanzi-count">
@@ -1508,6 +1388,7 @@ var jiathis_config={
   
 
   
+
 
 </body>
 </html>
