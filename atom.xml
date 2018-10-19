@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-10-19T02:16:53.360Z</updated>
+  <updated>2018-10-19T04:34:54.807Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python机器学习系列：线性回归算法的实现</title>
+    <link href="https://liujunjie11.github.io/2018/10/19/python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97%EF%BC%9A%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%AE%97%E6%B3%95%E7%9A%84%E5%AE%9E%E7%8E%B0/"/>
+    <id>https://liujunjie11.github.io/2018/10/19/python机器学习系列：线性回归算法的实现/</id>
+    <published>2018-10-19T03:08:43.000Z</published>
+    <updated>2018-10-19T04:34:54.807Z</updated>
+    
+    <content type="html"><![CDATA[<p>本来不想写太多关于这方面的基础知识的，但是为了加强理解，我想不妨直接写博文记录也是一个好的选择，也可以顺便帮助需要的人，何乐而不为呢？</p><p>那么开始吧。我在原课程的基础上进行那么一点点修改。</p><blockquote><p>这是我学习的课程地址：<a href="https://pythonprogramming.net/how-to-program-best-fit-line-machine-learning-tutorial/?completed=/how-to-program-best-fit-line-slope-machine-learning-tutorial/" target="_blank" rel="external">https://pythonprogramming.net/how-to-program-best-fit-line-machine-learning-tutorial/?completed=/how-to-program-best-fit-line-slope-machine-learning-tutorial/</a></p></blockquote><p>这不是一个小白教程，需要自行取了解一些基础知识，基础知识我仅仅是一笔带过。</p><h1 id="算法原理"><a href="#算法原理" class="headerlink" title="算法原理"></a>算法原理</h1><p>众所周知，线性回归算法是以一条直线来将一些散点进行分类的算法，而这条直线通常可理解为<code>y(x)=mx+b</code>这样的函数(这是最简单的线性回归算法实例)，其中<code>m</code>为直线的斜率，而<code>y</code>为直线的截距，而<code>x</code>为直线的自变量。</p><p>如下图，我们要将图1的散点，通过图2一条直线进行适当良好的分类开来：</p><ul><li>图1</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/linear-regression-tutorial.png" alt=""></p><ul><li>图2</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/linear-regression-python-tutorial.png" alt=""></p><h2 id="求解m"><a href="#求解m" class="headerlink" title="求解m:"></a>求解<code>m</code>:</h2><p>如图：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/best-fit-slope.png" alt=""></p><h2 id="求解y"><a href="#求解y" class="headerlink" title="求解y:"></a>求解<code>y</code>:</h2><p>如图：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/best-fit-y-intercept.png" alt=""></p><p>经过python实现编写对应的公式再进行可视化验证即可完成任务了。</p><h2 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h2><p>因为仅仅是为了说明算法的实现，所以数值就随便取的来用了。</p><h3 id="数值取值："><a href="#数值取值：" class="headerlink" title="数值取值："></a>数值取值：</h3><pre><code>import numpy as npxs = np.array([1,2,3,4,5,6],dtype=np.float64)ys = np.array([5,4,6,5,6,7],dtype=np.float64)</code></pre><h3 id="代码实现公式原理"><a href="#代码实现公式原理" class="headerlink" title="代码实现公式原理"></a>代码实现公式原理</h3><pre><code>from statistics import meandef best_fit_slope_and_intercept(xs,ys):    #实现m参数，两种实现方法    #m = (mean(xs)*mean(ys) - mean(xs*ys)) / (mean(xs)*mean(xs) - mean(xs*xs))    m = (mean(xs)*mean(ys) - mean(xs*ys)) / (mean(xs)**2 - mean(xs**2))    #实现b参数    b = mean(ys)-m*mean(xs)    return m,b</code></pre><h3 id="画图预测展示"><a href="#画图预测展示" class="headerlink" title="画图预测展示"></a>画图预测展示</h3><pre><code>import matplotlib.pyplot as pltplt.style.use(&apos;ggplot&apos;)m,b = best_fit_slope_and_intercept(xs,ys)regression_line = [(m*x)+b for x in xs] #y(x)的实现#趋势直线点向predict_x = 9predict_y = (m*predict_x)+b#散点图plt.scatter(xs,ys)plt.scatter(predict_x,predict_y)plt.plot(xs,regression_line) #直线描绘plt.show()</code></pre><p>如图：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/Figure_1.png" alt=""></p><p>这样就完成任务了。</p><h2 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h2><pre><code>from statistics import meanimport numpy as npimport matplotlib.pyplot as pltplt.style.use(&apos;ggplot&apos;)xs = np.array([1,2,3,4,5,6],dtype=np.float64)ys = np.array([5,4,6,5,6,7],dtype=np.float64)# print(xs,ys)def best_fit_slope_and_intercept(xs,ys):    #m = (mean(xs)*mean(ys) - mean(xs*ys)) / (mean(xs)*mean(xs) - mean(xs*xs))    m = (mean(xs)*mean(ys) - mean(xs*ys)) / (mean(xs)**2 - mean(xs**2))    b = mean(ys)-m*mean(xs)    return m,bm,b = best_fit_slope_and_intercept(xs,ys)regression_line = [(m*x)+b for x in xs] #y(x)的实现predict_x = 9predict_y = (m*predict_x)+bplt.scatter(xs,ys)plt.scatter(predict_x,predict_y)plt.plot(xs,regression_line) #直线描绘plt.show()</code></pre><h2 id="铺助理解链接"><a href="#铺助理解链接" class="headerlink" title="铺助理解链接"></a>铺助理解链接</h2><ul><li><p><a href="http://www.runoob.com/python/python-operators.html" target="_blank" rel="external">Python 运算符</a></p></li><li><p><a href="https://pythoncaff.com/docs/pymotw/statistics-statistical-calculations/106" target="_blank" rel="external">statistics — 统计学计算</a></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;本来不想写太多关于这方面的基础知识的，但是为了加强理解，我想不妨直接写博文记录也是一个好的选择，也可以顺便帮助需要的人，何乐而不为呢？&lt;/p&gt;
+&lt;p&gt;那么开始吧。我在原课程的基础上进行那么一点点修改。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这是我学习的课程地址：&lt;a hr
+      
+    
+    </summary>
+    
+      <category term="机器学习" scheme="https://liujunjie11.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="机器学习" scheme="https://liujunjie11.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>python机器学习系列：预测房价并且可视化</title>
@@ -481,29 +509,6 @@ failed to locate @import file _variables/base.styl
 &lt;p&gt;关于这个函数可在官网找到：&lt;br&gt;&lt;a href=&quot;https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.str.get.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.str.get.html&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;实际上我在此只是起到一个翻译的作用…&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="python编程" scheme="https://liujunjie11.github.io/categories/python%E7%BC%96%E7%A8%8B/"/>
-    
-    
-      <category term="python编程" scheme="https://liujunjie11.github.io/tags/python%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于python函数式编程以及相关调用方法的简单思考</title>
-    <link href="https://liujunjie11.github.io/2018/08/16/%E5%85%B3%E4%BA%8Epython%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E8%B0%83%E7%94%A8%E6%96%B9%E6%B3%95%E7%9A%84%E7%AE%80%E5%8D%95%E6%80%9D%E8%80%83/"/>
-    <id>https://liujunjie11.github.io/2018/08/16/关于python函数式编程以及相关调用方法的简单思考/</id>
-    <published>2018-08-16T11:16:27.000Z</published>
-    <updated>2018-10-11T13:07:11.154Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近在参加<em>kaggle</em>上的一个入门级的比赛，在参考他人的代码时学习到了应用一些东西，在这里说的<em>python函数式编程</em>实际上在看书时看到了好几遍了，但是在真正的应用时是有一股“意想不到的”欣喜感的，哈哈..</p><p>在此简单记录一下，以便以后参考用。</p><a id="more"></a><p>在所谓的<em>函数式编程</em>中，若是简单的直接调用出结果那真的是大材小用了..实际上只是我认知较浅..哈哈~</p><p>在使用这些<em>函数</em>时，我发现会有惊人的效果，而且可以达到理想的效果，就如在处理一些数据中结合本身的<em>变量</em>时真的有一股得心应手的感觉～～</p><blockquote><p>这里的变量一般为<em>DataFrame</em>的数据类型，也可称为一个特征向量，维度。</p></blockquote><p>再者，如是需要以自定义的函数结合变量达到理想的效果，不妨可以试试<code>apply</code>这个方法，大胆的调用起来！真的是挺好的一个工具，哈哈。</p><p>学到了不少实用的东西～</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近在参加&lt;em&gt;kaggle&lt;/em&gt;上的一个入门级的比赛，在参考他人的代码时学习到了应用一些东西，在这里说的&lt;em&gt;python函数式编程&lt;/em&gt;实际上在看书时看到了好几遍了，但是在真正的应用时是有一股“意想不到的”欣喜感的，哈哈..&lt;/p&gt;
-&lt;p&gt;在此简单记录一下，以便以后参考用。&lt;/p&gt;
     
     </summary>
     

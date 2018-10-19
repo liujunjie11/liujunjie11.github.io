@@ -303,6 +303,291 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://liujunjie11.github.io/2018/10/19/python机器学习系列：线性回归算法的实现/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘俊">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://owudg3xs2.bkt.clouddn.com/images-111.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LXiHa`Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/19/python机器学习系列：线性回归算法的实现/" itemprop="url">python机器学习系列：线性回归算法的实现</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-19T11:08:43+08:00">
+                2018-10-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/机器学习/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/10/19/python机器学习系列：线性回归算法的实现/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/10/19/python机器学习系列：线性回归算法的实现/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  677
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>本来不想写太多关于这方面的基础知识的，但是为了加强理解，我想不妨直接写博文记录也是一个好的选择，也可以顺便帮助需要的人，何乐而不为呢？</p>
+<p>那么开始吧。我在原课程的基础上进行那么一点点修改。</p>
+<blockquote>
+<p>这是我学习的课程地址：<a href="https://pythonprogramming.net/how-to-program-best-fit-line-machine-learning-tutorial/?completed=/how-to-program-best-fit-line-slope-machine-learning-tutorial/" target="_blank" rel="external">https://pythonprogramming.net/how-to-program-best-fit-line-machine-learning-tutorial/?completed=/how-to-program-best-fit-line-slope-machine-learning-tutorial/</a></p>
+</blockquote>
+<p>这不是一个小白教程，需要自行取了解一些基础知识，基础知识我仅仅是一笔带过。</p>
+<h1 id="算法原理"><a href="#算法原理" class="headerlink" title="算法原理"></a>算法原理</h1><p>众所周知，线性回归算法是以一条直线来将一些散点进行分类的算法，而这条直线通常可理解为<code>y(x)=mx+b</code>这样的函数(这是最简单的线性回归算法实例)，其中<code>m</code>为直线的斜率，而<code>y</code>为直线的截距，而<code>x</code>为直线的自变量。</p>
+<p>如下图，我们要将图1的散点，通过图2一条直线进行适当良好的分类开来：</p>
+<ul>
+<li>图1</li>
+</ul>
+<p><img src="http://owudg3xs2.bkt.clouddn.com/linear-regression-tutorial.png" alt=""></p>
+<ul>
+<li>图2</li>
+</ul>
+<p><img src="http://owudg3xs2.bkt.clouddn.com/linear-regression-python-tutorial.png" alt=""></p>
+<h2 id="求解m"><a href="#求解m" class="headerlink" title="求解m:"></a>求解<code>m</code>:</h2><p>如图：</p>
+<p><img src="http://owudg3xs2.bkt.clouddn.com/best-fit-slope.png" alt=""></p>
+<h2 id="求解y"><a href="#求解y" class="headerlink" title="求解y:"></a>求解<code>y</code>:</h2><p>如图：</p>
+<p><img src="http://owudg3xs2.bkt.clouddn.com/best-fit-y-intercept.png" alt=""></p>
+<p>经过python实现编写对应的公式再进行可视化验证即可完成任务了。</p>
+<h2 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h2><p>因为仅仅是为了说明算法的实现，所以数值就随便取的来用了。</p>
+<h3 id="数值取值："><a href="#数值取值：" class="headerlink" title="数值取值："></a>数值取值：</h3><pre><code>import numpy as np
+
+xs = np.array([1,2,3,4,5,6],dtype=np.float64)
+ys = np.array([5,4,6,5,6,7],dtype=np.float64)
+</code></pre><h3 id="代码实现公式原理"><a href="#代码实现公式原理" class="headerlink" title="代码实现公式原理"></a>代码实现公式原理</h3><pre><code>from statistics import mean
+
+def best_fit_slope_and_intercept(xs,ys):
+
+    #实现m参数，两种实现方法
+    #m = (mean(xs)*mean(ys) - mean(xs*ys)) / (mean(xs)*mean(xs) - mean(xs*xs))
+    m = (mean(xs)*mean(ys) - mean(xs*ys)) / (mean(xs)**2 - mean(xs**2))
+    #实现b参数
+    b = mean(ys)-m*mean(xs)
+
+    return m,b
+</code></pre><h3 id="画图预测展示"><a href="#画图预测展示" class="headerlink" title="画图预测展示"></a>画图预测展示</h3><pre><code>import matplotlib.pyplot as plt
+
+plt.style.use(&apos;ggplot&apos;)
+
+m,b = best_fit_slope_and_intercept(xs,ys)
+
+regression_line = [(m*x)+b for x in xs] #y(x)的实现
+
+
+#趋势直线点向
+predict_x = 9
+predict_y = (m*predict_x)+b
+
+#散点图
+plt.scatter(xs,ys)
+plt.scatter(predict_x,predict_y)
+plt.plot(xs,regression_line) #直线描绘
+plt.show()
+</code></pre><p>如图：</p>
+<p><img src="http://owudg3xs2.bkt.clouddn.com/Figure_1.png" alt=""></p>
+<p>这样就完成任务了。</p>
+<h2 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h2><pre><code>from statistics import mean
+import numpy as np
+import matplotlib.pyplot as plt
+
+plt.style.use(&apos;ggplot&apos;)
+
+xs = np.array([1,2,3,4,5,6],dtype=np.float64)
+ys = np.array([5,4,6,5,6,7],dtype=np.float64)
+# print(xs,ys)
+
+def best_fit_slope_and_intercept(xs,ys):
+
+
+    #m = (mean(xs)*mean(ys) - mean(xs*ys)) / (mean(xs)*mean(xs) - mean(xs*xs))
+    m = (mean(xs)*mean(ys) - mean(xs*ys)) / (mean(xs)**2 - mean(xs**2))
+    b = mean(ys)-m*mean(xs)
+
+    return m,b
+
+m,b = best_fit_slope_and_intercept(xs,ys)
+
+regression_line = [(m*x)+b for x in xs] #y(x)的实现
+
+predict_x = 9
+predict_y = (m*predict_x)+b
+
+
+plt.scatter(xs,ys)
+plt.scatter(predict_x,predict_y)
+plt.plot(xs,regression_line) #直线描绘
+plt.show()
+</code></pre><h2 id="铺助理解链接"><a href="#铺助理解链接" class="headerlink" title="铺助理解链接"></a>铺助理解链接</h2><ul>
+<li><p><a href="http://www.runoob.com/python/python-operators.html" target="_blank" rel="external">Python 运算符</a></p>
+</li>
+<li><p><a href="https://pythoncaff.com/docs/pymotw/statistics-statistical-calculations/106" target="_blank" rel="external">statistics — 统计学计算</a></p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+      
+    
+    
+    <div>
+      
+    </div>
+     
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://liujunjie11.github.io/2018/10/18/python机器学习系列：预测房价并且可视化/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2076,202 +2361,6 @@ failed to locate @import file _variables/base.styl
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liujunjie11.github.io/2018/09/28/科学上网，自建VPS-SS应用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="刘俊">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://owudg3xs2.bkt.clouddn.com/images-111.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LXiHa`Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/28/科学上网，自建VPS-SS应用/" itemprop="url">科学上网，自建VPS-SS应用</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-28T22:15:07+08:00">
-                2018-09-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/科学上网/" itemprop="url" rel="index">
-                    <span itemprop="name">科学上网</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/09/28/科学上网，自建VPS-SS应用/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/09/28/科学上网，自建VPS-SS应用/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  454
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>最近因为需求想自己搭建一个VPS加SS应用。用的是<a href="https://www.vultr.com/?ref=7548655" target="_blank" rel="external">Vultr</a>这个平台。</p>
-<p>唉…这东西的教程已经是满大街都是了，我就不重复造轮子了，现在的轮子还没有失效。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/28/科学上网，自建VPS-SS应用/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-      
-    
-    
-    <div>
-      
-    </div>
-     
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2327,7 +2416,7 @@ failed to locate @import file _variables/base.styl
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">145</span>
+                <span class="site-state-item-count">146</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -2469,7 +2558,7 @@ failed to locate @import file _variables/base.styl
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      200.1k
+      200.8k
     </span>
   
 </div>
