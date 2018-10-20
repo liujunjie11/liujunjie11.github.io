@@ -1869,7 +1869,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #26602b;
+  background: #ec8c7c;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2953,7 +2953,7 @@ hr {
   }
 }
 body {
-  background: url("http://owudg3xs2.bkt.clouddn.com/bf5e544501.jpg");
+  background: url("http://owudg3xs2.bkt.clouddn.com/97a49b1221bd5171881e9c32a2532a6f.gif");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
@@ -2961,7 +2961,6 @@ body {
 .main-inner {
   margin-top: 60px;
   padding: 60px 60px 60px 60px;
-  background: #fff;
   min-height: 500px;
   width: 700px;
 }
@@ -2979,8 +2978,8 @@ code {
   background: rgba(30,30,30,0.7);
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  ackground: url("http://owudg3xs2.bkt.clouddn.com/743004.jpg");
-  background-size: cover;
+  background: url("http://owudg3xs2.bkt.clouddn.com/eee381c051701309fdf97611582c5a33.gif");
+  background-size: 300px 800px;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -3017,4 +3016,11 @@ code {
 }
 .highlight:hover .btn-copy {
   opacity: 1;
+}
+.post {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 50px;
+  -webkit-box-shadow: 0 0 5px rgba(220,220,220,0.5);
+  -moz-box-shadow: 0 0 5px rgba(220,220,220,0.5);
 }
