@@ -1869,7 +1869,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4593ff;
+  background: #49b913;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2979,4 +2979,8 @@ code {
   background: rgba(30,30,30,0.7);
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+  ackground: url("http://owudg3xs2.bkt.clouddn.com/743004.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
