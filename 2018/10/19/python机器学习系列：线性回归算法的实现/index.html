@@ -85,13 +85,13 @@
 
 
 
-<meta name="description" content="本来不想写太多关于这方面的基础知识的，但是为了加强理解，我想不妨直接写博文记录也是一个好的选择，也可以顺便帮助需要的人，何乐而不为呢？ 那么开始吧。我在原课程的基础上进行那么一点点修改。  这是我学习的课程地址：https://pythonprogramming.net/how-to-program-best-fit-line-machine-learning-tutorial/?complete">
+<meta name="description" content="本来不想写太多关于这方面的基础知识的，但是为了加强理解，我想不妨直接写博文记录也是一个好的选择，也可以顺便帮助需要的人，何乐而不为呢？ 那么开始吧。我在原课程的基础上进行那么一点点修改。  这是我学习的相应的课程地址：https://pythonprogramming.net/how-to-program-best-fit-line-machine-learning-tutorial/?com">
 <meta name="keywords" content="机器学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python机器学习系列：线性回归算法的实现">
 <meta property="og:url" content="https://liujunjie11.github.io/2018/10/19/python机器学习系列：线性回归算法的实现/index.html">
 <meta property="og:site_name" content="LXiHa`Notes">
-<meta property="og:description" content="本来不想写太多关于这方面的基础知识的，但是为了加强理解，我想不妨直接写博文记录也是一个好的选择，也可以顺便帮助需要的人，何乐而不为呢？ 那么开始吧。我在原课程的基础上进行那么一点点修改。  这是我学习的课程地址：https://pythonprogramming.net/how-to-program-best-fit-line-machine-learning-tutorial/?complete">
+<meta property="og:description" content="本来不想写太多关于这方面的基础知识的，但是为了加强理解，我想不妨直接写博文记录也是一个好的选择，也可以顺便帮助需要的人，何乐而不为呢？ 那么开始吧。我在原课程的基础上进行那么一点点修改。  这是我学习的相应的课程地址：https://pythonprogramming.net/how-to-program-best-fit-line-machine-learning-tutorial/?com">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/linear-regression-tutorial.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/linear-regression-python-tutorial.png">
@@ -102,10 +102,10 @@
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/v2-254f5004fb3ceaf68a6366ec593c1a63_hd.jpg">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/v2-dd32ad2965e1bdeeefa3431c96c89357_hd.jpg">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-20%20%E4%B8%8B%E5%8D%8810.03.18.png">
-<meta property="og:updated_time" content="2018-10-20T14:10:22.858Z">
+<meta property="og:updated_time" content="2018-10-21T11:54:27.387Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python机器学习系列：线性回归算法的实现">
-<meta name="twitter:description" content="本来不想写太多关于这方面的基础知识的，但是为了加强理解，我想不妨直接写博文记录也是一个好的选择，也可以顺便帮助需要的人，何乐而不为呢？ 那么开始吧。我在原课程的基础上进行那么一点点修改。  这是我学习的课程地址：https://pythonprogramming.net/how-to-program-best-fit-line-machine-learning-tutorial/?complete">
+<meta name="twitter:description" content="本来不想写太多关于这方面的基础知识的，但是为了加强理解，我想不妨直接写博文记录也是一个好的选择，也可以顺便帮助需要的人，何乐而不为呢？ 那么开始吧。我在原课程的基础上进行那么一点点修改。  这是我学习的相应的课程地址：https://pythonprogramming.net/how-to-program-best-fit-line-machine-learning-tutorial/?com">
 <meta name="twitter:image" content="http://owudg3xs2.bkt.clouddn.com/linear-regression-tutorial.png">
 
 
@@ -451,10 +451,12 @@
       
 
       
-        <p>本来不想写太多关于这方面的基础知识的，但是为了加强理解，我想不妨直接写博文记录也是一个好的选择，也可以顺便帮助需要的人，何乐而不为呢？</p>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/V59bYfIomVk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<p>本来不想写太多关于这方面的基础知识的，但是为了加强理解，我想不妨直接写博文记录也是一个好的选择，也可以顺便帮助需要的人，何乐而不为呢？</p>
 <p>那么开始吧。我在原课程的基础上进行那么一点点修改。</p>
 <blockquote>
-<p>这是我学习的课程地址：<a href="https://pythonprogramming.net/how-to-program-best-fit-line-machine-learning-tutorial/?completed=/how-to-program-best-fit-line-slope-machine-learning-tutorial/" target="_blank" rel="external">https://pythonprogramming.net/how-to-program-best-fit-line-machine-learning-tutorial/?completed=/how-to-program-best-fit-line-slope-machine-learning-tutorial/</a></p>
+<p>这是我学习的相应的课程地址：<a href="https://pythonprogramming.net/how-to-program-best-fit-line-machine-learning-tutorial/?completed=/how-to-program-best-fit-line-slope-machine-learning-tutorial/" target="_blank" rel="external">https://pythonprogramming.net/how-to-program-best-fit-line-machine-learning-tutorial/?completed=/how-to-program-best-fit-line-slope-machine-learning-tutorial/</a></p>
 </blockquote>
 <p>这不是一个小白教程，需要自行取了解一些基础知识，基础知识我仅仅是一笔带过。</p>
 <a id="more"></a>
@@ -557,7 +559,7 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月20日 - 22:10</p>
+  <p><span>最后更新:</span>2018年10月21日 - 19:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -609,6 +611,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/21/python机器学习系列：K邻近算法(KNN)的实现及应用/" rel="prev" title="python机器学习系列：K邻近算法(KNN)的实现及应用">
+                python机器学习系列：K邻近算法(KNN)的实现及应用 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -728,7 +734,7 @@ var jiathis_config={
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">146</span>
+                <span class="site-state-item-count">148</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -739,7 +745,7 @@ var jiathis_config={
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">66</span>
+                <span class="site-state-item-count">67</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -750,7 +756,7 @@ var jiathis_config={
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">69</span>
+                <span class="site-state-item-count">70</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -886,7 +892,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      200.6k
+      201.9k
     </span>
   
 </div>
