@@ -85,18 +85,21 @@
 
 
 
-<meta name="description" content="还是老样子，这篇文章不适合纯粹的小白，仅仅注重实践，基础知识说的比较浅，基本上一笔带过。 我在作者的原代码和数据上进行了一点修改以符合当今的实际情况。 此篇文章将实现K邻近算法的基本原理，以及实现K邻近算法并且应用到实际数据集之中，之后会有一个实战项目。">
+<meta name="description" content="还是老样子，这篇文章不适合纯粹的小白，仅仅注重实践，基础知识说的比较浅，基本上一笔带过。 我在作者的原代码和数据上进行了一点修改以符合当今的实际情况。 此篇文章将实现K近邻算法的基本原理，以及实现K邻近算法并且应用到实际数据集之中，之后会有一个实战项目。">
 <meta name="keywords" content="机器学习">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python机器学习系列：K邻近算法(KNN)的实现及应用">
-<meta property="og:url" content="https://liujunjie11.github.io/2018/10/21/python机器学习系列：K邻近算法(KNN)的实现及应用/index.html">
+<meta property="og:title" content="python机器学习系列：K近邻算法(KNN)的实现及应用">
+<meta property="og:url" content="https://liujunjie11.github.io/2018/10/21/python机器学习系列：K近邻算法(KNN)的实现及应用/index.html">
 <meta property="og:site_name" content="LXiHa`Notes">
-<meta property="og:description" content="还是老样子，这篇文章不适合纯粹的小白，仅仅注重实践，基础知识说的比较浅，基本上一笔带过。 我在作者的原代码和数据上进行了一点修改以符合当今的实际情况。 此篇文章将实现K邻近算法的基本原理，以及实现K邻近算法并且应用到实际数据集之中，之后会有一个实战项目。">
+<meta property="og:description" content="还是老样子，这篇文章不适合纯粹的小白，仅仅注重实践，基础知识说的比较浅，基本上一笔带过。 我在作者的原代码和数据上进行了一点修改以符合当今的实际情况。 此篇文章将实现K近邻算法的基本原理，以及实现K邻近算法并且应用到实际数据集之中，之后会有一个实战项目。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-21T12:37:39.805Z">
+<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/euclidean-distance.png">
+<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-21%20%E4%B8%8B%E5%8D%884.10.36.png">
+<meta property="og:updated_time" content="2018-10-21T13:29:39.192Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python机器学习系列：K邻近算法(KNN)的实现及应用">
-<meta name="twitter:description" content="还是老样子，这篇文章不适合纯粹的小白，仅仅注重实践，基础知识说的比较浅，基本上一笔带过。 我在作者的原代码和数据上进行了一点修改以符合当今的实际情况。 此篇文章将实现K邻近算法的基本原理，以及实现K邻近算法并且应用到实际数据集之中，之后会有一个实战项目。">
+<meta name="twitter:title" content="python机器学习系列：K近邻算法(KNN)的实现及应用">
+<meta name="twitter:description" content="还是老样子，这篇文章不适合纯粹的小白，仅仅注重实践，基础知识说的比较浅，基本上一笔带过。 我在作者的原代码和数据上进行了一点修改以符合当今的实际情况。 此篇文章将实现K近邻算法的基本原理，以及实现K邻近算法并且应用到实际数据集之中，之后会有一个实战项目。">
+<meta name="twitter:image" content="http://owudg3xs2.bkt.clouddn.com/euclidean-distance.png">
 
 
 
@@ -126,14 +129,14 @@
 
 
 
-  <link rel="canonical" href="https://liujunjie11.github.io/2018/10/21/python机器学习系列：K邻近算法(KNN)的实现及应用/"/>
+  <link rel="canonical" href="https://liujunjie11.github.io/2018/10/21/python机器学习系列：K近邻算法(KNN)的实现及应用/"/>
 
 
 
 
 
 
-  <title>python机器学习系列：K邻近算法(KNN)的实现及应用 | LXiHa`Notes</title>
+  <title>python机器学习系列：K近邻算法(KNN)的实现及应用 | LXiHa`Notes</title>
   
 
 
@@ -305,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liujunjie11.github.io/2018/10/21/python机器学习系列：K邻近算法(KNN)的实现及应用/">
+    <link itemprop="mainEntityOfPage" href="https://liujunjie11.github.io/2018/10/21/python机器学习系列：K近邻算法(KNN)的实现及应用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘俊">
@@ -322,7 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">python机器学习系列：K邻近算法(KNN)的实现及应用</h1>
+          <h1 class="post-title" itemprop="name headline">python机器学习系列：K近邻算法(KNN)的实现及应用</h1>
         
 
         <div class="post-meta">
@@ -375,9 +378,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/10/21/python机器学习系列：K邻近算法(KNN)的实现及应用/#comments" itemprop="discussionUrl">
+                <a href="/2018/10/21/python机器学习系列：K近邻算法(KNN)的实现及应用/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/10/21/python机器学习系列：K邻近算法(KNN)的实现及应用/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/10/21/python机器学习系列：K近邻算法(KNN)的实现及应用/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -445,14 +448,14 @@
 
 <p>还是老样子，这篇文章不适合纯粹的小白，仅仅注重实践，基础知识说的比较浅，基本上一笔带过。</p>
 <p>我在作者的原代码和数据上进行了一点修改以符合当今的实际情况。</p>
-<p>此篇文章将实现K邻近算法的基本原理，以及实现K邻近算法并且应用到实际数据集之中，之后会有一个实战项目。<br><a id="more"></a></p>
+<p>此篇文章将实现K近邻算法的基本原理，以及实现K邻近算法并且应用到实际数据集之中，之后会有一个实战项目。<br><a id="more"></a></p>
 <h1 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h1><h2 id="欧几里得原理以及代码实现"><a href="#欧几里得原理以及代码实现" class="headerlink" title="欧几里得原理以及代码实现"></a>欧几里得原理以及代码实现</h2><p>欧几里得公式：</p>
-<p><img src="" alt=""></p>
+<p><img src="http://owudg3xs2.bkt.clouddn.com/euclidean-distance.png" alt=""></p>
 <blockquote>
 <p>实际上很简单，想想勾股定理吧…</p>
 </blockquote>
 <p>代码实现：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt</div><div class="line"></div><div class="line"><span class="comment">#数据自制</span></div><div class="line">variable_1 = [<span class="number">1</span>,<span class="number">3</span>]</div><div class="line">variable_2 = [<span class="number">2</span>,<span class="number">6</span>]</div><div class="line"></div><div class="line">euclidean_distance = sqrt((variable_2[<span class="number">0</span>]-variable_1[<span class="number">0</span>])**<span class="number">2</span> + (variable_2[<span class="number">1</span>]-variable_1[<span class="number">1</span>])**<span class="number">2</span>)</div><div class="line">print(euclidean_distance)</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt</div><div class="line"></div><div class="line"><span class="comment">#数据自制</span></div><div class="line">feature_1 = [<span class="number">1</span>,<span class="number">3</span>]</div><div class="line">feature_2 = [<span class="number">2</span>,<span class="number">6</span>]</div><div class="line"></div><div class="line">euclidean_distance = sqrt((variable_2[<span class="number">0</span>]-variable_1[<span class="number">0</span>])**<span class="number">2</span> + (variable_2[<span class="number">1</span>]-variable_1[<span class="number">1</span>])**<span class="number">2</span>)</div><div class="line">print(euclidean_distance)</div></pre></td></tr></table></figure>
 <blockquote>
 <p>这里是中文相关一节的地址：<a href="https://www.yxgapp.com/video/c8426884-2b56-494f-a274-0aa3105503f1.html" target="_blank" rel="external">https://www.yxgapp.com/video/c8426884-2b56-494f-a274-0aa3105503f1.html</a></p>
 </blockquote>
@@ -487,11 +490,11 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">Attribute Information: (class attribute has been moved to last column)</div><div class="line"></div><div class="line">   <span class="comment">#  Attribute                     Domain</span></div><div class="line">   -- -----------------------------------------</div><div class="line">   1. Sample code number            id number</div><div class="line">   2. Clump Thickness               1 - 10</div><div class="line">   3. Uniformity of Cell Size       1 - 10</div><div class="line">   4. Uniformity of Cell Shape      1 - 10</div><div class="line">   5. Marginal Adhesion             1 - 10</div><div class="line">   6. Single Epithelial Cell Size   1 - 10</div><div class="line">   7. Bare Nuclei                   1 - 10</div><div class="line">   8. Bland Chromatin               1 - 10</div><div class="line">   9. Normal Nucleoli               1 - 10</div><div class="line">  10. Mitoses                       1 - 10</div><div class="line">  11. Class:                        (2 <span class="keyword">for</span> benign(良性), 4 <span class="keyword">for</span> malignant(恶性))</div></pre></td></tr></table></figure>
 <p>因为缺失的数据并不多，并且在我修改了那几个缺失值测试了好几次用于训练之后发现差距基本上可以忽略，所以这里的关于缺失值改为异常值来处理，因为基本上对于模型训练基本上没有什么影响。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line"></div><div class="line">df = pd.read_csv(<span class="string">'breast-cancer-wisconsin.data'</span>)</div><div class="line"></div><div class="line">df.replace(<span class="string">'?'</span>,<span class="number">-99999</span>,inplace=<span class="keyword">True</span>) <span class="comment">#替换异常值为-99999，inplace=True表示文件中也将进行同步更改</span></div><div class="line"><span class="comment">#去除不相关的特征列</span></div><div class="line">df.drop([<span class="string">'Id'</span>], <span class="number">1</span>, inplace=<span class="keyword">True</span>)</div></pre></td></tr></table></figure>
-<p>数据量本身也就是那么点…所以数据预处理也就这样了…</p>
+<p>数据量本身也就是那么点…所以数据预处理也就这样了…<strong>KNN算法对于异常值不敏感。</strong></p>
 <h2 id="模型训练及预测"><a href="#模型训练及预测" class="headerlink" title="模型训练及预测"></a>模型训练及预测</h2><p>分割数据集，进行训练，并且制作简易数据集来进行预测。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> preprocessing,neighbors</div><div class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</div><div class="line"></div><div class="line">X = np.array(df.drop([<span class="string">'Class'</span>], <span class="number">1</span>)) <span class="comment">#去除标签列，自制数据集</span></div><div class="line">y = np.array(df[<span class="string">'Class'</span>])</div><div class="line"></div><div class="line">X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=<span class="number">0.2</span>)</div><div class="line"></div><div class="line">clf = neighbors.KNeighborsClassifier()</div><div class="line">clf.fit(X_train, y_train)</div><div class="line"></div><div class="line">accuracy = clf.score(X_test, y_test) <span class="comment">#得出准确值</span></div><div class="line">print(accuracy)</div><div class="line"></div><div class="line"><span class="comment">#创建数据集来进行简单的预测</span></div><div class="line">example_maasurse = np.array([[<span class="number">4</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>],[<span class="number">4</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">1</span>]])</div><div class="line">example_maasurse = example_maasurse.reshape(len(example_maasurse),<span class="number">-1</span>) <span class="comment">#重朔,其中的-1可理解为，只想输出2行的情况下，后面的列我写上-1由numpy自行得出对应相符的数组，有点抽象...其实也就那么回事</span></div><div class="line"></div><div class="line"></div><div class="line">prediction = clf.predict(example_maasurse)</div><div class="line">print(prediction)</div></pre></td></tr></table></figure>
 <p>输出如下：</p>
-<p><img src="" alt=""></p>
+<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-21%20%E4%B8%8B%E5%8D%884.10.36.png" alt=""></p>
 <p>如果还是对于这条代码<code>example_maasurse.reshape(len(example_maasurse),-1)</code>中的<code>-1</code>还是不理解，可参考如下链接或者是官网：</p>
 <ul>
 <li><p><a href="https://www.zhihu.com/question/52684594" target="_blank" rel="external">Python中reshape函数参数-1的意思？</a></p>
@@ -503,7 +506,7 @@
 </ul>
 <p>其实也就那么回事…</p>
 <h2 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> preprocessing,neighbors</div><div class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line"></div><div class="line">df = pd.read_csv(<span class="string">'breast-cancer-wisconsin.data'</span>)</div><div class="line"></div><div class="line">df.replace(<span class="string">'?'</span>,<span class="number">-99999</span>,inplace=<span class="keyword">True</span>) </div><div class="line">df.drop([<span class="string">'Id'</span>], <span class="number">1</span>, inplace=<span class="keyword">True</span>)</div><div class="line"></div><div class="line">X = np.array(df.drop([<span class="string">'Class'</span>], <span class="number">1</span>)) </div><div class="line">y = np.array(df[<span class="string">'Class'</span>])</div><div class="line"></div><div class="line">X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=<span class="number">0.2</span>)</div><div class="line"></div><div class="line">clf = neighbors.KNeighborsClassifier()</div><div class="line">clf.fit(X_train, y_train)</div><div class="line"></div><div class="line">accuracy = clf.score(X_test, y_test) </div><div class="line">print(accuracy)</div><div class="line"></div><div class="line">example_maasurse = np.array([[<span class="number">4</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>],[<span class="number">4</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">1</span>]])</div><div class="line">example_maasurse = example_maasurse.reshape(len(example_maasurse),<span class="number">-1</span>)</div><div class="line"></div><div class="line">prediction = clf.predict(example_maasurse)</div><div class="line">print(prediction)</div></pre></td></tr></table></figure>
-
+<h2 id="用手动实现的KNN训练此数据集"><a href="#用手动实现的KNN训练此数据集" class="headerlink" title="用手动实现的KNN训练此数据集"></a>用手动实现的KNN训练此数据集</h2>
       
     </div>
     
@@ -532,7 +535,7 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月21日 - 20:10</p>
+  <p><span>最后更新:</span>2018年10月21日 - 21:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -827,7 +830,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#算法实现"><span class="nav-number">1.</span> <span class="nav-text">算法实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#欧几里得原理以及代码实现"><span class="nav-number">1.1.</span> <span class="nav-text">欧几里得原理以及代码实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现KNN"><span class="nav-number">1.2.</span> <span class="nav-text">实现KNN</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目实践"><span class="nav-number">2.</span> <span class="nav-text">项目实践</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据预处理"><span class="nav-number">2.1.</span> <span class="nav-text">数据预处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型训练及预测"><span class="nav-number">2.2.</span> <span class="nav-text">模型训练及预测</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完整代码"><span class="nav-number">2.3.</span> <span class="nav-text">完整代码</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#算法实现"><span class="nav-number">1.</span> <span class="nav-text">算法实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#欧几里得原理以及代码实现"><span class="nav-number">1.1.</span> <span class="nav-text">欧几里得原理以及代码实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现KNN"><span class="nav-number">1.2.</span> <span class="nav-text">实现KNN</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目实践"><span class="nav-number">2.</span> <span class="nav-text">项目实践</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据预处理"><span class="nav-number">2.1.</span> <span class="nav-text">数据预处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型训练及预测"><span class="nav-number">2.2.</span> <span class="nav-text">模型训练及预测</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完整代码"><span class="nav-number">2.3.</span> <span class="nav-text">完整代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用手动实现的KNN训练此数据集"><span class="nav-number">2.4.</span> <span class="nav-text">用手动实现的KNN训练此数据集</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1006,9 +1009,9 @@ var jiathis_config={
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://liujunjie11.github.io/2018/10/21/python机器学习系列：K邻近算法(KNN)的实现及应用/';
-          this.page.identifier = '2018/10/21/python机器学习系列：K邻近算法(KNN)的实现及应用/';
-          this.page.title = 'python机器学习系列：K邻近算法(KNN)的实现及应用';
+          this.page.url = 'https://liujunjie11.github.io/2018/10/21/python机器学习系列：K近邻算法(KNN)的实现及应用/';
+          this.page.identifier = '2018/10/21/python机器学习系列：K近邻算法(KNN)的实现及应用/';
+          this.page.title = 'python机器学习系列：K近邻算法(KNN)的实现及应用';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://—-...disqus.com/embed.js';
