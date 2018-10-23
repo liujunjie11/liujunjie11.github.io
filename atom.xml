@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-10-23T01:49:12.970Z</updated>
+  <updated>2018-10-23T13:47:10.237Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于在Mac下的python文字转语音库pyttsx3</title>
+    <link href="https://liujunjie11.github.io/2018/10/23/%E5%85%B3%E4%BA%8E%E5%9C%A8Mac%E4%B8%8B%E7%9A%84python%E6%96%87%E5%AD%97%E8%BD%AC%E8%AF%AD%E9%9F%B3%E5%BA%93pyttsx3/"/>
+    <id>https://liujunjie11.github.io/2018/10/23/关于在Mac下的python文字转语音库pyttsx3/</id>
+    <published>2018-10-23T13:29:17.000Z</published>
+    <updated>2018-10-23T13:47:10.237Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近写python机器学习教程有点累了..就玩一些其他的东西，就包括了这个文字转语音的python3库<em>pyttsx3</em>。</p><p>其中也遇到了一些问题，在此记录一下。</p><a id="more"></a><h1 id="关于下载运行的问题"><a href="#关于下载运行的问题" class="headerlink" title="关于下载运行的问题"></a>关于下载运行的问题</h1><p>在使用命令行<code>pip install pyttsx3</code>下载之后，我在终端写下了如下代码：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> pyttsx3</div><div class="line">engine = pyttsx3.init()</div></pre></td></tr></table></figure><p>结果出现了<code>Bo module named &#39;Foundation&#39;</code>的错误问题。</p><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>下载模块<code>pyobjc</code>.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install pyobjc</div></pre></td></tr></table></figure><p>估计是跟调用系统一些模块有关，毕竟这个库是跟macOS关系还是挺深的…自行了解，没想到这个库可以调用Objective-C的库来进行macOS上的应用程序开发…</p><p>以下是WiKi的解释：</p><blockquote><p>PyObjC是Python和Objective-C编程语言之间的双向桥梁，允许程序员使用Python扩展现有的Objective-C库，例如Apple的Cocoa框架。 PyObjC用于在纯Python中开发macOS应用程序。 对GNUstep的支持也很有限，GNUstep是Cocoa的开源，跨平台实现。</p></blockquote><p>下载完成这个库之后，再运行上面的代码就没有出错了。</p><ul><li>参考链接：<a href="https://blog.csdn.net/noway5456/article/details/78905275" target="_blank" rel="external">https://blog.csdn.net/noway5456/article/details/78905275</a></li></ul><h1 id="关于pyttsx3读中文字的问题"><a href="#关于pyttsx3读中文字的问题" class="headerlink" title="关于pyttsx3读中文字的问题"></a>关于pyttsx3读中文字的问题</h1><p>这个问题其实是跟系统的语音设置相关的，看下图吧。</p><p>我在系统默认的语音类型(在图中两者之间切换)：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-23%20%E4%B8%8B%E5%8D%889.24.59.png" alt=""></p><p>然后又用代码查看<em>pyttsx3</em>的对应默认声音：</p><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-23%20%E4%B8%8B%E5%8D%889.24.30.png" alt=""></p><p>发现了其实pyttsx3的语音是根据本地语音相关的，这又一步说明为何要安装<code>pyobjc</code>这个铺助模块的意义。</p><p>在读取英文或中文时，设置一下本地的默认语音即可。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近写python机器学习教程有点累了..就玩一些其他的东西，就包括了这个文字转语音的python3库&lt;em&gt;pyttsx3&lt;/em&gt;。&lt;/p&gt;
+&lt;p&gt;其中也遇到了一些问题，在此记录一下。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="python" scheme="https://liujunjie11.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="https://liujunjie11.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>python机器学习系列：支持向量机(SVM)的应用以及实现</title>
@@ -500,29 +523,6 @@ failed to locate @import file _variables/base.styl
     
     
       <category term="解决方案" scheme="https://liujunjie11.github.io/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>duet display在升级Macos 13.6之后崩溃的可行解决方法</title>
-    <link href="https://liujunjie11.github.io/2018/08/31/duet-display%E5%9C%A8%E5%8D%87%E7%BA%A7Macos-13-6%E4%B9%8B%E5%90%8E%E5%B4%A9%E6%BA%83%E7%9A%84%E5%8F%AF%E8%A1%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
-    <id>https://liujunjie11.github.io/2018/08/31/duet-display在升级Macos-13-6之后崩溃的可行解决方法/</id>
-    <published>2018-08-31T13:38:40.000Z</published>
-    <updated>2018-10-11T13:07:43.820Z</updated>
-    
-    <content type="html"><![CDATA[<p>下午看见<em>app store</em>里有更新系统的提示，心里想着好久未曾更新过哥的<em>mac</em>系统了，之前一直怕升级有什么毛病，就一直停留在<em>13.1</em>的系统。结果一升级悲剧了，哥昨天刚刚买的<em>duet display</em>一打开不显灵了…妈个鸡…</p><p>想过换回以前的系统，懒得搞了，麻烦…</p><a id="more"></a><p>想过替代品，暂时找不到，另外一方面：没钱加不想花钱了…</p><p>一怒之下哥把<em>duet display</em>删除了重装。没想到效果出奇的好：</p><blockquote><p><strong>软件可以正常使用了，不过就是在iPad上的显示不是全屏了，多了下面的一大条黑边，但是功能是和以前一样的，没区别。</strong></p></blockquote><p>下面简单说说解决方案：</p><ul><li>1、重装软件，仅<em>Mac端</em>；</li><li>2、在连接之后，顶部出现下边的镜像设置，如下设置：</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-08-31%20%E4%B8%8B%E5%8D%889.50.07.png" alt=""></p><ul><li>3、在<em>duet</em>软件点击<em>高级设置</em>，如下设置：</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-08-31%20%E4%B8%8B%E5%8D%889.50.28.png" alt=""></p><blockquote><p>不取消这个<em>镜像小勾勾</em>则永远不会成功！不然就是一系列的软件闪退！<strong>亲生经历，请勿模仿！！</strong></p></blockquote><p><strong>补充：今天更新了到了Mojavede版本，但是duet还是不能正常使用，但是只要调整一下分辨率就行了～，不妨可以自己试试看，我选择中间的那个分辨率的模式，在iPad上又是全屏幕啦～</strong></p><ul><li>4、连接上之后在<em>偏好系统</em>中的<em>显示器</em>设置界面的<em>排列</em>如下设置：</li></ul><p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-08-31%20%E4%B8%8B%E5%8D%889.50.39.png" alt=""></p><blockquote><p>根据自身情况将扩展屏设置放在左边或者是右边，即达到一个鼠标可以自由通行的效果。</p></blockquote><p>就这样吧，软件虽然界面变小了一圈，但是也能接受。</p><p>还是那么流畅，还是那么好用，还是那么美滋滋～～</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;下午看见&lt;em&gt;app store&lt;/em&gt;里有更新系统的提示，心里想着好久未曾更新过哥的&lt;em&gt;mac&lt;/em&gt;系统了，之前一直怕升级有什么毛病，就一直停留在&lt;em&gt;13.1&lt;/em&gt;的系统。结果一升级悲剧了，哥昨天刚刚买的&lt;em&gt;duet display&lt;/em&gt;一打开不显灵了…妈个鸡…&lt;/p&gt;
-&lt;p&gt;想过换回以前的系统，懒得搞了，麻烦…&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Mac教程" scheme="https://liujunjie11.github.io/categories/Mac%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="Mac教程" scheme="https://liujunjie11.github.io/tags/Mac%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
