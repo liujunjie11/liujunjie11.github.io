@@ -95,7 +95,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-23%20%E4%B8%8B%E5%8D%889.24.59.png">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-23%20%E4%B8%8B%E5%8D%889.24.30.png">
-<meta property="og:updated_time" content="2018-10-23T13:47:10.237Z">
+<meta property="og:updated_time" content="2018-10-23T13:50:33.947Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于在Mac下的python文字转语音库pyttsx3">
 <meta name="twitter:description" content="最近写python机器学习教程有点累了..就玩一些其他的东西，就包括了这个文字转语音的python3库pyttsx3。 其中也遇到了一些问题，在此记录一下。">
@@ -449,7 +449,7 @@
 <a id="more"></a>
 <h1 id="关于下载运行的问题"><a href="#关于下载运行的问题" class="headerlink" title="关于下载运行的问题"></a>关于下载运行的问题</h1><p>在使用命令行<code>pip install pyttsx3</code>下载之后，我在终端写下了如下代码：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> pyttsx3</div><div class="line">engine = pyttsx3.init()</div></pre></td></tr></table></figure>
-<p>结果出现了<code>Bo module named &#39;Foundation&#39;</code>的错误问题。</p>
+<p>结果出现了<code>No module named &#39;Foundation&#39;</code>的错误问题。</p>
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>下载模块<code>pyobjc</code>.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install pyobjc</div></pre></td></tr></table></figure>
 <p>估计是跟调用系统一些模块有关，毕竟这个库是跟macOS关系还是挺深的…自行了解，没想到这个库可以调用Objective-C的库来进行macOS上的应用程序开发…</p>
