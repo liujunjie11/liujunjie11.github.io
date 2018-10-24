@@ -102,7 +102,7 @@
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/v2-254f5004fb3ceaf68a6366ec593c1a63_hd.jpg">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/v2-dd32ad2965e1bdeeefa3431c96c89357_hd.jpg">
 <meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-20%20%E4%B8%8B%E5%8D%8810.03.18.png">
-<meta property="og:updated_time" content="2018-10-22T09:34:31.923Z">
+<meta property="og:updated_time" content="2018-10-24T13:47:46.144Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python机器学习系列：线性回归算法的实现">
 <meta name="twitter:description" content="本来不想写太多关于这方面的基础知识的，但是为了加强理解，我想不妨直接写博文记录也是一个好的选择，也可以顺便帮助需要的人，何乐而不为呢？ 那么开始吧。我在原课程的基础上进行那么一点点修改。  这是我学习的相应的课程地址：https://pythonprogramming.net/how-to-program-best-fit-line-machine-learning-tutorial/?com">
@@ -414,7 +414,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.9k
+                  2k
                 </span>
               
 
@@ -474,7 +474,7 @@
 <p><img src="http://owudg3xs2.bkt.clouddn.com/best-fit-slope.png" alt=""></p>
 <h2 id="求解b"><a href="#求解b" class="headerlink" title="求解b:"></a>求解<code>b</code>:</h2><p>如图：</p>
 <p><img src="http://owudg3xs2.bkt.clouddn.com/best-fit-y-intercept.png" alt=""></p>
-<p>经过python实现编写对应的公式再进行可视化验证即可完成任务了。</p>
+<p>实际上这与所谓的<code>感知机</code>是一样的原理(相关的知识可见李航老师的书籍《统计需诶下方法》)。再者，经过python实现编写对应的公式再进行可视化验证即可完成任务了。</p>
 <h2 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h2><p>因为仅仅是为了说明算法的实现，所以数值就随便取的来用了。</p>
 <h3 id="数值取值："><a href="#数值取值：" class="headerlink" title="数值取值："></a>数值取值：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line">	</div><div class="line">xs = np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],dtype=np.float64)</div><div class="line">ys = np.array([<span class="number">5</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>],dtype=np.float64)</div></pre></td></tr></table></figure>
 <h3 id="代码实现公式原理"><a href="#代码实现公式原理" class="headerlink" title="代码实现公式原理"></a>代码实现公式原理</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> statistics <span class="keyword">import</span> mean</div><div class="line">	</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">best_fit_slope_and_intercept</span><span class="params">(xs,ys)</span>:</span></div><div class="line">    </div><div class="line">    <span class="comment">#实现m参数，两种实现方法</span></div><div class="line">	<span class="comment">#m = (mean(xs)*mean(ys) - mean(xs*ys)) / (mean(xs)*mean(xs) - mean(xs*xs))</span></div><div class="line">    m = (mean(xs)*mean(ys) - mean(xs*ys)) / (mean(xs)**<span class="number">2</span> - mean(xs**<span class="number">2</span>))</div><div class="line">    <span class="comment">#实现b参数</span></div><div class="line">    b = mean(ys)-m*mean(xs)</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> m,b</div></pre></td></tr></table></figure>
@@ -559,7 +559,7 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月22日 - 17:10</p>
+  <p><span>最后更新:</span>2018年10月24日 - 21:10</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -892,7 +892,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      203.8k
+      203.9k
     </span>
   
 </div>
