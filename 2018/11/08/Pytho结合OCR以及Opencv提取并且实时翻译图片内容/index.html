@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "09bbc3c5"
+    });
+  daovoice('update');
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+  
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="python," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="LXiHa`Notes" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="本文讲述基于python的一些模块进行图片内容的提取、图片内容的翻译。本文主要进行记录一些在实践中的构想以及遇到的问题，并且记录上一些实现的代码，因为技术含量实在是不怎么高的，不过若是自己玩玩，参加那种水比赛也许能获得个不错的名次，或者是应付个学生报告什么的… 由于时间关系，本文多数只是起到一个构想记录的效用。">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pytho结合OCR以及Opencv提取并且实时翻译图片内容">
+<meta property="og:url" content="https://liujunjie11.github.io/2018/11/08/Pytho结合OCR以及Opencv提取并且实时翻译图片内容/index.html">
+<meta property="og:site_name" content="LXiHa`Notes">
+<meta property="og:description" content="本文讲述基于python的一些模块进行图片内容的提取、图片内容的翻译。本文主要进行记录一些在实践中的构想以及遇到的问题，并且记录上一些实现的代码，因为技术含量实在是不怎么高的，不过若是自己玩玩，参加那种水比赛也许能获得个不错的名次，或者是应付个学生报告什么的… 由于时间关系，本文多数只是起到一个构想记录的效用。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-08T05:27:32.692Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Pytho结合OCR以及Opencv提取并且实时翻译图片内容">
+<meta name="twitter:description" content="本文讲述基于python的一些模块进行图片内容的提取、图片内容的翻译。本文主要进行记录一些在实践中的构想以及遇到的问题，并且记录上一些实现的代码，因为技术含量实在是不怎么高的，不过若是自己玩玩，参加那种水比赛也许能获得个不错的名次，或者是应付个学生报告什么的… 由于时间关系，本文多数只是起到一个构想记录的效用。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://liujunjie11.github.io/2018/11/08/Pytho结合OCR以及Opencv提取并且实时翻译图片内容/"/>
+
+
+
+
+
+
+  <title>Pytho结合OCR以及Opencv提取并且实时翻译图片内容 | LXiHa`Notes</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/liujunjie11" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#fff; color:#151513; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+	
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">LXiHa`Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">The House Belong to Love and Freedom.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://liujunjie11.github.io/2018/11/08/Pytho结合OCR以及Opencv提取并且实时翻译图片内容/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘俊">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://owudg3xs2.bkt.clouddn.com/images-111.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LXiHa`Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Pytho结合OCR以及Opencv提取并且实时翻译图片内容</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-08T12:09:42+08:00">
+                2018-11-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/08/Pytho结合OCR以及Opencv提取并且实时翻译图片内容/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/11/08/Pytho结合OCR以及Opencv提取并且实时翻译图片内容/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.7k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  8
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本文讲述基于python的一些模块进行<code>图片内容的提取</code>、<code>图片内容的翻译</code>。本文主要进行记录一些在实践中的构想以及遇到的问题，并且记录上一些实现的代码，因为技术含量实在是不怎么高的，不过若是自己玩玩，参加那种水比赛也许能获得个不错的名次，或者是应付个学生报告什么的…</p>
+<p>由于时间关系，本文多数只是起到一个构想记录的效用。</p>
+<a id="more"></a>
+<h1 id="基于OCR的图片内容提取"><a href="#基于OCR的图片内容提取" class="headerlink" title="基于OCR的图片内容提取"></a>基于OCR的图片内容提取</h1><p>在python使用到的模块是<code>pytesseract</code>，关于简要的下载介绍什么的可见：<a href="https://zhuanlan.zhihu.com/p/31530755" target="_blank" rel="external">Python–文字识别–Tesseract</a>。</p>
+<p>运行代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> pytesseract</div><div class="line"><span class="keyword">import</span> cv2</div><div class="line"></div><div class="line">image = cv2.imread(<span class="string">'/Users/junjieliu/Desktop/1.png'</span>)</div><div class="line">text = pytesseract.image_to_string(image)</div><div class="line">print(text)</div></pre></td></tr></table></figure>
+<p>在此记录一下在使用过程中的出现的问题：</p>
+<h2 id="问题一："><a href="#问题一：" class="headerlink" title="* 问题一："></a>* 问题一：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Error: [Errno 2] No such file or directory using pytesser</div></pre></td></tr></table></figure>
+<blockquote>
+<p>之后我参考了：<a href="https://stackoverflow.com/questions/35609773/oserror-errno-2-no-such-file-or-directory-using-pytesser" target="_blank" rel="external">https://stackoverflow.com/questions/35609773/oserror-errno-2-no-such-file-or-directory-using-pytesser</a></p>
+</blockquote>
+<p>我使用了其中的前面的几个答案的方案，结果出现了下面的错误…</p>
+<h2 id="问题二："><a href="#问题二：" class="headerlink" title="* 问题二："></a>* 问题二：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">PermissionError: [Errno 13] Permission denied</div></pre></td></tr></table></figure>
+<blockquote>
+<p>之后我参考了：<a href="https://github.com/madmaze/pytesseract/issues/62" target="_blank" rel="external">https://github.com/madmaze/pytesseract/issues/62</a></p>
+</blockquote>
+<p>但是依旧得不到解决。</p>
+<h2 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h2><p>使用命令行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">which</span> tesseract</div></pre></td></tr></table></figure>
+<p>找到了它的位置（没想到Mac自带的一个？）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/<span class="built_in">local</span>/bin/tesseract</div></pre></td></tr></table></figure>
+<p>然后虽然在替换了地址之后可以正常运行代码了(即<code>tesseract_cmd = &#39;/usr/local/bin/tesseract&#39;</code>)，就会变得很麻烦，因为自带的根本难以进行扩展。</p>
+<p>将下载好的加入环境变量替换掉原装的：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi ~/.bash_profile</div></pre></td></tr></table></figure>
+<p>写入：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#tesseract</span></div><div class="line">export PATH=<span class="string">"/usr/local/Cellar/tesseract/4.0.0/bin:$PATH"</span></div></pre></td></tr></table></figure>
+<p>立即生效：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">source</span> ~/.bash_profile</div></pre></td></tr></table></figure>
+<p>之后再使用命令行<code>which tesseract</code>,就会发现变了位置，更改<code>tesseract_cmd = &#39;/usr/local/Cellar/tesseract/4.0.0/bin/tesseract</code>，之后程序就能成功运行并且可以得到以后的更多的扩展使用了，比如语言包的选择。</p>
+<h1 id="在线提取图片文字小工具"><a href="#在线提取图片文字小工具" class="headerlink" title="在线提取图片文字小工具"></a>在线提取图片文字小工具</h1><p>提取这一块的具体过程就不多说了，简单记录一下结合其他技术可以实现的想法：</p>
+<blockquote>
+<p>可结合<code>Pyqt5</code>的GUI界面化开发，输入图片的目录地址，下方即出现提取的内容。</p>
+<p>在以上的基础上结合爬虫实现翻译。</p>
+</blockquote>
+<p><strong>可参考我以前写的文章：<a href="https://liujunworld.com/2018/05/07/python3爬虫与GUI-基于有道词典的词典小工具/" target="_blank" rel="external">python3爬虫与GUI-基于有道词典的词典小工具</a></strong></p>
+<p>这样一来这个小工具就能出来了。这里就这样吧，因为时间关系加上实现的过程不是很难，所以就不多说了。</p>
+<ul>
+<li>关于提取的精确度可移步参考更强大的工具：<a href="https://github.com/JinpengLI/deep_ocr" target="_blank" rel="external">deep_ocr</a></li>
+</ul>
+<h1 id="结合OpenCV实时翻译"><a href="#结合OpenCV实时翻译" class="headerlink" title="结合OpenCV实时翻译"></a>结合OpenCV实时翻译</h1><p>这里主要是我在参考了：<a href="https://zhuanlan.zhihu.com/p/40025902" target="_blank" rel="external">用OpenCV和Python识别二维码和条形码</a>这篇文章之后结合本身的需求出现的启发。</p>
+<p>这是我经过修改之后的代码（添加并且修改了几行代码）：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> imutils.video <span class="keyword">import</span> VideoStream</div><div class="line"><span class="keyword">from</span> pyzbar <span class="keyword">import</span> pyzbar</div><div class="line"><span class="keyword">import</span> datetime</div><div class="line"><span class="keyword">import</span> imutils</div><div class="line"><span class="keyword">import</span> time</div><div class="line"><span class="keyword">import</span> cv2</div><div class="line"></div><div class="line">cap = cv2.VideoCapture(<span class="number">0</span>)</div><div class="line">vs = VideoStream(src=<span class="number">0</span>).start()</div><div class="line">time.sleep(<span class="number">2.0</span>)</div><div class="line"></div><div class="line"><span class="comment"># open the output CSV file for writing and initialize the set of</span></div><div class="line"><span class="comment"># barcodes found thus far</span></div><div class="line">csv = open(<span class="string">"barcodes.csv"</span>, <span class="string">"w"</span>)</div><div class="line">found = set()</div><div class="line"></div><div class="line"><span class="comment"># loop over the frames from the video stream</span></div><div class="line"><span class="keyword">while</span> <span class="keyword">True</span>:</div><div class="line">    <span class="comment"># grab the frame from the threaded video stream and resize it to</span></div><div class="line">    <span class="comment"># have a maximum width of 400 pixels</span></div><div class="line">    frame = vs.read()</div><div class="line">    frame = imutils.resize(frame, width=<span class="number">400</span>)</div><div class="line"></div><div class="line">    <span class="comment"># find the barcodes in the frame and decode each of the barcodes</span></div><div class="line">    barcodes = pyzbar.decode(frame)</div><div class="line"></div><div class="line">    <span class="comment"># loop over the detected barcodes</span></div><div class="line">    <span class="keyword">for</span> barcode <span class="keyword">in</span> barcodes:</div><div class="line">        <span class="comment"># extract the bounding box location of the barcode and draw</span></div><div class="line">        <span class="comment"># the bounding box surrounding the barcode on the image</span></div><div class="line">        (x, y, w, h) = barcode.rect</div><div class="line">        cv2.rectangle(frame, (x, y), (x + w, y + h), (<span class="number">0</span>, <span class="number">0</span>, <span class="number">255</span>), <span class="number">2</span>)</div><div class="line"></div><div class="line">        <span class="comment"># the barcode data is a bytes object so if we want to draw it</span></div><div class="line">        <span class="comment"># on our output image we need to convert it to a string first</span></div><div class="line">        barcodeData = barcode.data.decode(<span class="string">"utf-8"</span>)</div><div class="line">        barcodeType = barcode.type</div><div class="line"></div><div class="line">        <span class="comment"># draw the barcode data and barcode type on the image</span></div><div class="line">        text = <span class="string">"&#123;&#125; (&#123;&#125;)"</span>.format(barcodeData, barcodeType)</div><div class="line">        cv2.putText(frame, text, (x, y - <span class="number">10</span>),</div><div class="line">            cv2.FONT_HERSHEY_SIMPLEX, <span class="number">0.5</span>, (<span class="number">0</span>, <span class="number">0</span>, <span class="number">255</span>), <span class="number">2</span>)</div><div class="line"></div><div class="line">        <span class="comment"># if the barcode text is currently not in our CSV file, write</span></div><div class="line">        <span class="comment"># the timestamp + barcode qto disk and update the set</span></div><div class="line">        <span class="keyword">if</span> barcodeData <span class="keyword">not</span> <span class="keyword">in</span> found:</div><div class="line">            csv.write(<span class="string">"&#123;&#125;,&#123;&#125;\n"</span>.format(datetime.datetime.now(),</div><div class="line">                barcodeData))</div><div class="line">            csv.flush()</div><div class="line">            found.add(barcodeData)</div><div class="line"></div><div class="line">    <span class="comment"># show the output frame</span></div><div class="line">    cv2.imshow(<span class="string">"Barcode Scanner"</span>, frame)</div><div class="line">    key = cv2.waitKey(<span class="number">1</span>) &amp; <span class="number">0xFF</span></div><div class="line"> </div><div class="line">    <span class="comment"># if the `q` key was pressed, break from the loop</span></div><div class="line">    <span class="keyword">if</span> key == ord(<span class="string">"q"</span>):</div><div class="line">        <span class="keyword">break</span></div><div class="line"></div><div class="line"><span class="comment"># close the output CSV file do a bit of cleanup</span></div><div class="line">print(<span class="string">"[INFO] cleaning up..."</span>)</div><div class="line">cap.release()  <span class="comment"># 释放摄像头</span></div><div class="line">csv.close()</div><div class="line">cv2.destroyAllWindows()</div><div class="line">vs.stop()</div></pre></td></tr></table></figure>
+<blockquote>
+<p>性能得到了一点的优化，少写了点代码。效果没变化。</p>
+</blockquote>
+<p>关于实现实时翻译的效果，这里可结合上面的有道爬虫与OpenCV来完成。基本上进行一些修改就行了，实现的过程不算太难。多参考官方文档以及他人的做法即能实现。</p>
+<p>大概的代码样本：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># coding:utf-8</span></div><div class="line"></div><div class="line"><span class="keyword">from</span> imutils.video <span class="keyword">import</span> VideoStream</div><div class="line"><span class="keyword">import</span> datetime</div><div class="line"><span class="keyword">import</span> imutils</div><div class="line"><span class="keyword">import</span> time</div><div class="line"><span class="keyword">import</span> cv2</div><div class="line"><span class="keyword">import</span> hashlib</div><div class="line"><span class="keyword">import</span> requests</div><div class="line"><span class="keyword">import</span> json</div><div class="line"><span class="keyword">import</span> random</div><div class="line"></div><div class="line">cap = cv2.VideoCapture(<span class="number">0</span>)</div><div class="line"><span class="comment"># initialize the video stream and allow the camera sensor to warm up</span></div><div class="line">print(<span class="string">"starting video stream..."</span>)</div><div class="line"><span class="comment"># vs = VideoStream(src=0).start()</span></div><div class="line">vs = VideoStream(src=<span class="number">0</span>).start()</div><div class="line">time.sleep(<span class="number">2.0</span>)</div><div class="line"></div><div class="line">csv = open(<span class="string">"barcodes.csv"</span>, <span class="string">"w"</span>)</div><div class="line">found = set()</div><div class="line"></div><div class="line"><span class="keyword">while</span> <span class="keyword">True</span>:</div><div class="line">    <span class="comment"># grab the frame from the threaded video stream and resize it to</span></div><div class="line">    <span class="comment"># have a maximum width of 400 pixels</span></div><div class="line">    frame = vs.read()</div><div class="line">    frame = imutils.resize(frame, width=<span class="number">400</span>)</div><div class="line"></div><div class="line">    word = frame</div><div class="line">    <span class="keyword">for</span> words <span class="keyword">in</span> word:</div><div class="line">        r = str(int(time.time() * <span class="number">1000</span> + random.randint(<span class="number">1</span>, <span class="number">10</span>)))  <span class="comment"># 模仿JS代码的仿写</span></div><div class="line">        S = <span class="string">'fanyideskweb'</span></div><div class="line">        n = words</div><div class="line">        D = <span class="string">"ebSeFb%=XZ%T[KZ)c(sy!"</span>  <span class="comment"># 在完整的JS代码中可找到    </span></div><div class="line">        o = hashlib.md5((S + n + str(r) + D).encode(<span class="string">'utf-8'</span>)).hexdigest()</div><div class="line">        </div><div class="line">        data = &#123;</div><div class="line">            <span class="string">'i'</span>: words,</div><div class="line">            <span class="string">'from'</span>: <span class="string">'AUTO'</span>,</div><div class="line">            <span class="string">'to'</span>: <span class="string">'AUTO'</span>,</div><div class="line">            <span class="string">'smartresult'</span>: <span class="string">'dict'</span>,</div><div class="line">            <span class="string">'client'</span>: S,</div><div class="line">            <span class="string">'salt'</span>: r,</div><div class="line">            <span class="string">'sign'</span>: o,</div><div class="line">            <span class="string">'doctype'</span>: <span class="string">'json'</span>,</div><div class="line">            <span class="string">'version'</span>: <span class="string">'2.1'</span>,</div><div class="line">            <span class="string">'keyfrom'</span>: <span class="string">'fanyi.web'</span>,</div><div class="line">            <span class="string">'action'</span>: <span class="string">'FY_BY_REALTIME'</span>,</div><div class="line">            <span class="string">'typoResult'</span>: <span class="string">'false'</span></div><div class="line">        &#125;</div><div class="line">        url = <span class="string">'http://fanyi.youdao.com/translate_o?smartresult=dict&amp;smartresult=rule'</span></div><div class="line">        </div><div class="line">        <span class="comment"># 在代理中需要加入cookies信息，否则会出现代码错误信息的返回</span></div><div class="line">        header = &#123;</div><div class="line">            <span class="string">'Cookie'</span>: <span class="string">'OUTFOX_SEARCH_USER_ID=432464843@10.168.8.76; _ntes_nnid=25aff2b1480f17471ca1585f6f2f4293,1512024136653; OUTFOX_SEARCH_USER_ID_NCOO=132154936.07902834; JSESSIONID=aaa3TFIg-JJJN4xEog6mw; ___rl__test__cookies=1525691300664'</span>,</div><div class="line">            <span class="string">'Referer'</span>: <span class="string">'http://fanyi.youdao.com/'</span>,</div><div class="line">            <span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36'</span></div><div class="line">        &#125;</div><div class="line">        response = requests.post(url=url, headers=header, data=data)</div><div class="line">        response.encoding = <span class="string">'utf-8'</span></div><div class="line">        </div><div class="line">        translateResult = json.loads(response.text)[<span class="string">"translateResult"</span>][<span class="number">0</span>][<span class="number">0</span>][<span class="string">'tgt'</span>]</div><div class="line">        <span class="comment">#(x, y, w, h) = words.rect</span></div><div class="line">        cv2.rectangle(frame, (<span class="number">10</span>, <span class="number">10</span>), (<span class="number">20</span>, <span class="number">20</span>), (<span class="number">0</span>, <span class="number">0</span>, <span class="number">255</span>), <span class="number">2</span>)</div><div class="line">        </div><div class="line">               cv2.putText(frame, translateResult, (<span class="number">10</span>, <span class="number">10</span> - <span class="number">10</span>),</div><div class="line">        cv2.FONT_HERSHEY_SIMPLEX, <span class="number">0.5</span>, (<span class="number">0</span>, <span class="number">0</span>, <span class="number">255</span>), <span class="number">2</span>)</div><div class="line">        </div><div class="line">        <span class="comment"># if the  text is currently not in our CSV file, write</span></div><div class="line">        <span class="comment"># the timestamp + text qto disk and update the set</span></div><div class="line">        <span class="keyword">if</span> translateResult <span class="keyword">not</span> <span class="keyword">in</span> found:</div><div class="line">            csv.write(<span class="string">"&#123;&#125;,&#123;&#125;\n"</span>.format(datetime.datetime.now(),</div><div class="line">                translateResult))</div><div class="line">            csv.flush()</div><div class="line">            found.add(translateResult)</div><div class="line"></div><div class="line">    <span class="comment"># show the output frame</span></div><div class="line">    cv2.imshow(<span class="string">"Translate Discern"</span>, frame)</div><div class="line">    key = cv2.waitKey(<span class="number">1</span>) &amp; <span class="number">0xFF</span></div><div class="line"> </div><div class="line">    <span class="comment"># if the `q` key was pressed, break from the loop</span></div><div class="line">    <span class="keyword">if</span> key == ord(<span class="string">"q"</span>):</div><div class="line">        <span class="keyword">break</span></div><div class="line"></div><div class="line"><span class="comment"># close the output CSV file do a bit of cleanup</span></div><div class="line">print(<span class="string">"cleaning up..."</span>)</div><div class="line">cap.release()  <span class="comment"># 释放摄像头</span></div><div class="line">csv.close()</div><div class="line">cv2.destroyAllWindows()</div><div class="line">vs.stop()</div></pre></td></tr></table></figure>
+<p>可参考：</p>
+<ul>
+<li><p><a href="https://www.jiqizhixin.com/articles/2017-09-21-3" target="_blank" rel="external">深度学习 + OpenCV，Python实现实时视频目标检测</a></p>
+</li>
+<li><p><a href="https://yongyuan.name/pcvwithpython/chapter10.html#sec-10-2-1" target="_blank" rel="external">OpenCV Python接口</a></p>
+</li>
+<li><p><a href="https://www.pyimagesearch.com/2015/04/06/zero-parameter-automatic-canny-edge-detection-with-python-and-opencv/" target="_blank" rel="external">Zero-parameter, automatic Canny edge detection with Python and OpenCV</a></p>
+</li>
+<li><p><a href="https://juejin.im/entry/5b5e694ee51d4535c75631e7" target="_blank" rel="external">Opencv获取身份证号码区域</a></p>
+</li>
+</ul>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>记录一下在下载tesseract之后的提示，有一天可能会用到：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">icu4c is keg-only, which means it was not symlinked into /usr/local,</div><div class="line">because macOS provides libicucore.dylib (but nothing else).</div><div class="line"></div><div class="line">If you need to have icu4c first in your PATH run:</div><div class="line">  echo &apos;export PATH=&quot;/usr/local/opt/icu4c/bin:$PATH&quot;&apos; &gt;&gt; ~/.bash_profile</div><div class="line">  echo &apos;export PATH=&quot;/usr/local/opt/icu4c/sbin:$PATH&quot;&apos; &gt;&gt; ~/.bash_profile</div><div class="line"></div><div class="line">For compilers to find icu4c you may need to set:</div><div class="line">  export LDFLAGS=&quot;-L/usr/local/opt/icu4c/lib&quot;</div><div class="line">  export CPPFLAGS=&quot;-I/usr/local/opt/icu4c/include&quot;</div><div class="line"></div><div class="line">For pkg-config to find icu4c you may need to set:</div><div class="line">  export PKG_CONFIG_PATH=&quot;/usr/local/opt/icu4c/lib/pkgconfig&quot;</div></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+      
+    
+      <div>
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">---------------本文终---------------</div>
+    
+</div>
+
+      </div>
+    
+    
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
+  <p><span>最后更新:</span>2018年11月08日 - 13:11</p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
+
+      
+    </div>
+     
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/07/Kaggle比赛：数字识别的多种算法实现/" rel="next" title="Kaggle比赛：数字识别的多种算法实现">
+                <i class="fa fa-chevron-left"></i> Kaggle比赛：数字识别的多种算法实现
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div id="lv-container" data-id="city" data-uid="MTAyMC8zODkxOS8xNTQ0Nw==">
+<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+</script>
+<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          
+            <img class="site-author-image" itemprop="image"
+              src="http://owudg3xs2.bkt.clouddn.com/images-111.jpeg"
+              alt="刘俊" />
+          
+            <p class="site-author-name" itemprop="name">刘俊</p>
+            <p class="site-description motion-element" itemprop="description">心灵小窝，记录成长与点滴。</p>
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">154</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">68</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">71</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/hahaahaha111" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.jianshu.com/u/f8941dd1c677" target="_blank" title="简书">
+                  
+                    <i class="fa fa-fw fa-vk"></i>简书</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com" target="_blank" title="FB Page">
+                  
+                    <i class="fa fa-fw fa-facebook"></i>FB Page</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.youtube.com/channel/UCoVmcNF2O1qGXo6OSHfXEHQ?view_as=subscriber" target="_blank" title="YouTube">
+                  
+                    <i class="fa fa-fw fa-globe"></i>YouTube</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/lire-5/activities" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-skype"></i>知乎</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zgszrkdak.com" title="中国寻亲" target="_blank">中国寻亲</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.globalgiving.org" title="GlobalGiving" target="_blank">GlobalGiving</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基于OCR的图片内容提取"><span class="nav-number">1.</span> <span class="nav-text">基于OCR的图片内容提取</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题一："><span class="nav-number">1.1.</span> <span class="nav-text">* 问题一：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题二："><span class="nav-number">1.2.</span> <span class="nav-text">* 问题二：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案："><span class="nav-number">1.3.</span> <span class="nav-text">解决方案：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在线提取图片文字小工具"><span class="nav-number">2.</span> <span class="nav-text">在线提取图片文字小工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结合OpenCV实时翻译"><span class="nav-number">3.</span> <span class="nav-text">结合OpenCV实时翻译</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最后"><span class="nav-number">4.</span> <span class="nav-text">最后</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘俊</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">
+      212.7k
+    </span>
+  
+</div>
+
+<!-- 
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
+
+-->
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://—-...disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://liujunjie11.github.io/2018/11/08/Pytho结合OCR以及Opencv提取并且实时翻译图片内容/';
+          this.page.identifier = '2018/11/08/Pytho结合OCR以及Opencv提取并且实时翻译图片内容/';
+          this.page.title = 'Pytho结合OCR以及Opencv提取并且实时翻译图片内容';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://—-...disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+  <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
+
+</body>
+</html>
