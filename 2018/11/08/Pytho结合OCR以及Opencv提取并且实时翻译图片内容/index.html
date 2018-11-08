@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="LXiHa`Notes">
 <meta property="og:description" content="本文讲述基于python的一些模块进行图片内容的提取、图片内容的翻译。本文主要进行记录一些在实践中的构想以及遇到的问题，并且记录上一些实现的代码，因为技术含量实在是不怎么高的，不过若是自己玩玩，参加那种水比赛也许能获得个不错的名次，或者是应付个学生报告什么的… 由于时间关系，本文多数只是起到一个构想记录的效用。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-08T05:27:32.692Z">
+<meta property="og:updated_time" content="2018-11-08T05:35:46.959Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Pytho结合OCR以及Opencv提取并且实时翻译图片内容">
 <meta name="twitter:description" content="本文讲述基于python的一些模块进行图片内容的提取、图片内容的翻译。本文主要进行记录一些在实践中的构想以及遇到的问题，并且记录上一些实现的代码，因为技术含量实在是不怎么高的，不过若是自己玩玩，参加那种水比赛也许能获得个不错的名次，或者是应付个学生报告什么的… 由于时间关系，本文多数只是起到一个构想记录的效用。">
@@ -448,12 +448,12 @@
 <p>运行代码：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> pytesseract</div><div class="line"><span class="keyword">import</span> cv2</div><div class="line"></div><div class="line">image = cv2.imread(<span class="string">'/Users/junjieliu/Desktop/1.png'</span>)</div><div class="line">text = pytesseract.image_to_string(image)</div><div class="line">print(text)</div></pre></td></tr></table></figure>
 <p>在此记录一下在使用过程中的出现的问题：</p>
-<h2 id="问题一："><a href="#问题一：" class="headerlink" title="* 问题一："></a>* 问题一：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Error: [Errno 2] No such file or directory using pytesser</div></pre></td></tr></table></figure>
+<h2 id="问题一："><a href="#问题一：" class="headerlink" title="问题一："></a>问题一：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Error: [Errno 2] No such file or directory using pytesser</div></pre></td></tr></table></figure>
 <blockquote>
 <p>之后我参考了：<a href="https://stackoverflow.com/questions/35609773/oserror-errno-2-no-such-file-or-directory-using-pytesser" target="_blank" rel="external">https://stackoverflow.com/questions/35609773/oserror-errno-2-no-such-file-or-directory-using-pytesser</a></p>
 </blockquote>
 <p>我使用了其中的前面的几个答案的方案，结果出现了下面的错误…</p>
-<h2 id="问题二："><a href="#问题二：" class="headerlink" title="* 问题二："></a>* 问题二：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">PermissionError: [Errno 13] Permission denied</div></pre></td></tr></table></figure>
+<h2 id="问题二："><a href="#问题二：" class="headerlink" title="问题二："></a>问题二：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">PermissionError: [Errno 13] Permission denied</div></pre></td></tr></table></figure>
 <blockquote>
 <p>之后我参考了：<a href="https://github.com/madmaze/pytesseract/issues/62" target="_blank" rel="external">https://github.com/madmaze/pytesseract/issues/62</a></p>
 </blockquote>
@@ -462,14 +462,14 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">which</span> tesseract</div></pre></td></tr></table></figure>
 <p>找到了它的位置（没想到Mac自带的一个？）：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/<span class="built_in">local</span>/bin/tesseract</div></pre></td></tr></table></figure>
-<p>然后虽然在替换了地址之后可以正常运行代码了(即<code>tesseract_cmd = &#39;/usr/local/bin/tesseract&#39;</code>)，就会变得很麻烦，因为自带的根本难以进行扩展。</p>
+<p>然后虽然在替换了地址之后可以正常运行代码了(即<code>tesseract_cmd = “/usr/local/bin/tesseract”</code>)，就会变得很麻烦，因为自带的根本难以进行扩展。</p>
 <p>将下载好的加入环境变量替换掉原装的：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi ~/.bash_profile</div></pre></td></tr></table></figure>
 <p>写入：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#tesseract</span></div><div class="line">export PATH=<span class="string">"/usr/local/Cellar/tesseract/4.0.0/bin:$PATH"</span></div></pre></td></tr></table></figure>
 <p>立即生效：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">source</span> ~/.bash_profile</div></pre></td></tr></table></figure>
-<p>之后再使用命令行<code>which tesseract</code>,就会发现变了位置，更改<code>tesseract_cmd = &#39;/usr/local/Cellar/tesseract/4.0.0/bin/tesseract</code>，之后程序就能成功运行并且可以得到以后的更多的扩展使用了，比如语言包的选择。</p>
+<p>之后再使用命令行<code>which tesseract</code>,就会发现变了位置，更改<code>tesseract_cmd = “/usr/local/Cellar/tesseract/4.0.0/bin/tesseract”</code>，之后程序就能成功运行并且可以得到以后的更多的扩展使用了，比如语言包的选择。</p>
 <h1 id="在线提取图片文字小工具"><a href="#在线提取图片文字小工具" class="headerlink" title="在线提取图片文字小工具"></a>在线提取图片文字小工具</h1><p>提取这一块的具体过程就不多说了，简单记录一下结合其他技术可以实现的想法：</p>
 <blockquote>
 <p>可结合<code>Pyqt5</code>的GUI界面化开发，输入图片的目录地址，下方即出现提取的内容。</p>
@@ -821,7 +821,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基于OCR的图片内容提取"><span class="nav-number">1.</span> <span class="nav-text">基于OCR的图片内容提取</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题一："><span class="nav-number">1.1.</span> <span class="nav-text">* 问题一：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题二："><span class="nav-number">1.2.</span> <span class="nav-text">* 问题二：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案："><span class="nav-number">1.3.</span> <span class="nav-text">解决方案：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在线提取图片文字小工具"><span class="nav-number">2.</span> <span class="nav-text">在线提取图片文字小工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结合OpenCV实时翻译"><span class="nav-number">3.</span> <span class="nav-text">结合OpenCV实时翻译</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最后"><span class="nav-number">4.</span> <span class="nav-text">最后</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基于OCR的图片内容提取"><span class="nav-number">1.</span> <span class="nav-text">基于OCR的图片内容提取</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题一："><span class="nav-number">1.1.</span> <span class="nav-text">问题一：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题二："><span class="nav-number">1.2.</span> <span class="nav-text">问题二：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案："><span class="nav-number">1.3.</span> <span class="nav-text">解决方案：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在线提取图片文字小工具"><span class="nav-number">2.</span> <span class="nav-text">在线提取图片文字小工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结合OpenCV实时翻译"><span class="nav-number">3.</span> <span class="nav-text">结合OpenCV实时翻译</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最后"><span class="nav-number">4.</span> <span class="nav-text">最后</span></a></li></ol></div>
             
 
           </div>
