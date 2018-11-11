@@ -66,9 +66,9 @@
     <link href="https://liujunjie11.github.io/2018/11/07/Kaggle%E6%AF%94%E8%B5%9B%EF%BC%9A%E6%95%B0%E5%AD%97%E8%AF%86%E5%88%AB%E7%9A%84%E5%A4%9A%E7%A7%8D%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/"/>
     <id>https://liujunjie11.github.io/2018/11/07/Kaggle比赛：数字识别的多种算法实现/</id>
     <published>2018-11-07T07:09:27.000Z</published>
-    <updated>2018-11-09T10:32:54.960Z</updated>
+    <updated>2018-11-11T10:00:25.922Z</updated>
     
-    <content type="html"><![CDATA[<p>关于<code>Kaggle</code>大赛就不多说了，我打算进一步了解一下入门级的比赛之后再另作参加项目/比赛的打算，在此之前需要更多的实践才行。</p><p>以下是我学习的地址(在一个<code>GitHub</code>大神分享的相关的资源)：</p><blockquote><p><a href="https://github.com/apachecn/kaggle/blob/dev/competitions/getting-started/digit-recognizer/knn算法描述.md" target="_blank" rel="external">https://github.com/apachecn/kaggle/blob/dev/competitions/getting-started/digit-recognizer/knn算法描述.md</a></p></blockquote><p>里面有多种可以实现的算法的代码以及思想，我在此进行进一步的整理，进行一个简单的代码记录，以及会进行一点修改以符合我自身的情况。</p><ul><li>需要的数据下载地址：<a href="https://www.kaggle.com/c/digit-recognizer/data" target="_blank" rel="external">https://www.kaggle.com/c/digit-recognizer/data</a></li></ul><a id="more"></a><h1 id="KNN实现"><a href="#KNN实现" class="headerlink" title="KNN实现"></a>KNN实现</h1>]]></content>
+    <content type="html"><![CDATA[<p>关于<code>Kaggle</code>大赛就不多说了，我打算进一步了解一下入门级的比赛之后再另作参加项目/比赛的打算，在此之前需要更多的实践才行。</p><p>以下是我学习的地址(在一个<code>GitHub</code>大神分享的相关的资源)：</p><blockquote><p><a href="https://github.com/apachecn/kaggle/blob/dev/competitions/getting-started/digit-recognizer/knn算法描述.md" target="_blank" rel="external">https://github.com/apachecn/kaggle/blob/dev/competitions/getting-started/digit-recognizer/knn算法描述.md</a></p></blockquote><p>里面有多种可以实现的算法的代码以及思想，我在此进行进一步的整理，进行一个简单的代码记录，以及会进行一点修改以符合我自身的情况。</p><ul><li>需要的数据下载地址：<a href="https://www.kaggle.com/c/digit-recognizer/data" target="_blank" rel="external">https://www.kaggle.com/c/digit-recognizer/data</a></li></ul><a id="more"></a><h1 id="KNN实现"><a href="#KNN实现" class="headerlink" title="KNN实现"></a>KNN实现</h1><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/C571656B0FC78B1A6890110C196EF949.jpg" alt=""></p>]]></content>
     
     <summary type="html">
     
