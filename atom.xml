@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-11-09T10:30:00.439Z</updated>
+  <updated>2018-11-11T11:05:36.218Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo博客图片外链从七牛云移至腾讯云</title>
+    <link href="https://liujunjie11.github.io/2018/11/11/Hexo%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E5%A4%96%E9%93%BE%E4%BB%8E%E4%B8%83%E7%89%9B%E4%BA%91%E7%A7%BB%E8%87%B3%E8%85%BE%E8%AE%AF%E4%BA%91/"/>
+    <id>https://liujunjie11.github.io/2018/11/11/Hexo博客图片外链从七牛云移至腾讯云/</id>
+    <published>2018-11-11T10:30:01.000Z</published>
+    <updated>2018-11-11T11:05:36.218Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近发现博客中的一些文章图片无法正常显示了，查看了一些文章之后，发现原来是测试域名失效了…我的图片存放了这么多…全都不能用了，妈蛋啊！</p><p>我研究了一下关于它的这个恢复的方法，需要实名不说了，还要我的网站备案，不可能的绝对不可能的，我要走了，再见了，七牛云！！</p><p>我要搬去腾讯云了。以下是我的记录。</p><a id="more"></a><h1 id="将七牛云的图片下载至本地"><a href="#将七牛云的图片下载至本地" class="headerlink" title="将七牛云的图片下载至本地"></a>将七牛云的图片下载至本地</h1><h2 id="过程操作"><a href="#过程操作" class="headerlink" title="过程操作"></a>过程操作</h2><p>具体需要用到<a href="https://developer.qiniu.com/kodo/tools/1302/qshell" target="_blank" rel="external">七牛云命令行工具(qshell)</a>，将曾经上传上去的图片批量下载到本地然后使用腾讯云再次慢慢整理即可…</p><ul><li>可参考官方介绍：<a href="http://songfeifeids.qiniuts.com/spjc/avthumb/batchdelete.mov.mp4" target="_blank" rel="external">使用 qshell 进行批量删除</a></li></ul><blockquote><p>由于我在七牛云上的图片有一部分可以显示，一部分无法显示，但是这个量真的太大了，我不打算一个一个替换了，之后的图片我就直接用腾讯云来充当图床好了…唉…心累。</p></blockquote><h1 id="关于在腾讯云的图床操作"><a href="#关于在腾讯云的图床操作" class="headerlink" title="关于在腾讯云的图床操作"></a>关于在腾讯云的图床操作</h1><p>可参考：</p><ul><li><a href="https://blog.csdn.net/a201577F0546/article/details/80146350" target="_blank" rel="external">使用腾讯云对象存储作为图床</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近发现博客中的一些文章图片无法正常显示了，查看了一些文章之后，发现原来是测试域名失效了…我的图片存放了这么多…全都不能用了，妈蛋啊！&lt;/p&gt;
+&lt;p&gt;我研究了一下关于它的这个恢复的方法，需要实名不说了，还要我的网站备案，不可能的绝对不可能的，我要走了，再见了，七牛云！！&lt;/p&gt;
+&lt;p&gt;我要搬去腾讯云了。以下是我的记录。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Hexo博客" scheme="https://liujunjie11.github.io/categories/Hexo%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="Hexo博客" scheme="https://liujunjie11.github.io/tags/Hexo%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>（Mac）Julia的下载及结合notebook使用</title>
@@ -66,9 +90,9 @@
     <link href="https://liujunjie11.github.io/2018/11/07/Kaggle%E6%AF%94%E8%B5%9B%EF%BC%9A%E6%95%B0%E5%AD%97%E8%AF%86%E5%88%AB%E7%9A%84%E5%A4%9A%E7%A7%8D%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/"/>
     <id>https://liujunjie11.github.io/2018/11/07/Kaggle比赛：数字识别的多种算法实现/</id>
     <published>2018-11-07T07:09:27.000Z</published>
-    <updated>2018-11-11T10:00:25.922Z</updated>
+    <updated>2018-11-11T10:11:29.179Z</updated>
     
-    <content type="html"><![CDATA[<p>关于<code>Kaggle</code>大赛就不多说了，我打算进一步了解一下入门级的比赛之后再另作参加项目/比赛的打算，在此之前需要更多的实践才行。</p><p>以下是我学习的地址(在一个<code>GitHub</code>大神分享的相关的资源)：</p><blockquote><p><a href="https://github.com/apachecn/kaggle/blob/dev/competitions/getting-started/digit-recognizer/knn算法描述.md" target="_blank" rel="external">https://github.com/apachecn/kaggle/blob/dev/competitions/getting-started/digit-recognizer/knn算法描述.md</a></p></blockquote><p>里面有多种可以实现的算法的代码以及思想，我在此进行进一步的整理，进行一个简单的代码记录，以及会进行一点修改以符合我自身的情况。</p><ul><li>需要的数据下载地址：<a href="https://www.kaggle.com/c/digit-recognizer/data" target="_blank" rel="external">https://www.kaggle.com/c/digit-recognizer/data</a></li></ul><a id="more"></a><h1 id="KNN实现"><a href="#KNN实现" class="headerlink" title="KNN实现"></a>KNN实现</h1><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/C571656B0FC78B1A6890110C196EF949.jpg" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<p>关于<code>Kaggle</code>大赛就不多说了，我打算进一步了解一下入门级的比赛之后再另作参加项目/比赛的打算，在此之前需要更多的实践才行。</p><p>以下是我学习的地址(在一个<code>GitHub</code>大神分享的相关的资源)：</p><blockquote><p><a href="https://github.com/apachecn/kaggle/blob/dev/competitions/getting-started/digit-recognizer/knn算法描述.md" target="_blank" rel="external">https://github.com/apachecn/kaggle/blob/dev/competitions/getting-started/digit-recognizer/knn算法描述.md</a></p></blockquote><p>里面有多种可以实现的算法的代码以及思想，我在此进行进一步的整理，进行一个简单的代码记录，以及会进行一点修改以符合我自身的情况。</p><ul><li>需要的数据下载地址：<a href="https://www.kaggle.com/c/digit-recognizer/data" target="_blank" rel="external">https://www.kaggle.com/c/digit-recognizer/data</a></li></ul><a id="more"></a><h1 id="KNN实现"><a href="#KNN实现" class="headerlink" title="KNN实现"></a>KNN实现</h1>]]></content>
     
     <summary type="html">
     
@@ -510,29 +534,6 @@ failed to locate @import file _variables/base.styl
     
     
       <category term="感想日记" scheme="https://liujunjie11.github.io/tags/%E6%84%9F%E6%83%B3%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>科学上网，自建VPS-SS应用</title>
-    <link href="https://liujunjie11.github.io/2018/09/28/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%EF%BC%8C%E8%87%AA%E5%BB%BAVPS-SS%E5%BA%94%E7%94%A8/"/>
-    <id>https://liujunjie11.github.io/2018/09/28/科学上网，自建VPS-SS应用/</id>
-    <published>2018-09-28T14:15:07.000Z</published>
-    <updated>2018-10-19T22:44:22.381Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近因为需求想自己搭建一个VPS加SS应用。用的是<a href="https://www.vultr.com/?ref=7548655" target="_blank" rel="external">Vultr</a>这个平台。</p><p>唉…这东西的教程已经是满大街都是了，我就不重复造轮子了，现在的轮子还没有失效。</p><a id="more"></a><p>具体的服务器租建过程可参考：</p><ul><li><p><a href="https://github.com/Alvin9999/new-pac/wiki/自建ss服务器教程" target="_blank" rel="external">自建ss服务器教程</a></p></li><li><p><a href="https://medium.com/@zoomyale/科学上网的终极姿势-在-vultr-vps-上搭建-shadowsocks-fd57c807d97e" target="_blank" rel="external">科学上网的终极姿势-在-vultr-vps-上搭建</a></p></li><li><p><a href="http://mpc2008cn.github.io/2015/10/22/vps/" target="_blank" rel="external">Vultr的vps搭建shadowsocks翻墙</a></p></li><li><p><a href="https://segmentfault.com/a/1190000015558387" target="_blank" rel="external">超详细 Vultr（VPS）搭建 SS / 新手图文指导教程</a></p></li><li><p><a href="https://blog.whsir.com/post-1045.html" target="_blank" rel="external">如何查看修改ss服务器的端口密码</a></p></li><li><p><a href="https://blog.whsir.com/post-274.html" target="_blank" rel="external">shadowsocks多端口密码手动配置方法</a></p></li><li><p><a href="https://blog.csdn.net/Feng512275/article/details/79701885" target="_blank" rel="external">SS多用户配置</a></p></li><li><p><a href="https://blog.csdn.net/ljbmxsm/article/details/50650008" target="_blank" rel="external">Linux查看端口占用情况和开启端口命令</a></p></li><li><p><a href="http://975156298.iteye.com/blog/2323688" target="_blank" rel="external">Linux下iptables 禁止端口和开放端口</a></p></li></ul><p>关于在<em>TCP Fast Open</em>过程中命令行增加的一些补充(我自己加上的)：</p><blockquote><p>每一次的…ipv4…之外我都加上了…ipv6…的一样的命令行。</p><p>如：<code>echo 3 &gt; /proc/sys/net/ipv4/tcp_fastopen</code><br>另外加上了：<code>echo 3 &gt; /proc/sys/net/ipv6/tcp_fastopen</code></p><p>如：<code>net.ipv4.tcp_fastopen = 3</code><br>另外加上了：<code>net.ipv6.tcp_fastopen = 3</code></p></blockquote><p>…</p><p><strong>其中注意的细节是：</strong></p><ol><li><p><strong>开通服务器时，当出现了ip，不要立马去ping或者用xshell去连接，再等5分钟之后，有个缓冲时间。</strong></p></li><li><p><strong>注意加密算法的对齐填写。</strong></p></li><li><p>后续补充…</p></li></ol><p>简单说说体验吧，用的是在日本的服务器，经过上面的参考之后，换了好几台服务器才有了现在的暂时稳定…另外要补充一下：如果在使用命令行<code>ssh root@&lt;ip&gt;</code>不通时(即没有提示要求输入密码登陆的出现的其他情况，比如超时)，直接重新另外开一台就是了，不用再花多余的时间去测试了。</p><p>我一共换了好几台才有3台是可以用的…心累…可能是我太急了？？有可能。</p><p><strong>补充：目前上YouTube测试最高连接可以达到25M/s…超级快的哈哈哈哈～～估计还可以上升～～～美滋滋～～</strong></p><h1 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h1><p>最近添加了多个用户的设置，即添加了多个独立端口以及独立密码，均需要将端口添加至服务器端口列表才行，并且还要注意添加<em>tcp/udp协议</em>，这很重要。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近因为需求想自己搭建一个VPS加SS应用。用的是&lt;a href=&quot;https://www.vultr.com/?ref=7548655&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Vultr&lt;/a&gt;这个平台。&lt;/p&gt;
-&lt;p&gt;唉…这东西的教程已经是满大街都是了，我就不重复造轮子了，现在的轮子还没有失效。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="科学上网" scheme="https://liujunjie11.github.io/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
-    
-    
-      <category term="科学上网" scheme="https://liujunjie11.github.io/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
     
   </entry>
   

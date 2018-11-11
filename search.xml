@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Hexo博客图片外链从七牛云移至腾讯云]]></title>
+    <url>%2F2018%2F11%2F11%2FHexo%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E5%A4%96%E9%93%BE%E4%BB%8E%E4%B8%83%E7%89%9B%E4%BA%91%E7%A7%BB%E8%87%B3%E8%85%BE%E8%AE%AF%E4%BA%91%2F</url>
+    <content type="text"><![CDATA[最近发现博客中的一些文章图片无法正常显示了，查看了一些文章之后，发现原来是测试域名失效了…我的图片存放了这么多…全都不能用了，妈蛋啊！ 我研究了一下关于它的这个恢复的方法，需要实名不说了，还要我的网站备案，不可能的绝对不可能的，我要走了，再见了，七牛云！！ 我要搬去腾讯云了。以下是我的记录。 将七牛云的图片下载至本地过程操作具体需要用到七牛云命令行工具(qshell)，将曾经上传上去的图片批量下载到本地然后使用腾讯云再次慢慢整理即可… 可参考官方介绍：使用 qshell 进行批量删除 由于我在七牛云上的图片有一部分可以显示，一部分无法显示，但是这个量真的太大了，我不打算一个一个替换了，之后的图片我就直接用腾讯云来充当图床好了…唉…心累。 关于在腾讯云的图床操作可参考： 使用腾讯云对象存储作为图床]]></content>
+      <categories>
+        <category>Hexo博客</category>
+      </categories>
+      <tags>
+        <tag>Hexo博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[（Mac）Julia的下载及结合notebook使用]]></title>
     <url>%2F2018%2F11%2F09%2F%EF%BC%88Mac%EF%BC%89Julia%E7%9A%84%E4%B8%8B%E8%BD%BD%E5%8F%8A%E7%BB%93%E5%90%88notebook%E4%BD%BF%E7%94%A8%2F</url>
     <content type="text"><![CDATA[关于Julia这个语言，这是一个鲜为人知的语言，听说在处理数值分析方面还不错，最近也总是无意间看到，所以想试试看看，就在此顺便记录一下安装的过程以及如何在notebook中运行的过程。 安装Julia 在这里下载：https://julialang.org/downloads/ 或者是在Mac上可用homebrew命令行: 1brew cask install julia 可参考：https://julialang.org/downloads/platform.html#macos 我使用直接下载安装的方式。 配置环境变量1234567vi ~/.bash_profile #打开配置文件#输入对应目录#Juliaexport PATH="/Applications/Julia-1.0.app/Contents/Resources/julia/bin:$&#123;PATH&#125;"source ~/.bash_profile #快速生效 这样之后在终端直接输入Julia即可使用Julia了。 notebook中运行下载相关的内核就OK了。 打开Julia终端进程： 12using PkgPkg.add("IJulia") 重启notebook，发现可以了。 可参考： https://github.com/JuliaLang/IJulia.jl https://www.youtube.com/watch?v=uRIQXJXRtqg 最后附上几个学习链接： 一个简单的Julia教程（一） 这篇文章有介绍用其他运行Julia的方案。 Julia中文discourse Julia 解决了 C++/Python/Matlab 的哪些痛点？ 怎么看待新出的 Julia 语言？它的前景怎么样？]]></content>
