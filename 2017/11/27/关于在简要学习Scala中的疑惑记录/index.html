@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="LXiHa`Notes">
 <meta property="og:description" content="在简要学习Scala的一些基本的使用，有一些学习上的感到疑惑的问题记录在此。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-11T12:59:34.751Z">
+<meta property="og:updated_time" content="2018-11-12T10:51:51.560Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于在简要学习Scala中的疑惑记录">
 <meta name="twitter:description" content="在简要学习Scala的一些基本的使用，有一些学习上的感到疑惑的问题记录在此。">
@@ -404,7 +404,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  496
+                  498
                 </span>
               
 
@@ -450,8 +450,7 @@
 </li>
 </ul>
 <p>其实这就是一种变量的简写。打个比方：</p>
-<p><code>val a = Array(1, 2, 3, 4)</code></p>
-<p><code>val b = a.map(_ * 2)</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">val a = Array(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>)</div><div class="line">val b = a.map(_ * <span class="number">2</span>)</div></pre></td></tr></table></figure>
 <p><em>输出变量b：</em><code>（2，4，6，8）</code></p>
 <blockquote>
 <p>则易可知其中的语句<strong>val b = a.map(_ * 2)</strong>就相当于<strong>val b = a.map(a * 2)</strong></p>
@@ -469,45 +468,15 @@
 <p>如果不使用lazy关键字对变量修饰，那么变量property是立即实例化的</p>
 </blockquote>
 <p><em>可以再看看下面的利于理解：</em></p>
-<pre><code> object LazyOps {
-
-def init(): String = {
-    println(&quot;call init()&quot;)
-    return &quot;&quot;
-}
-
-def main(args: Array[String]) {
-    val property = init();//没有使用lazy修饰
-    println(&quot;after init()&quot;)
-    println(property)
-}
-  }
-</code></pre><p>上面的property没有使用lazy关键字进行修饰，所以property是立即实例化的，如果观察程序的输出:</p>
-<pre><code>call i nit()
-
-after init()
-</code></pre><p>可以发现，property声明时，立即进行实例化,调用了init()`实例化方法</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"> object LazyOps &#123;</div><div class="line"></div><div class="line"><span class="function">def <span class="title">init</span><span class="params">()</span>: String </span>= &#123;</div><div class="line">    println(<span class="string">"call init()"</span>)</div><div class="line">    <span class="keyword">return</span> <span class="string">""</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function">def <span class="title">main</span><span class="params">(args: Array[String])</span> </span>&#123;</div><div class="line">    val property = init();<span class="comment">//没有使用lazy修饰</span></div><div class="line">    println(<span class="string">"after init()"</span>)</div><div class="line">    println(property)</div><div class="line">&#125;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<p>上面的property没有使用lazy关键字进行修饰，所以property是立即实例化的，如果观察程序的输出:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function">call i <span class="title">nit</span><span class="params">()</span></span></div><div class="line"><span class="function"></span></div><div class="line"><span class="function">after <span class="title">init</span><span class="params">()</span></span></div></pre></td></tr></table></figure>
+<p>可以发现，property声明时，立即进行实例化,调用了init()`实例化方法</p>
 <p>而如果使用lazy关键字进行修饰：</p>
-<pre><code> object LazyOps {
-
-def init(): String = {
-    println(&quot;call init()&quot;)
-    return &quot;&quot;
-}
-
-def main(args: Array[String]) {
-    lazy val property = init();//使用lazy修饰
-    println(&quot;after init()&quot;)
-    println(property)
-    println(property)
-}
-
- }
-</code></pre><p>观察输出:</p>
-<pre><code>after init()
-
-call init()
-</code></pre><p>在声明property时，并没有立即调用实例化方法intit(),而是在使用property时，才会调用实例化方法,并且无论缩少次调用，实例化方法只会执行一次。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"> object LazyOps &#123;</div><div class="line"></div><div class="line"><span class="function">def <span class="title">init</span><span class="params">()</span>: String </span>= &#123;</div><div class="line">    println(<span class="string">"call init()"</span>)</div><div class="line">    <span class="keyword">return</span> <span class="string">""</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function">def <span class="title">main</span><span class="params">(args: Array[String])</span> </span>&#123;</div><div class="line">    lazy val property = init();<span class="comment">//使用lazy修饰</span></div><div class="line">    println(<span class="string">"after init()"</span>)</div><div class="line">    println(property)</div><div class="line">    println(property)</div><div class="line">&#125;</div><div class="line"></div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<p>观察输出:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function">after <span class="title">init</span><span class="params">()</span></span></div><div class="line"><span class="function"></span></div><div class="line"><span class="function">call <span class="title">init</span><span class="params">()</span></span></div></pre></td></tr></table></figure>
+<p>在声明property时，并没有立即调用实例化方法intit(),而是在使用property时，才会调用实例化方法,并且无论缩少次调用，实例化方法只会执行一次。</p>
 <ul>
 <li>在<em>Scala</em>中的<em>break</em>可用<em>return</em>替代。</li>
 </ul>
@@ -543,7 +512,7 @@ call init()
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月11日 - 20:10</p>
+  <p><span>最后更新:</span>2018年11月12日 - 18:11</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -851,7 +820,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      213.3k
+      213.5k
     </span>
   
 </div>

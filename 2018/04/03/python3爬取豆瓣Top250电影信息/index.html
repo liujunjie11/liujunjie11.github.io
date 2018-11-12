@@ -93,13 +93,13 @@
 <meta property="og:site_name" content="LXiHa`Notes">
 <meta property="og:description" content="以下是通过正则表达式爬取的猫眼电影以及豆瓣电影的相关的电影信息的代码过程。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-04%20%E4%B8%8A%E5%8D%8810.17.59.png">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-04%20%E4%B8%8A%E5%8D%8810.18.27.png">
-<meta property="og:updated_time" content="2018-10-19T23:39:19.041Z">
+<meta property="og:image" content="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-04%20%E4%B8%8A%E5%8D%8810.17.59.png">
+<meta property="og:image" content="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-04%20%E4%B8%8A%E5%8D%8810.18.27.png">
+<meta property="og:updated_time" content="2018-11-12T10:44:31.718Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python3爬取豆瓣Top250电影信息">
 <meta name="twitter:description" content="以下是通过正则表达式爬取的猫眼电影以及豆瓣电影的相关的电影信息的代码过程。">
-<meta name="twitter:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-04%20%E4%B8%8A%E5%8D%8810.17.59.png">
+<meta name="twitter:image" content="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-04%20%E4%B8%8A%E5%8D%8810.17.59.png">
 
 
 
@@ -448,13 +448,13 @@
 <hr>
 <a id="more"></a>
 <h2 id="爬取猫眼电影"><a href="#爬取猫眼电影" class="headerlink" title="爬取猫眼电影"></a>爬取猫眼电影</h2><h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>打开<em>Chrome</em>的调试工具，可发现相关的信息都在，并且以翻页的形式来得到更多的电影信息。</p>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-04%20%E4%B8%8A%E5%8D%8810.17.59.png" alt=""></p>
+<p><img src="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-04%20%E4%B8%8A%E5%8D%8810.17.59.png" alt=""></p>
 <blockquote>
 <p>我们可通过其爬取需要的信息，利用正则表达式来进行文本的挖掘。</p>
 </blockquote>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="string">'''</span></div><div class="line"><span class="string">    函数目标：</span></div><div class="line"><span class="string">    爬取猫眼电影的top100信息</span></div><div class="line"><span class="string">    </span></div><div class="line"><span class="string">    编写时间：</span></div><div class="line"><span class="string">    2018-03-28</span></div><div class="line"><span class="string">    </span></div><div class="line"><span class="string">'''</span></div><div class="line"></div><div class="line"><span class="string">'''</span></div><div class="line"><span class="string">import requests</span></div><div class="line"><span class="string">import re</span></div><div class="line"><span class="string">import json</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">if __name__ == '__main__':</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">   print('猫眼电影Top100信息如下：')</span></div><div class="line"><span class="string">   #循环10次，得出页面上的Top100的电影信息</span></div><div class="line"><span class="string">   for i in range(0, 10):</span></div><div class="line"><span class="string">       </span></div><div class="line"><span class="string">       url = "http://maoyan.com/board/4?"</span></div><div class="line"><span class="string">       header = &#123;</span></div><div class="line"><span class="string">               'Host':'maoyan.com',</span></div><div class="line"><span class="string">               'Referer':'http://maoyan.com/board/4?offset=20',</span></div><div class="line"><span class="string">               'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'&#125;</span></div><div class="line"><span class="string">       </span></div><div class="line"><span class="string">       paramters = &#123;</span></div><div class="line"><span class="string">               'offset': i * 10&#125;</span></div><div class="line"><span class="string">       request_tasget = requests.get(url=url, headers=header, params=paramters)</span></div><div class="line"><span class="string">       request_tasget.encoding = 'utf-8'</span></div><div class="line"><span class="string">       </span></div><div class="line"><span class="string">       # 实际上应该考虑考虑网的问题...连不上就一般没有数据返回了，找一个字符作为接口之后利用万能表达式即可</span></div><div class="line"><span class="string">       infos_list = re.findall(</span></div><div class="line"><span class="string">       r'&lt;dd&gt;.*?board-index.*?&gt;(.*?)&lt;/i&gt;.*?alt.*?src="(.*?)".*?&lt;a.*?&gt;(.*?)&lt;/a&gt;.*?"star"&gt;(.*?)&lt;/p&gt;.*?"releasetime"&gt;(.*?)&lt;/p&gt;.*?"integer"&gt;(.*?)&lt;/i&gt;.*?"fraction"&gt;(.*?)&lt;/i&gt;',</span></div><div class="line"><span class="string">       request_tasget.text, re.S)  # @UndefinedVariable</span></div><div class="line"><span class="string">       </span></div><div class="line"><span class="string">       #建立存储信息的字典</span></div><div class="line"><span class="string">       for each in infos_list:</span></div><div class="line"><span class="string">           yields = &#123;</span></div><div class="line"><span class="string">                   'index':each[0],</span></div><div class="line"><span class="string">                   'image_info':each[1],</span></div><div class="line"><span class="string">                   'name':each[2],</span></div><div class="line"><span class="string">                   'actor':each[3].strip(),</span></div><div class="line"><span class="string">                   'time':each[4],</span></div><div class="line"><span class="string">                   'score':each[5] + each[6]</span></div><div class="line"><span class="string">                   &#125;</span></div><div class="line"><span class="string">           print(yields)</span></div></pre></td></tr></table></figure>
 <h2 id="爬取豆瓣电影"><a href="#爬取豆瓣电影" class="headerlink" title="爬取豆瓣电影"></a>爬取豆瓣电影</h2><h3 id="分析-1"><a href="#分析-1" class="headerlink" title="分析"></a>分析</h3><p>与爬取猫眼电影信息一样，都是一样的，具体的差距还是在豆瓣上爬取信息需要<em>cookie</em>，具体可参考下面的代码。</p>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-04%20%E4%B8%8A%E5%8D%8810.18.27.png" alt=""></p>
+<p><img src="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-04%20%E4%B8%8A%E5%8D%8810.18.27.png" alt=""></p>
 <h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><pre><code class="python"><span class="string">'''</span>
 <span class="string">    函数目标：</span>
 <span class="string">    爬取豆瓣Top250的电影信息</span>
@@ -547,7 +547,7 @@ print(<span class="string">'以下为豆瓣Top250的电影信息：'</span>)
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月20日 - 07:10</p>
+  <p><span>最后更新:</span>2018年11月12日 - 18:11</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -880,7 +880,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      213.3k
+      213.5k
     </span>
   
 </div>

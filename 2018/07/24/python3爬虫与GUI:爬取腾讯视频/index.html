@@ -93,18 +93,18 @@
 <meta property="og:site_name" content="LXiHa`Notes">
 <meta property="og:description" content="最近想研究一下用python爬虫爬一些经常看的视频网站，其中包括有腾讯视频、YouTube、Twitter。本文从腾讯开始，之后会慢慢的更新其他两个的。 腾讯视频我之前就有过尝试，结果都失败了(我的目标是直接爬取完整视频！实际上这视频分析来分析去都是分段来的..)花了不少时间，结果还是停留在了只能爬取分段视频的阶段..下面也来简单说说如何爬取一些分段片段！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.36.23.png">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.38.43.png">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.40.07.png">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.40.36.png">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.42.42.png">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.46.32.png">
-<meta property="og:image" content="http://owudg3xs2.bkt.clouddn.com/7%E6%9C%88-24-2018%2020-00-51.gif">
-<meta property="og:updated_time" content="2018-10-19T22:47:47.550Z">
+<meta property="og:image" content="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.36.23.png">
+<meta property="og:image" content="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.38.43.png">
+<meta property="og:image" content="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.40.07.png">
+<meta property="og:image" content="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.40.36.png">
+<meta property="og:image" content="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.42.42.png">
+<meta property="og:image" content="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.46.32.png">
+<meta property="og:image" content="http://smartjpa.com/7%E6%9C%88-24-2018%2020-00-51.gif">
+<meta property="og:updated_time" content="2018-11-12T10:40:19.946Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python3爬虫与GUI:爬取腾讯视频">
 <meta name="twitter:description" content="最近想研究一下用python爬虫爬一些经常看的视频网站，其中包括有腾讯视频、YouTube、Twitter。本文从腾讯开始，之后会慢慢的更新其他两个的。 腾讯视频我之前就有过尝试，结果都失败了(我的目标是直接爬取完整视频！实际上这视频分析来分析去都是分段来的..)花了不少时间，结果还是停留在了只能爬取分段视频的阶段..下面也来简单说说如何爬取一些分段片段！">
-<meta name="twitter:image" content="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.36.23.png">
+<meta name="twitter:image" content="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.36.23.png">
 
 
 
@@ -460,20 +460,20 @@
 </blockquote>
 <p><strong>再强调一下，实际上仅仅分析<code>getinfo</code>的相关的内容即可得出片段视频！</strong></p>
 <p>随便以一个腾讯视频的<a href="https://v.qq.com/x/cover/fzfi0p4etjrckhh/a00260ipkjg.html" target="_blank" rel="external">链接</a>来进行以下图片的简单说明，针对以上的相关的参数：</p>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.36.23.png" alt=""></p>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.38.43.png" alt=""></p>
+<p><img src="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.36.23.png" alt=""></p>
+<p><img src="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.38.43.png" alt=""></p>
 <blockquote>
 <p>即：<br><a href="http://vv.video.qq.com/getinfo?vids=a00260ipkjg&amp;platform=101001&amp;charge=0&amp;otype=xml" target="_blank" rel="external">http://vv.video.qq.com/getinfo?vids=a00260ipkjg&amp;platform=101001&amp;charge=0&amp;otype=xml</a></p>
 </blockquote>
 <p>视频的真实地址仅仅需要<code>fn(filename)</code>、<code>fvkey(key)</code>、<code>URL(ui~url)</code>这些参数即可。以下图将一一进行标出！</p>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.40.07.png" alt=""></p>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.40.36.png" alt=""></p>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.42.42.png" alt=""></p>
+<p><img src="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.40.07.png" alt=""></p>
+<p><img src="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.40.36.png" alt=""></p>
+<p><img src="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.42.42.png" alt=""></p>
 <blockquote>
 <p>之后将得出一片段的真实地址：<br><a href="http://218.8.55.13/vlive.qqvideo.tc.qq.com/AU8SqeoXTl1JLXdNhOFSXiMVi2va5Pws1sz4YXZ7sAxo/d002684wnon.m1.mp4?vkey=BCCD552375F7D76708838E84668FDE0E15051F1BE9FF349A31FE6CA14BDC8EAE35FEF2322A8FAEA590EB2FCB129B0C96595BB896DBB756581A9F307ADA7D259AD4371F820D6C25194FD296D3570997912221A33D6678597050700BA156442AB5CB137D70537A706F" target="_blank" rel="external">http://218.8.55.13/vlive.qqvideo.tc.qq.com/AU8SqeoXTl1JLXdNhOFSXiMVi2va5Pws1sz4YXZ7sAxo/d002684wnon.m1.mp4?vkey=BCCD552375F7D76708838E84668FDE0E15051F1BE9FF349A31FE6CA14BDC8EAE35FEF2322A8FAEA590EB2FCB129B0C96595BB896DBB756581A9F307ADA7D259AD4371F820D6C25194FD296D3570997912221A33D6678597050700BA156442AB5CB137D70537A706F</a></p>
 </blockquote>
 <p>只有几分钟..</p>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.46.32.png" alt=""></p>
+<p><img src="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-24%20%E4%B8%8B%E5%8D%887.46.32.png" alt=""></p>
 <blockquote>
 <p>如上..</p>
 </blockquote>
@@ -483,7 +483,7 @@
 <li>使用的网站工具：<a href="http://www.weibodang.cn/dang.php" target="_blank" rel="external">http://www.weibodang.cn/dang.php</a></li>
 </ul>
 <p>打开此网站，输入刚刚的要下载的视频链接，点击<code>获取视频</code>之后会跳到另一个页面，会发现完整版的视频就是用几个片段分成的：</p>
-<p><img src="http://owudg3xs2.bkt.clouddn.com/7%E6%9C%88-24-2018%2020-00-51.gif" alt=""></p>
+<p><img src="http://smartjpa.com/7%E6%9C%88-24-2018%2020-00-51.gif" alt=""></p>
 <blockquote>
 <p>腾讯这个老狗..</p>
 </blockquote>
@@ -528,7 +528,7 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年10月20日 - 06:10</p>
+  <p><span>最后更新:</span>2018年11月12日 - 18:11</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -861,7 +861,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      213.3k
+      213.5k
     </span>
   
 </div>
