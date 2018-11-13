@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-11-12T11:00:14.852Z</updated>
+  <updated>2018-11-13T08:51:40.017Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>计算机组成、计算机系统资源分享</title>
+    <link href="https://liujunjie11.github.io/2018/11/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    <id>https://liujunjie11.github.io/2018/11/13/计算机组成、计算机系统资源分享/</id>
+    <published>2018-11-13T08:32:42.000Z</published>
+    <updated>2018-11-13T08:51:40.017Z</updated>
+    
+    <content type="html"><![CDATA[<p>一直想写一些关于计算机的基础知识的，但是我又看到许多的优秀书籍以及优秀文章，我从其中也学习到了非常的东西，也解开了我的许多疑惑，在此感谢那些人们的付出～</p><p>回到正题，自己一直想写，但是由于时间问题以及质量不能保证…所以我打算将一些优秀的资源拿出来分享好了，也解决了自己的那块心头肉。</p><p>以下资源是我从网上收集到的，仅用于学习使用。</p><a id="more"></a><h1 id="云盘资源分享"><a href="#云盘资源分享" class="headerlink" title="云盘资源分享"></a>云盘资源分享</h1><ul><li><a href="https://pan.baidu.com/s/1Z9BcwV3fKGqwVXlLfU8B_g" target="_blank" rel="external">深入理解计算机系统（原书第三版）.pdf</a></li></ul><blockquote><p>一本非常好的书！！</p></blockquote><ul><li><p><a href="https://pan.baidu.com/s/1JIC9vxu1CnKgqBnfgrfEAw" target="_blank" rel="external">计算机组成.pdf</a></p></li><li><p><a href="https://pan.baidu.com/s/1LI2Cc9dFgAgBro_Tn7uKUA" target="_blank" rel="external">计算机操作系统（第3版）_汤小丹.pdf</a></p></li><li><p><a href="https://pan.baidu.com/s/1li3YCywQlfEMtRCkRdS1tQ" target="_blank" rel="external">计算机是怎么跑起来的.pdf</a></p></li></ul><blockquote><p>一本科普书吧，很简单，但是够用了。</p></blockquote><ul><li><p><a href="https://pan.baidu.com/s/1uDVuroObwbvuqlZWokE3dg" target="_blank" rel="external">计算机组成.pdf</a></p></li><li><p><a href="https://pan.baidu.com/s/1ix393Of_pPVnvAQZEdZumw" target="_blank" rel="external">Linux设备驱动程序(中文版第三版).pdf</a></p></li><li><p><a href="https://pan.baidu.com/s/1N6Y7faTYkmU7gyaXUv9YqA" target="_blank" rel="external">Linux内核完全注释.pdf</a></p></li><li><p><a href="https://pan.baidu.com/s/1jvuMLTCtrmytamVYtR2G7A" target="_blank" rel="external">深入Linux内核架构.pdf</a></p></li></ul><blockquote><p>以上都是网上收集的电子书，我个人平时喜欢看书，基本上都是电子书，有收集很多技术类的电子书，都是根据需求来收集的。</p></blockquote><h1 id="最近看到的相关的优秀文章"><a href="#最近看到的相关的优秀文章" class="headerlink" title="最近看到的相关的优秀文章"></a>最近看到的相关的优秀文章</h1><ul><li><p><a href="https://juejin.im/post/5b3c34e3e51d45190e34c680" target="_blank" rel="external">印象系列-理解进程的存在</a></p></li><li><p><a href="https://juejin.im/post/59eaf70ff265da432b49f6bc" target="_blank" rel="external">印象系列-磁盘和内存的基本认识</a></p></li><li><p><a href="https://juejin.im/post/59be20e6f265da06633d1648" target="_blank" rel="external">印象系列-linux内核启动过程</a></p></li><li><p><a href="https://juejin.im/post/5b4f710be51d45195c073912" target="_blank" rel="external">从I/O到索引的那些事</a></p></li></ul><blockquote><p>以上都是一个作者写的，最近在学习<code>MySQL</code>时无意中看到的，很好的文章。</p></blockquote><p>还是要多看书学习才行。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一直想写一些关于计算机的基础知识的，但是我又看到许多的优秀书籍以及优秀文章，我从其中也学习到了非常的东西，也解开了我的许多疑惑，在此感谢那些人们的付出～&lt;/p&gt;
+&lt;p&gt;回到正题，自己一直想写，但是由于时间问题以及质量不能保证…所以我打算将一些优秀的资源拿出来分享好了，也解决了自己的那块心头肉。&lt;/p&gt;
+&lt;p&gt;以下资源是我从网上收集到的，仅用于学习使用。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="资源分享" scheme="https://liujunjie11.github.io/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="资源分享" scheme="https://liujunjie11.github.io/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo博客图片外链从七牛云移至腾讯云</title>
@@ -511,29 +535,6 @@ failed to locate @import file _variables/base.styl
     
     
       <category term="Mac教程" scheme="https://liujunjie11.github.io/tags/Mac%E6%95%99%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>旅程</title>
-    <link href="https://liujunjie11.github.io/2018/09/29/%E6%97%85%E7%A8%8B/"/>
-    <id>https://liujunjie11.github.io/2018/09/29/旅程/</id>
-    <published>2018-09-29T10:40:55.000Z</published>
-    <updated>2018-11-12T10:37:52.095Z</updated>
-    
-    <content type="html"><![CDATA[<p>一段在活着的人生旅程是相对矛盾的，常常也因此而把自己堵塞的一言不能发。</p><p>观看完《云图》之后引发了我的一系列思考，虽然在曾经都有过接触的那些思想，但是从书上或者是自己思考得出的相比，从电影的形式来进行描述何尝不是一种更好的选择。《云图》是一部好作品，她给我的启示对于我想要寻找的答案来说是有一定推进作用的，不知怎么的我想记下现在所想的一些东西，不妨叫其为，“观《云图》有感吧”。</p><a id="more"></a><p>人与人之间是相互牵连着的，每个人的所作所为都会对在这世上的人产生一定的影响的，继而形成一个链式反应，“人类是命运共同体”，这样理解也不为过。我看完《云图》感受是一股“勿以善小而不为”的感受的，当然这部作品本身给我的信息远不止如此。她另外给了我的信息是：捍卫心中认为正确的真相、真理，哪怕付出所有；勇敢去做自己认为对的事情，哪怕只有自身一人的力量那般微不足道。在上的前提是我们真的是我们自己，不受世间规则的约束，不受世间传统的的纠缠。</p><p>“稳定的发展”不应成为“被规则”的理由。世界的稳定维持，好似是有一股神秘的力量在背后发挥着作用，这股力量引导着世世代代的人们生活着的世界从有到现在，如今的人们把这股力量称为世间的自然秩序。多数的人们怕破坏了这秩序，世间的稳定发展会发生动摇，会引来这股神秘力量的报复，久而久之秩序成为了一种活着的人们都应该要被遵守的规则，秩序规则，规则秩序，源远流长，不声不息。所以会有大多数人会为了“稳定的发展”而也会要求其他人不要不遵守这些规则，更不允许被破坏这些股规则。该称之为一般的“伟大”吗？套着“稳定”外衣的“规则”。这股秩序规则的存在恰恰也是限制当世人们的一条锁链，给人的感觉就是一切都是被安排好的，一切都是冥冥中自有的存在与发生，这难道不是一种“洗脑”吗？大多数人们会因此变得沉默，他们以为这就是一切早已安排好的天命，而我只需要静静的，毫无波澜的干自己该做的事便好。这是一种对鲜活生命的摧残，一种对生命的不尊重，一种教人们对自己生命的不负责。一条生命在诞生之时，他就是独立的，并且一直都是独立的，孤独？“孤独”不过是煽情的人们用来安慰、说服自己的字词理由罢了。人，生而孤独，生而独立，所以这世间的规则并不是我们应当铭记于心的，而应该是我们根据自己的选择去选择的，世间规则不应当成为生而为人的我们的必须枷锁。但是世间也需要规则，也需要秩序，这一点也是毫无破绽的。我可以适当的遵守一定规则，但我永远不会将其铭记于心，更不会让其成为我自由生长的一把枷锁。“规则”有时一旦被另有企图的人们所利用，稍加不当作为一种源远流长，依旧可能会成为一些人们堕落的根源。</p><p>一个人真正的成长与成熟不是学会了如何精通这世间的规则继而将此铭记于心成为一个形态意识上的墨守陈规的人，而是一个在知晓了这世间大多数的规则之下，却依旧能做自己的人。前者已经失去了自我，不再是一个真正独立的人了。</p><p>活在这世间，实属不易，有牵绊，有诱惑，有不解。守护本心，活成自己有时变得那么难，那么难，很多时候我们难真正的成为自己，过着自己理想的生活，做着自己喜欢的事。但是这些都不能成为理由而不去成为自己，多些在自己的空间里多加思考会发现这原本只是两回事的存在罢了。</p><p>守护那来之不易的真相，并且舍得去奉献。</p><p>人生来的旅程，一千个人有一千颗心，有一千个自己的存在。世间因此也变得“矛盾”，还是本身就是一个矛盾体？无论如何，人类命运体中伴随着矛盾是不可避免的事实，那是因为”我们“的存在。这世间值得一走，一走一停，探究其秘，何乐而不为。</p><p>我曾看到一句话我很喜欢：</p><blockquote><p><strong>笑对人生，独立寰宇。</strong></p></blockquote><p>完。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;一段在活着的人生旅程是相对矛盾的，常常也因此而把自己堵塞的一言不能发。&lt;/p&gt;
-&lt;p&gt;观看完《云图》之后引发了我的一系列思考，虽然在曾经都有过接触的那些思想，但是从书上或者是自己思考得出的相比，从电影的形式来进行描述何尝不是一种更好的选择。《云图》是一部好作品，她给我的启示对于我想要寻找的答案来说是有一定推进作用的，不知怎么的我想记下现在所想的一些东西，不妨叫其为，“观《云图》有感吧”。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="感想日记" scheme="https://liujunjie11.github.io/categories/%E6%84%9F%E6%83%B3%E6%97%A5%E8%AE%B0/"/>
-    
-    
-      <category term="感想日记" scheme="https://liujunjie11.github.io/tags/%E6%84%9F%E6%83%B3%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
