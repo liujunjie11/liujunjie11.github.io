@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-11-13T12:54:59.407Z</updated>
+  <updated>2018-11-13T14:36:28.449Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>MySQL学习资源与实践学习</title>
+    <link href="https://liujunjie11.github.io/2018/11/13/MySQL%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E4%B8%8E%E5%AE%9E%E8%B7%B5%E5%AD%A6%E4%B9%A0/"/>
+    <id>https://liujunjie11.github.io/2018/11/13/MySQL学习资源与实践学习/</id>
+    <published>2018-11-13T13:12:31.000Z</published>
+    <updated>2018-11-13T14:36:28.449Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近心血来潮想写几个SQL玩玩，在此会分享学习的书籍资源以及YouTube教程使用语法的实践项目，以及会进行一系列的简单实践。这里通过在YouTube上的一个大佬的视频来进行在线的实践即可。</p><iframe width="560" height="315" src="https://www.youtube.com/embed/xYMhPZ_L3fI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><blockquote><p>就是这个视频。</p></blockquote><p>可主要参考书籍<a href="https://pan.baidu.com/s/15hIkCroy2w7RvBdVH8LRmA" target="_blank" rel="external">疯狂Java讲义(李刚)</a>来进行学习，当然还有参考其他的经典书籍以备用学习，这类书籍很多，就不在此一一说明了。</p><blockquote><p>《疯狂Java讲义》书籍的配套资源地址：<a href="https://github.com/DoingLee" target="_blank" rel="external">https://github.com/DoingLee</a></p></blockquote><a id="more"></a><h1 id="MySQL学习"><a href="#MySQL学习" class="headerlink" title="MySQL学习"></a>MySQL学习</h1><p>这一部分由于一些基础性的基本知识在上面和下面的书籍中已经是多如牛毛了，我就不重复说明了，需要的自行下载去了解吧。可结合书中直接开始语法的学习！实际上几个实用性强的语句就那么几个。</p><h2 id="书籍资源分享"><a href="#书籍资源分享" class="headerlink" title="书籍资源分享"></a>书籍资源分享</h2><ul><li><p><a href="https://pan.baidu.com/s/1rZwbEXEV_GlGsN7UVZ5Z6Q" target="_blank" rel="external">MySQL必知必会.pdf</a></p></li><li><p><a href="https://pan.baidu.com/s/1pA9V9weH33j7ZiV6fFNU1Q" target="_blank" rel="external">SQL语法查询(W3school).pdf</a></p></li><li><p><a href="https://pan.baidu.com/s/1cglHK9k4VY1SSJsg_C2mWA" target="_blank" rel="external">MySQL完全教程.pdf</a></p></li><li><p><a href="https://pan.baidu.com/s/14W7WJBoVnybd_r8pXQ6J4Q" target="_blank" rel="external">MySQL经典教程.pdf</a></p></li></ul><blockquote><p>就这么多吧，都是网上的人们分享出来的。</p></blockquote><h2 id="网页在线学习"><a href="#网页在线学习" class="headerlink" title="网页在线学习"></a>网页在线学习</h2><ul><li><a href="https://sqlbolt.com" target="_blank" rel="external">sqlbolt</a></li></ul><blockquote><p>强烈推荐！还可在线实践(结合上面的视频一起来即可)。</p></blockquote><ul><li><p><a href="http://www.runoob.com/mysql/mysql-tutorial.html" target="_blank" rel="external">MySQL教程(菜鸟教程)</a></p></li><li><p><a href="https://m.w3cschool.cn/mysql/" target="_blank" rel="external">MySQL教程(w3cschool)</a></p></li><li><p><a href="https://www.yiibai.com/mysql/" target="_blank" rel="external">MySQL教程(易百教程)</a></p></li></ul><blockquote><p>相较于上面的书籍，在线教程更加的通俗易懂，可先通过这些入门简单认识一下以及学习语法，不懂的更深的部分可查看书籍即可。</p></blockquote><h2 id="YouTube上的资源"><a href="#YouTube上的资源" class="headerlink" title="YouTube上的资源"></a>YouTube上的资源</h2><ul><li><a href="https://www.youtube.com/results?search_query=mysql" target="_blank" rel="external">https://www.youtube.com/results?search_query=mysql</a></li></ul><blockquote><p>就这么简单～</p></blockquote><h1 id="实践学习"><a href="#实践学习" class="headerlink" title="实践学习"></a>实践学习</h1><p>强烈建议先根据视频学习！根据上面的YouTube教程结合<a href="https://sqlbolt.com" target="_blank" rel="external">sqlbolt</a>网站一步步来即可～若是英文看不懂，可结合上面的书籍资源以及在线资源查询即可。实践才是掌握一门语言的最快方法！</p><blockquote><p>有时根据网速快慢加载的数据库可能有点慢，等待一下即可。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近心血来潮想写几个SQL玩玩，在此会分享学习的书籍资源以及YouTube教程使用语法的实践项目，以及会进行一系列的简单实践。这里通过在YouTube上的一个大佬的视频来进行在线的实践即可。&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/xYMhPZ_L3fI&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;就是这个视频。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;可主要参考书籍&lt;a href=&quot;https://pan.baidu.com/s/15hIkCroy2w7RvBdVH8LRmA&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;疯狂Java讲义(李刚)&lt;/a&gt;来进行学习，当然还有参考其他的经典书籍以备用学习，这类书籍很多，就不在此一一说明了。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;《疯狂Java讲义》书籍的配套资源地址：&lt;a href=&quot;https://github.com/DoingLee&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/DoingLee&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="MySQL" scheme="https://liujunjie11.github.io/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="https://liujunjie11.github.io/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
     <title>学习计算机组成、计算机系统资源分享</title>
     <link href="https://liujunjie11.github.io/2018/11/13/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
     <id>https://liujunjie11.github.io/2018/11/13/学习计算机组成、计算机系统资源分享/</id>
     <published>2018-11-13T08:32:42.000Z</published>
-    <updated>2018-11-13T12:54:59.407Z</updated>
+    <updated>2018-11-13T13:04:27.626Z</updated>
     
     <content type="html"><![CDATA[<p>一直想写一些关于计算机的基础知识的，但是我又看到许多的优秀书籍以及优秀文章，我从其中也学习到了非常的东西，也解开了我的许多疑惑，在此感谢那些人们的付出～</p><p>回到正题，自己一直想写，但是由于时间问题以及质量不能保证…所以我打算将一些优秀的资源拿出来分享好了，也解决了自己的那块心头肉。</p><p>以下资源是我从网上收集到的，仅用于学习使用。</p><a id="more"></a><h1 id="云盘资源分享"><a href="#云盘资源分享" class="headerlink" title="云盘资源分享"></a>云盘资源分享</h1><ul><li><a href="https://pan.baidu.com/s/1Z9BcwV3fKGqwVXlLfU8B_g" target="_blank" rel="external">深入理解计算机系统（原书第三版）.pdf</a></li></ul><blockquote><p>一本非常好的书！！</p></blockquote><ul><li><p><a href="https://pan.baidu.com/s/1JIC9vxu1CnKgqBnfgrfEAw" target="_blank" rel="external">计算机组成.pdf</a></p></li><li><p><a href="https://pan.baidu.com/s/1LI2Cc9dFgAgBro_Tn7uKUA" target="_blank" rel="external">计算机操作系统（第3版）_汤小丹.pdf</a></p></li><li><p><a href="https://pan.baidu.com/s/1li3YCywQlfEMtRCkRdS1tQ" target="_blank" rel="external">计算机是怎么跑起来的.pdf</a></p></li></ul><blockquote><p>一本科普书吧，很简单，但是够用了。</p></blockquote><ul><li><p><a href="https://pan.baidu.com/s/1uDVuroObwbvuqlZWokE3dg" target="_blank" rel="external">计算机组成.pdf</a></p></li><li><p><a href="https://pan.baidu.com/s/1ix393Of_pPVnvAQZEdZumw" target="_blank" rel="external">Linux设备驱动程序(中文版第三版).pdf</a></p></li><li><p><a href="https://pan.baidu.com/s/1N6Y7faTYkmU7gyaXUv9YqA" target="_blank" rel="external">Linux内核完全注释.pdf</a></p></li><li><p><a href="https://pan.baidu.com/s/1jvuMLTCtrmytamVYtR2G7A" target="_blank" rel="external">深入Linux内核架构.pdf</a></p></li></ul><blockquote><p>以上都是网上收集的电子书，我个人平时喜欢看书，基本上都是电子书，有收集很多技术类的电子书，都是根据需求来收集的。</p></blockquote><h1 id="最近看到的相关的优秀文章"><a href="#最近看到的相关的优秀文章" class="headerlink" title="最近看到的相关的优秀文章"></a>最近看到的相关的优秀文章</h1><ul><li><p><a href="https://juejin.im/post/5b3c34e3e51d45190e34c680" target="_blank" rel="external">印象系列-理解进程的存在</a></p></li><li><p><a href="https://juejin.im/post/59eaf70ff265da432b49f6bc" target="_blank" rel="external">印象系列-磁盘和内存的基本认识</a></p></li><li><p><a href="https://juejin.im/post/59be20e6f265da06633d1648" target="_blank" rel="external">印象系列-linux内核启动过程</a></p></li><li><p><a href="https://juejin.im/post/5b4f710be51d45195c073912" target="_blank" rel="external">从I/O到索引的那些事</a></p></li></ul><blockquote><p>以上都是一个作者写的，最近在学习<code>MySQL</code>时无意中看到的，很好的文章。</p></blockquote><p>还是要多看书学习才行。</p>]]></content>
     
@@ -61,14 +92,14 @@
     
     </summary>
     
-      <category term="Hexo" scheme="https://liujunjie11.github.io/categories/Hexo/"/>
-    
       <category term="笔记" scheme="https://liujunjie11.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
+      <category term="Hexo" scheme="https://liujunjie11.github.io/categories/Hexo/"/>
     
-      <category term="Hexo" scheme="https://liujunjie11.github.io/tags/Hexo/"/>
     
       <category term="教程笔记" scheme="https://liujunjie11.github.io/tags/%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Hexo" scheme="https://liujunjie11.github.io/tags/Hexo/"/>
     
       <category term="七牛云" scheme="https://liujunjie11.github.io/tags/%E4%B8%83%E7%89%9B%E4%BA%91/"/>
     
@@ -317,18 +348,18 @@
     
     </summary>
     
-      <category term="软件使用" scheme="https://liujunjie11.github.io/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
-    
       <category term="笔记" scheme="https://liujunjie11.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="软件使用" scheme="https://liujunjie11.github.io/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
     
       <category term="Eclipse" scheme="https://liujunjie11.github.io/categories/Eclipse/"/>
     
       <category term="Django" scheme="https://liujunjie11.github.io/categories/Django/"/>
     
     
-      <category term="问题记录笔记" scheme="https://liujunjie11.github.io/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="Eclipse" scheme="https://liujunjie11.github.io/tags/Eclipse/"/>
+    
+      <category term="问题记录笔记" scheme="https://liujunjie11.github.io/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95%E7%AC%94%E8%AE%B0/"/>
     
       <category term="Django" scheme="https://liujunjie11.github.io/tags/Django/"/>
     
@@ -455,9 +486,9 @@
     
       <category term="笔记" scheme="https://liujunjie11.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="机器学习" scheme="https://liujunjie11.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
       <category term="Mac" scheme="https://liujunjie11.github.io/categories/Mac/"/>
+    
+      <category term="机器学习" scheme="https://liujunjie11.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
       <category term="LightGBM" scheme="https://liujunjie11.github.io/categories/LightGBM/"/>
     
@@ -490,9 +521,9 @@
     
       <category term="笔记" scheme="https://liujunjie11.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="机器学习" scheme="https://liujunjie11.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
       <category term="Mac" scheme="https://liujunjie11.github.io/categories/Mac/"/>
+    
+      <category term="机器学习" scheme="https://liujunjie11.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
       <category term="Xgboost" scheme="https://liujunjie11.github.io/categories/Xgboost/"/>
     
@@ -570,14 +601,14 @@
     
     </summary>
     
-      <category term="Hexo" scheme="https://liujunjie11.github.io/categories/Hexo/"/>
-    
       <category term="笔记" scheme="https://liujunjie11.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
+      <category term="Hexo" scheme="https://liujunjie11.github.io/categories/Hexo/"/>
     
-      <category term="Hexo" scheme="https://liujunjie11.github.io/tags/Hexo/"/>
     
       <category term="教程笔记" scheme="https://liujunjie11.github.io/tags/%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Hexo" scheme="https://liujunjie11.github.io/tags/Hexo/"/>
     
   </entry>
   
@@ -610,43 +641,14 @@ failed to locate @import file _variables/base.styl
     
     </summary>
     
-      <category term="Hexo" scheme="https://liujunjie11.github.io/categories/Hexo/"/>
-    
       <category term="笔记" scheme="https://liujunjie11.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Hexo" scheme="https://liujunjie11.github.io/categories/Hexo/"/>
     
     
       <category term="Hexo" scheme="https://liujunjie11.github.io/tags/Hexo/"/>
     
       <category term="问题记录笔记" scheme="https://liujunjie11.github.io/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac升级到Mojave版本之后的Safari插件问题</title>
-    <link href="https://liujunjie11.github.io/2018/10/11/Mac%E5%8D%87%E7%BA%A7%E5%88%B0Mojave%E7%89%88%E6%9C%AC%E4%B9%8B%E5%90%8E%E7%9A%84Safari%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/"/>
-    <id>https://liujunjie11.github.io/2018/10/11/Mac升级到Mojave版本之后的Safari插件问题/</id>
-    <published>2018-10-11T02:57:55.000Z</published>
-    <updated>2018-11-13T12:34:39.643Z</updated>
-    
-    <content type="html"><![CDATA[<p>在升级到了<em>Mojave</em>最新版本之后的最大问题发现就是<em>Safari</em>浏览器之前一些常用的插件不能用了，其他的对我来说都是优点，系统比以前更加流畅了，优化了不少。</p><p>废话不多说了，我在此仅列出我常用的插件列表以及如何再次正常使用它们。</p><h1 id="插件一：Search-Engine-Switcher"><a href="#插件一：Search-Engine-Switcher" class="headerlink" title="插件一：Search Engine Switcher"></a>插件一：<em>Search Engine Switcher</em></h1><p>这款插件能够使得在使用浏览器搜索关键词时可以在百度、谷歌之间的搜索引擎变换搜索相关内容。在升级之后本来不被<em>Safari</em>支持了。</p><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>打开新版的<em>app store</em>搜索关键词<em>Search Engine Switcher</em>直接下载即可用了。</p><a id="more"></a><h1 id="插件二：Adblock-Plus"><a href="#插件二：Adblock-Plus" class="headerlink" title="插件二：Adblock Plus"></a>插件二：<em>Adblock Plus</em></h1><p>这是一个让人头疼的问题，没有了之后广告太多了，受不了，找了一些付费的替代品，但是还是都不如<em>Adblock Plus</em>好用，在逛国外的一些论坛时发现了一个解决方案。</p><h2 id="解决方案-1"><a href="#解决方案-1" class="headerlink" title="解决方案"></a>解决方案</h2><p>下载<em>Adblock Plus</em>的最后一个在<em>Safari</em>的插件版本即可完美解决这个问题，不用去<em>app store</em>下载了，那个根本没什么用。</p><p>具体的可以先去下载这个插件即可直接使用了：</p><ul><li><strong><a href="https://uploadfiles.io/3q7wu" target="_blank" rel="external">https://uploadfiles.io/3q7wu</a></strong></li></ul><blockquote><p>这个链接是国外网友的分享，链接在此：<a href="https://forums.macrumors.com/threads/adblock-plus-not-working.2121621/" target="_blank" rel="external">https://forums.macrumors.com/threads/adblock-plus-not-working.2121621/</a></p><p>这是他的原话：Here you go dude: <a href="https://ufile.io/3q7wu" target="_blank" rel="external">https://ufile.io/3q7wu</a><br>It’s the original AdBlock.safariextz latest version! Just put it in the folder I mentioned above and enable it in Safari’s preferences. It should work. Good luck!</p></blockquote><p>下载完之后会跳转到这个网页：<a href="https://safari-extensions.apple.com/details/?id=com.betafish.adblockforsafari-UAMUU4S2D9" target="_blank" rel="external">https://safari-extensions.apple.com/details/?id=com.betafish.adblockforsafari-UAMUU4S2D9</a></p><p>直接下载就是了，一切和从前一样了…</p><p>如果在你下载之后没有得到什么实质性的作用，不妨可以看看官方的<a href="https://getadblock.com/update/2.70.0/?u=a210xe6x25809560" target="_blank" rel="external">解释</a>：</p><blockquote><p>在 2019 年的某个时候，我们将停止对传统扩展的支持，极少数特例除外。 我们强烈建议您迁移到我们的新 Mac 应用上来。 我们将在新的应用上投入全部精力，让 AdBlock for Safari 成为 Apple 设备上最好的广告拦截工具。</p></blockquote><p>这是好像有点运气成分的…</p><p>就这样了，that’s all!good luck~~</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在升级到了&lt;em&gt;Mojave&lt;/em&gt;最新版本之后的最大问题发现就是&lt;em&gt;Safari&lt;/em&gt;浏览器之前一些常用的插件不能用了，其他的对我来说都是优点，系统比以前更加流畅了，优化了不少。&lt;/p&gt;
-&lt;p&gt;废话不多说了，我在此仅列出我常用的插件列表以及如何再次正常使用它们。&lt;/p&gt;
-&lt;h1 id=&quot;插件一：Search-Engine-Switcher&quot;&gt;&lt;a href=&quot;#插件一：Search-Engine-Switcher&quot; class=&quot;headerlink&quot; title=&quot;插件一：Search Engine Switcher&quot;&gt;&lt;/a&gt;插件一：&lt;em&gt;Search Engine Switcher&lt;/em&gt;&lt;/h1&gt;&lt;p&gt;这款插件能够使得在使用浏览器搜索关键词时可以在百度、谷歌之间的搜索引擎变换搜索相关内容。在升级之后本来不被&lt;em&gt;Safari&lt;/em&gt;支持了。&lt;/p&gt;
-&lt;h2 id=&quot;解决方案&quot;&gt;&lt;a href=&quot;#解决方案&quot; class=&quot;headerlink&quot; title=&quot;解决方案&quot;&gt;&lt;/a&gt;解决方案&lt;/h2&gt;&lt;p&gt;打开新版的&lt;em&gt;app store&lt;/em&gt;搜索关键词&lt;em&gt;Search Engine Switcher&lt;/em&gt;直接下载即可用了。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="笔记" scheme="https://liujunjie11.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Mac" scheme="https://liujunjie11.github.io/categories/Mac/"/>
-    
-    
-      <category term="问题记录笔记" scheme="https://liujunjie11.github.io/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Mac" scheme="https://liujunjie11.github.io/tags/Mac/"/>
     
   </entry>
   
