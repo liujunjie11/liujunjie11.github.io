@@ -2,9 +2,1101 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://liujunjie11.github.io/2017/09/25/%E9%9B%86%E6%80%9D/</loc>
+    
+    <lastmod>2018-11-13T12:52:50.881Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/09/25/SS%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%8E%E4%B8%8B%E8%BD%BD/</loc>
+    
+    <lastmod>2018-11-13T12:52:47.337Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/09/26/%EF%BC%88Mac%E4%B8%8B%EF%BC%89%E7%94%A8Hexo3-X-next5-1-2%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%AE%89%E8%A3%85%EF%BC%8C%E6%AD%A3%E7%A1%AE%E9%85%8D%E7%BD%AE%EF%BC%8C%E9%83%A8%E7%BD%B2%E8%B0%B7%E6%AD%8C%EF%BC%8C%E7%BB%93%E5%90%88%E7%94%A8%E4%B8%83%E7%89%9B%E4%BA%91%E5%86%99%E4%BD%9C/</loc>
+    
+    <lastmod>2018-11-13T12:52:35.722Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/09/27/Mac%E4%B8%8B%E8%A7%A3%E5%86%B3Matlab-License-Manager-Error-8%E9%97%AE%E9%A2%98/</loc>
+    
+    <lastmod>2018-11-13T12:52:23.710Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/09/27/Mac%E4%B8%8BVirtualBox%E8%99%9A%E6%8B%9F%E6%9C%BACentos7%E9%85%8D%E7%BD%AEWifi%EF%BC%8C%E7%94%A8%E4%BD%A9%E5%B8%A6%E7%9A%84%E7%81%AB%E7%8B%90%E7%BF%BB%E5%A2%99/</loc>
+    
+    <lastmod>2018-11-13T12:52:05.188Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/09/27/Hexo-%E5%8D%9A%E5%AE%A2%E5%9C%A8%E8%B0%B7%E6%AD%8C%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E4%B8%AD%E7%9A%84%E4%BC%98%E5%8C%96%EF%BC%8C%E7%9B%AE%E6%A0%87%EF%BC%9A%E4%B8%8A%E5%A4%B4%E6%9D%A1/</loc>
+    
+    <lastmod>2018-11-13T12:51:54.019Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/09/27/%E5%88%9D%E5%AD%A6Linux%E6%9C%89%E6%84%9F/</loc>
+    
+    <lastmod>2018-11-13T12:51:45.837Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/09/30/hexo-%E5%8D%9A%E5%AE%A2%E7%BB%93%E5%90%88%E4%B8%83%E7%89%9B%E4%BA%91%E8%B6%85%E9%93%BE%E6%8E%A5%E8%A7%86%E9%A2%91%E4%B8%8E%E9%9F%B3%E4%B9%90/</loc>
+    
+    <lastmod>2018-11-13T12:51:33.932Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/09/30/eclipse%E4%B8%8B%E7%9B%B4%E6%8E%A5%E8%AF%BB%E5%8F%96Hadoop%E6%BA%90%E7%A0%81%E9%85%8D%E7%BD%AE/</loc>
+    
+    <lastmod>2018-11-13T12:51:26.526Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/10/01/(Mac%E4%B8%8B%EF%BC%89hadoop2-8-1%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E7%9A%84%E6%90%AD%E5%BB%BA%EF%BC%8C%E4%BB%A5%E5%8F%8A%E7%94%A8eclipse%E5%BC%80%E5%8F%91Hadoop/</loc>
+    
+    <lastmod>2018-11-13T12:51:13.378Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/10/08/20%E5%B2%81%E7%9A%84%E4%BB%8A%E5%A4%A9/</loc>
+    
+    <lastmod>2018-11-13T12:50:54.870Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/10/08/%E8%AE%A4%E8%AF%86%E5%88%B0%E5%BA%B8%E6%84%9A%E7%9A%84%E6%88%91/</loc>
+    
+    <lastmod>2018-11-13T12:50:52.116Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/10/09/%EF%BC%88%E5%AE%89%E5%8D%93%EF%BC%89%E6%89%8B%E6%9C%BA%E5%88%A9%E7%94%A8%E5%85%8D%E8%B4%B9%E7%9A%84SuperVPN%E7%BF%BB%E5%A2%99/</loc>
+    
+    <lastmod>2018-11-13T12:50:48.434Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/10/09/%E5%88%A9%E7%94%A8%E5%85%8D%E8%B4%B9%E7%9A%84SuperVPN%E7%BF%BB%E5%A2%99/</loc>
+    
+    <lastmod>2018-11-13T12:50:39.691Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/10/10/%E5%85%B3%E4%BA%8E%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/</loc>
+    
+    <lastmod>2018-11-13T12:50:31.589Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/10/11/%EF%BC%88%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E4%B8%8B%EF%BC%89%E6%9B%B4%E6%94%B9%E5%8D%8E%E4%B8%BA%E6%89%8B%E6%9C%BA%E8%A7%A3%E9%94%81%E5%B1%8F%E5%B9%95%E5%AF%86%E7%A0%81/</loc>
+    
+    <lastmod>2018-11-13T12:50:27.872Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/10/11/%E8%BF%99%E2%80%9C%E5%AE%8C%E7%BE%8E%E2%80%9D%E7%9A%84%E4%B8%80%E5%88%87%E5%A6%82%E5%90%8C%E2%80%9C%E7%A5%9E%E8%AE%BE%E2%80%9D%EF%BC%8C%E8%80%8C%E6%88%91%E4%BB%AC%E8%BF%98%E6%98%AF%E4%BE%9D%E6%97%A7%E4%B8%80%E6%97%A0%E6%89%80%E7%9F%A5/</loc>
+    
+    <lastmod>2018-11-13T12:50:24.661Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/10/11/%E2%80%9C%E5%93%B2%E5%AD%A6%E2%80%9D%E4%B8%8E%E2%80%9C%E7%94%9F%E7%89%A9%E5%AD%A6%E2%80%9C%E4%B9%8B%E9%97%B4%E7%9A%84%E8%A7%81%E8%A7%A3%E6%8E%A2%E8%AE%A8/</loc>
+    
+    <lastmod>2018-11-13T12:50:22.014Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/10/12/%EF%BC%88%E8%BD%AC%E8%87%AA%E6%9E%97%E6%80%9D%E4%BA%91%E5%85%88%E7%94%9F%EF%BC%89%E7%9C%9F%E5%AE%9E%E7%9A%84%E6%B1%AA%E7%B2%BE%E5%8D%AB/</loc>
+    
+    <lastmod>2018-11-13T12:50:17.943Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/10/13/%E6%8B%9C%E8%AF%BB%E6%9E%97%E6%80%9D%E4%BA%91%E5%85%88%E7%94%9F%E4%B9%8B%E6%96%87%E7%AB%A0%E6%9C%89%E6%84%9F/</loc>
+    
+    <lastmod>2018-11-13T12:50:13.963Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/10/15/%E2%80%9C%E8%AF%BB%E2%80%9D%E5%8E%86%E5%8F%B2/</loc>
+    
+    <lastmod>2018-11-13T12:50:08.939Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/10/15/%E6%83%B3%E8%87%B4%E5%9B%BD%E5%AE%B6%E4%BD%93%E8%82%B2%E5%B1%80%E7%9A%84%E4%B8%80%E5%B0%81%E4%BF%A1/</loc>
+    
+    <lastmod>2018-11-13T12:50:05.794Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/10/16/%EF%BC%88Mac%E4%B8%8B%EF%BC%89Folx5%20Pro%E7%A0%B4%E8%A7%A3%E7%89%88%E4%B8%8B%E8%BD%BD%E4%BB%A5%E5%8F%8A%E7%94%A8%E5%85%B6%E4%B8%8B%E8%BD%BD%E7%99%BE%E5%BA%A6%E4%BA%91%E8%B5%84%E6%BA%90/</loc>
+    
+    <lastmod>2018-11-13T12:50:02.589Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/10/17/%E6%97%A0%E9%A2%98/</loc>
+    
+    <lastmod>2018-11-13T12:49:52.660Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/10/19/%E6%9D%82%E6%80%9D%E8%AE%B0/</loc>
+    
+    <lastmod>2018-11-13T12:49:49.552Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/10/22/%EF%BC%88Mac%E4%B8%8B%EF%BC%89Ummy%20Video%20Downloader%20pro%E4%B8%8B%E8%BD%BD%E4%BB%A5%E5%8F%8A%E7%94%A8%E5%85%B6%E6%8F%92%E4%BB%B6%E9%85%8D%E5%90%88%E4%B8%8B%E8%BD%BDYouTube%E8%A7%86%E9%A2%91%20/</loc>
+    
+    <lastmod>2018-11-13T12:49:44.486Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/10/24/Mac%E4%B8%8A%E8%A7%A3%E5%86%B3Mackeeper%E7%9A%84%E6%B5%81%E6%B0%93%E4%BD%9C%E4%B8%BA%EF%BC%8C%E4%BB%A5%E5%8F%8A%E4%B8%8E%E5%85%B6%E5%AF%BC%E8%87%B4%E7%9A%84CPU%E5%BC%82%E5%B8%B8/</loc>
+    
+    <lastmod>2018-11-13T12:49:33.548Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/10/25/%EF%BC%88Mac%E4%B8%8B%EF%BC%89eclipse%E5%BC%80%E5%8F%91Hadoop%E6%97%B6%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/</loc>
+    
+    <lastmod>2018-11-13T12:49:22.821Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/10/26/Mac%E8%87%AA%E5%B8%A6%E5%AD%97%E5%85%B8%E7%9A%84%E6%89%A9%E5%B1%95%E4%B8%8E%E8%AF%AD%E9%9F%B3%E8%AE%BE%E7%BD%AE/</loc>
+    
+    <lastmod>2018-11-13T12:49:10.834Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/10/26/%EF%BC%88Mac%E4%B8%8B%EF%BC%89docker%E6%90%AD%E5%BB%BAHadoop%E9%9B%86%E7%BE%A4/</loc>
+    
+    <lastmod>2018-11-13T12:49:00.003Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/10/30/%E8%BF%99%E6%AE%B5%E6%97%B6%E9%97%B4/</loc>
+    
+    <lastmod>2018-11-13T12:48:48.694Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/10/31/%E8%80%81%E4%BA%BA%E4%B8%8E%E6%B5%B7/</loc>
+    
+    <lastmod>2018-11-13T12:48:44.336Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/10/31/MacBookPro%E8%BF%9E%E6%8E%A5Wi-Fi%E5%BC%82%E5%B8%B8%E9%97%AE%E9%A2%98/</loc>
+    
+    <lastmod>2018-11-13T12:48:41.639Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/11/01/MacBookPro%E4%B8%8A%E7%9A%84Multi-Touch-Bar%E7%BC%A9%E6%94%BE%E9%97%AE%E9%A2%98/</loc>
+    
+    <lastmod>2018-11-13T12:48:32.400Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/11/04/iPad-%E4%B8%8A%E7%9A%84%E4%BB%A3%E7%90%86%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2018-11-13T12:48:24.788Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/11/04/%E5%85%B3%E4%BA%8EMacOS-High-Sierra%E4%B8%ADOutlook%E4%B8%8D%E5%8F%AF%E7%94%A8%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
+    
+    <lastmod>2018-11-13T12:48:17.110Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/11/06/%E5%AD%A6%E4%B9%A0Hadoop%E7%9A%84%E4%B9%A6%E7%B1%8D%E5%BC%95%E8%8D%90/</loc>
+    
+    <lastmod>2018-11-13T12:48:09.696Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/11/07/%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2018-11-13T12:48:01.126Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/11/10/%E5%85%B3%E4%BA%8EHadoop%E5%9C%A8%E8%BF%9E%E6%8E%A5eclipse%E4%B8%AD%E5%BC%80%E5%8F%91%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
+    
+    <lastmod>2018-11-13T12:47:47.171Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/11/11/iCould%E7%9A%84%E7%AE%80%E5%8D%95%E7%90%86%E8%A7%A3/</loc>
+    
+    <lastmod>2018-11-13T12:47:37.168Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/11/14/%E5%88%A9%E7%94%A8YamDispalyFree%E5%85%8D%E8%B4%B9%E5%AE%9E%E7%8E%B0Mac%E4%B8%8EiPad%E7%9A%84%E5%B1%8F%E5%B9%95%E6%89%A9%E5%B1%95/</loc>
+    
+    <lastmod>2018-11-13T12:47:30.292Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/11/15/%E5%85%B3%E4%BA%8E%E5%9C%A8iOS%E7%B3%BB%E7%BB%9F%E4%B8%8A%E5%BF%AB%E9%80%9F%E4%B8%8B%E8%BD%BDYouTube%E4%B8%8A%E7%9A%84%E8%A7%86%E9%A2%91%E4%BB%A5%E5%8F%8A%E9%9F%B3%E4%B9%90/</loc>
+    
+    <lastmod>2018-11-13T12:47:20.964Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/11/17/%E7%84%A6%E8%99%91/</loc>
+    
+    <lastmod>2018-11-13T12:47:17.404Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/11/18/%E5%85%B3%E4%BA%8EAnaconda-python%E4%B8%A4%E4%B8%AA%E7%89%88%E6%9C%AC%E5%85%B1%E5%AD%98%E6%97%B6%E7%9A%84%E5%8C%85%E7%9A%84%E4%B8%8B%E8%BD%BD%E9%97%AE%E9%A2%98/</loc>
+    
+    <lastmod>2018-11-13T12:47:13.126Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/11/18/Python2.7%E7%88%AC%E8%99%AB%E4%BD%BF%E7%94%A8%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2018-11-13T12:46:59.138Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/11/19/%E5%85%B3%E4%BA%8EMac%E8%87%AA%E5%B8%A6%E8%AF%AD%E9%9F%B3%E6%97%B6%E8%80%8C%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%8D%E7%81%B5%E6%97%B6%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
+    
+    <lastmod>2018-11-13T12:46:49.164Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/11/20/Mac%E4%B8%8A%E5%85%B3%E4%BA%8E%E8%B7%AF%E6%AC%A7%E8%AF%8D%E5%85%B8%E7%9A%84%E7%A0%B4%E8%A7%A3%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2018-11-13T12:46:39.393Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/11/20/%E5%85%B3%E4%BA%8Epython%E7%88%AC%E8%99%AB%E4%BB%A3%E7%A0%81%E7%9A%84%E8%BF%90%E8%A1%8C/</loc>
+    
+    <lastmod>2018-11-13T12:46:29.265Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/11/22/%E6%97%A0%E8%A8%80/</loc>
+    
+    <lastmod>2018-11-13T12:46:19.749Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/11/22/%E5%85%B3%E4%BA%8ELinux%E4%B8%8Ewin%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E7%9A%84%E7%AE%80%E8%A6%81%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2018-11-13T12:46:17.080Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/11/22/%E5%85%B3%E4%BA%8EVi-Vim%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E7%9A%84%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2018-11-13T12:46:09.001Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/11/23/%E5%85%B3%E4%BA%8E%E5%9C%A8%E3%80%8A%E7%94%A8python%E5%86%99%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E3%80%8B%E4%B8%80%E4%B9%A6%E4%B8%AD%E7%9A%84%E8%A1%A5%E5%85%85/</loc>
+    
+    <lastmod>2018-11-13T12:46:05.058Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/11/26/%E7%94%A8eclipse%E6%90%AD%E5%BB%BASpark%E7%9A%84%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83(%E5%8D%95%E6%9C%BA)/</loc>
+    
+    <lastmod>2018-11-13T12:46:01.620Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/11/27/%E5%85%B3%E4%BA%8E%E5%9C%A8%E7%AE%80%E8%A6%81%E5%AD%A6%E4%B9%A0Scala%E4%B8%AD%E7%9A%84%E7%96%91%E6%83%91%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2018-11-13T12:45:49.605Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/11/27/%E5%85%B3%E4%BA%8E%E5%9C%A8eclipse%E4%B8%AD%E7%BC%96%E8%AF%91Scala%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8%E7%9A%84%E6%B7%BB%E5%8A%A0%E8%AE%BE%E7%BD%AE/</loc>
+    
+    <lastmod>2018-11-13T12:45:40.224Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/11/28/%E5%90%8D%E4%BA%BA%E6%95%88%E5%BA%94/</loc>
+    
+    <lastmod>2018-11-13T12:45:28.234Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/11/28/%E5%85%B3%E4%BA%8E%E5%9C%A8%E7%94%A8Scala%E7%BC%96%E8%AF%91spark%E4%B8%AD%E7%9A%84reduce%E6%96%B9%E6%B3%95%E8%AE%A1%E7%AE%97%E7%9A%84%E9%97%AE%E9%A2%98%E7%96%91%E6%83%91%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2018-11-13T12:45:23.766Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/11/29/%E5%85%B3%E4%BA%8E%E7%94%A8java%E7%BC%96%E8%AF%91%E7%9A%84mapreduce%E4%B8%8E%E7%94%A8Scala%E7%BC%96%E8%AF%91%E7%9A%84spark%E7%9A%84%E5%AF%B9%E6%AF%94%EF%BC%88%E5%8D%95%E8%AF%8D%E7%BB%9F%E8%AE%A1%E7%9A%84%E4%BE%8B%E5%AD%90%E8%AF%B4%E6%98%8E%EF%BC%89/</loc>
+    
+    <lastmod>2018-11-13T12:45:15.707Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/12/01/%E5%85%B3%E4%BA%8Epython%E4%B8%8B%E8%BD%BDscrapy%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2018-11-13T12:45:04.045Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/12/01/%E5%85%B3%E4%BA%8EMac%E7%BD%91%E9%80%9F%E6%85%A2%E7%9A%84%E5%8E%9F%E5%9B%A0%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2018-11-13T12:44:55.990Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/12/03/%E5%85%B3%E4%BA%8EMac%E5%85%B3%E6%9C%BA%E4%B8%8EiCloud%E7%9A%84%E6%89%93%E4%B8%8D%E5%BC%80%E7%9A%84%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2018-11-13T12:44:47.510Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/12/04/%E5%85%B3%E4%BA%8E%E5%88%A9%E7%94%A8python%E7%88%AC%E8%99%AB%E7%88%AC%E5%8F%96%E5%B0%8F%E8%AF%B4%E7%9A%84%E5%AE%9E%E6%88%98%E4%BE%8B%E5%AD%90/</loc>
+    
+    <lastmod>2018-11-13T12:44:39.504Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/12/07/%E4%BB%8A%E5%90%8E%E7%9A%84%E6%89%93%E7%AE%97/</loc>
+    
+    <lastmod>2018-11-13T12:44:31.681Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/12/08/%E5%85%B3%E4%BA%8E%E5%9C%A8%E5%AD%A6%E4%B9%A0python%E7%88%AC%E8%99%AB%E6%97%B6%E7%9A%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2018-11-13T12:44:28.465Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/01/22/%E5%81%87%E6%9C%9F%E5%B0%8F%E8%AE%B0/</loc>
+    
+    <lastmod>2018-11-13T12:44:18.648Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/03/03/%E9%BA%BB%E6%9C%A8/</loc>
+    
+    <lastmod>2018-11-13T12:44:16.023Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/03/05/python3%E7%88%AC%E5%8F%96%E7%BD%91%E7%BB%9C%E5%9B%BE%E7%89%87%E7%9A%84%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%A1%B9%E7%9B%AE/</loc>
+    
+    <lastmod>2018-11-13T12:44:11.842Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/03/06/%E5%85%B3%E4%BA%8ECharle%E7%9A%84%E7%AE%80%E5%8D%95%E6%8A%93%E5%8C%85%E6%93%8D%E4%BD%9C/</loc>
+    
+    <lastmod>2018-11-13T12:44:03.409Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/03/06/%E5%85%B3%E4%BA%8E%E5%9C%A8%E5%AD%A6%E4%B9%A0python3%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E6%A8%A1%E5%9D%97%E6%97%B6%E7%9A%84%E6%98%93%E6%A8%A1%E7%B3%8A%E7%82%B9/</loc>
+    
+    <lastmod>2018-11-13T12:43:52.391Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/03/08/%E5%85%B3%E4%BA%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89/</loc>
+    
+    <lastmod>2018-11-13T12:43:44.157Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/03/10/%E5%88%A9%E7%94%A8python3%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E7%88%AC%E5%8F%96%E6%88%90%E7%BB%A9/</loc>
+    
+    <lastmod>2018-11-13T12:43:35.684Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/03/12/Mac%E8%A7%A6%E6%91%B8%E6%9D%BF%E5%B0%8F%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2018-11-13T12:43:23.609Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/03/12/%E5%AD%A6%E4%B9%A0python3%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E7%9A%84%E6%80%BB%E7%BB%93/</loc>
+    
+    <lastmod>2018-11-13T12:43:16.226Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/03/12/python3%E7%88%AC%E5%8F%96%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E5%9B%BE%E7%89%87/</loc>
+    
+    <lastmod>2018-11-13T12:43:12.897Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/03/14/%E7%94%A8python3%E7%88%AC%E5%8F%96%E6%96%B0%E5%8A%A0%E5%9D%A1%E8%81%94%E5%90%88%E6%97%A9%E6%8A%A5%E6%96%B0%E9%97%BB%E5%B0%8F%E8%A7%86%E9%A2%91/</loc>
+    
+    <lastmod>2018-11-13T12:43:04.651Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/03/14/%E7%94%A8python3%E7%88%AC%E5%8F%96QQ%E9%9F%B3%E4%B9%90%E5%88%97%E8%A1%A8%E9%9F%B3%E4%B9%90/</loc>
+    
+    <lastmod>2018-11-13T12:42:56.911Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9A%E5%8D%95%E6%A0%B8%E5%A4%84%E7%90%86%E5%99%A8%E3%80%81%E5%A4%9A%E6%A0%B8%E5%A4%84%E7%90%86%E5%99%A8%E3%80%81%E5%A4%9A%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%8E%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/</loc>
+    
+    <lastmod>2018-11-13T12:42:47.921Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E5%B8%A6%E5%AE%BD%E5%8D%95%E4%BD%8D%E6%8D%A2%E7%AE%97%E4%B8%8E%E5%AD%98%E5%82%A8%E5%8D%95%E4%BD%8D%E6%8D%A2%E7%AE%97/</loc>
+    
+    <lastmod>2018-11-13T12:42:35.722Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/03/19/%E7%94%A8python%E5%8F%AF%E8%A7%86%E5%8C%96GitHub%E4%B8%8A%E7%9A%84java%E7%83%AD%E9%97%A8%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</loc>
+    
+    <lastmod>2018-11-13T12:42:24.016Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/03/20/%E7%90%86%E8%A7%A3%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/</loc>
+    
+    <lastmod>2018-11-13T12:42:13.133Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/03/20/%E8%A7%A3%E5%86%B3python%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%97%B6%E7%9A%84UnicodeDecodeError-ascii-codec-can-t-decode-byte-0xd4-in-position-904-ordinal-not-in-range-128-%E9%97%AE%E9%A2%98/</loc>
+    
+    <lastmod>2018-11-13T12:42:09.776Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/03/21/%E5%85%B3%E4%BA%8Eanaconda2%E4%B8%8Eanaconda3%E4%B8%A4%E4%B8%AA%E7%89%88%E6%9C%AC%E7%9A%84%E5%85%B1%E5%AD%98%E9%97%AE%E9%A2%98/</loc>
+    
+    <lastmod>2018-11-13T12:42:04.406Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/03/21/%E7%94%A8python:R%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%AF%E8%A7%86%E5%8C%96%E6%B1%BD%E8%BD%A6%E4%BD%BF%E7%94%A8%E7%87%83%E6%96%99%E6%83%85%E5%86%B5/</loc>
+    
+    <lastmod>2018-11-13T12:41:52.822Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/03/22/Mac%E4%B8%8B%E5%AE%89%E8%A3%85Redis%E4%BB%A5%E5%8F%8A%E5%85%B6%E5%8F%AF%E8%A7%86%E5%8C%96%E5%AE%A2%E6%88%B7%E7%AB%AF/</loc>
+    
+    <lastmod>2018-11-13T12:41:38.827Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/03/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%9A%E8%AE%A4%E8%AF%86%E8%AE%A1%E7%AE%97%E6%9C%BA/</loc>
+    
+    <lastmod>2018-11-13T12:41:26.511Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/03/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%EF%BC%9A%E7%BA%BF%E6%80%A7%E8%A1%A8/</loc>
+    
+    <lastmod>2018-11-13T12:41:16.337Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/03/28/%E5%85%B3%E4%BA%8Ehomebrew%E4%B8%8B%E8%BD%BD%E5%87%BA%E7%8E%B0Error:go:version%20missing%20for%20%20gotools%20resource!%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</loc>
+    
+    <lastmod>2018-11-13T12:41:11.450Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/03/28/%E5%85%B3%E4%BA%8E%E8%A7%A3%E5%86%B3python%E4%B8%ADUnicodeDecodeError-ascii-codec-can-t-decode-byte-0xe8-in-position-67986-ordinal-not-in-range-128-%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
+    
+    <lastmod>2018-11-13T12:40:58.948Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/04/03/Mac%E4%B8%8B%E7%9A%84mysql%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</loc>
+    
+    <lastmod>2018-11-13T12:40:53.527Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/04/03/python3%E7%88%AC%E5%8F%96%E8%B1%86%E7%93%A3Top250%E7%94%B5%E5%BD%B1%E4%BF%A1%E6%81%AF/</loc>
+    
+    <lastmod>2018-11-13T12:40:40.706Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/04/05/%E5%85%B3%E4%BA%8E%E8%AE%B0%E5%BD%95Chromedriver%E7%9A%84selenium-common-exceptions-WebDriverException-Message-chromedriver-executable-needs-to-be-in-PATH-Please-see-https-sites-google-com-a-chromium-org-chromedriver-home/</loc>
+    
+    <lastmod>2018-11-13T12:40:31.485Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/04/08/python3%E7%88%AC%E8%99%AB%EF%BC%9A%E7%88%AC%E5%8F%96%E6%B7%98%E5%AE%9D%E5%95%86%E5%93%81%E4%BF%A1%E6%81%AF%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95/</loc>
+    
+    <lastmod>2018-11-13T12:40:20.042Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/04/13/%E5%85%B3%E4%BA%8Eeclipse%E7%9A%84%E9%A3%8E%E6%A0%BC%E4%B8%8E%E4%B8%BB%E9%A2%98/</loc>
+    
+    <lastmod>2018-11-13T12:40:10.727Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/04/13/%E5%85%B3%E4%BA%8E%E5%9C%A8eclipse%E4%B8%AD%E8%BF%90%E8%A1%8Cscrapy%E9%A1%B9%E7%9B%AE/</loc>
+    
+    <lastmod>2018-11-13T12:39:58.068Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/04/17/%E5%85%B3%E4%BA%8EParallels-Desktop13%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2018-11-13T12:39:47.552Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/04/19/%E6%90%AD%E5%BB%BADjango%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</loc>
+    
+    <lastmod>2018-11-13T12:39:39.717Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/04/21/%E5%85%B3%E4%BA%8EJupyter-Notebook%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2018-11-13T12:39:36.380Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/04/27/%E5%85%B3%E4%BA%8EMac%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%8F%8Afn%E9%94%AE%E8%AE%BE%E7%BD%AE/</loc>
+    
+    <lastmod>2018-11-13T12:39:24.109Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/04/28/python3%E7%88%AC%E8%99%AB%E4%B8%8EGUI%EF%BC%9A%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%9A%84%E6%90%9C%E7%B4%A2%E5%AE%9E%E7%94%A8%E5%B0%8F%E5%B7%A5%E5%85%B7/</loc>
+    
+    <lastmod>2018-11-13T12:39:16.063Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/04/29/%E6%88%91%E5%AF%B9%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BF%83%E5%BE%97%E8%A7%81%E8%A7%A3/</loc>
+    
+    <lastmod>2018-11-13T12:39:05.774Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/05/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</loc>
+    
+    <lastmod>2018-11-13T12:39:02.212Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/05/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E4%B9%A6%E7%B1%8D%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%AB/</loc>
+    
+    <lastmod>2018-11-13T12:38:54.095Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/05/05/python3%E7%88%AC%E5%8F%96%E6%8B%89%E5%8B%BE%E7%BD%91%E8%81%8C%E4%BD%8D%E4%BF%A1%E6%81%AF/</loc>
+    
+    <lastmod>2018-11-13T12:38:40.164Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/05/07/%E8%BD%AC-%E4%BA%94%E5%A4%A7%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/</loc>
+    
+    <lastmod>2018-11-13T12:38:31.484Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/05/07/python3%E7%88%AC%E8%99%AB%E4%B8%8EGUI-%E5%9F%BA%E4%BA%8E%E6%9C%89%E9%81%93%E8%AF%8D%E5%85%B8%E7%9A%84%E8%AF%8D%E5%85%B8%E5%B0%8F%E5%B7%A5%E5%85%B7/</loc>
+    
+    <lastmod>2018-11-13T12:38:20.962Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/05/10/%E7%90%86%E8%A7%A3%E5%B8%B8%E7%94%A8%E4%BC%A0%E7%BB%9F%E7%AE%97%E6%B3%95%E7%9A%84%E5%90%88%E9%9B%86%E8%B5%84%E6%BA%90%E6%80%BB%E7%BB%93/</loc>
+    
+    <lastmod>2018-11-13T12:38:10.731Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/05/29/Mac%E4%B8%8B%E8%BD%BD2018CAD%E7%A0%B4%E8%A7%A3/</loc>
+    
+    <lastmod>2018-11-13T12:38:07.357Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/06/04/%E5%9C%A8Jupyter-Notebook%E4%B8%AD%E5%AE%89%E8%A3%85%E5%A4%9A%E7%A7%8D%E8%AF%AD%E8%A8%80%E5%86%85%E6%A0%B8/</loc>
+    
+    <lastmod>2018-11-13T12:37:57.689Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/06/25/%E7%BB%93%E5%90%88Chrome%E6%8F%92%E4%BB%B6%E5%BF%AB%E9%80%9F%E4%B8%8B%E8%BD%BD%E7%99%BE%E5%BA%A6%E4%BA%91%E6%96%87%E4%BB%B6/</loc>
+    
+    <lastmod>2018-11-13T12:37:48.929Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/06/27/Excel%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2018-11-13T12:37:40.408Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/06/29/%E5%8F%8D%E6%80%9D%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2018-11-13T12:37:31.153Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/07/18/%E4%BD%BF%E7%94%A8PS%E8%BD%AF%E4%BB%B6%E7%9A%84%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2018-11-13T12:37:27.261Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/07/18/%E5%BF%83%E5%A3%B0/</loc>
+    
+    <lastmod>2018-11-13T12:37:23.800Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/07/24/python3%E7%88%AC%E8%99%AB%E4%B8%8EGUI:%E7%88%AC%E5%8F%96%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91/</loc>
+    
+    <lastmod>2018-11-13T12:37:20.752Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/08/08/Mac%E4%B8%8B%E7%9A%84matploylib%E7%BB%98%E5%9B%BE%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/</loc>
+    
+    <lastmod>2018-11-13T12:37:07.443Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/08/13/pandas-Dataframe-plot-%E5%8F%8A%E6%95%B0%E5%80%BC%E5%88%87%E7%89%87%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2018-11-13T12:36:53.017Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/08/15/%E4%B8%BAHexo%E5%8D%9A%E5%AE%A2-next%E4%B8%BB%E9%A2%98-%E5%8A%A0%E4%B8%8A%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</loc>
+    
+    <lastmod>2018-11-13T12:36:40.111Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/08/16/%E5%85%B3%E4%BA%8Epython%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E8%B0%83%E7%94%A8%E6%96%B9%E6%B3%95%E7%9A%84%E7%AE%80%E5%8D%95%E6%80%9D%E8%80%83/</loc>
+    
+    <lastmod>2018-11-13T12:36:29.224Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/08/16/pandas-Series-str-get-%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2018-11-13T12:36:25.217Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/08/17/python%E7%BC%96%E7%A8%8Bmap%E5%87%BD%E6%95%B0%E5%8F%8Aas-matrix%E5%87%BD%E6%95%B0%E7%AE%80%E6%98%8E/</loc>
+    
+    <lastmod>2018-11-13T12:36:15.771Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/08/31/duet-display%E5%9C%A8%E5%8D%87%E7%BA%A7Macos-13-6%E4%B9%8B%E5%90%8E%E5%B4%A9%E6%BA%83%E7%9A%84%E5%8F%AF%E8%A1%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</loc>
+    
+    <lastmod>2018-11-13T12:36:05.712Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/08/20/%E5%85%B3%E4%BA%8E%E9%94%99%E8%AF%AF-ValueError-Found-array-with-0-sample-s-shape-0-4-while-a-minimum-of-1-is-required/</loc>
+    
+    <lastmod>2018-11-13T12:36:02.678Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/09/07/%E5%85%B3%E4%BA%8E%E9%94%99%E8%AF%AFError-Permission-denied-dir-s-mkdir-usr-local-Frameworks/</loc>
+    
+    <lastmod>2018-11-13T12:35:36.905Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/09/15/%E6%8E%A5%E5%8F%97%E2%80%9C%E5%A4%A7%E5%92%8C%E2%80%9D%EF%BC%9F/</loc>
+    
+    <lastmod>2018-11-13T12:35:24.331Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/09/16/%E5%88%9D%E5%AD%A6%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/</loc>
+    
+    <lastmod>2018-11-13T12:35:20.194Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/09/18/%E5%9C%A8Macbook%E4%B8%8A%E7%8E%A9PS-win%E6%9C%AC%E6%B8%B8%E6%88%8F/</loc>
+    
+    <lastmod>2018-11-13T12:35:08.283Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/09/27/%E8%AF%BB%E8%A5%BF%E6%B8%B8%EF%BC%8C%E5%BE%97%E2%80%9C%E7%9C%9F%E7%BB%8F%E2%80%9D/</loc>
+    
+    <lastmod>2018-11-13T12:34:58.442Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/09/28/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%EF%BC%8C%E8%87%AA%E5%BB%BAVPS-SS%E5%BA%94%E7%94%A8/</loc>
+    
+    <lastmod>2018-11-13T12:34:53.044Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/09/29/%E6%97%85%E7%A8%8B/</loc>
+    
+    <lastmod>2018-11-13T12:34:43.979Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/10/11/Mac%E5%8D%87%E7%BA%A7%E5%88%B0Mojave%E7%89%88%E6%9C%AC%E4%B9%8B%E5%90%8E%E7%9A%84Safari%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/</loc>
+    
+    <lastmod>2018-11-13T12:34:39.643Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/10/11/%E5%85%B3%E4%BA%8E%E9%94%99%E8%AF%AFERROR-Asset-render-failed-css-main-css/</loc>
+    
+    <lastmod>2018-11-13T12:34:29.092Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/10/12/Hexo%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E7%8B%AC%E7%AB%8B%E5%9F%9F%E5%90%8D%E4%BB%A5%E5%8F%8A%E8%BD%AC%E7%A7%BB%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    
+    <lastmod>2018-11-13T12:34:20.656Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/10/13/%E5%90%BE%E9%81%93/</loc>
+    
+    <lastmod>2018-11-13T12:34:12.149Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/10/15/%E6%80%9D%E8%80%83%E6%84%8F%E4%B9%89/</loc>
+    
+    <lastmod>2018-11-13T12:34:08.069Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/10/15/Mac%E4%B8%8A%E4%B8%8B%E8%BD%BDxgboost/</loc>
+    
+    <lastmod>2018-11-13T12:34:01.945Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/10/16/Mac%E4%B8%8B%E5%AE%89%E8%A3%85lightGBM/</loc>
+    
+    <lastmod>2018-11-13T12:33:44.057Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/10/18/python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97%EF%BC%9A%E9%A2%84%E6%B5%8B%E6%88%BF%E4%BB%B7%E5%B9%B6%E4%B8%94%E5%8F%AF%E8%A7%86%E5%8C%96/</loc>
+    
+    <lastmod>2018-11-13T12:33:17.698Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/10/19/python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97%EF%BC%9A%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%AE%97%E6%B3%95%E7%9A%84%E5%AE%9E%E7%8E%B0/</loc>
+    
+    <lastmod>2018-11-13T12:33:00.528Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/10/21/python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97%EF%BC%9AK%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95(KNN)%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8F%8A%E5%BA%94%E7%94%A8/</loc>
+    
+    <lastmod>2018-11-13T12:32:47.294Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/10/21/%E8%A7%A3%E5%86%B3eclipse%E4%B8%AD%E8%BF%90%E8%A1%8CDjango%E6%97%B6%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AFDjango-not-found/</loc>
+    
+    <lastmod>2018-11-13T12:32:36.818Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/10/23/python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97%EF%BC%9A%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA-SVM-%E7%9A%84%E5%BA%94%E7%94%A8%E4%BB%A5%E5%8F%8A%E5%AE%9E%E7%8E%B0/</loc>
+    
+    <lastmod>2018-11-13T12:32:18.893Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/10/23/%E5%85%B3%E4%BA%8E%E5%9C%A8Mac%E4%B8%8B%E7%9A%84python%E6%96%87%E5%AD%97%E8%BD%AC%E8%AF%AD%E9%9F%B3%E5%BA%93pyttsx3/</loc>
+    
+    <lastmod>2018-11-13T12:32:08.464Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/10/26/python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97%EF%BC%9AK-%E5%9D%87%E5%80%BC%E7%AE%97%E6%B3%95(K-Means)%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8F%8A%E5%BA%94%E7%94%A8/</loc>
+    
+    <lastmod>2018-11-13T12:31:53.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/10/30/python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97%EF%BC%9A%E5%9D%87%E5%80%BC%E5%B9%B3%E7%A7%BB(Mean%20Shift)%E7%AE%97%E6%B3%95%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8F%8A%E5%BA%94%E7%94%A8/</loc>
+    
+    <lastmod>2018-11-13T12:31:42.279Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/11/07/Kaggle%E6%AF%94%E8%B5%9B%EF%BC%9A%E6%95%B0%E5%AD%97%E8%AF%86%E5%88%AB%E7%9A%84%E5%A4%9A%E7%A7%8D%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/</loc>
+    
+    <lastmod>2018-11-13T12:31:33.382Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/11/08/Python%E7%BB%93%E5%90%88OCR%E4%BB%A5%E5%8F%8AOpencv%E6%8F%90%E5%8F%96%E5%B9%B6%E4%B8%94%E5%AE%9E%E6%97%B6%E7%BF%BB%E8%AF%91%E5%9B%BE%E7%89%87%E5%86%85%E5%AE%B9/</loc>
+    
+    <lastmod>2018-11-13T12:31:21.205Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/11/09/%EF%BC%88Mac%EF%BC%89Julia%E7%9A%84%E4%B8%8B%E8%BD%BD%E5%8F%8A%E7%BB%93%E5%90%88notebook%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2018-11-13T12:31:07.561Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2018/11/11/Hexo%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E5%A4%96%E9%93%BE%E4%BB%8E%E4%B8%83%E7%89%9B%E4%BA%91%E7%A7%BB%E8%87%B3%E8%85%BE%E8%AE%AF%E4%BA%91/</loc>
+    
+    <lastmod>2018-11-13T12:30:55.902Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://liujunjie11.github.io/2018/11/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/</loc>
     
-    <lastmod>2018-11-13T08:51:40.017Z</lastmod>
+    <lastmod>2018-11-13T12:30:44.612Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/09/26/%E5%9C%A8%E8%87%AA%E5%B7%B1%E7%9A%84%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2%EF%BC%8C%E7%AC%AC%E4%B8%80%E7%AF%87%E6%80%BB%E5%BE%97%E8%AF%B4%E4%B8%80%E4%BA%9B%E4%BB%80%E4%B9%88/</loc>
+    
+    <lastmod>2018-11-13T12:26:25.185Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/09/27/%E8%B0%88%E4%B8%93%E5%AE%B6%E7%BB%84%E6%9D%A5%E5%AD%A6%E6%A0%A1%E6%A3%80%E6%9F%A5%E4%B8%8E%E2%80%9C%E5%88%A9%E2%80%9D/</loc>
+    
+    <lastmod>2018-11-13T12:26:18.230Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/09/28/%E5%A4%A7%E9%81%93%E8%87%B3%E7%AE%80/</loc>
+    
+    <lastmod>2018-11-13T12:25:37.053Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/10/01/%E7%9C%8B%E7%94%B5%E5%BD%B1%E2%80%9C%E9%A3%9E%E8%B6%8A%E7%96%AF%E4%BA%BA%E9%99%A2%E2%80%9D%E6%9C%89%E6%84%9F/</loc>
+    
+    <lastmod>2018-11-13T12:25:03.237Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/10/02/%E6%9C%89%E6%84%9F/</loc>
+    
+    <lastmod>2018-11-13T12:24:59.889Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/10/05/%E6%80%9D%E5%AD%A6%EF%BC%8C%E6%80%9D%E5%B7%B1/</loc>
+    
+    <lastmod>2018-11-13T12:24:55.352Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/10/06/%E8%A7%82%E8%AF%BB%E2%80%9C%E4%B9%9D%E8%AF%84%E2%80%9D%E6%9C%89%E6%84%9F/</loc>
+    
+    <lastmod>2018-11-13T12:24:25.885Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujunjie11.github.io/2017/09/25/hello-world/</loc>
+    
+    <lastmod>2018-11-13T12:00:05.198Z</lastmod>
     
   </url>
   
@@ -12,1098 +1104,6 @@
     <loc>https://liujunjie11.github.io/about/index.html</loc>
     
     <lastmod>2018-11-13T07:41:00.977Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/11/11/Hexo%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E5%A4%96%E9%93%BE%E4%BB%8E%E4%B8%83%E7%89%9B%E4%BA%91%E7%A7%BB%E8%87%B3%E8%85%BE%E8%AE%AF%E4%BA%91/</loc>
-    
-    <lastmod>2018-11-12T11:00:14.852Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/09/26/%E5%9C%A8%E8%87%AA%E5%B7%B1%E7%9A%84%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2%EF%BC%8C%E7%AC%AC%E4%B8%80%E7%AF%87%E6%80%BB%E5%BE%97%E8%AF%B4%E4%B8%80%E4%BA%9B%E4%BB%80%E4%B9%88/</loc>
-    
-    <lastmod>2018-11-12T10:57:52.648Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/09/25/SS%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%8E%E4%B8%8B%E8%BD%BD/</loc>
-    
-    <lastmod>2018-11-12T10:57:46.409Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/09/26/%EF%BC%88Mac%E4%B8%8B%EF%BC%89%E7%94%A8Hexo3-X-next5-1-2%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%AE%89%E8%A3%85%EF%BC%8C%E6%AD%A3%E7%A1%AE%E9%85%8D%E7%BD%AE%EF%BC%8C%E9%83%A8%E7%BD%B2%E8%B0%B7%E6%AD%8C%EF%BC%8C%E7%BB%93%E5%90%88%E7%94%A8%E4%B8%83%E7%89%9B%E4%BA%91%E5%86%99%E4%BD%9C/</loc>
-    
-    <lastmod>2018-11-12T10:57:34.437Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/09/27/Mac%E4%B8%8B%E8%A7%A3%E5%86%B3Matlab-License-Manager-Error-8%E9%97%AE%E9%A2%98/</loc>
-    
-    <lastmod>2018-11-12T10:57:16.758Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/09/27/Mac%E4%B8%8BVirtualBox%E8%99%9A%E6%8B%9F%E6%9C%BACentos7%E9%85%8D%E7%BD%AEWifi%EF%BC%8C%E7%94%A8%E4%BD%A9%E5%B8%A6%E7%9A%84%E7%81%AB%E7%8B%90%E7%BF%BB%E5%A2%99/</loc>
-    
-    <lastmod>2018-11-12T10:57:06.259Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/09/27/Hexo-%E5%8D%9A%E5%AE%A2%E5%9C%A8%E8%B0%B7%E6%AD%8C%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E4%B8%AD%E7%9A%84%E4%BC%98%E5%8C%96%EF%BC%8C%E7%9B%AE%E6%A0%87%EF%BC%9A%E4%B8%8A%E5%A4%B4%E6%9D%A1/</loc>
-    
-    <lastmod>2018-11-12T10:56:57.106Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/09/30/hexo-%E5%8D%9A%E5%AE%A2%E7%BB%93%E5%90%88%E4%B8%83%E7%89%9B%E4%BA%91%E8%B6%85%E9%93%BE%E6%8E%A5%E8%A7%86%E9%A2%91%E4%B8%8E%E9%9F%B3%E4%B9%90/</loc>
-    
-    <lastmod>2018-11-12T10:56:44.508Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/09/30/eclipse%E4%B8%8B%E7%9B%B4%E6%8E%A5%E8%AF%BB%E5%8F%96Hadoop%E6%BA%90%E7%A0%81%E9%85%8D%E7%BD%AE/</loc>
-    
-    <lastmod>2018-11-12T10:56:34.645Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/10/01/(Mac%E4%B8%8B%EF%BC%89hadoop2-8-1%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E7%9A%84%E6%90%AD%E5%BB%BA%EF%BC%8C%E4%BB%A5%E5%8F%8A%E7%94%A8eclipse%E5%BC%80%E5%8F%91Hadoop/</loc>
-    
-    <lastmod>2018-11-12T10:56:23.850Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/10/09/%EF%BC%88%E5%AE%89%E5%8D%93%EF%BC%89%E6%89%8B%E6%9C%BA%E5%88%A9%E7%94%A8%E5%85%8D%E8%B4%B9%E7%9A%84SuperVPN%E7%BF%BB%E5%A2%99/</loc>
-    
-    <lastmod>2018-11-12T10:56:08.267Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/10/09/%E5%88%A9%E7%94%A8%E5%85%8D%E8%B4%B9%E7%9A%84SuperVPN%E7%BF%BB%E5%A2%99/</loc>
-    
-    <lastmod>2018-11-12T10:55:59.705Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/10/11/%EF%BC%88%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E4%B8%8B%EF%BC%89%E6%9B%B4%E6%94%B9%E5%8D%8E%E4%B8%BA%E6%89%8B%E6%9C%BA%E8%A7%A3%E9%94%81%E5%B1%8F%E5%B9%95%E5%AF%86%E7%A0%81/</loc>
-    
-    <lastmod>2018-11-12T10:55:47.189Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/10/16/%EF%BC%88Mac%E4%B8%8B%EF%BC%89Folx5%20Pro%E7%A0%B4%E8%A7%A3%E7%89%88%E4%B8%8B%E8%BD%BD%E4%BB%A5%E5%8F%8A%E7%94%A8%E5%85%B6%E4%B8%8B%E8%BD%BD%E7%99%BE%E5%BA%A6%E4%BA%91%E8%B5%84%E6%BA%90/</loc>
-    
-    <lastmod>2018-11-12T10:55:37.611Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/10/22/%EF%BC%88Mac%E4%B8%8B%EF%BC%89Ummy%20Video%20Downloader%20pro%E4%B8%8B%E8%BD%BD%E4%BB%A5%E5%8F%8A%E7%94%A8%E5%85%B6%E6%8F%92%E4%BB%B6%E9%85%8D%E5%90%88%E4%B8%8B%E8%BD%BDYouTube%E8%A7%86%E9%A2%91%20/</loc>
-    
-    <lastmod>2018-11-12T10:55:24.432Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/10/24/Mac%E4%B8%8A%E8%A7%A3%E5%86%B3Mackeeper%E7%9A%84%E6%B5%81%E6%B0%93%E4%BD%9C%E4%B8%BA%EF%BC%8C%E4%BB%A5%E5%8F%8A%E4%B8%8E%E5%85%B6%E5%AF%BC%E8%87%B4%E7%9A%84CPU%E5%BC%82%E5%B8%B8/</loc>
-    
-    <lastmod>2018-11-12T10:55:14.897Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/10/25/Mac%E4%B8%8B%EF%BC%89eclipse%E5%BC%80%E5%8F%91Hadoop%E6%97%B6%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/</loc>
-    
-    <lastmod>2018-11-12T10:55:03.839Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/10/26/Mac%E8%87%AA%E5%B8%A6%E5%AD%97%E5%85%B8%E7%9A%84%E6%89%A9%E5%B1%95%E4%B8%8E%E8%AF%AD%E9%9F%B3%E8%AE%BE%E7%BD%AE/</loc>
-    
-    <lastmod>2018-11-12T10:54:53.610Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/10/26/%EF%BC%88Mac%E4%B8%8B%EF%BC%89docker%E6%90%AD%E5%BB%BAHadoop%E9%9B%86%E7%BE%A4/</loc>
-    
-    <lastmod>2018-11-12T10:54:41.592Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/10/31/MacBookPro%E8%BF%9E%E6%8E%A5Wi-Fi%E5%BC%82%E5%B8%B8%E9%97%AE%E9%A2%98/</loc>
-    
-    <lastmod>2018-11-12T10:54:21.159Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/11/01/MacBookPro%E4%B8%8A%E7%9A%84Multi-Touch-Bar%E7%BC%A9%E6%94%BE%E9%97%AE%E9%A2%98/</loc>
-    
-    <lastmod>2018-11-12T10:54:17.638Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/11/04/iPad-%E4%B8%8A%E7%9A%84%E4%BB%A3%E7%90%86%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</loc>
-    
-    <lastmod>2018-11-12T10:54:07.324Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/11/04/%E5%85%B3%E4%BA%8EMacOS-High-Sierra%E4%B8%ADOutlook%E4%B8%8D%E5%8F%AF%E7%94%A8%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
-    
-    <lastmod>2018-11-12T10:54:03.256Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/11/06/%E5%AD%A6%E4%B9%A0Hadoop%E7%9A%84%E4%B9%A6%E7%B1%8D%E5%BC%95%E8%8D%90/</loc>
-    
-    <lastmod>2018-11-12T10:53:59.802Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/11/07/%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</loc>
-    
-    <lastmod>2018-11-12T10:53:55.476Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/11/10/%E5%85%B3%E4%BA%8EHadoop%E5%9C%A8%E8%BF%9E%E6%8E%A5eclipse%E4%B8%AD%E5%BC%80%E5%8F%91%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
-    
-    <lastmod>2018-11-12T10:53:46.326Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/11/11/iCould%E7%9A%84%E7%AE%80%E5%8D%95%E7%90%86%E8%A7%A3/</loc>
-    
-    <lastmod>2018-11-12T10:53:35.348Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/11/14/%E5%88%A9%E7%94%A8YamDispalyFree%E5%85%8D%E8%B4%B9%E5%AE%9E%E7%8E%B0Mac%E4%B8%8EiPad%E7%9A%84%E5%B1%8F%E5%B9%95%E6%89%A9%E5%B1%95/</loc>
-    
-    <lastmod>2018-11-12T10:53:31.809Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/11/15/%E5%85%B3%E4%BA%8E%E5%9C%A8iOS%E7%B3%BB%E7%BB%9F%E4%B8%8A%E5%BF%AB%E9%80%9F%E4%B8%8B%E8%BD%BDYouTube%E4%B8%8A%E7%9A%84%E8%A7%86%E9%A2%91%E4%BB%A5%E5%8F%8A%E9%9F%B3%E4%B9%90/</loc>
-    
-    <lastmod>2018-11-12T10:53:23.842Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/11/18/Python2.7%E7%88%AC%E8%99%AB%E4%BD%BF%E7%94%A8%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</loc>
-    
-    <lastmod>2018-11-12T10:53:10.487Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/11/19/%E5%85%B3%E4%BA%8EMac%E8%87%AA%E5%B8%A6%E8%AF%AD%E9%9F%B3%E6%97%B6%E8%80%8C%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%8D%E7%81%B5%E6%97%B6%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
-    
-    <lastmod>2018-11-12T10:53:00.887Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/11/20/Mac%E4%B8%8A%E5%85%B3%E4%BA%8E%E8%B7%AF%E6%AC%A7%E8%AF%8D%E5%85%B8%E7%9A%84%E7%A0%B4%E8%A7%A3%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</loc>
-    
-    <lastmod>2018-11-12T10:52:57.175Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/11/20/%E5%85%B3%E4%BA%8Epython%E7%88%AC%E8%99%AB%E4%BB%A3%E7%A0%81%E7%9A%84%E8%BF%90%E8%A1%8C/</loc>
-    
-    <lastmod>2018-11-12T10:52:46.269Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/11/22/%E5%85%B3%E4%BA%8ELinux%E4%B8%8Ewin%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E7%9A%84%E7%AE%80%E8%A6%81%E8%AE%B0%E5%BD%95/</loc>
-    
-    <lastmod>2018-11-12T10:52:40.152Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/11/22/%E5%85%B3%E4%BA%8EVi-Vim%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E7%9A%84%E8%AE%B0%E5%BD%95/</loc>
-    
-    <lastmod>2018-11-12T10:52:30.243Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/11/23/%E5%85%B3%E4%BA%8E%E5%9C%A8%E3%80%8A%E7%94%A8python%E5%86%99%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E3%80%8B%E4%B8%80%E4%B9%A6%E4%B8%AD%E7%9A%84%E8%A1%A5%E5%85%85/</loc>
-    
-    <lastmod>2018-11-12T10:52:15.952Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/11/26/%E7%94%A8eclipse%E6%90%AD%E5%BB%BASpark%E7%9A%84%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83(%E5%8D%95%E6%9C%BA)/</loc>
-    
-    <lastmod>2018-11-12T10:52:04.582Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/11/27/%E5%85%B3%E4%BA%8E%E5%9C%A8%E7%AE%80%E8%A6%81%E5%AD%A6%E4%B9%A0Scala%E4%B8%AD%E7%9A%84%E7%96%91%E6%83%91%E8%AE%B0%E5%BD%95/</loc>
-    
-    <lastmod>2018-11-12T10:51:51.560Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/11/27/%E5%85%B3%E4%BA%8E%E5%9C%A8eclipse%E4%B8%AD%E7%BC%96%E8%AF%91Scala%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8%E7%9A%84%E6%B7%BB%E5%8A%A0%E8%AE%BE%E7%BD%AE/</loc>
-    
-    <lastmod>2018-11-12T10:50:08.087Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/11/28/%E5%90%8D%E4%BA%BA%E6%95%88%E5%BA%94/</loc>
-    
-    <lastmod>2018-11-12T10:49:57.676Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/11/28/%E5%85%B3%E4%BA%8E%E5%9C%A8%E7%94%A8Scala%E7%BC%96%E8%AF%91spark%E4%B8%AD%E7%9A%84reduce%E6%96%B9%E6%B3%95%E8%AE%A1%E7%AE%97%E7%9A%84%E9%97%AE%E9%A2%98%E7%96%91%E6%83%91%E8%AE%B0%E5%BD%95/</loc>
-    
-    <lastmod>2018-11-12T10:49:54.424Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/11/29/%E5%85%B3%E4%BA%8E%E7%94%A8java%E7%BC%96%E8%AF%91%E7%9A%84mapreduce%E4%B8%8E%E7%94%A8Scala%E7%BC%96%E8%AF%91%E7%9A%84spark%E7%9A%84%E5%AF%B9%E6%AF%94%EF%BC%88%E5%8D%95%E8%AF%8D%E7%BB%9F%E8%AE%A1%E7%9A%84%E4%BE%8B%E5%AD%90%E8%AF%B4%E6%98%8E%EF%BC%89/</loc>
-    
-    <lastmod>2018-11-12T10:49:47.633Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/12/01/%E5%85%B3%E4%BA%8Epython%E4%B8%8B%E8%BD%BDscrapy%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</loc>
-    
-    <lastmod>2018-11-12T10:49:37.544Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/12/01/%E5%85%B3%E4%BA%8EMac%E7%BD%91%E9%80%9F%E6%85%A2%E7%9A%84%E5%8E%9F%E5%9B%A0%E8%AE%B0%E5%BD%95/</loc>
-    
-    <lastmod>2018-11-12T10:49:28.477Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/12/03/%E5%85%B3%E4%BA%8EMac%E5%85%B3%E6%9C%BA%E4%B8%8EiCloud%E7%9A%84%E6%89%93%E4%B8%8D%E5%BC%80%E7%9A%84%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</loc>
-    
-    <lastmod>2018-11-12T10:49:24.887Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/12/04/%E5%85%B3%E4%BA%8E%E5%88%A9%E7%94%A8python%E7%88%AC%E8%99%AB%E7%88%AC%E5%8F%96%E5%B0%8F%E8%AF%B4%E7%9A%84%E5%AE%9E%E6%88%98%E4%BE%8B%E5%AD%90/</loc>
-    
-    <lastmod>2018-11-12T10:49:20.716Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/12/08/%E5%85%B3%E4%BA%8E%E5%9C%A8%E5%AD%A6%E4%B9%A0python%E7%88%AC%E8%99%AB%E6%97%B6%E7%9A%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</loc>
-    
-    <lastmod>2018-11-12T10:49:08.596Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/03/03/%E9%BA%BB%E6%9C%A8/</loc>
-    
-    <lastmod>2018-11-12T10:49:01.264Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/03/05/python3%E7%88%AC%E5%8F%96%E7%BD%91%E7%BB%9C%E5%9B%BE%E7%89%87%E7%9A%84%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%A1%B9%E7%9B%AE/</loc>
-    
-    <lastmod>2018-11-12T10:48:54.957Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/03/06/%E5%85%B3%E4%BA%8ECharle%E7%9A%84%E7%AE%80%E5%8D%95%E6%8A%93%E5%8C%85%E6%93%8D%E4%BD%9C/</loc>
-    
-    <lastmod>2018-11-12T10:48:44.416Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/03/06/%E5%85%B3%E4%BA%8E%E5%9C%A8%E5%AD%A6%E4%B9%A0python3%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E6%A8%A1%E5%9D%97%E6%97%B6%E7%9A%84%E6%98%93%E6%A8%A1%E7%B3%8A%E7%82%B9/</loc>
-    
-    <lastmod>2018-11-12T10:48:33.865Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/03/08/%E5%85%B3%E4%BA%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89/</loc>
-    
-    <lastmod>2018-11-12T10:48:27.363Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/03/10/%E5%88%A9%E7%94%A8python3%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E7%88%AC%E5%8F%96%E6%88%90%E7%BB%A9/</loc>
-    
-    <lastmod>2018-11-12T10:48:13.841Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/03/12/Mac%E8%A7%A6%E6%91%B8%E6%9D%BF%E5%B0%8F%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</loc>
-    
-    <lastmod>2018-11-12T10:47:03.909Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/03/12/%E5%AD%A6%E4%B9%A0python3%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E7%9A%84%E6%80%BB%E7%BB%93/</loc>
-    
-    <lastmod>2018-11-12T10:46:59.488Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/03/12/python3%E7%88%AC%E5%8F%96%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E5%9B%BE%E7%89%87/</loc>
-    
-    <lastmod>2018-11-12T10:46:55.860Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/03/14/%E7%94%A8python3%E7%88%AC%E5%8F%96%E6%96%B0%E5%8A%A0%E5%9D%A1%E8%81%94%E5%90%88%E6%97%A9%E6%8A%A5%E6%96%B0%E9%97%BB%E5%B0%8F%E8%A7%86%E9%A2%91/</loc>
-    
-    <lastmod>2018-11-12T10:46:46.367Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/03/14/%E7%94%A8python3%E7%88%AC%E5%8F%96QQ%E9%9F%B3%E4%B9%90%E5%88%97%E8%A1%A8%E9%9F%B3%E4%B9%90/</loc>
-    
-    <lastmod>2018-11-12T10:46:35.240Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9A%E5%8D%95%E6%A0%B8%E5%A4%84%E7%90%86%E5%99%A8%E3%80%81%E5%A4%9A%E6%A0%B8%E5%A4%84%E7%90%86%E5%99%A8%E3%80%81%E5%A4%9A%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%8E%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/</loc>
-    
-    <lastmod>2018-11-12T10:46:25.739Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E5%B8%A6%E5%AE%BD%E5%8D%95%E4%BD%8D%E6%8D%A2%E7%AE%97%E4%B8%8E%E5%AD%98%E5%82%A8%E5%8D%95%E4%BD%8D%E6%8D%A2%E7%AE%97/</loc>
-    
-    <lastmod>2018-11-12T10:46:08.901Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/03/19/%E7%94%A8python%E5%8F%AF%E8%A7%86%E5%8C%96GitHub%E4%B8%8A%E7%9A%84java%E7%83%AD%E9%97%A8%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</loc>
-    
-    <lastmod>2018-11-12T10:46:04.072Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/03/20/%E7%90%86%E8%A7%A3%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/</loc>
-    
-    <lastmod>2018-11-12T10:45:51.393Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/03/20/%E8%A7%A3%E5%86%B3python%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%97%B6%E7%9A%84UnicodeDecodeError-ascii-codec-can-t-decode-byte-0xd4-in-position-904-ordinal-not-in-range-128-%E9%97%AE%E9%A2%98/</loc>
-    
-    <lastmod>2018-11-12T10:45:42.493Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/03/21/%E5%85%B3%E4%BA%8Eanaconda2%E4%B8%8Eanaconda3%E4%B8%A4%E4%B8%AA%E7%89%88%E6%9C%AC%E7%9A%84%E5%85%B1%E5%AD%98%E9%97%AE%E9%A2%98/</loc>
-    
-    <lastmod>2018-11-12T10:45:36.237Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/03/21/%E7%94%A8python:R%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%AF%E8%A7%86%E5%8C%96%E6%B1%BD%E8%BD%A6%E4%BD%BF%E7%94%A8%E7%87%83%E6%96%99%E6%83%85%E5%86%B5/</loc>
-    
-    <lastmod>2018-11-12T10:45:21.661Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/03/22/Mac%E4%B8%8B%E5%AE%89%E8%A3%85Redis%E4%BB%A5%E5%8F%8A%E5%85%B6%E5%8F%AF%E8%A7%86%E5%8C%96%E5%AE%A2%E6%88%B7%E7%AB%AF/</loc>
-    
-    <lastmod>2018-11-12T10:45:09.689Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/03/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%9A%E8%AE%A4%E8%AF%86%E8%AE%A1%E7%AE%97%E6%9C%BA/</loc>
-    
-    <lastmod>2018-11-12T10:44:59.366Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/03/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%EF%BC%9A%E7%BA%BF%E6%80%A7%E8%A1%A8/</loc>
-    
-    <lastmod>2018-11-12T10:44:54.148Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/03/28/%E5%85%B3%E4%BA%8Ehomebrew%E4%B8%8B%E8%BD%BD%E5%87%BA%E7%8E%B0Error:go:version%20missing%20for%20%20gotools%20resource!%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</loc>
-    
-    <lastmod>2018-11-12T10:44:50.054Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/03/28/%E5%85%B3%E4%BA%8E%E8%A7%A3%E5%86%B3python%E4%B8%ADUnicodeDecodeError-ascii-codec-can-t-decode-byte-0xe8-in-position-67986-ordinal-not-in-range-128-%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
-    
-    <lastmod>2018-11-12T10:44:45.893Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/04/03/Mac%E4%B8%8B%E7%9A%84mysql%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</loc>
-    
-    <lastmod>2018-11-12T10:44:40.712Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/04/03/python3%E7%88%AC%E5%8F%96%E8%B1%86%E7%93%A3Top250%E7%94%B5%E5%BD%B1%E4%BF%A1%E6%81%AF/</loc>
-    
-    <lastmod>2018-11-12T10:44:31.718Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/04/05/%E5%85%B3%E4%BA%8E%E8%AE%B0%E5%BD%95Chromedriver%E7%9A%84selenium-common-exceptions-WebDriverException-Message-chromedriver-executable-needs-to-be-in-PATH-Please-see-https-sites-google-com-a-chromium-org-chromedriver-home/</loc>
-    
-    <lastmod>2018-11-12T10:44:21.232Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/04/08/python3%E7%88%AC%E8%99%AB%EF%BC%9A%E7%88%AC%E5%8F%96%E6%B7%98%E5%AE%9D%E5%95%86%E5%93%81%E4%BF%A1%E6%81%AF%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95/</loc>
-    
-    <lastmod>2018-11-12T10:44:03.280Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/04/13/%E5%85%B3%E4%BA%8Eeclipse%E7%9A%84%E9%A3%8E%E6%A0%BC%E4%B8%8E%E4%B8%BB%E9%A2%98/</loc>
-    
-    <lastmod>2018-11-12T10:43:52.381Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/04/13/%E5%85%B3%E4%BA%8E%E5%9C%A8eclipse%E4%B8%AD%E8%BF%90%E8%A1%8Cscrapy%E9%A1%B9%E7%9B%AE/</loc>
-    
-    <lastmod>2018-11-12T10:43:41.939Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/04/17/%E5%85%B3%E4%BA%8EParallels-Desktop13%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</loc>
-    
-    <lastmod>2018-11-12T10:43:29.468Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/04/19/%E6%90%AD%E5%BB%BADjango%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</loc>
-    
-    <lastmod>2018-11-12T10:43:18.882Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/04/21/%E5%85%B3%E4%BA%8EJupyter-Notebook%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</loc>
-    
-    <lastmod>2018-11-12T10:43:05.195Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/04/27/%E5%85%B3%E4%BA%8EMac%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%8F%8Afn%E9%94%AE%E8%AE%BE%E7%BD%AE/</loc>
-    
-    <lastmod>2018-11-12T10:42:47.154Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/04/28/python3%E7%88%AC%E8%99%AB%E4%B8%8EGUI%EF%BC%9A%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%9A%84%E6%90%9C%E7%B4%A2%E5%AE%9E%E7%94%A8%E5%B0%8F%E5%B7%A5%E5%85%B7/</loc>
-    
-    <lastmod>2018-11-12T10:42:21.432Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/04/29/%E6%88%91%E5%AF%B9%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BF%83%E5%BE%97%E8%A7%81%E8%A7%A3/</loc>
-    
-    <lastmod>2018-11-12T10:42:10.012Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/05/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</loc>
-    
-    <lastmod>2018-11-12T10:42:06.355Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/05/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E4%B9%A6%E7%B1%8D%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%AB/</loc>
-    
-    <lastmod>2018-11-12T10:42:01.564Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/05/05/python3%E7%88%AC%E5%8F%96%E6%8B%89%E5%8B%BE%E7%BD%91%E8%81%8C%E4%BD%8D%E4%BF%A1%E6%81%AF/</loc>
-    
-    <lastmod>2018-11-12T10:41:57.232Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/05/07/%E8%BD%AC-%E4%BA%94%E5%A4%A7%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/</loc>
-    
-    <lastmod>2018-11-12T10:41:45.747Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/05/07/python3%E7%88%AC%E8%99%AB%E4%B8%8EGUI-%E5%9F%BA%E4%BA%8E%E6%9C%89%E9%81%93%E8%AF%8D%E5%85%B8%E7%9A%84%E8%AF%8D%E5%85%B8%E5%B0%8F%E5%B7%A5%E5%85%B7/</loc>
-    
-    <lastmod>2018-11-12T10:41:40.977Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/05/10/%E7%90%86%E8%A7%A3%E5%B8%B8%E7%94%A8%E4%BC%A0%E7%BB%9F%E7%AE%97%E6%B3%95%E7%9A%84%E5%90%88%E9%9B%86%E8%B5%84%E6%BA%90%E6%80%BB%E7%BB%93/</loc>
-    
-    <lastmod>2018-11-12T10:41:18.945Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/05/29/Mac%E4%B8%8B%E8%BD%BD2018CAD%E7%A0%B4%E8%A7%A3/</loc>
-    
-    <lastmod>2018-11-12T10:41:14.401Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/06/04/%E5%9C%A8Jupyter-Notebook%E4%B8%AD%E5%AE%89%E8%A3%85%E5%A4%9A%E7%A7%8D%E8%AF%AD%E8%A8%80%E5%86%85%E6%A0%B8/</loc>
-    
-    <lastmod>2018-11-12T10:41:09.495Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/06/25/%E7%BB%93%E5%90%88Chrome%E6%8F%92%E4%BB%B6%E5%BF%AB%E9%80%9F%E4%B8%8B%E8%BD%BD%E7%99%BE%E5%BA%A6%E4%BA%91%E6%96%87%E4%BB%B6/</loc>
-    
-    <lastmod>2018-11-12T10:40:57.442Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/06/27/Excel%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</loc>
-    
-    <lastmod>2018-11-12T10:40:45.101Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/06/29/%E5%8F%8D%E6%80%9D%E8%AE%B0%E5%BD%95/</loc>
-    
-    <lastmod>2018-11-12T10:40:41.287Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/07/18/%E4%BD%BF%E7%94%A8PS%E8%BD%AF%E4%BB%B6%E7%9A%84%E8%AE%B0%E5%BD%95/</loc>
-    
-    <lastmod>2018-11-12T10:40:31.654Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/07/18/%E5%BF%83%E5%A3%B0/</loc>
-    
-    <lastmod>2018-11-12T10:40:26.997Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/07/24/python3%E7%88%AC%E8%99%AB%E4%B8%8EGUI:%E7%88%AC%E5%8F%96%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91/</loc>
-    
-    <lastmod>2018-11-12T10:40:19.946Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/08/08/Mac%E4%B8%8B%E7%9A%84matploylib%E7%BB%98%E5%9B%BE%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/</loc>
-    
-    <lastmod>2018-11-12T10:40:09.491Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/08/13/pandas-Dataframe-plot-%E5%8F%8A%E6%95%B0%E5%80%BC%E5%88%87%E7%89%87%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95/</loc>
-    
-    <lastmod>2018-11-12T10:39:51.653Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/08/15/%E4%B8%BAHexo%E5%8D%9A%E5%AE%A2-next%E4%B8%BB%E9%A2%98-%E5%8A%A0%E4%B8%8A%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</loc>
-    
-    <lastmod>2018-11-12T10:39:40.336Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/08/16/%E5%85%B3%E4%BA%8Epython%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E8%B0%83%E7%94%A8%E6%96%B9%E6%B3%95%E7%9A%84%E7%AE%80%E5%8D%95%E6%80%9D%E8%80%83/</loc>
-    
-    <lastmod>2018-11-12T10:39:24.680Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/08/16/pandas-Series-str-get-%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</loc>
-    
-    <lastmod>2018-11-12T10:39:19.513Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/08/17/python%E7%BC%96%E7%A8%8Bmap%E5%87%BD%E6%95%B0%E5%8F%8Aas-matrix%E5%87%BD%E6%95%B0%E7%AE%80%E6%98%8E/</loc>
-    
-    <lastmod>2018-11-12T10:39:15.335Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/08/20/%E5%85%B3%E4%BA%8E%E9%94%99%E8%AF%AF-ValueError-Found-array-with-0-sample-s-shape-0-4-while-a-minimum-of-1-is-required/</loc>
-    
-    <lastmod>2018-11-12T10:39:10.463Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/08/31/duet-display%E5%9C%A8%E5%8D%87%E7%BA%A7Macos-13-6%E4%B9%8B%E5%90%8E%E5%B4%A9%E6%BA%83%E7%9A%84%E5%8F%AF%E8%A1%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</loc>
-    
-    <lastmod>2018-11-12T10:39:03.735Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/09/07/%E5%85%B3%E4%BA%8E%E9%94%99%E8%AF%AFError-Permission-denied-dir-s-mkdir-usr-local-Frameworks/</loc>
-    
-    <lastmod>2018-11-12T10:38:52.437Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/09/15/%E6%8E%A5%E5%8F%97%E2%80%9C%E5%A4%A7%E5%92%8C%E2%80%9D%EF%BC%9F/</loc>
-    
-    <lastmod>2018-11-12T10:38:45.806Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/09/16/%E5%88%9D%E5%AD%A6%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/</loc>
-    
-    <lastmod>2018-11-12T10:38:37.119Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/09/18/%E5%9C%A8Macbook%E4%B8%8A%E7%8E%A9PS-win%E6%9C%AC%E6%B8%B8%E6%88%8F/</loc>
-    
-    <lastmod>2018-11-12T10:38:30.542Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/09/28/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%EF%BC%8C%E8%87%AA%E5%BB%BAVPS-SS%E5%BA%94%E7%94%A8/</loc>
-    
-    <lastmod>2018-11-12T10:38:09.202Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/09/29/%E6%97%85%E7%A8%8B/</loc>
-    
-    <lastmod>2018-11-12T10:37:52.095Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/10/11/Mac%E5%8D%87%E7%BA%A7%E5%88%B0Mojave%E7%89%88%E6%9C%AC%E4%B9%8B%E5%90%8E%E7%9A%84Safari%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/</loc>
-    
-    <lastmod>2018-11-12T10:37:47.791Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/10/11/%E5%85%B3%E4%BA%8E%E9%94%99%E8%AF%AFERROR-Asset-render-failed-css-main-css/</loc>
-    
-    <lastmod>2018-11-12T10:37:36.940Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/10/12/Hexo%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E7%8B%AC%E7%AB%8B%E5%9F%9F%E5%90%8D%E4%BB%A5%E5%8F%8A%E8%BD%AC%E7%A7%BB%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
-    
-    <lastmod>2018-11-12T10:37:24.414Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/10/15/%E6%80%9D%E8%80%83%E6%84%8F%E4%B9%89/</loc>
-    
-    <lastmod>2018-11-12T10:37:07.221Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/10/15/Mac%E4%B8%8A%E4%B8%8B%E8%BD%BDxgboost/</loc>
-    
-    <lastmod>2018-11-12T10:36:59.926Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/10/16/Mac%E4%B8%8B%E5%AE%89%E8%A3%85lightGBM/</loc>
-    
-    <lastmod>2018-11-12T10:36:37.212Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/10/18/python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97%EF%BC%9A%E9%A2%84%E6%B5%8B%E6%88%BF%E4%BB%B7%E5%B9%B6%E4%B8%94%E5%8F%AF%E8%A7%86%E5%8C%96/</loc>
-    
-    <lastmod>2018-11-12T10:36:13.179Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/10/19/python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97%EF%BC%9A%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%AE%97%E6%B3%95%E7%9A%84%E5%AE%9E%E7%8E%B0/</loc>
-    
-    <lastmod>2018-11-12T10:36:02.241Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/10/21/python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97%EF%BC%9AK%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95(KNN)%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8F%8A%E5%BA%94%E7%94%A8/</loc>
-    
-    <lastmod>2018-11-12T10:35:43.463Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/10/21/%E8%A7%A3%E5%86%B3eclipse%E4%B8%AD%E8%BF%90%E8%A1%8CDjango%E6%97%B6%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AFDjango-not-found/</loc>
-    
-    <lastmod>2018-11-12T10:33:32.678Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/10/23/python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97%EF%BC%9A%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA-SVM-%E7%9A%84%E5%BA%94%E7%94%A8%E4%BB%A5%E5%8F%8A%E5%AE%9E%E7%8E%B0/</loc>
-    
-    <lastmod>2018-11-12T10:33:05.858Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/10/23/%E5%85%B3%E4%BA%8E%E5%9C%A8Mac%E4%B8%8B%E7%9A%84python%E6%96%87%E5%AD%97%E8%BD%AC%E8%AF%AD%E9%9F%B3%E5%BA%93pyttsx3/</loc>
-    
-    <lastmod>2018-11-12T10:32:10.171Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/10/26/python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97%EF%BC%9AK-%E5%9D%87%E5%80%BC%E7%AE%97%E6%B3%95(K-Means)%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8F%8A%E5%BA%94%E7%94%A8/</loc>
-    
-    <lastmod>2018-11-12T10:31:36.380Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/10/30/python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97%EF%BC%9A%E5%9D%87%E5%80%BC%E5%B9%B3%E7%A7%BB(Mean%20Shift)%E7%AE%97%E6%B3%95%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8F%8A%E5%BA%94%E7%94%A8/</loc>
-    
-    <lastmod>2018-11-12T10:30:16.973Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/11/08/Python%E7%BB%93%E5%90%88OCR%E4%BB%A5%E5%8F%8AOpencv%E6%8F%90%E5%8F%96%E5%B9%B6%E4%B8%94%E5%AE%9E%E6%97%B6%E7%BF%BB%E8%AF%91%E5%9B%BE%E7%89%87%E5%86%85%E5%AE%B9/</loc>
-    
-    <lastmod>2018-11-12T10:29:54.178Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/11/09/%EF%BC%88Mac%EF%BC%89Julia%E7%9A%84%E4%B8%8B%E8%BD%BD%E5%8F%8A%E7%BB%93%E5%90%88notebook%E4%BD%BF%E7%94%A8/</loc>
-    
-    <lastmod>2018-11-12T10:29:39.963Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/11/07/Kaggle%E6%AF%94%E8%B5%9B%EF%BC%9A%E6%95%B0%E5%AD%97%E8%AF%86%E5%88%AB%E7%9A%84%E5%A4%9A%E7%A7%8D%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/</loc>
-    
-    <lastmod>2018-11-12T08:56:07.552Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/10/13/%E5%90%BE%E9%81%93/</loc>
-    
-    <lastmod>2018-10-13T09:15:09.856Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/01/22/%E5%81%87%E6%9C%9F%E5%B0%8F%E8%AE%B0/</loc>
-    
-    <lastmod>2018-10-11T13:00:52.554Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/12/07/%E4%BB%8A%E5%90%8E%E7%9A%84%E6%89%93%E7%AE%97/</loc>
-    
-    <lastmod>2018-10-11T13:00:39.148Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/11/22/%E6%97%A0%E8%A8%80/</loc>
-    
-    <lastmod>2018-10-11T12:58:53.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/11/18/%E5%85%B3%E4%BA%8EAnaconda-python%E4%B8%A4%E4%B8%AA%E7%89%88%E6%9C%AC%E5%85%B1%E5%AD%98%E6%97%B6%E7%9A%84%E5%8C%85%E7%9A%84%E4%B8%8B%E8%BD%BD%E9%97%AE%E9%A2%98/</loc>
-    
-    <lastmod>2018-10-11T12:58:18.039Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/11/17/%E7%84%A6%E8%99%91/</loc>
-    
-    <lastmod>2018-10-11T12:58:12.537Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/10/31/%E8%80%81%E4%BA%BA%E4%B8%8E%E6%B5%B7/</loc>
-    
-    <lastmod>2018-10-11T12:56:42.055Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/10/30/%E8%BF%99%E6%AE%B5%E6%97%B6%E9%97%B4/</loc>
-    
-    <lastmod>2018-10-11T12:56:33.869Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/10/19/%E6%9D%82%E6%80%9D%E8%AE%B0/</loc>
-    
-    <lastmod>2018-10-11T12:55:48.722Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/10/17/%E6%97%A0%E9%A2%98/</loc>
-    
-    <lastmod>2018-10-11T12:55:41.906Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/10/15/%E6%83%B3%E8%87%B4%E5%9B%BD%E5%AE%B6%E4%BD%93%E8%82%B2%E5%B1%80%E7%9A%84%E4%B8%80%E5%B0%81%E4%BF%A1/</loc>
-    
-    <lastmod>2018-10-11T12:55:28.069Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/10/15/%E2%80%9C%E8%AF%BB%E2%80%9D%E5%8E%86%E5%8F%B2/</loc>
-    
-    <lastmod>2018-10-11T12:55:21.979Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/10/13/%E6%8B%9C%E8%AF%BB%E6%9E%97%E6%80%9D%E4%BA%91%E5%85%88%E7%94%9F%E4%B9%8B%E6%96%87%E7%AB%A0%E6%9C%89%E6%84%9F/</loc>
-    
-    <lastmod>2018-10-11T12:55:15.249Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/10/12/%EF%BC%88%E8%BD%AC%E8%87%AA%E6%9E%97%E6%80%9D%E4%BA%91%E5%85%88%E7%94%9F%EF%BC%89%E7%9C%9F%E5%AE%9E%E7%9A%84%E6%B1%AA%E7%B2%BE%E5%8D%AB/</loc>
-    
-    <lastmod>2018-10-11T12:55:08.204Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/10/11/%E2%80%9C%E5%93%B2%E5%AD%A6%E2%80%9D%E4%B8%8E%E2%80%9C%E7%94%9F%E7%89%A9%E5%AD%A6%E2%80%9C%E4%B9%8B%E9%97%B4%E7%9A%84%E8%A7%81%E8%A7%A3%E6%8E%A2%E8%AE%A8/</loc>
-    
-    <lastmod>2018-10-11T12:54:59.454Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/10/11/%E8%BF%99%E2%80%9C%E5%AE%8C%E7%BE%8E%E2%80%9D%E7%9A%84%E4%B8%80%E5%88%87%E5%A6%82%E5%90%8C%E2%80%9C%E7%A5%9E%E8%AE%BE%E2%80%9D%EF%BC%8C%E8%80%8C%E6%88%91%E4%BB%AC%E8%BF%98%E6%98%AF%E4%BE%9D%E6%97%A7%E4%B8%80%E6%97%A0%E6%89%80%E7%9F%A5/</loc>
-    
-    <lastmod>2018-10-11T12:54:53.531Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/10/10/%E5%85%B3%E4%BA%8E%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/</loc>
-    
-    <lastmod>2018-10-11T12:54:32.023Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/10/08/%E8%AE%A4%E8%AF%86%E5%88%B0%E5%BA%B8%E6%84%9A%E7%9A%84%E6%88%91/</loc>
-    
-    <lastmod>2018-10-11T12:54:00.448Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/10/08/20%E5%B2%81%E7%9A%84%E4%BB%8A%E5%A4%A9/</loc>
-    
-    <lastmod>2018-10-11T12:53:50.214Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/10/06/%E8%A7%82%E8%AF%BB%E2%80%9C%E4%B9%9D%E8%AF%84%E2%80%9D%E6%9C%89%E6%84%9F/</loc>
-    
-    <lastmod>2018-10-11T12:53:44.835Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/10/05/%E6%80%9D%E5%AD%A6%EF%BC%8C%E6%80%9D%E5%B7%B1/</loc>
-    
-    <lastmod>2018-10-11T12:53:37.614Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/10/01/%E7%9C%8B%E7%94%B5%E5%BD%B1%E2%80%9C%E9%A3%9E%E8%B6%8A%E7%96%AF%E4%BA%BA%E9%99%A2%E2%80%9D%E6%9C%89%E6%84%9F/</loc>
-    
-    <lastmod>2018-10-11T12:53:18.348Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/10/02/%E6%9C%89%E6%84%9F/</loc>
-    
-    <lastmod>2018-10-11T12:53:09.817Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/09/28/%E5%A4%A7%E9%81%93%E8%87%B3%E7%AE%80/</loc>
-    
-    <lastmod>2018-10-11T12:52:36.104Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/09/27/%E5%88%9D%E5%AD%A6Linux%E6%9C%89%E6%84%9F/</loc>
-    
-    <lastmod>2018-10-11T12:52:28.738Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/09/27/%E8%B0%88%E4%B8%93%E5%AE%B6%E7%BB%84%E6%9D%A5%E5%AD%A6%E6%A0%A1%E6%A3%80%E6%9F%A5%E4%B8%8E%E2%80%9C%E5%88%A9%E2%80%9D/</loc>
-    
-    <lastmod>2018-10-11T12:51:10.216Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/09/25/%E9%9B%86%E6%80%9D/</loc>
-    
-    <lastmod>2018-10-11T12:50:28.942Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2017/09/25/hello-world/</loc>
-    
-    <lastmod>2018-10-11T12:50:17.502Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/09/27/%E8%AF%BB%E8%A5%BF%E6%B8%B8%EF%BC%8C%E5%BE%97%E2%80%9C%E7%9C%9F%E7%BB%8F%E2%80%9D/</loc>
-    
-    <lastmod>2018-10-11T12:49:20.923Z</lastmod>
     
   </url>
   
