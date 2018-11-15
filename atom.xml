@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-11-13T14:36:28.449Z</updated>
+  <updated>2018-11-15T02:14:43.820Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>MySQL语句疑惑记录</title>
+    <link href="https://liujunjie11.github.io/2018/11/15/MySQL%E8%AF%AD%E5%8F%A5%E7%96%91%E6%83%91%E8%AE%B0%E5%BD%95/"/>
+    <id>https://liujunjie11.github.io/2018/11/15/MySQL语句疑惑记录/</id>
+    <published>2018-11-15T01:53:00.000Z</published>
+    <updated>2018-11-15T02:14:43.820Z</updated>
+    
+    <content type="html"><![CDATA[<p>主要是记录一些比较有疑惑的语句，方便以后的查找以及回忆。</p><a id="more"></a><h1 id="LIMIT子句"><a href="#LIMIT子句" class="headerlink" title="LIMIT子句"></a>LIMIT子句</h1><p>LIMIT子句语法：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">SELECT </div><div class="line">    column1,column2,...</div><div class="line">FROM</div><div class="line">    table</div><div class="line">LIMIT offset , count;</div></pre></td></tr></table></figure><p>SQL我们来查看LIMIT子句参数：</p><p><code>offset</code>参数:指定要返回的第一行的偏移量。第一行的偏移量为0，而不是1。</p><p><code>count</code>:指定要返回的最大行数。</p><p>使用带有一个参数的LIMIT子句时，此参数将用于确定从结果集的开头返回的最大行数。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">SELECT </div><div class="line">    column1,column2,...</div><div class="line">FROM</div><div class="line">    table</div><div class="line">LIMIT count;</div></pre></td></tr></table></figure><p>SQL上面的查询等同：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">SELECT </div><div class="line">    column1,column2,...</div><div class="line">FROM</div><div class="line">    table</div><div class="line">LIMIT 0 , count;</div></pre></td></tr></table></figure><h2 id="实例说明"><a href="#实例说明" class="headerlink" title="实例说明"></a>实例说明</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">mysql&gt; SELECT productCode, productName, buyprice</div><div class="line">FROM products</div><div class="line">ORDER BY buyprice DESC;</div><div class="line"></div><div class="line">+-------------+--------------------------------------+----------+</div><div class="line">| productCode | productName                          | buyprice |</div><div class="line">+-------------+--------------------------------------+----------+</div><div class="line">| S10_4962    | 1962 LanciaA Delta 16V               | 103.42   |</div><div class="line">| S18_2238    | 1998 Chrysler Plymouth Prowler       | 101.51   |</div><div class="line">| S10_1949    | 1952 Alpine Renault 1300             | 98.58    |</div><div class="line">| S24_3856    | 1956 Porsche 356A Coupe              | 98.3     |</div><div class="line">| S12_1108    | 2001 Ferrari Enzo                    | 95.59    |</div><div class="line">| S12_1099    | 1968 Ford Mustang                    | 95.34    |</div><div class="line">... ....</div><div class="line">+-------------+--------------------------------------+----------+</div><div class="line">110 rows in set</div></pre></td></tr></table></figure><p>默认语句为输出最前面的几行：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">mysql&gt; SELECT customernumber, customername, creditlimit</div><div class="line">FROM customers</div><div class="line">ORDER BY creditlimit DESC</div><div class="line">LIMIT 5;</div><div class="line"></div><div class="line">相当于：</div><div class="line">mysql&gt; SELECT customernumber, customername, creditlimit</div><div class="line">FROM customers</div><div class="line">ORDER BY creditlimit DESC</div><div class="line">LIMIT 0, 5; #从第一个偏移量的指定开始向下输出指定行数的所有内容。</div><div class="line"></div><div class="line"></div><div class="line">+----------------+------------------------------+-------------+</div><div class="line">| customernumber | customername                 | creditlimit |</div><div class="line">+----------------+------------------------------+-------------+</div><div class="line">|            141 | Euro+ Shopping Channel       | 227600      |</div><div class="line">|            124 | Mini Gifts Distributors Ltd. | 210500      |</div><div class="line">|            298 | Vida Sport, Ltd              | 141300      |</div><div class="line">|            151 | Muscle Machine Inc           | 138500      |</div><div class="line">|            187 | AV Stores, Co.               | 136800      |</div><div class="line">+----------------+------------------------------+-------------+</div><div class="line">5 rows in set</div></pre></td></tr></table></figure><p>简要深入理解偏移量的作用：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">mysql&gt; SELECT productCode, productName, buyprice FROM  products</div><div class="line">ORDER BY buyprice DESC</div><div class="line">LIMIT 1, 1; #偏移量从0开始，所以要指定从1开始，然后取一行记录，以行数为1的指定仅输出一行对应的内容。</div><div class="line"></div><div class="line">+-------------+--------------------------------+----------+</div><div class="line">| productCode | productName                    | buyprice |</div><div class="line">+-------------+--------------------------------+----------+</div><div class="line">| S18_2238    | 1998 Chrysler Plymouth Prowler | 101.51   |</div><div class="line">+-------------+--------------------------------+----------+</div><div class="line">1 row in set</div><div class="line"></div><div class="line"></div><div class="line">#如下几个深入理解</div><div class="line">mysql&gt; SELECT productCode, productName, buyprice FROM  products</div><div class="line">ORDER BY buyprice DESC</div><div class="line">LIMIT 0, 1; #这时指定第一行(偏移量默认为第一行取0)</div><div class="line"></div><div class="line">+-------------+--------------------------------+----------+</div><div class="line">| productCode | productName                    | buyprice |</div><div class="line">+-------------+--------------------------------+----------+</div><div class="line">| S10_4962    | 1962 LanciaA Delta 16V | 103.42   |</div><div class="line">+-------------+--------------------------------+----------+</div><div class="line">1 row in set</div><div class="line"></div><div class="line"></div><div class="line">mysql&gt; SELECT productCode, productName, buyprice FROM  products</div><div class="line">ORDER BY buyprice DESC</div><div class="line">LIMIT 0, 2; #从已指定第一行偏移量开始输出以此为基础的指定行数的以下所有内容</div><div class="line"></div><div class="line">+-------------+--------------------------------------+----------+</div><div class="line">| productCode | productName                          | buyprice |</div><div class="line">+-------------+--------------------------------------+----------+</div><div class="line">| S10_4962    | 1962 LanciaA Delta 16V               | 103.42   |</div><div class="line">| S18_2238    | 1998 Chrysler Plymouth Prowler       | 101.51   |</div><div class="line">+----------------+------------------------------+-------------+</div><div class="line">2 rows in set</div></pre></td></tr></table></figure><blockquote><p>总结：<code>offset</code>就是相当于一个定位，<code>count</code>就是要返回指定的最大行数。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;主要是记录一些比较有疑惑的语句，方便以后的查找以及回忆。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="MySQL" scheme="https://liujunjie11.github.io/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="https://liujunjie11.github.io/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MySQL学习资源与实践学习</title>
     <link href="https://liujunjie11.github.io/2018/11/13/MySQL%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E4%B8%8E%E5%AE%9E%E8%B7%B5%E5%AD%A6%E4%B9%A0/"/>
     <id>https://liujunjie11.github.io/2018/11/13/MySQL学习资源与实践学习/</id>
     <published>2018-11-13T13:12:31.000Z</published>
-    <updated>2018-11-13T14:36:28.449Z</updated>
+    <updated>2018-11-15T01:52:22.990Z</updated>
     
     <content type="html"><![CDATA[<p>最近心血来潮想写几个SQL玩玩，在此会分享学习的书籍资源以及YouTube教程使用语法的实践项目，以及会进行一系列的简单实践。这里通过在YouTube上的一个大佬的视频来进行在线的实践即可。</p><iframe width="560" height="315" src="https://www.youtube.com/embed/xYMhPZ_L3fI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><blockquote><p>就是这个视频。</p></blockquote><p>可主要参考书籍<a href="https://pan.baidu.com/s/15hIkCroy2w7RvBdVH8LRmA" target="_blank" rel="external">疯狂Java讲义(李刚)</a>来进行学习，当然还有参考其他的经典书籍以备用学习，这类书籍很多，就不在此一一说明了。</p><blockquote><p>《疯狂Java讲义》书籍的配套资源地址：<a href="https://github.com/DoingLee" target="_blank" rel="external">https://github.com/DoingLee</a></p></blockquote><a id="more"></a><h1 id="MySQL学习"><a href="#MySQL学习" class="headerlink" title="MySQL学习"></a>MySQL学习</h1><p>这一部分由于一些基础性的基本知识在上面和下面的书籍中已经是多如牛毛了，我就不重复说明了，需要的自行下载去了解吧。可结合书中直接开始语法的学习！实际上几个实用性强的语句就那么几个。</p><h2 id="书籍资源分享"><a href="#书籍资源分享" class="headerlink" title="书籍资源分享"></a>书籍资源分享</h2><ul><li><p><a href="https://pan.baidu.com/s/1rZwbEXEV_GlGsN7UVZ5Z6Q" target="_blank" rel="external">MySQL必知必会.pdf</a></p></li><li><p><a href="https://pan.baidu.com/s/1pA9V9weH33j7ZiV6fFNU1Q" target="_blank" rel="external">SQL语法查询(W3school).pdf</a></p></li><li><p><a href="https://pan.baidu.com/s/1cglHK9k4VY1SSJsg_C2mWA" target="_blank" rel="external">MySQL完全教程.pdf</a></p></li><li><p><a href="https://pan.baidu.com/s/14W7WJBoVnybd_r8pXQ6J4Q" target="_blank" rel="external">MySQL经典教程.pdf</a></p></li></ul><blockquote><p>就这么多吧，都是网上的人们分享出来的。</p></blockquote><h2 id="网页在线学习"><a href="#网页在线学习" class="headerlink" title="网页在线学习"></a>网页在线学习</h2><ul><li><a href="https://sqlbolt.com" target="_blank" rel="external">sqlbolt</a></li></ul><blockquote><p>强烈推荐！还可在线实践(结合上面的视频一起来即可)。</p></blockquote><ul><li><p><a href="http://www.runoob.com/mysql/mysql-tutorial.html" target="_blank" rel="external">MySQL教程(菜鸟教程)</a></p></li><li><p><a href="https://m.w3cschool.cn/mysql/" target="_blank" rel="external">MySQL教程(w3cschool)</a></p></li><li><p><a href="https://www.yiibai.com/mysql/" target="_blank" rel="external">MySQL教程(易百教程)</a></p></li></ul><blockquote><p>相较于上面的书籍，在线教程更加的通俗易懂，可先通过这些入门简单认识一下以及学习语法，不懂的更深的部分可查看书籍即可。</p></blockquote><h2 id="YouTube上的资源"><a href="#YouTube上的资源" class="headerlink" title="YouTube上的资源"></a>YouTube上的资源</h2><ul><li><a href="https://www.youtube.com/results?search_query=mysql" target="_blank" rel="external">https://www.youtube.com/results?search_query=mysql</a></li></ul><blockquote><p>就这么简单～</p></blockquote><h1 id="实践学习"><a href="#实践学习" class="headerlink" title="实践学习"></a>实践学习</h1><p>强烈建议先根据视频学习！根据上面的YouTube教程结合<a href="https://sqlbolt.com" target="_blank" rel="external">sqlbolt</a>网站一步步来即可～若是英文看不懂，可结合上面的书籍资源以及在线资源查询即可。实践才是掌握一门语言的最快方法！</p><blockquote><p>有时根据网速快慢加载的数据库可能有点慢，等待一下即可。</p></blockquote>]]></content>
     
@@ -609,46 +631,6 @@
       <category term="教程笔记" scheme="https://liujunjie11.github.io/tags/%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
     
       <category term="Hexo" scheme="https://liujunjie11.github.io/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于错误ERROR Asset render failed: css/main.css</title>
-    <link href="https://liujunjie11.github.io/2018/10/11/%E5%85%B3%E4%BA%8E%E9%94%99%E8%AF%AFERROR-Asset-render-failed-css-main-css/"/>
-    <id>https://liujunjie11.github.io/2018/10/11/关于错误ERROR-Asset-render-failed-css-main-css/</id>
-    <published>2018-10-11T11:54:03.000Z</published>
-    <updated>2018-11-13T12:34:29.092Z</updated>
-    
-    <content type="html"><![CDATA[<p>在修改一些字体的时候使用<code>hexo s</code>/<code>hexo s -debug</code>时出现了以下错误：</p><pre><code>ERROR Asset render failed: css/main.cssError: /Users/junjieliu/liujunjie11.github.io/themes/next/source/css/main.styl:14:27   10|    11| // Variables Layer   12| // --------------------------------------------------   13| for $variable in $variables   14|   @import &quot;_variables/&quot; + $variable;---------------------------------^   15|    16|    17| // Mixins Layerfailed to locate @import file _variables/base.styl</code></pre><a id="more"></a><p>如图：</p><p><img src="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-11%20%E4%B8%8B%E5%8D%887.48.37.png" alt=""></p><h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>有个文件在我修改了一个字体参数之后出现了(如图)。还好我记得前面打开目录时是没有这个文件存在的，之后我把它删除再使用上面的命令就没有再报错了。</p><p><img src="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-11%20%E4%B8%8B%E5%8D%887.47.24.png" alt=""></p><blockquote><p>这个文件估计是在第一次修改相关文件的参数时才会出现，删除之后就能恢复正常了。</p></blockquote><h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><p>在删除之后发现问题还是解决不了，折腾了一下，去文件所指的目录地址去看了一下，发现了以下问题(如图)：</p><p><img src="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-12%20%E4%B8%8A%E5%8D%889.31.21.png" alt=""></p><blockquote><p>在此处的文件名自己发生了改变了，而且不知为何当初自己进了垃圾桶…把名字改回来<code>base.styl</code>之后再使用命令就没有再出现以上错误了。</p></blockquote><p>以下是这次错误相关的文件目录：</p><p><img src="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-12%20%E4%B8%8A%E5%8D%889.32.59.png" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在修改一些字体的时候使用&lt;code&gt;hexo s&lt;/code&gt;/&lt;code&gt;hexo s -debug&lt;/code&gt;时出现了以下错误：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ERROR Asset render failed: css/main.css
-Error: /Users/junjieliu/liujunjie11.github.io/themes/next/source/css/main.styl:14:27
-   10| 
-   11| // Variables Layer
-   12| // --------------------------------------------------
-   13| for $variable in $variables
-   14|   @import &amp;quot;_variables/&amp;quot; + $variable;
----------------------------------^
-   15| 
-   16| 
-   17| // Mixins Layer
-
-failed to locate @import file _variables/base.styl
-&lt;/code&gt;&lt;/pre&gt;
-    
-    </summary>
-    
-      <category term="笔记" scheme="https://liujunjie11.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Hexo" scheme="https://liujunjie11.github.io/categories/Hexo/"/>
-    
-    
-      <category term="Hexo" scheme="https://liujunjie11.github.io/tags/Hexo/"/>
-    
-      <category term="问题记录笔记" scheme="https://liujunjie11.github.io/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
