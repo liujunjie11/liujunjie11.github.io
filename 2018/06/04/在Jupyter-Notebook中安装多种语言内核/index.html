@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="LXiHa`Notes">
 <meta property="og:description" content="Jupyter Notrbook有一个好的编译界面，输出内容也一目了然，让人感觉像是发现了一个新大陆.. 下面来说说如何在其中安装多种语言内核。  支持的语言内核可查：https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-13T12:37:57.689Z">
+<meta property="og:updated_time" content="2018-11-19T11:14:04.679Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在Jupyter Notebook中安装多种语言内核">
 <meta name="twitter:description" content="Jupyter Notrbook有一个好的编译界面，输出内容也一目了然，让人感觉像是发现了一个新大陆.. 下面来说说如何在其中安装多种语言内核。  支持的语言内核可查：https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">
@@ -415,7 +415,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  551
+                  700
                 </span>
               
 
@@ -497,7 +497,39 @@
 <blockquote>
 <p>经测试，不怎么好用。</p>
 </blockquote>
-<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>输入以下命令行查看已安装的内核列表：</p>
+<h1 id="安装C语言内核"><a href="#安装C语言内核" class="headerlink" title="安装C语言内核"></a>安装C语言内核</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">sudo pip install jupyter-c-kernel</div><div class="line"></div><div class="line">install_c_kernel</div><div class="line"></div><div class="line">jupyter-notebook</div></pre></td></tr></table></figure>
+<ul>
+<li>参考：<a href="https://github.com/brendan-rius/jupyter-c-kernel" target="_blank" rel="external">https://github.com/brendan-rius/jupyter-c-kernel</a></li>
+</ul>
+<h1 id="安装C-内核"><a href="#安装C-内核" class="headerlink" title="安装C++内核"></a>安装C++内核</h1><ul>
+<li><p>可参考：<a href="https://github.com/liujunjie11/xeus-cling" target="_blank" rel="external">https://github.com/liujunjie11/xeus-cling</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/H_O_W_E/article/details/77370456" target="_blank" rel="external">Anaconda创建环境、删除环境、激活环境、退出环境</a></p>
+</li>
+</ul>
+<h2 id="另外一个方法可参考："><a href="#另外一个方法可参考：" class="headerlink" title="另外一个方法可参考："></a>另外一个方法可参考：</h2><ul>
+<li><p><a href="https://jiegec.me/programming/2017/11/30/run-cpp-in-jupyter-notebook/" target="_blank" rel="external">Run Cpp In Jupyter Notebook</a></p>
+</li>
+<li><p><a href="http://www.codebelief.com/article/2017/06/run-cpp-code-interactively-on-jupyter-notebook/" target="_blank" rel="external">在 Jupyter Notebook 中交互式运行 C++ 代码
+</a></p>
+</li>
+<li><p><a href="http://pre.tir.tw/008/blog/output/cpp_in_jupyter.html" target="_blank" rel="external">C++ 直譯器 cling: jupyter notebook</a></p>
+</li>
+</ul>
+<p>过程中发生的错误可参考：</p>
+<ul>
+<li><p><a href="https://github.com/root-project/cling/pull/198" target="_blank" rel="external">Fix cling not found in jupyter kernel when <code>which cling</code> is a link to relative path (e.g. ../Cellar/cling/…) </a></p>
+</li>
+<li><p><a href="https://stackoverflow.com/questions/35647998/cling-kernel-for-jupyter-on-ubuntu" target="_blank" rel="external">Cling Kernel for Jupyter on Ubuntu
+</a></p>
+</li>
+<li><p><a href="https://github.com/root-project/cling/issues/209" target="_blank" rel="external">Cling jupyter kernel fails when <code>cling</code> is a relative path symlink</a></p>
+</li>
+</ul>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><blockquote>
+<p><strong>所有内核查询</strong>：<a href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels" target="_blank" rel="external">https://github.com/jupyter/jupyter/wiki/Jupyter-kernels</a></p>
+</blockquote>
+<p>输入以下命令行查看已安装的内核列表：</p>
 <p><code>jupyter kernelspec list</code></p>
 <p>先写这么多，以后有需要再进行补充。</p>
 <p><strong>关于在下载完之后发现启动内核失败(dead kernel的情况)</strong></p>
@@ -545,7 +577,7 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年11月13日 - 20:11</p>
+  <p><span>最后更新:</span>2018年11月19日 - 19:11</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -842,7 +874,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装python2内核"><span class="nav-number">1.</span> <span class="nav-text">安装python2内核</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装R内核"><span class="nav-number">2.</span> <span class="nav-text">安装R内核</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装bash内核"><span class="nav-number">3.</span> <span class="nav-text">安装bash内核</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装基于Scala的spark应用"><span class="nav-number">4.</span> <span class="nav-text">安装基于Scala的spark应用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Matlab内核"><span class="nav-number">5.</span> <span class="nav-text">安装Matlab内核</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最后"><span class="nav-number">6.</span> <span class="nav-text">最后</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装python2内核"><span class="nav-number">1.</span> <span class="nav-text">安装python2内核</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装R内核"><span class="nav-number">2.</span> <span class="nav-text">安装R内核</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装bash内核"><span class="nav-number">3.</span> <span class="nav-text">安装bash内核</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装基于Scala的spark应用"><span class="nav-number">4.</span> <span class="nav-text">安装基于Scala的spark应用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Matlab内核"><span class="nav-number">5.</span> <span class="nav-text">安装Matlab内核</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装C语言内核"><span class="nav-number">6.</span> <span class="nav-text">安装C语言内核</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装C-内核"><span class="nav-number">7.</span> <span class="nav-text">安装C++内核</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#另外一个方法可参考："><span class="nav-number">7.1.</span> <span class="nav-text">另外一个方法可参考：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最后"><span class="nav-number">8.</span> <span class="nav-text">最后</span></a></li></ol></div>
             
 
           </div>
@@ -880,7 +912,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      215.7k
+      215.9k
     </span>
   
 </div>
