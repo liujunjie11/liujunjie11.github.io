@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[考研or工作，抉择与想法]]></title>
+    <url>%2F2018%2F11%2F19%2F%E8%80%83%E7%A0%94or%E5%B7%A5%E4%BD%9C%EF%BC%8C%E6%8A%89%E6%8B%A9%E4%B8%8E%E6%83%B3%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[不知不觉，大三上学期也过一大半了，我这几天一直在考研or工作之间进行一场自我的挣扎。 有时想的太多真的会成为人们进步的碍脚石。我为何要选择考研？必须得问自己的真心，必须得深入了解自己更加倾向于哪一方面！如果不了解自己需要什么，什么都不会，不如直接去考研待在学校寻找自我吧，还可以顺便学点知识应付未来的生计什么的。我是个自我了解很深的人，我选择工作，因为我更加倾向于喜欢毕业之后去工作。 如果我考研为了什么？我想过去日本留学，冷静下来想了一下发现自己只是想去体验日本的生活环境，另外成本太高，而且我也不愿去为了这个单独的目标去花更多的时间了，所以我放弃留学的打算。光光是成本不说，我想过去考研国内的大学，我冷静下来想了想，不过是自己的一些能力因素达不到理想中的那个样子罢了，而我现在还有时间！！学历真的重要吗？我通过参考了很多前辈的话，我冷静下来想了想，发现还是自身的能力不足的问题，焦虑的大多数时候只是能力不足的表现罢了，这时候就需要读书看书学习了。 理性考虑好之后，干，就完了！！]]></content>
+      <categories>
+        <category>日记</category>
+      </categories>
+      <tags>
+        <tag>日记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[MySQL语句疑惑记录]]></title>
     <url>%2F2018%2F11%2F15%2FMySQL%E8%AF%AD%E5%8F%A5%E7%96%91%E6%83%91%E8%AE%B0%E5%BD%95%2F</url>
     <content type="text"><![CDATA[主要是记录一些比较有疑惑的语句，方便以后的查找以及回忆。 LIMIT子句 主要参考：https://www.yiibai.com/mysql/limit.html LIMIT子句语法： 12345SELECT column1,column2,...FROM tableLIMIT offset , count; SQL我们来查看LIMIT子句参数： offset参数:指定要返回的第一行的偏移量。第一行的偏移量为0，而不是1。 count:指定要返回的最大行数。 使用带有一个参数的LIMIT子句时，此参数将用于确定从结果集的开头返回的最大行数。 12345SELECT column1,column2,...FROM tableLIMIT count; SQL上面的查询等同： 12345SELECT column1,column2,...FROM tableLIMIT 0 , count; 实例说明12345678910111213141516mysql&gt; SELECT productCode, productName, buypriceFROM productsORDER BY buyprice DESC;+-------------+--------------------------------------+----------+| productCode | productName | buyprice |+-------------+--------------------------------------+----------+| S10_4962 | 1962 LanciaA Delta 16V | 103.42 || S18_2238 | 1998 Chrysler Plymouth Prowler | 101.51 || S10_1949 | 1952 Alpine Renault 1300 | 98.58 || S24_3856 | 1956 Porsche 356A Coupe | 98.3 || S12_1108 | 2001 Ferrari Enzo | 95.59 || S12_1099 | 1968 Ford Mustang | 95.34 |... ....+-------------+--------------------------------------+----------+110 rows in set 默认语句为输出最前面的几行： 12345678910111213141516171819202122mysql&gt; SELECT customernumber, customername, creditlimitFROM customersORDER BY creditlimit DESCLIMIT 5;相当于：mysql&gt; SELECT customernumber, customername, creditlimitFROM customersORDER BY creditlimit DESCLIMIT 0, 5; #从第一个偏移量的指定开始向下输出指定行数的所有内容。+----------------+------------------------------+-------------+| customernumber | customername | creditlimit |+----------------+------------------------------+-------------+| 141 | Euro+ Shopping Channel | 227600 || 124 | Mini Gifts Distributors Ltd. | 210500 || 298 | Vida Sport, Ltd | 141300 || 151 | Muscle Machine Inc | 138500 || 187 | AV Stores, Co. | 136800 |+----------------+------------------------------+-------------+5 rows in set 简要深入理解偏移量的作用： 123456789101112131415161718192021222324252627282930313233343536mysql&gt; SELECT productCode, productName, buyprice FROM productsORDER BY buyprice DESCLIMIT 1, 1; #偏移量从0开始，所以要指定从1开始，然后取一行记录，以行数为1的指定仅输出一行对应的内容。+-------------+--------------------------------+----------+| productCode | productName | buyprice |+-------------+--------------------------------+----------+| S18_2238 | 1998 Chrysler Plymouth Prowler | 101.51 |+-------------+--------------------------------+----------+1 row in set#如下几个深入理解mysql&gt; SELECT productCode, productName, buyprice FROM productsORDER BY buyprice DESCLIMIT 0, 1; #这时指定第一行(偏移量默认为第一行取0)+-------------+--------------------------------+----------+| productCode | productName | buyprice |+-------------+--------------------------------+----------+| S10_4962 | 1962 LanciaA Delta 16V | 103.42 |+-------------+--------------------------------+----------+1 row in setmysql&gt; SELECT productCode, productName, buyprice FROM productsORDER BY buyprice DESCLIMIT 0, 2; #从已指定第一行偏移量开始输出以此为基础的指定行数的以下所有内容+-------------+--------------------------------------+----------+| productCode | productName | buyprice |+-------------+--------------------------------------+----------+| S10_4962 | 1962 LanciaA Delta 16V | 103.42 || S18_2238 | 1998 Chrysler Plymouth Prowler | 101.51 |+----------------+------------------------------+-------------+2 rows in set 总结：offset就是相当于一个定位，count就是要返回指定的最大行数。 ORDER BY ASC/DESCASC:[A~Z], [1~N]… DESC:[Z~A}, [N~1]… A，B，…Z。Z相当于最大的。 经度(Longitude) 纬度(Latitude)经度(Longitude)：东经，西经。 东经正数，西经为负数。越大越靠东。 纬度(Latitude)：南纬，北纬。 北纬为正数，南纬为负数。越大越靠北。 方便记忆：东经，东北正。 参考：https://baike.baidu.com/item/%E7%BB%8F%E7%BA%AC%E5%BA%A6]]></content>
@@ -128,8 +139,8 @@
         <category>Python</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>问题记录笔记</tag>
+        <tag>Python</tag>
         <tag>Pyttsx3</tag>
       </tags>
   </entry>
@@ -215,8 +226,8 @@
       </categories>
       <tags>
         <tag>教程笔记</tag>
-        <tag>机器学习</tag>
         <tag>Mac</tag>
+        <tag>机器学习</tag>
         <tag>LightGBM</tag>
       </tags>
   </entry>
@@ -232,8 +243,8 @@
       </categories>
       <tags>
         <tag>教程笔记</tag>
-        <tag>机器学习</tag>
         <tag>Mac</tag>
+        <tag>机器学习</tag>
         <tag>Xgboost</tag>
       </tags>
   </entry>
@@ -413,9 +424,9 @@
         <category>Python</category>
       </categories>
       <tags>
+        <tag>问题记录笔记</tag>
         <tag>机器学习</tag>
         <tag>Python</tag>
-        <tag>问题记录笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -493,8 +504,8 @@
         <category>Matploylib</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>问题记录笔记</tag>
+        <tag>Python</tag>
         <tag>Matploylib</tag>
       </tags>
   </entry>
@@ -762,13 +773,13 @@
     <content type="text"><![CDATA[关于在eclipse中运行爬虫scrapy框架的项目介绍如下。 scrapy官方文档：http://scrapy-chs.readthedocs.io/zh_CN/0.24/topics/shell.html 首先打开终端将cd至eclipse目录下的（即eclipse-workspace），使用命令行scrapy startproject tutorial（其中的tutorial是自由选择的），之后会生成一个目录，将其目录移至一个python工程下。 如上图。 在spider包下建立一个脚本文件（如上图我的那个first文件，名字随意），是用来写爬虫程序用的。之后在tutorial包下建立一个名为cmdline的脚本文件（名字随意）。 下面为了直接达到运行成功的目的，贴上测试用的代码。 first.py中的代码： 123456789101112131415import scrapyclass DmozSpider(scrapy.Spider): name = "first" #此处很重要 allowed_domains = ["dmoz.org"] start_urls = [ "http://www.dmoz.org/Computers/Programming/Languages/Python/Books/", "http://www.dmoz.org/Computers/Programming/Languages/Python/Resources/" ] def parse(self, response): filename = response.url.split("/")[-2] with open(filename, 'wb') as f: f.write(response.body) cmdline.py中的代码： 12345from scrapy.cmdline import executeif __name__ == '__main__': #第三个参数就是上方的first文件名！其他两个参数如下正常 execute(argv=['scrapy', 'crawl', 'first']) items.py中的代码： import scrapy class TutorialItem(scrapy.Item): # define the fields for your item here like: # name = scrapy.Field() title = scrapy.Field() link = scrapy.Field() desc = scrapy.Field() 这个文件是与first文件有直接联系的。可参考官方文档介绍。 运行接下来直接运行cmdline.py可得出结果： 配置调试直接看下面的图上解说吧。 接下来点击debug。 最终两者均可达到输出的效果！ 参考： https://blog.csdn.net/otengyue/article/details/48065841 http://www.cnblogs.com/v-BigdoG-v/p/7393601.html]]></content>
       <categories>
         <category>Python</category>
-        <category>Eclispe</category>
         <category>Scrapy</category>
+        <category>Eclispe</category>
       </categories>
       <tags>
         <tag>Python</tag>
-        <tag>Eclispe</tag>
         <tag>Scrapy</tag>
+        <tag>Eclispe</tag>
       </tags>
   </entry>
   <entry>
@@ -847,8 +858,8 @@
         <category>笔记</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>问题记录笔记</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -942,8 +953,8 @@
         <category>笔记</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>问题记录笔记</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -1426,8 +1437,8 @@
         <category>Anaconda</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>问题记录笔记</tag>
+        <tag>Python</tag>
         <tag>Anaconda</tag>
       </tags>
   </entry>

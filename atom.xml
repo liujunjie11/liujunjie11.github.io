@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2018-11-15T02:56:08.706Z</updated>
+  <updated>2018-11-19T07:12:29.101Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>考研or工作，抉择与想法</title>
+    <link href="https://liujunjie11.github.io/2018/11/19/%E8%80%83%E7%A0%94or%E5%B7%A5%E4%BD%9C%EF%BC%8C%E6%8A%89%E6%8B%A9%E4%B8%8E%E6%83%B3%E6%B3%95/"/>
+    <id>https://liujunjie11.github.io/2018/11/19/考研or工作，抉择与想法/</id>
+    <published>2018-11-19T05:10:14.000Z</published>
+    <updated>2018-11-19T07:12:29.101Z</updated>
+    
+    <content type="html"><![CDATA[<p>不知不觉，大三上学期也过一大半了，我这几天一直在<code>考研</code>or<code>工作</code>之间进行一场自我的挣扎。</p><p>有时想的太多真的会成为人们进步的碍脚石。我为何要选择考研？必须得问自己的真心，必须得深入了解自己更加倾向于哪一方面！如果不了解自己需要什么，什么都不会，不如直接去考研待在学校寻找自我吧，还可以顺便学点知识应付未来的生计什么的。我是个自我了解很深的人，我选择工作，因为我更加倾向于喜欢毕业之后去工作。</p><p>如果我考研为了什么？我想过去日本留学，冷静下来想了一下发现自己只是想去体验日本的生活环境，另外成本太高，而且我也不愿去为了这个单独的目标去花更多的时间了，所以我放弃留学的打算。光光是成本不说，我想过去考研国内的大学，我冷静下来想了想，不过是自己的一些能力因素达不到理想中的那个样子罢了，而我现在还有时间！！学历真的重要吗？我通过参考了很多前辈的话，我冷静下来想了想，发现还是自身的能力不足的问题，焦虑的大多数时候只是能力不足的表现罢了，这时候就需要读书看书学习了。</p><p>理性考虑好之后，干，就完了！！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;不知不觉，大三上学期也过一大半了，我这几天一直在&lt;code&gt;考研&lt;/code&gt;or&lt;code&gt;工作&lt;/code&gt;之间进行一场自我的挣扎。&lt;/p&gt;
+&lt;p&gt;有时想的太多真的会成为人们进步的碍脚石。我为何要选择考研？必须得问自己的真心，必须得深入了解自己更加倾向于哪一方面！如果不
+      
+    
+    </summary>
+    
+      <category term="日记" scheme="https://liujunjie11.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    
+      <category term="日记" scheme="https://liujunjie11.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MySQL语句疑惑记录</title>
     <link href="https://liujunjie11.github.io/2018/11/15/MySQL%E8%AF%AD%E5%8F%A5%E7%96%91%E6%83%91%E8%AE%B0%E5%BD%95/"/>
     <id>https://liujunjie11.github.io/2018/11/15/MySQL语句疑惑记录/</id>
     <published>2018-11-15T01:53:00.000Z</published>
-    <updated>2018-11-15T02:56:08.706Z</updated>
+    <updated>2018-11-17T07:26:31.363Z</updated>
     
     <content type="html"><![CDATA[<p>主要是记录一些比较有疑惑的语句，方便以后的查找以及回忆。</p><a id="more"></a><h1 id="LIMIT子句"><a href="#LIMIT子句" class="headerlink" title="LIMIT子句"></a>LIMIT子句</h1><blockquote><p> <strong>主要参考：<a href="https://www.yiibai.com/mysql/limit.html" target="_blank" rel="external">https://www.yiibai.com/mysql/limit.html</a></strong></p></blockquote><p>LIMIT子句语法：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">SELECT </div><div class="line">    column1,column2,...</div><div class="line">FROM</div><div class="line">    table</div><div class="line">LIMIT offset , count;</div></pre></td></tr></table></figure><p>SQL我们来查看LIMIT子句参数：</p><p><code>offset</code>参数:指定要返回的第一行的偏移量。第一行的偏移量为0，而不是1。</p><p><code>count</code>:指定要返回的最大行数。</p><p>使用带有一个参数的LIMIT子句时，此参数将用于确定从结果集的开头返回的最大行数。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">SELECT </div><div class="line">    column1,column2,...</div><div class="line">FROM</div><div class="line">    table</div><div class="line">LIMIT count;</div></pre></td></tr></table></figure><p>SQL上面的查询等同：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">SELECT </div><div class="line">    column1,column2,...</div><div class="line">FROM</div><div class="line">    table</div><div class="line">LIMIT 0 , count;</div></pre></td></tr></table></figure><h2 id="实例说明"><a href="#实例说明" class="headerlink" title="实例说明"></a>实例说明</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">mysql&gt; SELECT productCode, productName, buyprice</div><div class="line">FROM products</div><div class="line">ORDER BY buyprice DESC;</div><div class="line"></div><div class="line">+-------------+--------------------------------------+----------+</div><div class="line">| productCode | productName                          | buyprice |</div><div class="line">+-------------+--------------------------------------+----------+</div><div class="line">| S10_4962    | 1962 LanciaA Delta 16V               | 103.42   |</div><div class="line">| S18_2238    | 1998 Chrysler Plymouth Prowler       | 101.51   |</div><div class="line">| S10_1949    | 1952 Alpine Renault 1300             | 98.58    |</div><div class="line">| S24_3856    | 1956 Porsche 356A Coupe              | 98.3     |</div><div class="line">| S12_1108    | 2001 Ferrari Enzo                    | 95.59    |</div><div class="line">| S12_1099    | 1968 Ford Mustang                    | 95.34    |</div><div class="line">... ....</div><div class="line">+-------------+--------------------------------------+----------+</div><div class="line">110 rows in set</div></pre></td></tr></table></figure><p>默认语句为输出最前面的几行：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">mysql&gt; SELECT customernumber, customername, creditlimit</div><div class="line">FROM customers</div><div class="line">ORDER BY creditlimit DESC</div><div class="line">LIMIT 5;</div><div class="line"></div><div class="line">相当于：</div><div class="line">mysql&gt; SELECT customernumber, customername, creditlimit</div><div class="line">FROM customers</div><div class="line">ORDER BY creditlimit DESC</div><div class="line">LIMIT 0, 5; #从第一个偏移量的指定开始向下输出指定行数的所有内容。</div><div class="line"></div><div class="line"></div><div class="line">+----------------+------------------------------+-------------+</div><div class="line">| customernumber | customername                 | creditlimit |</div><div class="line">+----------------+------------------------------+-------------+</div><div class="line">|            141 | Euro+ Shopping Channel       | 227600      |</div><div class="line">|            124 | Mini Gifts Distributors Ltd. | 210500      |</div><div class="line">|            298 | Vida Sport, Ltd              | 141300      |</div><div class="line">|            151 | Muscle Machine Inc           | 138500      |</div><div class="line">|            187 | AV Stores, Co.               | 136800      |</div><div class="line">+----------------+------------------------------+-------------+</div><div class="line">5 rows in set</div></pre></td></tr></table></figure><p>简要深入理解偏移量的作用：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">mysql&gt; SELECT productCode, productName, buyprice FROM  products</div><div class="line">ORDER BY buyprice DESC</div><div class="line">LIMIT 1, 1; #偏移量从0开始，所以要指定从1开始，然后取一行记录，以行数为1的指定仅输出一行对应的内容。</div><div class="line"></div><div class="line">+-------------+--------------------------------+----------+</div><div class="line">| productCode | productName                    | buyprice |</div><div class="line">+-------------+--------------------------------+----------+</div><div class="line">| S18_2238    | 1998 Chrysler Plymouth Prowler | 101.51   |</div><div class="line">+-------------+--------------------------------+----------+</div><div class="line">1 row in set</div><div class="line"></div><div class="line"></div><div class="line">#如下几个深入理解</div><div class="line">mysql&gt; SELECT productCode, productName, buyprice FROM  products</div><div class="line">ORDER BY buyprice DESC</div><div class="line">LIMIT 0, 1; #这时指定第一行(偏移量默认为第一行取0)</div><div class="line"></div><div class="line">+-------------+--------------------------------+----------+</div><div class="line">| productCode | productName                    | buyprice |</div><div class="line">+-------------+--------------------------------+----------+</div><div class="line">| S10_4962    | 1962 LanciaA Delta 16V | 103.42   |</div><div class="line">+-------------+--------------------------------+----------+</div><div class="line">1 row in set</div><div class="line"></div><div class="line"></div><div class="line">mysql&gt; SELECT productCode, productName, buyprice FROM  products</div><div class="line">ORDER BY buyprice DESC</div><div class="line">LIMIT 0, 2; #从已指定第一行偏移量开始输出以此为基础的指定行数的以下所有内容</div><div class="line"></div><div class="line">+-------------+--------------------------------------+----------+</div><div class="line">| productCode | productName                          | buyprice |</div><div class="line">+-------------+--------------------------------------+----------+</div><div class="line">| S10_4962    | 1962 LanciaA Delta 16V               | 103.42   |</div><div class="line">| S18_2238    | 1998 Chrysler Plymouth Prowler       | 101.51   |</div><div class="line">+----------------+------------------------------+-------------+</div><div class="line">2 rows in set</div></pre></td></tr></table></figure><blockquote><p>总结：<code>offset</code>就是相当于一个定位，<code>count</code>就是要返回指定的最大行数。</p></blockquote><h1 id="ORDER-BY-ASC-DESC"><a href="#ORDER-BY-ASC-DESC" class="headerlink" title="ORDER BY ASC/DESC"></a>ORDER BY ASC/DESC</h1><p><code>ASC</code>:[A~Z], [1~N]…</p><p><code>DESC</code>:[Z~A}, [N~1]…</p><blockquote><p>A，B，…Z。Z相当于最大的。</p></blockquote><h1 id="经度-Longitude-纬度-Latitude"><a href="#经度-Longitude-纬度-Latitude" class="headerlink" title="经度(Longitude) 纬度(Latitude)"></a>经度(Longitude) 纬度(Latitude)</h1><p><code>经度(Longitude)</code>：<code>东经</code>，<code>西经</code>。</p><blockquote><p>东经正数，西经为负数。越大越靠东。</p></blockquote><p><code>纬度(Latitude)</code>：<code>南纬</code>，<code>北纬</code>。</p><blockquote><p>北纬为正数，南纬为负数。越大越靠北。</p></blockquote><p>方便记忆：东经，东北正。</p><p><strong>参考：<a href="https://baike.baidu.com/item/%E7%BB%8F%E7%BA%AC%E5%BA%A6" target="_blank" rel="external">https://baike.baidu.com/item/%E7%BB%8F%E7%BA%AC%E5%BA%A6</a></strong></p>]]></content>
     
@@ -312,9 +338,9 @@
       <category term="Python" scheme="https://liujunjie11.github.io/categories/Python/"/>
     
     
-      <category term="Python" scheme="https://liujunjie11.github.io/tags/Python/"/>
-    
       <category term="问题记录笔记" scheme="https://liujunjie11.github.io/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Python" scheme="https://liujunjie11.github.io/tags/Python/"/>
     
       <category term="Pyttsx3" scheme="https://liujunjie11.github.io/tags/Pyttsx3/"/>
     
@@ -517,9 +543,9 @@
     
       <category term="教程笔记" scheme="https://liujunjie11.github.io/tags/%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="机器学习" scheme="https://liujunjie11.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
       <category term="Mac" scheme="https://liujunjie11.github.io/tags/Mac/"/>
+    
+      <category term="机器学习" scheme="https://liujunjie11.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
       <category term="LightGBM" scheme="https://liujunjie11.github.io/tags/LightGBM/"/>
     
@@ -552,9 +578,9 @@
     
       <category term="教程笔记" scheme="https://liujunjie11.github.io/tags/%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="机器学习" scheme="https://liujunjie11.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
       <category term="Mac" scheme="https://liujunjie11.github.io/tags/Mac/"/>
+    
+      <category term="机器学习" scheme="https://liujunjie11.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
       <category term="Xgboost" scheme="https://liujunjie11.github.io/tags/Xgboost/"/>
     
@@ -604,33 +630,6 @@
     
     
       <category term="日记" scheme="https://liujunjie11.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo博客绑定独立域名以及转移云服务器</title>
-    <link href="https://liujunjie11.github.io/2018/10/12/Hexo%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E7%8B%AC%E7%AB%8B%E5%9F%9F%E5%90%8D%E4%BB%A5%E5%8F%8A%E8%BD%AC%E7%A7%BB%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    <id>https://liujunjie11.github.io/2018/10/12/Hexo博客绑定独立域名以及转移云服务器/</id>
-    <published>2018-10-12T06:41:54.000Z</published>
-    <updated>2018-11-13T12:34:20.656Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近对我的博客进行了一系列大换血，以前的样子太难看了，而且速度也一直不怎么满意，这次想好好的修改一下，其中包括了买了个域名，转移到了云服务器上运行。</p><p>当然在昨天开始就开始折腾了，所以把所有想要记录的都在此记录一下。</p><a id="more"></a><h1 id="大换血修改设置"><a href="#大换血修改设置" class="headerlink" title="大换血修改设置"></a>大换血修改设置</h1><p>关于这个我就贴上相关的链接好了，毕竟重复造轮子不是我的初衷。</p><p>一些对我有帮助的链接，谢谢分享的网友们：</p><ul><li><p><a href="https://asdfv1929.github.io/2018/01/21/daovoice/" target="_blank" rel="external">Hexo NexT主题内接入网页在线联系功能</a></p></li><li><p><a href="https://blog.csdn.net/qq_33699981/article/details/72716951" target="_blank" rel="external">hexo的next主题个性化教程：打造炫酷网站</a></p></li><li><p><a href="http://blog.sciencenet.cn/blog-3247241-1139774.html" target="_blank" rel="external">hexo博客解决不蒜子统计无法显示问题</a></p></li><li><p><a href="http://zouzls.github.io/2017/03/17/Next主题背景个性化DIY/" target="_blank" rel="external">Next主题背景个性化DIY</a></p></li><li><p><a href="https://www.jianshu.com/p/b20fc983005f" target="_blank" rel="external">Hexo设置主题以及Next主题个性设置</a></p></li><li><p><a href="http://leozzy.com/2017/09/08/hexo-sidebar-auto/" target="_blank" rel="external">2017版 Hexo Next主题侧边栏 Sidebar 配置自动展开教程</a></p></li><li><p><a href="https://ohmyarch.github.io/2014/12/24/Hexo主页显示摘要/" target="_blank" rel="external">Hexo主页显示摘要</a></p></li><li><p><a href="https://segmentfault.com/q/1010000004840061/a-1020000004895286" target="_blank" rel="external">hexo next主题如何在首页摘要里显示文章图片？</a></p></li><li><p><a href="https://www.ofind.cn/blog/HEXO/HEXO下的语法高亮拓展修改.html" target="_blank" rel="external">HEXO下的语法高亮拓展修改</a></p></li><li><p><a href="https://juejin.im/entry/59d4a6a651882530f31a43f4" target="_blank" rel="external">打造个性超赞博客Hexo+NexT+GithubPages的超深度优化</a></p></li><li><p><a href="http://mashirosorata.vicp.io/HEXO-NEXT主题个性化配置.html" target="_blank" rel="external">HEXO+NEXT主题个性化配置</a></p></li></ul><blockquote><p>以上就不在写明作者了，都是一些比较有帮助的文章。</p></blockquote><p>在此简单说明一下关于我在<code>next</code>主题设置头像的问题，其实在主页的<code>_config.yml</code>设置一下就可以得出头像了，如下图，我将图片发在七牛云上，将外链拿到这里存放就好了。</p><p><img src="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-12%20%E4%B8%8B%E5%8D%882.54.00.png" alt=""></p><hr><h1 id="关于hexo博客绑定域名"><a href="#关于hexo博客绑定域名" class="headerlink" title="关于hexo博客绑定域名"></a>关于hexo博客绑定域名</h1><p>关于这个事我简单说一下好了，先放有用的链接，再稍微补充一下。</p><ul><li><p><a href="http://fengdaoting.com/2017/11/12/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E7%BB%91%E5%AE%9AGithub%E4%B8%8A%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%88%B0Godaddy%E5%9F%9F%E5%90%8D/" target="_blank" rel="external">绑定Github上的个人博客到Godaddy域名</a></p></li><li><p><a href="http://hushiyu1995.com/2017/10/01/build-web-1/index.html" target="_blank" rel="external">Github Page + Hexo + Godaddy 搭建一个个性域名的博客网站</a></p></li><li><p><a href="https://www.jianshu.com/p/6a3ee5b5abfd" target="_blank" rel="external">基于github和hexo搭建博客—-绑定个人域名</a></p></li><li><p><a href="https://www.dute.me/godaddy-alipay.html" target="_blank" rel="external">GoDaddy不支持支付宝的解决办法</a></p></li><li><p><a href="https://www.dute.me/" target="_blank" rel="external">GoDaddy优惠码</a></p></li></ul><h2 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h2><h3 id="关于查找GitHub-pages的ip"><a href="#关于查找GitHub-pages的ip" class="headerlink" title="关于查找GitHub pages的ip"></a>关于查找GitHub pages的ip</h3><p>两种方法：</p><p>第一种：</p><blockquote><p><code>ping liujunjie11.github.io</code> ping自己的博客目录地址</p></blockquote><p>如图：</p><p><img src="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-12%20%E4%B8%8B%E5%8D%883.00.33.png" alt=""></p><p>第二种：</p><p>打开网站<a href="https://help.github.com/articles/troubleshooting-custom-domains/，拉到下面查看相关的IP，如图：" target="_blank" rel="external">https://help.github.com/articles/troubleshooting-custom-domains/，拉到下面查看相关的IP，如图：</a></p><p><img src="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-12%20%E4%B8%8B%E5%8D%883.02.32.png" alt=""></p><h3 id="建立CNAME文件的存放目录"><a href="#建立CNAME文件的存放目录" class="headerlink" title="建立CNAME文件的存放目录"></a>建立CNAME文件的存放目录</h3><p>是要放在Hexo项目的sources目录下的，我为了保险在next的sources目录下也放了一份。</p><p>补充的就这么点了。</p><h1 id="Hexo转移到云服务器"><a href="#Hexo转移到云服务器" class="headerlink" title="Hexo转移到云服务器"></a>Hexo转移到云服务器</h1><p>这地方因为不怎么懂而且自身能力也不够，所以遇到了很多的坑，唉，有些人可能自己都搞不清楚就写文章了，搞完所有流程又不对…真的是无力吐槽了，花费了那么多精力。现在还没搞好，到时候补上需要说明的。</p><p>因为GitHub允许每个仓库在1GB左右的空间，而我现在寄托在GitHub的博客大小才130M…so,我现在不打算转移到云服务器了，到时候再说吧。</p><blockquote><p>GitHub的仓库内存说明：<a href="https://help.github.com/articles/what-is-my-disk-quota/" target="_blank" rel="external">https://help.github.com/articles/what-is-my-disk-quota/</a></p></blockquote><p>贴上参考过的链接：</p><ul><li><p><a href="https://segmentfault.com/a/1190000005723321" target="_blank" rel="external">阿里云VPS搭建自己的的Hexo博客</a></p></li><li><p><a href="https://www.hellolvs.com/hexo/" target="_blank" rel="external">VPS服务器搭建Hexo博客教程</a></p></li><li><p><a href="https://www.jianshu.com/p/ad71f7a531a5" target="_blank" rel="external">利用云服务器搭架Hexo个人博客</a></p></li><li><p><a href="https://www.laoyuyu.me/2017/10/10/hexo_deploy_vps/" target="_blank" rel="external">HEXO 部署到云服务器详细指南</a></p></li></ul><blockquote><p>也就是在云服务器上建好一些需要的软件，然后就像使用命令<code>hexo g -d</code>一样上传GitHub一样，并不需要重新开始所有。    </p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近对我的博客进行了一系列大换血，以前的样子太难看了，而且速度也一直不怎么满意，这次想好好的修改一下，其中包括了买了个域名，转移到了云服务器上运行。&lt;/p&gt;
-&lt;p&gt;当然在昨天开始就开始折腾了，所以把所有想要记录的都在此记录一下。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="笔记" scheme="https://liujunjie11.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Hexo" scheme="https://liujunjie11.github.io/categories/Hexo/"/>
-    
-    
-      <category term="教程笔记" scheme="https://liujunjie11.github.io/tags/%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Hexo" scheme="https://liujunjie11.github.io/tags/Hexo/"/>
     
   </entry>
   
