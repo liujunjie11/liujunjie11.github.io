@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[计算机编程基础知识汇总资源学习]]></title>
+    <url>%2F2018%2F11%2F19%2F%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%B1%87%E6%80%BB%E8%B5%84%E6%BA%90%E5%AD%A6%E4%B9%A0%2F</url>
+    <content type="text"><![CDATA[打算好好的学习一些计算机编程基础知识(即热爱计算机编程这一块的基础知识)，因为之前都是碎片化的学习，想在这段时间进行最短时间的学习，另外之前也有一些了解，我想学习起来会很轻松，很期待～ 会记录在此的是我学习的资源分享以及需要补充的一些东西。]]></content>
+      <categories>
+        <category>资源分享</category>
+        <category>计算机基础</category>
+      </categories>
+      <tags>
+        <tag>计算机基础</tag>
+        <tag>计算机</tag>
+        <tag>编程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[考研or工作，抉择与想法]]></title>
     <url>%2F2018%2F11%2F19%2F%E8%80%83%E7%A0%94or%E5%B7%A5%E4%BD%9C%EF%BC%8C%E6%8A%89%E6%8B%A9%E4%B8%8E%E6%83%B3%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[不知不觉，大三上学期也过一大半了，我这几天一直在考研or工作之间进行一场自我的挣扎。 有时想的太多真的会成为人们进步的碍脚石。我为何要选择考研？必须得问自己的真心，必须得深入了解自己更加倾向于哪一方面！如果不了解自己需要什么，什么都不会，不如直接去考研待在学校寻找自我吧，还可以顺便学点知识应付未来的生计什么的。我是个自我了解很深的人，我选择工作，因为我更加倾向于喜欢毕业之后去工作。 如果我考研为了什么？我想过去日本留学，冷静下来想了一下发现自己只是想去体验日本的生活环境，另外成本太高，而且我也不愿去为了这个单独的目标去花更多的时间了，所以我放弃留学的打算。光光是成本不说，我想过去考研国内的大学，我冷静下来想了想，不过是自己的一些能力因素达不到理想中的那个样子罢了，而我现在还有时间！！学历真的重要吗？我通过参考了很多前辈的话，我冷静下来想了想，发现还是自身的能力不足的问题，焦虑的大多数时候只是能力不足的表现罢了，这时候就需要读书看书学习了。 理性考虑好之后，干，就完了！！]]></content>
+    <content type="text"><![CDATA[不知不觉，大三上学期也过一大半了，我这几天一直在考研or工作之间进行一场自我的挣扎。 有时想的太多真的会成为人们进步的碍脚石。我为何要选择考研？必须得问自己的真心，必须得深入了解自己更加倾向于哪一方面！如果不了解自己需要什么，什么都不会，不如直接去考研待在学校寻找自我吧，还可以顺便学点知识应付未来的生计什么的。我是个自我了解很深的人，我选择工作，因为我更加倾向于喜欢毕业之后去工作。 如果我考研为了什么？我想过去日本留学，冷静下来想了一下发现自己只是想去体验日本的生活环境，另外成本太高，而且我也不愿去为了这个单独的目标去花更多的时间了，所以我放弃留学的打算。光光是成本不说，我想过去考研国内的大学，我冷静下来想了想，不过是自己的一些能力因素达不到理想中的那个样子罢了，而我现在还有时间！！学历真的重要吗？我通过参考了很多前辈的话，我冷静下来想了想，发现还是自身的能力不足的问题，焦虑的大多数时候只是能力不足的表现罢了，这时候就需要读书看书学习了。 再者，我其实不是喜欢考研的，只不过是想要个学历学位证书以及多一些的项目经验罢了，我的这个目的经过我的考虑之后，我有点接受不了，因为我为了这种东西而去花费一年时间去准备的话，或许不适合我的性格与选择。 一些事情理性考虑好之后，干，就完了！！]]></content>
       <categories>
         <category>日记</category>
       </categories>
@@ -139,8 +153,8 @@
         <category>Python</category>
       </categories>
       <tags>
-        <tag>问题记录笔记</tag>
         <tag>Python</tag>
+        <tag>问题记录笔记</tag>
         <tag>Pyttsx3</tag>
       </tags>
   </entry>
@@ -226,8 +240,8 @@
       </categories>
       <tags>
         <tag>教程笔记</tag>
-        <tag>Mac</tag>
         <tag>机器学习</tag>
+        <tag>Mac</tag>
         <tag>LightGBM</tag>
       </tags>
   </entry>
@@ -243,8 +257,8 @@
       </categories>
       <tags>
         <tag>教程笔记</tag>
-        <tag>Mac</tag>
         <tag>机器学习</tag>
+        <tag>Mac</tag>
         <tag>Xgboost</tag>
       </tags>
   </entry>
@@ -424,9 +438,9 @@
         <category>Python</category>
       </categories>
       <tags>
-        <tag>问题记录笔记</tag>
         <tag>机器学习</tag>
         <tag>Python</tag>
+        <tag>问题记录笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -504,8 +518,8 @@
         <category>Matploylib</category>
       </categories>
       <tags>
-        <tag>问题记录笔记</tag>
         <tag>Python</tag>
+        <tag>问题记录笔记</tag>
         <tag>Matploylib</tag>
       </tags>
   </entry>
@@ -773,13 +787,13 @@
     <content type="text"><![CDATA[关于在eclipse中运行爬虫scrapy框架的项目介绍如下。 scrapy官方文档：http://scrapy-chs.readthedocs.io/zh_CN/0.24/topics/shell.html 首先打开终端将cd至eclipse目录下的（即eclipse-workspace），使用命令行scrapy startproject tutorial（其中的tutorial是自由选择的），之后会生成一个目录，将其目录移至一个python工程下。 如上图。 在spider包下建立一个脚本文件（如上图我的那个first文件，名字随意），是用来写爬虫程序用的。之后在tutorial包下建立一个名为cmdline的脚本文件（名字随意）。 下面为了直接达到运行成功的目的，贴上测试用的代码。 first.py中的代码： 123456789101112131415import scrapyclass DmozSpider(scrapy.Spider): name = "first" #此处很重要 allowed_domains = ["dmoz.org"] start_urls = [ "http://www.dmoz.org/Computers/Programming/Languages/Python/Books/", "http://www.dmoz.org/Computers/Programming/Languages/Python/Resources/" ] def parse(self, response): filename = response.url.split("/")[-2] with open(filename, 'wb') as f: f.write(response.body) cmdline.py中的代码： 12345from scrapy.cmdline import executeif __name__ == '__main__': #第三个参数就是上方的first文件名！其他两个参数如下正常 execute(argv=['scrapy', 'crawl', 'first']) items.py中的代码： import scrapy class TutorialItem(scrapy.Item): # define the fields for your item here like: # name = scrapy.Field() title = scrapy.Field() link = scrapy.Field() desc = scrapy.Field() 这个文件是与first文件有直接联系的。可参考官方文档介绍。 运行接下来直接运行cmdline.py可得出结果： 配置调试直接看下面的图上解说吧。 接下来点击debug。 最终两者均可达到输出的效果！ 参考： https://blog.csdn.net/otengyue/article/details/48065841 http://www.cnblogs.com/v-BigdoG-v/p/7393601.html]]></content>
       <categories>
         <category>Python</category>
-        <category>Scrapy</category>
         <category>Eclispe</category>
+        <category>Scrapy</category>
       </categories>
       <tags>
         <tag>Python</tag>
-        <tag>Scrapy</tag>
         <tag>Eclispe</tag>
+        <tag>Scrapy</tag>
       </tags>
   </entry>
   <entry>
@@ -858,8 +872,8 @@
         <category>笔记</category>
       </categories>
       <tags>
-        <tag>问题记录笔记</tag>
         <tag>Python</tag>
+        <tag>问题记录笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -953,8 +967,8 @@
         <category>笔记</category>
       </categories>
       <tags>
-        <tag>问题记录笔记</tag>
         <tag>Python</tag>
+        <tag>问题记录笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -1437,8 +1451,8 @@
         <category>Anaconda</category>
       </categories>
       <tags>
-        <tag>问题记录笔记</tag>
         <tag>Python</tag>
+        <tag>问题记录笔记</tag>
         <tag>Anaconda</tag>
       </tags>
   </entry>
