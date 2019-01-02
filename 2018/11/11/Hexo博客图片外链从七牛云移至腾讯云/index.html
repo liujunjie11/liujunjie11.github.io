@@ -94,7 +94,8 @@
 <meta property="og:description" content="最近发现博客中的一些文章图片无法正常显示了，查看了一些文章之后，发现原来是测试域名失效了…我的图片存放了这么多…全都不能用了，妈蛋啊！ 我研究了一下关于它的这个恢复的方法，需要实名不说了，还要我的网站备案，不可能的绝对不可能的，我要走了，再见了，七牛云！！ 我要搬去腾讯云了。以下是我的记录。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-11-12%20%E4%B8%8B%E5%8D%886.57.30.png">
-<meta property="og:updated_time" content="2019-01-02T06:48:41.367Z">
+<meta property="og:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-01-02%20%E4%B8%8B%E5%8D%883.11.27.png">
+<meta property="og:updated_time" content="2019-01-02T07:36:06.955Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo博客图片外链从七牛云移至腾讯云">
 <meta name="twitter:description" content="最近发现博客中的一些文章图片无法正常显示了，查看了一些文章之后，发现原来是测试域名失效了…我的图片存放了这么多…全都不能用了，妈蛋啊！ 我研究了一下关于它的这个恢复的方法，需要实名不说了，还要我的网站备案，不可能的绝对不可能的，我要走了，再见了，七牛云！！ 我要搬去腾讯云了。以下是我的记录。">
@@ -417,7 +418,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  494
+                  812
                 </span>
               
 
@@ -433,7 +434,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -484,6 +485,31 @@
 <blockquote>
 <p>不过为了稳定，我是真的不想从来一遍了…文件太多了。所以我买了个备案的域名。</p>
 </blockquote>
+<h1 id="更新-1"><a href="#更新-1" class="headerlink" title="更新"></a>更新</h1><p>最近买的不久的备案域名被收回了…于是我决心从七牛云搬出来。以下是我的一些心得。</p>
+<p><strong>需要先将七牛云的上的所有的文件下载下来，之后再将文件上传腾讯云上，之后更改一些外链链接即可万事大吉了！</strong></p>
+<blockquote>
+<p>具体步骤可参考：<a href="http://robotkang.cc/2018/11/pic/" target="_blank" rel="external">将图床从七牛云迁移到腾讯COS</a></p>
+</blockquote>
+<p>另外要补充的一些：</p>
+<p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-01-02%20%E4%B8%8B%E5%8D%883.11.27.png" alt=""></p>
+<blockquote>
+<p>这是我摸索出来的正确的符合当下情况的<code>batch_download.conf</code>文件描述，空白表示全部下载的意识。</p>
+</blockquote>
+<p>另外这个基本的下载与使用的官方指导：<a href="https://developer.qiniu.com/kodo/tools/1302/qshell" target="_blank" rel="external">Mac上的七牛云命令行工具(qshell)使用</a></p>
+<blockquote>
+<p>但是单单看这个视频是不行的，还是出现了一些错误，比如：命令行根本运行不了！<strong>所以还需要参考下面的官方的API进行操作！！！！</strong></p>
+</blockquote>
+<ul>
+<li><p><a href="https://github.com/qiniu/qshell" target="_blank" rel="external">qshell-Github</a></p>
+</li>
+<li><p><a href="https://developer.qiniu.com/kodo/tools/1302/qshell" target="_blank" rel="external">官方文档命令行工具(qshell)</a></p>
+</li>
+</ul>
+<p>另外关于批量更改文字内容（尝试未成功…）可参考：</p>
+<ul>
+<li><a href="https://blog.csdn.net/lzyzuixin/article/details/7638979" target="_blank" rel="external">linux sed命令 批量替换文件内容的方法</a></li>
+</ul>
+<h2 id="注意-amp-提示"><a href="#注意-amp-提示" class="headerlink" title="注意&amp;提示"></a>注意&amp;提示</h2><p>使用的命令行如果出现错误一定看官方的文档进行修改重新来过！！以官方文档为准！！！</p>
 
       
     </div>
@@ -513,7 +539,7 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2019年01月02日 - 14:01</p>
+  <p><span>最后更新:</span>2019年01月02日 - 15:01</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -814,7 +840,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#将七牛云的图片下载至本地"><span class="nav-number">1.</span> <span class="nav-text">将七牛云的图片下载至本地</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#过程操作"><span class="nav-number">1.1.</span> <span class="nav-text">过程操作</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于在腾讯云的图床操作"><span class="nav-number">2.</span> <span class="nav-text">关于在腾讯云的图床操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#更新"><span class="nav-number">3.</span> <span class="nav-text">更新</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#将七牛云的图片下载至本地"><span class="nav-number">1.</span> <span class="nav-text">将七牛云的图片下载至本地</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#过程操作"><span class="nav-number">1.1.</span> <span class="nav-text">过程操作</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于在腾讯云的图床操作"><span class="nav-number">2.</span> <span class="nav-text">关于在腾讯云的图床操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#更新"><span class="nav-number">3.</span> <span class="nav-text">更新</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#更新-1"><span class="nav-number">4.</span> <span class="nav-text">更新</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#注意-amp-提示"><span class="nav-number">4.1.</span> <span class="nav-text">注意&提示</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -852,7 +878,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      217.3k
+      217.7k
     </span>
   
 </div>
