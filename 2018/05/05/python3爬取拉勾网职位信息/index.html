@@ -93,17 +93,17 @@
 <meta property="og:site_name" content="LXiHa`Notes">
 <meta property="og:description" content="爬取拉勾网的最大障碍：普通模块难以实现翻页爬取。自己加了参数page，经过抓包查询之后也达不到我的理想要求。 没办法了，只好用selenium模块结合浏览器来实现边翻页边爬取了。  实际上比较浪费系统资源，这种情况不得已还是尽量别用的好。  在此记录下主要的过程，包括实现的代码。 还是要说明一下：不懂的地方还是需要自己去查询了解，代码不过就是几个模块的知识运用罢了。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://smartjpa.com/5%E6%9C%88-06-2018%2022-29-25.gif">
-<meta property="og:image" content="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.28.45.png">
-<meta property="og:image" content="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.32.58.png">
-<meta property="og:image" content="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.34.40.png">
-<meta property="og:image" content="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.35.34.png">
-<meta property="og:image" content="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.27.19.png">
-<meta property="og:updated_time" content="2018-11-13T12:38:40.164Z">
+<meta property="og:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/5%E6%9C%88-06-2018%2022-29-25.gif">
+<meta property="og:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.28.45.png">
+<meta property="og:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.32.58.png">
+<meta property="og:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.34.40.png">
+<meta property="og:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.35.34.png">
+<meta property="og:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.27.19.png">
+<meta property="og:updated_time" content="2019-01-02T06:54:15.842Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python3爬取拉勾网职位信息">
 <meta name="twitter:description" content="爬取拉勾网的最大障碍：普通模块难以实现翻页爬取。自己加了参数page，经过抓包查询之后也达不到我的理想要求。 没办法了，只好用selenium模块结合浏览器来实现边翻页边爬取了。  实际上比较浪费系统资源，这种情况不得已还是尽量别用的好。  在此记录下主要的过程，包括实现的代码。 还是要说明一下：不懂的地方还是需要自己去查询了解，代码不过就是几个模块的知识运用罢了。">
-<meta name="twitter:image" content="http://smartjpa.com/5%E6%9C%88-06-2018%2022-29-25.gif">
+<meta name="twitter:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/5%E6%9C%88-06-2018%2022-29-25.gif">
 
 
 
@@ -317,7 +317,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘俊">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://smartjpa.com/images-111.jpeg">
+      <meta itemprop="image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/images-111.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -468,22 +468,22 @@
 <p>还是要说明一下：<strong>不懂的地方还是需要自己去查询了解，代码不过就是几个模块的知识运用罢了。</strong></p>
 <a id="more"></a>
 <h2 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h2><p>启动<em>Chrome**webdriver</em>插件，之后复制其所在地址，加入代码中启动<em>selenium</em>模块程序。</p>
-<p><img src="http://smartjpa.com/5%E6%9C%88-06-2018%2022-29-25.gif" alt=""></p>
+<p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/5%E6%9C%88-06-2018%2022-29-25.gif" alt=""></p>
 <blockquote>
 <p>启动插件。</p>
 </blockquote>
-<p><img src="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.28.45.png" alt=""></p>
+<p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.28.45.png" alt=""></p>
 <blockquote>
 <p>本机此插件所在的目录位置。</p>
 </blockquote>
 <h2 id="分析过程"><a href="#分析过程" class="headerlink" title="分析过程"></a>分析过程</h2><p>经过简单的分析，发现页面的切换的同时URL没有任何的改变(这就是我为何要用<em>selenium</em>来爬取的原因！)：</p>
-<p><img src="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.32.58.png" alt=""></p>
+<p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.32.58.png" alt=""></p>
 <p>我们的目标是，点击在此符合条件的发布公司链接，进入招聘信息详细的界面爬取详细的所有需要的信息：</p>
-<p><img src="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.34.40.png" alt=""></p>
+<p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.34.40.png" alt=""></p>
 <blockquote>
 <p>一一进入进行爬取。</p>
 </blockquote>
-<p><img src="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.35.34.png" alt=""></p>
+<p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.35.34.png" alt=""></p>
 <blockquote>
 <p>进入之后详细的招聘信息页面。</p>
 </blockquote>
@@ -492,7 +492,7 @@
 <blockquote>
 <p>最后我选择将爬取的内容保存至一个<code>.txt</code>文件下。</p>
 </blockquote>
-<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><img src="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.27.19.png" alt=""></p>
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.27.19.png" alt=""></p>
 <blockquote>
 <p>运行之后的效果，有些爬取不了，明明源代码都没什么变化…</p>
 </blockquote>
@@ -535,7 +535,7 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年11月13日 - 20:11</p>
+  <p><span>最后更新:</span>2019年01月02日 - 14:01</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -698,7 +698,7 @@ var jiathis_config={
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
-              src="http://smartjpa.com/images-111.jpeg"
+              src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/images-111.jpeg"
               alt="刘俊" />
           
             <p class="site-author-name" itemprop="name">刘俊</p>
@@ -855,7 +855,7 @@ var jiathis_config={
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

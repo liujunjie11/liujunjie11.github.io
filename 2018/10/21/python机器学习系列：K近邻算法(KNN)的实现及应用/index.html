@@ -93,16 +93,16 @@
 <meta property="og:site_name" content="LXiHa`Notes">
 <meta property="og:description" content="还是老样子，这篇文章不适合纯粹的小白，仅仅注重实践，基础知识说的比较浅，基本上一笔带过。 我在作者的原代码和数据上进行了一点修改以符合当今的实际情况。 此篇文章将实现K近邻算法的基本原理，以及实现K邻近算法并且应用到实际数据集之中，之后会有一个实战项目。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://smartjpa.com/euclidean-distance.png">
-<meta property="og:image" content="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-22%20%E4%B8%8B%E5%8D%885.55.39.png">
-<meta property="og:image" content="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-21%20%E4%B8%8B%E5%8D%884.10.36.png">
-<meta property="og:image" content="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-22%20%E4%B8%8B%E5%8D%886.51.22.png">
-<meta property="og:image" content="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-22%20%E4%B8%8B%E5%8D%887.27.46.png">
-<meta property="og:updated_time" content="2018-11-13T12:32:47.294Z">
+<meta property="og:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/euclidean-distance.png">
+<meta property="og:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-22%20%E4%B8%8B%E5%8D%885.55.39.png">
+<meta property="og:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-21%20%E4%B8%8B%E5%8D%884.10.36.png">
+<meta property="og:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-22%20%E4%B8%8B%E5%8D%886.51.22.png">
+<meta property="og:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-22%20%E4%B8%8B%E5%8D%887.27.46.png">
+<meta property="og:updated_time" content="2019-01-02T06:50:13.346Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python机器学习系列：K近邻算法(KNN)的实现及应用">
 <meta name="twitter:description" content="还是老样子，这篇文章不适合纯粹的小白，仅仅注重实践，基础知识说的比较浅，基本上一笔带过。 我在作者的原代码和数据上进行了一点修改以符合当今的实际情况。 此篇文章将实现K近邻算法的基本原理，以及实现K邻近算法并且应用到实际数据集之中，之后会有一个实战项目。">
-<meta name="twitter:image" content="http://smartjpa.com/euclidean-distance.png">
+<meta name="twitter:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/euclidean-distance.png">
 
 
 
@@ -316,7 +316,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘俊">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://smartjpa.com/images-111.jpeg">
+      <meta itemprop="image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/images-111.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -464,7 +464,7 @@
 <p>我在作者的原代码和数据上进行了一点修改以符合当今的实际情况。</p>
 <p>此篇文章将实现K近邻算法的基本原理，以及实现K邻近算法并且应用到实际数据集之中，之后会有一个实战项目。<br><a id="more"></a></p>
 <h1 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h1><h2 id="欧几里得原理以及代码实现"><a href="#欧几里得原理以及代码实现" class="headerlink" title="欧几里得原理以及代码实现"></a>欧几里得原理以及代码实现</h2><p>欧几里得公式：</p>
-<p><img src="http://smartjpa.com/euclidean-distance.png" alt=""></p>
+<p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/euclidean-distance.png" alt=""></p>
 <blockquote>
 <p>实际上很简单，想想求解两点值之间的距离的问题吧…</p>
 </blockquote>
@@ -491,7 +491,7 @@
 <p>看完并且理解了上面的代码之后，你就会发现<strong>KNN算法为何对于异常值不敏感了吧，因为异常值太大，得出的距离也很大，所以一般在投票选择排序时就被out了。</strong></p>
 </blockquote>
 <h2 id="展示图表以及运行结果"><a href="#展示图表以及运行结果" class="headerlink" title="展示图表以及运行结果"></a>展示图表以及运行结果</h2><p>如图：</p>
-<p><img src="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-22%20%E4%B8%8B%E5%8D%885.55.39.png" alt=""></p>
+<p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-22%20%E4%B8%8B%E5%8D%885.55.39.png" alt=""></p>
 <p>这样就一目了然了。</p>
 <h1 id="项目实践"><a href="#项目实践" class="headerlink" title="项目实践"></a>项目实践</h1><ul>
 <li>数据来源：<a href="https://archive.ics.uci.edu/ml/datasets.html" target="_blank" rel="external">https://archive.ics.uci.edu/ml/datasets.html</a>﻿</li>
@@ -528,7 +528,7 @@
 <h2 id="模型训练及预测"><a href="#模型训练及预测" class="headerlink" title="模型训练及预测"></a>模型训练及预测</h2><p>分割数据集，进行训练，并且制作简易数据集来进行预测。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> preprocessing,neighbors</div><div class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</div><div class="line"></div><div class="line">X = np.array(df.drop([<span class="string">'Class'</span>], <span class="number">1</span>)) <span class="comment">#去除标签列，自制数据集</span></div><div class="line">y = np.array(df[<span class="string">'Class'</span>])</div><div class="line"></div><div class="line">X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=<span class="number">0.2</span>)</div><div class="line"></div><div class="line">clf = neighbors.KNeighborsClassifier()</div><div class="line">clf.fit(X_train, y_train)</div><div class="line"></div><div class="line">accuracy = clf.score(X_test, y_test) <span class="comment">#得出准确值</span></div><div class="line">print(accuracy)</div><div class="line"></div><div class="line"><span class="comment">#创建数据集来进行简单的预测</span></div><div class="line">example_maasurse = np.array([[<span class="number">4</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>],[<span class="number">4</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">1</span>]])</div><div class="line">example_maasurse = example_maasurse.reshape(len(example_maasurse),<span class="number">-1</span>) <span class="comment">#重朔,其中的-1可理解为，只想输出2行的情况下，后面的列我写上-1由numpy自行得出对应相符的数组，有点抽象...其实也就那么回事</span></div><div class="line"></div><div class="line"></div><div class="line">prediction = clf.predict(example_maasurse)</div><div class="line">print(prediction)</div></pre></td></tr></table></figure>
 <p>输出如下：</p>
-<p><img src="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-21%20%E4%B8%8B%E5%8D%884.10.36.png" alt=""></p>
+<p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-21%20%E4%B8%8B%E5%8D%884.10.36.png" alt=""></p>
 <p>如果还是对于这条代码<code>example_maasurse.reshape(len(example_maasurse),-1)</code>中的<code>-1</code>还是不理解，可参考如下链接或者是官网：</p>
 <ul>
 <li><p><a href="https://www.zhihu.com/question/52684594" target="_blank" rel="external">Python中reshape函数参数-1的意思？</a></p>
@@ -547,9 +547,9 @@
 <p>铺助理解：<a href="http://www.runoob.com/python3/python3-func-number-shuffle.html" target="_blank" rel="external">Python3 shuffle() 函数</a></p>
 </blockquote>
 <p>运行可得预测准确性：</p>
-<p><img src="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-22%20%E4%B8%8B%E5%8D%886.51.22.png" alt=""></p>
+<p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-22%20%E4%B8%8B%E5%8D%886.51.22.png" alt=""></p>
 <p>其中有必要说明一下：<code>Accuracy</code>与<code>confidence</code>的关系，就相当于<code>查准率(Precision)</code>(<strong>预测正确的样本数与总体使用样本数的比例</strong>)和<code>查全率(Recall)</code>(<strong>预测正确样本数与全部使用数据数量的比例</strong>)的关系。另外补充一点关于平常常用的<code>score</code>参数的计算公式：</p>
-<p><img src="http://smartjpa.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-22%20%E4%B8%8B%E5%8D%887.27.46.png" alt=""></p>
+<p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-22%20%E4%B8%8B%E5%8D%887.27.46.png" alt=""></p>
 <blockquote>
 <p>这些知识都是基础知识，可在网友整理的吴恩达老师的<a href="http://www.ai-start.com/ml2014/html/week6.html#header-n168" target="_blank" rel="external">机器学习笔记</a>中找到，也可完整的学习相关的知识，吴恩达老师的必看啊。</p>
 </blockquote>
@@ -584,7 +584,7 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2018年11月13日 - 20:11</p>
+  <p><span>最后更新:</span>2019年01月02日 - 14:01</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -747,7 +747,7 @@ var jiathis_config={
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
-              src="http://smartjpa.com/images-111.jpeg"
+              src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/images-111.jpeg"
               alt="刘俊" />
           
             <p class="site-author-name" itemprop="name">刘俊</p>
@@ -904,7 +904,7 @@ var jiathis_config={
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
