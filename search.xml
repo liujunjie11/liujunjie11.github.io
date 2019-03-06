@@ -351,18 +351,18 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> Hexo </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 教程笔记 </tag>
-            
             <tag> Hexo </tag>
+            
+            <tag> 教程笔记 </tag>
             
             <tag> 七牛云 </tag>
             
@@ -597,9 +597,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Eclipse </category>
           
@@ -610,9 +610,9 @@
       
         <tags>
             
-            <tag> Eclipse </tag>
-            
             <tag> 问题记录笔记 </tag>
+            
+            <tag> Eclipse </tag>
             
             <tag> Django </tag>
             
@@ -847,18 +847,18 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> Hexo </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 教程笔记 </tag>
-            
             <tag> Hexo </tag>
+            
+            <tag> 教程笔记 </tag>
             
         </tags>
       
@@ -876,9 +876,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> Hexo </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -1135,9 +1135,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Mac </category>
           
@@ -1284,18 +1284,18 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> Hexo </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 教程笔记 </tag>
-            
             <tag> Hexo </tag>
+            
+            <tag> 教程笔记 </tag>
             
         </tags>
       
@@ -1487,9 +1487,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -1516,9 +1516,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -1547,9 +1547,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -1576,9 +1576,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -1926,9 +1926,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -1988,9 +1988,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Eclispe </category>
           
@@ -2319,9 +2319,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Anaconda </category>
           
@@ -2729,9 +2729,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -3328,9 +3328,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Mac </category>
           
@@ -3423,9 +3423,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Python </category>
           
@@ -3585,11 +3585,11 @@
       
         <tags>
             
+            <tag> 问题记录笔记 </tag>
+            
             <tag> Hadoop </tag>
             
             <tag> Eclipse </tag>
-            
-            <tag> 问题记录笔记 </tag>
             
         </tags>
       
@@ -3618,13 +3618,13 @@
       
         <tags>
             
-            <tag> Eclipse </tag>
-            
             <tag> 问题记录笔记 </tag>
             
             <tag> Mac </tag>
             
             <tag> iPad </tag>
+            
+            <tag> Eclipse </tag>
             
         </tags>
       
@@ -3700,9 +3700,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -3837,9 +3837,9 @@
       
       <categories>
           
-          <category> Hadoop </category>
-          
           <category> Mac </category>
+          
+          <category> Hadoop </category>
           
           <category> Docker </category>
           
@@ -3848,9 +3848,9 @@
       
         <tags>
             
-            <tag> Hadoop </tag>
-            
             <tag> Mac </tag>
+            
+            <tag> Hadoop </tag>
             
             <tag> Docker </tag>
             
@@ -3870,9 +3870,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Mac </category>
           
@@ -3901,26 +3901,26 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
           
-          <category> Hadoop </category>
+          <category> 笔记 </category>
           
           <category> Mac </category>
+          
+          <category> Hadoop </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Hadoop </tag>
-            
-            <tag> Eclipse </tag>
-            
             <tag> 问题记录笔记 </tag>
             
             <tag> Mac </tag>
+            
+            <tag> Hadoop </tag>
+            
+            <tag> Eclipse </tag>
             
         </tags>
       
@@ -3938,9 +3938,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Mac </category>
           
@@ -3971,9 +3971,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -4054,9 +4054,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Mac </category>
           
@@ -4497,9 +4497,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Hadoop </category>
           
@@ -4561,18 +4561,18 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> Hexo </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 教程笔记 </tag>
-            
             <tag> Hexo </tag>
+            
+            <tag> 教程笔记 </tag>
             
             <tag> 七牛云 </tag>
             
@@ -4646,9 +4646,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> Hexo </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -4675,9 +4675,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -4708,9 +4708,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -4764,9 +4764,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> Hexo </category>
+          
+          <category> 笔记 </category>
           
           <category> Mac </category>
           
@@ -4775,9 +4775,9 @@
       
         <tags>
             
-            <tag> 教程笔记 </tag>
-            
             <tag> Hexo </tag>
+            
+            <tag> 教程笔记 </tag>
             
             <tag> Mac </tag>
             
