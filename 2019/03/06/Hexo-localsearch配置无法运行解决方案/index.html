@@ -67,7 +67,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo,笔记," />
+  <meta name="keywords" content="笔记,Hexo," />
 
 
 
@@ -86,7 +86,7 @@
 
 
 <meta name="description" content="最近发现在Hexo主页上的localsearch不好使了，点击这个“搜索”按钮之后一直的在转圈圈，后来一下午一直在排查这个问题，现在终于解决了，在此记录一下以观后效之用。">
-<meta name="keywords" content="Hexo,笔记">
+<meta name="keywords" content="笔记,Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo localsearch配置无法运行解决方案">
 <meta property="og:url" content="https://liujunjie11.github.io/2019/03/06/Hexo-localsearch配置无法运行解决方案/index.html">
@@ -96,7 +96,7 @@
 <meta property="og:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-03-06%20%E4%B8%8B%E5%8D%882.28.31.png">
 <meta property="og:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-03-06%20%E4%B8%8B%E5%8D%882.37.45.png">
 <meta property="og:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-03-06%20%E4%B8%8B%E5%8D%883.46.21.png">
-<meta property="og:updated_time" content="2019-03-06T07:56:52.267Z">
+<meta property="og:updated_time" content="2019-03-06T08:09:29.042Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo localsearch配置无法运行解决方案">
 <meta name="twitter:description" content="最近发现在Hexo主页上的localsearch不好使了，点击这个“搜索”按钮之后一直的在转圈圈，后来一下午一直在排查这个问题，现在终于解决了，在此记录一下以观后效之用。">
@@ -419,7 +419,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  631
+                  705
                 </span>
               
 
@@ -486,6 +486,8 @@
 <blockquote>
 <p>这个未验证过。</p>
 </blockquote>
+<h2 id="重要更新"><a href="#重要更新" class="headerlink" title="重要更新"></a>重要更新</h2><p>在卸载了<code>hexo-generator-searchdb</code>也出现了一个致命的问题，就是新出的博文不会再在搜索范围之内…所以我又重新安装上去了…</p>
+<p>最终的解决方案就是将这两个插件卸载，再安装一遍就好～</p>
 <h2 id="另外说明"><a href="#另外说明" class="headerlink" title="另外说明"></a>另外说明</h2><p>在做好上面的工作之后命令的使用还是相当重要的，这个也让我苦恼不已…</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span>排查时可使用</div><div class="line">hexo s --debug</div><div class="line"></div><div class="line"><span class="meta">#</span>初始化，基本上用不到</div><div class="line">hexo init</div><div class="line"></div><div class="line"><span class="meta">#</span>保存设置</div><div class="line">hexo config</div><div class="line"></div><div class="line"><span class="meta">#</span>生成，上传，在对于配置有变动时最好打上全称命令，亲身经历</div><div class="line">hexo generate</div><div class="line">hexo deploy</div><div class="line"><span class="meta">#</span>两者联合使用</div><div class="line">hexo g -d</div><div class="line"></div><div class="line"><span class="meta">#</span> 其他的：</div><div class="line">Commands:</div><div class="line">  clean     Remove generated files and cache.</div><div class="line">  config    Get or set configurations.</div><div class="line">  deploy    Deploy your website.</div><div class="line">  generate  Generate static files.</div><div class="line">  help      Get help on a command.</div><div class="line">  init      Create a new Hexo folder.</div><div class="line">  list      List the information of the site</div><div class="line">  migrate   Migrate your site from other system to Hexo.</div><div class="line">  new       Create a new post.</div><div class="line">  publish   Moves a draft post from _drafts to _posts folder.</div><div class="line">  render    Render files with renderer plugins.</div><div class="line">  server    Start the server.</div><div class="line">  version   Display version information.</div><div class="line"></div><div class="line">Global Options:</div><div class="line">  --config  Specify config file instead of using _config.yml</div><div class="line">  --cwd     Specify the CWD</div><div class="line">  --debug   Display all verbose messages in the terminal</div><div class="line">  --draft   Display draft posts</div><div class="line">  --safe    Disable all plugins and scripts</div><div class="line">  --silent  Hide output on console</div></pre></td></tr></table></figure>
 <blockquote>
@@ -527,7 +529,7 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2019年03月06日 - 15:03</p>
+  <p><span>最后更新:</span>2019年03月06日 - 16:03</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -557,9 +559,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
-          
             <a href="/tags/笔记/" rel="tag"><i class="fa fa-tag"></i> 笔记</a>
+          
+            <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
           
         </div>
       
@@ -820,7 +822,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决方案"><span class="nav-number">2.</span> <span class="nav-text">解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#另外说明"><span class="nav-number">2.1.</span> <span class="nav-text">另外说明</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决方案"><span class="nav-number">2.</span> <span class="nav-text">解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#重要更新"><span class="nav-number">2.1.</span> <span class="nav-text">重要更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#另外说明"><span class="nav-number">2.2.</span> <span class="nav-text">另外说明</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
@@ -858,7 +860,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      226k
+      226.1k
     </span>
   
 </div>
