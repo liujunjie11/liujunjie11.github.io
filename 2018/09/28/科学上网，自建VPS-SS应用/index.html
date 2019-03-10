@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="LXiHa`Notes">
 <meta property="og:description" content="最近因为需求想自己搭建一个VPS加SS应用。用的是Vultr这个平台。 唉…这东西的教程已经是满大街都是了，我就不重复造轮子了，现在的轮子还没有失效。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-18T09:18:14.607Z">
+<meta property="og:updated_time" content="2019-03-10T10:21:02.168Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="科学上网，自建VPS-SS应用">
 <meta name="twitter:description" content="最近因为需求想自己搭建一个VPS加SS应用。用的是Vultr这个平台。 唉…这东西的教程已经是满大街都是了，我就不重复造轮子了，现在的轮子还没有失效。">
@@ -415,7 +415,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  881
+                  1.1k
                 </span>
               
 
@@ -431,7 +431,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  4
                 </span>
               
             </div>
@@ -499,14 +499,28 @@
 <h1 id="SS的以及BBR的相关的命令记录"><a href="#SS的以及BBR的相关的命令记录" class="headerlink" title="SS的以及BBR的相关的命令记录"></a>SS的以及BBR的相关的命令记录</h1><ul>
 <li><em>SS</em>：</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash">下载安装命令</span></div><div class="line">wget --no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</div><div class="line"></div><div class="line">chmod +x shadowsocks.sh</div><div class="line">./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash">查看当前ss服务器所开放的端口</span></div><div class="line">ss -lntp | grep ssserver</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash">查看当前ss服务器的密码，通过以下命令可见ss的配置文件，配置文件中自然有密码</span></div><div class="line">ps aux | grep ssserver</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash">用cat查看下配置文件即可看见密码了</span></div><div class="line">cat /etc/shadowsocks.json</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash">修改ss密码：</span></div><div class="line">vi /etc/shadowsocks.json</div><div class="line">按i键进入编辑模式，修改密码为123456</div><div class="line"></div><div class="line">"password":"123456",</div><div class="line">然后按ESC，再输入:wq保存退出</div><div class="line"></div><div class="line">重启ss即可</div><div class="line"></div><div class="line">service shadowsocks restart</div><div class="line">附：ss启动停止方法</div><div class="line"></div><div class="line">启动：service shadowsocks start</div><div class="line">停止：service shadowsocks stop</div><div class="line">重启：service shadowsocks restart</div><div class="line">状态：service shadowsocks status</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span>下载安装命令</div><div class="line">wget --no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</div><div class="line"></div><div class="line">chmod +x shadowsocks.sh</div><div class="line">./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log</div><div class="line"></div><div class="line"><span class="meta">#</span>查看当前ss服务器所开放的端口</div><div class="line">ss -lntp | grep ssserver</div><div class="line"></div><div class="line"><span class="meta">#</span>查看当前ss服务器的密码，通过以下命令可见ss的配置文件，配置文件中自然有密码</div><div class="line">ps aux | grep ssserver</div><div class="line"></div><div class="line"><span class="meta">#</span>用cat查看下配置文件即可看见密码了</div><div class="line">cat /etc/shadowsocks.json</div><div class="line"></div><div class="line"><span class="meta">#</span>修改ss密码：</div><div class="line">vi /etc/shadowsocks.json</div><div class="line">按i键进入编辑模式，修改密码为123456</div><div class="line"></div><div class="line">"password":"123456",</div><div class="line">然后按ESC，再输入:wq保存退出</div><div class="line"></div><div class="line">重启ss即可</div><div class="line"></div><div class="line">service shadowsocks restart</div><div class="line">附：ss启动停止方法</div><div class="line"></div><div class="line">启动：service shadowsocks start</div><div class="line">停止：service shadowsocks stop</div><div class="line">重启：service shadowsocks restart</div><div class="line">状态：service shadowsocks status</div></pre></td></tr></table></figure>
 <blockquote>
 <p>关于更多的命令操作以及下载<em>SSR</em>可查看：<a href="https://blog.whsir.com/post-1045.html" target="_blank" rel="external">如何查看修改ss服务器的端口密码</a>、<a href="https://github.com/Alvin9999/new-pac/wiki/自建ss服务器教程" target="_blank" rel="external">自建ss服务器教程</a></p>
 </blockquote>
 <ul>
 <li><em>BBR</em>:</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash">下载命令</span></div><div class="line">yum -y install wget</div><div class="line"></div><div class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh</div><div class="line"></div><div class="line">chmod +x bbr.sh</div><div class="line"></div><div class="line">./bbr.sh</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash">安装查看命令</span></div><div class="line">lsmod | grep bbr</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span>下载命令</div><div class="line">yum -y install wget</div><div class="line"></div><div class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh</div><div class="line"></div><div class="line">chmod +x bbr.sh</div><div class="line"></div><div class="line">./bbr.sh</div><div class="line"></div><div class="line"><span class="meta">#</span>安装查看命令</div><div class="line">lsmod | grep bbr</div></pre></td></tr></table></figure>
+<h1 id="关于ss搭建Socks5代理"><a href="#关于ss搭建Socks5代理" class="headerlink" title="关于ss搭建Socks5代理"></a>关于ss搭建Socks5代理</h1><p>可参考：</p>
+<ul>
+<li><p><a href="https://www.diycode.cc/topics/738" target="_blank" rel="external">轻松在 VPS 搭建 Shadowsocks 翻墙 ($5/月 支付宝)</a></p>
+</li>
+<li><p><a href="https://www.synscope.com/370/%E6%90%AD%E5%BB%BAsocks5%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8/" target="_blank" rel="external">Centos 7 搭建 socks5 代理服务器</a></p>
+</li>
+</ul>
+<blockquote>
+<p>一般来说，在VPS上搭建完SS应用之后，就能直接使用<em>Socks5</em>代理了，一般的账号和端口即为：<code>127.0.0.1</code>、<code>1080</code>(<strong>在ss打开并且行得通的情况下</strong>)。当然这些均可修改，具体可查看上方的两个链接。</p>
+</blockquote>
+<h1 id="关于Vutrl里的Snapshot功能"><a href="#关于Vutrl里的Snapshot功能" class="headerlink" title="关于Vutrl里的Snapshot功能"></a>关于Vutrl里的Snapshot功能</h1><p>这个可以保存某个VPS服务器在此时此刻的状态，在之后创建的新的服务器之后可直接恢复即可。</p>
+<blockquote>
+<p>具体可参考链接：<a href="https://www.diycode.cc/topics/738" target="_blank" rel="external">轻松在 VPS 搭建 Shadowsocks 翻墙 ($5/月 支付宝)</a></p>
+</blockquote>
 <h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><p>新型墙的阻断方式：<a href="https://www.vultryhw.com/vultr-how-to-deal-with-ip-blocked/" target="_blank" rel="external">ICMP阻断和TCP阻断</a></p>
 <blockquote>
 <p><code>ping</code>的通(ICMP协议)，但是<code>ssh</code>不通(TCP协议)，即为TCP阻断。</p>
@@ -541,7 +555,7 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2019年02月18日 - 17:02</p>
+  <p><span>最后更新:</span>2019年03月10日 - 18:03</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -840,7 +854,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#补充说明"><span class="nav-number">1.</span> <span class="nav-text">补充说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SS的以及BBR的相关的命令记录"><span class="nav-number">2.</span> <span class="nav-text">SS的以及BBR的相关的命令记录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#更新"><span class="nav-number">3.</span> <span class="nav-text">更新</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#补充说明"><span class="nav-number">1.</span> <span class="nav-text">补充说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SS的以及BBR的相关的命令记录"><span class="nav-number">2.</span> <span class="nav-text">SS的以及BBR的相关的命令记录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于ss搭建Socks5代理"><span class="nav-number">3.</span> <span class="nav-text">关于ss搭建Socks5代理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于Vutrl里的Snapshot功能"><span class="nav-number">4.</span> <span class="nav-text">关于Vutrl里的Snapshot功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#更新"><span class="nav-number">5.</span> <span class="nav-text">更新</span></a></li></ol></div>
             
 
           </div>
@@ -878,7 +892,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      226.9k
+      227.4k
     </span>
   
 </div>
