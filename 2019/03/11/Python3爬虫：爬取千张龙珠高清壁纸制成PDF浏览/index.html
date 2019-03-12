@@ -99,7 +99,7 @@
 <meta property="og:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/Mar-11-2019%2017-56-16.gif">
 <meta property="og:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/Mar-11-2019%2017-57-01.gif">
 <meta property="og:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/Mar-11-2019%2017-56-44.gif">
-<meta property="og:updated_time" content="2019-03-11T11:06:22.221Z">
+<meta property="og:updated_time" content="2019-03-12T01:18:46.770Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python3爬虫：爬取千张龙珠高清壁纸制成PDF浏览">
 <meta name="twitter:description" content="今早上本来想看看Django的一些知识，做个小的实战玩玩的，结果有了下载一些龙珠高清壁纸的想法，这些壁纸真的太赞了～加上最近忍不住买了《龙珠超画集》，马上就开始了这个爬虫的进程。这个网站真的超赞啊～很多好的作品在这里分享。  爬取网站：Wallpaper Abyss - 高清壁纸, 桌面背景  本爬虫程序适合这个网站的所有的壁纸爬取～">
@@ -433,7 +433,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.5k
+                  2.4k
                 </span>
               
 
@@ -449,7 +449,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  10
                 </span>
               
             </div>
@@ -528,6 +528,40 @@
 <h1 id="Mac上利用自带的预览自制DPF画册文件"><a href="#Mac上利用自带的预览自制DPF画册文件" class="headerlink" title="Mac上利用自带的预览自制DPF画册文件"></a>Mac上利用自带的预览自制DPF画册文件</h1><blockquote>
 <p>可自行移步参考<em>Google，百度搜索引擎</em>。</p>
 </blockquote>
+<h1 id="更新：多进程与异步加速爬取"><a href="#更新：多进程与异步加速爬取" class="headerlink" title="更新：多进程与异步加速爬取"></a>更新：多进程与异步加速爬取</h1><p>妈蛋受不了了，爬两千多张图片慢的像一条狗…更新了<em>多进程</em>和<em>异步</em>加速的代码。</p>
+<blockquote>
+<p>为什么不用<em>“多线程”</em>？因为在<em>Python</em>中多线程就是个垃圾！自行了解去吧。</p>
+</blockquote>
+<h2 id="多进程代码"><a href="#多进程代码" class="headerlink" title="多进程代码"></a>多进程代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> requests</div><div class="line"><span class="keyword">from</span> urllib.parse <span class="keyword">import</span> quote</div><div class="line"><span class="keyword">from</span> pyquery <span class="keyword">import</span> PyQuery <span class="keyword">as</span> pq</div><div class="line"><span class="keyword">import</span> time</div><div class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlretrieve</div><div class="line"><span class="keyword">import</span> multiprocessing <span class="keyword">as</span> mp</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">inlinkes</span><span class="params">(word, pages)</span>:</span></div><div class="line">    <span class="string">'''</span></div><div class="line"><span class="string">    页数页面换爬取,获得内嵌的链接，以便调用于直接爬取高清大图之用</span></div><div class="line"><span class="string">    '''</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, pages):</div><div class="line">        <span class="comment"># 输入要求爬取的关键词，语言默认为Chinese</span></div><div class="line">        headers = &#123;</div><div class="line">            <span class="string">'User-Agent'</span>:<span class="string">'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36'</span>,</div><div class="line">            <span class="string">'Connection'</span>:<span class="string">'keep-alive'</span>,</div><div class="line">            <span class="string">'Cookie'</span>:<span class="string">'wa_session=tmqupoqa9n72jj0cc39d3ervmmcf52ln68ro2lm44jhnii2acha6pburcqc5kt5nenla1qpitut92k6if6n3k73d66flmejvpehabj1; __cfduid=d9e4a7feea6a68864d2aa652e2e3bb4441552271424; _ga=GA1.2.222625191.1552271425; _gid=GA1.2.1439755337.1552271425'</span>,</div><div class="line">            <span class="string">'Host'</span>:<span class="string">'wall.alphacoders.com'</span>,</div><div class="line">            <span class="string">'Accept'</span>: <span class="string">'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'</span>,</div><div class="line">            <span class="string">'Accept-Encoding'</span>: <span class="string">'gzip, deflate, br'</span>,</div><div class="line">            <span class="string">'Accept-Language'</span>: <span class="string">'zh-CN,zh;q=0.9'</span>,</div><div class="line">            <span class="string">'Cache-Control'</span>: <span class="string">'max-age=0'</span>,</div><div class="line">            <span class="string">'Upgrade-Insecure-Requests'</span>: <span class="string">'1'</span>&#125;</div><div class="line">        r = requests.get(<span class="string">'https://wall.alphacoders.com/search.php?search='</span> + quote(word) + <span class="string">'&amp;lang=Chinese&amp;page='</span> + str(i), headers=headers, stream=<span class="keyword">True</span>)</div><div class="line">        </div><div class="line">        <span class="comment"># 用pyquery库爬链接方式多样化，选择余地多更为方便，先获取内嵌链接，后将高清大图爬取下载下来，不然直接在页面上爬取尺寸太小</span></div><div class="line">        doc = pq(r.text)</div><div class="line">        inlikes = doc.find(<span class="string">'div.thumb-container &gt; div.boxgrid &gt; a'</span>)  <span class="comment"># 爬取每一页的内嵌参数链接</span></div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> inlikes.items():</div><div class="line">            <span class="keyword">yield</span> <span class="string">'https://wall.alphacoders.com/'</span> + i.attr(<span class="string">'href'</span>)  <span class="comment"># 此处用到的关键词yield像流水一样有序执行每一个内嵌链接</span></div><div class="line"></div><div class="line">pool = mp.Pool(<span class="number">4</span>) <span class="comment">#CPU核数，默认的是你机器的核心数</span></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">	pool = mp.Pool(<span class="number">4</span>) <span class="comment">#CPU核数，默认的是你机器的核心数</span></div><div class="line">    num = <span class="number">0</span> <span class="comment">#作为图片取名和标号之用～</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> inlinkes(<span class="string">'龙珠'</span>, <span class="number">92</span>):</div><div class="line">        headers = &#123;</div><div class="line">        <span class="string">'User-Agent'</span>:<span class="string">'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36'</span>,</div><div class="line">        <span class="string">'Connection'</span>:<span class="string">'keep-alive'</span>,</div><div class="line">        <span class="string">'Cookie'</span>:<span class="string">'wa_session=tmqupoqa9n72jj0cc39d3ervmmcf52ln68ro2lm44jhnii2acha6pburcqc5kt5nenla1qpitut92k6if6n3k73d66flmejvpehabj1; __cfduid=d9e4a7feea6a68864d2aa652e2e3bb4441552271424; _ga=GA1.2.222625191.1552271425; _gid=GA1.2.1439755337.1552271425'</span>,</div><div class="line">        <span class="string">'Host'</span>:<span class="string">'wall.alphacoders.com'</span>,</div><div class="line">        <span class="string">'Accept'</span>: <span class="string">'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'</span>,</div><div class="line">        <span class="string">'Accept-Encoding'</span>: <span class="string">'gzip, deflate, br'</span>,</div><div class="line">        <span class="string">'Accept-Language'</span>: <span class="string">'zh-CN,zh;q=0.9'</span>,</div><div class="line">        <span class="string">'Cache-Control'</span>: <span class="string">'max-age=0'</span>,</div><div class="line">        <span class="string">'Upgrade-Insecure-Requests'</span>: <span class="string">'1'</span>&#125;</div><div class="line">        </div><div class="line">        <span class="comment"># 制成完整的内嵌链接，接下来进入每个内嵌链接直接爬取高清图下载即可</span></div><div class="line">        r = requests.get(i, headers=headers, stream=<span class="keyword">True</span>) </div><div class="line">        doc = pq(r.text)</div><div class="line">        down_link = doc.find(<span class="string">'#page_container &gt; div.center.img-container-desktop &gt; a'</span>).attr(<span class="string">'href'</span>)</div><div class="line">        down_links = requests.get(down_link) <span class="comment">#将获取的图片地址再次解析才能转换为二进制写入文件</span></div><div class="line">        <span class="keyword">with</span> open(<span class="string">'/Users/junjieliu/Pictures/龙珠高清壁纸/'</span> + str(num) + <span class="string">'.jpg'</span>, <span class="string">'wb'</span>) <span class="keyword">as</span> f:</div><div class="line">            f.write(down_links.content)</div><div class="line"></div><div class="line">        time.sleep(<span class="number">5</span>)</div><div class="line">        num += <span class="number">1</span></div></pre></td></tr></table></figure>
+<p><strong>关于这个多进程可以理解为：在<em>main函数</em>中有多个进程池一同来经营运行，可以说他是时刻已经准备好的状态了，程序基本上只是<code>inlinkes函数</code>在如往常一贯运行而已，所以时间起码会缩小一倍。</strong></p>
+<p>目视感觉差不多的效果…可能是我设置了<code>time.sleep(5)</code>的关系，但是不这样会给人家服务器增加压力…哎，有失必有得啊，多进程的感觉是有快了一点的(具体来说还是有点明显的！)…跟本地网络情况还是有挂钩的，毕竟下载图片还是要看网速的。</p>
+<blockquote>
+<p>运行程序期间会出现<code>SSL</code>的错误提示，这个不用理会，重新运行即可，遇到问题重新运行即可。</p>
+</blockquote>
+<p>关于多进程教程可参考：</p>
+<ul>
+<li><p><strong>官网API</strong>：<a href="https://docs.python.org/2/library/multiprocessing.html" target="_blank" rel="external">https://docs.python.org/2/library/multiprocessing.html</a></p>
+</li>
+<li><p><a href="https://morvanzhou.github.io/tutorials/data-manipulation/scraping/4-01-distributed-scraping/" target="_blank" rel="external">加速爬虫: 多进程分布式</a></p>
+</li>
+<li><p><a href="https://thief.one/2016/11/23/Python-multiprocessing/" target="_blank" rel="external">Multiprocessing系列】Multiprocessing基础</a></p>
+</li>
+<li><p><a href="https://tracholar.github.io/wiki/python/python-multiprocessing-tutorial.html" target="_blank" rel="external">Python 多线程和多进程编程总结</a></p>
+</li>
+</ul>
+<blockquote>
+<p>好文！</p>
+</blockquote>
+<h2 id="异步加速"><a href="#异步加速" class="headerlink" title="异步加速"></a>异步加速</h2><p>异步加速，久仰大名了，今天来试试看威力如何～</p>
+<blockquote>
+<p>其中需要用到的库请自行下载。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<p>可参考：</p>
+<ul>
+<li><a href="https://morvanzhou.github.io/tutorials/data-manipulation/scraping/4-02-asyncio/" target="_blank" rel="external">加速爬虫: 异步加载 Asyncio</a></li>
+</ul>
+<p>…</p>
 
       
     </div>
@@ -557,7 +591,7 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2019年03月11日 - 19:03</p>
+  <p><span>最后更新:</span>2019年03月12日 - 09:03</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -850,7 +884,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#分析过程"><span class="nav-number">1.</span> <span class="nav-text">分析过程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码实现"><span class="nav-number">2.</span> <span class="nav-text">代码实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#运行效果展示"><span class="nav-number">2.1.</span> <span class="nav-text">运行效果展示</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#推荐使用Dash结合写代码"><span class="nav-number">3.</span> <span class="nav-text">推荐使用Dash结合写代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Mac上利用自带的预览自制DPF画册文件"><span class="nav-number">4.</span> <span class="nav-text">Mac上利用自带的预览自制DPF画册文件</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#分析过程"><span class="nav-number">1.</span> <span class="nav-text">分析过程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码实现"><span class="nav-number">2.</span> <span class="nav-text">代码实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#运行效果展示"><span class="nav-number">2.1.</span> <span class="nav-text">运行效果展示</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#推荐使用Dash结合写代码"><span class="nav-number">3.</span> <span class="nav-text">推荐使用Dash结合写代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Mac上利用自带的预览自制DPF画册文件"><span class="nav-number">4.</span> <span class="nav-text">Mac上利用自带的预览自制DPF画册文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#更新：多进程与异步加速爬取"><span class="nav-number">5.</span> <span class="nav-text">更新：多进程与异步加速爬取</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#多进程代码"><span class="nav-number">5.1.</span> <span class="nav-text">多进程代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异步加速"><span class="nav-number">5.2.</span> <span class="nav-text">异步加速</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -888,7 +922,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      229.4k
+      230.3k
     </span>
   
 </div>
