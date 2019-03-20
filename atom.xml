@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2019-03-19T12:16:19.371Z</updated>
+  <updated>2019-03-20T04:50:51.755Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,94 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>复习：编译器原理</title>
+    <link href="https://liujunjie11.github.io/2019/03/20/%E5%A4%8D%E4%B9%A0%EF%BC%9A%E7%BC%96%E8%AF%91%E5%99%A8%E5%8E%9F%E7%90%86/"/>
+    <id>https://liujunjie11.github.io/2019/03/20/复习：编译器原理/</id>
+    <published>2019-03-20T04:47:51.000Z</published>
+    <updated>2019-03-20T04:50:51.755Z</updated>
+    
+    <content type="html"><![CDATA[<p>这是开始为秋招做准备的简单复习，因为之前没怎么好好学习<em>编译器原理</em>，所以现在学习一番，并且在此做个记录以观后效之用。</p><a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这是开始为秋招做准备的简单复习，因为之前没怎么好好学习&lt;em&gt;编译器原理&lt;/em&gt;，所以现在学习一番，并且在此做个记录以观后效之用。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="笔记" scheme="https://liujunjie11.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://liujunjie11.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>复习：计算机网络</title>
+    <link href="https://liujunjie11.github.io/2019/03/20/%E5%A4%8D%E4%B9%A0%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    <id>https://liujunjie11.github.io/2019/03/20/复习：计算机网络/</id>
+    <published>2019-03-20T04:47:23.000Z</published>
+    <updated>2019-03-20T04:50:37.092Z</updated>
+    
+    <content type="html"><![CDATA[<p>这是开始为秋招做准备的简单复习，因为之前没怎么好好学习<em>计算机网络</em>，所以现在学习一番，并且在此做个记录以观后效之用。</p><a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这是开始为秋招做准备的简单复习，因为之前没怎么好好学习&lt;em&gt;计算机网络&lt;/em&gt;，所以现在学习一番，并且在此做个记录以观后效之用。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="笔记" scheme="https://liujunjie11.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://liujunjie11.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>复习：操作系统</title>
+    <link href="https://liujunjie11.github.io/2019/03/20/%E5%A4%8D%E4%B9%A0%EF%BC%9A%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    <id>https://liujunjie11.github.io/2019/03/20/复习：操作系统/</id>
+    <published>2019-03-20T04:47:09.000Z</published>
+    <updated>2019-03-20T04:50:20.226Z</updated>
+    
+    <content type="html"><![CDATA[<p>这是开始为秋招做准备的简单复习，因为之前没怎么好好学习<em>操作系统</em>，所以现在学习一番，并且在此做个记录以观后效之用。</p><a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这是开始为秋招做准备的简单复习，因为之前没怎么好好学习&lt;em&gt;操作系统&lt;/em&gt;，所以现在学习一番，并且在此做个记录以观后效之用。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="笔记" scheme="https://liujunjie11.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://liujunjie11.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>复习：数据结构与算法</title>
+    <link href="https://liujunjie11.github.io/2019/03/20/%E5%A4%8D%E4%B9%A0%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+    <id>https://liujunjie11.github.io/2019/03/20/复习：数据结构与算法/</id>
+    <published>2019-03-20T04:46:55.000Z</published>
+    <updated>2019-03-20T05:13:04.152Z</updated>
+    
+    <content type="html"><![CDATA[<p>这是开始为秋招做准备的简单复习，因为之前没怎么好好学习<em>数据结构与算法</em>，所以现在学习一番，并且在此做个记录以观后效之用。</p><a id="more"></a><blockquote><p>好的公开课推荐：<a href="http://www.52nlp.cn/coursera%E4%B8%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%AE%97%E6%B3%95%E8%AF%BE%E7%A8%8B-%E7%AE%97%E6%B3%95%E5%85%AC%E5%BC%80%E8%AF%BE-%E6%B1%87%E6%80%BB%E6%8E%A8%E8%8D%90" target="_blank" rel="external">Coursera上数据结构 &amp; 算法课程（公开课）汇总推荐</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这是开始为秋招做准备的简单复习，因为之前没怎么好好学习&lt;em&gt;数据结构与算法&lt;/em&gt;，所以现在学习一番，并且在此做个记录以观后效之用。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="笔记" scheme="https://liujunjie11.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://liujunjie11.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>考研乱象</title>
@@ -84,9 +172,9 @@
       <category term="After Effects CC 2017/2018" scheme="https://liujunjie11.github.io/categories/After-Effects-CC-2017-2018/"/>
     
     
-      <category term="笔记" scheme="https://liujunjie11.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="After Effects CC 2017/2018" scheme="https://liujunjie11.github.io/tags/After-Effects-CC-2017-2018/"/>
+    
+      <category term="笔记" scheme="https://liujunjie11.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -110,9 +198,9 @@
       <category term="Adobe Premiere(Pro)2018" scheme="https://liujunjie11.github.io/categories/Adobe-Premiere-Pro-2018/"/>
     
     
-      <category term="Adobe Premiere(Pro)2018" scheme="https://liujunjie11.github.io/tags/Adobe-Premiere-Pro-2018/"/>
-    
       <category term="笔记" scheme="https://liujunjie11.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Adobe Premiere(Pro)2018" scheme="https://liujunjie11.github.io/tags/Adobe-Premiere-Pro-2018/"/>
     
   </entry>
   
@@ -232,9 +320,9 @@
     <link href="https://liujunjie11.github.io/2019/03/05/Photoshop-cc-2018%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0%E8%AE%B0%E5%BD%95/"/>
     <id>https://liujunjie11.github.io/2019/03/05/Photoshop-cc-2018教程笔记记录/</id>
     <published>2019-03-05T07:16:29.000Z</published>
-    <updated>2019-03-12T12:27:04.830Z</updated>
+    <updated>2019-03-19T13:53:32.725Z</updated>
     
-    <content type="html"><![CDATA[<p>最近一直想学习<em>PS</em>这个之前就一直很感兴趣的技能，想着借此实现自己的想法，和作为另一个重要的技能也是不错的。由于是<em>Photoshop cc 2018</em>，所以在此分享一些学习资源和下载资源，另外对于一些值得记住的内容做一些笔记以观后效之用。</p><a id="more"></a><h1 id="软件下载"><a href="#软件下载" class="headerlink" title="软件下载"></a>软件下载</h1><p><em>Adobe</em>家族软件全套破解下载(网友分享～)：</p><blockquote><p> <strong>链接: <a href="https://pan.baidu.com/s/1RDfGzhLVCFoWxg5D7D2Jjg" target="_blank" rel="external">https://pan.baidu.com/s/1RDfGzhLVCFoWxg5D7D2Jjg</a> 提取码: p57f</strong></p></blockquote><p>关于破解之前记得看好：<strong>下载好软件之后，断网，然后打开破解的插件进行破解，破解之后就能使用了。</strong></p><p>另外关于下载百度网盘文件的一些实用方法(全平台均有)：<a href="https://www.runningcheese.com/baiduyun" target="_blank" rel="external">3个方法解决百度网盘限速 （2019-02-20 更新）</a></p><h1 id="学习资源分享"><a href="#学习资源分享" class="headerlink" title="学习资源分享"></a>学习资源分享</h1><p>关于我是跟着在<em>YouTube</em>上的几个大神学习～所以就在此分享这些资源吧。</p><ul><li><p><a href="https://www.youtube.com/watch?v=7AbUkwpwZ9E&amp;list=PLdQlQR22jq3VLBuAxsHIhOEWvEWihAz4I" target="_blank" rel="external">Mr. Yuan：Photoshop cc 2018最新教程 01（认识Photoshop）</a></p></li><li><p><a href=""></a></p></li></ul><h1 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h1><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><blockquote><p><strong>Mac中的“command”键等于win中的“Ctrl”键，“option”键为“Alt”键。</strong></p></blockquote><ul><li><p>切换前景色和背景色：<strong>X</strong></p></li><li><p>返回前选色：<strong>D</strong></p></li><li><p><strong>shift</strong>键加<strong>option</strong>键盘(Win为<strong>Alt键</strong>)在结合选区时有更为方便的的效果</p></li><li><p>移到“缩放工具”，“command”(win为”Ctrl”)+单击选择“图层蒙版缩略图”可选剪切下来的图画，此时“option”+“Del”可去除所选择的图层(自动填充前景色)，“Ctrl”+“Del”(自动填充背景色)</p></li><li><p>在画笔的情况下“[”,”]“为放大放小的情况</p></li><li><p>“画笔”的“清除”(去除不影响背景颜色的自建颜色，做影子修改时很有用)与“透明度”(深浅度的调整)</p></li></ul><h2 id="基本认识及操作"><a href="#基本认识及操作" class="headerlink" title="基本认识及操作"></a>基本认识及操作</h2><ul><li><p>通过首选项以及上方的属性栏来进行调整图片的原始排列等；</p></li><li><p>工具之间是相互交叉配合使用的；</p></li><li><p>一个工具里有多个选项选择交叉可使用；</p></li><li><p>羽化即虚化；</p></li><li><p>在两个图层一个在上一个在下，可以产生叠加结合的效果(在自我设计时最为重要，比如投影之类的)，PS准确来说就是图层之间的叠加结合而已，新建图层作为要叠加的成分(一般指新建的蒙版图层)；</p></li><li><p>画笔结合“柔边”，背景色为白色(按实际情况选择)，让黑色的阴影变白(此时背景色应当是白色的情况下)；</p></li><li><p>多种抠图方法可结合着配合使用以达到最快最好的效率效果；</p></li><li><p>“选择并遮住”之中的“反选”即可选择另外一面未选择一方作为主操刀；</p></li><li><p>在使用“套索工具”时，在不小心套索的多余了，可停下，使用快捷键按住“option”与“shift”减少区域和增加区域；</p></li><li><p>画笔颜色取前景色；</p></li><li></li></ul><h2 id="抠图"><a href="#抠图" class="headerlink" title="抠图"></a>抠图</h2><p>通过选区选框圈出大概的位置，可利用上方属性的“变换选区”，结合放大来进行完善选框的完整性：</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/Mar-05-2019%2016-46-57.gif" alt=""></p><h2 id="填充取景"><a href="#填充取景" class="headerlink" title="填充取景"></a>填充取景</h2><p>通过选区(可通过“取消选择”来取消选区)，进行“填充”，补色，“模糊”来进行进一步的简要特效。</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/Mar-05-2019%2020-51-45.gif" alt=""></p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/Mar-05-2019%2020-51-10.gif" alt=""></p><p>“自由变换”进行拖拉选区尺寸的大小。</p><h2 id="图层变换"><a href="#图层变换" class="headerlink" title="图层变换"></a>图层变换</h2><p>可将右侧的图层上下来结合实际情况进行摆布，可选择“叠加”，“透明度”等等使得更为符合实际情况。</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/Mar-05-2019%2021-06-00.gif" alt=""></p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/Mar-05-2019%2021-06-30.gif" alt=""></p><h2 id="多面抠图"><a href="#多面抠图" class="headerlink" title="多面抠图"></a>多面抠图</h2><blockquote><p><strong>以下步骤必须一步完成！！！不可中途更改！</strong></p></blockquote><p>多面抠图，利用“套索工具”，其中的多方面可选择工具，可先将图片放大以便抠图更为准确。</p><p>在套索完之后选择“选择并遮住…”才可进一步切剪多余的部分（可结合放大图像，按住“option”/“Alt”配合套索工具即可）。</p><p>之后在右下角图层下面选择“建立新的图层或调整图层”，“纯色”，将此脱在剪好的图层下边。（<strong>换成白底效果！！</strong>）</p><blockquote><p><a href="https://www.youtube.com/watch?v=Zo8P4JYeIFg&amp;list=PLdQlQR22jq3VLBuAxsHIhOEWvEWihAz4I&amp;index=8" target="_blank" rel="external">多边形抠图</a></p></blockquote><h2 id="快速选择工具抠图"><a href="#快速选择工具抠图" class="headerlink" title="快速选择工具抠图"></a>快速选择工具抠图</h2><p>“快速选择工具”与“魔棒”在一按钮处…可增可减。</p><p>另外操作可与上面的多面抠图的操作一致，如放大来进行抠图，加上快捷键等等。</p><p>其中包括侧面部分可选择按钮的功能等使用。</p><h3 id="产生投影影子效果"><a href="#产生投影影子效果" class="headerlink" title="产生投影影子效果"></a>产生投影影子效果</h3><p>生成一个同样体积大小的灰色图层(在新建的图层上)，贴在图下方，然后进行叠加结合的效果，再进一步的处理一下即可。</p><blockquote><p><a href="https://www.youtube.com/watch?v=kxW420eVuOY&amp;list=PLdQlQR22jq3VLBuAxsHIhOEWvEWihAz4I&amp;index=9" target="_blank" rel="external">快速选择工具抠图</a></p></blockquote><h2 id="魔术棒抠图方法"><a href="#魔术棒抠图方法" class="headerlink" title="魔术棒抠图方法"></a>魔术棒抠图方法</h2><p>魔棒的加选与其他工具的结合使用。</p><blockquote><p><a href="https://www.youtube.com/watch?v=UNZ0_F_h7B0&amp;index=10&amp;list=PLdQlQR22jq3VLBuAxsHIhOEWvEWihAz4I" target="_blank" rel="external">魔术棒抠图方法</a></p></blockquote><h2 id="案例学习"><a href="#案例学习" class="headerlink" title="案例学习"></a>案例学习</h2><p>“选择”，“色彩范围”，然后利用其中的工具进行一系列的调色，进行选择抠像，之后可进行一系列的如上的操作，可利用“画笔”选择颜色进行背景的涂色，然后可利用“边缘画笔”对于难对付的背景涂色(即躲在前景之后的背景色)。</p><blockquote><p><a href="https://www.youtube.com/watch?v=MH4KcRvlguU&amp;list=PLdQlQR22jq3VLBuAxsHIhOEWvEWihAz4I&amp;index=11" target="_blank" rel="external">色彩范围抠图牛奶杯案例</a></p></blockquote><p>在以下的案例之中，有通过抠图结合新建图层，加上相应的文字用以说明某个产品或者是某个东西的参数等。新建一个图层(单位应当为“像素”，将人物拖进此个新建的心图层中)，加以某些个文字，文字期间可加以某些个工具的修饰，在背景点击“指示图层可见性”蒙蔽其他图层的可见性，可用“渐变工具”来构建新的颜色交叉的背景图色，“矩形工具”为文字添加背景。可用“涂笔”去除某些碍眼的多余的线条背景等。</p><blockquote><p><a href="https://www.youtube.com/watch?v=Tm3e_360OJQ&amp;index=12&amp;list=PLdQlQR22jq3VLBuAxsHIhOEWvEWihAz4I" target="_blank" rel="external">多边形抠图电脑广告案例</a></p></blockquote><h2 id="裁剪工具的使用"><a href="#裁剪工具的使用" class="headerlink" title="裁剪工具的使用"></a>裁剪工具的使用</h2><p>裁剪工具的使用与平时使用的情况是差不多的一个情况，它的“裁剪工具”上方亦有不同的小工具可使用，如自定义裁剪尺寸，拉直旋转，自定义裁剪的网格等。</p><blockquote><p><a href="https://www.youtube.com/watch?v=8by69AJCeyE&amp;index=14&amp;list=PLdQlQR22jq3VLBuAxsHIhOEWvEWihAz4I" target="_blank" rel="external">裁剪工具的使用</a></p></blockquote><h2 id="修改图形大小"><a href="#修改图形大小" class="headerlink" title="修改图形大小"></a>修改图形大小</h2><p>与图像像素的大小以及尺寸有关的教程。</p><p>输入一个文件画像，“图像大小”可起到一个图片像素压缩的效用，即根据图像尺寸大小可改变其图片质量问题，“画布大小”可起到裁剪的作用，其中可选择裁剪的中心点等。当在想要生成的图片时可结合使用两者工具来进行图片的整体修改和局部的裁剪。</p><p>另外可新建一个预期的空白图层，后将想要的更改的图像拖进新建的图层之中亦可完成改进图像像素的问题。</p><blockquote><p><a href="https://www.youtube.com/watch?v=40b9F234AgY&amp;index=15&amp;list=PLdQlQR22jq3VLBuAxsHIhOEWvEWihAz4I" target="_blank" rel="external">修改图形大小</a></p></blockquote><h2 id="使用变换命令"><a href="#使用变换命令" class="headerlink" title="使用变换命令"></a>使用变换命令</h2><p>新的抠图技能：可选“选框工具”之后选出图像中的某个东西，后“图层”，“新建”，“通过拷贝的图层”即可得出一个新的可利用的图层了(即得出的与“套索工具”的图层可利用的效果一致)。</p><p>“编辑”中的“变换”可对于图片做更多的处理，其中的选项多样化。</p><blockquote><p><a href="https://www.youtube.com/watch?v=waENC2Z_yAY&amp;list=PLdQlQR22jq3VLBuAxsHIhOEWvEWihAz4I&amp;index=16" target="_blank" rel="external">使用变换命令</a></p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p>最近一直想学习<em>PS</em>这个之前就一直很感兴趣的技能，想着借此实现自己的想法，和作为另一个重要的技能也是不错的。由于是<em>Photoshop cc 2018</em>，所以在此分享一些学习资源和下载资源，另外对于一些值得记住的内容做一些笔记以观后效之用。</p><a id="more"></a><h1 id="软件下载"><a href="#软件下载" class="headerlink" title="软件下载"></a>软件下载</h1><p><em>Adobe</em>家族软件全套破解下载(网友分享～)：</p><blockquote><p> <strong>链接: <a href="https://pan.baidu.com/s/1RDfGzhLVCFoWxg5D7D2Jjg" target="_blank" rel="external">https://pan.baidu.com/s/1RDfGzhLVCFoWxg5D7D2Jjg</a> 提取码: p57f</strong></p></blockquote><p>关于破解之前记得看好：<strong>下载好软件之后，断网，然后打开破解的插件进行破解，破解之后就能使用了。</strong></p><p>另外关于下载百度网盘文件的一些实用方法(全平台均有)：<a href="https://www.runningcheese.com/baiduyun" target="_blank" rel="external">3个方法解决百度网盘限速 （2019-02-20 更新）</a></p><h1 id="学习资源分享"><a href="#学习资源分享" class="headerlink" title="学习资源分享"></a>学习资源分享</h1><p>关于我是跟着在<em>YouTube</em>上的几个大神学习～所以就在此分享这些资源吧。</p><ul><li><p><a href="https://www.youtube.com/watch?v=7AbUkwpwZ9E&amp;list=PLdQlQR22jq3VLBuAxsHIhOEWvEWihAz4I" target="_blank" rel="external">Mr. Yuan：Photoshop cc 2018最新教程 01（认识Photoshop）</a></p></li><li><p><a href=""></a></p></li></ul><h1 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h1><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><blockquote><p><strong>Mac中的“command”键等于win中的“Ctrl”键，“option”键为“Alt”键。</strong></p></blockquote><ul><li><p>切换前景色和背景色：<strong>X</strong></p></li><li><p>返回前选色：<strong>D</strong></p></li><li><p><strong>shift</strong>键加<strong>option</strong>键盘(Win为<strong>Alt键</strong>)在结合选区时有更为方便的的效果</p></li><li><p>移到“缩放工具”，“command”(win为”Ctrl”)+单击选择“图层蒙版缩略图”可选剪切下来的图画，此时“option”+“Del”可去除所选择的图层(自动填充前景色)，“Ctrl”+“Del”(自动填充背景色)</p></li><li><p>在画笔的情况下“[”,”]“为放大放小的情况</p></li><li><p>“画笔”的“清除”(去除不影响背景颜色的自建颜色，做影子修改时很有用)与“透明度”(深浅度的调整)</p></li></ul><h2 id="基本认识及操作"><a href="#基本认识及操作" class="headerlink" title="基本认识及操作"></a>基本认识及操作</h2><ul><li><p>通过首选项以及上方的属性栏来进行调整图片的原始排列等；</p></li><li><p>工具之间是相互交叉配合使用的；</p></li><li><p>一个工具里有多个选项选择交叉可使用；</p></li><li><p>羽化即虚化；</p></li><li><p>在两个图层一个在上一个在下，可以产生叠加结合的效果(在自我设计时最为重要，比如投影之类的)，PS准确来说就是图层之间的叠加结合而已，新建图层作为要叠加的成分(一般指新建的蒙版图层)；</p></li><li><p>画笔结合“柔边”，背景色为白色(按实际情况选择)，让黑色的阴影变白(此时背景色应当是白色的情况下)；</p></li><li><p>多种抠图方法可结合着配合使用以达到最快最好的效率效果；</p></li><li><p>“选择并遮住”之中的“反选”即可选择另外一面未选择一方作为主操刀；</p></li><li><p>在使用“套索工具”时，在不小心套索的多余了，可停下，使用快捷键按住“option”与“shift”减少区域和增加区域；</p></li><li><p>画笔颜色取前景色；</p></li><li><p>在简单的处理之间也应当放大来进行精细化；</p></li><li><p>在对将要进行处理的图片进行“解锁”作为第一步，作为一种好的开头习惯；</p></li><li></li></ul><h2 id="抠图"><a href="#抠图" class="headerlink" title="抠图"></a>抠图</h2><p>通过选区选框圈出大概的位置，可利用上方属性的“变换选区”，结合放大来进行完善选框的完整性：</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/Mar-05-2019%2016-46-57.gif" alt=""></p><h2 id="填充取景"><a href="#填充取景" class="headerlink" title="填充取景"></a>填充取景</h2><p>通过选区(可通过“取消选择”来取消选区)，进行“填充”，补色，“模糊”来进行进一步的简要特效。</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/Mar-05-2019%2020-51-45.gif" alt=""></p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/Mar-05-2019%2020-51-10.gif" alt=""></p><p>“自由变换”进行拖拉选区尺寸的大小。</p><h2 id="图层变换"><a href="#图层变换" class="headerlink" title="图层变换"></a>图层变换</h2><p>可将右侧的图层上下来结合实际情况进行摆布，可选择“叠加”，“透明度”等等使得更为符合实际情况。</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/Mar-05-2019%2021-06-00.gif" alt=""></p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/Mar-05-2019%2021-06-30.gif" alt=""></p><h2 id="多面抠图"><a href="#多面抠图" class="headerlink" title="多面抠图"></a>多面抠图</h2><blockquote><p><strong>以下步骤必须一步完成！！！不可中途更改！</strong></p></blockquote><p>多面抠图，利用“套索工具”，其中的多方面可选择工具，可先将图片放大以便抠图更为准确。</p><p>在套索完之后选择“选择并遮住…”才可进一步切剪多余的部分（可结合放大图像，按住“option”/“Alt”配合套索工具即可）。</p><p>之后在右下角图层下面选择“建立新的图层或调整图层”，“纯色”，将此脱在剪好的图层下边。（<strong>换成白底效果！！</strong>）</p><blockquote><p><a href="https://www.youtube.com/watch?v=Zo8P4JYeIFg&amp;list=PLdQlQR22jq3VLBuAxsHIhOEWvEWihAz4I&amp;index=8" target="_blank" rel="external">多边形抠图</a></p></blockquote><h2 id="快速选择工具抠图"><a href="#快速选择工具抠图" class="headerlink" title="快速选择工具抠图"></a>快速选择工具抠图</h2><p>“快速选择工具”与“魔棒”在一按钮处…可增可减。</p><p>另外操作可与上面的多面抠图的操作一致，如放大来进行抠图，加上快捷键等等。</p><p>其中包括侧面部分可选择按钮的功能等使用。</p><h3 id="产生投影影子效果"><a href="#产生投影影子效果" class="headerlink" title="产生投影影子效果"></a>产生投影影子效果</h3><p>生成一个同样体积大小的灰色图层(在新建的图层上)，贴在图下方，然后进行叠加结合的效果，再进一步的处理一下即可。</p><blockquote><p><a href="https://www.youtube.com/watch?v=kxW420eVuOY&amp;list=PLdQlQR22jq3VLBuAxsHIhOEWvEWihAz4I&amp;index=9" target="_blank" rel="external">快速选择工具抠图</a></p></blockquote><h2 id="魔术棒抠图方法"><a href="#魔术棒抠图方法" class="headerlink" title="魔术棒抠图方法"></a>魔术棒抠图方法</h2><p>魔棒的加选与其他工具的结合使用。</p><blockquote><p><a href="https://www.youtube.com/watch?v=UNZ0_F_h7B0&amp;index=10&amp;list=PLdQlQR22jq3VLBuAxsHIhOEWvEWihAz4I" target="_blank" rel="external">魔术棒抠图方法</a></p></blockquote><h2 id="案例学习"><a href="#案例学习" class="headerlink" title="案例学习"></a>案例学习</h2><p>“选择”，“色彩范围”，然后利用其中的工具进行一系列的调色，进行选择抠像，之后可进行一系列的如上的操作，可利用“画笔”选择颜色进行背景的涂色，然后可利用“边缘画笔”对于难对付的背景涂色(即躲在前景之后的背景色)。</p><blockquote><p><a href="https://www.youtube.com/watch?v=MH4KcRvlguU&amp;list=PLdQlQR22jq3VLBuAxsHIhOEWvEWihAz4I&amp;index=11" target="_blank" rel="external">色彩范围抠图牛奶杯案例</a></p></blockquote><p>在以下的案例之中，有通过抠图结合新建图层，加上相应的文字用以说明某个产品或者是某个东西的参数等。新建一个图层(单位应当为“像素”，将人物拖进此个新建的心图层中)，加以某些个文字，文字期间可加以某些个工具的修饰，在背景点击“指示图层可见性”蒙蔽其他图层的可见性，可用“渐变工具”来构建新的颜色交叉的背景图色，“矩形工具”为文字添加背景。可用“涂笔”去除某些碍眼的多余的线条背景等。</p><blockquote><p><a href="https://www.youtube.com/watch?v=Tm3e_360OJQ&amp;index=12&amp;list=PLdQlQR22jq3VLBuAxsHIhOEWvEWihAz4I" target="_blank" rel="external">多边形抠图电脑广告案例</a></p></blockquote><h2 id="裁剪工具的使用"><a href="#裁剪工具的使用" class="headerlink" title="裁剪工具的使用"></a>裁剪工具的使用</h2><p>裁剪工具的使用与平时使用的情况是差不多的一个情况，它的“裁剪工具”上方亦有不同的小工具可使用，如自定义裁剪尺寸，拉直旋转，自定义裁剪的网格等。</p><blockquote><p><a href="https://www.youtube.com/watch?v=8by69AJCeyE&amp;index=14&amp;list=PLdQlQR22jq3VLBuAxsHIhOEWvEWihAz4I" target="_blank" rel="external">裁剪工具的使用</a></p></blockquote><h2 id="修改图形大小"><a href="#修改图形大小" class="headerlink" title="修改图形大小"></a>修改图形大小</h2><p>与图像像素的大小以及尺寸有关的教程。</p><p>输入一个文件画像，“图像大小”可起到一个图片像素压缩的效用，即根据图像尺寸大小可改变其图片质量问题，“画布大小”可起到裁剪的作用，其中可选择裁剪的中心点等。当在想要生成的图片时可结合使用两者工具来进行图片的整体修改和局部的裁剪。</p><p>另外可新建一个预期的空白图层，后将想要的更改的图像拖进新建的图层之中亦可完成改进图像像素的问题。</p><blockquote><p><a href="https://www.youtube.com/watch?v=40b9F234AgY&amp;index=15&amp;list=PLdQlQR22jq3VLBuAxsHIhOEWvEWihAz4I" target="_blank" rel="external">修改图形大小</a></p></blockquote><h2 id="使用变换命令"><a href="#使用变换命令" class="headerlink" title="使用变换命令"></a>使用变换命令</h2><p>新的抠图技能：可选“选框工具”之后选出图像中的某个东西，后“图层”，“新建”，“通过拷贝的图层”即可得出一个新的可利用的图层了(即得出的与“套索工具”的图层可利用的效果一致)。</p><p>“编辑”中的“变换”可对于图片做更多的处理，其中的选项多样化。</p><p>有对于包装盒、图片贴墙、将某个图进行其他变换(如先画一个选区，在区域之内进行适当的变换等)的几个小的实战。</p><blockquote><p><a href="https://www.youtube.com/watch?v=waENC2Z_yAY&amp;list=PLdQlQR22jq3VLBuAxsHIhOEWvEWihAz4I&amp;index=16" target="_blank" rel="external">使用变换命令</a></p></blockquote><h2 id="内容识别比例缩放与自由变换"><a href="#内容识别比例缩放与自由变换" class="headerlink" title="内容识别比例缩放与自由变换"></a>内容识别比例缩放与自由变换</h2><p>”内容识别比例缩放“是以内容的比例进行自动缩放的一个选项，点击上方最后的“小人图标”，表示在此缩放功能之下图中人物的皮肤会收到一定的保护。</p><h3 id="实用"><a href="#实用" class="headerlink" title="实用"></a>实用</h3><p>“填充”其中的内容识别，再选取一个区域之后，可用于去水印等(将前景变换为背景，内容识别指的是以背景的识别提取)。</p><p>下一节介绍的，精修时可用“修补工具”来画区域来进行滑动填充缺失的邻块。</p><blockquote><p><a href="https://www.youtube.com/watch?v=7gXNLkv2AsY&amp;list=PLdQlQR22jq3VLBuAxsHIhOEWvEWihAz4I&amp;index=17" target="_blank" rel="external">内容识别比例缩放与自由变换</a></p></blockquote><h2 id="操控变形"><a href="#操控变形" class="headerlink" title="操控变形"></a>操控变形</h2><p>先将要进行处理的图“解锁”(有时不解锁许多功能用不了)，选择“操控变形”，“显示网格”定取“中心点”(即中心点是变形时的“钉子”用于旋转变形，有时亦可作为钉子的定位作用)，想变换图中的物体的动作时，可先将此物体抠出来，再将原图中的此物体使用上一节所述的选择手段抹去，将两者重叠在一起，即能单独操控物体的动作了。(撤消快捷键可见变换动作)</p><blockquote><p><a href="https://www.youtube.com/watch?v=8xlbE2bLhOE&amp;index=18&amp;list=PLdQlQR22jq3VLBuAxsHIhOEWvEWihAz4I" target="_blank" rel="external">操控变形</a></p></blockquote><h2 id="案例学习-1"><a href="#案例学习-1" class="headerlink" title="案例学习"></a>案例学习</h2><p>在一个图标logo要帖在一个物体上时，可先将两者同时打开，利用图册框上方“设置图层的混合模式”，选择两者较为合一的颜色对比，如不满意，可在基础上选择“图像”“调整”“色阶”去调整颜色，之后利用学到的变换将两者打磨。</p><blockquote><p><a href="https://www.youtube.com/watch?v=pIFd0ffuxyI&amp;index=19&amp;list=PLdQlQR22jq3VLBuAxsHIhOEWvEWihAz4I" target="_blank" rel="external">通过变形为雨伞贴图</a></p></blockquote>]]></content>
     
     <summary type="html">
     
@@ -435,109 +523,6 @@
       <category term="英语" scheme="https://liujunjie11.github.io/tags/%E8%8B%B1%E8%AF%AD/"/>
     
       <category term="日语" scheme="https://liujunjie11.github.io/tags/%E6%97%A5%E8%AF%AD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>考研or工作，抉择与想法</title>
-    <link href="https://liujunjie11.github.io/2018/11/19/%E8%80%83%E7%A0%94or%E5%B7%A5%E4%BD%9C%EF%BC%8C%E6%8A%89%E6%8B%A9%E4%B8%8E%E6%83%B3%E6%B3%95/"/>
-    <id>https://liujunjie11.github.io/2018/11/19/考研or工作，抉择与想法/</id>
-    <published>2018-11-19T05:10:14.000Z</published>
-    <updated>2019-01-02T06:47:53.087Z</updated>
-    
-    <content type="html"><![CDATA[<p>不知不觉，大三上学期也过一大半了，我这几天一直在<code>考研</code>or<code>工作</code>之间进行一场自我的挣扎。</p><a id="more"></a><p>有时想的太多真的会成为人们进步的碍脚石。我为何要选择考研？必须得问自己的真心，必须得深入了解自己更加倾向于哪一方面！如果不了解自己需要什么，什么都不会，不如直接去考研待在学校寻找自我吧，还可以顺便学点知识应付未来的生计什么的。我是个自我了解很深的人，我选择工作，因为我更加倾向于喜欢毕业之后去工作。</p><p>如果我考研为了什么？我想过去日本留学，冷静下来想了一下发现自己只是想去体验日本的生活环境，另外成本太高，而且我也不愿去为了这个单独的目标去花更多的时间了，所以我放弃留学的打算。光光是成本不说，我想过去考研国内的大学，我冷静下来想了想，不过是自己的一些能力因素达不到理想中的那个样子罢了，而我现在还有时间！！学历真的重要吗？我通过参考了很多前辈的话，我冷静下来想了想，发现还是自身的能力不足的问题，焦虑的大多数时候只是能力不足的表现罢了，这时候就需要读书看书学习了。</p><p>再者，我其实不是喜欢考研的，只不过是想要个学历学位证书以及多一些的项目经验罢了，我的这个目的经过我的考虑之后，我有点接受不了，因为我为了这种东西而去花费一年时间去准备的话，或许不适合我的性格与选择。</p><p>学习是终身的，不是一时的。</p><p>一些事情理性考虑好之后，干，就完了！！</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;不知不觉，大三上学期也过一大半了，我这几天一直在&lt;code&gt;考研&lt;/code&gt;or&lt;code&gt;工作&lt;/code&gt;之间进行一场自我的挣扎。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="日记" scheme="https://liujunjie11.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
-    
-    
-      <category term="日记" scheme="https://liujunjie11.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL语句疑惑记录</title>
-    <link href="https://liujunjie11.github.io/2018/11/15/MySQL%E8%AF%AD%E5%8F%A5%E7%96%91%E6%83%91%E8%AE%B0%E5%BD%95/"/>
-    <id>https://liujunjie11.github.io/2018/11/15/MySQL语句疑惑记录/</id>
-    <published>2018-11-15T01:53:00.000Z</published>
-    <updated>2019-01-02T06:48:06.106Z</updated>
-    
-    <content type="html"><![CDATA[<p>主要是记录一些比较有疑惑的语句，方便以后的查找以及回忆。</p><a id="more"></a><h1 id="LIMIT子句"><a href="#LIMIT子句" class="headerlink" title="LIMIT子句"></a>LIMIT子句</h1><blockquote><p> <strong>主要参考：<a href="https://www.yiibai.com/mysql/limit.html" target="_blank" rel="external">https://www.yiibai.com/mysql/limit.html</a></strong></p></blockquote><p>LIMIT子句语法：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">SELECT </div><div class="line">    column1,column2,...</div><div class="line">FROM</div><div class="line">    table</div><div class="line">LIMIT offset , count;</div></pre></td></tr></table></figure><p>SQL我们来查看LIMIT子句参数：</p><p><code>offset</code>参数:指定要返回的第一行的偏移量。第一行的偏移量为0，而不是1。</p><p><code>count</code>:指定要返回的最大行数。</p><p>使用带有一个参数的LIMIT子句时，此参数将用于确定从结果集的开头返回的最大行数。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">SELECT </div><div class="line">    column1,column2,...</div><div class="line">FROM</div><div class="line">    table</div><div class="line">LIMIT count;</div></pre></td></tr></table></figure><p>SQL上面的查询等同：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">SELECT </div><div class="line">    column1,column2,...</div><div class="line">FROM</div><div class="line">    table</div><div class="line">LIMIT 0 , count;</div></pre></td></tr></table></figure><h2 id="实例说明"><a href="#实例说明" class="headerlink" title="实例说明"></a>实例说明</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">mysql&gt; SELECT productCode, productName, buyprice</div><div class="line">FROM products</div><div class="line">ORDER BY buyprice DESC;</div><div class="line"></div><div class="line">+-------------+--------------------------------------+----------+</div><div class="line">| productCode | productName                          | buyprice |</div><div class="line">+-------------+--------------------------------------+----------+</div><div class="line">| S10_4962    | 1962 LanciaA Delta 16V               | 103.42   |</div><div class="line">| S18_2238    | 1998 Chrysler Plymouth Prowler       | 101.51   |</div><div class="line">| S10_1949    | 1952 Alpine Renault 1300             | 98.58    |</div><div class="line">| S24_3856    | 1956 Porsche 356A Coupe              | 98.3     |</div><div class="line">| S12_1108    | 2001 Ferrari Enzo                    | 95.59    |</div><div class="line">| S12_1099    | 1968 Ford Mustang                    | 95.34    |</div><div class="line">... ....</div><div class="line">+-------------+--------------------------------------+----------+</div><div class="line">110 rows in set</div></pre></td></tr></table></figure><p>默认语句为输出最前面的几行：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">mysql&gt; SELECT customernumber, customername, creditlimit</div><div class="line">FROM customers</div><div class="line">ORDER BY creditlimit DESC</div><div class="line">LIMIT 5;</div><div class="line"></div><div class="line">相当于：</div><div class="line">mysql&gt; SELECT customernumber, customername, creditlimit</div><div class="line">FROM customers</div><div class="line">ORDER BY creditlimit DESC</div><div class="line">LIMIT 0, 5; #从第一个偏移量的指定开始向下输出指定行数的所有内容。</div><div class="line"></div><div class="line"></div><div class="line">+----------------+------------------------------+-------------+</div><div class="line">| customernumber | customername                 | creditlimit |</div><div class="line">+----------------+------------------------------+-------------+</div><div class="line">|            141 | Euro+ Shopping Channel       | 227600      |</div><div class="line">|            124 | Mini Gifts Distributors Ltd. | 210500      |</div><div class="line">|            298 | Vida Sport, Ltd              | 141300      |</div><div class="line">|            151 | Muscle Machine Inc           | 138500      |</div><div class="line">|            187 | AV Stores, Co.               | 136800      |</div><div class="line">+----------------+------------------------------+-------------+</div><div class="line">5 rows in set</div></pre></td></tr></table></figure><p>简要深入理解偏移量的作用：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">mysql&gt; SELECT productCode, productName, buyprice FROM  products</div><div class="line">ORDER BY buyprice DESC</div><div class="line">LIMIT 1, 1; #偏移量从0开始，所以要指定从1开始，然后取一行记录，以行数为1的指定仅输出一行对应的内容。</div><div class="line"></div><div class="line">+-------------+--------------------------------+----------+</div><div class="line">| productCode | productName                    | buyprice |</div><div class="line">+-------------+--------------------------------+----------+</div><div class="line">| S18_2238    | 1998 Chrysler Plymouth Prowler | 101.51   |</div><div class="line">+-------------+--------------------------------+----------+</div><div class="line">1 row in set</div><div class="line"></div><div class="line"></div><div class="line">#如下几个深入理解</div><div class="line">mysql&gt; SELECT productCode, productName, buyprice FROM  products</div><div class="line">ORDER BY buyprice DESC</div><div class="line">LIMIT 0, 1; #这时指定第一行(偏移量默认为第一行取0)</div><div class="line"></div><div class="line">+-------------+--------------------------------+----------+</div><div class="line">| productCode | productName                    | buyprice |</div><div class="line">+-------------+--------------------------------+----------+</div><div class="line">| S10_4962    | 1962 LanciaA Delta 16V | 103.42   |</div><div class="line">+-------------+--------------------------------+----------+</div><div class="line">1 row in set</div><div class="line"></div><div class="line"></div><div class="line">mysql&gt; SELECT productCode, productName, buyprice FROM  products</div><div class="line">ORDER BY buyprice DESC</div><div class="line">LIMIT 0, 2; #从已指定第一行偏移量开始输出以此为基础的指定行数的以下所有内容</div><div class="line"></div><div class="line">+-------------+--------------------------------------+----------+</div><div class="line">| productCode | productName                          | buyprice |</div><div class="line">+-------------+--------------------------------------+----------+</div><div class="line">| S10_4962    | 1962 LanciaA Delta 16V               | 103.42   |</div><div class="line">| S18_2238    | 1998 Chrysler Plymouth Prowler       | 101.51   |</div><div class="line">+----------------+------------------------------+-------------+</div><div class="line">2 rows in set</div></pre></td></tr></table></figure><blockquote><p>总结：<code>offset</code>就是相当于一个定位，<code>count</code>就是要返回指定的最大行数。</p></blockquote><h1 id="ORDER-BY-ASC-DESC"><a href="#ORDER-BY-ASC-DESC" class="headerlink" title="ORDER BY ASC/DESC"></a>ORDER BY ASC/DESC</h1><p><code>ASC</code>:[A~Z], [1~N]…</p><p><code>DESC</code>:[Z~A}, [N~1]…</p><blockquote><p>A，B，…Z。Z相当于最大的。</p></blockquote><h1 id="经度-Longitude-纬度-Latitude"><a href="#经度-Longitude-纬度-Latitude" class="headerlink" title="经度(Longitude) 纬度(Latitude)"></a>经度(Longitude) 纬度(Latitude)</h1><p><code>经度(Longitude)</code>：<code>东经</code>，<code>西经</code>。</p><blockquote><p>东经正数，西经为负数。越大越靠东。</p></blockquote><p><code>纬度(Latitude)</code>：<code>南纬</code>，<code>北纬</code>。</p><blockquote><p>北纬为正数，南纬为负数。越大越靠北。</p></blockquote><p>方便记忆：东经，东北正。</p><p><strong>参考：<a href="https://baike.baidu.com/item/%E7%BB%8F%E7%BA%AC%E5%BA%A6" target="_blank" rel="external">https://baike.baidu.com/item/%E7%BB%8F%E7%BA%AC%E5%BA%A6</a></strong></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;主要是记录一些比较有疑惑的语句，方便以后的查找以及回忆。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="MySQL" scheme="https://liujunjie11.github.io/categories/MySQL/"/>
-    
-    
-      <category term="MySQL" scheme="https://liujunjie11.github.io/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL学习资源与实践学习</title>
-    <link href="https://liujunjie11.github.io/2018/11/13/MySQL%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E4%B8%8E%E5%AE%9E%E8%B7%B5%E5%AD%A6%E4%B9%A0/"/>
-    <id>https://liujunjie11.github.io/2018/11/13/MySQL学习资源与实践学习/</id>
-    <published>2018-11-13T13:12:31.000Z</published>
-    <updated>2019-01-02T06:48:16.491Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近心血来潮想写几个SQL玩玩，在此会分享学习的书籍资源以及YouTube教程使用语法的实践项目，以及会进行一系列的简单实践。这里通过在YouTube上的一个大佬的视频来进行在线的实践即可。</p><iframe width="560" height="315" src="https://www.youtube.com/embed/xYMhPZ_L3fI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><blockquote><p>就是这个视频。</p></blockquote><p>可主要参考书籍<a href="https://pan.baidu.com/s/15hIkCroy2w7RvBdVH8LRmA" target="_blank" rel="external">疯狂Java讲义(李刚)</a>来进行学习，当然还有参考其他的经典书籍以备用学习，这类书籍很多，就不在此一一说明了。</p><blockquote><p>《疯狂Java讲义》书籍的配套资源地址：<a href="https://github.com/DoingLee" target="_blank" rel="external">https://github.com/DoingLee</a></p></blockquote><a id="more"></a><h1 id="MySQL学习"><a href="#MySQL学习" class="headerlink" title="MySQL学习"></a>MySQL学习</h1><p>这一部分由于一些基础性的基本知识在上面和下面的书籍中已经是多如牛毛了，我就不重复说明了，需要的自行下载去了解吧。可结合书中直接开始语法的学习！实际上几个实用性强的语句就那么几个。</p><h2 id="书籍资源分享"><a href="#书籍资源分享" class="headerlink" title="书籍资源分享"></a>书籍资源分享</h2><ul><li><p><a href="https://pan.baidu.com/s/1rZwbEXEV_GlGsN7UVZ5Z6Q" target="_blank" rel="external">MySQL必知必会.pdf</a></p></li><li><p><a href="https://pan.baidu.com/s/1pA9V9weH33j7ZiV6fFNU1Q" target="_blank" rel="external">SQL语法查询(W3school).pdf</a></p></li><li><p><a href="https://pan.baidu.com/s/1cglHK9k4VY1SSJsg_C2mWA" target="_blank" rel="external">MySQL完全教程.pdf</a></p></li><li><p><a href="https://pan.baidu.com/s/14W7WJBoVnybd_r8pXQ6J4Q" target="_blank" rel="external">MySQL经典教程.pdf</a></p></li><li><p><a href="http://www.manongjc.com/article/1436.html" target="_blank" rel="external">码农教程</a></p></li></ul><blockquote><p>就这么多吧，都是网上的人们分享出来的。</p></blockquote><h2 id="网页在线学习"><a href="#网页在线学习" class="headerlink" title="网页在线学习"></a>网页在线学习</h2><ul><li><a href="https://sqlbolt.com" target="_blank" rel="external">sqlbolt</a></li></ul><blockquote><p>强烈推荐！还可在线实践(结合上面的视频一起来即可)。</p></blockquote><ul><li><p><a href="http://www.runoob.com/mysql/mysql-tutorial.html" target="_blank" rel="external">MySQL教程(菜鸟教程)</a></p></li><li><p><a href="https://m.w3cschool.cn/mysql/" target="_blank" rel="external">MySQL教程(w3cschool)</a></p></li><li><p><a href="https://www.yiibai.com/mysql/" target="_blank" rel="external">MySQL教程(易百教程)</a></p></li></ul><blockquote><p>相较于上面的书籍，在线教程更加的通俗易懂，可先通过这些入门简单认识一下以及学习语法，不懂的更深的部分可查看书籍即可。</p></blockquote><h2 id="YouTube上的资源"><a href="#YouTube上的资源" class="headerlink" title="YouTube上的资源"></a>YouTube上的资源</h2><ul><li><a href="https://www.youtube.com/results?search_query=mysql" target="_blank" rel="external">https://www.youtube.com/results?search_query=mysql</a></li></ul><blockquote><p>就这么简单～</p></blockquote><h1 id="实践学习"><a href="#实践学习" class="headerlink" title="实践学习"></a>实践学习</h1><p>强烈建议先根据视频学习！根据上面的YouTube教程结合<a href="https://sqlbolt.com" target="_blank" rel="external">sqlbolt</a>网站一步步来即可～若是英文看不懂，可结合上面的书籍资源以及在线资源查询即可。实践才是掌握一门语言的最快方法！</p><blockquote><p>有时根据网速快慢加载的数据库可能有点慢，等待一下即可。</p></blockquote><h3 id="实践网站："><a href="#实践网站：" class="headerlink" title="实践网站："></a>实践网站：</h3><ul><li><p><a href="https://sqlbolt.com/" target="_blank" rel="external">SQLbolt</a></p></li><li><p><a href="https://www.tutorialspoint.com/" target="_blank" rel="external">tutorialspoint</a></p></li><li><p><a href="https://www.w3schools.com/sql/sql_exercises.asp" target="_blank" rel="external">W3Schools</a></p></li><li><p><a href="https://www.codecademy.com/" target="_blank" rel="external">codecademy</a></p></li><li><p><a href="https://www.udemy.com/courses/search/?ref=home&amp;src=ukw&amp;q=mysql" target="_blank" rel="external">udemy</a></p></li></ul><h1 id="进阶好文章"><a href="#进阶好文章" class="headerlink" title="进阶好文章"></a>进阶好文章</h1><ul><li><p><a href="http://blog.codinglabs.org/articles/theory-of-mysql-index.html" target="_blank" rel="external">MySQL索引背后的数据结构及算法原理</a></p></li><li><p><a href="https://cloud.tencent.com/developer/article/1004475" target="_blank" rel="external">MySQL 开发实践 8 问</a></p></li><li><p><a href="https://juejin.im/post/5b4f710be51d45195c073912" target="_blank" rel="external">从I/O到索引的那些事</a></p></li><li><p><a href="https://juejin.im/post/5b8ba5dbe51d4538d63b9345" target="_blank" rel="external">从理论到实践，Mysql查询优化剖析</a></p></li></ul><blockquote><p>再者就是看书了。</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近心血来潮想写几个SQL玩玩，在此会分享学习的书籍资源以及YouTube教程使用语法的实践项目，以及会进行一系列的简单实践。这里通过在YouTube上的一个大佬的视频来进行在线的实践即可。&lt;/p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/xYMhPZ_L3fI&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;就是这个视频。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;可主要参考书籍&lt;a href=&quot;https://pan.baidu.com/s/15hIkCroy2w7RvBdVH8LRmA&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;疯狂Java讲义(李刚)&lt;/a&gt;来进行学习，当然还有参考其他的经典书籍以备用学习，这类书籍很多，就不在此一一说明了。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;《疯狂Java讲义》书籍的配套资源地址：&lt;a href=&quot;https://github.com/DoingLee&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/DoingLee&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="MySQL" scheme="https://liujunjie11.github.io/categories/MySQL/"/>
-    
-    
-      <category term="MySQL" scheme="https://liujunjie11.github.io/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>学习计算机组成、计算机系统资源分享</title>
-    <link href="https://liujunjie11.github.io/2018/11/13/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    <id>https://liujunjie11.github.io/2018/11/13/学习计算机组成、计算机系统资源分享/</id>
-    <published>2018-11-13T08:32:42.000Z</published>
-    <updated>2019-01-02T06:48:25.253Z</updated>
-    
-    <content type="html"><![CDATA[<p>一直想写一些关于计算机的基础知识的，但是我又看到许多的优秀书籍以及优秀文章，我从其中也学习到了非常的东西，也解开了我的许多疑惑，在此感谢那些人们的付出～</p><p>回到正题，自己一直想写，但是由于时间问题以及质量不能保证…所以我打算将一些优秀的资源拿出来分享好了，也解决了自己的那块心头肉。</p><p>以下资源是我从网上收集到的，仅用于学习使用。</p><a id="more"></a><h1 id="云盘资源分享"><a href="#云盘资源分享" class="headerlink" title="云盘资源分享"></a>云盘资源分享</h1><ul><li><a href="https://pan.baidu.com/s/1Z9BcwV3fKGqwVXlLfU8B_g" target="_blank" rel="external">深入理解计算机系统（原书第三版）.pdf</a></li></ul><blockquote><p>一本非常好的书！！</p></blockquote><ul><li><p><a href="https://pan.baidu.com/s/1JIC9vxu1CnKgqBnfgrfEAw" target="_blank" rel="external">计算机组成.pdf</a></p></li><li><p><a href="https://pan.baidu.com/s/1LI2Cc9dFgAgBro_Tn7uKUA" target="_blank" rel="external">计算机操作系统（第3版）_汤小丹.pdf</a></p></li><li><p><a href="https://pan.baidu.com/s/1li3YCywQlfEMtRCkRdS1tQ" target="_blank" rel="external">计算机是怎么跑起来的.pdf</a></p></li></ul><blockquote><p>一本科普书吧，很简单，但是够用了。</p></blockquote><ul><li><p><a href="https://pan.baidu.com/s/1uDVuroObwbvuqlZWokE3dg" target="_blank" rel="external">计算机组成.pdf</a></p></li><li><p><a href="https://pan.baidu.com/s/1ix393Of_pPVnvAQZEdZumw" target="_blank" rel="external">Linux设备驱动程序(中文版第三版).pdf</a></p></li><li><p><a href="https://pan.baidu.com/s/1N6Y7faTYkmU7gyaXUv9YqA" target="_blank" rel="external">Linux内核完全注释.pdf</a></p></li><li><p><a href="https://pan.baidu.com/s/1jvuMLTCtrmytamVYtR2G7A" target="_blank" rel="external">深入Linux内核架构.pdf</a></p></li></ul><blockquote><p>以上都是网上收集的电子书，我个人平时喜欢看书，基本上都是电子书，有收集很多技术类的电子书，都是根据需求来收集的。</p></blockquote><h1 id="最近看到的相关的优秀文章"><a href="#最近看到的相关的优秀文章" class="headerlink" title="最近看到的相关的优秀文章"></a>最近看到的相关的优秀文章</h1><ul><li><p><a href="https://juejin.im/post/5b3c34e3e51d45190e34c680" target="_blank" rel="external">印象系列-理解进程的存在</a></p></li><li><p><a href="https://juejin.im/post/59eaf70ff265da432b49f6bc" target="_blank" rel="external">印象系列-磁盘和内存的基本认识</a></p></li><li><p><a href="https://juejin.im/post/59be20e6f265da06633d1648" target="_blank" rel="external">印象系列-linux内核启动过程</a></p></li><li><p><a href="https://juejin.im/post/5b4f710be51d45195c073912" target="_blank" rel="external">从I/O到索引的那些事</a></p></li></ul><blockquote><p>以上都是一个作者写的，最近在学习<code>MySQL</code>时无意中看到的，很好的文章。</p></blockquote><p>还是要多看书学习才行。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;一直想写一些关于计算机的基础知识的，但是我又看到许多的优秀书籍以及优秀文章，我从其中也学习到了非常的东西，也解开了我的许多疑惑，在此感谢那些人们的付出～&lt;/p&gt;
-&lt;p&gt;回到正题，自己一直想写，但是由于时间问题以及质量不能保证…所以我打算将一些优秀的资源拿出来分享好了，也解决了自己的那块心头肉。&lt;/p&gt;
-&lt;p&gt;以下资源是我从网上收集到的，仅用于学习使用。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="资源分享" scheme="https://liujunjie11.github.io/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    
-      <category term="计算机基础" scheme="https://liujunjie11.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-      <category term="资源分享" scheme="https://liujunjie11.github.io/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    
-      <category term="计算机基础" scheme="https://liujunjie11.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
