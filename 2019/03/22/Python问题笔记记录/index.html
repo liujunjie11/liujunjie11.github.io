@@ -94,7 +94,7 @@
 <meta property="og:description" content="此文以记录一些常见的、模糊的Python知识点为主，在此记录以观后效之用。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-03-23%20%E4%B8%8A%E5%8D%8810.56.33.png">
-<meta property="og:updated_time" content="2019-03-23T03:16:23.805Z">
+<meta property="og:updated_time" content="2019-03-23T03:24:11.600Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python问题笔记记录">
 <meta name="twitter:description" content="此文以记录一些常见的、模糊的Python知识点为主，在此记录以观后效之用。">
@@ -470,6 +470,9 @@
 </blockquote>
 <h2 id="Python的运行速度"><a href="#Python的运行速度" class="headerlink" title="Python的运行速度"></a>Python的运行速度</h2><p>在Python的工作中通常没有<code>build</code>或者是<code>make</code>的步骤：即为代码在写好之后立即运行。加上Python的字节码的特性，PVM循环（而不是CPU芯片）仍然须解释这些字节码，而且字节码指令与CPU指令相比需要做更多的工作，另外与其他的经典的解释器不同，Python中有内部的编译步骤：Python并不需要反复地重分析和重分解每一行语句。另外需要牢记在心的心的是：Python中的运行是发生在实时性之中的，完全不需要先将所有源代码先编译好再丢给解释器去执行（静态语言常常如此)，所有的建立的函数和类的操作以及连接的模块，这些都是在代码运行之时”编译-解释”如此一个步骤进行的。</p>
 <p>这也是为什么Python的运行速度比不上C/C++之类的语言的运行速度的原因，Python的运行速度介于传统的编译语言与传统的解释语言之间，并且具有动态的弹性编程体验。</p>
+<blockquote>
+<p>以上知识参考来源：《Python学习手册》Mark Lutz著</p>
+</blockquote>
 
       
     </div>
