@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2019-03-23T03:24:11.600Z</updated>
+  <updated>2019-03-24T05:05:50.576Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -17,11 +17,63 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>常用mysql命令行记录</title>
+    <link href="https://liujunjie11.github.io/2019/03/23/%E5%B8%B8%E7%94%A8mysql%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%AE%B0%E5%BD%95/"/>
+    <id>https://liujunjie11.github.io/2019/03/23/常用mysql命令行记录/</id>
+    <published>2019-03-23T13:16:58.000Z</published>
+    <updated>2019-03-24T05:05:50.576Z</updated>
+    
+    <content type="html"><![CDATA[<p>此文用于记录个人常用的或者是感到疑惑的<em>mysql</em>命令行记录，因为平时用到的<em>mysql</em>实在是少，所以在此做个简要记录以观后效之用。</p><a id="more"></a><p>#查看MYSQL默认端口号</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SHOW GLOBAL VARIABLES LIKE &apos;port&apos;;</div></pre></td></tr></table></figure><p>#查询当前所在的数据库</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SELECT DATABASE();</div></pre></td></tr></table></figure><p>#查看数据库中的所有用户</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SELECT DISTINCT CONCAT(&apos;User: &apos;&apos;&apos;, user, &apos;&apos;&apos;@&apos;&apos;&apos;,host,&apos;&apos;&apos;:&apos;) AS quert FROM mysql.user;</div></pre></td></tr></table></figure><p>#查看用户的表结构</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#DESC user_name.user</div><div class="line">DESC mysql.user;</div></pre></td></tr></table></figure><p>#查看某个用户的权限</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#第一种，user=&apos;user_name&apos;</div><div class="line">SELECT * FROM mysql.user WHERE user=&apos;Django_votingsystem&apos;;</div><div class="line"></div><div class="line">#第二种，不怎么好用。&apos;user_name&apos;@&apos;IP&apos;。</div><div class="line">SHOW GRANTS FOR &apos;Django_votingsystem&apos;@&apos;localhost&apos;;</div></pre></td></tr></table></figure><h1 id="mysql安装、验证等最初命令行"><a href="#mysql安装、验证等最初命令行" class="headerlink" title="mysql安装、验证等最初命令行"></a>mysql安装、验证等最初命令行</h1><blockquote><p>可参考：<a href="https://m.w3cschool.cn/mysql/mysql-install.html" target="_blank" rel="external">https://m.w3cschool.cn/mysql/mysql-install.html</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;此文用于记录个人常用的或者是感到疑惑的&lt;em&gt;mysql&lt;/em&gt;命令行记录，因为平时用到的&lt;em&gt;mysql&lt;/em&gt;实在是少，所以在此做个简要记录以观后效之用。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="mysql" scheme="https://liujunjie11.github.io/categories/mysql/"/>
+    
+    
+      <category term="mysql" scheme="https://liujunjie11.github.io/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>复习：数据库</title>
+    <link href="https://liujunjie11.github.io/2019/03/23/%E5%A4%8D%E4%B9%A0%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <id>https://liujunjie11.github.io/2019/03/23/复习：数据库/</id>
+    <published>2019-03-23T12:13:13.000Z</published>
+    <updated>2019-03-24T04:32:22.596Z</updated>
+    
+    <content type="html"><![CDATA[<p>这是开始为秋招做准备的简单复习，因为之前没怎么好好学习<em>数据库</em>，所以现在学习一番，并且在此做个记录以观后效之用。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;这是开始为秋招做准备的简单复习，因为之前没怎么好好学习&lt;em&gt;数据库&lt;/em&gt;，所以现在学习一番，并且在此做个记录以观后效之用。&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="笔记" scheme="https://liujunjie11.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="数据库" scheme="https://liujunjie11.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="笔记" scheme="https://liujunjie11.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="数据库" scheme="https://liujunjie11.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Python问题笔记记录</title>
     <link href="https://liujunjie11.github.io/2019/03/22/Python%E9%97%AE%E9%A2%98%E7%AC%94%E8%AE%B0%E8%AE%B0%E5%BD%95/"/>
     <id>https://liujunjie11.github.io/2019/03/22/Python问题笔记记录/</id>
     <published>2019-03-22T13:42:53.000Z</published>
-    <updated>2019-03-23T03:24:11.600Z</updated>
+    <updated>2019-03-24T04:32:15.800Z</updated>
     
     <content type="html"><![CDATA[<p>此文以记录一些常见的、模糊的<em>Python知识点</em>为主，在此记录以观后效之用。</p><a id="more"></a><h1 id="Python如何运行程序"><a href="#Python如何运行程序" class="headerlink" title="Python如何运行程序"></a>Python如何运行程序</h1><p>大多数程序员仅知道运行Python就是在文本中输入代码，然后将其交与“解释器”去执行运行。但是，透过表面去确切了解一下这个步骤：第一步是编译成所谓的“字节码”，之后再将其转发到所谓的“虚拟机”中。了解这个步骤可以帮助我们宏观上掌握程序的执行。</p><h2 id="字节码编译"><a href="#字节码编译" class="headerlink" title="字节码编译"></a>字节码编译</h2><p>当程序执行时，Python内部（对大多数用户来说是完全隐藏的）会先将源代码（文中的语句）编译成所谓字节码的形式。概括地说，Python通过把每一条源语句分解为单一步骤来将这些源代码翻译成一组字节码指令，这是一个简单的翻译步骤，而且字节码是源代码底层的、与平台无关的表现形式。另外值得一提的是：这些字节码可以提高执行速度，比起文本文件中的原始的源代码语句，它的运行速度要快得多。</p><p>下面来看看其中的奇妙之处：若是Python进程在机器上拥有写入权限，那么它将把程序的字节码保存为一个以<code>.pyc</code>（<code>.pyc</code>即为编译过的<code>.py</code>源代码)为扩展名的文件，程序运行之后，这些文件会在源代码附近的文件处可看到。实际上Python这样保存字节码是作为一种启动速度的优化。下一次运行程序时，若是在上次保存字节码之后没有修改过源代码，Python将会直接加载上次的<code>.pyc</code>文件并跳过编译的这个步骤。相反的，若是源代码有改动，在保存了之后，运行之时字节码也会重新创建，另外，当Python必须重编译时，它会自动检查源文件和字节码文件的时间戳。</p><blockquote><p>值得注意的是：如果Python无法在机器上写入字节码，程序依然是可以工作的：字节码会在内存中生成并在程序结束时简单地丢弃。尽管这样，由于<code>.pyc</code>文件能够加速启动，所以最好保证在大型程序中可以写入。字节码文件同样是分发Python程序的方法之一：如果Python找到的是<code>.pyc</code>文件，它会很乐意去运行这个程序，尽管这里没有原始的<code>.py</code>源代码文件。</p></blockquote><p>另外因为Python字节码不是机器的二进制代码（例如Intel芯片的指令），字节码仅仅相当于Python定义的一种表现形式。</p><h2 id="Python虚拟机（PVM）"><a href="#Python虚拟机（PVM）" class="headerlink" title="Python虚拟机（PVM）"></a>Python虚拟机（PVM）</h2><p>一旦程序编译成字节码或者是从已保存的<code>.pyc</code>文件中载入，之后的字节码会被发送到通常被称为Python虚拟机（Python Virtual Machine,简写为PVM)上来执行。实际上PVM只是Python整体中的一个组件，可理解为是运行脚本的组件，从技术上来说，就是所谓的“Python解释器”的最后一步。简单的Python代码运行可理解为以下的图片中的样子：</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-03-23%20%E4%B8%8A%E5%8D%8810.56.33.png" alt=""></p><blockquote><p>必须要理解的是这些复杂性的运行结构都是有意识地被隐藏起来，字节码的编译时自动完成的，PVM亦只是安装好的Python系统中的一部分，而程序员只是简单的编写、运行即可。</p></blockquote><h2 id="Python的运行速度"><a href="#Python的运行速度" class="headerlink" title="Python的运行速度"></a>Python的运行速度</h2><p>在Python的工作中通常没有<code>build</code>或者是<code>make</code>的步骤：即为代码在写好之后立即运行。加上Python的字节码的特性，PVM循环（而不是CPU芯片）仍然须解释这些字节码，而且字节码指令与CPU指令相比需要做更多的工作，另外与其他的经典的解释器不同，Python中有内部的编译步骤：Python并不需要反复地重分析和重分解每一行语句。另外需要牢记在心的心的是：Python中的运行是发生在实时性之中的，完全不需要先将所有源代码先编译好再丢给解释器去执行（静态语言常常如此)，所有的建立的函数和类的操作以及连接的模块，这些都是在代码运行之时”编译-解释”如此一个步骤进行的。</p><p>这也是为什么Python的运行速度比不上C/C++之类的语言的运行速度的原因，Python的运行速度介于传统的编译语言与传统的解释语言之间，并且具有动态的弹性编程体验。</p><blockquote><p>以上知识参考来源：《Python学习手册》Mark Lutz著</p></blockquote>]]></content>
     
@@ -47,7 +99,7 @@
     <link href="https://liujunjie11.github.io/2019/03/20/%E5%A4%8D%E4%B9%A0%EF%BC%9A%E7%BC%96%E8%AF%91%E5%99%A8%E5%8E%9F%E7%90%86/"/>
     <id>https://liujunjie11.github.io/2019/03/20/复习：编译器原理/</id>
     <published>2019-03-20T04:47:51.000Z</published>
-    <updated>2019-03-20T04:50:51.755Z</updated>
+    <updated>2019-03-24T04:32:10.694Z</updated>
     
     <content type="html"><![CDATA[<p>这是开始为秋招做准备的简单复习，因为之前没怎么好好学习<em>编译器原理</em>，所以现在学习一番，并且在此做个记录以观后效之用。</p><a id="more"></a>]]></content>
     
@@ -59,8 +111,12 @@
     
       <category term="笔记" scheme="https://liujunjie11.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
+      <category term="编译器原理" scheme="https://liujunjie11.github.io/categories/%E7%BC%96%E8%AF%91%E5%99%A8%E5%8E%9F%E7%90%86/"/>
+    
     
       <category term="笔记" scheme="https://liujunjie11.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="编译器原理" scheme="https://liujunjie11.github.io/tags/%E7%BC%96%E8%AF%91%E5%99%A8%E5%8E%9F%E7%90%86/"/>
     
   </entry>
   
@@ -69,7 +125,7 @@
     <link href="https://liujunjie11.github.io/2019/03/20/%E5%A4%8D%E4%B9%A0%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     <id>https://liujunjie11.github.io/2019/03/20/复习：计算机网络/</id>
     <published>2019-03-20T04:47:23.000Z</published>
-    <updated>2019-03-20T04:50:37.092Z</updated>
+    <updated>2019-03-24T04:32:18.098Z</updated>
     
     <content type="html"><![CDATA[<p>这是开始为秋招做准备的简单复习，因为之前没怎么好好学习<em>计算机网络</em>，所以现在学习一番，并且在此做个记录以观后效之用。</p><a id="more"></a>]]></content>
     
@@ -81,8 +137,12 @@
     
       <category term="笔记" scheme="https://liujunjie11.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
+      <category term="计算机网络" scheme="https://liujunjie11.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
     
       <category term="笔记" scheme="https://liujunjie11.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="计算机网络" scheme="https://liujunjie11.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
@@ -113,7 +173,7 @@
     <link href="https://liujunjie11.github.io/2019/03/20/%E5%A4%8D%E4%B9%A0%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     <id>https://liujunjie11.github.io/2019/03/20/复习：数据结构与算法/</id>
     <published>2019-03-20T04:46:55.000Z</published>
-    <updated>2019-03-20T05:31:58.598Z</updated>
+    <updated>2019-03-24T04:32:20.274Z</updated>
     
     <content type="html"><![CDATA[<p>这是开始为秋招做准备的简单复习，因为之前没怎么好好学习<em>数据结构与算法</em>，所以现在学习一番，并且在此做个记录以观后效之用。</p><a id="more"></a><blockquote><p>好的公开课推荐：<a href="http://www.52nlp.cn/coursera%E4%B8%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%AE%97%E6%B3%95%E8%AF%BE%E7%A8%8B-%E7%AE%97%E6%B3%95%E5%85%AC%E5%BC%80%E8%AF%BE-%E6%B1%87%E6%80%BB%E6%8E%A8%E8%8D%90" target="_blank" rel="external">Coursera上数据结构 &amp; 算法课程（公开课）汇总推荐</a></p></blockquote><p>关于一些基础的数据结构知识还是有点印象的，大致回顾一遍就开始刷题了…</p><p>回顾可参考：</p><ul><li><p><a href="http://blog.jobbole.com/110835/" target="_blank" rel="external">技术面试宝典： 很全面的算法和数据结构知识（含代码实现）</a></p></li><li><p><a href="https://hit-alibaba.github.io/interview/basic/algo/" target="_blank" rel="external">数据结构与算法</a></p></li></ul><blockquote><p>另外许多的书籍也是回顾基础知识不错的选择。另外一些视频也行。</p></blockquote>]]></content>
     
@@ -125,8 +185,12 @@
     
       <category term="笔记" scheme="https://liujunjie11.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
+      <category term="数据结构" scheme="https://liujunjie11.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
     
       <category term="笔记" scheme="https://liujunjie11.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="数据结构" scheme="https://liujunjie11.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
@@ -198,9 +262,9 @@
       <category term="笔记" scheme="https://liujunjie11.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="笔记" scheme="https://liujunjie11.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="After Effects CC 2017/2018" scheme="https://liujunjie11.github.io/tags/After-Effects-CC-2017-2018/"/>
+    
+      <category term="笔记" scheme="https://liujunjie11.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -224,9 +288,9 @@
       <category term="笔记" scheme="https://liujunjie11.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Adobe Premiere(Pro)2018" scheme="https://liujunjie11.github.io/tags/Adobe-Premiere-Pro-2018/"/>
-    
       <category term="笔记" scheme="https://liujunjie11.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Adobe Premiere(Pro)2018" scheme="https://liujunjie11.github.io/tags/Adobe-Premiere-Pro-2018/"/>
     
   </entry>
   
@@ -472,54 +536,6 @@
       <category term="Python" scheme="https://liujunjie11.github.io/tags/Python/"/>
     
       <category term="单片机" scheme="https://liujunjie11.github.io/tags/%E5%8D%95%E7%89%87%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>润物细无声</title>
-    <link href="https://liujunjie11.github.io/2019/01/28/%E6%B6%A6%E7%89%A9%E7%BB%86%E6%97%A0%E5%A3%B0/"/>
-    <id>https://liujunjie11.github.io/2019/01/28/润物细无声/</id>
-    <published>2019-01-28T13:13:04.000Z</published>
-    <updated>2019-01-28T13:58:18.145Z</updated>
-    
-    <content type="html"><![CDATA[<p>这些天我自从回来了这边之后，趁着一些闲工夫看了一些自认为比较优秀的电视剧，其中感触极大的是《父母爱情》。这部剧真的是一部高质量的、优秀的电视剧，在看的过程中太过于饥渴难耐，满怀兴奋的熬夜看完了，看完之后更是犹意未尽，总是一味的再而再三的重复回味那些喜欢的片段，如今在写下的此时此刻也是不时的浮现那些片段，真的太喜欢这部剧了。</p><a id="more"></a><p>通过《父母爱情》这部剧的“洗礼”之后，重新认识了很多的东西，之前的我入戏太深，久久不能摆脱戏里的故事与我喜欢的主人公的影子，他们确实的让我不能开怀去接受这部剧已尽的现实…父母年代的平凡爱情、平淡生活的细无声、悲喜交加的小波澜…我太爱了，太爱这部剧了～</p><p>…</p><p>太久未曾在此更新我的感悟了，这与我变懒了不无关系。但是我从来没有像在上学期之前的一段时间里那么自在欢快了，之前的我为了毕业之后加紧自己的步伐，逼着自己做该做的工作与事情，其实仔细想想收获了许多，但是未曾像现在那么快乐、自在。我承认，刚刚过去的那个学期我变得有些松懈了，没有之前对于自己那么的严格要求了，我是有点松懈过度了，我确实也浪费了不少的时间。学时醒悟过来方恨时少啊，但是确实是我自找的。</p><p>我的规划在我的松懈之下变得不堪一击，零零散散的，现在我自己都有一些惊慌失措。我急须改变了。</p><p>…</p><p>现在的我会学着更多的去看待现有的一切了，我开始慢慢的更多的去阅读这个社会，阅读身边的生活及其中的人与事。我好久没有过感悟了，我变得安逸了，变得拖延了，变得好像没有梦想了…但是，我确实也对于一些事情较之从前看得开了，这些看得开的所有无意中好像变成我安逸度日的理由了。我明显的感觉到我一只脚陷入了生活的泥潭。</p><p>看街上小店小摊，路过的人山人海，生活真的像是一部人间剧，只不过少了一些精准紧致的配乐显得那么动人心弦，生活像是一部无声的人间剧。每个人自己的人生都是不一样的剧本。无论所谓的平凡与所谓的不平凡、所谓的伟大都好似显得微不足道，无声无息，生生不息，这就是生活的真谛。润物细无声，就是所有的平凡，也是所有的不平凡。</p><p>人生多数的“艰”与“难”在于那“良心”。它是一个人安生偷生的最好依据，无论生活有多难有多么不合意。亦正所谓人间正道是沧桑呐，也不无道理。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这些天我自从回来了这边之后，趁着一些闲工夫看了一些自认为比较优秀的电视剧，其中感触极大的是《父母爱情》。这部剧真的是一部高质量的、优秀的电视剧，在看的过程中太过于饥渴难耐，满怀兴奋的熬夜看完了，看完之后更是犹意未尽，总是一味的再而再三的重复回味那些喜欢的片段，如今在写下的此时此刻也是不时的浮现那些片段，真的太喜欢这部剧了。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="日记" scheme="https://liujunjie11.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
-    
-      <category term="感悟" scheme="https://liujunjie11.github.io/categories/%E6%84%9F%E6%82%9F/"/>
-    
-    
-      <category term="日记" scheme="https://liujunjie11.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-      <category term="父母爱情" scheme="https://liujunjie11.github.io/tags/%E7%88%B6%E6%AF%8D%E7%88%B1%E6%83%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>所谓中国的精英？</title>
-    <link href="https://liujunjie11.github.io/2018/11/28/%E6%89%80%E8%B0%93%E4%B8%AD%E5%9B%BD%E7%9A%84%E7%B2%BE%E8%8B%B1%EF%BC%9F/"/>
-    <id>https://liujunjie11.github.io/2018/11/28/所谓中国的精英？/</id>
-    <published>2018-11-28T07:56:58.000Z</published>
-    <updated>2019-01-02T06:47:25.156Z</updated>
-    
-    <content type="html"><![CDATA[<p>我今日在一个技术群里看到了一些所谓“高学历”层次的人讨论各种社会问题并且津津乐道着。在这里我看到了一部分人的各种“娱乐精神”，活像是一个娱乐至死的时代的缩影，还有对于那些盲目迷信的一群人，在他们身上我看不到一个人的存在，像是一群只会迎合的瘪嘴小丑。</p><a id="more"></a><p>这是所谓的支撑着中国未来脊梁的精英们吗？我有些想讽刺性的嘲笑和想有意的去嘲弄一番，但是我忍住了，我和他们有不一样的想法，所以我控制住了自己，这样的人我见的太多了，我没有勇气去跟那些人去讨论一下自己内心的想法，因为我始终相信着明者自明，不明白的人或者是曾经明白过的而现在早已改变了自己的人是不会理解我想要说的意思的。人总是这样的，包括我自己有时也是这样的，大多数时候对于大多数人们来说这是难以察觉的，有的人可能一辈子也不会察觉到。其实到现在想了想，好像也没有什么好说的，人们因为经历的不同都会有自己的想法，但是，对于那些没有自我灵魂的人，我却是有些想要多此一举的。这是所谓的中国式精英吗？</p><p>如今的大多数人们会有一种拥有更高学历的人就是人上人的感觉，这就是一些无法看清问题本质的典型人群。这样的盲目迷信的人群在这个地方应有尽有。这是所谓的中国式精英吗？他们把社会上的恶习当做自己成长的经验，把社会上的各种悲剧当做津津乐道的剧本，进而的再把这些东西当做人生的真理去传授给予涉世未深的学弟学妹们，要求他们吸收并且像自己一样去乐意接受。最后走到了人生的一个段点，他们以为自己获得了升华，并且成为了真正的成熟的”大人“了。我感觉可笑的同时也感觉到可悲。为钱而读书，为钱舍命去奔波，为钱出卖自己的灵魂，这些对于如今的我是有些接受不了的。</p><p>人浮于事(世)。社会真的是最好的大学吗？还是一个吞没人性，违背人理道德的垃圾池？这是一个浮躁的大时代。而我现在在的地方还有那一群人被称为“中国精英”！我为自己和这个国家而不甘心，我没有能力去改变这个浮躁的现实，而这个国家却是在这一群所谓的精英手里，他们享受着这个国家最好的待遇与资源，但是本身却是一样的糜烂。</p><p>于我而言，中国所谓的“精英”不应该是这样的。至少的，他们应该有着自己的灵魂。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;我今日在一个技术群里看到了一些所谓“高学历”层次的人讨论各种社会问题并且津津乐道着。在这里我看到了一部分人的各种“娱乐精神”，活像是一个娱乐至死的时代的缩影，还有对于那些盲目迷信的一群人，在他们身上我看不到一个人的存在，像是一群只会迎合的瘪嘴小丑。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="日记" scheme="https://liujunjie11.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
-    
-    
-      <category term="日记" scheme="https://liujunjie11.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   

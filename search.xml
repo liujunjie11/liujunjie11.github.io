@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>常用mysql命令行记录</title>
+      <link href="/2019/03/23/%E5%B8%B8%E7%94%A8mysql%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%AE%B0%E5%BD%95/"/>
+      <url>/2019/03/23/%E5%B8%B8%E7%94%A8mysql%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%AE%B0%E5%BD%95/</url>
+      
+        <content type="html"><![CDATA[<p>此文用于记录个人常用的或者是感到疑惑的<em>mysql</em>命令行记录，因为平时用到的<em>mysql</em>实在是少，所以在此做个简要记录以观后效之用。</p><a id="more"></a><p>#查看MYSQL默认端口号</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SHOW GLOBAL VARIABLES LIKE &apos;port&apos;;</div></pre></td></tr></table></figure><p>#查询当前所在的数据库</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SELECT DATABASE();</div></pre></td></tr></table></figure><p>#查看数据库中的所有用户</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SELECT DISTINCT CONCAT(&apos;User: &apos;&apos;&apos;, user, &apos;&apos;&apos;@&apos;&apos;&apos;,host,&apos;&apos;&apos;:&apos;) AS quert FROM mysql.user;</div></pre></td></tr></table></figure><p>#查看用户的表结构</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#DESC user_name.user</div><div class="line">DESC mysql.user;</div></pre></td></tr></table></figure><p>#查看某个用户的权限</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#第一种，user=&apos;user_name&apos;</div><div class="line">SELECT * FROM mysql.user WHERE user=&apos;Django_votingsystem&apos;;</div><div class="line"></div><div class="line">#第二种，不怎么好用。&apos;user_name&apos;@&apos;IP&apos;。</div><div class="line">SHOW GRANTS FOR &apos;Django_votingsystem&apos;@&apos;localhost&apos;;</div></pre></td></tr></table></figure><h1 id="mysql安装、验证等最初命令行"><a href="#mysql安装、验证等最初命令行" class="headerlink" title="mysql安装、验证等最初命令行"></a>mysql安装、验证等最初命令行</h1><blockquote><p>可参考：<a href="https://m.w3cschool.cn/mysql/mysql-install.html" target="_blank" rel="external">https://m.w3cschool.cn/mysql/mysql-install.html</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> mysql </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mysql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>复习：数据库</title>
+      <link href="/2019/03/23/%E5%A4%8D%E4%B9%A0%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+      <url>/2019/03/23/%E5%A4%8D%E4%B9%A0%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
+      
+        <content type="html"><![CDATA[<p>这是开始为秋招做准备的简单复习，因为之前没怎么好好学习<em>数据库</em>，所以现在学习一番，并且在此做个记录以观后效之用。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+          <category> 数据库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 笔记 </tag>
+            
+            <tag> 数据库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python问题笔记记录</title>
       <link href="/2019/03/22/Python%E9%97%AE%E9%A2%98%E7%AC%94%E8%AE%B0%E8%AE%B0%E5%BD%95/"/>
       <url>/2019/03/22/Python%E9%97%AE%E9%A2%98%E7%AC%94%E8%AE%B0%E8%AE%B0%E5%BD%95/</url>
@@ -44,12 +98,16 @@
           
           <category> 笔记 </category>
           
+          <category> 编译器原理 </category>
+          
       </categories>
       
       
         <tags>
             
             <tag> 笔记 </tag>
+            
+            <tag> 编译器原理 </tag>
             
         </tags>
       
@@ -69,12 +127,16 @@
           
           <category> 笔记 </category>
           
+          <category> 计算机网络 </category>
+          
       </categories>
       
       
         <tags>
             
             <tag> 笔记 </tag>
+            
+            <tag> 计算机网络 </tag>
             
         </tags>
       
@@ -119,12 +181,16 @@
           
           <category> 笔记 </category>
           
+          <category> 数据结构 </category>
+          
       </categories>
       
       
         <tags>
             
             <tag> 笔记 </tag>
+            
+            <tag> 数据结构 </tag>
             
         </tags>
       
@@ -201,9 +267,9 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> After Effects CC 2017/2018 </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -230,9 +296,9 @@
       
         <tags>
             
-            <tag> Adobe Premiere(Pro)2018 </tag>
-            
             <tag> 笔记 </tag>
+            
+            <tag> Adobe Premiere(Pro)2018 </tag>
             
         </tags>
       
@@ -704,9 +770,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> Hexo </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -801,9 +867,9 @@
           
           <category> Kaggle </category>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
       </categories>
       
@@ -832,9 +898,9 @@
       
       <categories>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
       </categories>
       
@@ -861,9 +927,9 @@
       
       <categories>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
       </categories>
       
@@ -921,9 +987,9 @@
       
       <categories>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
       </categories>
       
@@ -950,9 +1016,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Eclipse </category>
           
@@ -985,9 +1051,9 @@
       
       <categories>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
       </categories>
       
@@ -1014,9 +1080,9 @@
       
       <categories>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
       </categories>
       
@@ -1043,9 +1109,9 @@
       
       <categories>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
           <category> 数据分析 </category>
           
@@ -1200,9 +1266,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> Hexo </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -1229,9 +1295,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> Hexo </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -1267,9 +1333,9 @@
       
         <tags>
             
-            <tag> Mac </tag>
-            
             <tag> 问题记录笔记 </tag>
+            
+            <tag> Mac </tag>
             
         </tags>
       
@@ -1466,9 +1532,9 @@
       
         <tags>
             
-            <tag> Mac </tag>
-            
             <tag> 问题记录笔记 </tag>
+            
+            <tag> Mac </tag>
             
             <tag> Homebrew </tag>
             
@@ -1488,9 +1554,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Mac </category>
           
@@ -1499,9 +1565,9 @@
       
         <tags>
             
-            <tag> Mac </tag>
-            
             <tag> 问题记录笔记 </tag>
+            
+            <tag> Mac </tag>
             
             <tag> duet display </tag>
             
@@ -1523,9 +1589,9 @@
           
           <category> 笔记 </category>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
       </categories>
       
@@ -1637,9 +1703,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> Hexo </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -1840,9 +1906,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -1869,9 +1935,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -1900,9 +1966,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -1929,9 +1995,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -2279,9 +2345,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -2341,9 +2407,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Eclispe </category>
           
@@ -2461,9 +2527,9 @@
       
       <categories>
           
-          <category> Mac </category>
-          
           <category> MySQL </category>
+          
+          <category> Mac </category>
           
           <category> 数据库 </category>
           
@@ -2672,9 +2738,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Anaconda </category>
           
@@ -2975,9 +3041,9 @@
       
         <tags>
             
-            <tag> Mac </tag>
-            
             <tag> 问题记录笔记 </tag>
+            
+            <tag> Mac </tag>
             
         </tags>
       
@@ -3082,9 +3148,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -3286,9 +3352,9 @@
       
         <tags>
             
-            <tag> Mac </tag>
-            
             <tag> 问题记录笔记 </tag>
+            
+            <tag> Mac </tag>
             
             <tag> iCloud </tag>
             
@@ -3317,9 +3383,9 @@
       
         <tags>
             
-            <tag> Mac </tag>
-            
             <tag> 问题记录笔记 </tag>
+            
+            <tag> Mac </tag>
             
         </tags>
       
@@ -3681,9 +3747,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Mac </category>
           
@@ -3723,9 +3789,9 @@
       
         <tags>
             
-            <tag> Mac </tag>
-            
             <tag> 问题记录笔记 </tag>
+            
+            <tag> Mac </tag>
             
         </tags>
       
@@ -3776,9 +3842,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Python </category>
           
@@ -3971,9 +4037,9 @@
       
         <tags>
             
-            <tag> Mac </tag>
-            
             <tag> 问题记录笔记 </tag>
+            
+            <tag> Mac </tag>
             
             <tag> iPad </tag>
             
@@ -4033,9 +4099,9 @@
       
         <tags>
             
-            <tag> Mac </tag>
-            
             <tag> 问题记录笔记 </tag>
+            
+            <tag> Mac </tag>
             
         </tags>
       
@@ -4053,9 +4119,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -4091,9 +4157,9 @@
       
         <tags>
             
-            <tag> Mac </tag>
-            
             <tag> 问题记录笔记 </tag>
+            
+            <tag> Mac </tag>
             
         </tags>
       
@@ -4120,9 +4186,9 @@
       
         <tags>
             
-            <tag> Mac </tag>
-            
             <tag> 问题记录笔记 </tag>
+            
+            <tag> Mac </tag>
             
         </tags>
       
@@ -4223,9 +4289,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Mac </category>
           
@@ -4254,9 +4320,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Mac </category>
           
@@ -4267,9 +4333,9 @@
       
         <tags>
             
-            <tag> Mac </tag>
-            
             <tag> 问题记录笔记 </tag>
+            
+            <tag> Mac </tag>
             
             <tag> Hadoop </tag>
             
@@ -4291,9 +4357,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Mac </category>
           
@@ -4302,9 +4368,9 @@
       
         <tags>
             
-            <tag> Mac </tag>
-            
             <tag> 问题记录笔记 </tag>
+            
+            <tag> Mac </tag>
             
             <tag> Mackeeper </tag>
             
@@ -4324,9 +4390,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -4407,9 +4473,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Mac </category>
           
@@ -4850,9 +4916,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Hadoop </category>
           
@@ -4914,9 +4980,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> Hexo </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -4999,9 +5065,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> Hexo </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -5028,9 +5094,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -5061,18 +5127,18 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Mac </tag>
-            
             <tag> 问题记录笔记 </tag>
+            
+            <tag> Mac </tag>
             
             <tag> Matlab </tag>
             
@@ -5117,9 +5183,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> Hexo </category>
+          
+          <category> 笔记 </category>
           
           <category> Mac </category>
           
