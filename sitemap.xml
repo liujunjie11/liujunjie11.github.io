@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://liujunjie11.github.io/2018/04/08/python3%E7%88%AC%E8%99%AB%EF%BC%9A%E7%88%AC%E5%8F%96%E6%B7%98%E5%AE%9D%E5%95%86%E5%93%81%E4%BF%A1%E6%81%AF%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95/</loc>
+    
+    <lastmod>2019-03-28T07:46:26.555Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://liujunjie11.github.io/2017/09/26/%EF%BC%88Mac%E4%B8%8B%EF%BC%89%E7%94%A8Hexo3-X-next5-1-2%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%AE%89%E8%A3%85%EF%BC%8C%E6%AD%A3%E7%A1%AE%E9%85%8D%E7%BD%AE%EF%BC%8C%E9%83%A8%E7%BD%B2%E8%B0%B7%E6%AD%8C%EF%BC%8C%E7%BB%93%E5%90%88%E7%94%A8%E4%B8%83%E7%89%9B%E4%BA%91%E5%86%99%E4%BD%9C/</loc>
     
     <lastmod>2019-03-28T06:46:23.906Z</lastmod>
@@ -530,13 +537,6 @@
     <loc>https://liujunjie11.github.io/2018/04/05/%E5%85%B3%E4%BA%8E%E8%AE%B0%E5%BD%95Chromedriver%E7%9A%84selenium-common-exceptions-WebDriverException-Message-chromedriver-executable-needs-to-be-in-PATH-Please-see-https-sites-google-com-a-chromium-org-chromedriver-home/</loc>
     
     <lastmod>2019-01-02T06:56:26.925Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujunjie11.github.io/2018/04/08/python3%E7%88%AC%E8%99%AB%EF%BC%9A%E7%88%AC%E5%8F%96%E6%B7%98%E5%AE%9D%E5%95%86%E5%93%81%E4%BF%A1%E6%81%AF%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95/</loc>
-    
-    <lastmod>2019-01-02T06:56:18.183Z</lastmod>
     
   </url>
   
