@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="LXiHa`Notes">
 <meta property="og:description" content="此文用于记录个人常用的或者是感到疑惑的mysql命令行记录，因为平时用到的mysql实在是少，所以在此做个简要记录以观后效之用。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-25T12:38:48.466Z">
+<meta property="og:updated_time" content="2019-03-28T05:46:37.917Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常用mysql命令行记录">
 <meta name="twitter:description" content="此文用于记录个人常用的或者是感到疑惑的mysql命令行记录，因为平时用到的mysql实在是少，所以在此做个简要记录以观后效之用。">
@@ -127,6 +127,8 @@
 
 
   <link rel="canonical" href="https://liujunjie11.github.io/2019/03/23/常用mysql命令行记录/"/>
+
+
 
 
 
@@ -404,7 +406,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  688
+                  656
                 </span>
               
 
@@ -443,16 +445,16 @@
       
         <p>此文用于记录个人常用的或者是感到疑惑的<em>mysql</em>命令行记录，因为平时用到的<em>mysql</em>实在是少，所以在此做个简要记录以观后效之用。</p>
 <a id="more"></a>
-<h1 id="查看MYSQL默认端口号"><a href="#查看MYSQL默认端口号" class="headerlink" title="查看MYSQL默认端口号"></a>查看MYSQL默认端口号</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SHOW GLOBAL VARIABLES LIKE &apos;port&apos;;</div></pre></td></tr></table></figure>
-<h1 id="查询当前所在的数据库"><a href="#查询当前所在的数据库" class="headerlink" title="查询当前所在的数据库"></a>查询当前所在的数据库</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SELECT DATABASE();</div></pre></td></tr></table></figure>
+<h1 id="查看MYSQL默认端口号"><a href="#查看MYSQL默认端口号" class="headerlink" title="查看MYSQL默认端口号"></a>查看MYSQL默认端口号</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SHOW GLOBAL VARIABLES LIKE <span class="string">'port'</span>;</div></pre></td></tr></table></figure>
+<h1 id="查询当前所在的数据库"><a href="#查询当前所在的数据库" class="headerlink" title="查询当前所在的数据库"></a>查询当前所在的数据库</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SELECT DATABASE();</div></pre></td></tr></table></figure>
 <h1 id="查看数据库中的所有用户"><a href="#查看数据库中的所有用户" class="headerlink" title="查看数据库中的所有用户"></a>查看数据库中的所有用户</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SELECT DISTINCT CONCAT(&apos;User: &apos;&apos;&apos;, user, &apos;&apos;&apos;@&apos;&apos;&apos;,host,&apos;&apos;&apos;:&apos;) AS quert FROM mysql.user;</div></pre></td></tr></table></figure>
-<h1 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">#user_name：要创建用户的名字。</div><div class="line">#host：表示要这个新创建的用户允许从哪台机登陆，如果只允许从本机登陆，则 填　‘localhost’ ，如果允许从远程登陆，则填 ‘%’。</div><div class="line">#password：新创建用户的登陆数据库密码，如果没密码可以不写。</div><div class="line"></div><div class="line">CREATE USER &apos;user_name&apos;@&apos;host&apos; IDENTIFIED BY &apos;password&apos;;</div><div class="line"></div><div class="line">#无密码</div><div class="line">CREATE USER &apos;user_name&apos;@&apos;host&apos;;</div></pre></td></tr></table></figure>
-<h1 id="设置与更改用户密码"><a href="#设置与更改用户密码" class="headerlink" title="设置与更改用户密码"></a>设置与更改用户密码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#规范语法</div><div class="line">SET  PASSWORD  FOR  ‘username’@‘host’ = PASSWORD(‘newpassword’)； </div><div class="line"></div><div class="line">#设置当前用户的密码：SET  PASSWORD = PASSWORD(&apos;newpassword&apos;)；</div><div class="line"></div><div class="line">SET  PASSWORD = PASSWORD(‘123456’)；//实例句</div></pre></td></tr></table></figure>
-<h1 id="撤销用户权限"><a href="#撤销用户权限" class="headerlink" title="撤销用户权限"></a>撤销用户权限</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">REVOKE   privileges   ON  database.tablename  FROM  ‘username’@‘host’；</div><div class="line"></div><div class="line">#若是有先前的语句命令在前的前提下，下方语句才成立。</div><div class="line">GRANT  SELECT ON  *.*  FROM  ‘test’@‘localhost’；</div><div class="line">REVOKE  SELECT ON  *.*  FROM  ‘test’@‘localhost’；</div><div class="line">#两者前后的命令必须一致。</div></pre></td></tr></table></figure>
-<h1 id="授权用户"><a href="#授权用户" class="headerlink" title="授权用户"></a>授权用户</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">#privileges：表示要授予什么权力，例如可以有 select ， insert ，delete，update等，如果要授予全部权力，则填 ALL</div><div class="line">#databasename.tablename：表示用户的权限能用在哪个库的哪个表中，如果想要用户的权限很作用于所有的数据库所有的表，则填 *.*，*是一个通配符，表示全部。</div><div class="line">#’username‘@‘host’：表示授权给哪个用户。</div><div class="line"></div><div class="line">GRANT privileges ON  databasename.tablename  TO  ‘username’@‘host’；</div><div class="line"></div><div class="line">GRANT  select，insert  ON  zje.zje  TO ‘aaa’@‘%’；//表示给用户aaa授权，让aaa能给zje库中的zje表 实行 insert 和 select。</div><div class="line"></div><div class="line">GRANT  ALL  ON  *.*  TO  ‘aaa’@‘%’；//表示给用户aaa授权，让aaa能给所有库所有表实行所有的权力。</div><div class="line"></div><div class="line">#用以上命令授权的用户不能给其他用户授权，如果想这个用户能够给其他用户授权，就要在后面加上“WITH GRANT OPTION”。</div><div class="line">GRANT  ALL  ON   *.*   TO  ’aaa‘@&apos;%&apos;  WITH GRANT OPTION；</div></pre></td></tr></table></figure>
-<h1 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#DROP  USER ‘user_name’@‘host’ </div><div class="line">DROP USER &apos;test&apos;@&apos;localhost&apos;;</div></pre></td></tr></table></figure>
-<h1 id="查看用户的表结构"><a href="#查看用户的表结构" class="headerlink" title="查看用户的表结构"></a>查看用户的表结构</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#DESC user_name.user</div><div class="line">DESC mysql.user;</div></pre></td></tr></table></figure>
-<h1 id="查看某个用户的权限"><a href="#查看某个用户的权限" class="headerlink" title="查看某个用户的权限"></a>查看某个用户的权限</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#第一种，user=&apos;user_name&apos;</div><div class="line">SELECT * FROM mysql.user WHERE user=&apos;Django_votingsystem&apos;;</div><div class="line"></div><div class="line">#第二种，不怎么好用。&apos;user_name&apos;@&apos;host&apos;。</div><div class="line">SHOW GRANTS FOR &apos;Django_votingsystem&apos;@&apos;localhost&apos;;</div></pre></td></tr></table></figure>
+<h1 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#user_name：要创建用户的名字。</span></div><div class="line"><span class="comment">#host：表示要这个新创建的用户允许从哪台机登陆，如果只允许从本机登陆，则 填　‘localhost’ ，如果允许从远程登陆，则填 ‘%’。</span></div><div class="line"><span class="comment">#password：新创建用户的登陆数据库密码，如果没密码可以不写。</span></div><div class="line"></div><div class="line">CREATE USER <span class="string">'user_name'</span>@<span class="string">'host'</span> IDENTIFIED BY <span class="string">'password'</span>;</div><div class="line"></div><div class="line"><span class="comment">#无密码</span></div><div class="line">CREATE USER <span class="string">'user_name'</span>@<span class="string">'host'</span>;</div></pre></td></tr></table></figure>
+<h1 id="设置与更改用户密码"><a href="#设置与更改用户密码" class="headerlink" title="设置与更改用户密码"></a>设置与更改用户密码</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#规范语法</span></div><div class="line">SET  PASSWORD  FOR  ‘username’@‘host’ = PASSWORD(‘newpassword’)； </div><div class="line"></div><div class="line"><span class="comment">#设置当前用户的密码：SET  PASSWORD = PASSWORD('newpassword')；</span></div><div class="line"></div><div class="line">SET  PASSWORD = PASSWORD(‘<span class="number">123456</span>’)；//实例句</div></pre></td></tr></table></figure>
+<h1 id="撤销用户权限"><a href="#撤销用户权限" class="headerlink" title="撤销用户权限"></a>撤销用户权限</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">REVOKE   privileges   ON  database.tablename  FROM  ‘username’@‘host’；</div><div class="line"></div><div class="line"><span class="comment">#若是有先前的语句命令在前的前提下，下方语句才成立。</span></div><div class="line">GRANT  SELECT ON  *.*  FROM  ‘test’@‘localhost’；</div><div class="line">REVOKE  SELECT ON  *.*  FROM  ‘test’@‘localhost’；</div><div class="line"><span class="comment">#两者前后的命令必须一致。</span></div></pre></td></tr></table></figure>
+<h1 id="授权用户"><a href="#授权用户" class="headerlink" title="授权用户"></a>授权用户</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#privileges：表示要授予什么权力，例如可以有 select ， insert ，delete，update等，如果要授予全部权力，则填 ALL</span></div><div class="line"><span class="comment">#databasename.tablename：表示用户的权限能用在哪个库的哪个表中，如果想要用户的权限很作用于所有的数据库所有的表，则填 *.*，*是一个通配符，表示全部。</span></div><div class="line"><span class="comment">#’username‘@‘host’：表示授权给哪个用户。</span></div><div class="line"></div><div class="line">GRANT privileges ON  databasename.tablename  TO  ‘username’@‘host’；</div><div class="line"></div><div class="line">GRANT  select，insert  ON  zje.zje  TO ‘aaa’@‘%’；//表示给用户aaa授权，让aaa能给zje库中的zje表 实行 insert 和 select。</div><div class="line"></div><div class="line">GRANT  ALL  ON  *.*  TO  ‘aaa’@‘%’；//表示给用户aaa授权，让aaa能给所有库所有表实行所有的权力。</div><div class="line"></div><div class="line"><span class="comment">#用以上命令授权的用户不能给其他用户授权，如果想这个用户能够给其他用户授权，就要在后面加上“WITH GRANT OPTION”。</span></div><div class="line">GRANT  ALL  ON   *.*   TO  ’aaa‘@<span class="string">'%'</span>  WITH GRANT OPTION；</div></pre></td></tr></table></figure>
+<h1 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#DROP  USER ‘user_name’@‘host’ </span></div><div class="line">DROP USER <span class="string">'test'</span>@<span class="string">'localhost'</span>;</div></pre></td></tr></table></figure>
+<h1 id="查看用户的表结构"><a href="#查看用户的表结构" class="headerlink" title="查看用户的表结构"></a>查看用户的表结构</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#DESC user_name.user</span></div><div class="line">DESC mysql.user;</div></pre></td></tr></table></figure>
+<h1 id="查看某个用户的权限"><a href="#查看某个用户的权限" class="headerlink" title="查看某个用户的权限"></a>查看某个用户的权限</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#第一种，user='user_name'</span></div><div class="line">SELECT * FROM mysql.user WHERE user=<span class="string">'Django_votingsystem'</span>;</div><div class="line"></div><div class="line"><span class="comment">#第二种，不怎么好用。'user_name'@'host'。</span></div><div class="line">SHOW GRANTS FOR <span class="string">'Django_votingsystem'</span>@<span class="string">'localhost'</span>;</div></pre></td></tr></table></figure>
 <h1 id="mysql安装、验证等最初命令行"><a href="#mysql安装、验证等最初命令行" class="headerlink" title="mysql安装、验证等最初命令行"></a>mysql安装、验证等最初命令行</h1><blockquote>
 <p>可参考：<a href="https://m.w3cschool.cn/mysql/mysql-install.html" target="_blank" rel="external">https://m.w3cschool.cn/mysql/mysql-install.html</a></p>
 </blockquote>
@@ -499,7 +501,7 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2019年03月25日 - 20:03</p>
+  <p><span>最后更新:</span>2019年03月28日 - 13:03</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -717,9 +719,15 @@ var jiathis_config={
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com/hahaahaha111" target="_blank" title="GitHub">
+                <a href="https://github.com/liujunjie11" target="_blank" title="GitHub">
                   
                     <i class="fa fa-fw fa-github"></i>GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:liujun123h@gmail.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
               </span>
             
               <span class="links-of-author-item">
@@ -729,13 +737,13 @@ var jiathis_config={
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://twitter.com" target="_blank" title="Twitter">
+                <a href="https://twitter.com/et57syI9xLStZ7g" target="_blank" title="Twitter">
                   
                     <i class="fa fa-fw fa-twitter"></i>Twitter</a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://www.facebook.com" target="_blank" title="FB Page">
+                <a href="https://www.facebook.com/profile.php?id=100022773330259" target="_blank" title="FB Page">
                   
                     <i class="fa fa-fw fa-facebook"></i>FB Page</a>
               </span>
@@ -743,7 +751,7 @@ var jiathis_config={
               <span class="links-of-author-item">
                 <a href="https://www.youtube.com/channel/UCoVmcNF2O1qGXo6OSHfXEHQ?view_as=subscriber" target="_blank" title="YouTube">
                   
-                    <i class="fa fa-fw fa-globe"></i>YouTube</a>
+                    <i class="fa fa-fw fa-youtube"></i>YouTube</a>
               </span>
             
               <span class="links-of-author-item">
@@ -773,6 +781,10 @@ var jiathis_config={
               
                 <li class="links-of-blogroll-item">
                   <a href="https://www.globalgiving.org" title="GlobalGiving" target="_blank">GlobalGiving</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://996.icu/#/zh_CN" title="996.ICU" target="_blank">996.ICU</a>
                 </li>
               
             </ul>
@@ -832,7 +844,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      236.9k
+      237k
     </span>
   
 </div>
@@ -847,19 +859,20 @@ var jiathis_config={
 -->
 
 <div class="translate-style">
-繁/简：<a id="translateLink" href="javascript:translatePage();">繁体
+ⒻWebsite font switch繁/简：<a id="translateLink" href="javascript:translatePage();">繁體
 </a>
 </div>
-<script type="text/javascript" src="http://liujunjie11.github.io/themes/next/source/js/src/tw_cn.js"></script>
+<script type="text/javascript" src="http://liujunjie11.github.io/js/src/tw_cn.js"></script>
 <script type="text/javascript">
 var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体
 var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0
 var cookieDomain = "http://liujunjie11.github.io/"; //Cookie地址, 一定要设定, 通常为你的网址
-var msgToTraditionalChinese = "繁体"; //此处可以更改为你想要显示的文字
+var msgToTraditionalChinese = "繁體"; //此处可以更改为你想要显示的文字
 var msgToSimplifiedChinese = "简体"; //同上，但两处均不建议更改
 var translateButtonId = "translateLink"; //默认互换id
 translateInitilization();
 </script>
+</div>
 
         
 <div class="busuanzi-count">
