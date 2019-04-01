@@ -1872,7 +1872,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f714b8;
+  background: #63d708;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3019,11 +3019,4 @@ code {
 }
 .highlight:hover .btn-copy {
   opacity: 1;
-}
-.post {
-  margin-top: 60px;
-  margin-bottom: 60px;
-  padding: 50px;
-  -webkit-box-shadow: 0 0 5px rgba(220,220,220,0.5);
-  -moz-box-shadow: 0 0 5px rgba(220,220,220,0.5);
 }
