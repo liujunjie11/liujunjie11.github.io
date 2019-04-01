@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="LXiHa`Notes">
 <meta property="og:description" content="最近因为需求想自己搭建一个VPS加SS应用。用的是Vultr这个平台。 唉…这东西的教程已经是满大街都是了，我就不重复造轮子了，现在的轮子还没有失效。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-01T08:58:40.215Z">
+<meta property="og:updated_time" content="2019-04-01T09:06:20.668Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="科学上网，自建VPS-SS应用">
 <meta name="twitter:description" content="最近因为需求想自己搭建一个VPS加SS应用。用的是Vultr这个平台。 唉…这东西的教程已经是满大街都是了，我就不重复造轮子了，现在的轮子还没有失效。">
@@ -362,7 +362,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-01T16:58:40+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-01T17:06:20+08:00">
                 2019-04-01
               </time>
             
@@ -436,7 +436,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.9k
+                  2k
                 </span>
               
 
@@ -555,21 +555,22 @@
 <h2 id="关于多种加速的软件选择"><a href="#关于多种加速的软件选择" class="headerlink" title="关于多种加速的软件选择"></a>关于多种加速的软件选择</h2><ul>
 <li>可参考：<a href="https://www.itren.org/106.html" target="_blank" rel="external">BBR原版/BBR魔改/BBRPLUS/锐速</a></li>
 </ul>
-<p>另外，我认为需要说明的（以下文字来源于：<a href="https://groups.google.com/forum/#!msg/ustc_lug/Ka-vrTWcSOg/TK0TuV8d5GgJ）：" target="_blank" rel="external">https://groups.google.com/forum/#!msg/ustc_lug/Ka-vrTWcSOg/TK0TuV8d5GgJ）：</a></p>
+<p>另外，我认为有必要需要说明的：</p>
 <blockquote>
-<p>**不要使用锐速此类软件，它会破坏与你共享网络链路者的公平性。TCP 是有拥塞控制的，也就是它感受到网络拥塞的时候就会减慢发送速率。在 Internet 上感受到拥塞的方法有两种，一是丢包（假定丢包都是拥塞导致的），二是往返延迟（RTT）增大。如果把拥塞控制去掉（例如像某些下载软件一样采用 UDP + 丢包重传），自然能挤掉链路上其他的 TCP 流，表现出很快的下载速度。</p>
-</blockquote>
+<p><strong>以下文字来源于：<a href="https://groups.google.com/forum/#!msg/ustc_lug/Ka-vrTWcSOg/TK0TuV8d5GgJ" target="_blank" rel="external">https://groups.google.com/forum/#!msg/ustc_lug/Ka-vrTWcSOg/TK0TuV8d5GgJ</a></strong></p>
+<p>不要使用锐速此类软件，它会破坏与你共享网络链路者的公平性。TCP 是有拥塞控制的，也就是它感受到网络拥塞的时候就会减慢发送速率。在 Internet 上感受到拥塞的方法有两种，一是丢包（假定丢包都是拥塞导致的），二是往返延迟（RTT）增大。如果把拥塞控制去掉（例如像某些下载软件一样采用 UDP + 丢包重传），自然能挤掉链路上其他的 TCP 流，表现出很快的下载速度。</p>
 <p>锐速宣称是基于 Zeta TCP，它是有拥塞控制的，不过会把其他常见的 TCP 实现（如经典的 TCP Reno，Windows Vista+ 的 CTCP，Linux/BSD 的 Cubic TCP）挤掉，也就是不公平。由于 Internet 不可能在一夜间更换 TCP 实现，任何会导致不公平的 TCP 拥塞控制算法都不能大规模使用。</p>
 <p>至于 Wikipedia Zeta TCP 词条宣称的 “不论对方是 Zeta TCP 还是其他 TCP 都能加速”，事实上是任何有实用价值的 TCP 改进算法的必要条件（总不能要求客户端和服务器同时升级系统吧）。词条中的 Congestion Avoidance 提出把基于丢包的和基于往返延迟的拥塞控制相结合，这也不是什么新思路，事实上 Windows Vista 至今的 Compound TCP 就是这样做的，这里的关键是“结合”的细节。词条中还提到 Loss Detection，也就是早些发现丢包的可能并予以重传，算法细节没有公布，但似乎比较拙劣，事实上 RFC 5827 已经定义了新的丢包检测与重传算法，并由 Google 实现在了 Linux 3.5 中。</p>
 <p>设计快速的 TCP 拥塞控制算法不难，难点是要与常见的 TCP 实现保证公平。感兴趣的可以看我老板的回忆文章：<br><a href="http://blog.sina.com.cn/s/blog_4caedc7a0100gd8f.html" target="_blank" rel="external">http://blog.sina.com.cn/s/blog_4caedc7a0100gd8f.html</a></p>
-<p>像 Zeta TCP 这样的适用于小规模的部署，所有机器都要部署 Zeta TCP。如果你只是想尽快下载，不在乎别人抱怨，那就用 UDP + 应用层丢包重传吧。<br>**</p>
+<p>像 Zeta TCP 这样的适用于小规模的部署，所有机器都要部署 Zeta TCP。如果你只是想尽快下载，不在乎别人抱怨，那就用 UDP + 应用层丢包重传吧。</p>
+</blockquote>
 <ul>
 <li>另外关于锐速与BBR的原理简单解析可参考：</li>
 </ul>
 <blockquote>
 <p><a href="https://www.zhujiboke.com/2017/08/673.html" target="_blank" rel="external">锐速与BBR的原理简单解析</a></p>
 </blockquote>
-<p>最终我还是选择了原版的<code>BBR</code>加速。第一，是因为它是经过Google多次验证调试才得以公开示众的；第二，关于那些魔改的，和plus之类的还只是属于那些“小打小闹”的层面。以上。</p>
+<p>最终我还是选择了原版的<code>BBR</code>加速。第一，是因为它是经过Google多次验证调试才得以公开示众的，可信度及可靠性高，减少了许多的不确定性，所以较稳定；第二，关于那些魔改的，和plus之类的还只是属于那些“小打小闹”的层面，并且达不到严格验证，而且有些有失共享<code>TCP</code>的公平性，意义上有些损人利已的意味，这点我做不到能够完全接受。以上。</p>
 
       
     </div>
@@ -599,7 +600,7 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2019年04月01日 - 16:04</p>
+  <p><span>最后更新:</span>2019年04月01日 - 17:04</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
