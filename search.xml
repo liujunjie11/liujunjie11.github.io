@@ -87,7 +87,7 @@
       <link href="/2019/03/22/Python%E9%97%AE%E9%A2%98%E7%AC%94%E8%AE%B0%E8%AE%B0%E5%BD%95/"/>
       <url>/2019/03/22/Python%E9%97%AE%E9%A2%98%E7%AC%94%E8%AE%B0%E8%AE%B0%E5%BD%95/</url>
       
-        <content type="html"><![CDATA[<p>此文以记录一些常见的、模糊的<em>Python知识点</em>为主，在此记录以观后效之用。</p><a id="more"></a><h1 id="Python如何运行程序"><a href="#Python如何运行程序" class="headerlink" title="Python如何运行程序"></a>Python如何运行程序</h1><p>大多数程序员仅知道运行Python就是在文本中输入代码，然后将其交与“解释器”去执行运行。但是，透过表面去确切了解一下这个步骤：第一步是编译成所谓的“字节码”，之后再将其转发到所谓的“虚拟机”中。了解这个步骤可以帮助我们宏观上掌握程序的执行。</p><h2 id="字节码编译"><a href="#字节码编译" class="headerlink" title="字节码编译"></a>字节码编译</h2><p>当程序执行时，Python内部（对大多数用户来说是完全隐藏的）会先将源代码（文中的语句）编译成所谓字节码的形式。概括地说，Python通过把每一条源语句分解为单一步骤来将这些源代码翻译成一组字节码指令，这是一个简单的翻译步骤，而且字节码是源代码底层的、与平台无关的表现形式。另外值得一提的是：这些字节码可以提高执行速度，比起文本文件中的原始的源代码语句，它的运行速度要快得多。</p><p>下面来看看其中的奇妙之处：若是Python进程在机器上拥有写入权限，那么它将把程序的字节码保存为一个以<code>.pyc</code>（<code>.pyc</code>即为编译过的<code>.py</code>源代码)为扩展名的文件，程序运行之后，这些文件会在源代码附近的文件处可看到。实际上Python这样保存字节码是作为一种启动速度的优化。下一次运行程序时，若是在上次保存字节码之后没有修改过源代码，Python将会直接加载上次的<code>.pyc</code>文件并跳过编译的这个步骤。相反的，若是源代码有改动，在保存了之后，运行之时字节码也会重新创建，另外，当Python必须重编译时，它会自动检查源文件和字节码文件的时间戳。</p><blockquote><p>值得注意的是：如果Python无法在机器上写入字节码，程序依然是可以工作的：字节码会在内存中生成并在程序结束时简单地丢弃。尽管这样，由于<code>.pyc</code>文件能够加速启动，所以最好保证在大型程序中可以写入。字节码文件同样是分发Python程序的方法之一：如果Python找到的是<code>.pyc</code>文件，它会很乐意去运行这个程序，尽管这里没有原始的<code>.py</code>源代码文件。</p></blockquote><p>另外因为Python字节码不是机器的二进制代码（例如Intel芯片的指令），字节码仅仅相当于Python定义的一种表现形式。另外，字节码相较二进制，后者更为低级，而Python源代码相较于字节码，后者更为低级。</p><h2 id="Python虚拟机（PVM）"><a href="#Python虚拟机（PVM）" class="headerlink" title="Python虚拟机（PVM）"></a>Python虚拟机（PVM）</h2><p>一旦程序编译成字节码或者是从已保存的<code>.pyc</code>文件中载入，之后的字节码会被发送到通常被称为Python虚拟机（Python Virtual Machine,简写为PVM)上来执行。实际上PVM只是Python整体中的一个组件，可理解为是运行脚本的组件，从技术上来说，就是所谓的“Python解释器”的最后一步。简单的Python代码运行可理解为以下的图片中的样子：</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-03-23%20%E4%B8%8A%E5%8D%8810.56.33.png" alt=""></p><blockquote><p>必须要理解的是这些复杂性的运行结构都是有意识地被隐藏起来，字节码的编译时自动完成的，PVM亦只是安装好的Python系统中的一部分，而程序员只是简单的编写、运行即可。关于PVM与Python解释器之间的关系简单的可总结为：<strong>PVM是Python是Python运行时引擎，从技术上讲只是解释器中执行的“最后一步”，而解释器其中还承担着其它的PVM不涉及到的任务，即可理解为PVM的执行功能属于解释器的一个子集。</strong>在此不妨简单的介绍一下Python的解释器：<strong>实际情况来说，Python就是一个名为解释器的软件包，是代码与计算机硬件之间的软件逻辑层，当编写了一段Python代码，Python解释器将读取程序，并按照其中的命令执行，得出结果。</strong>另外可额外说明一下，CPython为当今标准的解释器（这个名字来自它是由可移植的<a href="https://zh.wikipedia.org/wiki/ANSI_C" target="_blank" rel="external"><em>ANSI C/C</em>语言</a>代码编写而成的这个事实）。当然还有其他语言实现的Python解释器，但是由于CPython是这门语言的标准参照实现，所以与其它语言实现的解释器相比，它运行的最快、最完整、最新，而且最健全。</p></blockquote><h2 id="Python的运行速度"><a href="#Python的运行速度" class="headerlink" title="Python的运行速度"></a>Python的运行速度</h2><p>在Python的工作中通常没有<code>build</code>或者是<code>make</code>的步骤：即为代码在写好之后立即运行。加上Python的字节码的特性，PVM循环（而不是CPU芯片）仍然须解释这些字节码，而且字节码指令与CPU指令相比需要做更多的工作，另外与其他的经典的解释器不同，Python中有内部的编译步骤：Python并不需要反复地重分析和重分解每一行语句。另外需要牢记在心的心的是：Python中的运行是发生在实时性之中的，完全不需要先将所有源代码先编译好再丢给解释器去执行（静态语言常常如此)，所有的建立的函数和类的操作以及连接的模块，这些都是在代码运行之时”编译-解释”如此一个步骤进行的。</p><p>这也是为什么Python的运行速度比不上C/C++之类的语言的运行速度的原因（C/C++将源代码编译为二进制机器码，而Python编译为字节码，而前者比后者更为低级，所以运行起来执行速度更快)，Python的运行速度介于传统的编译语言与传统的解释语言之间，并且具有动态的弹性编程体验。</p><blockquote><p>在此简单介绍一下<a href="https://zh.wikipedia.org/wiki/PyPy" target="_blank" rel="external">PyPy</a>：PyPy是原先的<a href="https://zh.wikipedia.org/wiki/Psyco" target="_blank" rel="external">Psyco</a>即时编译器（just-in-time,<a href="https://zh.wikipedia.org/wiki/%E5%8D%B3%E6%99%82%E7%B7%A8%E8%AD%AF" target="_blank" rel="external">JIT</a>）的继任者（即时编译器其实只是PVM的一个扩展，可见上方图的最右边方框所代表的），并将<a href="https://zh.wikipedia.org/wiki/Psyco" target="_blank" rel="external">Psyco</a>纳入一个追求速度的纯Python，也属于CPython标准的另一个实现，更为注重性能。它可将字节码中的部分转换为运行速度更快的二进制机器码（这一切发生在运行时期，而非运行前的编译阶段）。而且即时编译器可通过追踪程序中的对象数据类型，创建针对Python语言动态特性的机器代码，通过这种方式部分地替换字节码，从而达到程序将在运行时越跑越快。此外，一些Python代码在PyPy下运行也会占用更少的内存。值得一提的是：在某些情况下，它利用动态优化的优势可让Python运行得跟C代码一样的快，甚至可以超越。这点对于算法密集和计算密集型的程序尤为明显（CPU密集型）。</p><p>关于什么是CPU密集型、IO密集型可参考：<a href="https://blog.csdn.net/youanyyou/article/details/78990156" target="_blank" rel="external">什么是CPU密集型、IO密集型？</a></p></blockquote><p>另外，由于Python的动态特性以及更为灵活简要等的特性，使得Python相较于C/C++使其达到了属于“高级语言”的行列。</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><blockquote><p>以上知识参考来源：《Python学习手册》Mark Lutz著</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<p>此文以记录一些常见的、模糊的<em>Python知识点</em>为主，在此记录以观后效之用。</p><a id="more"></a><h1 id="Python如何运行程序"><a href="#Python如何运行程序" class="headerlink" title="Python如何运行程序"></a>Python如何运行程序</h1><p>大多数程序员仅知道运行Python就是在文本中输入代码，然后将其交与“解释器”去执行运行。但是，透过表面去确切了解一下这个步骤：第一步是编译成所谓的“字节码”，之后再将其转发到所谓的“虚拟机”中。了解这个步骤可以帮助我们宏观上掌握程序的执行。</p><h2 id="字节码编译"><a href="#字节码编译" class="headerlink" title="字节码编译"></a>字节码编译</h2><p>当程序执行时，Python内部（对大多数用户来说是完全隐藏的）会先将源代码（文中的语句）编译成所谓字节码的形式。概括地说，Python通过把每一条源语句分解为单一步骤来将这些源代码翻译成一组字节码指令，这是一个简单的翻译步骤，而且字节码是源代码底层的、与平台无关的表现形式。另外值得一提的是：这些字节码可以提高执行速度，比起文本文件中的原始的源代码语句，它的运行速度要快得多。</p><p>下面来看看其中的奇妙之处：若是Python进程在机器上拥有写入权限，那么它将把程序的字节码保存为一个以<code>.pyc</code>（<code>.pyc</code>即为编译过的<code>.py</code>源代码)为扩展名的文件，程序运行之后，这些文件会在源代码附近的文件处可看到。实际上Python这样保存字节码是作为一种启动速度的优化。下一次运行程序时，若是在上次保存字节码之后没有修改过源代码，Python将会直接加载上次的<code>.pyc</code>文件并跳过编译的这个步骤。相反的，若是源代码有改动，在保存了之后，运行之时字节码也会重新创建，另外，当Python必须重编译时，它会自动检查源文件和字节码文件的时间戳。</p><blockquote><p>值得注意的是：如果Python无法在机器上写入字节码，程序依然是可以工作的：字节码会在内存中生成并在程序结束时简单地丢弃。尽管这样，由于<code>.pyc</code>文件能够加速启动，所以最好保证在大型程序中可以写入。字节码文件同样是分发Python程序的方法之一：如果Python找到的是<code>.pyc</code>文件，它会很乐意去运行这个程序，尽管这里没有原始的<code>.py</code>源代码文件。</p></blockquote><p>另外因为Python字节码不是机器的二进制代码（例如Intel芯片的指令），字节码仅仅相当于Python定义的一种表现形式。另外，字节码相较二进制，后者更为低级，而Python源代码相较于字节码，后者更为低级。</p><h2 id="Python虚拟机（PVM）"><a href="#Python虚拟机（PVM）" class="headerlink" title="Python虚拟机（PVM）"></a>Python虚拟机（PVM）</h2><p>一旦程序编译成字节码或者是从已保存的<code>.pyc</code>文件中载入，之后的字节码会被发送到通常被称为Python虚拟机（Python Virtual Machine,简写为PVM)上来执行。实际上PVM只是Python整体中的一个组件，可理解为是运行脚本的组件，从技术上来说，就是所谓的“Python解释器”的最后一步。简单的Python代码运行可理解为以下的图片中的样子：</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-03-23%20%E4%B8%8A%E5%8D%8810.56.33.png" alt=""></p><blockquote><p>必须要理解的是这些复杂性的运行结构都是有意识地被隐藏起来，字节码的编译时自动完成的，PVM亦只是安装好的Python系统中的一部分，而程序员只是简单的编写、运行即可。关于PVM与Python解释器之间的关系简单的可总结为：<strong>PVM是Python是Python运行时引擎，从技术上讲只是解释器中执行的“最后一步”，而解释器其中还承担着其它的PVM不涉及到的任务，即可理解为PVM的执行功能属于解释器的一个子集。</strong>在此不妨简单的介绍一下Python的解释器：<strong>实际情况来说，Python就是一个名为解释器的软件包，是代码与计算机硬件之间的软件逻辑层，当编写了一段Python代码，Python解释器将读取程序，并按照其中的命令执行，得出结果。</strong>另外可额外说明一下，CPython为当今标准的解释器（这个名字来自它是由可移植的<a href="https://zh.wikipedia.org/wiki/ANSI_C" target="_blank" rel="external"><em>ANSI C/C</em>语言</a>代码编写而成的这个事实）。当然还有其他语言实现的Python解释器，但是由于CPython是这门语言的标准参照实现，所以与其它语言实现的解释器相比，它运行的最快、最完整、最新，而且最健全。</p></blockquote><h2 id="Python的运行速度"><a href="#Python的运行速度" class="headerlink" title="Python的运行速度"></a>Python的运行速度</h2><p>在Python的工作中通常没有<code>build</code>或者是<code>make</code>的步骤：即为代码在写好之后立即运行。加上Python的字节码的特性，PVM循环（而不是CPU芯片）仍然须解释这些字节码，而且字节码指令与CPU指令相比需要做更多的工作，另外与其他的经典的解释器不同，Python中有内部的编译步骤：Python并不需要反复地重分析和重分解每一行语句。另外需要牢记在心的心的是：Python中的运行是发生在实时性之中的，完全不需要先将所有源代码先编译好再丢给解释器去执行（静态语言常常如此)，所有的建立的函数和类的操作以及连接的模块，这些都是在代码运行之时”编译-解释”如此一个步骤进行的。</p><p>这也是为什么Python的运行速度比不上C/C++之类的语言的运行速度的原因（C/C++将源代码编译为二进制机器码，而Python编译为字节码，而前者比后者更为低级，所以运行起来执行速度更快)，Python的运行速度介于传统的编译语言与传统的解释语言之间，并且具有动态的弹性编程体验。</p><blockquote><p>在此简单介绍一下<a href="https://zh.wikipedia.org/wiki/PyPy" target="_blank" rel="external">PyPy</a>：PyPy是原先的<a href="https://zh.wikipedia.org/wiki/Psyco" target="_blank" rel="external">Psyco</a>即时编译器（just-in-time,<a href="https://zh.wikipedia.org/wiki/%E5%8D%B3%E6%99%82%E7%B7%A8%E8%AD%AF" target="_blank" rel="external">JIT</a>）的继任者（即时编译器其实只是PVM的一个扩展，可见上方图的最右边方框所代表的），并将<a href="https://zh.wikipedia.org/wiki/Psyco" target="_blank" rel="external">Psyco</a>纳入一个追求速度的纯Python，也属于CPython标准的另一个实现，更为注重性能。它可将字节码中的部分转换为运行速度更快的二进制机器码（这一切发生在运行时期，而非运行前的编译阶段）。而且即时编译器可通过追踪程序中的对象数据类型，创建针对Python语言动态特性的机器代码，通过这种方式部分地替换字节码，从而达到程序将在运行时越跑越快。此外，一些Python代码在PyPy下运行也会占用更少的内存。值得一提的是：在某些情况下，它利用动态优化的优势可让Python运行得跟C代码一样的快，甚至可以超越。这点对于算法密集和计算密集型的程序尤为明显（CPU密集型）。</p><p>关于什么是CPU密集型、IO密集型可参考：<a href="https://blog.csdn.net/youanyyou/article/details/78990156" target="_blank" rel="external">什么是CPU密集型、IO密集型？</a></p></blockquote><p>另外，由于Python的动态特性以及更为灵活简要等的特性，使得Python相较于C/C++使其达到了属于“高级语言”的行列。</p><h1 id="交互式命令行与文件"><a href="#交互式命令行与文件" class="headerlink" title="交互式命令行与文件"></a>交互式命令行与文件</h1><p>一般在交互式命令行中的代码是实时的，是不会保存的，即运行之后的代码是不会保存的，需要重新输入代码之后才能继续运行；而在文件中是可以永久保存的，另外，我们认为的一般的编写代码的主文件称之为“脚本”（属于于一个顶层程序文件的非正式说法），调用的文件称之为“模块”，<strong>实际上，代码运行的可永久保存的文件通常是称之为模块的，可以直接运行的模块文件是称之为脚本的。</strong></p><p>在交互式命令行中输入的复合式代码运行时需要在结束时的最后一行空出一行（即按下Entry键）以表示复合句结束；而在文件中的空格不是必须的，因为在解释器运行时，空格会被忽略掉一行一行地运行，但是为了代码的美观以及可读性，加上一些空格实际上也是不可少的。</p><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><blockquote><p>以上知识参考来源：《Python学习手册》Mark Lutz著</p></blockquote>]]></content>
       
       
       <categories>
@@ -490,9 +490,9 @@
           
           <category> 小工具 </category>
           
-          <category> python </category>
-          
           <category> PyQt5 </category>
+          
+          <category> python </category>
           
           <category> 分词 </category>
           
@@ -990,9 +990,9 @@
       
         <tags>
             
-            <tag> 问题记录笔记 </tag>
-            
             <tag> Python </tag>
+            
+            <tag> 问题记录笔记 </tag>
             
             <tag> Pyttsx3 </tag>
             
@@ -1182,9 +1182,9 @@
             
             <tag> 教程笔记 </tag>
             
-            <tag> Mac </tag>
-            
             <tag> 机器学习 </tag>
+            
+            <tag> Mac </tag>
             
             <tag> LightGBM </tag>
             
@@ -1219,9 +1219,9 @@
             
             <tag> 教程笔记 </tag>
             
-            <tag> Mac </tag>
-            
             <tag> 机器学习 </tag>
+            
+            <tag> Mac </tag>
             
             <tag> Xgboost </tag>
             
@@ -1623,11 +1623,11 @@
       
         <tags>
             
-            <tag> 问题记录笔记 </tag>
-            
             <tag> 机器学习 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 问题记录笔记 </tag>
             
         </tags>
       
@@ -1801,9 +1801,9 @@
       
         <tags>
             
-            <tag> 问题记录笔记 </tag>
-            
             <tag> Python </tag>
+            
+            <tag> 问题记录笔记 </tag>
             
             <tag> Matploylib </tag>
             
@@ -2590,9 +2590,9 @@
       
         <tags>
             
-            <tag> 问题记录笔记 </tag>
-            
             <tag> Python </tag>
+            
+            <tag> 问题记录笔记 </tag>
             
         </tags>
       
@@ -2801,9 +2801,9 @@
       
         <tags>
             
-            <tag> 问题记录笔记 </tag>
-            
             <tag> Python </tag>
+            
+            <tag> 问题记录笔记 </tag>
             
         </tags>
       
@@ -3880,9 +3880,9 @@
       
         <tags>
             
-            <tag> 问题记录笔记 </tag>
-            
             <tag> Python </tag>
+            
+            <tag> 问题记录笔记 </tag>
             
             <tag> Anaconda </tag>
             
