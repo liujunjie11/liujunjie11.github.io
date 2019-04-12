@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2019-04-12T09:55:01.271Z</updated>
+  <updated>2019-04-12T10:59:06.518Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -21,13 +21,14 @@
     <link href="https://liujunjie11.github.io/2019/04/12/Mac%E4%B8%8A%E7%94%A8iMovie%E4%B8%BA%E8%A7%86%E9%A2%91%E5%8A%A0%E4%B8%8Alogo%E6%B0%B4%E5%8D%B0/"/>
     <id>https://liujunjie11.github.io/2019/04/12/Mac上用iMovie为视频加上logo水印/</id>
     <published>2019-04-12T09:35:13.000Z</published>
-    <updated>2019-04-12T09:55:01.271Z</updated>
+    <updated>2019-04-12T10:59:06.518Z</updated>
     
-    <content type="html"><![CDATA[<p>最近用到的iMovie有点多，研究了一下怎么在这个软件上为视频加上水印，在此记录以观后效之用。</p><a id="more"></a><p>在此之前必须要有一张自己的<code>.PNG</code>格式的图片，也就是要嵌入视频中的水印部分。</p><p>一. 在视频已经编辑好之后，将此图片拖入软件中：</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/Apr-12-2019%2017-48-08.gif" alt=""></p><p>二. 并且将图片拉至覆盖全视频：</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/Apr-12-2019%2017-48-27.gif" alt=""></p><p>三. 设置画中画以及摆设位置：</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/Apr-12-2019%2017-48-44.gif" alt=""></p><blockquote><p>设置完之后预览，你会发现视频中全程都有这个水印了！</p></blockquote><p>四. 保存文件。大功告成！</p>]]></content>
+    <content type="html"><![CDATA[<p>最近用到的iMovie有点多，研究了一下怎么在这个软件上为视频加上水印，在此记录以观后效之用。</p><iframe width="500" height="315" src="https://www.youtube.com/embed/fNIom-y2vcI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><a id="more"></a><p>在此之前必须要有一张自己的<code>.PNG</code>格式的图片，也就是要嵌入视频中的水印部分。</p><p>一. 在视频已经编辑好之后，将此图片拖入软件中：</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/Apr-12-2019%2017-48-08.gif" alt=""></p><p>二. 并且将图片拉至覆盖全视频：</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/Apr-12-2019%2017-48-27.gif" alt=""></p><p>三. 设置画中画以及摆设位置：</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/Apr-12-2019%2017-48-44.gif" alt=""></p><blockquote><p>设置完之后预览，你会发现视频中全程都有这个水印了！</p></blockquote><p>四. 保存文件。大功告成！</p>]]></content>
     
     <summary type="html">
     
       &lt;p&gt;最近用到的iMovie有点多，研究了一下怎么在这个软件上为视频加上水印，在此记录以观后效之用。&lt;/p&gt;
+&lt;iframe width=&quot;500&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/fNIom-y2vcI&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
     
     </summary>
     
