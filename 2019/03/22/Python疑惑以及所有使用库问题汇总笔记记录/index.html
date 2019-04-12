@@ -94,7 +94,7 @@
 <meta property="og:description" content="此文以记录一些常见的、模糊的Python知识点以及在使用其所有的模块库过程中产生的疑惑为主，在此记录以观后效之用。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-03-23%20%E4%B8%8A%E5%8D%8810.56.33.png">
-<meta property="og:updated_time" content="2019-04-10T06:19:41.592Z">
+<meta property="og:updated_time" content="2019-04-10T11:54:04.396Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python疑惑以及所有使用库问题汇总笔记记录">
 <meta name="twitter:description" content="此文以记录一些常见的、模糊的Python知识点以及在使用其所有的模块库过程中产生的疑惑为主，在此记录以观后效之用。">
@@ -427,7 +427,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  13.3k
+                  13.4k
                 </span>
               
 
@@ -689,7 +689,13 @@
 <p>这里用了两种方式建立关于消息对话框，重点说明第二种，即基于属性的。建立了<code>QMessageBox</code>对象，一开始的时候就将标题还有要显示的内容带入了，同时还表明这是一个没有图标的消息对话框。然后对图标进行了设计，使用<code>setIconPixmap()</code>函数，注意参数必须是<code>QPixmap</code>类型的(用于呈现图片管用)。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">from</span> PyQt5.QtGui <span class="keyword">import</span> QPixmap</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">aboutqt</span><span class="params">(self)</span>:</span></div><div class="line">    QMessageBox.aboutQt(self,<span class="string">'关于Qt'</span>)</div></pre></td></tr></table></figure>
 <p>这里将调用关于Qt的对话框。</p>
-<h3 id="密码输入框"><a href="#密码输入框" class="headerlink" title="密码输入框"></a>密码输入框</h3><h2 id="QT-Creator的简要使用"><a href="#QT-Creator的简要使用" class="headerlink" title="QT Creator的简要使用"></a>QT Creator的简要使用</h2><ul>
+<h3 id="密码输入框"><a href="#密码输入框" class="headerlink" title="密码输入框"></a>密码输入框</h3><p>实现了三种密码输入框的方式来进行说明：</p>
+<ul>
+<li>输入的密码不可见；</li>
+<li>输入的密码可见，但是鼠标点击其他控件后，密码不可见；</li>
+<li>输入的密码不可见，同时为了更加的安全，屏蔽了鼠标右键、禁用复制、粘贴快捷键、鼠标在密码框中不可移动，不可全选。就类似在输入QQ密码的时候一样。</li>
+</ul>
+<h2 id="QT-Creator的简要使用"><a href="#QT-Creator的简要使用" class="headerlink" title="QT Creator的简要使用"></a>QT Creator的简要使用</h2><ul>
 <li><p>可参考：<a href="https://zhuanlan.zhihu.com/p/28130949" target="_blank" rel="external">PyQt5系列教程（3）：小小小程序</a></p>
 </li>
 <li><p>可参考：<a href="https://zhuanlan.zhihu.com/p/28559136" target="_blank" rel="external">PyQt5系列教程（6）：布局</a></p>
@@ -757,7 +763,7 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2019年04月10日 - 14:04</p>
+  <p><span>最后更新:</span>2019年04月10日 - 19:04</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -934,7 +940,7 @@ var jiathis_config={
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">185</span>
+                <span class="site-state-item-count">187</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -945,7 +951,7 @@ var jiathis_config={
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">66</span>
+                <span class="site-state-item-count">68</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -956,7 +962,7 @@ var jiathis_config={
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">98</span>
+                <span class="site-state-item-count">100</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1102,7 +1108,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      250.8k
+      251.6k
     </span>
   
 </div>
