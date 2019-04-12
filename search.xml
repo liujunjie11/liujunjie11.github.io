@@ -17,8 +17,6 @@
           
           <category> Mac </category>
           
-          <category> QuickTime Player </category>
-          
       </categories>
       
       
@@ -27,6 +25,8 @@
             <tag> Mac </tag>
             
             <tag> 软件使用 </tag>
+            
+            <tag> QuickTime Player </tag>
             
         </tags>
       
