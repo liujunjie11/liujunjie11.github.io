@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2019-04-12T10:59:06.518Z</updated>
+  <updated>2019-04-13T07:11:03.148Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>996的帽子</title>
+    <link href="https://liujunjie11.github.io/2019/04/13/996%E7%9A%84%E5%B8%BD%E5%AD%90/"/>
+    <id>https://liujunjie11.github.io/2019/04/13/996的帽子/</id>
+    <published>2019-04-13T06:16:22.000Z</published>
+    <updated>2019-04-13T07:11:03.148Z</updated>
+    
+    <content type="html"><![CDATA[<p>早就想就<a href="https://996.icu/#/zh_CN" target="_blank" rel="external">“996.ICU”</a>一事做一些感想记录了。</p><a id="more"></a><p>不得不承认这个社会上的一些错误概念是极具迷惑性的，它们都有一个共同的特点：带着“心安理得”的帽子，带着“有理不怕影子斜”的帽子。也确实影响到了当今的一些人们，时不时就会看到有人被这些稍微夸大其词带起来的节奏牵着走，这些人往往也有一个共同的特点：那就是缺乏独立思考的意识。有时这些“披着羊皮的狼”的概念也极容易影响到一些独立思考能力尚不成熟的人，从而让人大惊：“句句在理”的错相，“头头是道”的误感。</p><p>一个国家政府为何总是要宣扬“国民要爱国”？而转身对外却又总是另一番矛盾的话(“人类无国界”、“人类大家庭”等)。一个政府该怎么做总是由一些主要执政人员来做决策的，这一点无论是在所谓的“民主”、“非民主”国家均如此，可以这么说，一个政府，一个国家是由这一些人掌控、发号命令的。当执政党受到了国外对手的压力就会时不时发动“爱国运动”，这是一个政府的一贯作风，平时的“爱国”即是做为为了未来威胁的保障。当然，一个国家政府中的一些执政人员亦然也有所谓的“使命感”，但是往往这样的人被认定为“做不成大事”被上层人员晾在一边。这个丑陋的世界是由一群丑陋的人群组成的，一个丑陋的人是由它丑陋的所作所为造成的。</p><p>反观所谓的企业无不如上如此。</p><p>何为“996”，实际上均是企业方面的要求；何为“奋斗”，往往是发自一个人内心的行动。这两者之间是完全不同的性质与概念。当今中国社会在早已非常流行的“成功文化”大趋势的笼罩下，一个所谓的“成功人士”往往说的一句话总是容易被人们牢记在心，深受“成功文化”影响的人甚至整日在研究这些话，企图从中找到奥秘助自己更上一层楼，早日达到“成功”的境界。仔细琢量，这种文化在整个人类历史中总是不缺范例，各种“成功人士”有很多相似之处也是值得一思的。放眼望去，人类圈子里从来不会缺少可笑与滑稽之人与荒唐无稽的事，与一个家庭的明争暗斗的性质没什么两样。</p><p>生活在当今的中国社会上的人们较生活在上个世纪的清末年代的人们没什么两样，相较当今的主流国际文化，绝大部分国人还是格格不入的。一个国家真正的发达不应是外在的物质层面，应当要以精神文化为第一要义做为主要的衡量标准，这一点国人“还需努力”。</p><p>“996运动”应当成为一场打破荒诞无稽的“平反运动”，还给这个社会一部分正常的价值观。但在另一方面，要让那些思想僵化的人们醒悟实在是一种挑战。</p><p>我期待，同时也在盼望。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;早就想就&lt;a href=&quot;https://996.icu/#/zh_CN&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;“996.ICU”&lt;/a&gt;一事做一些感想记录了。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="笔记" scheme="https://liujunjie11.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://liujunjie11.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Mac上用iMovie为视频加上水印</title>
     <link href="https://liujunjie11.github.io/2019/04/12/Mac%E4%B8%8A%E7%94%A8iMovie%E4%B8%BA%E8%A7%86%E9%A2%91%E5%8A%A0%E4%B8%8Alogo%E6%B0%B4%E5%8D%B0/"/>
     <id>https://liujunjie11.github.io/2019/04/12/Mac上用iMovie为视频加上logo水印/</id>
     <published>2019-04-12T09:35:13.000Z</published>
-    <updated>2019-04-12T10:59:06.518Z</updated>
+    <updated>2019-04-12T10:59:30.066Z</updated>
     
     <content type="html"><![CDATA[<p>最近用到的iMovie有点多，研究了一下怎么在这个软件上为视频加上水印，在此记录以观后效之用。</p><iframe width="500" height="315" src="https://www.youtube.com/embed/fNIom-y2vcI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><a id="more"></a><p>在此之前必须要有一张自己的<code>.PNG</code>格式的图片，也就是要嵌入视频中的水印部分。</p><p>一. 在视频已经编辑好之后，将此图片拖入软件中：</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/Apr-12-2019%2017-48-08.gif" alt=""></p><p>二. 并且将图片拉至覆盖全视频：</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/Apr-12-2019%2017-48-27.gif" alt=""></p><p>三. 设置画中画以及摆设位置：</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/Apr-12-2019%2017-48-44.gif" alt=""></p><blockquote><p>设置完之后预览，你会发现视频中全程都有这个水印了！</p></blockquote><p>四. 保存文件。大功告成！</p>]]></content>
     
@@ -418,9 +440,9 @@
       <category term="Adobe Premiere(Pro)2018" scheme="https://liujunjie11.github.io/categories/Adobe-Premiere-Pro-2018/"/>
     
     
-      <category term="Adobe Premiere(Pro)2018" scheme="https://liujunjie11.github.io/tags/Adobe-Premiere-Pro-2018/"/>
-    
       <category term="笔记" scheme="https://liujunjie11.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Adobe Premiere(Pro)2018" scheme="https://liujunjie11.github.io/tags/Adobe-Premiere-Pro-2018/"/>
     
   </entry>
   
@@ -506,32 +528,6 @@
     
     
       <category term="笔记" scheme="https://liujunjie11.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo localsearch配置无法运行解决方案</title>
-    <link href="https://liujunjie11.github.io/2019/03/06/Hexo-localsearch%E9%85%8D%E7%BD%AE%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    <id>https://liujunjie11.github.io/2019/03/06/Hexo-localsearch配置无法运行解决方案/</id>
-    <published>2019-03-06T07:29:00.000Z</published>
-    <updated>2019-03-06T09:22:27.230Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近发现在<em>Hexo</em>主页上的<em>localsearch</em>不好使了，点击这个“搜索”按钮之后一直的在转圈圈，后来一下午一直在排查这个问题，现在终于解决了，在此记录一下以观后效之用。</p><a id="more"></a><h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>今天还是昨天点击“搜索”按钮发现一直没有回应：</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-03-06%20%E4%B8%8B%E5%8D%882.28.31.png" alt=""></p><blockquote><p>想着之前就是有点延迟的，想等等来着，发现越发不可收拾了…一定出问题了。</p></blockquote><p>我使用命令<code>hexo s --debug</code>结合打开<code>http://localhost:4000/</code>在排查问题，发现一些文件总是加载不出来：</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-03-06%20%E4%B8%8B%E5%8D%882.37.45.png" alt=""></p><blockquote><p>事实证明在打得开的情况下是有这些文件加载出来的。</p></blockquote><p>我想着改原生代码吧，发现也没什么进展，我选择了卸载掉，重新安装一次。</p><h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>执行命令：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm uninstall hexo-generator-search --save</div><div class="line">npm uninstall hexo-generator-searchdb --save</div></pre></td></tr></table></figure><p>之后再次重新安装：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-search --save</div><div class="line">npm install hexo-generator-searchdb --save</div></pre></td></tr></table></figure></p><blockquote><p>发现重新安装之后<code>hexo s --debug</code>的情况下还是不行的。</p></blockquote><p>之后我找到了<a href="https://github.com/theme-next/hexo-generator-searchdb" target="_blank" rel="external">原作者的<em>GitHub</em></a>，发现两者有点矛盾。最后干脆卸载两者其中一个试试看：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm uninstall hexo-generator-searchdb --save</div></pre></td></tr></table></figure><blockquote><p>事实证明，我卸载了这个之后但是另外一个不会受到影响(即<code>hexo-generator-search</code>)，后来点击“搜索”按钮又可以实现站内搜索了～～</p></blockquote><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-03-06%20%E4%B8%8B%E5%8D%883.46.21.png" alt=""></p><p>如果你们这样做不行可以试试：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm uninstall hexo-generator-search --save</div></pre></td></tr></table></figure><blockquote><p>这个验证过,行不通。</p></blockquote><h2 id="另外说明"><a href="#另外说明" class="headerlink" title="另外说明"></a>另外说明</h2><p>在做好上面的工作之后命令的使用还是相当重要的，这个也让我苦恼不已…</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash">排查时可使用</span></div><div class="line">hexo s --debug</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash">初始化，基本上用不到</span></div><div class="line">hexo init</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash">保存设置</span></div><div class="line">hexo config</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash">生成，上传，在对于配置有变动时最好打上全称命令，亲身经历</span></div><div class="line">hexo generate</div><div class="line">hexo deploy</div><div class="line"><span class="meta">#</span><span class="bash">两者联合使用</span></div><div class="line">hexo g -d</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 其他的：</span></div><div class="line">Commands:</div><div class="line">  clean     Remove generated files and cache.</div><div class="line">  config    Get or set configurations.</div><div class="line">  deploy    Deploy your website.</div><div class="line">  generate  Generate static files.</div><div class="line">  help      Get help on a command.</div><div class="line">  init      Create a new Hexo folder.</div><div class="line">  list      List the information of the site</div><div class="line">  migrate   Migrate your site from other system to Hexo.</div><div class="line">  new       Create a new post.</div><div class="line">  publish   Moves a draft post from _drafts to _posts folder.</div><div class="line">  render    Render files with renderer plugins.</div><div class="line">  server    Start the server.</div><div class="line">  version   Display version information.</div><div class="line"></div><div class="line">Global Options:</div><div class="line">  --config  Specify config file instead of using _config.yml</div><div class="line">  --cwd     Specify the CWD</div><div class="line">  --debug   Display all verbose messages in the terminal</div><div class="line">  --draft   Display draft posts</div><div class="line">  --safe    Disable all plugins and scripts</div><div class="line">  --silent  Hide output on console</div></pre></td></tr></table></figure><blockquote><p>就这样吧～</p></blockquote><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>如果对于一些比如<code>_config.yml</code>文件的设置有疑惑可参考：</p><ul><li><p><a href="https://www.jianshu.com/p/519b45730824" target="_blank" rel="external">Hexo开启站内搜索功能</a></p></li><li><p><a href="http://www.manongjc.com/article/62958.html" target="_blank" rel="external">Hexo Next 主题中添加本地搜索功能</a></p></li><li><p><a href="https://github.com/theme-next/hexo-generator-searchdb" target="_blank" rel="external">theme-next/hexo-generator-searchdb</a></p></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近发现在&lt;em&gt;Hexo&lt;/em&gt;主页上的&lt;em&gt;localsearch&lt;/em&gt;不好使了，点击这个“搜索”按钮之后一直的在转圈圈，后来一下午一直在排查这个问题，现在终于解决了，在此记录一下以观后效之用。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Hexo" scheme="https://liujunjie11.github.io/categories/Hexo/"/>
-    
-      <category term="问题记录笔记" scheme="https://liujunjie11.github.io/categories/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="笔记" scheme="https://liujunjie11.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Hexo" scheme="https://liujunjie11.github.io/tags/Hexo/"/>
     
   </entry>
   
