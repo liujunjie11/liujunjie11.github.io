@@ -517,18 +517,18 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> After Effects CC 2017/2018 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> After Effects CC 2017/2018 </tag>
-            
             <tag> 笔记 </tag>
+            
+            <tag> After Effects CC 2017/2018 </tag>
             
         </tags>
       
@@ -546,18 +546,18 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> Adobe Premiere(Pro)2018 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> Adobe Premiere(Pro)2018 </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -657,7 +657,7 @@
       <link href="/2019/03/06/Hexo-localsearch%E9%85%8D%E7%BD%AE%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
       <url>/2019/03/06/Hexo-localsearch%E9%85%8D%E7%BD%AE%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
       
-        <content type="html"><![CDATA[<p>最近发现在<em>Hexo</em>主页上的<em>localsearch</em>不好使了，点击这个“搜索”按钮之后一直的在转圈圈，后来一下午一直在排查这个问题，现在终于解决了，在此记录一下以观后效之用。</p><a id="more"></a><h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>今天还是昨天点击“搜索”按钮发现一直没有回应：</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-03-06%20%E4%B8%8B%E5%8D%882.28.31.png" alt=""></p><blockquote><p>想着之前就是有点延迟的，想等等来着，发现越发不可收拾了…一定出问题了。</p></blockquote><p>我使用命令<code>hexo s --debug</code>结合打开<code>http://localhost:4000/</code>在排查问题，发现一些文件总是加载不出来：</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-03-06%20%E4%B8%8B%E5%8D%882.37.45.png" alt=""></p><blockquote><p>事实证明在打得开的情况下是有这些文件加载出来的。</p></blockquote><p>我想着改原生代码吧，发现也没什么进展，我选择了卸载掉，重新安装一次。</p><h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>执行命令：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm uninstall hexo-generator-search --save</div><div class="line">npm uninstall hexo-generator-searchdb --save</div></pre></td></tr></table></figure><p>之后再次重新安装：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-search --save</div><div class="line">npm install hexo-generator-searchdb --save</div></pre></td></tr></table></figure></p><blockquote><p>发现重新安装之后<code>hexo s --debug</code>的情况下还是不行的。</p></blockquote><p>之后我找到了<a href="https://github.com/theme-next/hexo-generator-searchdb" target="_blank" rel="external">原作者的<em>GitHub</em></a>，发现两者有点矛盾。最后干脆卸载两者其中一个试试看：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm uninstall hexo-generator-searchdb --save</div></pre></td></tr></table></figure><blockquote><p>事实证明，我卸载了这个之后但是另外一个不会受到影响(即<code>hexo-generator-search</code>)，后来点击“搜索”按钮又可以实现站内搜索了～～</p></blockquote><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-03-06%20%E4%B8%8B%E5%8D%883.46.21.png" alt=""></p><p>如果你们这样做不行可以试试：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm uninstall hexo-generator-search --save</div></pre></td></tr></table></figure><blockquote><p>这个验证过,行不通。</p></blockquote><h2 id="另外说明"><a href="#另外说明" class="headerlink" title="另外说明"></a>另外说明</h2><p>在做好上面的工作之后命令的使用还是相当重要的，这个也让我苦恼不已…</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash">排查时可使用</span></div><div class="line">hexo s --debug</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash">初始化，基本上用不到</span></div><div class="line">hexo init</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash">保存设置</span></div><div class="line">hexo config</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash">生成，上传，在对于配置有变动时最好打上全称命令，亲身经历</span></div><div class="line">hexo generate</div><div class="line">hexo deploy</div><div class="line"><span class="meta">#</span><span class="bash">两者联合使用</span></div><div class="line">hexo g -d</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 其他的：</span></div><div class="line">Commands:</div><div class="line">  clean     Remove generated files and cache.</div><div class="line">  config    Get or set configurations.</div><div class="line">  deploy    Deploy your website.</div><div class="line">  generate  Generate static files.</div><div class="line">  help      Get help on a command.</div><div class="line">  init      Create a new Hexo folder.</div><div class="line">  list      List the information of the site</div><div class="line">  migrate   Migrate your site from other system to Hexo.</div><div class="line">  new       Create a new post.</div><div class="line">  publish   Moves a draft post from _drafts to _posts folder.</div><div class="line">  render    Render files with renderer plugins.</div><div class="line">  server    Start the server.</div><div class="line">  version   Display version information.</div><div class="line"></div><div class="line">Global Options:</div><div class="line">  --config  Specify config file instead of using _config.yml</div><div class="line">  --cwd     Specify the CWD</div><div class="line">  --debug   Display all verbose messages in the terminal</div><div class="line">  --draft   Display draft posts</div><div class="line">  --safe    Disable all plugins and scripts</div><div class="line">  --silent  Hide output on console</div></pre></td></tr></table></figure><blockquote><p>就这样吧～</p></blockquote><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>如果对于一些比如<code>_config.yml</code>文件的设置有疑惑可参考：</p><ul><li><p><a href="https://www.jianshu.com/p/519b45730824" target="_blank" rel="external">Hexo开启站内搜索功能</a></p></li><li><p><a href="http://www.manongjc.com/article/62958.html" target="_blank" rel="external">Hexo Next 主题中添加本地搜索功能</a></p></li><li><p><a href="https://github.com/theme-next/hexo-generator-searchdb" target="_blank" rel="external">theme-next/hexo-generator-searchdb</a></p></li></ul>]]></content>
+        <content type="html"><![CDATA[<p>最近发现在<em>Hexo</em>主页上的<em>localsearch</em>不好使了，点击这个“搜索”按钮之后一直的在转圈圈，后来一下午一直在排查这个问题，现在终于解决了，在此记录一下以观后效之用。</p><a id="more"></a><h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>今天还是昨天点击“搜索”按钮发现一直没有回应：</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-03-06%20%E4%B8%8B%E5%8D%882.28.31.png" alt=""></p><blockquote><p>想着之前就是有点延迟的，想等等来着，发现越发不可收拾了…一定出问题了。</p></blockquote><p>我使用命令<code>hexo s --debug</code>结合打开<code>http://localhost:4000/</code>在排查问题，发现一些文件总是加载不出来：</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-03-06%20%E4%B8%8B%E5%8D%882.37.45.png" alt=""></p><blockquote><p>事实证明在打得开的情况下是有这些文件加载出来的。</p></blockquote><p>我想着改原生代码吧，发现也没什么进展，我选择了卸载掉，重新安装一次。</p><h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>执行命令：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm uninstall hexo-generator-search --save</div><div class="line">npm uninstall hexo-generator-searchdb --save</div></pre></td></tr></table></figure><p>之后再次重新安装：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-search --save</div><div class="line">npm install hexo-generator-searchdb --save</div></pre></td></tr></table></figure></p><blockquote><p>发现重新安装之后<code>hexo s --debug</code>的情况下还是不行的。</p></blockquote><p>之后我找到了<a href="https://github.com/theme-next/hexo-generator-searchdb" target="_blank" rel="external">原作者的<em>GitHub</em></a>，发现两者有点矛盾。最后干脆卸载两者其中一个试试看：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm uninstall hexo-generator-searchdb --save</div></pre></td></tr></table></figure><blockquote><p>事实证明，我卸载了这个之后但是另外一个不会受到影响(即<code>hexo-generator-search</code>)，后来点击“搜索”按钮又可以实现站内搜索了～～</p></blockquote><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-03-06%20%E4%B8%8B%E5%8D%883.46.21.png" alt=""></p><p>如果你们这样做不行可以试试：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm uninstall hexo-generator-search --save</div></pre></td></tr></table></figure><blockquote><p>这个验证过,行不通。</p></blockquote><h2 id="另外说明"><a href="#另外说明" class="headerlink" title="另外说明"></a>另外说明</h2><p>在做好上面的工作之后命令的使用还是相当重要的，这个也让我苦恼不已…</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span>排查时可使用</div><div class="line">hexo s --debug</div><div class="line"></div><div class="line"><span class="meta">#</span>初始化，基本上用不到</div><div class="line">hexo init</div><div class="line"></div><div class="line"><span class="meta">#</span>保存设置</div><div class="line">hexo config</div><div class="line"></div><div class="line"><span class="meta">#</span>生成，上传，在对于配置有变动时最好打上全称命令，亲身经历</div><div class="line">hexo generate</div><div class="line">hexo deploy</div><div class="line"><span class="meta">#</span>两者联合使用</div><div class="line">hexo g -d</div><div class="line"></div><div class="line"><span class="meta">#</span> 其他的：</div><div class="line">Commands:</div><div class="line">  clean     Remove generated files and cache.</div><div class="line">  config    Get or set configurations.</div><div class="line">  deploy    Deploy your website.</div><div class="line">  generate  Generate static files.</div><div class="line">  help      Get help on a command.</div><div class="line">  init      Create a new Hexo folder.</div><div class="line">  list      List the information of the site</div><div class="line">  migrate   Migrate your site from other system to Hexo.</div><div class="line">  new       Create a new post.</div><div class="line">  publish   Moves a draft post from _drafts to _posts folder.</div><div class="line">  render    Render files with renderer plugins.</div><div class="line">  server    Start the server.</div><div class="line">  version   Display version information.</div><div class="line"></div><div class="line">Global Options:</div><div class="line">  --config  Specify config file instead of using _config.yml</div><div class="line">  --cwd     Specify the CWD</div><div class="line">  --debug   Display all verbose messages in the terminal</div><div class="line">  --draft   Display draft posts</div><div class="line">  --safe    Disable all plugins and scripts</div><div class="line">  --silent  Hide output on console</div></pre></td></tr></table></figure><blockquote><p>就这样吧～</p></blockquote><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>如果对于一些比如<code>_config.yml</code>文件的设置有疑惑可参考：</p><ul><li><p><a href="https://www.jianshu.com/p/519b45730824" target="_blank" rel="external">Hexo开启站内搜索功能</a></p></li><li><p><a href="http://www.manongjc.com/article/62958.html" target="_blank" rel="external">Hexo Next 主题中添加本地搜索功能</a></p></li><li><p><a href="https://github.com/theme-next/hexo-generator-searchdb" target="_blank" rel="external">theme-next/hexo-generator-searchdb</a></p></li></ul>]]></content>
       
       
       <categories>
@@ -1029,18 +1029,18 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> Hexo </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 教程笔记 </tag>
-            
             <tag> Hexo </tag>
+            
+            <tag> 教程笔记 </tag>
             
             <tag> 七牛云 </tag>
             
@@ -1275,9 +1275,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Eclipse </category>
           
@@ -1288,9 +1288,9 @@
       
         <tags>
             
-            <tag> Eclipse </tag>
-            
             <tag> 问题记录笔记 </tag>
+            
+            <tag> Eclipse </tag>
             
             <tag> Django </tag>
             
@@ -1525,18 +1525,18 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> Hexo </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 教程笔记 </tag>
-            
             <tag> Hexo </tag>
+            
+            <tag> 教程笔记 </tag>
             
         </tags>
       
@@ -1554,9 +1554,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> Hexo </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -1813,9 +1813,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Mac </category>
           
@@ -1962,18 +1962,18 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> Hexo </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 教程笔记 </tag>
-            
             <tag> Hexo </tag>
+            
+            <tag> 教程笔记 </tag>
             
         </tags>
       
@@ -2165,9 +2165,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -2194,9 +2194,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -2225,9 +2225,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -2254,9 +2254,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -2604,9 +2604,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -2666,9 +2666,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Eclispe </category>
           
@@ -2997,9 +2997,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Anaconda </category>
           
@@ -3407,9 +3407,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -4006,9 +4006,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Mac </category>
           
@@ -4101,9 +4101,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Python </category>
           
@@ -4263,11 +4263,11 @@
       
         <tags>
             
+            <tag> 问题记录笔记 </tag>
+            
             <tag> Hadoop </tag>
             
             <tag> Eclipse </tag>
-            
-            <tag> 问题记录笔记 </tag>
             
         </tags>
       
@@ -4296,11 +4296,11 @@
       
         <tags>
             
-            <tag> Eclipse </tag>
-            
             <tag> 问题记录笔记 </tag>
             
             <tag> Mac </tag>
+            
+            <tag> Eclipse </tag>
             
             <tag> iPad </tag>
             
@@ -4378,9 +4378,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -4515,9 +4515,9 @@
       
       <categories>
           
-          <category> Hadoop </category>
-          
           <category> Mac </category>
+          
+          <category> Hadoop </category>
           
           <category> Docker </category>
           
@@ -4526,9 +4526,9 @@
       
         <tags>
             
-            <tag> Hadoop </tag>
-            
             <tag> Mac </tag>
+            
+            <tag> Hadoop </tag>
             
             <tag> Docker </tag>
             
@@ -4548,9 +4548,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Mac </category>
           
@@ -4579,26 +4579,26 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
           
-          <category> Hadoop </category>
+          <category> 笔记 </category>
           
           <category> Mac </category>
+          
+          <category> Hadoop </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Hadoop </tag>
-            
-            <tag> Eclipse </tag>
-            
             <tag> 问题记录笔记 </tag>
             
             <tag> Mac </tag>
+            
+            <tag> Hadoop </tag>
+            
+            <tag> Eclipse </tag>
             
         </tags>
       
@@ -4616,9 +4616,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Mac </category>
           
@@ -4649,9 +4649,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -4732,9 +4732,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Mac </category>
           
@@ -5175,9 +5175,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
           <category> Hadoop </category>
           
@@ -5239,18 +5239,18 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> Hexo </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 教程笔记 </tag>
-            
             <tag> Hexo </tag>
+            
+            <tag> 教程笔记 </tag>
             
             <tag> 七牛云 </tag>
             
@@ -5324,9 +5324,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> Hexo </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -5353,9 +5353,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -5386,9 +5386,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> 软件使用 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
@@ -5442,9 +5442,9 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> Hexo </category>
+          
+          <category> 笔记 </category>
           
           <category> Mac </category>
           
@@ -5453,9 +5453,9 @@
       
         <tags>
             
-            <tag> 教程笔记 </tag>
-            
             <tag> Hexo </tag>
+            
+            <tag> 教程笔记 </tag>
             
             <tag> Mac </tag>
             
