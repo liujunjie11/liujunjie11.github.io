@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>关于爬取NBA官网(NBA.com)数据</title>
+      <link href="/2019/06/18/%E5%85%B3%E4%BA%8E%E7%88%AC%E5%8F%96NBA%E5%AE%98%E7%BD%91-NBA-com-%E6%95%B0%E6%8D%AE/"/>
+      <url>/2019/06/18/%E5%85%B3%E4%BA%8E%E7%88%AC%E5%8F%96NBA%E5%AE%98%E7%BD%91-NBA-com-%E6%95%B0%E6%8D%AE/</url>
+      
+        <content type="html"><![CDATA[<p>关于<a href="https://ca.nba.com/" target="_blank" rel="external">NBA官网</a>的数据爬取的解析，其中记录了视频源链接(可直接进行下载的链接)以及文字的可爬取解析过程。</p><a id="more"></a><h1 id="爬取视频解析过程"><a href="#爬取视频解析过程" class="headerlink" title="爬取视频解析过程"></a>爬取视频解析过程</h1><p>以<a href="https://www.nba.com/history/legends/profiles/michael-jordan" target="_blank" rel="external">《Legends profile: Michael Jordan》</a>为例，其中有视频亦有文字。在爬取这些个视频之前我以为又是<a href="https://zh.wikipedia.org/wiki/M3U" target="_blank" rel="external">M3u8格式</a>的，曾经在国内主流视频平台均有见到过这种格式，至今我还没有完全破解该格式爬取的方法…所以心里没底。出乎意料地，在<strong>NBA官网上都是<code>.mp4</code>格式的。</strong>爬取解析过程中也是很轻松就爬取到了视频源。</p><p>千言万语不过一张图：</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-06-18%20%E4%B8%8A%E5%8D%8810.31.10.png" alt=""></p><blockquote><p>即打开对应的<a href="https://zh.wikipedia.org/wiki/XMLHttpRequest" target="_blank" rel="external"><code>.XHR</code>格式</a>的进行筛选，即可在其中查找到资源源地址，发现每一个视频都有这么一个文件，里面就可以查找到视频的各种清晰度等信息…整个过程还是很轻松的。<strong>其实这种方法可以适用很多网站！</strong></p></blockquote><p>以下为动图操作演示：</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/Jun-18-2019%2010-33-35.gif" alt=""></p><blockquote><p>拿到视频的源地址之后，可直接用浏览器进行下载即可，当然若是下载的多可用Python写个爬虫程序亦可。</p></blockquote><h1 id="关于文字解析"><a href="#关于文字解析" class="headerlink" title="关于文字解析"></a>关于文字解析</h1><p>可先看以下的图解析：</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-06-18%20%E4%B8%8A%E5%8D%8810.35.22.png" alt=""></p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/Jun-18-2019%2010-34-51.gif" alt=""></p><blockquote><p>实际上可发现文字部分还是属于一种静态资源的(实际上文字资源都是这么一回事…)关于静态资源的爬取就不多说了，直接启用Python结合一些模块爬取是最快的。</p></blockquote><h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>通过结合<strong>Chrome浏览器</strong>下载下来的视频演示：</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/Jun-18-2019%2010-43-07.gif" alt=""></p><p>就这样了～</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 爬虫 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 爬虫 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>杂记6.5</title>
       <link href="/2019/06/05/%E6%9D%82%E8%AE%B06-5/"/>
       <url>/2019/06/05/%E6%9D%82%E8%AE%B06-5/</url>
@@ -551,9 +576,9 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> After Effects CC 2017/2018 </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -580,9 +605,9 @@
       
         <tags>
             
-            <tag> Adobe Premiere(Pro)2018 </tag>
-            
             <tag> 笔记 </tag>
+            
+            <tag> Adobe Premiere(Pro)2018 </tag>
             
         </tags>
       
@@ -747,11 +772,11 @@
       
       <categories>
           
-          <category> PyQt5 </category>
-          
           <category> 小工具 </category>
           
           <category> python </category>
+          
+          <category> PyQt5 </category>
           
           <category> 分词 </category>
           
@@ -1151,9 +1176,9 @@
           
           <category> Kaggle </category>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
       </categories>
       
@@ -1182,9 +1207,9 @@
       
       <categories>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
       </categories>
       
@@ -1211,9 +1236,9 @@
       
       <categories>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
       </categories>
       
@@ -1271,9 +1296,9 @@
       
       <categories>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
       </categories>
       
@@ -1335,9 +1360,9 @@
       
       <categories>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
       </categories>
       
@@ -1364,9 +1389,9 @@
       
       <categories>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
       </categories>
       
@@ -1393,9 +1418,9 @@
       
       <categories>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
           <category> 数据分析 </category>
           
@@ -1873,9 +1898,9 @@
           
           <category> 笔记 </category>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
       </categories>
       
@@ -2584,9 +2609,9 @@
             
             <tag> Python </tag>
             
-            <tag> Jupyter Notebook </tag>
-            
             <tag> Anaconda </tag>
+            
+            <tag> Jupyter Notebook </tag>
             
         </tags>
       
