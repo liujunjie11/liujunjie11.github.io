@@ -67,7 +67,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Python,爬虫,Scrapy," />
 
 
 
@@ -85,17 +85,24 @@
 
 
 
-<meta name="description" content="心灵小窝，记录成长与点滴。">
+<meta name="description" content="这个是在北京实习期的公司要求做的一个小的项目，简单在此做个主要内容的解析以及相关主要代码的分享。">
+<meta name="keywords" content="Python,爬虫,Scrapy">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python爬取虎扑新闻">
 <meta property="og:url" content="https://liujunjie11.github.io/2019/09/11/Python爬取虎扑新闻/index.html">
 <meta property="og:site_name" content="LXiHa`Notes">
-<meta property="og:description" content="心灵小窝，记录成长与点滴。">
+<meta property="og:description" content="这个是在北京实习期的公司要求做的一个小的项目，简单在此做个主要内容的解析以及相关主要代码的分享。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-11T10:31:58.556Z">
+<meta property="og:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202020-05-15%20%E4%B8%8B%E5%8D%881.36.32.png">
+<meta property="og:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202020-05-15%20%E4%B8%8B%E5%8D%881.39.47.png">
+<meta property="og:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202020-05-15%20%E4%B8%8B%E5%8D%881.40.40.png">
+<meta property="og:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202020-05-15%20%E4%B8%8B%E5%8D%881.41.17.png">
+<meta property="og:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/May-15-2020%2013-46-08.gif">
+<meta property="og:updated_time" content="2020-05-15T06:00:20.350Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python爬取虎扑新闻">
-<meta name="twitter:description" content="心灵小窝，记录成长与点滴。">
+<meta name="twitter:description" content="这个是在北京实习期的公司要求做的一个小的项目，简单在此做个主要内容的解析以及相关主要代码的分享。">
+<meta name="twitter:image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202020-05-15%20%E4%B8%8B%E5%8D%881.36.32.png">
 
 
 
@@ -357,6 +364,50 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/爬虫/" itemprop="url" rel="index">
+                    <span itemprop="name">爬虫</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Scrapy/" itemprop="url" rel="index">
+                    <span itemprop="name">Scrapy</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -391,7 +442,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  976
                 </span>
               
 
@@ -416,7 +467,29 @@
       
 
       
-        
+        <p>这个是在北京实习期的公司要求做的一个小的项目，简单在此做个主要内容的解析以及相关主要代码的分享。</p>
+<a id="more"></a>
+<h1 id="简要解析"><a href="#简要解析" class="headerlink" title="简要解析"></a>简要解析</h1><p>首先以爬取新闻内容以及来源等主要信息为例。</p>
+<ul>
+<li>爬取的来源链接：<a href="https://voice.hupu.com/china/1" target="_blank" rel="external">https://voice.hupu.com/china/1</a></li>
+</ul>
+<p>其中的题目以及时间和来源以及可以在静态页面上进行抓取，直接利用Python的相关库进行清洗提取即可。另外在主页面可以抓取到每一条新闻的内容页面，内容页面即包括了文字及图片，这些均可直接提取。</p>
+<p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202020-05-15%20%E4%B8%8B%E5%8D%881.36.32.png" alt=""></p>
+<p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202020-05-15%20%E4%B8%8B%E5%8D%881.39.47.png" alt=""></p>
+<p>另外为了获取新闻的浏览量，我们选择了进入新闻相应的论坛进行了爬取，如下可知：</p>
+<p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202020-05-15%20%E4%B8%8B%E5%8D%881.40.40.png" alt=""></p>
+<p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202020-05-15%20%E4%B8%8B%E5%8D%881.41.17.png" alt=""></p>
+<p>关于这个浏览量是实时变化的，所以需要额外解析。</p>
+<p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/May-15-2020%2013-46-08.gif" alt=""></p>
+<blockquote>
+<p>可得实时变化的链接为：<a href="https://msa.hupu.com/thread_hit?tid=35418557&amp;_=1589521335428" target="_blank" rel="external">https://msa.hupu.com/thread_hit?tid=35418557&amp;_=1589521335428</a></p>
+<p>通过缩减URL可得：<a href="https://msa.hupu.com/thread_hit?tid=35418557" target="_blank" rel="external">https://msa.hupu.com/thread_hit?tid=35418557</a></p>
+</blockquote>
+<p><code>tid</code>  即为每个文章URL上的的ID。</p>
+<h1 id="代码部分"><a href="#代码部分" class="headerlink" title="代码部分"></a>代码部分</h1><p>主要贴上用Scrapy写的解析部分的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/python</span></div><div class="line"><span class="comment"># -*- coding:UTF-8 -*-</span></div><div class="line"><span class="string">'''</span></div><div class="line"><span class="string">@time：2019.9.10</span></div><div class="line"><span class="string">@author: junliu</span></div><div class="line"><span class="string">'''</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> requests</div><div class="line"><span class="keyword">import</span> re</div><div class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</div><div class="line"><span class="keyword">import</span> os, sys</div><div class="line"><span class="keyword">import</span> time, datetime</div><div class="line"><span class="keyword">import</span> cookielib</div><div class="line"><span class="keyword">import</span> urllib2</div><div class="line"></div><div class="line">reload(sys)</div><div class="line">sys.setdefaultencoding(<span class="string">"utf-8"</span>)</div><div class="line"> </div><div class="line"><span class="comment"># 虎扑CBA新闻：https://voice.hupu.com/cba</span></div><div class="line"><span class="comment"># 虎扑NBA新闻：https://voice.hupu.com/nba</span></div><div class="line"><span class="comment"># 虎扑足球新闻：https://voice.hupu.com/soccer</span></div><div class="line"><span class="comment"># 虎扑中超足球新闻：https://voice.hupu.com/china</span></div><div class="line"><span class="comment"># 翻页示例：https://voice.hupu.com/china/page/</span></div><div class="line">    </div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_new_info</span><span class="params">()</span>:</span></div><div class="line">    nba_url = <span class="string">'https://voice.hupu.com/nba'</span></div><div class="line"><span class="comment">#     comment_url = 'https://www.ixigua.com/api/commentv2/video_comment?group_id=6733070858316677644&amp;item_id=6733070858316677644&amp;group_source=2'</span></div><div class="line">    html = get_html_res(nba_url)</div><div class="line">    soup = BeautifulSoup(html, <span class="string">'lxml'</span>)</div><div class="line">    new_list = soup.find(<span class="string">'div'</span>, class_=<span class="string">'news-list'</span>)</div><div class="line"><span class="comment">#     print len(new_list.find_all('li'))</span></div><div class="line"><span class="comment">#     print new_list.find_all('li')[-1]</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> new_list.find_all(<span class="string">'li'</span>):</div><div class="line">        <span class="keyword">print</span> i.find(<span class="string">'div'</span>, class_=<span class="string">"list-hd"</span>).get_text().strip()</div><div class="line">        <span class="keyword">print</span> i.find_all(<span class="string">'a'</span>)[<span class="number">0</span>].get(<span class="string">'href'</span>)</div><div class="line"><span class="comment">#         get_new_content(i.find_all('a')[0].get('href'))</span></div><div class="line">        <span class="keyword">print</span> i.find_all(<span class="string">'a'</span>)[<span class="number">1</span>].get(<span class="string">'title'</span>)</div><div class="line">        st = i.find_all(<span class="string">'a'</span>)[<span class="number">1</span>].get(<span class="string">'title'</span>)</div><div class="line">        format = datetime.datetime.strptime(st, <span class="string">'%Y-%m-%d %H:%M'</span>)</div><div class="line">        time_tuples = format.timetuple()</div><div class="line">        <span class="keyword">print</span> int(time.mktime(time_tuples))</div><div class="line">        <span class="keyword">print</span> <span class="string">'*'</span> * <span class="number">30</span></div><div class="line">        <span class="keyword">print</span> i.find(<span class="string">'span'</span>, class_=<span class="string">"other-left"</span>).get_text().split(<span class="string">' '</span>)[<span class="number">-1</span>].rstrip()  </div><div class="line">        name = i.find(<span class="string">'span'</span>, class_=<span class="string">"other-left"</span>).get_text().split(<span class="string">' '</span>)[<span class="number">-1</span>].rstrip()</div><div class="line">        keyword = <span class="string">'虎扑'</span></div><div class="line">        <span class="keyword">if</span> keyword <span class="keyword">in</span> name <span class="keyword">or</span> keyword == name <span class="keyword">is</span> <span class="keyword">True</span>:</div><div class="line">            item = <span class="number">0</span></div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            item = <span class="number">1</span></div><div class="line">        <span class="keyword">print</span> item</div><div class="line">        <span class="keyword">print</span> <span class="string">'*'</span> * <span class="number">20</span></div><div class="line">        <span class="keyword">print</span> i.find_all(<span class="string">'a'</span>)[<span class="number">2</span>].get(<span class="string">'href'</span>)</div><div class="line">        <span class="keyword">print</span> i.find_all(<span class="string">'a'</span>)[<span class="number">3</span>].get(<span class="string">'href'</span>)</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_new_content</span><span class="params">(url)</span>:</span></div><div class="line">    url = url</div><div class="line">    html = get_html_res(url)</div><div class="line">    soup = BeautifulSoup(html, <span class="string">'lxml'</span>)</div><div class="line">    items = []</div><div class="line"><span class="comment">#     if soup.find('div', class_="artical-main-content").img is not None:</span></div><div class="line"><span class="comment">#         content = soup.find('div', class_="artical-main-content")</span></div><div class="line"><span class="comment">#         for link in content.find_all('p'):</span></div><div class="line"><span class="comment">#             if link.find('img') is not None:</span></div><div class="line"><span class="comment">#                 print link.find('img').get('src')</span></div><div class="line"><span class="comment">#     else:</span></div><div class="line"><span class="comment">#         pass</span></div><div class="line">    </div><div class="line">    <span class="keyword">print</span> soup.find(<span class="string">'div'</span>, class_=<span class="string">'artical-content-read'</span>)</div><div class="line"><span class="comment">#     print soup.find('div', class_='artical-importantPic').img.get('alt')</span></div><div class="line"><span class="comment">#     print soup.find('div', class_='artical-importantPic').img.get('src')</span></div><div class="line"><span class="comment">#     print soup.find('div', class_="artical-main-content").get_text()</span></div><div class="line">    <span class="keyword">print</span> soup.find(<span class="string">'div'</span>, class_=<span class="string">"artical-importantPic"</span>).img</div><div class="line">    content = soup.find(<span class="string">'div'</span>, class_=<span class="string">"artical-main-content"</span>) </div><div class="line">    <span class="keyword">for</span> content_html <span class="keyword">in</span> content.find_all(<span class="string">'p'</span>):</div><div class="line">        <span class="keyword">print</span> content_html</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_bbs_info</span><span class="params">(url)</span>:</span></div><div class="line"><span class="comment">#     url = url</span></div><div class="line">    url = url</div><div class="line">    html = get_html_res(url)</div><div class="line">    soup = BeautifulSoup(html, <span class="string">'lxml'</span>)</div><div class="line">    infos = soup.find(<span class="string">'span'</span>, class_=<span class="string">"browse"</span>).get_text().replace(<span class="string">'\n'</span>, <span class="string">''</span>).encode(<span class="string">'utf-8'</span>)</div><div class="line">    comment_num = re.match(<span class="string">'^.*?(\d+).*$'</span>, infos).group(<span class="number">1</span>)</div><div class="line">    bbs_id = url.split(<span class="string">'/'</span>)[<span class="number">-1</span>].split(<span class="string">'.'</span>)[<span class="number">0</span>]</div><div class="line">    browse = get_html_res(<span class="string">'https://msa.hupu.com/thread_hit?tid='</span> + bbs_id)</div><div class="line">    <span class="keyword">print</span> comment_num, browse</div><div class="line">    item = []  <span class="comment"># 用于存标签字段 </span></div><div class="line">    item1 = []  <span class="comment"># 用于存链接</span></div><div class="line">    tags = soup.find(<span class="string">'div'</span>, class_=<span class="string">"basketballTobbs_tag"</span>)</div><div class="line">    <span class="keyword">for</span> tag <span class="keyword">in</span> tags.find_all(<span class="string">"a"</span>):</div><div class="line">        item.append(tag.get(<span class="string">'href'</span>))</div><div class="line">        item1.append(tag.get_text())</div><div class="line">    <span class="keyword">print</span> item, item1</div><div class="line">        </div><div class="line">    </div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_cookies</span><span class="params">(url)</span>:</span></div><div class="line">    url = url </div><div class="line">    session = requests.session()</div><div class="line">    response = session.get(url=url)</div><div class="line">    <span class="keyword">print</span> session.cookies.get_dict()</div><div class="line">    </div><div class="line">    </div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_html_res</span><span class="params">(url)</span>:</span></div><div class="line">    session = requests.session()</div><div class="line">    url = url</div><div class="line">    headers = &#123;</div><div class="line">        <span class="string">'accept'</span>: <span class="string">'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'</span>,</div><div class="line">        <span class="string">'accept-encoding'</span>: <span class="string">'gzip, deflate, br'</span>,</div><div class="line">        <span class="string">'accept-language'</span>: <span class="string">'zh-CN,zh;q=0.9'</span>,</div><div class="line">        <span class="string">'cache-control'</span>: <span class="string">'max-age=0'</span>,</div><div class="line">        <span class="string">'cookie'</span>: <span class="string">'_cnzz_CV30020080=buzi_cookie%7Cdddeb463.80b3.1b1e.9890.4620154a3f87%7C-1; _dacevid3=dddeb463.80b3.1b1e.9890.4620154a3f87; _cnzz_CV30020080=buzi_cookie%7Cdddeb463.80b3.1b1e.9890.4620154a3f87%7C-1; Hm_visit=1568082562621; Hc_visit=1568082562631; sajssdk_2015_cross_new_user=1; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%2216d19010eaf7a9-0e6d57be88ed6f-38677501-1296000-16d19010eb0310%22%2C%22%24device_id%22%3A%2216d19010eaf7a9-0e6d57be88ed6f-38677501-1296000-16d19010eb0310%22%2C%22props%22%3A%7B%7D%7D; __dacevst=f0c555d7.42b2f9a7|1568097712872'</span>,</div><div class="line">        <span class="string">'Referer'</span>: <span class="string">'https://voice.hupu.com/nba'</span>,</div><div class="line">        <span class="string">'user-agent'</span>: <span class="string">'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36'</span></div><div class="line">        &#125;</div><div class="line">    request = session.get(url=url, headers=headers)</div><div class="line">    request.encoding = <span class="string">"utf-8"</span></div><div class="line">    html = request.text</div><div class="line">    <span class="keyword">return</span> html</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></div><div class="line"><span class="comment">#     get_xigua_info("https://www.ixigua.com/i6733070858316677644/")</span></div><div class="line">    get_new_info()</div><div class="line"><span class="comment">#     get_new_content('https://voice.hupu.com/cba/2475206.html')</span></div><div class="line"><span class="comment">#     get_cookies('https://voice.hupu.com/nba')</span></div><div class="line"><span class="comment">#     get_bbs_info('https://bbs.hupu.com/29489225.html')</span></div><div class="line"><span class="comment">#     get_html_res('https://voice.hupu.com/cba/2474694.html')</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    main()</div></pre></td></tr></table></figure>
+<p>其他的感觉也没什么好说的…</p>
+
       
     </div>
     
@@ -445,7 +518,7 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2019年09月11日 - 18:09</p>
+  <p><span>最后更新:</span>2020年05月15日 - 14:05</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
@@ -473,6 +546,16 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+          
+            <a href="/tags/爬虫/" rel="tag"><i class="fa fa-tag"></i> 爬虫</a>
+          
+            <a href="/tags/Scrapy/" rel="tag"><i class="fa fa-tag"></i> Scrapy</a>
+          
+        </div>
+      
 
       
       
@@ -492,7 +575,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/09/11/Anaconda2-3在eclipse中分开下载Python2-3库/" rel="prev" title="Anaconda2/3在eclipse中分开下载Python2/3库">
+              <a href="/2019/09/11/Anaconda2:3在eclipse中分开下载Python2:3库/" rel="prev" title="Anaconda2/3在eclipse中分开下载Python2/3库">
                 Anaconda2/3在eclipse中分开下载Python2/3库 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -586,8 +669,17 @@ var jiathis_config={
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -605,7 +697,7 @@ var jiathis_config={
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">204</span>
+                <span class="site-state-item-count">205</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -616,7 +708,7 @@ var jiathis_config={
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">70</span>
+                <span class="site-state-item-count">71</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -627,7 +719,7 @@ var jiathis_config={
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">104</span>
+                <span class="site-state-item-count">105</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -726,6 +818,22 @@ var jiathis_config={
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简要解析"><span class="nav-number">1.</span> <span class="nav-text">简要解析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码部分"><span class="nav-number">2.</span> <span class="nav-text">代码部分</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -757,7 +865,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      266k
+      269.5k
     </span>
   
 </div>
