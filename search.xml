@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Python复习笔记</title>
+      <link href="/2020/05/23/Python%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <url>/2020/05/23/Python%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<p>太久没动程序了，参加<a href="https://www.kaggle.com/c/competitive-data-science-predict-future-sales" target="_blank" rel="external">Kaggle:Predict Future Sales</a>，顺便将之前学的快速复习一下，在此做个摘抄笔记。</p><a id="more"></a><h1 id="Python-print-函数生成Loading…"><a href="#Python-print-函数生成Loading…" class="headerlink" title="Python print()函数生成Loading…."></a>Python print()函数生成Loading….</h1><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p>以下是 print() 方法的语法:</p><p><code>print(*objects, sep=&#39; &#39;, end=&#39;\n&#39;, file=sys.stdout, flush=False)</code></p><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><ul><li>objects – 复数，表示可以一次输出多个对象。输出多个对象时，需要用 , 分隔。</li><li>sep – 用来间隔多个对象，默认值是一个空格。</li><li>end – 用来设定以什么结尾。默认值是换行符 \n，我们可以换成其他字符串。</li><li>file – 要写入的文件对象。</li><li>flush – 输出是否被缓存通常决定于 file，但如果 flush 关键字参数为 True，流会被强制刷新。</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> time</div><div class="line"></div><div class="line">print(<span class="string">"---RUNOOB EXAMPLE ： Loading 效果---"</span>)</div><div class="line"></div><div class="line">print(<span class="string">"Loading"</span>,end = <span class="string">""</span>)</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">20</span>):</div><div class="line">    print(<span class="string">"."</span>,end = <span class="string">''</span>,flush = <span class="keyword">True</span>)</div><div class="line">    time.sleep(<span class="number">0.5</span>)</div></pre></td></tr></table></figure><blockquote><p>来源：<a href="https://www.runoob.com/python3/python-func-print.html" target="_blank" rel="external">https://www.runoob.com/python3/python-func-print.html</a></p></blockquote><h1 id="help-函数显示自建函数说明"><a href="#help-函数显示自建函数说明" class="headerlink" title="help()函数显示自建函数说明"></a>help()函数显示自建函数说明</h1><p>看程序一目了然：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">least_difference</span><span class="params">(a, b, c)</span>:</span></div><div class="line">    diff1 = abs(a - b)</div><div class="line">    diff2 = abs(b - c)</div><div class="line">    diff3 = abs(a - c)</div><div class="line">    <span class="keyword">return</span> min(diff1, diff2, diff3)</div><div class="line">    </div><div class="line">help(least_difference)</div><div class="line">&gt;&gt;Help on function least_difference <span class="keyword">in</span> module __main__:</div><div class="line"></div><div class="line">least_difference(a, b, c)</div><div class="line"></div><div class="line"><span class="comment">#j加上函数注释</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">least_difference</span><span class="params">(a, b, c)</span>:</span></div><div class="line">    <span class="string">"""Return the smallest difference between any two numbers</span></div><div class="line"><span class="string">    among a, b and c.</span></div><div class="line"><span class="string">    </span></div><div class="line"><span class="string">    &gt;&gt;&gt; least_difference(1, 5, -5)</span></div><div class="line"><span class="string">    4</span></div><div class="line"><span class="string">    """</span></div><div class="line">    diff1 = abs(a - b)</div><div class="line">    diff2 = abs(b - c)</div><div class="line">    diff3 = abs(a - c)</div><div class="line">    <span class="keyword">return</span> min(diff1, diff2, diff3)</div><div class="line">    </div><div class="line">help(least_difference)</div><div class="line">&gt;&gt;Help on function least_difference <span class="keyword">in</span> module __main__:</div><div class="line"></div><div class="line">least_difference(a, b, c)</div><div class="line">    Return the smallest difference between any two numbers</div><div class="line">    among a, b <span class="keyword">and</span> c.</div><div class="line">    </div><div class="line">    &gt;&gt;&gt; least_difference(<span class="number">1</span>, <span class="number">5</span>, <span class="number">-5</span>)</div><div class="line">    <span class="number">4</span></div></pre></td></tr></table></figure><blockquote><p>总结：<strong>加了注释的函数使用help()会展现说明(即函数本身注释说明)。</strong></p></blockquote><h1 id="max-函数调用自建函数"><a href="#max-函数调用自建函数" class="headerlink" title="max()函数调用自建函数"></a>max()函数调用自建函数</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">mod_5</span><span class="params">(x)</span>:</span></div><div class="line">    <span class="string">"""Return the remainder of x after dividing by 5"""</span></div><div class="line">    <span class="keyword">return</span> x % <span class="number">5</span></div><div class="line"></div><div class="line">print(</div><div class="line">    <span class="string">'Which number is biggest?'</span>,</div><div class="line">    max(<span class="number">100</span>, <span class="number">51</span>, <span class="number">14</span>),</div><div class="line">    <span class="string">'Which number is the biggest modulo 5?'</span>,</div><div class="line">    max(<span class="number">100</span>, <span class="number">51</span>, <span class="number">14</span>, key=mod_5),</div><div class="line">    sep=<span class="string">'\n'</span>,</div><div class="line">)</div><div class="line"></div><div class="line">&gt;&gt;</div><div class="line">Which number is biggest?</div><div class="line"><span class="number">100</span></div><div class="line">Which number is the biggest modulo 5?</div><div class="line"><span class="number">14</span></div></pre></td></tr></table></figure><blockquote><p>来源：<a href="https://www.kaggle.com/colinmorris/functions-and-getting-help" target="_blank" rel="external">https://www.kaggle.com/colinmorris/functions-and-getting-help</a></p></blockquote><h1 id="字符串易冲突点"><a href="#字符串易冲突点" class="headerlink" title="字符串易冲突点"></a>字符串易冲突点</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">What you type...What you getexampleprint(example)</div><div class="line">\'    ''What\'s     What's up?      </div><div class="line">\<span class="string">"   "</span><span class="string">"That's \"cool\" That's "</span>cool<span class="string">"</span></div><div class="line"><span class="string">\\   \   "</span>A mountain: /\\<span class="string">"A mountain: /\</span></div><div class="line"><span class="string">\n"</span><span class="number">1</span>\n2 <span class="number">3</span><span class="string">"1</span></div><div class="line"><span class="string">    2 3</span></div><div class="line"><span class="string">    </span></div><div class="line"><span class="string">hello = "</span>hello\nworld<span class="string">" 对等 triplequoted_hello = "</span><span class="string">""</span>hello</div><div class="line">world<span class="string">"""</span></div></pre></td></tr></table></figure><h2 id="str-split-相反对等str-join"><a href="#str-split-相反对等str-join" class="headerlink" title="str.split()相反对等str.join()"></a>str.split()相反对等str.join()</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">datestr = <span class="string">'1956-01-31'</span></div><div class="line">year, month, day = datestr.split(<span class="string">'-'</span>)</div><div class="line">&gt;&gt;</div><div class="line"><span class="number">1956</span> <span class="number">01</span> <span class="number">31</span></div><div class="line"></div><div class="line"><span class="string">'/'</span>.join([month, day, year])</div><div class="line">&gt;&gt;</div><div class="line"><span class="string">'01/31/1956'</span></div></pre></td></tr></table></figure><h2 id="str-format-多种展示方法"><a href="#str-format-多种展示方法" class="headerlink" title="str.format()多种展示方法"></a>str.format()多种展示方法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#直接调用</span></div><div class="line"><span class="string">"&#123;&#125;, you'll always be the &#123;&#125;th planet to me."</span>.format(planet, position)</div><div class="line"></div><div class="line"><span class="comment">#切片调用，可配合运算符等</span></div><div class="line"><span class="string">"&#123;&#125; weighs about &#123;:.2&#125; kilograms (&#123;:.3%&#125; of Earth's mass). It is home to &#123;:,&#125; Plutonians."</span>.format(</div><div class="line">    planet, pluto_mass, pluto_mass / earth_mass, population,</div><div class="line">)</div><div class="line"></div><div class="line"><span class="comment">#索引调用</span></div><div class="line">s = <span class="string">"""Pluto's a &#123;0&#125;.</span></div><div class="line"><span class="string">No, it's a &#123;1&#125;.</span></div><div class="line"><span class="string">&#123;0&#125;!</span></div><div class="line"><span class="string">&#123;1&#125;!"""</span>.format(<span class="string">'planet'</span>, <span class="string">'dwarf planet'</span>)</div><div class="line">print(s)</div></pre></td></tr></table></figure><blockquote><p>来源：<a href="https://www.kaggle.com/colinmorris/strings-and-dictionaries" target="_blank" rel="external">https://www.kaggle.com/colinmorris/strings-and-dictionaries</a></p></blockquote><p>待续….</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>春寒意暖</title>
       <link href="/2020/04/20/%E6%98%A5%E5%AF%92%E6%84%8F%E6%9A%96/"/>
       <url>/2020/04/20/%E6%98%A5%E5%AF%92%E6%84%8F%E6%9A%96/</url>
@@ -171,22 +196,22 @@
       
       <categories>
           
+          <category> Python </category>
+          
           <category> Anaconda </category>
           
           <category> eclipse </category>
-          
-          <category> Python </category>
           
       </categories>
       
       
         <tags>
             
+            <tag> Python </tag>
+            
             <tag> Anaconda </tag>
             
             <tag> eclipse </tag>
-            
-            <tag> Python </tag>
             
         </tags>
       
@@ -875,9 +900,9 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> After Effects CC 2017/2018 </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -904,9 +929,9 @@
       
         <tags>
             
-            <tag> Adobe Premiere(Pro)2018 </tag>
-            
             <tag> 笔记 </tag>
+            
+            <tag> Adobe Premiere(Pro)2018 </tag>
             
         </tags>
       
@@ -1475,20 +1500,20 @@
           
           <category> Kaggle </category>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Kaggle </tag>
             
             <tag> 机器学习 </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -1506,18 +1531,18 @@
       
       <categories>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> 机器学习 </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -1535,18 +1560,18 @@
       
       <categories>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> 机器学习 </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -1595,18 +1620,18 @@
       
       <categories>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> 机器学习 </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -1659,18 +1684,18 @@
       
       <categories>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> 机器学习 </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -1688,18 +1713,18 @@
       
       <categories>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> 机器学习 </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -1717,9 +1742,9 @@
       
       <categories>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
           <category> 数据分析 </category>
           
@@ -1730,9 +1755,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> 机器学习 </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -2197,18 +2222,18 @@
           
           <category> 笔记 </category>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> 机器学习 </tag>
+            
+            <tag> Python </tag>
             
             <tag> 问题记录笔记 </tag>
             
@@ -2895,20 +2920,20 @@
       
       <categories>
           
-          <category> Anaconda </category>
-          
           <category> 软件使用 </category>
           
           <category> Python </category>
+          
+          <category> Anaconda </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Anaconda </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Anaconda </tag>
             
             <tag> Jupyter Notebook </tag>
             
@@ -3346,20 +3371,20 @@
       
       <categories>
           
-          <category> Anaconda </category>
-          
           <category> 软件使用 </category>
           
           <category> 笔记 </category>
+          
+          <category> Anaconda </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Anaconda </tag>
-            
             <tag> 问题记录笔记 </tag>
+            
+            <tag> Anaconda </tag>
             
         </tags>
       
@@ -4450,24 +4475,24 @@
       
       <categories>
           
-          <category> Anaconda </category>
-          
           <category> 软件使用 </category>
           
           <category> 笔记 </category>
           
           <category> Python </category>
           
+          <category> Anaconda </category>
+          
       </categories>
       
       
         <tags>
             
-            <tag> Anaconda </tag>
-            
             <tag> Python </tag>
             
             <tag> 问题记录笔记 </tag>
+            
+            <tag> Anaconda </tag>
             
         </tags>
       
@@ -4649,9 +4674,9 @@
             
             <tag> Mac </tag>
             
-            <tag> Eclipse </tag>
-            
             <tag> iPad </tag>
+            
+            <tag> Eclipse </tag>
             
         </tags>
       
