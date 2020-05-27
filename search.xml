@@ -611,9 +611,9 @@
       
       <categories>
           
-          <category> Python </category>
-          
           <category> Mac </category>
+          
+          <category> Python </category>
           
           <category> PyQT5 </category>
           
@@ -759,9 +759,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> 笔记 </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -941,18 +941,18 @@
       
       <categories>
           
-          <category> 笔记 </category>
-          
           <category> After Effects CC 2017/2018 </category>
+          
+          <category> 笔记 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> After Effects CC 2017/2018 </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -1146,9 +1146,9 @@
       
       <categories>
           
-          <category> 小工具 </category>
-          
           <category> PyQt5 </category>
+          
+          <category> 小工具 </category>
           
           <category> python </category>
           
@@ -1548,11 +1548,11 @@
       
       <categories>
           
-          <category> Python </category>
-          
           <category> Kaggle </category>
           
           <category> 机器学习 </category>
+          
+          <category> Python </category>
           
       </categories>
       
@@ -1581,9 +1581,9 @@
       
       <categories>
           
-          <category> Python </category>
-          
           <category> 机器学习 </category>
+          
+          <category> Python </category>
           
       </categories>
       
@@ -1610,9 +1610,9 @@
       
       <categories>
           
-          <category> Python </category>
-          
           <category> 机器学习 </category>
+          
+          <category> Python </category>
           
       </categories>
       
@@ -1670,9 +1670,9 @@
       
       <categories>
           
-          <category> Python </category>
-          
           <category> 机器学习 </category>
+          
+          <category> Python </category>
           
       </categories>
       
@@ -1701,9 +1701,9 @@
           
           <category> 笔记 </category>
           
-          <category> Eclipse </category>
-          
           <category> 软件使用 </category>
+          
+          <category> Eclipse </category>
           
           <category> Django </category>
           
@@ -1734,9 +1734,9 @@
       
       <categories>
           
-          <category> Python </category>
-          
           <category> 机器学习 </category>
+          
+          <category> Python </category>
           
       </categories>
       
@@ -1763,9 +1763,9 @@
       
       <categories>
           
-          <category> Python </category>
-          
           <category> 机器学习 </category>
+          
+          <category> Python </category>
           
       </categories>
       
@@ -1792,9 +1792,9 @@
       
       <categories>
           
-          <category> Python </category>
-          
           <category> 机器学习 </category>
+          
+          <category> Python </category>
           
           <category> 数据分析 </category>
           
@@ -2070,11 +2070,11 @@
       
         <tags>
             
+            <tag> SS </tag>
+            
             <tag> 科学上网 </tag>
             
             <tag> VPS </tag>
-            
-            <tag> SS </tag>
             
         </tags>
       
@@ -2272,9 +2272,9 @@
           
           <category> 笔记 </category>
           
-          <category> Python </category>
-          
           <category> 机器学习 </category>
+          
+          <category> Python </category>
           
       </categories>
       
@@ -2598,9 +2598,9 @@
       
         <tags>
             
-            <tag> Excel </tag>
-            
             <tag> 笔记 </tag>
+            
+            <tag> Excel </tag>
             
         </tags>
       
@@ -2972,9 +2972,9 @@
           
           <category> Anaconda </category>
           
-          <category> Python </category>
-          
           <category> 软件使用 </category>
+          
+          <category> Python </category>
           
       </categories>
       
@@ -4529,9 +4529,9 @@
           
           <category> Anaconda </category>
           
-          <category> Python </category>
-          
           <category> 软件使用 </category>
+          
+          <category> Python </category>
           
       </categories>
       
@@ -4711,9 +4711,9 @@
           
           <category> 笔记 </category>
           
-          <category> Eclipse </category>
-          
           <category> Mac </category>
+          
+          <category> Eclipse </category>
           
       </categories>
       
@@ -5005,9 +5005,9 @@
           
           <category> 笔记 </category>
           
-          <category> Hadoop </category>
-          
           <category> 软件使用 </category>
+          
+          <category> Hadoop </category>
           
           <category> Mac </category>
           
@@ -5601,11 +5601,11 @@
           
           <category> 笔记 </category>
           
+          <category> 软件使用 </category>
+          
           <category> Hadoop </category>
           
           <category> Eclipse </category>
-          
-          <category> 软件使用 </category>
           
       </categories>
       
@@ -5933,9 +5933,9 @@
       
         <tags>
             
-            <tag> 科学上网 </tag>
-            
             <tag> SS </tag>
+            
+            <tag> 科学上网 </tag>
             
         </tags>
       
