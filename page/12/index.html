@@ -317,6 +317,210 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://liujunjie11.github.io/2018/04/05/关于记录Chromedriver的selenium-common-exceptions-WebDriverException-Message-chromedriver-executable-needs-to-be-in-PATH-Please-see-https-sites-google-com-a-chromium-org-chromedriver-home/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘俊">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/images-111.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LXiHa`Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/05/关于记录Chromedriver的selenium-common-exceptions-WebDriverException-Message-chromedriver-executable-needs-to-be-in-PATH-Please-see-https-sites-google-com-a-chromium-org-chromedriver-home/" itemprop="url">关于记录Chromedriver的selenium.common.exceptions.WebDriverException: Message: 'chromedriver ' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-05T19:46:15+08:00">
+                2018-04-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/网络爬虫/" itemprop="url" rel="index">
+                    <span itemprop="name">网络爬虫</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/04/05/关于记录Chromedriver的selenium-common-exceptions-WebDriverException-Message-chromedriver-executable-needs-to-be-in-PATH-Please-see-https-sites-google-com-a-chromium-org-chromedriver-home/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/04/05/关于记录Chromedriver的selenium-common-exceptions-WebDriverException-Message-chromedriver-executable-needs-to-be-in-PATH-Please-see-https-sites-google-com-a-chromium-org-chromedriver-home/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  213
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>最近学习一些<em>python</em>爬虫的框架，用<em>selenium</em>与<em>Chromedriver</em>插件结合<em>Chrome浏览器</em>来爬去网页源数据。</p>
+<p>发现了如题的错误信息：</p>
+<blockquote>
+<p>selenium.common.exceptions.WebDriverException: Message:<br>  ‘chromedriver ‘ executable needs to be in PATH. Please see<br>  <a href="https://sites.google.com/a/chromium.org/chromedriver/home" target="_blank" rel="external">https://sites.google.com/a/chromium.org/chromedriver/home</a></p>
+</blockquote>
+<p>在已配置好系统环境的前提下，用如下代码指定位置，或者是将<em>Chromedriver</em>插件放在工程文件下，均得到了如上的错误信息。</p>
+<pre><code>from selenium import webdriver
+browser = webdriver.Chrome(&apos;/Users/junjieliu/Downloads/小插件/chromedriver&apos;)
+</code></pre><hr>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/04/05/关于记录Chromedriver的selenium-common-exceptions-WebDriverException-Message-chromedriver-executable-needs-to-be-in-PATH-Please-see-https-sites-google-com-a-chromium-org-chromedriver-home/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+      
+    
+    
+    <div>
+      
+    </div>
+     
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://liujunjie11.github.io/2018/04/03/python3爬取豆瓣Top250电影信息/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1985,17 +2189,6 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Anaconda/" itemprop="url" rel="index">
                     <span itemprop="name">Anaconda</span>
                   </a>
@@ -2009,6 +2202,17 @@
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/软件使用/" itemprop="url" rel="index">
                     <span itemprop="name">软件使用</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
                   </a>
                 </span>
 
@@ -2129,191 +2333,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liujunjie11.github.io/2018/03/20/解决python文件读取时的UnicodeDecodeError-ascii-codec-can-t-decode-byte-0xd4-in-position-904-ordinal-not-in-range-128-问题/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="刘俊">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://liu-1258031152.cos.ap-beijing.myqcloud.com/images-111.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LXiHa`Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/20/解决python文件读取时的UnicodeDecodeError-ascii-codec-can-t-decode-byte-0xd4-in-position-904-ordinal-not-in-range-128-问题/" itemprop="url">解决python文件读取时的UnicodeDecodeError: 'ascii' codec can't decode byte 0xd4 in position 904: ordinal not in range(128)问题</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-20T21:54:55+08:00">
-                2018-03-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/03/20/解决python文件读取时的UnicodeDecodeError-ascii-codec-can-t-decode-byte-0xd4-in-position-904-ordinal-not-in-range-128-问题/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/03/20/解决python文件读取时的UnicodeDecodeError-ascii-codec-can-t-decode-byte-0xd4-in-position-904-ordinal-not-in-range-128-问题/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  204
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>最近在处理一个<em>csv格式</em>的数据时，出现了<em>UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xd4 in<br>  position 904: ordinal not in range(128)</em>的错误告知。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/20/解决python文件读取时的UnicodeDecodeError-ascii-codec-can-t-decode-byte-0xd4-in-position-904-ordinal-not-in-range-128-问题/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-      
-    
-    
-    <div>
-      
-    </div>
-     
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2369,7 +2388,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">208</span>
+                <span class="site-state-item-count">209</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -2380,7 +2399,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">71</span>
+                <span class="site-state-item-count">72</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -2391,7 +2410,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">105</span>
+                <span class="site-state-item-count">106</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -2521,7 +2540,7 @@
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      270.9k
+      271k
     </span>
   
 </div>
