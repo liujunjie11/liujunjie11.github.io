@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2020-05-27T19:58:57.612Z</updated>
+  <updated>2020-05-27T20:08:13.043Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Opencv Python版本错误</title>
-    <link href="https://liujunjie11.github.io/2020/05/28/Opencv%20Python%E7%89%88%E6%9C%AC%E9%94%99%E8%AF%AF/"/>
-    <id>https://liujunjie11.github.io/2020/05/28/Opencv Python版本错误/</id>
+    <title>OpenCV Python版本错误</title>
+    <link href="https://liujunjie11.github.io/2020/05/28/OpenCV%20Python%E7%89%88%E6%9C%AC%E9%94%99%E8%AF%AF/"/>
+    <id>https://liujunjie11.github.io/2020/05/28/OpenCV Python版本错误/</id>
     <published>2020-05-27T19:56:24.000Z</published>
-    <updated>2020-05-27T19:58:57.612Z</updated>
+    <updated>2020-05-27T20:08:13.043Z</updated>
     
     <content type="html"><![CDATA[<p>出现的错误描述：<code>cv2.error: OpenCV(4.2.0) /Users/travis/build/skvark/opencv-python/opencv/modules/imgproc/src/shapedescr.cpp:315: error: (-215:Assertion failed) npoints &gt;= 0 &amp;&amp; (depth == CV_32F || depth == CV_32S) in function &#39;contourArea&#39;</code>。</p><a id="more"></a><h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><p><code>OpenCV-python</code>的版本问题所导致，可适当将现有的版本进行降低再进行尝试。</p>]]></content>
     
@@ -33,12 +33,12 @@
     
       <category term="Python" scheme="https://liujunjie11.github.io/categories/Python/"/>
     
-      <category term="OpenCv" scheme="https://liujunjie11.github.io/categories/OpenCv/"/>
+      <category term="OpenCV" scheme="https://liujunjie11.github.io/categories/OpenCV/"/>
     
     
       <category term="Python" scheme="https://liujunjie11.github.io/tags/Python/"/>
     
-      <category term="OpenCv" scheme="https://liujunjie11.github.io/tags/OpenCv/"/>
+      <category term="OpenCV" scheme="https://liujunjie11.github.io/tags/OpenCV/"/>
     
   </entry>
   

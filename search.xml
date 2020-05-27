@@ -4,9 +4,9 @@
   
     
     <entry>
-      <title>Opencv Python版本错误</title>
-      <link href="/2020/05/28/Opencv%20Python%E7%89%88%E6%9C%AC%E9%94%99%E8%AF%AF/"/>
-      <url>/2020/05/28/Opencv%20Python%E7%89%88%E6%9C%AC%E9%94%99%E8%AF%AF/</url>
+      <title>OpenCV Python版本错误</title>
+      <link href="/2020/05/28/OpenCV%20Python%E7%89%88%E6%9C%AC%E9%94%99%E8%AF%AF/"/>
+      <url>/2020/05/28/OpenCV%20Python%E7%89%88%E6%9C%AC%E9%94%99%E8%AF%AF/</url>
       
         <content type="html"><![CDATA[<p>出现的错误描述：<code>cv2.error: OpenCV(4.2.0) /Users/travis/build/skvark/opencv-python/opencv/modules/imgproc/src/shapedescr.cpp:315: error: (-215:Assertion failed) npoints &gt;= 0 &amp;&amp; (depth == CV_32F || depth == CV_32S) in function &#39;contourArea&#39;</code>。</p><a id="more"></a><h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><p><code>OpenCV-python</code>的版本问题所导致，可适当将现有的版本进行降低再进行尝试。</p>]]></content>
       
@@ -15,7 +15,7 @@
           
           <category> Python </category>
           
-          <category> OpenCv </category>
+          <category> OpenCV </category>
           
       </categories>
       
@@ -24,7 +24,7 @@
             
             <tag> Python </tag>
             
-            <tag> OpenCv </tag>
+            <tag> OpenCV </tag>
             
         </tags>
       
@@ -1177,9 +1177,9 @@
           
           <category> 小工具 </category>
           
-          <category> python </category>
-          
           <category> PyQt5 </category>
+          
+          <category> python </category>
           
           <category> 分词 </category>
           
@@ -1546,9 +1546,9 @@
           
           <category> Python </category>
           
-          <category> OCR </category>
-          
           <category> OpenCV </category>
+          
+          <category> OCR </category>
           
       </categories>
       
@@ -1557,9 +1557,9 @@
             
             <tag> Python </tag>
             
-            <tag> OCR </tag>
-            
             <tag> OpenCV </tag>
+            
+            <tag> OCR </tag>
             
         </tags>
       
