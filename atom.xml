@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2020-05-27T08:19:10.835Z</updated>
+  <updated>2020-05-27T18:58:06.729Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Python中导入包的问题</title>
+    <link href="https://liujunjie11.github.io/2020/05/28/Python%E4%B8%AD%E5%AF%BC%E5%85%A5%E5%8C%85%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>https://liujunjie11.github.io/2020/05/28/Python中导入包的问题/</id>
+    <published>2020-05-27T18:50:38.000Z</published>
+    <updated>2020-05-27T18:58:06.729Z</updated>
+    
+    <content type="html"><![CDATA[<p>解决的问题描述：<code>ModuleNotFoundError: No module named &#39;&#39;; &#39;&#39; is not a package</code>。</p><a id="more"></a><p>在GitHub上下载的一段代码运行出现导入包的错误，如本身有个<code>code</code>的包，其中包含的函数我使用了<code>code.A</code>(代码import code.A)，结果出现了以下错误：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ModuleNotFoundError: No module named <span class="string">'code'</span>; <span class="string">'code'</span> <span class="keyword">is</span> <span class="keyword">not</span> a package</div></pre></td></tr></table></figure><p>后来在eclipse上重新新建了一个Python包，新建的包下边均会出现一个<code>__init__.py</code>，我把这个<code>__init__.py</code>复制了一份，粘贴在了以上出现问题的包中，发现可以正常运行了。</p><h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>新建一个<code>__init__.py</code>即可。</p><h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ul><li><a href="https://blog.51cto.com/2338053/1982977" target="_blank" rel="external">你所不知道的 【ModuleNotFoundError: No module named ‘’; ‘’ is not a package】</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;解决的问题描述：&lt;code&gt;ModuleNotFoundError: No module named &amp;#39;&amp;#39;; &amp;#39;&amp;#39; is not a package&lt;/code&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="https://liujunjie11.github.io/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="https://liujunjie11.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>python pip常用命令</title>
     <link href="https://liujunjie11.github.io/2020/05/27/python%20pip%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <id>https://liujunjie11.github.io/2020/05/27/python pip常用命令/</id>
     <published>2020-05-27T07:27:10.000Z</published>
-    <updated>2020-05-27T08:19:10.835Z</updated>
+    <updated>2020-05-27T18:52:00.339Z</updated>
     
     <content type="html"><![CDATA[<p>最近使用的<code>pip</code>模块的简单记录。</p><a id="more"></a><h1 id="升级pip"><a href="#升级pip" class="headerlink" title="升级pip"></a>升级pip</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python -m pip install --upgrade pip</div></pre></td></tr></table></figure><h1 id="pip使用"><a href="#pip使用" class="headerlink" title="pip使用"></a>pip使用</h1><h2 id="pip安装包"><a href="#pip安装包" class="headerlink" title="pip安装包"></a>pip安装包</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install 安装包名</div></pre></td></tr></table></figure><h2 id="pip安装指定版本包"><a href="#pip安装指定版本包" class="headerlink" title="pip安装指定版本包"></a>pip安装指定版本包</h2><p>指定版本，使用<code>==</code>操作符。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install tensorflow(包名) == <span class="number">1.13</span><span class="number">.1</span></div></pre></td></tr></table></figure><h2 id="pip查看是否已安装"><a href="#pip查看是否已安装" class="headerlink" title="pip查看是否已安装"></a>pip查看是否已安装</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip show --files 安装包名</div></pre></td></tr></table></figure><h2 id="pip列出所有安装的库"><a href="#pip列出所有安装的库" class="headerlink" title="pip列出所有安装的库"></a>pip列出所有安装的库</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip list</div></pre></td></tr></table></figure><h2 id="pip检查哪些包需要更新"><a href="#pip检查哪些包需要更新" class="headerlink" title="pip检查哪些包需要更新"></a>pip检查哪些包需要更新</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">pip list --outdated</div><div class="line">pip list  --outdated --format=columns</div></pre></td></tr></table></figure><h2 id="pip升级包"><a href="#pip升级包" class="headerlink" title="pip升级包"></a>pip升级包</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install --upgrade 要升级的包名</div></pre></td></tr></table></figure><h2 id="pip-批量升级包"><a href="#pip-批量升级包" class="headerlink" title="pip 批量升级包"></a>pip 批量升级包</h2><p>借助<code>pip-review</code>进行包的批量升级操作。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">pip install pip-review</div><div class="line">pip-review --local --interactive</div></pre></td></tr></table></figure><h2 id="可用的pip命令"><a href="#可用的pip命令" class="headerlink" title="可用的pip命令"></a>可用的pip命令</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">&gt;&gt; pip --help</div><div class="line"> </div><div class="line">Usage:  </div><div class="line">pip&lt;command&gt;[options]</div><div class="line"> </div><div class="line">Commands:</div><div class="line">install                    安装包.</div><div class="line">uninstall                  卸载包.</div><div class="line">freeze                     按着一定格式输出已安装包列表</div><div class="line">list                       列出已安装包.</div><div class="line">show                       显示包详细信息.</div><div class="line">search                     搜索包，类似yum里的search.</div><div class="line">wheel                      Buildwheelsfromyourrequirements.</div><div class="line">zip                        不推荐.Zipindividualpackages.</div><div class="line">unzip                      不推荐.Unzipindividualpackages.</div><div class="line">bundle                     不推荐.Createpybundles.</div><div class="line">help                       当前帮助.</div><div class="line"> </div><div class="line">GeneralOptions:</div><div class="line">-h,--help                 显示帮助.</div><div class="line">-v,--verbose              更多的输出，最多可以使用<span class="number">3</span>次</div><div class="line">-V,--version              现实版本信息然后退出.</div><div class="line">-q,--quiet                最少的输出.</div><div class="line">--log-file&lt;path&gt;          覆盖的方式记录verbose错误日志，默认文件：/root/.pip/pip.log</div><div class="line">--log&lt;path&gt;               不覆盖记录verbose输出的日志.</div><div class="line">--proxy&lt;proxy&gt;            Specifyaproxyintheform[user:passwd@]proxy.server:port.</div><div class="line">--timeout&lt;sec&gt;            连接超时时间(默认<span class="number">15</span>秒).</div><div class="line">--exists-action&lt;action&gt;   Defaultactionwhenapathalreadyexists:(s)witch,(i)gnore,(w)ipe,(b)ackup.</div><div class="line">--cert&lt;path&gt;              证书.</div></pre></td></tr></table></figure><h1 id="pip下载过慢的解决方案"><a href="#pip下载过慢的解决方案" class="headerlink" title="pip下载过慢的解决方案"></a>pip下载过慢的解决方案</h1><p><code>pip install 安装包名 -i 镜像源</code>，提升下载/更新速度。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install django -i https://pypi.tuna.tsinghua.edu.cn/simple</div></pre></td></tr></table></figure><p><code>pip</code>镜像可选项：</p><ul><li><p>清华——<br><a href="https://pypi.tuna.tsinghua.edu.cn/simple/" target="_blank" rel="external">https://pypi.tuna.tsinghua.edu.cn/simple/</a></p></li><li><p>中科大——<br><a href="https://pypi.mirrors.ustc.edu.cn/simple/" target="_blank" rel="external">https://pypi.mirrors.ustc.edu.cn/simple/</a></p></li><li><p>阿里云——<br><a href="https://mirrors.aliyun.com/pypi/simple/" target="_blank" rel="external">https://mirrors.aliyun.com/pypi/simple/</a></p></li><li><p>豆瓣——<br><a href="http://pypi.douban.com/simple/" target="_blank" rel="external">http://pypi.douban.com/simple/</a></p></li></ul><h2 id="设为默认配置镜像"><a href="#设为默认配置镜像" class="headerlink" title="设为默认配置镜像"></a>设为默认配置镜像</h2><p>升级 pip 到最新的版本后进行配置：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">pip install pip -U</div><div class="line">pip config set <span class="keyword">global</span>.index-url https://pypi.tuna.tsinghua.edu.cn/simple/</div></pre></td></tr></table></figure><p>此命令行对等于修改文件：</p><h3 id="window端"><a href="#window端" class="headerlink" title="window端"></a>window端</h3><p>在 windows 命令提示符（控制台）中，输入<code>%APPDATA%</code>，进入此目录<br>在该目录下新建名为 pip 的文件夹，然后在其中新建文件 pip.ini。（例如：”C:\Users\Administrator\AppData\Roaming\pip\pip.ini”）</p><p>在文件中填入以下内容并保存（可替换为上述不同的镜像地址）：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[<span class="keyword">global</span>]</div><div class="line">index-url = http://pypi.douban.com/simple</div><div class="line">[install]</div><div class="line">trusted-host=pypi.douban.com</div></pre></td></tr></table></figure><h3 id="Linux-Mac："><a href="#Linux-Mac：" class="headerlink" title="Linux / Mac："></a>Linux / Mac：</h3><p>文件地址为 ~/.pip/pip.conf，其余相同。</p><h3 id="下载超时解决方案"><a href="#下载超时解决方案" class="headerlink" title="下载超时解决方案"></a>下载超时解决方案</h3><ol><li>网速波动影响，多次尝试可解决；</li><li>尝试切换<code>pip</code>源。</li></ol><h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ul><li><p><a href="https://blog.csdn.net/TeFuirnever/article/details/90300861?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-10.nonecase&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-10.nonecase" target="_blank" rel="external">python中pip安装、升级、升级指定的包</a></p></li><li><p><a href="https://blog.csdn.net/liangpingguo/article/details/105928401?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-6" target="_blank" rel="external">Python使用pip更新所有已安装包的方法</a></p></li><li><p><a href="https://zhuanlan.zhihu.com/p/46975553" target="_blank" rel="external">pip下载python库太慢怎么办？</a></p></li></ul>]]></content>
     
@@ -31,10 +53,10 @@
     
     </summary>
     
-      <category term="python" scheme="https://liujunjie11.github.io/categories/python/"/>
+      <category term="Python" scheme="https://liujunjie11.github.io/categories/Python/"/>
     
     
-      <category term="python" scheme="https://liujunjie11.github.io/tags/python/"/>
+      <category term="Python" scheme="https://liujunjie11.github.io/tags/Python/"/>
     
   </entry>
   
@@ -472,35 +494,6 @@
     
     
       <category term="笔记" scheme="https://liujunjie11.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac上用iMovie为视频加上水印</title>
-    <link href="https://liujunjie11.github.io/2019/04/12/Mac%E4%B8%8A%E7%94%A8iMovie%E4%B8%BA%E8%A7%86%E9%A2%91%E5%8A%A0%E4%B8%8Alogo%E6%B0%B4%E5%8D%B0/"/>
-    <id>https://liujunjie11.github.io/2019/04/12/Mac上用iMovie为视频加上logo水印/</id>
-    <published>2019-04-12T09:35:13.000Z</published>
-    <updated>2019-04-12T10:59:30.066Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近用到的iMovie有点多，研究了一下怎么在这个软件上为视频加上水印，在此记录以观后效之用。</p><iframe width="500" height="315" src="https://www.youtube.com/embed/fNIom-y2vcI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><a id="more"></a><p>在此之前必须要有一张自己的<code>.PNG</code>格式的图片，也就是要嵌入视频中的水印部分。</p><p>一. 在视频已经编辑好之后，将此图片拖入软件中：</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/Apr-12-2019%2017-48-08.gif" alt=""></p><p>二. 并且将图片拉至覆盖全视频：</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/Apr-12-2019%2017-48-27.gif" alt=""></p><p>三. 设置画中画以及摆设位置：</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/Apr-12-2019%2017-48-44.gif" alt=""></p><blockquote><p>设置完之后预览，你会发现视频中全程都有这个水印了！</p></blockquote><p>四. 保存文件。大功告成！</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近用到的iMovie有点多，研究了一下怎么在这个软件上为视频加上水印，在此记录以观后效之用。&lt;/p&gt;
-&lt;iframe width=&quot;500&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/fNIom-y2vcI&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
-    
-    </summary>
-    
-      <category term="软件使用" scheme="https://liujunjie11.github.io/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
-    
-      <category term="Mac" scheme="https://liujunjie11.github.io/categories/Mac/"/>
-    
-      <category term="iMovie" scheme="https://liujunjie11.github.io/categories/iMovie/"/>
-    
-    
-      <category term="Mac" scheme="https://liujunjie11.github.io/tags/Mac/"/>
-    
-      <category term="iMovie" scheme="https://liujunjie11.github.io/tags/iMovie/"/>
     
   </entry>
   

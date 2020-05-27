@@ -321,34 +321,6 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2020/05/27/python pip常用命令/" itemprop="url">
-              
-                <span itemprop="name">python pip常用命令</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-05-27T15:27:10+08:00"
-              content="2020-05-27" >
-          05-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
             <a class="post-title-link" href="/2019/03/03/python分词结合Pyqt5：简单文章查重小工具/" itemprop="url">
               
                 <span itemprop="name">python分词结合Pyqt5：简单文章查重小工具</span>
@@ -426,7 +398,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">207</span>
+                <span class="site-state-item-count">208</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -578,7 +550,7 @@
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      270.8k
+      270.9k
     </span>
   
 </div>
@@ -1097,7 +1069,19 @@ translateInitilization();
 
 </body>
 </html>
- = position + word.length;
+t = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
                     }
                     if(end > content.length){
                       end = content.length;

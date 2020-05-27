@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Python中导入包的问题</title>
+      <link href="/2020/05/28/Python%E4%B8%AD%E5%AF%BC%E5%85%A5%E5%8C%85%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+      <url>/2020/05/28/Python%E4%B8%AD%E5%AF%BC%E5%85%A5%E5%8C%85%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<p>解决的问题描述：<code>ModuleNotFoundError: No module named &#39;&#39;; &#39;&#39; is not a package</code>。</p><a id="more"></a><p>在GitHub上下载的一段代码运行出现导入包的错误，如本身有个<code>code</code>的包，其中包含的函数我使用了<code>code.A</code>(代码import code.A)，结果出现了以下错误：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ModuleNotFoundError: No module named <span class="string">'code'</span>; <span class="string">'code'</span> <span class="keyword">is</span> <span class="keyword">not</span> a package</div></pre></td></tr></table></figure><p>后来在eclipse上重新新建了一个Python包，新建的包下边均会出现一个<code>__init__.py</code>，我把这个<code>__init__.py</code>复制了一份，粘贴在了以上出现问题的包中，发现可以正常运行了。</p><h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>新建一个<code>__init__.py</code>即可。</p><h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ul><li><a href="https://blog.51cto.com/2338053/1982977" target="_blank" rel="external">你所不知道的 【ModuleNotFoundError: No module named ‘’; ‘’ is not a package】</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>python pip常用命令</title>
       <link href="/2020/05/27/python%20pip%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
       <url>/2020/05/27/python%20pip%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
@@ -13,14 +38,14 @@
       
       <categories>
           
-          <category> python </category>
+          <category> Python </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> python </tag>
+            <tag> Python </tag>
             
         </tags>
       
@@ -586,9 +611,9 @@
       
       <categories>
           
-          <category> Mac </category>
-          
           <category> Python </category>
+          
+          <category> Mac </category>
           
           <category> PyQT5 </category>
           
@@ -734,9 +759,9 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -954,9 +979,9 @@
       
         <tags>
             
-            <tag> Adobe Premiere(Pro)2018 </tag>
-            
             <tag> 笔记 </tag>
+            
+            <tag> Adobe Premiere(Pro)2018 </tag>
             
         </tags>
       
@@ -1121,11 +1146,11 @@
       
       <categories>
           
-          <category> python </category>
-          
           <category> 小工具 </category>
           
           <category> PyQt5 </category>
+          
+          <category> python </category>
           
           <category> 分词 </category>
           
@@ -1136,9 +1161,9 @@
             
             <tag> 机器学习 </tag>
             
-            <tag> python </tag>
-            
             <tag> PyQt5 </tag>
+            
+            <tag> python </tag>
             
         </tags>
       
@@ -1523,11 +1548,11 @@
       
       <categories>
           
+          <category> Python </category>
+          
           <category> Kaggle </category>
           
           <category> 机器学习 </category>
-          
-          <category> Python </category>
           
       </categories>
       
@@ -1556,9 +1581,9 @@
       
       <categories>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
       </categories>
       
@@ -1585,9 +1610,9 @@
       
       <categories>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
       </categories>
       
@@ -1645,9 +1670,9 @@
       
       <categories>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
       </categories>
       
@@ -1676,9 +1701,9 @@
           
           <category> 笔记 </category>
           
-          <category> 软件使用 </category>
-          
           <category> Eclipse </category>
+          
+          <category> 软件使用 </category>
           
           <category> Django </category>
           
@@ -1709,9 +1734,9 @@
       
       <categories>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
       </categories>
       
@@ -1738,9 +1763,9 @@
       
       <categories>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
       </categories>
       
@@ -1767,9 +1792,9 @@
       
       <categories>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
           <category> 数据分析 </category>
           
@@ -2045,11 +2070,11 @@
       
         <tags>
             
-            <tag> SS </tag>
-            
             <tag> 科学上网 </tag>
             
             <tag> VPS </tag>
+            
+            <tag> SS </tag>
             
         </tags>
       
@@ -2247,9 +2272,9 @@
           
           <category> 笔记 </category>
           
-          <category> 机器学习 </category>
-          
           <category> Python </category>
+          
+          <category> 机器学习 </category>
           
       </categories>
       
@@ -2573,9 +2598,9 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> Excel </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -2947,9 +2972,9 @@
           
           <category> Anaconda </category>
           
-          <category> 软件使用 </category>
-          
           <category> Python </category>
+          
+          <category> 软件使用 </category>
           
       </categories>
       
@@ -4504,9 +4529,9 @@
           
           <category> Anaconda </category>
           
-          <category> 软件使用 </category>
-          
           <category> Python </category>
+          
+          <category> 软件使用 </category>
           
       </categories>
       
@@ -4686,9 +4711,9 @@
           
           <category> 笔记 </category>
           
-          <category> Mac </category>
-          
           <category> Eclipse </category>
+          
+          <category> Mac </category>
           
       </categories>
       
@@ -5578,9 +5603,9 @@
           
           <category> Hadoop </category>
           
-          <category> 软件使用 </category>
-          
           <category> Eclipse </category>
+          
+          <category> 软件使用 </category>
           
       </categories>
       
@@ -5908,9 +5933,9 @@
       
         <tags>
             
-            <tag> SS </tag>
-            
             <tag> 科学上网 </tag>
+            
+            <tag> SS </tag>
             
         </tags>
       
