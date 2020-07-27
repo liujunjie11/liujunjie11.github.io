@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2020-07-21T09:56:26.437Z</updated>
+  <updated>2020-07-27T16:23:36.045Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>什么样的自我</title>
+    <link href="https://liujunjie11.github.io/2020/07/28/%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E8%87%AA%E6%88%91/"/>
+    <id>https://liujunjie11.github.io/2020/07/28/什么样的自我/</id>
+    <published>2020-07-27T16:13:56.000Z</published>
+    <updated>2020-07-27T16:23:36.045Z</updated>
+    
+    <content type="html"><![CDATA[<p>妈妈有小病住院，在今日还动了手术，而我没有去陪伴她，下午兄长打电话过来，说妈妈哭了，感觉她心情很不好，我顿时也感觉自己的浅薄与可笑。</p><a id="more"></a><p>有时我一直以自我的要求去看待事物与周围的人事，并且一直以不拘小情来鞭策自己，但却面对于未曾结识之人的一丝情意与馈赠，一味的想着报恩抱德，平时也总是以“以德报怨”“有血有肉”来说服自己并且鞭策自己，不想如今面对于父母的大恩大德，我又是这般狼狈可笑的模样。</p><p>一面以所谓的自我来试图说服自己，又一面刻意抵制传统的会意，却不想啊却不想我那时刻躺在病床上无助且脆弱的母亲…我是个不折不扣的混蛋罢。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;妈妈有小病住院，在今日还动了手术，而我没有去陪伴她，下午兄长打电话过来，说妈妈哭了，感觉她心情很不好，我顿时也感觉自己的浅薄与可笑。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="笔记" scheme="https://liujunjie11.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://liujunjie11.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>医院</title>
@@ -464,40 +486,6 @@
     
     
       <category term="笔记" scheme="https://liujunjie11.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于iPhone已购买app应用在iPad上下载使用</title>
-    <link href="https://liujunjie11.github.io/2019/05/16/%E5%85%B3%E4%BA%8EiPhone%E5%B7%B2%E8%B4%AD%E4%B9%B0app%E5%BA%94%E7%94%A8%E5%9C%A8iPad%E4%B8%8A%E4%B8%8B%E8%BD%BD%E4%BD%BF%E7%94%A8/"/>
-    <id>https://liujunjie11.github.io/2019/05/16/关于iPhone已购买app应用在iPad上下载使用/</id>
-    <published>2019-05-16T11:41:03.000Z</published>
-    <updated>2019-05-16T11:56:53.335Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天在iPhone上购买了一个应用，发现在iPad上提示还有要付款的按钮，现在已解决，在此记录一下。</p><a id="more"></a><p>平时经常可在<code>AppStore</code>一个应用上写着<code>提供iPhone App</code>或者是<code>提供iPad App</code>，实际上，<strong>在iPhone中购买了之后，在iPad中是可以免费下载的，也就是一边设备购买付款成功了之后，在另一边设备登陆同一个Apple ID的情况下也是可以不必再次付款下载的，比如在iPhone上已购买下载了，这样在iPad上登陆同一个Apple ID搜索到这个购买的app是可以直接进行下载的。<code>iPhone App</code>/<code>iPad App</code>就是一次付款，两边使用的。</strong></p><p>如果先在iPhone/iPad上进行付款购买了一款app应用，但是基本上在iPad/iPhone上还是显示“付款金额的按钮”，这时点击这个按钮会弹出一个窗口提示“已购买了，可免费下载”(前提是同一个已付款购买的Apple ID的登陆)。</p><p>另外小记一下在使用<code>Apple ID</code>付款购买之后，购买记录显示其处于“待处理”并且没有单号编码出现的情况下的状态，<strong>其实这属于正常的等待行为，因为在与Apple交易付款成功需要一定的时间过渡，耐心等待单号编码出来，此时即代表与Apple交易付款成功了。这种情况可能会影响上面说的“一次购买，两边使用”的情况，耐心等待“待处理”的字样变成单号编码交易成功，之后再尝试也是可以的。</strong></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今天在iPhone上购买了一个应用，发现在iPad上提示还有要付款的按钮，现在已解决，在此记录一下。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Mac" scheme="https://liujunjie11.github.io/categories/Mac/"/>
-    
-      <category term="iPhone" scheme="https://liujunjie11.github.io/categories/iPhone/"/>
-    
-      <category term="iPad" scheme="https://liujunjie11.github.io/categories/iPad/"/>
-    
-      <category term="app应用" scheme="https://liujunjie11.github.io/categories/app%E5%BA%94%E7%94%A8/"/>
-    
-    
-      <category term="Mac" scheme="https://liujunjie11.github.io/tags/Mac/"/>
-    
-      <category term="iPad" scheme="https://liujunjie11.github.io/tags/iPad/"/>
-    
-      <category term="iPhone" scheme="https://liujunjie11.github.io/tags/iPhone/"/>
-    
-      <category term="app应用" scheme="https://liujunjie11.github.io/tags/app%E5%BA%94%E7%94%A8/"/>
     
   </entry>
   
