@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="LXiHa`Notes">
 <meta property="og:description" content="最近因为需求想自己搭建一个VPS加SS应用。用的是Vultr这个平台。 唉…这东西的教程已经是满大街都是了，我就不重复造轮子了，现在的轮子还没有失效。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-03-11T17:59:51.630Z">
+<meta property="og:updated_time" content="2021-12-09T09:44:44.159Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="科学上网，自建VPS-SS应用">
 <meta name="twitter:description" content="最近因为需求想自己搭建一个VPS加SS应用。用的是Vultr这个平台。 唉…这东西的教程已经是满大街都是了，我就不重复造轮子了，现在的轮子还没有失效。">
@@ -583,10 +583,11 @@
 <p>其中的测试环境为：<a href="https://www.bandwagonhost.net/5355.html" target="_blank" rel="external">CentOS 8</a></p>
 </blockquote>
 <h2 id="关于将系统从CentOS7迁移到CentOS8的变动"><a href="#关于将系统从CentOS7迁移到CentOS8的变动" class="headerlink" title="关于将系统从CentOS7迁移到CentOS8的变动"></a>关于将系统从<code>CentOS7</code>迁移到<code>CentOS8</code>的变动</h2><p>第一在<code>CentoOS8</code>中使用上方的命令已经失效了。下方是新的命令(亲测有效)：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">1、下载脚本</div><div class="line">一键脚本已集成TCP优化、自动开启Google BBR（限 4.9 或更高版本内核）、自动安装 shadowsocks-libev</div><div class="line"></div><div class="line">wget https://down.24kplus.com/linux/shadowsocks/centos-shadowsocks-libev.sh</div><div class="line">2、执行脚本进行安装</div><div class="line">chmod +x centos-shadowsocks-libev.sh &amp;&amp; ./centos-shadowsocks-libev.sh</div><div class="line"></div><div class="line">3、根据shell脚本提示输入相关信息</div><div class="line">1、提示设置SS密码，输入自定义密码后按回车，也可以直接按回车使用默认密码</div><div class="line">2、接下来选择SS要使用的服务器端口，输入自己喜欢的端口， 也可以直接按回车使用默认端口</div><div class="line">3、 然后选择加密方式（仅保留相对安全的加密方式）</div><div class="line">4、 安装完成后，记住各项信息，在客户端连接时需要用到</div><div class="line"></div><div class="line">4、查看配置</div><div class="line">cat /etc/shadowsocks-libev/config.json</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">1、下载脚本</div><div class="line">一键脚本已集成TCP优化、自动开启Google BBR（限 4.9 或更高版本内核）、自动安装 shadowsocks-libev</div><div class="line"></div><div class="line">wget https://down.24kplus.com/linux/shadowsocks/centos-shadowsocks-libev.sh</div><div class="line">2、执行脚本进行安装</div><div class="line">chmod +x centos-shadowsocks-libev.sh &amp;&amp; ./centos-shadowsocks-libev.sh</div><div class="line"></div><div class="line">3、根据shell脚本提示输入相关信息</div><div class="line">1、提示设置SS密码，输入自定义密码后按回车，也可以直接按回车使用默认密码</div><div class="line">2、接下来选择SS要使用的服务器端口，输入自己喜欢的端口， 也可以直接按回车使用默认端口</div><div class="line">3、然后选择加密方式（仅保留相对安全的加密方式）</div><div class="line">4、安装完成后，记住各项信息，在客户端连接时需要用到</div><div class="line"></div><div class="line">4、查看配置</div><div class="line">cat /etc/shadowsocks-libev/config.json</div></pre></td></tr></table></figure>
 <blockquote>
 <p>具体的图文教程可参考：<a href="https://www.24kplus.com/linux/1371.html" target="_blank" rel="external">https://www.24kplus.com/linux/1371.html</a></p>
 </blockquote>
+<p>关于对<code>shadowsocks-libev</code>的介绍及其他具体使用可见其<a href="https://github.com/shadowsocks/shadowsocks-libev" target="_blank" rel="external">GitHub地址</a>。另外，关于<a href="https://gfw.report/blog/ss_tutorial/zh/" target="_blank" rel="external">如何部署一台抗封锁的Shadowsocks-libev服务器</a>。如上。</p>
 <h1 id="关于V2Ray的收藏链接-备用取代SS"><a href="#关于V2Ray的收藏链接-备用取代SS" class="headerlink" title="关于V2Ray的收藏链接(备用取代SS)"></a>关于V2Ray的收藏链接(备用取代SS)</h1><ul>
 <li><p><a href="https://www.hijk.pw/centos-one-click-install-v2ray/" target="_blank" rel="external">V2Ray一键脚本</a></p>
 </li>
@@ -659,7 +660,7 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 刘俊 的个人博客">刘俊</a></p>
-  <p><span>最后更新:</span>2020年03月12日 - 01:03</p>
+  <p><span>最后更新:</span>2021年12月09日 - 17:12</p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
