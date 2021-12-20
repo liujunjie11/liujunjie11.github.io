@@ -1179,9 +1179,9 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> After Effects CC 2017/2018 </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -1199,18 +1199,18 @@
       
       <categories>
           
-          <category> Adobe Premiere(Pro)2018 </category>
-          
           <category> 笔记 </category>
+          
+          <category> Adobe Premiere(Pro)2018 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Adobe Premiere(Pro)2018 </tag>
-            
             <tag> 笔记 </tag>
+            
+            <tag> Adobe Premiere(Pro)2018 </tag>
             
         </tags>
       
@@ -1375,9 +1375,9 @@
       
       <categories>
           
-          <category> PyQt5 </category>
-          
           <category> 小工具 </category>
+          
+          <category> PyQt5 </category>
           
           <category> python </category>
           
@@ -1777,11 +1777,11 @@
       
       <categories>
           
+          <category> Kaggle </category>
+          
           <category> 机器学习 </category>
           
           <category> Python </category>
-          
-          <category> Kaggle </category>
           
       </categories>
       
@@ -1790,9 +1790,9 @@
             
             <tag> Python </tag>
             
-            <tag> 机器学习 </tag>
-            
             <tag> Kaggle </tag>
+            
+            <tag> 机器学习 </tag>
             
         </tags>
       
@@ -2069,9 +2069,9 @@
             
             <tag> 教程笔记 </tag>
             
-            <tag> Mac </tag>
-            
             <tag> 机器学习 </tag>
+            
+            <tag> Mac </tag>
             
             <tag> LightGBM </tag>
             
@@ -2106,9 +2106,9 @@
             
             <tag> 教程笔记 </tag>
             
-            <tag> Mac </tag>
-            
             <tag> 机器学习 </tag>
+            
+            <tag> Mac </tag>
             
             <tag> Xgboost </tag>
             
@@ -2512,9 +2512,9 @@
             
             <tag> Python </tag>
             
-            <tag> 问题记录笔记 </tag>
-            
             <tag> 机器学习 </tag>
+            
+            <tag> 问题记录笔记 </tag>
             
         </tags>
       
@@ -3199,9 +3199,9 @@
       
       <categories>
           
-          <category> Anaconda </category>
-          
           <category> 软件使用 </category>
+          
+          <category> Anaconda </category>
           
           <category> Python </category>
           
@@ -3652,9 +3652,9 @@
           
           <category> 笔记 </category>
           
-          <category> Anaconda </category>
-          
           <category> 软件使用 </category>
+          
+          <category> Anaconda </category>
           
       </categories>
       
@@ -4756,9 +4756,9 @@
           
           <category> 笔记 </category>
           
-          <category> Anaconda </category>
-          
           <category> 软件使用 </category>
+          
+          <category> Anaconda </category>
           
           <category> Python </category>
           
