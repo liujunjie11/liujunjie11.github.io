@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2022-02-03T08:08:25.905Z</updated>
+  <updated>2022-02-12T08:33:38.056Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>囚</title>
+    <link href="https://liujunjie11.github.io/2022/02/12/%E5%9B%9A/"/>
+    <id>https://liujunjie11.github.io/2022/02/12/囚/</id>
+    <published>2022-02-12T06:50:08.000Z</published>
+    <updated>2022-02-12T08:33:38.056Z</updated>
+    
+    <content type="html"><![CDATA[<p>迷茫，还是迷茫。快乐，倒也快乐。永远也无法逃脱“囚徒”的命运。</p><a id="more"></a><p>到底什么才是内心真正的富足呢？有时沉沁在书海里不问世事，尽量用音像去填补剩余的空虚，久而久之，去发掘所谓的新奇倒也有些腻烦了。去寻求这世间情爱，去体验更多的喜哀，丰富所谓的人生吗…只是感觉无趣且后怕。去无奈接受这变质的情感，说服自己去妥协接受去感受，别扭别扭还是别扭…心神不安，又去如何感受这样的情感带来的片刻美妙，没有准备好迎接这一切的到来，不想去面对现实的冰冷，此时此刻，好像变成一棵树，去与自然作伴，去与鸟儿交耳，去感受阳光的慰抚，也去感受寒冬的侵蚀…</p><p>我在想，这世间所谓的内心的富足是否就是一种麻痹自我意识的妥协与自我敷衍呢。去选择一份发自内心热爱的事业，去感受其中带来的快感与快乐，但到梦醒时分却一样感到无力迷茫，恍惚一生，碌碌无为去换取短暂的心安，这便是人生的煎熬罢。一味尝试着去通晓万物之理，去体会其中的妙不可言，去获取其中带来的欣愉，沉醉在那样不能言语的美梦中去。</p><p>…</p><p>嘴角带着微笑，去接受自然的馈赠，去欣然接受未知的安排，去幻想体验新奇又神秘的未来。去攻克艰难，去获取快感，再次沉醉于当下会即刻消逝的美好感觉。在身心痛苦时想起这时的美好，在美好时分去忘却所有忧愁，活得个干净利落，活得个有血有肉去体会世间所有的有情有义。</p><p>去细腻入微感受字间的温柔，去触碰抚摸体会周围的生意，去构造、沉醉在那无以言表的深远意境。那是我的温柔乡。</p><p>人生，是两个极端：喜与悲。是四种味道：酸、甜、苦、辣。</p><p>嘘～别再多言，去倾心体会。对，去甘愿做个乐在其中的“囚徒”，去甘愿做个悠然自得的痴子，去甘愿做个清醒自扰的庸人。去发掘，去感受，去体会，去忘情麻醉、沉醉…反反复复，乐此不疲。这就是我想要的人生。</p><p>喂喂～别深陷其中无法自拔，毕竟谁也无法免俗。</p><p>言毕…2022年估计又能敷衍过去了，嘿嘿～</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;迷茫，还是迷茫。快乐，倒也快乐。永远也无法逃脱“囚徒”的命运。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="笔记" scheme="https://liujunjie11.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://liujunjie11.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>梦</title>
@@ -448,36 +470,6 @@
       <category term="爬虫" scheme="https://liujunjie11.github.io/tags/%E7%88%AC%E8%99%AB/"/>
     
       <category term="Scrapy" scheme="https://liujunjie11.github.io/tags/Scrapy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Anaconda2/3在eclipse中分开下载Python2/3库</title>
-    <link href="https://liujunjie11.github.io/2019/09/11/Anaconda2:3%E5%9C%A8eclipse%E4%B8%AD%E5%88%86%E5%BC%80%E4%B8%8B%E8%BD%BDPython2:3%E5%BA%93/"/>
-    <id>https://liujunjie11.github.io/2019/09/11/Anaconda2:3在eclipse中分开下载Python2:3库/</id>
-    <published>2019-09-11T10:34:16.000Z</published>
-    <updated>2020-05-04T12:09:06.768Z</updated>
-    
-    <content type="html"><![CDATA[<p>记录一下在我使用eclipse上的Python插件PyDev结合Anaconda2/3下载相关Python库的过程，我使用的是MacBook Pro。</p><a id="more"></a><p>实际上有两种可操作的下载方式：</p><ul><li>使用命令行下载</li><li>结合PyDev设置下载</li></ul><h1 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h1><ul><li>需要将Anaconda2和Anaconda3的版本分别安装成功在电脑上</li><li>安装eclipse以及Pydev相关插件</li></ul><h1 id="结合命令行下载"><a href="#结合命令行下载" class="headerlink" title="结合命令行下载"></a>结合命令行下载</h1><p>一般在成功安装Anaconda2和Anaconda3之后均需要环境配置，很简单，即使用相关命令打开Mac终端系统文件配置，添加入Anaconda2和Anaconda3的文件路径，然后快速使命令生效即可。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#vim编译器打开相关文件</span></div><div class="line">vim ~/.bash_profile</div><div class="line"></div><div class="line"><span class="comment">#一般的配置即添加相关路径即可</span></div><div class="line">export PATH=/opt/local/bin:/opt/local/sbin:$PATH</div><div class="line"><span class="comment">#如下我的配置</span></div><div class="line"><span class="comment"># added by Anaconda2 5.1.0 installer</span></div><div class="line">export PATH=<span class="string">"/anaconda2/bin:$PATH"</span></div><div class="line"></div><div class="line"><span class="comment"># added by Anaconda3 5.1.0 installer</span></div><div class="line">export PATH=<span class="string">"/anaconda3/bin:$PATH"</span></div><div class="line"></div><div class="line"><span class="comment">#使得命令快速生效</span></div><div class="line">source ~/.bash_profile</div></pre></td></tr></table></figure><blockquote><p>具体可参考：<a href="https://www.jianshu.com/p/acb1f062a925" target="_blank" rel="external">MAC 设置环境变量PATH 和 查看PATH</a></p></blockquote><p>在配置好以上环境问题之后，这样便使得：</p><ul><li>Anaconda2中的python2版本替代了系统默认的python2</li><li>Anaconda3中的python3版本替代了系统默认的python3</li></ul><p>这样便可以使用pip命令分别安装相关package了，非常方便：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#python2下载package</span></div><div class="line">py <span class="number">-2</span> -m pip install *</div><div class="line"></div><div class="line"><span class="comment">#python3下载package</span></div><div class="line">py <span class="number">-3</span> -m pip install *</div></pre></td></tr></table></figure><p>另外提示一下，Anaconda2与Anaconda3的安装顺序决定了系统的默认python版本，比如我是先安装的Anaconda2，后来安装的Anaconda3中的Python3即为系统的python版本了，在使用<code>pip install *</code>时直接下载到Anaconda3的python3中的package目录。</p><blockquote><p>这里参考了：<a href="https://blog.csdn.net/qq_39081974/java/article/details/79716942" target="_blank" rel="external">python2和python3分别安装包</a></p></blockquote><h1 id="结合PyDev设置下载"><a href="#结合PyDev设置下载" class="headerlink" title="结合PyDev设置下载"></a>结合PyDev设置下载</h1><h2 id="导入Anaconda2与Anaconda3中的python"><a href="#导入Anaconda2与Anaconda3中的python" class="headerlink" title="导入Anaconda2与Anaconda3中的python"></a>导入Anaconda2与Anaconda3中的python</h2><p>这一个方法当然需要先将eclipse以及相关的Pydev插件安装好，另外需要将安装好的Anaconda2与Anaconda3中的python导入进去。</p><ul><li>Project -&gt; Properties -&gt; PyDev - Interpreter/Grammar</li></ul><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/May-04-2020%2019-51-09.gif" alt=""></p><p>之后在此界面添加安装Anaconda2与Anaconda3的python源路径即可，或者可以试试<code>Quick Auto - Config</code>快速找到并且添加系统中有效的python源。</p><ul><li>New… -&gt; Browse相关python源路径即可</li></ul><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/May-04-2020%2019-51-50.gif" alt=""></p><ul><li>Quick Auto - Config可快速找到系统并且添加有效python源</li></ul><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/May-04-2020%2019-52-14.gif" alt=""></p><blockquote><p>这个不是很准确，有时候并不能起到实质性作用，推荐自己手动添加。</p></blockquote><h2 id="分别手动选择pip下载package"><a href="#分别手动选择pip下载package" class="headerlink" title="分别手动选择pip下载package"></a>分别手动选择pip下载package</h2><p>首先确定已经将Anaconda2与Anaconda3的python源路径添加成功，这样才能使得eclipse识别已有的package。</p><p>分别点击Anaconda2与Anaconda3的python源路径会发现下方会出现eclipse已经识别的package以及相关目录结构。</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/May-04-2020%2019-53-25.gif" alt=""></p><p>这时仅需要点击在右的<code>Install/Uninstall with pip</code>使用pip下载package，或者<code>Install/Uninstall with conda</code>使用conda命令下载package入相对应的Anaconda2与Anaconda3。</p><p><img src="https://liu-1258031152.cos.ap-beijing.myqcloud.com/May-04-2020%2019-54-00.gif" alt=""></p><p>这样就完成了分别下载package的任务，以前还是小白的时候不懂，现在经过摸索之后慢慢明白了该怎么去处理Anaconda2与Anaconda3分别下载package的问题，特在此记录下来。</p><h1 id="额外可参考链接"><a href="#额外可参考链接" class="headerlink" title="额外可参考链接"></a>额外可参考链接</h1><ul><li><a href="https://pip.pypa.io/en/stable/" target="_blank" rel="external">pip官网文档</a></li><li><a href="https://www.eclipse.org/" target="_blank" rel="external">Eclipse官网</a></li><li><a href="https://www.anaconda.com/" target="_blank" rel="external">Anaconda官网</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;记录一下在我使用eclipse上的Python插件PyDev结合Anaconda2/3下载相关Python库的过程，我使用的是MacBook Pro。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Anaconda" scheme="https://liujunjie11.github.io/categories/Anaconda/"/>
-    
-      <category term="eclipse" scheme="https://liujunjie11.github.io/categories/eclipse/"/>
-    
-      <category term="Python" scheme="https://liujunjie11.github.io/categories/Python/"/>
-    
-    
-      <category term="Anaconda" scheme="https://liujunjie11.github.io/tags/Anaconda/"/>
-    
-      <category term="eclipse" scheme="https://liujunjie11.github.io/tags/eclipse/"/>
-    
-      <category term="Python" scheme="https://liujunjie11.github.io/tags/Python/"/>
     
   </entry>
   
