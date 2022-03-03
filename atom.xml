@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2022-03-02T06:48:59.106Z</updated>
+  <updated>2022-03-03T09:07:41.541Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Forever Young</title>
+    <link href="https://liujunjie11.github.io/2022/03/03/Forever%20Young/"/>
+    <id>https://liujunjie11.github.io/2022/03/03/Forever Young/</id>
+    <published>2022-03-03T07:10:26.000Z</published>
+    <updated>2022-03-03T09:07:41.541Z</updated>
+    
+    <content type="html"><![CDATA[<p>Alphaville - Forever Young/Gregorian - Forever Young</p><a id="more"></a><p>Let’s dance in style,<br>让我们纵情起舞<br>Let’s dance for a while<br>共舞即刻忘却时间<br>Heaven can wait,<br>温馨天堂指日可待<br>We’re only watching the skies<br>尽情专注仰望天空<br>Hoping for the best,<br>心怀最为美好的期许<br>But expecting the worst<br>却也怀抱最坏的噩耗<br>Are you gonna drop the bomb or not?<br>你是否已决定抛下罪恶的炸弹？</p><p>Let us die young or let us live forever<br>要么让我们英年早逝、要么让我们长生不老。<br>We don’t have the power,<br>我们无法决定去留<br>But we never say never<br>但却可以拥抱希望永不言败<br>Sitting in a sandpit,<br>坐在沙坑上冥想<br>Life is a short trip<br>生命之旅如此短暂<br>The music’s for the sad man<br>以此乐抚慰身心悲痛的人们</p><p>Can you imagine when this race is won?<br>何以去想象比赛胜利的那一刻？<br>Turn our golden the faces into the sun<br>面绣金光昂首向阳<br>Praising our leaders,<br>高赞我们的领袖<br>We’re getting in tune<br>让我们齐声高唱<br>The music’s played by the madman<br>以疯狂筑台狂奏高歌</p><p>Forever young,<br>永远年青<br>I want to be forever young<br>这便是我的愿望<br>Do you really want to live forever?<br>你又不何尝为此垂涎？</p><p>Some are like water,<br>有人柔情似水<br>Some are like the heat<br>有人热情似火<br>Some are a melody and some are the beat<br>有人挽旋如歌、有人奏乐相伴<br>Sooner or later,they all will be gone<br>但或早或晚，人们终将逝去<br>Why don’t they stay young?<br>为何青春转瞬即逝无法永驻？</p><p>It’s so hard to get old without a cause<br>任岁月徒增我们无可奈何<br>I don’t want to perish like a fading horse<br>不愿像褪色残喘的老马一般灰飞烟灭<br>Youth’s like diamonds in the sun<br>青春如同钻石般璀璨夺目<br>And diamonds are forever<br>恒久闪耀</p><p>So many adventures given up today<br>有许多艰难险阻还要去亲历体会<br>So many songs we forgot to play<br>有许多倾心的歌儿还来不及去唱<br>So many dreams swinging out of the blue<br>还有许多的遥不可及的欢乐梦想<br>Oh let it come true<br>我们要把它们实现<br>Forever young<br>永远年青<br>I want to be forever young<br>这是我的愿望</p><p>……</p><p>依旧记得初次听到这首歌时的热泪盈眶，从前的那般美好总是浮现在眼前，挥之不去…时常出现在我的梦里。</p><p>重新填词，以此纪念曾经美好的年华，以此寄予当下美好的心愿。</p><p>2022.03.03-17:02.天气-阴。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Alphaville - Forever Young/Gregorian - Forever Young&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="歌曲" scheme="https://liujunjie11.github.io/categories/%E6%AD%8C%E6%9B%B2/"/>
+    
+      <category term="笔记" scheme="https://liujunjie11.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://liujunjie11.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="歌曲" scheme="https://liujunjie11.github.io/tags/%E6%AD%8C%E6%9B%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>梦呓</title>
@@ -428,28 +454,6 @@
     <summary type="html">
     
       &lt;p&gt;解决的问题描述：&lt;code&gt;ModuleNotFoundError: No module named &amp;#39;&amp;#39;; &amp;#39;&amp;#39; is not a package&lt;/code&gt;。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Python" scheme="https://liujunjie11.github.io/categories/Python/"/>
-    
-    
-      <category term="Python" scheme="https://liujunjie11.github.io/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python pip常用命令</title>
-    <link href="https://liujunjie11.github.io/2020/05/27/python%20pip%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>https://liujunjie11.github.io/2020/05/27/python pip常用命令/</id>
-    <published>2020-05-27T07:27:10.000Z</published>
-    <updated>2020-05-27T18:52:00.339Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近使用的<code>pip</code>模块的简单记录。</p><a id="more"></a><h1 id="升级pip"><a href="#升级pip" class="headerlink" title="升级pip"></a>升级pip</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python -m pip install --upgrade pip</div></pre></td></tr></table></figure><h1 id="pip使用"><a href="#pip使用" class="headerlink" title="pip使用"></a>pip使用</h1><h2 id="pip安装包"><a href="#pip安装包" class="headerlink" title="pip安装包"></a>pip安装包</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install 安装包名</div></pre></td></tr></table></figure><h2 id="pip安装指定版本包"><a href="#pip安装指定版本包" class="headerlink" title="pip安装指定版本包"></a>pip安装指定版本包</h2><p>指定版本，使用<code>==</code>操作符。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install tensorflow(包名) == <span class="number">1.13</span><span class="number">.1</span></div></pre></td></tr></table></figure><h2 id="pip查看是否已安装"><a href="#pip查看是否已安装" class="headerlink" title="pip查看是否已安装"></a>pip查看是否已安装</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip show --files 安装包名</div></pre></td></tr></table></figure><h2 id="pip列出所有安装的库"><a href="#pip列出所有安装的库" class="headerlink" title="pip列出所有安装的库"></a>pip列出所有安装的库</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip list</div></pre></td></tr></table></figure><h2 id="pip检查哪些包需要更新"><a href="#pip检查哪些包需要更新" class="headerlink" title="pip检查哪些包需要更新"></a>pip检查哪些包需要更新</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">pip list --outdated</div><div class="line">pip list  --outdated --format=columns</div></pre></td></tr></table></figure><h2 id="pip升级包"><a href="#pip升级包" class="headerlink" title="pip升级包"></a>pip升级包</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install --upgrade 要升级的包名</div></pre></td></tr></table></figure><h2 id="pip-批量升级包"><a href="#pip-批量升级包" class="headerlink" title="pip 批量升级包"></a>pip 批量升级包</h2><p>借助<code>pip-review</code>进行包的批量升级操作。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">pip install pip-review</div><div class="line">pip-review --local --interactive</div></pre></td></tr></table></figure><h2 id="可用的pip命令"><a href="#可用的pip命令" class="headerlink" title="可用的pip命令"></a>可用的pip命令</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">&gt;&gt; pip --help</div><div class="line"> </div><div class="line">Usage:  </div><div class="line">pip&lt;command&gt;[options]</div><div class="line"> </div><div class="line">Commands:</div><div class="line">install                    安装包.</div><div class="line">uninstall                  卸载包.</div><div class="line">freeze                     按着一定格式输出已安装包列表</div><div class="line">list                       列出已安装包.</div><div class="line">show                       显示包详细信息.</div><div class="line">search                     搜索包，类似yum里的search.</div><div class="line">wheel                      Buildwheelsfromyourrequirements.</div><div class="line">zip                        不推荐.Zipindividualpackages.</div><div class="line">unzip                      不推荐.Unzipindividualpackages.</div><div class="line">bundle                     不推荐.Createpybundles.</div><div class="line">help                       当前帮助.</div><div class="line"> </div><div class="line">GeneralOptions:</div><div class="line">-h,--help                 显示帮助.</div><div class="line">-v,--verbose              更多的输出，最多可以使用<span class="number">3</span>次</div><div class="line">-V,--version              现实版本信息然后退出.</div><div class="line">-q,--quiet                最少的输出.</div><div class="line">--log-file&lt;path&gt;          覆盖的方式记录verbose错误日志，默认文件：/root/.pip/pip.log</div><div class="line">--log&lt;path&gt;               不覆盖记录verbose输出的日志.</div><div class="line">--proxy&lt;proxy&gt;            Specifyaproxyintheform[user:passwd@]proxy.server:port.</div><div class="line">--timeout&lt;sec&gt;            连接超时时间(默认<span class="number">15</span>秒).</div><div class="line">--exists-action&lt;action&gt;   Defaultactionwhenapathalreadyexists:(s)witch,(i)gnore,(w)ipe,(b)ackup.</div><div class="line">--cert&lt;path&gt;              证书.</div></pre></td></tr></table></figure><h1 id="pip下载过慢的解决方案"><a href="#pip下载过慢的解决方案" class="headerlink" title="pip下载过慢的解决方案"></a>pip下载过慢的解决方案</h1><p><code>pip install 安装包名 -i 镜像源</code>，提升下载/更新速度。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install django -i https://pypi.tuna.tsinghua.edu.cn/simple</div></pre></td></tr></table></figure><p><code>pip</code>镜像可选项：</p><ul><li><p>清华——<br><a href="https://pypi.tuna.tsinghua.edu.cn/simple/" target="_blank" rel="external">https://pypi.tuna.tsinghua.edu.cn/simple/</a></p></li><li><p>中科大——<br><a href="https://pypi.mirrors.ustc.edu.cn/simple/" target="_blank" rel="external">https://pypi.mirrors.ustc.edu.cn/simple/</a></p></li><li><p>阿里云——<br><a href="https://mirrors.aliyun.com/pypi/simple/" target="_blank" rel="external">https://mirrors.aliyun.com/pypi/simple/</a></p></li><li><p>豆瓣——<br><a href="http://pypi.douban.com/simple/" target="_blank" rel="external">http://pypi.douban.com/simple/</a></p></li></ul><h2 id="设为默认配置镜像"><a href="#设为默认配置镜像" class="headerlink" title="设为默认配置镜像"></a>设为默认配置镜像</h2><p>升级 pip 到最新的版本后进行配置：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">pip install pip -U</div><div class="line">pip config set <span class="keyword">global</span>.index-url https://pypi.tuna.tsinghua.edu.cn/simple/</div></pre></td></tr></table></figure><p>此命令行对等于修改文件：</p><h3 id="window端"><a href="#window端" class="headerlink" title="window端"></a>window端</h3><p>在 windows 命令提示符（控制台）中，输入<code>%APPDATA%</code>，进入此目录<br>在该目录下新建名为 pip 的文件夹，然后在其中新建文件 pip.ini。（例如：”C:\Users\Administrator\AppData\Roaming\pip\pip.ini”）</p><p>在文件中填入以下内容并保存（可替换为上述不同的镜像地址）：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[<span class="keyword">global</span>]</div><div class="line">index-url = http://pypi.douban.com/simple</div><div class="line">[install]</div><div class="line">trusted-host=pypi.douban.com</div></pre></td></tr></table></figure><h3 id="Linux-Mac："><a href="#Linux-Mac：" class="headerlink" title="Linux / Mac："></a>Linux / Mac：</h3><p>文件地址为 ~/.pip/pip.conf，其余相同。</p><h3 id="下载超时解决方案"><a href="#下载超时解决方案" class="headerlink" title="下载超时解决方案"></a>下载超时解决方案</h3><ol><li>网速波动影响，多次尝试可解决；</li><li>尝试切换<code>pip</code>源。</li></ol><h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ul><li><p><a href="https://blog.csdn.net/TeFuirnever/article/details/90300861?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-10.nonecase&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-10.nonecase" target="_blank" rel="external">python中pip安装、升级、升级指定的包</a></p></li><li><p><a href="https://blog.csdn.net/liangpingguo/article/details/105928401?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-6" target="_blank" rel="external">Python使用pip更新所有已安装包的方法</a></p></li><li><p><a href="https://zhuanlan.zhihu.com/p/46975553" target="_blank" rel="external">pip下载python库太慢怎么办？</a></p></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近使用的&lt;code&gt;pip&lt;/code&gt;模块的简单记录。&lt;/p&gt;
     
     </summary>
     
