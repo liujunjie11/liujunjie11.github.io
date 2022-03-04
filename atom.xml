@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujunjie11.github.io/"/>
-  <updated>2022-03-03T09:07:41.541Z</updated>
+  <updated>2022-03-04T13:23:20.996Z</updated>
   <id>https://liujunjie11.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>活在当下</title>
+    <link href="https://liujunjie11.github.io/2022/03/04/%E6%B4%BB%E5%9C%A8%E5%BD%93%E4%B8%8B/"/>
+    <id>https://liujunjie11.github.io/2022/03/04/活在当下/</id>
+    <published>2022-03-04T12:13:28.000Z</published>
+    <updated>2022-03-04T13:23:20.996Z</updated>
+    
+    <content type="html"><![CDATA[<p>活在当下，享受当下。</p><a id="more"></a><p>把最为沁人心脾的乐曲放大到最大声，情不自禁将双手伸开浮在空中忘情挥动。闭上双眼，一眼望河川，一眼望到宇宙边缘。触手可碰围绕着的点点缀缀的星空，小心翼翼将一颗星粒捧起，拇指从两侧轻轻滑动抚摸，却感到那样意想不到的温暖，由着手指直击到全身上下，舍不得放手。待我睁开眼，将你看个清楚，是怎样一个小东西这样让人惊喜。呵！是你呵，那双灵动淘气的眼，那如樱桃般微张的小嘴儿，那位梦中常客的小美人儿。依稀记得你扎着两个小辫儿，回头向我抿嘴一笑的小脸儿，将我的心都融化了。将你的小脸就这样捧着，看着你不时眨动着的小眼儿，这样安详。多想这一刻便能成为永恒…一片寂静，你的影像也消散了。祝你平安、愿你快乐。</p><p>在虚无中感受到人们的畅所欲言，大家的心此刻紧紧相连在一起。我们围着一个个看似总也逃脱不了的话题，谈笑风生。你们滔滔不绝地故事将我温暖，你们鼓起勇气讲出口的痛楚将我感染，我多想到你身边看着你的眼睛把我自己也倾吐个痛快，我多想抱着你给你我为数不多的温柔…朋友，珍重。</p><p>还有、还有你们，我至亲至爱的人们。一张张饱经风霜的脸，一双双暗淡无光的眼，紧闭着想要大口呼吸的嘴。将经历的苦痛独自扛在肩上，将留下的泪水紧锁在眼眶，将想要诉说的痛楚埋葬在内心深处。给自己给人们加油打气，明天更美好。别、别让岁月为你们刻上不可抹去的深壑的皱纹，别让战争的罪波及到你们此刻深陷的美梦…</p><p>阳光大道牵引我前进，我变得像鸟儿一样，尽情飞舞。望尽一马平川，望尽人山人海，望尽荣华富贵，望尽叹息与孤独。</p><p>天堂就在不远处。活在当下，享受当下，便是最为清晰的捷径。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;活在当下，享受当下。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="笔记" scheme="https://liujunjie11.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://liujunjie11.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>Forever Young</title>
@@ -439,28 +461,6 @@
       <category term="Python" scheme="https://liujunjie11.github.io/tags/Python/"/>
     
       <category term="OpenCV" scheme="https://liujunjie11.github.io/tags/OpenCV/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python中导入包的问题</title>
-    <link href="https://liujunjie11.github.io/2020/05/28/Python%E4%B8%AD%E5%AF%BC%E5%85%A5%E5%8C%85%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>https://liujunjie11.github.io/2020/05/28/Python中导入包的问题/</id>
-    <published>2020-05-27T18:50:38.000Z</published>
-    <updated>2020-05-27T18:58:06.729Z</updated>
-    
-    <content type="html"><![CDATA[<p>解决的问题描述：<code>ModuleNotFoundError: No module named &#39;&#39;; &#39;&#39; is not a package</code>。</p><a id="more"></a><p>在GitHub上下载的一段代码运行出现导入包的错误，如本身有个<code>code</code>的包，其中包含的函数我使用了<code>code.A</code>(代码import code.A)，结果出现了以下错误：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ModuleNotFoundError: No module named <span class="string">'code'</span>; <span class="string">'code'</span> <span class="keyword">is</span> <span class="keyword">not</span> a package</div></pre></td></tr></table></figure><p>后来在eclipse上重新新建了一个Python包，新建的包下边均会出现一个<code>__init__.py</code>，我把这个<code>__init__.py</code>复制了一份，粘贴在了以上出现问题的包中，发现可以正常运行了。</p><h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>新建一个<code>__init__.py</code>即可。</p><h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ul><li><a href="https://blog.51cto.com/2338053/1982977" target="_blank" rel="external">你所不知道的 【ModuleNotFoundError: No module named ‘’; ‘’ is not a package】</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;解决的问题描述：&lt;code&gt;ModuleNotFoundError: No module named &amp;#39;&amp;#39;; &amp;#39;&amp;#39; is not a package&lt;/code&gt;。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Python" scheme="https://liujunjie11.github.io/categories/Python/"/>
-    
-    
-      <category term="Python" scheme="https://liujunjie11.github.io/tags/Python/"/>
     
   </entry>
   
